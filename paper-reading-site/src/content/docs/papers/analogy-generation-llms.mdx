@@ -1,0 +1,55 @@
+---
+title: "Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT"
+description: "2022 INLG · 结构映射"
+sidebar:
+  order: 11
+---
+
+# Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT
+
+**年份/来源**：2022 · INLG  
+**所属支柱**：[结构映射](/pillars/structure-mapping/)  
+**PDF**：[打开本地 PDF](/papers/Method-03-AnalogyGenerationLLMs-INLG-2022.pdf)  
+**原文链接**：[https://aclanthology.org/2022.inlg-main.25/](https://aclanthology.org/2022.inlg-main.25/)
+
+## 这篇论文在讲什么
+
+研究用 LLM prompt 生成类比。
+
+## 与 Concept-to-Fable 的关系
+
+Concept-to-Fable 本质上需要稳定生成“知识点到寓言情境”的类比。
+
+## 推荐阅读部分
+
+重点看 prompt 如何诱导类比，以及类比质量如何评估。
+
+## 可借鉴点
+
+可借鉴 prompt 设计，让模型提出候选寓言世界和角色映射。
+
+## 局限与注意事项
+
+单纯 prompting 难以保证映射忠实性和教学准确性。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+Concept-to-Fable 本质上需要稳定生成“知识点到寓言情境”的类比。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **结构映射**。在 Concept-to-Fable 中，这一部分的任务是把抽象知识结构稳定映射成寓言中的角色、冲突和情节。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可借鉴 prompt 设计，让模型提出候选寓言世界和角色映射。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+单纯 prompting 难以保证映射忠实性和教学准确性。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要加入 KG 约束、对齐检查和人工/模型评审环节。

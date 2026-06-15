@@ -1,0 +1,55 @@
+---
+title: "Automatic Story Generation: A Survey of Approaches"
+description: "2021 ACM Computing Surveys · 层次化生成"
+sidebar:
+  order: 7
+---
+
+# Automatic Story Generation: A Survey of Approaches
+
+**年份/来源**：2021 · ACM Computing Surveys  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/StoryGen-04-AutomaticStoryGenerationSurvey-ACMCSUR-2021.pdf)  
+**原文链接**：[https://dl.acm.org/doi/10.1145/3453156](https://dl.acm.org/doi/10.1145/3453156)
+
+## 这篇论文在讲什么
+
+系统综述自动故事生成方法。
+
+## 与 Concept-to-Fable 的关系
+
+它提供故事生成技术谱系，帮助定位 Concept-to-Fable 不是普通故事生成，而是教育约束下的寓言生成。
+
+## 推荐阅读部分
+
+重点看规划式、神经式、受控式故事生成的比较。
+
+## 可借鉴点
+
+可用于 related work 中梳理从 general story generation 到 educational fable generation 的演化。
+
+## 局限与注意事项
+
+综述覆盖面广，但没有深入处理知识图谱驱动和教育评价。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它提供故事生成技术谱系，帮助定位 Concept-to-Fable 不是普通故事生成，而是教育约束下的寓言生成。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可用于 related work 中梳理从 general story generation 到 educational fable generation 的演化。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+综述覆盖面广，但没有深入处理知识图谱驱动和教育评价。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要将其中的生成方法按“是否支持知识约束和映射解释”重新分类。

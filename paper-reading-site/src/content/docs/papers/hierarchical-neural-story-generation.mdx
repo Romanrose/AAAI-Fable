@@ -1,0 +1,55 @@
+---
+title: "Hierarchical Neural Story Generation"
+description: "2018 ACL · 层次化生成"
+sidebar:
+  order: 1
+---
+
+# Hierarchical Neural Story Generation
+
+**年份/来源**：2018 · ACL  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/StoryGen-01-HierarchicalNeuralStoryGeneration-ACL-2018.pdf)  
+**原文链接**：[https://aclanthology.org/P18-1082/](https://aclanthology.org/P18-1082/)
+
+## 这篇论文在讲什么
+
+提出分层故事生成思路，把故事创作拆成高层规划和低层文本生成。
+
+## 与 Concept-to-Fable 的关系
+
+它支撑 Concept-to-Fable 中“先有知识逻辑和故事线，再扩写成寓言”的生成路线。
+
+## 推荐阅读部分
+
+重点看模型如何处理 prompt、storyline 与长文本生成之间的关系。
+
+## 可借鉴点
+
+借鉴“规划先行”的思想，把知识图谱中的概念链先转成寓言事件链。
+
+## 局限与注意事项
+
+论文目标是开放故事生成，不保证教育概念的事实准确性或结构映射忠实性。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它支撑 Concept-to-Fable 中“先有知识逻辑和故事线，再扩写成寓言”的生成路线。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+借鉴“规划先行”的思想，把知识图谱中的概念链先转成寓言事件链。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+论文目标是开放故事生成，不保证教育概念的事实准确性或结构映射忠实性。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要把自由故事规划替换为受知识点、先修关系和映射说明约束的寓言规划。

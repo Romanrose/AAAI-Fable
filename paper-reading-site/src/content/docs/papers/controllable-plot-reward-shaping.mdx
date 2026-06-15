@@ -1,0 +1,55 @@
+---
+title: "Controllable Neural Story Plot Generation via Reward Shaping"
+description: "2019 IJCAI · 层次化生成"
+sidebar:
+  order: 4
+---
+
+# Controllable Neural Story Plot Generation via Reward Shaping
+
+**年份/来源**：2019 · IJCAI  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/StoryGen-03-ControllablePlotRewardShaping-IJCAI-2019.pdf)  
+**原文链接**：[https://www.ijcai.org/proceedings/2019/829](https://www.ijcai.org/proceedings/2019/829)
+
+## 这篇论文在讲什么
+
+通过奖励塑形控制故事情节发展。
+
+## 与 Concept-to-Fable 的关系
+
+它启发我们把教学约束转化为可优化的生成目标。
+
+## 推荐阅读部分
+
+重点看 reward 如何定义故事目标和情节偏好。
+
+## 可借鉴点
+
+可以把“覆盖概念关系”“不引入科学错误”“适合年级”设计成奖励或打分项。
+
+## 局限与注意事项
+
+奖励主要服务情节控制，不直接处理课程知识和寓言映射。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它启发我们把教学约束转化为可优化的生成目标。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可以把“覆盖概念关系”“不引入科学错误”“适合年级”设计成奖励或打分项。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+奖励主要服务情节控制，不直接处理课程知识和寓言映射。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要设计教育导向 reward，例如概念覆盖率、映射一致性和阅读难度。

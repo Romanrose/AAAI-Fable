@@ -1,0 +1,55 @@
+---
+title: "Towards Controllable Story Generation"
+description: "2018 Workshop on Storytelling · 层次化生成"
+sidebar:
+  order: 2
+---
+
+# Towards Controllable Story Generation
+
+**年份/来源**：2018 · Workshop on Storytelling  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/StoryGen-02-ControllableStoryGeneration-Workshop-2018.pdf)  
+**原文链接**：[https://aclanthology.org/W18-1505/](https://aclanthology.org/W18-1505/)
+
+## 这篇论文在讲什么
+
+探索用事件、角色或主题控制故事生成。
+
+## 与 Concept-to-Fable 的关系
+
+它说明寓言生成不能只依赖自然语言 prompt，而需要显式控制故事要素。
+
+## 推荐阅读部分
+
+重点看控制变量如何影响故事情节、角色和目标。
+
+## 可借鉴点
+
+可借鉴控制信号设计，把教学目标、寓意、概念关系作为生成条件。
+
+## 局限与注意事项
+
+控制目标偏故事层面，没有覆盖学科知识点与情节之间的可解释对齐。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它说明寓言生成不能只依赖自然语言 prompt，而需要显式控制故事要素。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可借鉴控制信号设计，把教学目标、寓意、概念关系作为生成条件。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+控制目标偏故事层面，没有覆盖学科知识点与情节之间的可解释对齐。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要把控制条件扩展为“概念-角色-关系-情节”的结构化约束。
