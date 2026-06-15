@@ -1,49 +1,53 @@
-# Starlight Starter Kit: Basics
+# Concept-to-Fable Paper Reading Site
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Astro Starlight site for reading papers related to Concept-to-Fable Synthesis.
 
-```
-npm create astro@latest -- --template starlight
-```
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Four research pillars: knowledge graph, structure mapping, hierarchical generation, and educational evaluation.
+- 25 paper pages with PDF links, grounded evidence notes, and research-oriented Q&A.
+- Per-paper DeepSeek question box backed by a server-side API route.
 
-## 🚀 Project Structure
+## Local Development
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```powershell
+npm install
+copy .env.example .env
+npm run dev
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Open `http://127.0.0.1:4321/`.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## DeepSeek API
 
-Static assets, like favicons, can be placed in the `public/` directory.
+Create `.env` locally or configure these variables in Vercel:
 
-## 🧞 Commands
+```env
+DEEPSEEK_API_KEY=sk-your-deepseek-api-key
+DEEPSEEK_MODEL=deepseek-v4-flash
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+```
 
-All commands are run from the root of the project, from a terminal:
+The API key is only read by `src/pages/api/ask-paper.ts`. Do not expose it in client-side code.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Content Generation
 
-## 👀 Want to learn more?
+Paper pages and the DeepSeek context file are generated from:
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+```powershell
+node scripts\generate-content.cjs
+```
+
+This writes:
+
+- `src/content/docs/papers/*.mdx`
+- `src/content/docs/pillars/*.mdx`
+- `src/data/paperContexts.json`
+
+## Build
+
+```powershell
+npm run build
+```
+
+The project uses `@astrojs/vercel` with `output: 'server'` so the `/api/ask-paper` endpoint can call DeepSeek securely.
