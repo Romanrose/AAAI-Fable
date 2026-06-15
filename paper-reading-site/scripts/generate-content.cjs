@@ -67,6 +67,134 @@ const papers = [
   ['classroom-ai', 25, 'Classroom AI: Large Language Models as Grade-Specific Teachers', '2026', 'npj Artificial Intelligence', '教育评价', 'Evaluation-05-ClassroomAI-npjAI-2026.pdf', 'https://www.nature.com/npjai/', '研究 LLM 作为分年级教师时的表现与适配。', '它支撑 Concept-to-Fable 的“因材施教”和年级阅读适配。', '重点看 grade-specific teaching、可读性和教学质量评价。', '可借鉴年级适配指标，为寓言生成设定小学 1-2、3-4、5-6 年级版本。', '它关注教师式回答，不一定生成寓言或映射说明。', '需要把教师回答标准转为寓言文本的可读性、解释性和知识准确性标准。'],
 ].map(([slug, order, title, year, venue, pillar, pdf, url, contribution, relation, reading, borrow, limitation, transform]) => ({ slug, order, title, year, venue, pillar, pdf, url, contribution, relation, reading, borrow, limitation, transform }));
 
+const evidenceMap = {
+  'hierarchical-neural-story-generation': [
+    'Abstract 和 Introduction 将任务定义为基于 writing prompt 的长文本故事生成，强调长程依赖、主题一致性和提前规划。',
+    '论文构建了约 300K prompt-story 数据集，并提出分层生成模型来改善 prompt 相关性。',
+    'Evaluation 部分说明作者同时使用自动指标和人工评价，关注故事是否更连贯、更贴合 prompt。',
+  ],
+  'towards-controllable-story-generation': [
+    '论文讨论如何让故事生成受给定事件、角色或目标约束，而不是完全开放式续写。',
+    '核心价值在于把“控制变量”引入故事生成，这与教学寓言需要受教学目标约束高度相关。',
+    '它没有处理课程知识或映射说明，因此只能作为可控生成思路，而不是完整教学寓言方案。',
+  ],
+  'plan-and-write': [
+    'Abstract 中给出 Title、Storyline、Story 的三层示例，明确把故事生成拆成 storyline planning 和 surface realization。',
+    '论文结论和实验说明，显式 storyline planning 能让生成故事更 diverse、coherent、on topic。',
+    '它的 storyline 是从句子抽取关键词形成的中间计划，适合改造成“知识步骤到寓言事件”的骨架。',
+  ],
+  'controllable-plot-reward-shaping': [
+    'Introduction 将任务定义为自动 plot generation，并强调给定目标结局下的情节控制。',
+    'Evaluation 中报告 reward shaping 能显著提高生成 plot 达成目标的比例，说明目标导向控制是可行的。',
+    '论文也承认事件表示不易做人类评价，这提醒 Concept-to-Fable 需要同时保留机器可检验结构和人类可读解释。',
+  ],
+  'concept-extraction-prerequisite': [
+    'Abstract 明确指出 prerequisite relations 对教育应用关键，但自动抽取领域概念和先修关系很困难。',
+    '论文提出先抽取高质量短语，再用 graph-based ranking 识别领域概念，并迭代学习 prerequisite relations。',
+    'Evaluation 使用中文教材和人工标注评估概念抽取与先修关系学习，说明该方法适合教材知识结构化。',
+  ],
+  mooccube: [
+    'Introduction 描述 MOOCCube 覆盖 700 多门课程、约 100K concepts、学生行为和外部资源。',
+    '论文把课程、视频、概念、学生行为和关系组织成多维教育数据仓库，并展示 prerequisite discovery 作为应用。',
+    'Conclusion 强调 MOOCCube 支持课程概念、学生活动和教育 NLP 应用，但它面向 MOOC 而不是小学寓言生成。',
+  ],
+  'automatic-story-generation-survey': [
+    'Survey 将 automatic story generation 定义为选择事件或行动序列，使其满足故事标准并能被讲述。',
+    'Introduction 指出故事长期用于娱乐、道德教育和儿童教育，提供了教学寓言的叙事合理性。',
+    'Conclusion 强调故事生成需要考虑 author goal、角色、情节等复杂属性，支持把教学目标作为生成目标显式建模。',
+  ],
+  'metaphor-generation-conceptual-mappings': [
+    'Abstract 说明论文用 conceptual metaphor theory 控制隐喻生成，并编码 cognitive domains 之间的 conceptual mappings。',
+    '方法包含 CM-Lex 和 CM-BART，两者都围绕 source domain 与 target domain 的映射展开。',
+    'Evaluation 同时看 metaphoricity 和 conceptual metaphor presence，说明只流畅不够，还要检查映射是否存在。',
+  ],
+  'moral-stories': [
+    'Abstract 将数据集定义为 structured, branching narratives，覆盖 norms、intents、actions、consequences。',
+    'Introduction 强调社会情境中的行为需要同时满足目标和规范约束，这可类比教学寓言中的知识目标与故事约束。',
+    'Conclusion 指出模型常不能整合 normative constraints，提醒 Concept-to-Fable 也要防止模型忽略知识约束。',
+  ],
+  'controllable-text-generation-survey': [
+    'Survey 将 controllable text generation 形式化为在约束条件下生成自然语言，约束可包含主题、关键词、风格、结构化数据等。',
+    '文中举例 story generation 需要匹配 storyline 中关键元素及其顺序。',
+    'Evaluation 部分区分人工、自动和半自动评价，支持 Concept-to-Fable 使用多维评价而不是单一指标。',
+  ],
+  'analogy-generation-llms': [
+    'Abstract 定义两个任务：Analogous Concept Generation 和 Analogy Explanation Generation。',
+    'Introduction 用 Bohr atom 与 solar system 说明类比依赖结构和关系相似性。',
+    'Evaluation 指出 analogy explanation 更难，也更能测试模型的 analogical reasoning，这对寓言映射说明很关键。',
+  ],
+  storal: [
+    'Abstract 将 STORAL 定义为中英文 human-written moral stories 数据集，并提出理解与生成任务。',
+    '论文强调 moral story 需要理解 abstract concepts、inter-event discourse relations 和 value preference alignment。',
+    'Evaluation 使用 BLEU、BERTScore 等自动指标并结合人工标注，说明寓言类数据集需要任务化评测。',
+  ],
+  storyanalogy: [
+    'Abstract 说明 STORYANALOGY 是 24K story pairs 的大规模 story-level analogy corpus。',
+    '论文基于扩展 Structure-Mapping Theory 标注两类相似性，并评估 story-level analogy identification 与 generation。',
+    'Introduction 的病毒入侵细胞与盗贼闯入房屋例子，正是“科学机制到故事情境”的结构映射范式。',
+  ],
+  'educational-material-to-kg': [
+    'Abstract 主张 digital educational content 应结构化为 knowledge graphs，以表达概念之间关系。',
+    'Introduction 说明 KG 可支持知识导航、语义搜索、个性化学习和 LLM 集成。',
+    '论文也指出教育 KG 存在标准化、互操作、数据完整性和规模化挑战，适合作为前处理参考。',
+  ],
+  legalstories: [
+    'Abstract 将任务定义为用 LLM 生成 legal stories 和 comprehension questions，帮助非专家学习复杂法律概念。',
+    '论文使用 expert-in-the-loop pipeline 构建 LEGAL STORIES 数据，并用故事与问题支持学习和测评。',
+    'Evaluation 设计 randomized controlled trial，将故事学习与概念定义学习对比，直接启发 Concept-to-Fable 的教育有效性验证。',
+  ],
+  'figurative-language-generation-survey': [
+    'Introduction 将 figurative language 解释为包含 metaphor 等多种修辞形式，可帮助表达难以可视化的抽象概念。',
+    'Survey 覆盖 metaphor、simile、analogy、personification 等生成任务，为寓言语言层面的表达提供背景。',
+    'Evaluation 部分强调自动评价和人工评价各有局限，提示寓言生成也需要人类对教育表达质量做最终把关。',
+  ],
+  'ss-gen': [
+    'Abstract 指出 Social Stories 有严格约束，传统由专家撰写，成本高且多样性有限。',
+    'SS-GEN 提出 constraint-driven strategy STAR SOW，用层次化 prompt 生成 social stories。',
+    '论文包含质量评估标准和人类/GPT 评价，说明特定用途故事生成必须把领域约束前置进生成流程。',
+  ],
+  'scientific-concept-analogies': [
+    '论文通过两阶段研究考察 LLM 生成教育类比对高中生和教师课堂实践的影响。',
+    'Method 部分围绕 biology 和 physics 概念的 LLM-generated analogies，强调教育类比的有效性需要实证研究。',
+    'Evaluation 包含学生测试、教师访谈和课堂 field study，并指出类比可能因信息缺失伤害理解。',
+  ],
+  'multimodal-math-story-generation': [
+    'PDF 文本显示该 AIED 文件像 proceedings 合集，抽取结果混入多篇论文，需要人工复核具体目标论文页码。',
+    '可确认其中相关内容关注 STEM 教育、学生参与、GenAI、故事化或多模态解释。',
+    '因此当前页面只把它作为“数学教育情境化故事生成”的弱证据参考，后续应定位目标论文起止页再精修。',
+  ],
+  'kg-guided-storytelling': [
+    'Abstract 指出 LLM story generation 面临 long-form coherence 和 user-friendly control 挑战。',
+    '论文提出 KG-assisted storytelling pipeline，并通过 15 名参与者的 two-stage user study 评估 KG 编辑和故事生成。',
+    'Discussion 提到 KG 难以表示内在情绪、心理成长等复杂状态，提示教学寓言 KG 也不能只建外部事件图。',
+  ],
+  'analogy-annotators': [
+    'Abstract 说明论文评估 LLM 作为 story-level analogy annotators 的能力，并关注 base-target entity mapping。',
+    'Method 提出 A3E 自动类比标注框架，基于 Structure Mapping Theory 和多阶段 prompting。',
+    'Conclusion 报告 A3E 相比现有 LLM 标注有显著提升，但也指出英文场景和部署成本限制。',
+  ],
+  'llm-story-generation-survey': [
+    'Abstract 建立 LLM story generation taxonomy，区分 independent story generation 和 author-assistance。',
+    'Survey 比较方法、数据集、故事类型、评价方法和 LLM 使用方式，适合作为 LLM 故事生成 related work 总览。',
+    'Conclusion 讨论 LLM-as-a-Judge 与 story-related aspects，如 relevance、coherence、empathy、surprise、engagement、complexity。',
+  ],
+  'synthetic-moral-fables': [
+    'Abstract 说明 TF1-EN-3M 是三百万英语合成道德寓言数据集，由不超过 8B 的开源模型生成。',
+    '论文使用 structured prompt template，编码 protagonist、trait、setting、conflict、resolution、moral 等寓言元素。',
+    'Evaluation 使用多 LLM judge 评分 grammar、creativity、moral clarity、template adherence，并补充 diversity/readability 指标。',
+  ],
+  'k12-kgraph': [
+    'Abstract/Introduction 明确提出 curriculum cognition，包括 prerequisite chains、concept taxonomies、experiment-concept links 和 pedagogical sequencing。',
+    'K12-KGraph 覆盖数学、物理、化学、生物，并包含 Concept、Skill、Experiment、Exercise、Section、Chapter、Book 七类节点和九类关系。',
+    '论文将每个 benchmark/training sample 追溯到 specific subgraph，使 difficulty、coverage、factual correctness 更可控。',
+  ],
+  'classroom-ai': [
+    'Abstract 指出 LLM 难以为不同教育阶段学生提供 grade-appropriate responses。',
+    '论文整合七个 readability metrics，并构建 grade-specific content generation 数据集。',
+    'Evaluation 覆盖多个数据集和 208 名 human participants，报告年级对齐相较 prompt 方法提升 35.64 个百分点且保持准确性。',
+  ],
+};
+
 function write(file, content) {
   fs.writeFileSync(file, content, 'utf8');
 }
@@ -110,11 +238,19 @@ function pillarAdvice(p) {
 
 function qaText(p, meta) {
   const advice = pillarAdvice(p);
+  const evidence = evidenceMap[p.slug] || [
+    '已根据 PDF 的题名、摘要、方法或实验部分进行初步定位；该条目后续仍建议补充更精确的页码和图表编号。',
+  ];
+  const evidenceBullets = evidence.map((item) => `- ${item}`).join('\n');
   return `### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
 
-**明确回答**：${p.relation} 更具体地说，它可以放在你的 Concept-to-Fable 流程中，帮助回答“从教材知识到可读寓言”链条里的一个关键问题：输入应该怎样被组织、中间结构应该怎样被约束、或者输出应该怎样被评价。
+**原文依据定位**：
 
-**对你的研究建议**：阅读这篇论文时，不要只记录它的摘要和模型名称，而要把它拆成三个可复用信息：第一，它假设的输入是什么；第二，它产生的中间表示或输出是什么；第三，它如何证明结果是好的。把这三项填进你的系统表格后，就能判断它是直接可用、需要改造，还是只适合作为 related work 背景。
+${evidenceBullets}
+
+**明确回答**：读完这篇论文后，可以把它理解为 Concept-to-Fable 的一个有证据支撑的模块来源。${p.relation} 更具体地说，它可以放在你的 Concept-to-Fable 流程中，帮助回答“从教材知识到可读寓言”链条里的一个关键问题：输入应该怎样被组织、中间结构应该怎样被约束、或者输出应该怎样被评价。
+
+**对你的研究建议**：阅读这篇论文时，不要只记录它的摘要和模型名称，而要把它拆成三个可复用信息：第一，它假设的输入是什么；第二，它产生的中间表示或输出是什么；第三，它如何证明结果是好的。上面的依据定位已经给出这三类信息的初步来源。把这些内容填进你的系统表格后，就能判断它是直接可用、需要改造，还是只适合作为 related work 背景。
 
 **落地判断**：如果这篇论文的方法能被改造成“知识点输入 → 可解释中间结构 → 寓言文本或评价结果”的一环，它就是核心参考；如果只能生成流畅文本但无法解释映射关系，就只能作为辅助参考。
 
@@ -124,7 +260,7 @@ function qaText(p, meta) {
 
 **具体作用**：${advice.output}
 
-**建议放置位置**：建议把这篇论文放在网站和论文写作中的“${p.pillar}”小节，而不是泛泛归入故事生成或教育 AI。这样读者能立刻看出它为你的任务解决了哪一类问题，也能看出你的四支柱框架不是事后拼接，而是有明确技术分工。
+**建议放置位置**：建议把这篇论文放在网站和论文写作中的“${p.pillar}”小节，而不是泛泛归入故事生成或教育 AI。放置理由不是标题相似，而是 PDF 中确实出现了与该支柱相关的方法、数据、任务定义或评价设计。这样读者能立刻看出它为你的任务解决了哪一类问题，也能看出你的四支柱框架不是事后拼接，而是有明确技术分工。
 
 ### 3. 我们可以借鉴它的什么方法、数据或评测方式？
 
@@ -132,13 +268,13 @@ function qaText(p, meta) {
 
 **可执行建议**：${advice.action}
 
-**阅读时要记录的证据**：${advice.evidence} 建议你在页面后续精修时，为这篇论文补充 2-3 个原文中的关键术语或图表编号，例如数据 schema、模型流程图、评价维度或实验设置。这样别人读你的站点时，不只是看到“可借鉴”，而是知道具体该翻论文哪一节。
+**阅读时要记录的证据**：${advice.evidence} 当前页面已经列出 2-3 条从 PDF 中抽取并阅读后的依据。下一轮精修时，建议继续补充页码、图表编号或章节名，例如数据 schema、模型流程图、评价维度或实验设置。这样别人读你的站点时，不只是看到“可借鉴”，而是知道具体该翻论文哪一节。
 
 ### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
 
 **明确回答**：${p.limitation}
 
-**研究空间**：这也正是 Concept-to-Fable 可以继续推进的地方：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。你的创新点不一定是重新发明它的方法，而是把它改造为一个面向教学寓言数据集的端到端任务定义，并要求每个生成故事都能说明“为什么这样讲是对的”。
+**研究空间**：这个判断来自论文自身的任务边界：它虽然提供了上面依据中的方法或数据，但没有完整覆盖“课程 KG → 结构映射 → 寓言生成 → 教育评价”的闭环。你的创新点不一定是重新发明它的方法，而是把它改造为一个面向教学寓言数据集的端到端任务定义，并要求每个生成故事都能说明“为什么这样讲是对的”。
 
 **风险提醒**：${advice.risk} 写 related work 时建议明确说出这篇论文与你的边界：它解决了什么，你继承什么；它没解决什么，你补什么。这样可以减少 reviewer 觉得“只是换了个应用场景”的风险。
 
@@ -148,7 +284,7 @@ function qaText(p, meta) {
 
 **改造方案**：建议按三个层次改造。第一，把输入改成课程知识点或 KG 子图，而不是普通主题或自由 prompt。第二，在生成前增加映射表，规定知识实体、关系、因果链分别对应哪些寓言角色、动作和结果。第三，在生成后增加检查器，分别检查科学准确性、映射忠实性、故事完整性和目标年级可读性。
 
-**下一步建议**：如果这篇论文属于核心论文，可以进一步补一个小实验：选一个小学知识点，用它启发的方法生成一版寓言骨架，再人工标注“知识步骤—故事情节”的对应关系。这样它就不只是文献综述里的引用，而会变成你任务设计的实证支撑。`;
+**下一步建议**：如果这篇论文属于核心论文，可以进一步补一个小实验：选一个小学知识点，用它启发的方法生成一版寓言骨架，再人工标注“知识步骤—故事情节”的对应关系。这样它就不只是文献综述里的引用，而会变成你任务设计的实证支撑。对于目前依据定位还不够细的论文，下一步优先补页码、表格编号和原文术语，避免回答停留在二次概括。`;
 }
 
 write(path.join(root, 'index.mdx'), `---
