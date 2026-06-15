@@ -32,12 +32,12 @@ const pillarMeta = {
     role: '把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。',
     noun: '生成流程',
   },
-  教育评价: {
+  评测: {
     slug: 'educational-evaluation',
-    title: '教育评价：不只流畅，还要可教',
-    description: '教育准确性、映射忠实性、道德/寓言质量、分级阅读适配，是最终数据集的核心指标。',
+    title: '评测：不只流畅，还要可教、可信、可复核',
+    description: '知识准确性、映射忠实性、寓言质量、分级阅读适配和学习效果，是最终数据集的核心评测维度。',
     role: '判断生成的寓言是否真的可教、可信、适合目标学生。',
-    noun: '评价标准',
+    noun: '评测标准',
   },
 };
 
@@ -48,25 +48,25 @@ const papers = [
   ['controllable-plot-reward-shaping', 4, 'Controllable Neural Story Plot Generation via Reward Shaping', '2019', 'IJCAI', '层次化生成', 'StoryGen-03-ControllablePlotRewardShaping-IJCAI-2019.pdf', 'https://www.ijcai.org/proceedings/2019/829', '通过奖励塑形控制故事情节发展。', '它启发我们把教学约束转化为可优化的生成目标。', '重点看 reward 如何定义故事目标和情节偏好。', '可以把“覆盖概念关系”“不引入科学错误”“适合年级”设计成奖励或打分项。', '奖励主要服务情节控制，不直接处理课程知识和寓言映射。', '需要设计教育导向 reward，例如概念覆盖率、映射一致性和阅读难度。'],
   ['concept-extraction-prerequisite', 5, 'Concept Extraction and Prerequisite Relation Learning from Educational Data', '2019', 'AAAI', '知识图谱', 'Method-05-ConceptExtractionPrerequisite-AAAI-2019.pdf', 'https://ojs.aaai.org/index.php/AAAI/article/view/5033', '研究从教育数据中抽取概念并学习前置依赖关系。', '它直接支撑 Concept-to-Fable 的知识图谱构建：先知道讲哪个概念、依赖哪些前置知识。', '重点看概念抽取和 prerequisite relation 的建模方式。', '可用于从教材中自动抽取知识点和先修链，形成寓言生成输入。', '论文关注知识结构发现，不负责把知识结构转成故事。', '需要把抽取到的概念和先修关系转为寓言角色、冲突和解决路径。'],
   ['mooccube', 6, 'MOOCCube: A Large-scale Data Repository for NLP Applications in MOOCs', '2020', 'ACL', '知识图谱', 'KG-01-MOOCCube-ACL-2020.pdf', 'https://aclanthology.org/2020.acl-main.285/', '构建面向 MOOC 场景的大规模教育数据仓库。', '它展示了教育资源、概念和学习行为如何被组织成可计算资源。', '重点看数据 schema、概念资源和教育 NLP 应用方式。', '可借鉴数据组织方式，为小学知识点、教材段落和生成寓言建立统一索引。', 'MOOC 场景与小学全学科教材不同，且不面向寓言生成。', '需要转换到 K-12 课程标准，并补充寓言生成所需的映射与故事字段。'],
-  ['automatic-story-generation-survey', 7, 'Automatic Story Generation: A Survey of Approaches', '2021', 'ACM Computing Surveys', '层次化生成', 'StoryGen-04-AutomaticStoryGenerationSurvey-ACMCSUR-2021.pdf', 'https://dl.acm.org/doi/10.1145/3453156', '系统综述自动故事生成方法。', '它提供故事生成技术谱系，帮助定位 Concept-to-Fable 不是普通故事生成，而是教育约束下的寓言生成。', '重点看规划式、神经式、受控式故事生成的比较。', '可用于 related work 中梳理从 general story generation 到 educational fable generation 的演化。', '综述覆盖面广，但没有深入处理知识图谱驱动和教育评价。', '需要将其中的生成方法按“是否支持知识约束和映射解释”重新分类。'],
+  ['automatic-story-generation-survey', 7, 'Automatic Story Generation: A Survey of Approaches', '2021', 'ACM Computing Surveys', '层次化生成', 'StoryGen-04-AutomaticStoryGenerationSurvey-ACMCSUR-2021.pdf', 'https://dl.acm.org/doi/10.1145/3453156', '系统综述自动故事生成方法。', '它提供故事生成技术谱系，帮助定位 Concept-to-Fable 不是普通故事生成，而是教育约束下的寓言生成。', '重点看规划式、神经式、受控式故事生成的比较。', '可用于 related work 中梳理从 general story generation 到 educational fable generation 的演化。', '综述覆盖面广，但没有深入处理知识图谱驱动和教育评测。', '需要将其中的生成方法按“是否支持知识约束和映射解释”重新分类。'],
   ['metaphor-generation-conceptual-mappings', 8, 'Metaphor Generation with Conceptual Mappings', '2021', 'ACL-IJCNLP', '结构映射', 'Method-02-MetaphorConceptualMappings-ACL-2021.pdf', 'https://aclanthology.org/2021.acl-long.524/', '研究基于概念映射生成隐喻表达。', '它支撑“知识概念到寓言世界”的跨域映射思想。', '重点看 source domain 与 target domain 的映射如何表达。', '可借鉴概念映射，把科学实体映射为寓言角色，把关系映射为互动。', '隐喻通常较短，不等同于有完整情节和教育目标的寓言。', '需要把短语级或句子级隐喻扩展为多事件寓言结构。'],
-  ['moral-stories', 9, 'Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences', '2021', 'EMNLP', '教育评价', 'Evaluation-01-MoralStories-EMNLP-2021.pdf', 'https://aclanthology.org/2021.emnlp-main.54/', '构建道德故事数据集，强调规范、意图、行动和结果。', '它帮助区分寓言中的“道德寓意”和 Concept-to-Fable 中的“知识寓意”。', '重点看故事如何连接情境、行为、后果和规范判断。', '可借鉴故事结构字段，为教育寓言加入情境、冲突、行动、结论。', '它关注道德推理，不关注科学概念解释和课程知识对齐。', '需要把 moral norm 替换为 learning objective，把行为后果映射为知识机制。'],
+  ['moral-stories', 9, 'Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences', '2021', 'EMNLP', '评测', 'Evaluation-01-MoralStories-EMNLP-2021.pdf', 'https://aclanthology.org/2021.emnlp-main.54/', '构建道德故事数据集，强调规范、意图、行动和结果。', '它帮助区分寓言中的“道德寓意”和 Concept-to-Fable 中的“知识寓意”。', '重点看故事如何连接情境、行为、后果和规范判断。', '可借鉴故事结构字段，为教育寓言加入情境、冲突、行动、结论。', '它关注道德推理，不关注科学概念解释和课程知识对齐。', '需要把 moral norm 替换为 learning objective，把行为后果映射为知识机制。'],
   ['controllable-text-generation-survey', 10, 'A Survey of Controllable Text Generation using Transformer-based Pre-trained Language Models', '2022', 'arXiv', '层次化生成', 'StoryGen-05-ControllableTextGenerationSurvey-arXiv-2022.pdf', 'https://arxiv.org/abs/2201.05337', '综述 Transformer 时代的可控文本生成方法。', '它支撑生成端控制策略选择，例如属性控制、规划控制和解码控制。', '重点看不同控制方法的输入形式、控制粒度和代价。', '可用于选择控制教学目标、年级难度、寓言风格的技术路线。', '综述不专门讨论故事结构和教育准确性。', '需要从通用可控生成中筛选适合长文本寓言和知识约束的方法。'],
   ['analogy-generation-llms', 11, 'Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT', '2022', 'INLG', '结构映射', 'Method-03-AnalogyGenerationLLMs-INLG-2022.pdf', 'https://aclanthology.org/2022.inlg-main.25/', '研究用 LLM prompt 生成类比。', 'Concept-to-Fable 本质上需要稳定生成“知识点到寓言情境”的类比。', '重点看 prompt 如何诱导类比，以及类比质量如何评估。', '可借鉴 prompt 设计，让模型提出候选寓言世界和角色映射。', '单纯 prompting 难以保证映射忠实性和教学准确性。', '需要加入 KG 约束、对齐检查和人工/模型评审环节。'],
-  ['storal', 12, 'A Corpus for Understanding and Generating Moral Stories', '2022', 'NAACL', '教育评价', 'Evaluation-02-STORAL-NAACL-2022.pdf', 'https://aclanthology.org/2022.naacl-main.374/', '提供理解和生成道德故事的语料资源。', '它是构建寓言故事数据集时的重要参考，尤其是故事结构和寓意标注。', '重点看数据字段、任务定义和故事评价。', '可借鉴语料标注方式，为每个寓言标注情境、行为、结果和知识点。', '道德故事不等同于知识解释故事，缺少概念映射说明。', '需要把道德标签改造为知识概念、先修关系和解释步骤标签。'],
+  ['storal', 12, 'A Corpus for Understanding and Generating Moral Stories', '2022', 'NAACL', '评测', 'Evaluation-02-STORAL-NAACL-2022.pdf', 'https://aclanthology.org/2022.naacl-main.374/', '提供理解和生成道德故事的语料资源。', '它是构建寓言故事数据集时的重要参考，尤其是故事结构和寓意标注。', '重点看数据字段、任务定义和故事评价。', '可借鉴语料标注方式，为每个寓言标注情境、行为、结果和知识点。', '道德故事不等同于知识解释故事，缺少概念映射说明。', '需要把道德标签改造为知识概念、先修关系和解释步骤标签。'],
   ['storyanalogy', 13, 'STORYANALOGY: Deriving Story-level Analogies from Large Language Models', '2023', 'EMNLP', '结构映射', 'Core-05-STORYANALOGY-EMNLP-2023.pdf', 'https://aclanthology.org/2023.emnlp-main.706/', '研究从 LLM 中获得故事级类比。', '它是 Concept-to-Fable 的核心参照：寓言不是一句类比，而是故事级结构映射。', '重点看故事级 analogy 的构造、推理和评价。', '可借鉴故事级映射框架，用于说明每个知识步骤对应哪个情节。', '它不一定以课程知识和小学教学目标为输入。', '需要把 story analogy 约束到 KG 驱动的知识解释，并输出映射说明书。'],
   ['educational-material-to-kg', 14, 'Educational Material to Knowledge Graph Conversion', '2024', 'KaLLM Workshop', '知识图谱', 'Method-04-EducationalMaterial2KG-KaLLM-2024.pdf', 'https://aclanthology.org/2024.kallm-1.9/', '研究将教育材料转换为知识图谱。', '它直接服务“从教材到 KG”的前处理阶段。', '重点看教育文本如何被解析为实体、关系和图结构。', '可用于把教材章节转成 Concept-to-Fable 的输入图。', '转换后的 KG 不自动等价于可讲故事的结构。', '需要在 KG 上增加故事化字段，如角色候选、冲突类型和解释顺序。'],
-  ['legalstories', 15, 'Leveraging Large Language Models for Learning Complex Legal Concepts through Storytelling', '2024', 'ACL', '教育评价', 'Core-01-LegalStories-ACL-2024.pdf', 'https://aclanthology.org/2024.acl-long.388/', '用 LLM 通过故事帮助学习复杂法律概念。', '它与 Concept-to-Fable 最接近：都使用故事解释复杂知识。', '重点看复杂概念如何被转化为故事，以及学习效果如何验证。', '可借鉴“复杂概念故事化”的任务叙事和用户评价设计。', '法律概念与小学全学科知识不同，且未必强调寓言式映射和 KG 驱动。', '需要把领域从法律扩展到 K-12，并把故事化进一步约束为寓言化。'],
+  ['legalstories', 15, 'Leveraging Large Language Models for Learning Complex Legal Concepts through Storytelling', '2024', 'ACL', '评测', 'Core-01-LegalStories-ACL-2024.pdf', 'https://aclanthology.org/2024.acl-long.388/', '用 LLM 通过故事帮助学习复杂法律概念。', '它与 Concept-to-Fable 最接近：都使用故事解释复杂知识。', '重点看复杂概念如何被转化为故事，以及学习效果如何验证。', '可借鉴“复杂概念故事化”的任务叙事和用户评价设计。', '法律概念与小学全学科知识不同，且未必强调寓言式映射和 KG 驱动。', '需要把领域从法律扩展到 K-12，并把故事化进一步约束为寓言化。'],
   ['figurative-language-generation-survey', 16, 'A Survey on Automatic Generation of Figurative Language', '2024', 'ACM Computing Surveys', '结构映射', 'Figurative-01-FigurativeLanguageGenerationSurvey-ACMCSUR-2024.pdf', 'https://dl.acm.org/', '综述比喻、隐喻等修辞语言自动生成。', '寓言生成依赖修辞和跨域表达，这篇能提供语言层面的背景。', '重点看 figurative language 的类型、生成方法和评价。', '可用于说明 Concept-to-Fable 与 metaphor/analogy generation 的区别。', '修辞生成通常不要求完整教学闭环。', '需要把修辞表达与课程知识、故事结构和学习目标绑定。'],
   ['ss-gen', 17, 'SS-GEN: A Social Story Generation Framework with Large Language Models', '2025', 'AAAI', '层次化生成', 'Core-02-SSGEN-AAAI-2025.pdf', 'https://ojs.aaai.org/', '提出面向 social story 的 LLM 生成框架。', '它展示了特定用途故事生成如何定义约束、流程和评价。', '重点看框架如何组织输入、生成和质量控制。', '可借鉴任务化故事生成框架，把 social goal 替换为 learning objective。', 'social story 和 educational fable 的目标不同，不能直接迁移评价指标。', '需要换成知识准确性、映射忠实性和年级适配指标。'],
-  ['scientific-concept-analogies', 18, 'Unlocking Scientific Concepts: How Effective Are LLM-Generated Analogies for Student Understanding and Classroom Practice?', '2025', 'CHI', '教育评价', 'Evaluation-04-ScientificConceptAnalogies-CHI-2025.pdf', 'https://dl.acm.org/', '研究 LLM 生成科学概念类比对学生理解和课堂实践的作用。', '它直接支撑 Concept-to-Fable 的教育有效性问题。', '重点看学生理解、教师实践和类比质量如何被评估。', '可借鉴教育场景评测，把寓言质量和学习效果连接起来。', '类比不一定是完整寓言，也未必有 KG 驱动。', '需要把单个 analogy 扩展为带情节、寓意和映射说明的寓言。'],
-  ['multimodal-math-story-generation', 19, 'Multimodal Story Generation Using Generative AI for Contextualised Mathematics Education', '2025', 'AIED', '教育评价', 'Education-01-MultimodalMathStoryGeneration-AIED-2025.pdf', 'https://link.springer.com/', '研究生成式 AI 在数学教育中的情境化故事生成。', '它说明故事化知识解释可以服务具体学科教学。', '重点看数学概念如何被情境化，以及多模态元素如何支持理解。', '可借鉴数学教育场景中的故事任务设计和学生适配思路。', '数学故事不一定是寓言，也不覆盖全学科 KG。', '需要把情境化故事扩展为寓言结构，并加入跨学科知识图谱输入。'],
+  ['scientific-concept-analogies', 18, 'Unlocking Scientific Concepts: How Effective Are LLM-Generated Analogies for Student Understanding and Classroom Practice?', '2025', 'CHI', '评测', 'Evaluation-04-ScientificConceptAnalogies-CHI-2025.pdf', 'https://dl.acm.org/', '研究 LLM 生成科学概念类比对学生理解和课堂实践的作用。', '它直接支撑 Concept-to-Fable 的教育有效性问题。', '重点看学生理解、教师实践和类比质量如何被评估。', '可借鉴教育场景评测，把寓言质量和学习效果连接起来。', '类比不一定是完整寓言，也未必有 KG 驱动。', '需要把单个 analogy 扩展为带情节、寓意和映射说明的寓言。'],
+  ['multimodal-math-story-generation', 19, 'Multimodal Story Generation Using Generative AI for Contextualised Mathematics Education', '2025', 'AIED', '评测', 'Education-01-MultimodalMathStoryGeneration-AIED-2025.pdf', 'https://link.springer.com/', '研究生成式 AI 在数学教育中的情境化故事生成。', '它说明故事化知识解释可以服务具体学科教学。', '重点看数学概念如何被情境化，以及多模态元素如何支持理解。', '可借鉴数学教育场景中的故事任务设计和学生适配思路。', '数学故事不一定是寓言，也不覆盖全学科 KG。', '需要把情境化故事扩展为寓言结构，并加入跨学科知识图谱输入。'],
   ['kg-guided-storytelling', 20, 'Guiding Generative Storytelling with Knowledge Graphs', '2025', 'arXiv', '知识图谱', 'Core-04-KGGuidedStorytelling-arXiv-2025.pdf', 'https://arxiv.org/abs/2505.24803', '研究用知识图谱指导生成式故事创作。', '它正好连接 KG 和 storytelling，是 Concept-to-Fable 的关键技术桥梁。', '重点看 KG 如何影响故事内容、连贯性和可控性。', '可借鉴 KG-guided generation，把课程 KG 节点和边作为故事生成约束。', '普通 KG storytelling 不一定关注教育准确性和寓言映射。', '需要把 KG 从开放知识图谱换成课程图谱，并增加映射忠实性评估。'],
   ['analogy-annotators', 21, 'Can Language Models Serve as Analogy Annotators?', '2025', 'Findings of ACL', '结构映射', 'Evaluation-03-AnalogyAnnotators-ACLFindings-2025.pdf', 'https://aclanthology.org/', '评估语言模型能否作为类比标注者。', 'Concept-to-Fable 需要判断寓言映射是否合理，这篇提供自动评审启发。', '重点看 analogy annotation 的标准和模型可靠性。', '可借鉴让 LLM 辅助标注概念-故事对应关系。', 'LLM 标注存在偏差，不能完全替代专家和教师评估。', '需要设计多角色评审：知识专家、教师、模型共同检查映射。'],
   ['llm-story-generation-survey', 22, 'A Survey on LLMs for Story Generation', '2025', 'Findings of EMNLP', '层次化生成', 'StoryGen-06-LLMStoryGenerationSurvey-EMNLPFindings-2025.pdf', 'https://aclanthology.org/', '综述 LLM 时代故事生成方法和挑战。', '它帮助定位 LLM 在 Concept-to-Fable 中适合作为生成器，而不是唯一控制器。', '重点看 LLM story generation 的可控性、评价和一致性问题。', '可用于写 related work，说明为什么需要 KG 和显式映射来约束 LLM。', '综述本身不提供具体教育寓言数据集方案。', '需要把 LLM 故事生成问题转化为 KG-conditioned educational fable synthesis。'],
-  ['synthetic-moral-fables', 23, 'TF1-EN-3M: Three Million Synthetic Moral Fables from Open Language Models', '2025', 'arXiv', '教育评价', 'Fable-01-SyntheticMoralFables-arXiv-2025.pdf', 'https://arxiv.org/abs/2504.20605', '构建大规模合成道德寓言数据。', '它说明大规模寓言数据集是可行的，但 Concept-to-Fable 更强调知识映射。', '重点看数据生成流程、过滤策略和寓言质量控制。', '可借鉴大规模生成和筛选 pipeline。', '道德寓言不是学科知识寓言，数据量大不等于教学准确。', '需要为每篇寓言加入知识点、概念链、映射说明和年级标签。'],
+  ['synthetic-moral-fables', 23, 'TF1-EN-3M: Three Million Synthetic Moral Fables from Open Language Models', '2025', 'arXiv', '评测', 'Fable-01-SyntheticMoralFables-arXiv-2025.pdf', 'https://arxiv.org/abs/2504.20605', '构建大规模合成道德寓言数据。', '它说明大规模寓言数据集是可行的，但 Concept-to-Fable 更强调知识映射。', '重点看数据生成流程、过滤策略和寓言质量控制。', '可借鉴大规模生成和筛选 pipeline。', '道德寓言不是学科知识寓言，数据量大不等于教学准确。', '需要为每篇寓言加入知识点、概念链、映射说明和年级标签。'],
   ['k12-kgraph', 24, 'K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs', '2026', 'arXiv', '知识图谱', 'Core-03-K12KGraph-arXiv-2026.pdf', 'https://arxiv.org/abs/2605.09635', '构建课程对齐的 K-12 知识图谱，用于教育 LLM 训练和评测。', '这是 Concept-to-Fable 的核心支柱：为寓言生成提供课程认知和知识结构。', '重点看 concept、skill、prerequisite 和 curriculum alignment 的定义。', '可直接作为小学全学科知识图谱构建和任务输入设计的参照。', 'KG 本身不解决故事化、寓言化和语言生成质量。', '需要在 K12-KGraph 之上增加“可寓言化”的结构映射层。'],
-  ['classroom-ai', 25, 'Classroom AI: Large Language Models as Grade-Specific Teachers', '2026', 'npj Artificial Intelligence', '教育评价', 'Evaluation-05-ClassroomAI-npjAI-2026.pdf', 'https://www.nature.com/npjai/', '研究 LLM 作为分年级教师时的表现与适配。', '它支撑 Concept-to-Fable 的“因材施教”和年级阅读适配。', '重点看 grade-specific teaching、可读性和教学质量评价。', '可借鉴年级适配指标，为寓言生成设定小学 1-2、3-4、5-6 年级版本。', '它关注教师式回答，不一定生成寓言或映射说明。', '需要把教师回答标准转为寓言文本的可读性、解释性和知识准确性标准。'],
+  ['classroom-ai', 25, 'Classroom AI: Large Language Models as Grade-Specific Teachers', '2026', 'npj Artificial Intelligence', '评测', 'Evaluation-05-ClassroomAI-npjAI-2026.pdf', 'https://www.nature.com/npjai/', '研究 LLM 作为分年级教师时的表现与适配。', '它支撑 Concept-to-Fable 的“因材施教”和年级阅读适配。', '重点看 grade-specific teaching、可读性和教学质量评价。', '可借鉴年级适配指标，为寓言生成设定小学 1-2、3-4、5-6 年级版本。', '它关注教师式回答，不一定生成寓言或映射说明。', '需要把教师回答标准转为寓言文本的可读性、解释性和知识准确性标准。'],
 ].map(([slug, order, title, year, venue, pillar, pdf, url, contribution, relation, reading, borrow, limitation, transform]) => ({ slug, order, title, year, venue, pillar, pdf, url, contribution, relation, reading, borrow, limitation, transform }));
 
 const evidenceMap = {
@@ -276,7 +276,7 @@ ${evidenceBullets}
 
 **明确回答**：${p.limitation}
 
-**研究空间**：这个判断来自论文自身的任务边界：它虽然提供了上面依据中的方法或数据，但没有完整覆盖“课程 KG → 结构映射 → 寓言生成 → 教育评价”的闭环。你的创新点不一定是重新发明它的方法，而是把它改造为一个面向教学寓言数据集的端到端任务定义，并要求每个生成故事都能说明“为什么这样讲是对的”。
+**研究空间**：这个判断来自论文自身的任务边界：它虽然提供了上面依据中的方法或数据，但没有完整覆盖“课程 KG → 结构映射 → 寓言生成 → 评测”的闭环。你的创新点不一定是重新发明它的方法，而是把它改造为一个面向教学寓言数据集的端到端任务定义，并要求每个生成故事都能说明“为什么这样讲是对的”。
 
 **风险提醒**：${advice.risk} 写 related work 时建议明确说出这篇论文与你的边界：它解决了什么，你继承什么；它没解决什么，你补什么。这样可以减少 reviewer 觉得“只是换了个应用场景”的风险。
 
@@ -301,19 +301,63 @@ template: splash
 
 这个网站围绕一个研究构想展开：**Concept-to-Fable Synthesis**，即利用课程对齐知识图谱驱动，将小学全学科知识点系统性地转化为高质量、可解释、可评测的教学寓言故事数据集。
 
+这里的“论文阅读”不是泛读 25 篇文献，而是围绕一个具体问题追问：**如果我要把教材知识点稳定地变成寓言故事，每篇论文能帮我解决哪一环？它能直接借鉴什么？又有哪些地方不能照搬？**
+
 ## 四个核心支柱
 
-- **知识图谱**：用课程对齐的概念、技能、先修关系约束故事内容。
-- **结构映射**：把知识点的实体、关系和因果链映射到寓言角色与情节。
-- **层次化生成**：先规划故事线，再扩写成适合学生阅读的寓言。
-- **教育评价**：评价故事是否准确、映射是否忠实、阅读难度是否匹配年级。
+- **知识图谱**：解决“讲什么”和“按什么顺序讲”的问题。课程对齐的概念、技能、章节、实验、习题和先修关系，为寓言生成提供可追溯的知识输入，避免模型只凭一个松散 prompt 编故事。
+- **结构映射**：解决“知识逻辑如何变成故事逻辑”的问题。它要求科学实体、概念关系、因果链和解释步骤，能够对应到寓言中的角色、冲突、行动和结局，从而让故事不是漂亮但跑偏的比喻。
+- **层次化生成**：解决“怎么稳定写出来”的问题。先把知识链规划成故事线或寓言骨架，再扩写成正文，并在生成过程中加入可控条件、多阶段检查和必要的重写。
+- **评测**：解决“怎么证明它真的有用”的问题。评测不仅看语言是否流畅，还要看知识是否准确、映射是否忠实、故事是否完整、阅读难度是否匹配年级，以及学生或教师是否真的能从中受益。
 
 ## 推荐阅读路径
 
-1. 先读 [K12-KGraph](/papers/k12-kgraph/) 和 [Concept Extraction](/papers/concept-extraction-prerequisite/)，理解课程知识如何结构化。
-2. 再读 [STORYANALOGY](/papers/storyanalogy/) 和 [Metaphor Generation](/papers/metaphor-generation-conceptual-mappings/)，理解知识到故事的跨域映射。
-3. 然后读 [Plan-and-Write](/papers/plan-and-write/) 和 [KG-Guided Storytelling](/papers/kg-guided-storytelling/)，理解如何生成可控故事。
-4. 最后读 [Classroom AI](/papers/classroom-ai/) 和 [Scientific Concept Analogies](/papers/scientific-concept-analogies/)，理解教育场景中的评价问题。
+这 25 篇论文可以按“先搭知识骨架，再做映射，再生成故事，最后评测”的顺序阅读。
+
+### 1. 课程知识如何结构化
+
+先读这一组，理解教材知识点、先修关系、课程顺序和教育资源如何被组织成可计算结构：
+
+1. [K12-KGraph](/papers/k12-kgraph/)：课程对齐知识图谱，是 Concept-to-Fable 最核心的 KG 参照。
+2. [Concept Extraction and Prerequisite Relation Learning](/papers/concept-extraction-prerequisite/)：从教育数据中抽取概念和先修关系。
+3. [MOOCCube](/papers/mooccube/)：大规模教育资源、概念和学习行为的数据组织方式。
+4. [Educational Material to Knowledge Graph Conversion](/papers/educational-material-to-kg/)：从教育材料转换到知识图谱的方法论。
+5. [Guiding Generative Storytelling with Knowledge Graphs](/papers/kg-guided-storytelling/)：连接 KG 与故事生成，说明图结构如何参与叙事控制。
+
+### 2. 知识逻辑如何映射成寓言逻辑
+
+再读这一组，理解类比、隐喻、故事级映射和自动标注如何支撑“知识点到寓言”的可解释转换：
+
+6. [STORYANALOGY](/papers/storyanalogy/)：故事级类比与 Structure-Mapping Theory，是结构映射的核心参照。
+7. [Analogy Generation by Prompting LLMs](/papers/analogy-generation-llms/)：用 LLM 生成类比及类比解释。
+8. [Metaphor Generation with Conceptual Mappings](/papers/metaphor-generation-conceptual-mappings/)：用概念映射控制隐喻生成。
+9. [A Survey on Automatic Generation of Figurative Language](/papers/figurative-language-generation-survey/)：修辞生成总览，用来区分寓言、隐喻、类比和其他 figurative language。
+10. [Can Language Models Serve as Analogy Annotators?](/papers/analogy-annotators/)：用 LLM 辅助检查故事级类比映射。
+11. [Unlocking Scientific Concepts](/papers/scientific-concept-analogies/)：科学概念类比在学生理解和课堂实践中的效果。
+
+### 3. 寓言故事如何稳定生成
+
+然后读这一组，理解故事生成从开放式生成走向可控生成、规划生成和任务化生成的技术路线：
+
+12. [Hierarchical Neural Story Generation](/papers/hierarchical-neural-story-generation/)：分层故事生成的早期代表。
+13. [Towards Controllable Story Generation](/papers/towards-controllable-story-generation/)：故事生成中的控制变量思想。
+14. [Plan-and-Write](/papers/plan-and-write/)：先规划 storyline，再扩写故事，是生成流程核心参考。
+15. [Controllable Neural Story Plot Generation via Reward Shaping](/papers/controllable-plot-reward-shaping/)：用 reward shaping 控制 plot 目标。
+16. [Automatic Story Generation Survey](/papers/automatic-story-generation-survey/)：自动故事生成方法总览。
+17. [Controllable Text Generation Survey](/papers/controllable-text-generation-survey/)：可控文本生成总览，用来选择控制策略。
+18. [A Survey on LLMs for Story Generation](/papers/llm-story-generation-survey/)：LLM 时代故事生成的 taxonomy 和挑战。
+19. [SS-GEN](/papers/ss-gen/)：特定用途故事生成框架，强调约束、流程和评测。
+
+### 4. 生成结果如何评测和形成数据集
+
+最后读这一组，理解寓言数据、道德故事、教育故事和分级教学回答如何被标注、筛选和验证：
+
+20. [Moral Stories](/papers/moral-stories/)：规范、意图、行动、后果的结构化故事数据。
+21. [STORAL](/papers/storal/)：中英文道德故事理解与生成任务。
+22. [TF1-EN-3M Synthetic Moral Fables](/papers/synthetic-moral-fables/)：大规模合成寓言数据集与筛选 pipeline。
+23. [LegalStories](/papers/legalstories/)：用故事帮助非专家理解复杂概念，并通过实验验证学习效果。
+24. [Classroom AI](/papers/classroom-ai/)：分年级教学回答和可读性适配。
+25. [Multimodal Math Story Generation](/papers/multimodal-math-story-generation/)：数学教育中的情境化/多模态故事生成参考。
 
 ## 如何使用本站
 

@@ -20,7 +20,7 @@ export default defineConfig({
 						{ label: '知识图谱', slug: 'pillars/knowledge-graph' },
 						{ label: '结构映射', slug: 'pillars/structure-mapping' },
 						{ label: '层次化生成', slug: 'pillars/hierarchical-generation' },
-						{ label: '教育评价', slug: 'pillars/educational-evaluation' },
+						{ label: '评测', slug: 'pillars/educational-evaluation' },
 					],
 				},
 				{
