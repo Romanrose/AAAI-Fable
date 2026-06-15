@@ -1,0 +1,138 @@
+---
+interface Props {
+	slug: string;
+	title: string;
+}
+
+const { slug, title } = Astro.props;
+---
+
+<section class="paper-ask" data-paper-slug={slug}>
+	<h2>向 DeepSeek 追问这篇论文</h2>
+	<p>
+		围绕 <strong>{title}</strong> 提问。回答会结合这篇论文的依据定位，以及 Concept-to-Fable
+		的研究目标。
+	</p>
+	<label>
+		<span>你的问题</span>
+		<textarea rows="4" placeholder="例如：这篇论文最适合支撑我的四大支柱中的哪一部分？"></textarea>
+	</label>
+	<div class="paper-ask-actions">
+		<button type="button">提问</button>
+		<span class="paper-ask-status" aria-live="polite"></span>
+	</div>
+	<div class="paper-ask-answer" hidden></div>
+</section>
+
+<script>
+	const blocks = document.querySelectorAll('.paper-ask');
+
+	for (const block of blocks) {
+		const textarea = block.querySelector('textarea');
+		const button = block.querySelector('button');
+		const status = block.querySelector('.paper-ask-status');
+		const answer = block.querySelector('.paper-ask-answer');
+		const paperSlug = block.getAttribute('data-paper-slug');
+
+		if (!(textarea instanceof HTMLTextAreaElement) || !(button instanceof HTMLButtonElement) || !status || !answer) {
+			continue;
+		}
+
+		button.addEventListener('click', async () => {
+			const question = textarea.value.trim();
+			if (!question) {
+				status.textContent = '请先输入问题。';
+				return;
+			}
+
+			button.disabled = true;
+			status.textContent = 'DeepSeek 正在阅读上下文...';
+			answer.setAttribute('hidden', '');
+			answer.textContent = '';
+
+			try {
+				const response = await fetch('/api/ask-paper', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ paperSlug, question }),
+				});
+				const data = await response.json();
+				if (!response.ok) {
+					throw new Error(data?.error || '请求失败');
+				}
+				answer.textContent = data.answer;
+				answer.removeAttribute('hidden');
+				status.textContent = '已生成回答。';
+			} catch (error) {
+				status.textContent = error instanceof Error ? error.message : '请求失败，请稍后重试。';
+			} finally {
+				button.disabled = false;
+			}
+		});
+	}
+</script>
+
+<style>
+	.paper-ask {
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		margin-top: 2rem;
+		padding: 1rem;
+	}
+
+	.paper-ask h2 {
+		margin-top: 0;
+	}
+
+	.paper-ask label {
+		display: grid;
+		gap: 0.4rem;
+	}
+
+	.paper-ask textarea {
+		background: var(--sl-color-black);
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.35rem;
+		color: var(--sl-color-white);
+		font: inherit;
+		padding: 0.75rem;
+		resize: vertical;
+		width: 100%;
+	}
+
+	.paper-ask-actions {
+		align-items: center;
+		display: flex;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+	}
+
+	.paper-ask button {
+		background: var(--sl-color-accent);
+		border: 0;
+		border-radius: 0.35rem;
+		color: var(--sl-color-black);
+		cursor: pointer;
+		font: inherit;
+		font-weight: 600;
+		padding: 0.5rem 0.9rem;
+	}
+
+	.paper-ask button:disabled {
+		cursor: wait;
+		opacity: 0.7;
+	}
+
+	.paper-ask-status {
+		color: var(--sl-color-gray-3);
+		font-size: 0.9rem;
+	}
+
+	.paper-ask-answer {
+		background: var(--sl-color-gray-6);
+		border-radius: 0.35rem;
+		margin-top: 1rem;
+		padding: 1rem;
+		white-space: pre-wrap;
+	}
+</style>

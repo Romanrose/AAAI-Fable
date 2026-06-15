@@ -5,6 +5,8 @@ sidebar:
   order: 6
 ---
 
+import PaperAsk from '../../../components/PaperAsk.astro';
+
 # MOOCCube: A Large-scale Data Repository for NLP Applications in MOOCs
 
 **年份/来源**：2020 · ACL  
@@ -79,3 +81,5 @@ MOOC 场景与小学全学科教材不同，且不面向寓言生成。
 **改造方案**：建议按三个层次改造。第一，把输入改成课程知识点或 KG 子图，而不是普通主题或自由 prompt。第二，在生成前增加映射表，规定知识实体、关系、因果链分别对应哪些寓言角色、动作和结果。第三，在生成后增加检查器，分别检查科学准确性、映射忠实性、故事完整性和目标年级可读性。
 
 **下一步建议**：如果这篇论文属于核心论文，可以进一步补一个小实验：选一个小学知识点，用它启发的方法生成一版寓言骨架，再人工标注“知识步骤—故事情节”的对应关系。这样它就不只是文献综述里的引用，而会变成你任务设计的实证支撑。对于目前依据定位还不够细的论文，下一步优先补页码、表格编号和原文术语，避免回答停留在二次概括。
+
+<PaperAsk slug="mooccube" title="MOOCCube: A Large-scale Data Repository for NLP Applications in MOOCs" />

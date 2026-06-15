@@ -4,9 +4,11 @@ const path = require('path');
 const root = path.join(__dirname, '..', 'src', 'content', 'docs');
 const papersDir = path.join(root, 'papers');
 const pillarsDir = path.join(root, 'pillars');
+const dataDir = path.join(__dirname, '..', 'src', 'data');
 
 fs.mkdirSync(papersDir, { recursive: true });
 fs.mkdirSync(pillarsDir, { recursive: true });
+fs.mkdirSync(dataDir, { recursive: true });
 
 const pillarMeta = {
   知识图谱: {
@@ -353,6 +355,8 @@ sidebar:
   order: ${p.order}
 ---
 
+import PaperAsk from '../../../components/PaperAsk.astro';
+
 # ${p.title}
 
 **年份/来源**：${p.year} · ${p.venue}  
@@ -383,7 +387,31 @@ ${p.limitation}
 ## 研究导向 Q&A
 
 ${qaText(p, meta)}
+
+<PaperAsk slug="${p.slug}" title="${yaml(p.title)}" />
 `);
 }
+
+const contexts = Object.fromEntries(
+  papers.map((p) => [
+    p.slug,
+    {
+      title: p.title,
+      year: p.year,
+      venue: p.venue,
+      pillar: p.pillar,
+      pdf: p.pdf,
+      url: p.url,
+      contribution: p.contribution,
+      relation: p.relation,
+      reading: p.reading,
+      borrow: p.borrow,
+      limitation: p.limitation,
+      transform: p.transform,
+      evidence: evidenceMap[p.slug] || [],
+    },
+  ]),
+);
+write(path.join(dataDir, 'paperContexts.json'), `${JSON.stringify(contexts, null, 2)}\n`);
 
 console.log(`Generated ${papers.length} paper pages.`);
