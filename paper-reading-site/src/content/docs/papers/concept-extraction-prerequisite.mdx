@@ -1,0 +1,55 @@
+---
+title: "Concept Extraction and Prerequisite Relation Learning from Educational Data"
+description: "2019 AAAI · 知识图谱"
+sidebar:
+  order: 5
+---
+
+# Concept Extraction and Prerequisite Relation Learning from Educational Data
+
+**年份/来源**：2019 · AAAI  
+**所属支柱**：[知识图谱](/pillars/knowledge-graph/)  
+**PDF**：[打开本地 PDF](/papers/Method-05-ConceptExtractionPrerequisite-AAAI-2019.pdf)  
+**原文链接**：[https://ojs.aaai.org/index.php/AAAI/article/view/5033](https://ojs.aaai.org/index.php/AAAI/article/view/5033)
+
+## 这篇论文在讲什么
+
+研究从教育数据中抽取概念并学习前置依赖关系。
+
+## 与 Concept-to-Fable 的关系
+
+它直接支撑 Concept-to-Fable 的知识图谱构建：先知道讲哪个概念、依赖哪些前置知识。
+
+## 推荐阅读部分
+
+重点看概念抽取和 prerequisite relation 的建模方式。
+
+## 可借鉴点
+
+可用于从教材中自动抽取知识点和先修链，形成寓言生成输入。
+
+## 局限与注意事项
+
+论文关注知识结构发现，不负责把知识结构转成故事。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它直接支撑 Concept-to-Fable 的知识图谱构建：先知道讲哪个概念、依赖哪些前置知识。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **知识图谱**。在 Concept-to-Fable 中，这一部分的任务是让模型先理解课程知识结构，再决定寓言应该解释什么。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可用于从教材中自动抽取知识点和先修链，形成寓言生成输入。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+论文关注知识结构发现，不负责把知识结构转成故事。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要把抽取到的概念和先修关系转为寓言角色、冲突和解决路径。

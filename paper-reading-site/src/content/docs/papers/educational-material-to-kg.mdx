@@ -1,0 +1,55 @@
+---
+title: "Educational Material to Knowledge Graph Conversion"
+description: "2024 KaLLM Workshop · 知识图谱"
+sidebar:
+  order: 14
+---
+
+# Educational Material to Knowledge Graph Conversion
+
+**年份/来源**：2024 · KaLLM Workshop  
+**所属支柱**：[知识图谱](/pillars/knowledge-graph/)  
+**PDF**：[打开本地 PDF](/papers/Method-04-EducationalMaterial2KG-KaLLM-2024.pdf)  
+**原文链接**：[https://aclanthology.org/2024.kallm-1.9/](https://aclanthology.org/2024.kallm-1.9/)
+
+## 这篇论文在讲什么
+
+研究将教育材料转换为知识图谱。
+
+## 与 Concept-to-Fable 的关系
+
+它直接服务“从教材到 KG”的前处理阶段。
+
+## 推荐阅读部分
+
+重点看教育文本如何被解析为实体、关系和图结构。
+
+## 可借鉴点
+
+可用于把教材章节转成 Concept-to-Fable 的输入图。
+
+## 局限与注意事项
+
+转换后的 KG 不自动等价于可讲故事的结构。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它直接服务“从教材到 KG”的前处理阶段。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **知识图谱**。在 Concept-to-Fable 中，这一部分的任务是让模型先理解课程知识结构，再决定寓言应该解释什么。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可用于把教材章节转成 Concept-to-Fable 的输入图。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+转换后的 KG 不自动等价于可讲故事的结构。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要在 KG 上增加故事化字段，如角色候选、冲突类型和解释顺序。

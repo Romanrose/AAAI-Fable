@@ -1,0 +1,55 @@
+---
+title: "A Survey on LLMs for Story Generation"
+description: "2025 Findings of EMNLP · 层次化生成"
+sidebar:
+  order: 22
+---
+
+# A Survey on LLMs for Story Generation
+
+**年份/来源**：2025 · Findings of EMNLP  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/StoryGen-06-LLMStoryGenerationSurvey-EMNLPFindings-2025.pdf)  
+**原文链接**：[https://aclanthology.org/](https://aclanthology.org/)
+
+## 这篇论文在讲什么
+
+综述 LLM 时代故事生成方法和挑战。
+
+## 与 Concept-to-Fable 的关系
+
+它帮助定位 LLM 在 Concept-to-Fable 中适合作为生成器，而不是唯一控制器。
+
+## 推荐阅读部分
+
+重点看 LLM story generation 的可控性、评价和一致性问题。
+
+## 可借鉴点
+
+可用于写 related work，说明为什么需要 KG 和显式映射来约束 LLM。
+
+## 局限与注意事项
+
+综述本身不提供具体教育寓言数据集方案。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它帮助定位 LLM 在 Concept-to-Fable 中适合作为生成器，而不是唯一控制器。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可用于写 related work，说明为什么需要 KG 和显式映射来约束 LLM。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+综述本身不提供具体教育寓言数据集方案。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要把 LLM 故事生成问题转化为 KG-conditioned educational fable synthesis。

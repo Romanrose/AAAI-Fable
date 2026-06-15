@@ -1,0 +1,55 @@
+---
+title: "Can Language Models Serve as Analogy Annotators?"
+description: "2025 Findings of ACL · 结构映射"
+sidebar:
+  order: 21
+---
+
+# Can Language Models Serve as Analogy Annotators?
+
+**年份/来源**：2025 · Findings of ACL  
+**所属支柱**：[结构映射](/pillars/structure-mapping/)  
+**PDF**：[打开本地 PDF](/papers/Evaluation-03-AnalogyAnnotators-ACLFindings-2025.pdf)  
+**原文链接**：[https://aclanthology.org/](https://aclanthology.org/)
+
+## 这篇论文在讲什么
+
+评估语言模型能否作为类比标注者。
+
+## 与 Concept-to-Fable 的关系
+
+Concept-to-Fable 需要判断寓言映射是否合理，这篇提供自动评审启发。
+
+## 推荐阅读部分
+
+重点看 analogy annotation 的标准和模型可靠性。
+
+## 可借鉴点
+
+可借鉴让 LLM 辅助标注概念-故事对应关系。
+
+## 局限与注意事项
+
+LLM 标注存在偏差，不能完全替代专家和教师评估。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+Concept-to-Fable 需要判断寓言映射是否合理，这篇提供自动评审启发。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **结构映射**。在 Concept-to-Fable 中，这一部分的任务是把抽象知识结构稳定映射成寓言中的角色、冲突和情节。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可借鉴让 LLM 辅助标注概念-故事对应关系。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+LLM 标注存在偏差，不能完全替代专家和教师评估。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要设计多角色评审：知识专家、教师、模型共同检查映射。

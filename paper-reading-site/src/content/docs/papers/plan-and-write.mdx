@@ -1,0 +1,55 @@
+---
+title: "Plan-and-Write: Towards Better Automatic Storytelling"
+description: "2019 AAAI · 层次化生成"
+sidebar:
+  order: 3
+---
+
+# Plan-and-Write: Towards Better Automatic Storytelling
+
+**年份/来源**：2019 · AAAI  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/Method-01-PlanAndWrite-AAAI-2019.pdf)  
+**原文链接**：[https://ojs.aaai.org/index.php/AAAI/article/view/4726](https://ojs.aaai.org/index.php/AAAI/article/view/4726)
+
+## 这篇论文在讲什么
+
+提出先生成 storyline 再扩写故事的两阶段框架。
+
+## 与 Concept-to-Fable 的关系
+
+这是 Concept-to-Fable 生成流程的核心技术参照：先把知识点逻辑规划成故事线。
+
+## 推荐阅读部分
+
+重点看 storyline 的形式、规划阶段和生成阶段如何衔接。
+
+## 可借鉴点
+
+可把 KG 路径或概念解释步骤转成 storyline，再让 LLM 扩写。
+
+## 局限与注意事项
+
+原方法没有教育目标、年龄适配和映射忠实性约束。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+这是 Concept-to-Fable 生成流程的核心技术参照：先把知识点逻辑规划成故事线。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可把 KG 路径或概念解释步骤转成 storyline，再让 LLM 扩写。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+原方法没有教育目标、年龄适配和映射忠实性约束。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要把 storyline 从关键词序列升级为带概念对齐字段的寓言骨架。

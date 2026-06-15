@@ -1,0 +1,55 @@
+---
+title: "SS-GEN: A Social Story Generation Framework with Large Language Models"
+description: "2025 AAAI · 层次化生成"
+sidebar:
+  order: 17
+---
+
+# SS-GEN: A Social Story Generation Framework with Large Language Models
+
+**年份/来源**：2025 · AAAI  
+**所属支柱**：[层次化生成](/pillars/hierarchical-generation/)  
+**PDF**：[打开本地 PDF](/papers/Core-02-SSGEN-AAAI-2025.pdf)  
+**原文链接**：[https://ojs.aaai.org/](https://ojs.aaai.org/)
+
+## 这篇论文在讲什么
+
+提出面向 social story 的 LLM 生成框架。
+
+## 与 Concept-to-Fable 的关系
+
+它展示了特定用途故事生成如何定义约束、流程和评价。
+
+## 推荐阅读部分
+
+重点看框架如何组织输入、生成和质量控制。
+
+## 可借鉴点
+
+可借鉴任务化故事生成框架，把 social goal 替换为 learning objective。
+
+## 局限与注意事项
+
+social story 和 educational fable 的目标不同，不能直接迁移评价指标。
+
+## 研究导向 Q&A
+
+### 1. 这篇论文解决的问题和 Concept-to-Fable 有什么关系？
+
+它展示了特定用途故事生成如何定义约束、流程和评价。
+
+### 2. 它支撑四大支柱中的哪一部分？
+
+它主要支撑 **层次化生成**。在 Concept-to-Fable 中，这一部分的任务是把生成过程拆成可控步骤，避免 LLM 直接写作时跑偏。
+
+### 3. 我们可以借鉴它的什么方法、数据或评测方式？
+
+可借鉴任务化故事生成框架，把 social goal 替换为 learning objective。
+
+### 4. 它没有解决什么，因此我们的任务还有什么研究空间？
+
+social story 和 educational fable 的目标不同，不能直接迁移评价指标。 这也正是 Concept-to-Fable 可以继续推进的空间：把论文中的单点能力放进“课程 KG → 结构映射 → 寓言生成 → 教育评价”的完整链路里。
+
+### 5. 如果把它用于“知识点转寓言”，需要怎样改造？
+
+需要换成知识准确性、映射忠实性和年级适配指标。
