@@ -1,57 +1,104 @@
 # AAAI-Fable
 
-这个仓库用于沉淀 AAAI 论文方向 **ConceptFable / Conceptual Fable Generation** 的阶段性材料。当前文件主要围绕一个问题展开：如何让语言模型把抽象概念转化为忠实、隐含、可映射、并具有教学价值的寓言。
+这个仓库用于沉淀 AAAI 论文方向 **Concept-to-Fable Synthesis / Conceptual Fable Generation** 的阶段性材料。当前主线是：如何让语言模型把课程知识或抽象机制概念，稳定转化为忠实、可映射、可解释、并具有教学价值的寓言故事。
 
-为了方便后续协作，建议优先按时间顺序阅读。这样能看到项目从“数据集与评估可行性”逐步收敛到“AAAI 任务定义、方法、论文主线和相关工作”的过程。
+目前仓库已经整理为两个主要入口：
 
-## 时间顺序
+- `doc/`：论文阅读网站、论文思路、数据集方案、评估方案、调研材料和思维导图。
+- `data/`：根目录数据资源，目前包含 `K12-KGraph` 相关数据，用于课程知识图谱、Graph RAG 和知识约束生成实验。
 
-| 时间 | 文件 | 作用 |
-|---|---|---|
-| 2026-06-08 20:42 | [数据集/数据集codex给的建议.md](数据集/数据集codex给的建议.md) | 最早的数据集方案。提出没有现成数据集完全覆盖“抽象概念 -> 教学寓言 -> 概念映射 -> 理解/迁移问题”，因此建议构建组合式基准 **ConceptFableBench**。 |
-| 2026-06-08 20:43 | [评估/评估部分codex给的建议1.md](评估/评估部分codex给的建议1.md) | 第一版评估方案。区分文本本身是否合格，以及是否真的帮助人学习；提出自动评估、专家评估、人类学习实验三层思路。 |
-| 2026-06-08 20:44 | [评估/评估部分codex给的建议2.md](评估/评估部分codex给的建议2.md) | 更系统的评估协议 **CF-Eval**。细化 Concept Coverage、Leakage Rate、Mapping Consistency、Human Learning Evaluation 和 Ablation Study。 |
-| 2026-06-08 20:49 | [文章思路迭代（主要看这个）/ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md](文章思路迭代（主要看这个）/ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md) | 第一版完整论文整合稿。包括推荐题目、问题动机、任务定义、KG-Fable 方法、ConceptFableBench、CF-Eval、创新点、风险、Abstract 和 Introduction draft。 |
-| 2026-06-08 20:54 | [文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md](文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md) | 后续收窄版任务定义，也是当前最重要的方向文件。把任务聚焦为“机制概念的隐性叙事类比生成”，明确成功条件：机制保持、词汇隐藏、类比可对齐、叙事最小性。 |
-| 2026-06-08 21:32 | [论文调研/M2NA_2024-2026相关论文检索.md](论文调研/M2NA_2024-2026相关论文检索.md) | 相关工作检索与组织建议。覆盖类比推理、叙事生成、结构到文本、隐喻/概念映射等方向，并给出 baseline 与 related work 的组织方式。 |
-| 2026-06-08 21:48 | [寓言生成对话.xmind](寓言生成对话.xmind) | 思维导图/对话图，用于回看想法展开过程和分支。适合作为补充材料，不建议作为第一入口。 |
+线上论文阅读网站：
+
+[https://paper-reading-site.vercel.app](https://paper-reading-site.vercel.app)
+
+本地网站项目路径：
+
+`doc/paper-reading-site/`
+
+## 当前主线
+
+当前更推荐的论文主线不是泛化的“让 LLM 写寓言”，而是：
+
+> 面向课程知识与抽象机制概念的可控、可解释教学寓言生成。
+
+更具体地说，论文可以定义为 **Concept-to-Fable Synthesis** 任务：给定知识点、年级、学科、教学目标、课程知识图谱或 Graph RAG 检索子图，模型需要生成一篇寓言故事，并同时输出概念到故事元素的映射说明。
+
+故事需要同时满足：
+
+- **Knowledge Grounding**：故事内容受课程知识图谱和知识链约束。
+- **Mechanism Preservation**：保留原概念的关键机制和因果关系。
+- **Structure Mapping**：概念实体、关系和过程能映射到角色、冲突、行动和结局。
+- **Controllable Generation**：通过规划、storyline 和生成约束提高稳定性。
+- **Educational Evaluation**：评测知识准确性、映射忠实性、故事质量、年级适配和教学有效性。
+
+## 目录说明
+
+- `doc/paper-reading-site/`：Astro Starlight 论文阅读网站。包含 25 篇论文页面、PDF、研究导向 Q&A、四个核心支柱和 DeepSeek 论文问答入口。
+- `doc/文章思路迭代（主要看这个）/`：论文主线、任务定义、方法摘要和 Introduction 草稿，优先级最高。
+- `doc/数据集/`：ConceptFableBench / Concept-to-Fable 数据集设计建议。
+- `doc/评估/`：CF-Eval、人类学习实验、baseline 和消融设计建议。
+- `doc/论文调研/`：相关论文检索与 related work 组织方式。
+- `doc/寓言生成对话.xmind`：思维导图，记录讨论过程和想法分支。
+- `data/K12-KGraph/`：课程知识图谱与教育任务数据，可用于 Graph RAG、知识链检索和消融实验。
 
 ## 推荐阅读路径
 
 如果是第一次进入这个项目，建议按下面顺序读：
 
-1. 先读 [ConceptFable_AAAI_收窄任务_学术问题定义.md](文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)，把当前最收敛的问题定义、任务边界和创新点抓住。
-2. 再读 [ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md](文章思路迭代（主要看这个）/ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md)，了解完整论文雏形，包括方法、数据集、评估和写作版本。
-3. 然后读 [数据集codex给的建议.md](数据集/数据集codex给的建议.md) 和两份评估建议，补齐实验设计的来源。
-4. 最后读 [M2NA_2024-2026相关论文检索.md](论文调研/M2NA_2024-2026相关论文检索.md)，用于写 Related Work、确认 baseline 和定位 gap。
+1. 先读 `doc/paper-reading-site/` 对应的网站首页，快速了解 Concept-to-Fable 的四个支柱：知识图谱、结构映射、层次化生成、评测。
+2. 再读 [ConceptFable_AAAI_收窄任务_学术问题定义.md](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)，抓住最收敛的问题定义、任务边界和创新点。
+3. 然后读 [ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md)，了解完整论文雏形，包括方法、数据集、评估和写作版本。
+4. 接着读 [数据集codex给的建议.md](doc/数据集/数据集codex给的建议.md) 和 `doc/评估/` 下的两份评估建议，补齐实验设计来源。
+5. 最后读 [M2NA_2024-2026相关论文检索.md](doc/论文调研/M2NA_2024-2026相关论文检索.md)，用于写 Related Work、确认 baseline 和定位 gap。
 
-## 当前主线
+## 论文阅读网站
 
-当前更推荐的论文主线不是泛化的“寓言生成”，而是：
+网站使用 Astro Starlight 搭建，位置在：
 
-> 面向抽象机制概念的隐性叙事类比生成。
+`doc/paper-reading-site/`
 
-核心思想是：模型不能只是写一个好看的故事，而要把抽象概念中的关键机制转译为一个表面不泄露术语、内部又可回映射的短叙事。也就是说，故事需要同时满足：
+常用命令：
 
-- **Mechanism Preservation**：保留原概念的关键机制。
-- **Lexical Concealment**：不直接暴露概念名或明显术语。
-- **Analogical Alignability**：故事元素可以和概念结构清楚对齐。
-- **Narrative Minimality**：叙事简洁，不用无关情节稀释机制。
+```bash
+cd doc/paper-reading-site
+npm install
+npm run dev
+npm run build
+```
 
-## 目录说明
+网站内容按四个核心支柱组织：
 
-- `文章思路迭代（主要看这个）/`：论文主线和任务定义文件，优先级最高。
-- `数据集/`：ConceptFableBench 的早期数据集设计建议。
-- `评估/`：CF-Eval、人类学习实验、baseline 和消融设计。
-- `论文调研/`：2024-2026 年相关论文与 related work 组织方式。
-- `寓言生成对话.xmind`：思维导图，记录讨论和想法分支。
+- 知识图谱：课程对齐、前置依赖、知识结构。
+- 结构映射：概念结构到寓言角色、冲突、行动、结局的对应。
+- 层次化生成：Plan-and-Write、多智能体流程、可控故事生成。
+- 评测：知识准确性、映射忠实性、分级阅读适配、教学有效性。
+
+每篇论文页面包含论文信息、与 Concept-to-Fable 的关系、可借鉴点、局限、研究导向 Q&A、PDF 链接和原文链接。
+
+## 数据与实验方向
+
+`data/K12-KGraph/` 已提交到仓库，可作为以下实验模块的基础：
+
+- Graph RAG 检索课程知识子图。
+- 构建知识链和先修关系约束。
+- 对比 `No Retrieval`、`Text RAG`、`Graph RAG` 和 `Graph RAG + Structure Mapping`。
+- 支撑 `w/o KG`、`w/o prerequisite relations`、`w/o structure mapping` 等消融实验。
+
+## 分支说明
+
+当前两个主要分支：
+
+- `main`：主分支，已经合并论文阅读网站、`doc/` 结构整理和根目录 `data/`。
+- `codex/paper-reading-site`：网站和材料整理的开发分支，保留完整变更历史。
+
+两个分支的 README 应保持同步，避免路径说明和网站位置不一致。
 
 ## 后续协作建议
 
 后续如果继续推进，建议优先围绕这几件事协作：
 
-1. 把收窄版任务定义整理成论文中的 **Problem Formulation**。
-2. 从整合稿里抽出稳定的 **Method / Dataset / Evaluation** 三节骨架。
-3. 根据论文调研文件确认 6-8 篇必须精读的 related work。
+1. 把任务定义整理成论文中的 **Problem Formulation**。
+2. 从现有材料里抽出稳定的 **Method / Dataset / Evaluation** 三节骨架。
+3. 明确 Graph RAG 在方法中的位置：它是知识约束引擎，不是论文全部贡献。
 4. 设计 20-50 个 pilot concepts，用于快速验证数据结构、生成流程和评估 rubric。
-5. 明确 baseline：Definition-only、Definition + Example、Direct Analogy、Vanilla LLM Fable、Ours。
+5. 明确 baseline 和消融：Definition-only、Vanilla LLM Fable、Text RAG、Graph RAG、w/o Structure Mapping、w/o Storyline Planning、Full Method。
