@@ -1,104 +1,81 @@
 # AAAI-Fable
 
-这个仓库用于沉淀 AAAI 论文方向 **Concept-to-Fable Synthesis / Conceptual Fable Generation** 的阶段性材料。当前主线是：如何让语言模型把课程知识或抽象机制概念，稳定转化为忠实、可映射、可解释、并具有教学价值的寓言故事。
+这个仓库沉淀一篇 AAAI 论文方向的材料与初版代码。
 
-目前仓库已经整理为两个主要入口：
+> **当前主线（已定稿）：M2NA — Mechanism-to-Narrative Analogy Generation**
+> 给定目标概念 `c`、机制图 `G_c=(V_c,E_c)`、禁用词集 `T_c`，让模型生成一段
+> **不点破概念术语、但机制结构忠实**的隐性叙事类比 `N`，并显式输出「机制零件 ↔ 情节」对齐 `A`。
+> 四个成功条件：机制保持 / 词汇隐藏(concealment) / 可对齐 / 叙事最小。
+>
+> 早期更宽的 **Concept-to-Fable / KG-Fable**（含 RAG + 教学评估 + 人类学习实验）视为**上一版/扩展版**，
+> 不作为当前主线；其评估与数据集设计中可复用的部分保留为素材。
 
-- `doc/`：论文阅读网站、论文思路、数据集方案、评估方案、调研材料和思维导图。
-- `data/`：根目录数据资源，目前包含 `K12-KGraph` 相关数据，用于课程知识图谱、Graph RAG 和知识约束生成实验。
+主线权威定义见 [`doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md`](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)，
+最新决策与待办见 [`doc/后续思路与建议.md`](doc/后续思路与建议.md)。
 
-线上论文阅读网站：
+## 仓库结构
 
-[https://paper-reading-site.vercel.app](https://paper-reading-site.vercel.app)
+- `src/`：**M2NA 初版代码**（当前只实现第二部分：中间分析的 agent 架构）。详见 [`src/README.md`](src/README.md)。
+- `PROGRESS.md`：进度与待办交接文档（冷启动入口）。
+- `doc/`：论文思路、调研、评估/数据集方案、思维导图，以及论文阅读网站。
+- `data/`：根目录数据资源，含 `K12-KGraph`（课程知识图谱，备选数据源）。
 
-本地网站项目路径：
+## 代码：M2NA 第二部分（agent 架构）
 
-`doc/paper-reading-site/`
+`(G_c, T_c) → (N, A)` 的多 agent 端到端闭环，已用 Mock LLM 跑通：
 
-## 当前主线
+```
+Planner → Generator → Aligner → Reviser
+(选源域+映射) (写叙事N) (回指出A) (泄露/覆盖自检)
+```
 
-当前更推荐的论文主线不是泛化的“让 LLM 写寓言”，而是：
+```bash
+python run_demo.py                 # 跑全部 fixture
+python run_demo.py "overfitting"   # 指定概念
+pip install pytest && pytest tests/
+```
 
-> 面向课程知识与抽象机制概念的可控、可解释教学寓言生成。
+LLM 可插拔：各 agent 只依赖 `LLMClient.complete()`，换 Mock / 真实后端不改 agent。
+完整说明（含数据流图）见 [`src/README.md`](src/README.md)。
 
-更具体地说，论文可以定义为 **Concept-to-Fable Synthesis** 任务：给定知识点、年级、学科、教学目标、课程知识图谱或 Graph RAG 检索子图，模型需要生成一篇寓言故事，并同时输出概念到故事元素的映射说明。
+## 系统三段式（整体规划）
 
-故事需要同时满足：
+1. **数据库 + 数据清洗** —— 产出 `G_c`/`T_c`（未实现；现用 `src/m2na/fixtures.py` 顶替）。
+2. **中间分析的 agent 架构** —— 生成 `N`/`A`（✅ 已完成初版）。
+3. **评估** —— 泄露率/机制覆盖/对齐一致性等（未实现；reviser 内已有确定性自检雏形）。
 
-- **Knowledge Grounding**：故事内容受课程知识图谱和知识链约束。
-- **Mechanism Preservation**：保留原概念的关键机制和因果关系。
-- **Structure Mapping**：概念实体、关系和过程能映射到角色、冲突、行动和结局。
-- **Controllable Generation**：通过规划、storyline 和生成约束提高稳定性。
-- **Educational Evaluation**：评测知识准确性、映射忠实性、故事质量、年级适配和教学有效性。
+## doc/ 目录说明
 
-## 目录说明
-
-- `doc/paper-reading-site/`：Astro Starlight 论文阅读网站。包含 25 篇论文页面、PDF、研究导向 Q&A、四个核心支柱和 DeepSeek 论文问答入口。
-- `doc/文章思路迭代（主要看这个）/`：论文主线、任务定义、方法摘要和 Introduction 草稿，优先级最高。
-- `doc/数据集/`：ConceptFableBench / Concept-to-Fable 数据集设计建议。
-- `doc/评估/`：CF-Eval、人类学习实验、baseline 和消融设计建议。
-- `doc/论文调研/`：相关论文检索与 related work 组织方式。
-- `doc/寓言生成对话.xmind`：思维导图，记录讨论过程和想法分支。
-- `data/K12-KGraph/`：课程知识图谱与教育任务数据，可用于 Graph RAG、知识链检索和消融实验。
+| 路径 | 说明 | 主线相关 |
+|---|---|---|
+| `文章思路迭代（主要看这个）/...收窄任务_学术问题定义.md` | **M2NA 权威定义** | ⭐ 主线 |
+| `后续思路与建议.md` | 最新决策、护城河、命门、待办 | ⭐ 主线 |
+| `论文调研/M2NA_2024-2026相关论文检索.md` | related work 素材 | ⭐ 主线 |
+| `论文调研/竞品精读_第一档.md` | 两个最危险竞品逐篇精读 + 区分度 | ⭐ 主线 |
+| `文章思路迭代（主要看这个）/...问题定义方法摘要Introduction整合稿.md` | 上一版 Concept-to-Fable 完整雏形 | 📦 历史/可复用 |
+| `数据集/数据集codex给的建议.md` | 上一版数据集设计建议 | 📦 历史/可复用 |
+| `评估/评估部分codex给的建议{1,2}.md` | 上一版评估协议建议 | 📦 历史/可复用 |
+| `寓言生成对话.xmind` | 早期思维导图 | 📦 历史 |
+| `paper-reading-site/` | Astro Starlight 论文阅读网站(25 篇) | 🔧 工具 |
 
 ## 推荐阅读路径
 
-如果是第一次进入这个项目，建议按下面顺序读：
-
-1. 先读 `doc/paper-reading-site/` 对应的网站首页，快速了解 Concept-to-Fable 的四个支柱：知识图谱、结构映射、层次化生成、评测。
-2. 再读 [ConceptFable_AAAI_收窄任务_学术问题定义.md](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)，抓住最收敛的问题定义、任务边界和创新点。
-3. 然后读 [ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_问题定义方法摘要Introduction整合稿.md)，了解完整论文雏形，包括方法、数据集、评估和写作版本。
-4. 接着读 [数据集codex给的建议.md](doc/数据集/数据集codex给的建议.md) 和 `doc/评估/` 下的两份评估建议，补齐实验设计来源。
-5. 最后读 [M2NA_2024-2026相关论文检索.md](doc/论文调研/M2NA_2024-2026相关论文检索.md)，用于写 Related Work、确认 baseline 和定位 gap。
+1. [`PROGRESS.md`](PROGRESS.md) —— 一页看懂现状与待办。
+2. [`doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md`](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md) —— M2NA 形式化定义。
+3. [`doc/后续思路与建议.md`](doc/后续思路与建议.md) —— 已拍板方向、护城河(concealment)、G_c 命门、竞品地图。
+4. [`src/README.md`](src/README.md) —— 第二部分代码与数据流。
+5. [`doc/论文调研/`](doc/论文调研/) —— 写 Related Work、划清竞品界限。
 
 ## 论文阅读网站
 
-网站使用 Astro Starlight 搭建，位置在：
-
-`doc/paper-reading-site/`
-
-常用命令：
-
 ```bash
 cd doc/paper-reading-site
-npm install
-npm run dev
-npm run build
+npm install && npm run dev
 ```
 
-网站内容按四个核心支柱组织：
-
-- 知识图谱：课程对齐、前置依赖、知识结构。
-- 结构映射：概念结构到寓言角色、冲突、行动、结局的对应。
-- 层次化生成：Plan-and-Write、多智能体流程、可控故事生成。
-- 评测：知识准确性、映射忠实性、分级阅读适配、教学有效性。
-
-每篇论文页面包含论文信息、与 Concept-to-Fable 的关系、可借鉴点、局限、研究导向 Q&A、PDF 链接和原文链接。
-
-## 数据与实验方向
-
-`data/K12-KGraph/` 已提交到仓库，可作为以下实验模块的基础：
-
-- Graph RAG 检索课程知识子图。
-- 构建知识链和先修关系约束。
-- 对比 `No Retrieval`、`Text RAG`、`Graph RAG` 和 `Graph RAG + Structure Mapping`。
-- 支撑 `w/o KG`、`w/o prerequisite relations`、`w/o structure mapping` 等消融实验。
+线上：[https://paper-reading-site.vercel.app](https://paper-reading-site.vercel.app)
 
 ## 分支说明
 
-当前两个主要分支：
-
-- `main`：主分支，已经合并论文阅读网站、`doc/` 结构整理和根目录 `data/`。
-- `codex/paper-reading-site`：网站和材料整理的开发分支，保留完整变更历史。
-
-两个分支的 README 应保持同步，避免路径说明和网站位置不一致。
-
-## 后续协作建议
-
-后续如果继续推进，建议优先围绕这几件事协作：
-
-1. 把任务定义整理成论文中的 **Problem Formulation**。
-2. 从现有材料里抽出稳定的 **Method / Dataset / Evaluation** 三节骨架。
-3. 明确 Graph RAG 在方法中的位置：它是知识约束引擎，不是论文全部贡献。
-4. 设计 20-50 个 pilot concepts，用于快速验证数据结构、生成流程和评估 rubric。
-5. 明确 baseline 和消融：Definition-only、Vanilla LLM Fable、Text RAG、Graph RAG、w/o Structure Mapping、w/o Storyline Planning、Full Method。
+- `main`：合并了论文阅读网站、`doc/` 结构整理和根目录 `data/`。
+- `lzf`：**当前开发分支**，在 main 基础上加入 `src/` 初版代码、`PROGRESS.md` 与最新调研材料。
