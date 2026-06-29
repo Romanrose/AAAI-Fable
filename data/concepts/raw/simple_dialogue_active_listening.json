@@ -1,0 +1,46 @@
+{
+  "concept": "主动倾听",
+  "domain": "social dialogue",
+  "forbidden_terms": [
+    "主动倾听",
+    "倾听",
+    "复述确认"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "speaker_expresses_need",
+        "label": "说话者表达自己的需求或感受"
+      },
+      {
+        "id": "listener_paraphrases",
+        "label": "听者先确认自己理解到的意思"
+      },
+      {
+        "id": "speaker_corrects_or_confirms",
+        "label": "说话者补充、修正或确认信息"
+      },
+      {
+        "id": "shared_understanding",
+        "label": "双方形成更一致的理解"
+      }
+    ],
+    "edges": [
+      {
+        "source": "speaker_expresses_need",
+        "target": "listener_paraphrases",
+        "relation": "触发"
+      },
+      {
+        "source": "listener_paraphrases",
+        "target": "speaker_corrects_or_confirms",
+        "relation": "促使"
+      },
+      {
+        "source": "speaker_corrects_or_confirms",
+        "target": "shared_understanding",
+        "relation": "形成"
+      }
+    ]
+  }
+}

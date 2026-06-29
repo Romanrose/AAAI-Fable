@@ -1,0 +1,46 @@
+{
+  "concept": "轮流发言",
+  "domain": "social dialogue",
+  "forbidden_terms": [
+    "轮流发言",
+    "轮流",
+    "抢话"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "shared_topic",
+        "label": "多人围绕同一话题表达想法"
+      },
+      {
+        "id": "speaking_order",
+        "label": "每个人获得清楚的表达顺序"
+      },
+      {
+        "id": "reduced_overlap",
+        "label": "同时说话和互相打断减少"
+      },
+      {
+        "id": "more_complete_exchange",
+        "label": "信息交换更完整"
+      }
+    ],
+    "edges": [
+      {
+        "source": "shared_topic",
+        "target": "speaking_order",
+        "relation": "需要"
+      },
+      {
+        "source": "speaking_order",
+        "target": "reduced_overlap",
+        "relation": "减少"
+      },
+      {
+        "source": "reduced_overlap",
+        "target": "more_complete_exchange",
+        "relation": "促进"
+      }
+    ]
+  }
+}

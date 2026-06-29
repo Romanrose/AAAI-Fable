@@ -1,0 +1,44 @@
+{
+  "concept": "火力发电的能量转化过程",
+  "domain": "chemistry",
+  "forbidden_terms": [
+    "火力发电的能量转化过程"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "chemical_energy",
+        "label": "化学能"
+      },
+      {
+        "id": "thermal_energy",
+        "label": "热能"
+      },
+      {
+        "id": "mechanical_energy",
+        "label": "机械能"
+      },
+      {
+        "id": "electrical_energy",
+        "label": "电能"
+      }
+    ],
+    "edges": [
+      {
+        "source": "chemical_energy",
+        "target": "thermal_energy",
+        "relation": "转化"
+      },
+      {
+        "source": "thermal_energy",
+        "target": "mechanical_energy",
+        "relation": "转化"
+      },
+      {
+        "source": "mechanical_energy",
+        "target": "electrical_energy",
+        "relation": "转化"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "concept": "自由基学说",
+  "domain": "biology",
+  "forbidden_terms": [
+    "自由基学说"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "free_radical_production",
+        "label": "自由基产生"
+      },
+      {
+        "id": "biomolecule_attack",
+        "label": "攻击生物分子"
+      },
+      {
+        "id": "chain_reaction",
+        "label": "引发连锁反应"
+      },
+      {
+        "id": "membrane_damage",
+        "label": "膜损伤"
+      },
+      {
+        "id": "gene_mutation",
+        "label": "基因突变"
+      },
+      {
+        "id": "protein_activity_decline",
+        "label": "蛋白质活性下降"
+      },
+      {
+        "id": "cell_aging",
+        "label": "细胞衰老"
+      }
+    ],
+    "edges": [
+      {
+        "source": "free_radical_production",
+        "target": "biomolecule_attack",
+        "relation": "导致"
+      },
+      {
+        "source": "biomolecule_attack",
+        "target": "chain_reaction",
+        "relation": "导致"
+      },
+      {
+        "source": "chain_reaction",
+        "target": "membrane_damage",
+        "relation": "导致"
+      },
+      {
+        "source": "chain_reaction",
+        "target": "gene_mutation",
+        "relation": "导致"
+      },
+      {
+        "source": "chain_reaction",
+        "target": "protein_activity_decline",
+        "relation": "导致"
+      },
+      {
+        "source": "membrane_damage",
+        "target": "cell_aging",
+        "relation": "导致"
+      },
+      {
+        "source": "gene_mutation",
+        "target": "cell_aging",
+        "relation": "导致"
+      },
+      {
+        "source": "protein_activity_decline",
+        "target": "cell_aging",
+        "relation": "导致"
+      }
+    ]
+  }
+}

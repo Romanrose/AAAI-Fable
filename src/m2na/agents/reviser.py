@@ -22,7 +22,13 @@ def _find_hard_leaks(narrative: str, forbidden_terms: Tuple[str, ...]) -> Tuple[
 def _find_uncovered(
     inp: M2NAInput, alignment: Tuple[AlignmentPair, ...]
 ) -> Tuple[str, ...]:
-    covered = {pair.concept_element for pair in alignment}
+    # 只有"有非空叙事片段"的节点才算被覆盖：aligner 判为未实现(片段留空)的不算，
+    # 这样客观评判员的"未实现"判断会如实反映成未覆盖，而不是被硬凑掩盖。
+    covered = {
+        pair.concept_element
+        for pair in alignment
+        if pair.narrative_element.strip()
+    }
     return tuple(nid for nid in inp.mechanism.node_ids() if nid not in covered)
 
 

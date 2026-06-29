@@ -1,3 +1,5 @@
-# 第二部分(agent 架构)运行期零第三方依赖，仅标准库。
-# 测试需要：
-pytest>=7.0
+# Dependencies are managed by uv via pyproject.toml / uv.lock.
+# Runtime currently uses only the Python standard library.
+# For tests, use:
+#   uv sync --dev
+#   uv run pytest
