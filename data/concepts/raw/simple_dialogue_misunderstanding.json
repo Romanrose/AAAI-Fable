@@ -1,0 +1,46 @@
+{
+  "concept": "误会升级",
+  "domain": "social dialogue",
+  "forbidden_terms": [
+    "误会升级",
+    "误会",
+    "沟通误解"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "ambiguous_message",
+        "label": "表达含糊，留下多种解释空间"
+      },
+      {
+        "id": "negative_assumption",
+        "label": "听者按负面方向理解对方意图"
+      },
+      {
+        "id": "defensive_reply",
+        "label": "听者用防御或反击方式回应"
+      },
+      {
+        "id": "conflict_intensifies",
+        "label": "双方情绪升高，冲突被放大"
+      }
+    ],
+    "edges": [
+      {
+        "source": "ambiguous_message",
+        "target": "negative_assumption",
+        "relation": "引发"
+      },
+      {
+        "source": "negative_assumption",
+        "target": "defensive_reply",
+        "relation": "导致"
+      },
+      {
+        "source": "defensive_reply",
+        "target": "conflict_intensifies",
+        "relation": "放大"
+      }
+    ]
+  }
+}

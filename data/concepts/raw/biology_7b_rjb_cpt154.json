@@ -1,0 +1,101 @@
+{
+  "concept": "胰岛素",
+  "domain": "biology",
+  "forbidden_terms": [
+    "胰岛素",
+    "insulin"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "blood_glucose_increase",
+        "label": "血糖浓度升高"
+      },
+      {
+        "id": "insulin_secretion",
+        "label": "胰岛素分泌增加"
+      },
+      {
+        "id": "glucose_uptake_and_oxidation",
+        "label": "葡萄糖进入组织细胞氧化分解"
+      },
+      {
+        "id": "glycogen_synthesis",
+        "label": "葡萄糖合成糖原"
+      },
+      {
+        "id": "glucose_to_triglyceride",
+        "label": "葡萄糖转变为甘油三酯"
+      },
+      {
+        "id": "liver_glycogen_breakdown_inhibition",
+        "label": "抑制肝糖原分解"
+      },
+      {
+        "id": "gluconeogenesis_inhibition",
+        "label": "抑制非糖物质转化为葡萄糖"
+      },
+      {
+        "id": "blood_glucose_decrease",
+        "label": "血糖浓度降低"
+      }
+    ],
+    "edges": [
+      {
+        "source": "blood_glucose_increase",
+        "target": "insulin_secretion",
+        "relation": "导致"
+      },
+      {
+        "source": "insulin_secretion",
+        "target": "glucose_uptake_and_oxidation",
+        "relation": "促进"
+      },
+      {
+        "source": "insulin_secretion",
+        "target": "glycogen_synthesis",
+        "relation": "促进"
+      },
+      {
+        "source": "insulin_secretion",
+        "target": "glucose_to_triglyceride",
+        "relation": "促进"
+      },
+      {
+        "source": "insulin_secretion",
+        "target": "liver_glycogen_breakdown_inhibition",
+        "relation": "增强"
+      },
+      {
+        "source": "insulin_secretion",
+        "target": "gluconeogenesis_inhibition",
+        "relation": "增强"
+      },
+      {
+        "source": "glucose_uptake_and_oxidation",
+        "target": "blood_glucose_decrease",
+        "relation": "导致"
+      },
+      {
+        "source": "glycogen_synthesis",
+        "target": "blood_glucose_decrease",
+        "relation": "导致"
+      },
+      {
+        "source": "glucose_to_triglyceride",
+        "target": "blood_glucose_decrease",
+        "relation": "导致"
+      },
+      {
+        "source": "liver_glycogen_breakdown_inhibition",
+        "target": "blood_glucose_decrease",
+        "relation": "导致"
+      },
+      {
+        "source": "gluconeogenesis_inhibition",
+        "target": "blood_glucose_decrease",
+        "relation": "导致"
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "concept": "全球变暖",
+  "domain": "chemistry",
+  "forbidden_terms": [
+    "全球变暖"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "greenhouse_gas_increase",
+        "label": "温室气体含量上升"
+      },
+      {
+        "id": "greenhouse_effect_enhancement",
+        "label": "温室效应增强"
+      },
+      {
+        "id": "global_temperature_rise",
+        "label": "全球平均气温上升"
+      },
+      {
+        "id": "glacier_melting",
+        "label": "冰川融化"
+      },
+      {
+        "id": "sea_level_rise",
+        "label": "海平面上升"
+      },
+      {
+        "id": "extreme_weather_increase",
+        "label": "极端天气增多"
+      },
+      {
+        "id": "land_desertification",
+        "label": "土地沙漠化"
+      },
+      {
+        "id": "ecosystem_biodiversity_change",
+        "label": "生态系统和生物多样性变化"
+      }
+    ],
+    "edges": [
+      {
+        "source": "greenhouse_gas_increase",
+        "target": "greenhouse_effect_enhancement",
+        "relation": "导致"
+      },
+      {
+        "source": "greenhouse_effect_enhancement",
+        "target": "global_temperature_rise",
+        "relation": "导致"
+      },
+      {
+        "source": "global_temperature_rise",
+        "target": "glacier_melting",
+        "relation": "导致"
+      },
+      {
+        "source": "global_temperature_rise",
+        "target": "sea_level_rise",
+        "relation": "导致"
+      },
+      {
+        "source": "global_temperature_rise",
+        "target": "extreme_weather_increase",
+        "relation": "导致"
+      },
+      {
+        "source": "global_temperature_rise",
+        "target": "land_desertification",
+        "relation": "导致"
+      },
+      {
+        "source": "global_temperature_rise",
+        "target": "ecosystem_biodiversity_change",
+        "relation": "导致"
+      }
+    ]
+  }
+}

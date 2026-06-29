@@ -35,7 +35,7 @@ class MechanismEdge:
 
 @dataclass(frozen=True)
 class MechanismGraph:
-    """G_c：抽象概念的机制图。"""
+    """G_c：抽象概念的核心机制图，不是关键词附近的完整知识子图。"""
 
     concept: str
     domain: str
@@ -55,20 +55,47 @@ class M2NAInput:
 
 
 # --------------------------------------------------------------------------- #
-# 中间产物：叙事规划
+# 中间产物：寓言规划
 # --------------------------------------------------------------------------- #
 @dataclass(frozen=True)
 class PlannedMapping:
-    """规划阶段建立的「概念要素 -> 叙事载体」初步对应。"""
+    """规划阶段建立的「概念要素 -> 寓言载体」初步对应。"""
 
     concept_element: str  # MechanismNode.id
     narrative_carrier: str
 
 
 @dataclass(frozen=True)
+class FableCharacter:
+    """寓言中的角色/器物/自然物，以及它承担的机制功能。"""
+
+    name: str
+    role: str
+    mapped_element: str
+
+
+@dataclass(frozen=True)
+class PlotBeat:
+    """寓言情节节拍：每一步都应服务于一个或多个机制节点。"""
+
+    beat_id: str
+    event: str
+    mapped_elements: Tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class NarrativePlan:
+    """Planner 产出的寓言蓝图，供 Generator 按结构写成正文。"""
+
     source_domain: str
     mappings: Tuple[PlannedMapping, ...]
+    characters: Tuple[FableCharacter, ...] = ()
+    setting: str = ""
+    conflict: str = ""
+    plot_beats: Tuple[PlotBeat, ...] = ()
+    turning_point: str = ""
+    ending: str = ""
+    implied_moral: str = ""
 
 
 # --------------------------------------------------------------------------- #

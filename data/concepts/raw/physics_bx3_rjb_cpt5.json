@@ -1,0 +1,35 @@
+{
+  "concept": "电子转移",
+  "domain": "physics",
+  "forbidden_terms": [
+    "电子转移"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "external_action",
+        "label": "外界作用（如摩擦、带电体靠近导体）"
+      },
+      {
+        "id": "electron_transfer",
+        "label": "电子从一个物体转移到另一个物体或从物体的一部分转移到另一部分"
+      },
+      {
+        "id": "charging_or_rearrangement",
+        "label": "带电或电荷重新分布"
+      }
+    ],
+    "edges": [
+      {
+        "source": "external_action",
+        "target": "electron_transfer",
+        "relation": "导致"
+      },
+      {
+        "source": "electron_transfer",
+        "target": "charging_or_rearrangement",
+        "relation": "导致"
+      }
+    ]
+  }
+}

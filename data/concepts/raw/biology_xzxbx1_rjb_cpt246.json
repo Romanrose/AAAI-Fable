@@ -1,0 +1,63 @@
+{
+  "concept": "淀粉—平衡石假说",
+  "domain": "biology",
+  "forbidden_terms": [
+    "淀粉—平衡石假说",
+    "平衡石假说"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "gravity_direction_change",
+        "label": "重力方向改变"
+      },
+      {
+        "id": "amyloplast_sedimentation",
+        "label": "淀粉体沿重力方向沉降"
+      },
+      {
+        "id": "signal_molecule_change",
+        "label": "信号分子变化"
+      },
+      {
+        "id": "auxin_transport_affected",
+        "label": "生长素运输受影响"
+      },
+      {
+        "id": "auxin_asymmetric_distribution",
+        "label": "生长素不对称分布"
+      },
+      {
+        "id": "growth_response",
+        "label": "生长反应"
+      }
+    ],
+    "edges": [
+      {
+        "source": "gravity_direction_change",
+        "target": "amyloplast_sedimentation",
+        "relation": "导致"
+      },
+      {
+        "source": "amyloplast_sedimentation",
+        "target": "signal_molecule_change",
+        "relation": "引发"
+      },
+      {
+        "source": "signal_molecule_change",
+        "target": "auxin_transport_affected",
+        "relation": "影响"
+      },
+      {
+        "source": "auxin_transport_affected",
+        "target": "auxin_asymmetric_distribution",
+        "relation": "导致"
+      },
+      {
+        "source": "auxin_asymmetric_distribution",
+        "target": "growth_response",
+        "relation": "引起"
+      }
+    ]
+  }
+}

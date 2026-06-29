@@ -1,0 +1,26 @@
+{
+  "concept": "温度对反应速率的影响",
+  "domain": "chemistry",
+  "forbidden_terms": [
+    "温度对反应速率的影响"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "temperature_change",
+        "label": "温度变化"
+      },
+      {
+        "id": "reaction_rate",
+        "label": "化学反应速率"
+      }
+    ],
+    "edges": [
+      {
+        "source": "temperature_change",
+        "target": "reaction_rate",
+        "relation": "导致"
+      }
+    ]
+  }
+}

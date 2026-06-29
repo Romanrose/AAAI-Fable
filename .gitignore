@@ -1,6 +1,11 @@
 .DS_Store
 
 # Python
+.env
+.venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# 运行产物（每次 run 一个文件夹，可重新生成）
+output/

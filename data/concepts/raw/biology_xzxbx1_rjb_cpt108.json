@@ -1,0 +1,59 @@
+{
+  "concept": "胰高血糖素",
+  "domain": "biology",
+  "forbidden_terms": [
+    "胰高血糖素",
+    "glucagon"
+  ],
+  "mechanism": {
+    "nodes": [
+      {
+        "id": "blood_glucose_decrease",
+        "label": "血糖浓度降低"
+      },
+      {
+        "id": "glucagon_secretion",
+        "label": "胰高血糖素分泌增加"
+      },
+      {
+        "id": "liver_glycogen_decomposition",
+        "label": "肝糖原分解成葡萄糖进入血液"
+      },
+      {
+        "id": "non_sugar_substance_to_sugar",
+        "label": "非糖物质转变成糖"
+      },
+      {
+        "id": "blood_glucose_increase",
+        "label": "血糖浓度升高"
+      }
+    ],
+    "edges": [
+      {
+        "source": "blood_glucose_decrease",
+        "target": "glucagon_secretion",
+        "relation": "导致"
+      },
+      {
+        "source": "glucagon_secretion",
+        "target": "liver_glycogen_decomposition",
+        "relation": "促进"
+      },
+      {
+        "source": "glucagon_secretion",
+        "target": "non_sugar_substance_to_sugar",
+        "relation": "促进"
+      },
+      {
+        "source": "liver_glycogen_decomposition",
+        "target": "blood_glucose_increase",
+        "relation": "导致"
+      },
+      {
+        "source": "non_sugar_substance_to_sugar",
+        "target": "blood_glucose_increase",
+        "relation": "导致"
+      }
+    ]
+  }
+}

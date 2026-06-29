@@ -15,10 +15,15 @@ from .reviser import Reviser
 
 
 class M2NAPipeline:
-    def __init__(self, llm: LLMClient) -> None:
+    def __init__(self, llm: LLMClient, *, aligner_llm: LLMClient | None = None) -> None:
+        """编排四 agent。
+
+        aligner_llm: 评判用 LLM，默认与生成共用 llm；可注入**异源模型**做对齐评判，
+        弱化"同一模型既生成又自评"的循环——评判客观性的架构口子。
+        """
         self._planner = Planner(llm)
         self._generator = Generator(llm)
-        self._aligner = Aligner(llm)
+        self._aligner = Aligner(aligner_llm or llm)
         self._reviser = Reviser()
 
     def run(self, inp: M2NAInput) -> M2NAResult:
