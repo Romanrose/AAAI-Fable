@@ -84,6 +84,93 @@ npm run build
 - 对比 `No Retrieval`、`Text RAG`、`Graph RAG` 和 `Graph RAG + Structure Mapping`。
 - 支撑 `w/o KG`、`w/o prerequisite relations`、`w/o structure mapping` 等消融实验。
 
+## Python 原型骨架
+
+仓库根目录已提供一个最小 Python 原型骨架，用于后续承载 GraphRAG、导图脚本和子图检索实验：
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .
+kg-rag doctor
+```
+
+当前骨架位置：
+
+- `pyproject.toml`：Python 工程配置与依赖声明
+- `kg_rag/`：GraphRAG 原型包
+
+当前只包含：
+
+- 路径约定
+- CLI 入口
+- scaffold 健康检查
+- K12-KGraph 离线规范化导出
+
+后续将继续在这个包下增加：
+
+- 图导入
+- 属性补全
+- Neo4j 检索
+- 子图打包
+
+当前可用命令：
+
+```bash
+kg-rag doctor
+kg-rag normalize-k12
+kg-rag load-neo4j
+kg-rag query-subgraph "光合作用" --preview-only
+kg-rag query-subgraph "光合作用" --preview-only --pack-output-path data/derived/kg_rag/photosynthesis_pack.json
+kg-rag build-prompt --pack-path data/derived/kg_rag/photosynthesis_pack.json --mode mapping
+kg-rag build-structure-plan --pack-path data/derived/kg_rag/photosynthesis_pack.json --output-path data/derived/kg_rag/photosynthesis_plan.json
+kg-rag build-story-prompt --plan-path data/derived/kg_rag/photosynthesis_plan.json --output-path data/derived/kg_rag/photosynthesis_story_prompt.txt
+kg-rag build-review-prompt --plan-path data/derived/kg_rag/photosynthesis_plan.json --draft-path kg_rag/examples/sample_draft.txt
+kg-rag review-checklist --plan-path data/derived/kg_rag/photosynthesis_plan.json --draft-path kg_rag/examples/sample_draft.txt
+kg-rag run-local-demo "photosynthesis" --output-dir data/derived/kg_rag/demo_photosynthesis
+kg-rag run-llm-demo "photosynthesis" --output-dir data/derived/kg_rag/llm_demo_photosynthesis
+kg-rag run-batch-stories --mode local --limit 10 --output-dir data/derived/kg_rag/batch_runs/local_10
+kg-rag run-batch-stories --mode llm --subject biology --limit 50 --sleep-seconds 1 --retry 2 --output-dir data/derived/kg_rag/batch_runs/biology_llm_50
+kg-rag evaluate-story data/derived/kg_rag/batch_runs/biology_llm_5/concepts/biology_7a_rjb_cpt1
+kg-rag evaluate-batch data/derived/kg_rag/batch_runs/biology_llm_5
+kg-rag evaluate-batch data/derived/kg_rag/batch_runs/biology_llm_5 --mode llm
+kg-rag export-eval-report data/derived/kg_rag/batch_runs/biology_llm_5/eval_summary.jsonl
+```
+
+### Six-dimensional fable evaluation
+
+The evaluation CLI scores each generated fable on six paper-facing dimensions:
+faithfulness, implicitness, mapping clarity, readability, pedagogical value, and novelty.
+
+Default evaluation uses local deterministic rules and writes `six_dim_eval.json` into each
+concept directory. Batch evaluation also writes `eval_summary.jsonl`, `eval_summary.csv`,
+`eval_report.md`, and copies non-accepted cases into `failed_cases/`.
+
+Use `--mode llm` when you want the configured DeepSeek-compatible model to act as the
+strict JSON judge. Local rules still run first and are merged with the LLM hard flags.
+
+### First-stage Chinese Concept fables
+
+The first-stage dataset pipeline focuses only on `Concept` nodes and generates
+Simplified Chinese fables (`zh-CN`). Non-Concept graph nodes are used as context only.
+
+```bash
+kg-rag select-concept-nodes --subjects biology,chemistry,math,physics --output data/derived/kg_rag/concept_selection/k12_concepts.jsonl
+kg-rag build-concept-cards --selection-path data/derived/kg_rag/concept_selection/k12_concepts.jsonl --output data/derived/kg_rag/concept_cards/k12_concept_cards.raw.jsonl
+kg-rag enrich-concept-cards --input data/derived/kg_rag/concept_cards/k12_concept_cards.raw.jsonl --output data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --mode rules --only-needs-enrichment
+kg-rag run-concept-fable-batch --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --output-dir data/derived/kg_rag/concept_runs/k12_concepts_zh_v1 --mode llm --language zh-CN --subject biology --priority gold --limit 100 --evaluate-mode llm
+kg-rag rewrite-concept-fables --run-dir data/derived/kg_rag/concept_runs/k12_concepts_zh_v1 --status revise,reject --language zh-CN --mode llm
+```
+
+For local smoke tests without API calls:
+
+```bash
+kg-rag select-concept-nodes --limit-per-subject 2 --output data/derived/kg_rag/concept_selection/smoke_concepts.jsonl
+kg-rag build-concept-cards --selection-path data/derived/kg_rag/concept_selection/smoke_concepts.jsonl --output data/derived/kg_rag/concept_cards/smoke_concept_cards.raw.jsonl
+kg-rag enrich-concept-cards --input data/derived/kg_rag/concept_cards/smoke_concept_cards.raw.jsonl --output data/derived/kg_rag/concept_cards/smoke_concept_cards.enriched.jsonl --mode rules
+kg-rag run-concept-fable-batch --concept-cards data/derived/kg_rag/concept_cards/smoke_concept_cards.enriched.jsonl --output-dir data/derived/kg_rag/concept_runs/smoke_zh_local --mode local --language zh-CN --limit 4 --evaluate-mode rules
+```
+
 ## 分支说明
 
 当前两个主要分支：
