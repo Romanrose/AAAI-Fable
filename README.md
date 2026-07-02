@@ -1,108 +1,131 @@
 # AAAI-Fable
 
-这个仓库沉淀一篇 AAAI 论文方向的材料与初版代码。
+这个仓库沉淀 AAAI 论文方向的研究材料与两套原型代码：
 
-> **当前主线（已定稿）：M2NA — Mechanism-to-Narrative Analogy Generation**
-> 给定目标概念 `c`、机制图 `G_c=(V_c,E_c)`、禁用词集 `T_c`，让模型生成一段
-> **不点破概念术语、但机制结构忠实**的隐性叙事类比 `N`，并显式输出「机制零件 ↔ 情节」对齐 `A`。
-> 四个成功条件：机制保持 / 词汇隐藏(concealment) / 可对齐 / 叙事最小。
->
-> 早期更宽的 **Concept-to-Fable / KG-Fable**（含 RAG + 教学评估 + 人类学习实验）视为**上一版/扩展版**，
-> 不作为当前主线；其评估与数据集设计中可复用的部分保留为素材。
+- **M2NA - Mechanism-to-Narrative Analogy Generation**：当前收窄主线，聚焦“机制结构忠实、术语隐藏、可对齐、叙事最小”的隐性叙事类比生成。
+- **Graph-grounded Concept-to-Fable Generation**：课程知识图谱 / Graph RAG 方向，聚焦 K12 Concept 节点检索、结构映射、中文寓言生成、六维自动评估和重写闭环。
 
-主线权威定义见 [`doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md`](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)，
-最新决策与待办见 [`doc/后续思路与建议.md`](doc/后续思路与建议.md)。
+两条线都围绕“把抽象概念转化为可教学、可映射的短叙事”，但实验重点不同：`src/m2na/` 更强调机制图到隐性寓言，`kg_rag/` 更强调课程知识图谱约束下的批量生成与评估。
 
-## 仓库结构
+## Repository Layout
 
-- `src/`：**M2NA 初版代码**（第一部分输入构建已起步，第二部分寓言 agent 架构已跑通）。详见 [`src/README.md`](src/README.md)。
-- `PROGRESS.md`：进度与待办交接文档（冷启动入口）。
-- `doc/`：论文思路、调研、评估/数据集方案、思维导图、[当前系统流程图](doc/当前系统流程图.md)，以及论文阅读网站。
-- `data/`：根目录数据资源，含 `K12-KGraph`（课程知识图谱，备选数据源）。
+```text
+.
+├── src/m2na/                       # M2NA 初版代码
+├── kg_rag/                         # GraphRAG / Concept-to-Fable 原型包
+├── tests/                          # pytest 测试
+├── data/K12-KGraph/                # 原始 K12-KGraph 数据
+├── data/concepts/                  # M2NA concept 输入样例
+├── data/derived/                   # 派生数据，默认不提交
+├── doc/                            # 研究材料、评估设计、论文调研、图示
+├── PROGRESS.md                     # M2NA 进度与待办交接
+├── AGENT.md                        # Agent 工程协作约束
+├── CLAUDE.md                       # Claude/Codex 风格项目约束
+└── .env.example                    # 本地配置模板
+```
 
-## 环境管理
+## M2NA Mainline
 
-本项目使用 `uv` 管理 Python 环境和测试依赖：
+当前主线权威定义见：
+
+- [`doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md`](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)
+- [`doc/后续思路与建议.md`](doc/后续思路与建议.md)
+- [`PROGRESS.md`](PROGRESS.md)
+- [`src/README.md`](src/README.md)
+
+M2NA 形式化输入包括目标概念 `c`、机制图 `G_c=(V_c,E_c)`、禁用词集 `T_c`。输出包括不点破概念术语但机制结构忠实的隐性叙事类比 `N`，以及「机制零件 ↔ 情节」对齐 `A`。
+
+运行示例：
 
 ```bash
 uv sync --dev
 uv run python run_demo.py
+uv run python run_demo.py "overfitting"
 uv run pytest
 ```
 
-运行期目前只依赖标准库；`pytest` 放在 `dev` 依赖组中。旧的 `requirements.txt` 仅保留兼容提示。
-
-## 当前代码流程
-
-当前系统分两条输入来源、一个生成闭环：
-
-- 第一部分输入构建：从 K12-KGraph / 手写样例得到核心机制图 `G_c` 和禁用词 `T_c`，保存到 `data/concepts/raw|processed/*.json`。
-- 第二部分生成闭环：`Planner → Generator → Aligner → Reviser`。
-- 结果落盘：`output/<timestamp>_<concept>/`，包含 `input.json / plan.json / narrative.txt / alignment.json / report.json / result.json / summary.md`。
-
-完整流程图见 [`doc/当前系统流程图.md`](doc/当前系统流程图.md)。
-
-第二部分当前不再只写普通“案例故事”，而是先产出寓言蓝图：
-
-```text
-Planner: G_c + T_c -> NarrativePlan
-  source_domain / characters / setting / conflict / plot_beats / ending / mappings
-
-Generator: NarrativePlan + T_c -> 隐性寓言 N
-Aligner: N + G_c -> 对齐 A
-Reviser: 检查硬泄露和未覆盖节点
-```
+真实 LLM 运行使用 `.env` 中的 DeepSeek 配置：
 
 ```bash
-uv sync --dev
-uv run python run_demo.py                 # 跑全部 fixture
-uv run python run_demo.py "overfitting"   # 指定概念
-uv run pytest
+uv run python run_real_demo.py
+uv run python run_real_batch.py
 ```
 
-LLM 可插拔：各 agent 只依赖 `LLMClient.complete()`，换 Mock / DeepSeek / 其他后端不改 agent。
-完整说明（含数据流图）见 [`src/README.md`](src/README.md)。
+## GraphRAG Prototype
 
-## 系统三段式（整体规划）
+GraphRAG 方向代码在 `kg_rag/`，支持：
 
-1. **数据库 + 数据清洗** —— 产出核心机制图 `G_c` 与禁用词 `T_c`（🚧 已起步：K12 加载、候选筛选、LLM 抽图、JSON 存取均已实现）。
-2. **中间分析的 agent 架构** —— 生成隐性寓言 `N` 与对齐 `A`（✅ 已完成初版，支持 Mock 与 DeepSeek）。
-3. **评估** —— 泄露率/机制覆盖/对齐一致性等（🚧 reviser 内已有确定性自检，独立评估模块待扩展）。
+- K12-KGraph 离线规范化。
+- Concept-centered 子图检索和 context pack 构建。
+- 结构映射故事 prompt 生成。
+- DeepSeek-compatible LLM 调用。
+- 批量中文 Concept 寓言生成。
+- 六维寓言评估。
+- revise/reject 样本重写。
 
-## doc/ 目录说明
+更多命令和流程见 [`kg_rag/README.md`](kg_rag/README.md)。
 
-| 路径 | 说明 | 主线相关 |
-|---|---|---|
-| `文章思路迭代（主要看这个）/...收窄任务_学术问题定义.md` | **M2NA 权威定义** | ⭐ 主线 |
-| `后续思路与建议.md` | 最新决策、护城河、命门、待办 | ⭐ 主线 |
-| `当前系统流程图.md` | 当前代码流程、输入构建、真实运行状态 | ⭐ 主线 |
-| `论文调研/M2NA_2024-2026相关论文检索.md` | related work 素材 | ⭐ 主线 |
-| `论文调研/竞品精读_第一档.md` | 两个最危险竞品逐篇精读 + 区分度 | ⭐ 主线 |
-| `文章思路迭代（主要看这个）/...问题定义方法摘要Introduction整合稿.md` | 上一版 Concept-to-Fable 完整雏形 | 📦 历史/可复用 |
-| `数据集/数据集codex给的建议.md` | 上一版数据集设计建议 | 📦 历史/可复用 |
-| `评估/评估部分codex给的建议{1,2}.md` | 上一版评估协议建议 | 📦 历史/可复用 |
-| `寓言生成对话.xmind` | 早期思维导图 | 📦 历史 |
-| `paper-reading-site/` | Astro Starlight 论文阅读网站(25 篇) | 🔧 工具 |
+基础安装：
 
-## 推荐阅读路径
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+pip install -e .[dev]
+python -m kg_rag doctor
+```
 
-1. [`PROGRESS.md`](PROGRESS.md) —— 一页看懂现状与待办。
-2. [`doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md`](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md) —— M2NA 形式化定义。
-3. [`doc/后续思路与建议.md`](doc/后续思路与建议.md) —— 已拍板方向、护城河(concealment)、G_c 命门、竞品地图。
-4. [`src/README.md`](src/README.md) —— 第二部分代码与数据流。
-5. [`doc/当前系统流程图.md`](doc/当前系统流程图.md) —— 当前实现流程与运行产物。
-6. [`doc/论文调研/`](doc/论文调研/) —— 写 Related Work、划清竞品界限。
+## Environment
 
-## 论文阅读网站
+复制 `.env.example` 为 `.env`，并填入本地配置。真实 API key 只放在本地 `.env`，不要提交到 README、代码、报告或聊天记录。
+
+核心环境变量：
+
+```text
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=change-me
+NEO4J_DATABASE=neo4j
+
+LLM_PROVIDER=deepseek
+DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
+DEEPSEEK_API_KEY=replace-me
+DEEPSEEK_MODEL=deepseek-chat
+```
+
+## Data And Outputs
+
+- 默认不要修改 `data/K12-KGraph/` 原始数据。
+- GraphRAG 清洗、补充、生成、评估结果写入 `data/derived/kg_rag/`。
+- M2NA 运行结果默认写入 `output/<timestamp>_<concept>/`。
+- `data/derived/`、`.env`、缓存文件和输出目录都在 `.gitignore` 中，不应提交。
+
+## Testing
+
+```bash
+pytest -q
+python -m compileall kg_rag src tests
+```
+
+当前测试覆盖 M2NA 输入构建/生成闭环、GraphRAG 六维评估规则、Concept 选择、中文故事本地生成和 JSONL 稳定性。
+
+## Research Notes
+
+推荐阅读路径：
+
+1. [`PROGRESS.md`](PROGRESS.md)
+2. [`doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md`](doc/文章思路迭代（主要看这个）/ConceptFable_AAAI_收窄任务_学术问题定义.md)
+3. [`doc/后续思路与建议.md`](doc/后续思路与建议.md)
+4. [`src/README.md`](src/README.md)
+5. [`kg_rag/README.md`](kg_rag/README.md)
+6. [`doc/论文调研/`](doc/论文调研/)
+
+论文阅读网站：
 
 ```bash
 cd doc/paper-reading-site
-npm install && npm run dev
+npm install
+npm run dev
 ```
 
 线上：[https://paper-reading-site.vercel.app](https://paper-reading-site.vercel.app)
-
-## 分支说明
-
-- `main`：合并了论文阅读网站、`doc/` 结构整理和根目录 `data/`。
-- `lzf`：**当前开发分支**，在 main 基础上加入 `src/` 初版代码、`PROGRESS.md` 与最新调研材料。
