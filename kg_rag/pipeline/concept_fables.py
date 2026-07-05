@@ -108,6 +108,7 @@ def run_concept_fable_batch(
     output_dir: Path,
     options: ConceptFableOptions,
     config: LLMConfig | None = None,
+    judge_configs: list[LLMConfig] | None = None,
 ) -> dict[str, Any]:
     if options.language != "zh-CN":
         raise ValueError("The first-stage concept fable runner currently supports only zh-CN.")
@@ -183,7 +184,7 @@ def run_concept_fable_batch(
                 raise ValueError(f"Unsupported generation mode: {options.mode}")
             draft_path.write_text(draft, encoding="utf-8")
 
-            eval_config = config if options.evaluate_mode == "llm" else None
+            eval_config = judge_configs if options.evaluate_mode == "llm" else None
             evaluation = evaluate_story_dir(concept_dir, mode=options.evaluate_mode, config=eval_config)
             status = {
                 "concept_id": concept_id,

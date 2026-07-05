@@ -1,0 +1,33 @@
+# 机器评测 TODO
+
+更新时间：2026-07-05 17:29 Asia/Shanghai
+
+## 本轮检查基线
+
+- 工作区：`/Users/lin/Desktop/work_space/AAAI-Fable`
+- 20 条机器评测结果：`data/derived/kg_rag/concept_runs/local_20_machine_eval/`
+- 当前证据：`eval_summary.jsonl` 20 行，`summary.jsonl` 20 行，`eval_summary.csv`、`eval_report.md`、`eval_analysis.svg` 均存在。
+- 目标边界：当前完成的是本地规则机器评测；LLM judge、人评和 baseline 对比已预留，不冒充已完成结果。
+
+## Codex 可自动完成
+
+- [ ] 为每次机器实验增加自动归档目录或运行索引，避免固定 `local_20_machine_eval` 被覆盖。
+- [ ] 增加一键机器评测入口，把 concept card 准备、20 条生成、评测、报告检查串起来。
+- [ ] 降低本地 `local` 故事生成器模板化，减少 `template_like=true` 的比例。
+- [ ] 增加针对报告图表导出的单元测试，覆盖 `eval_analysis.svg` 生成。
+
+## 需要用户完成或拍板
+
+- [ ] 是否允许使用真实 LLM API key 跑 `--evaluate-mode llm` 的 judge panel。
+- [ ] baseline 方法最终采用哪些：`Direct Prompting`、`CoT Planning`、`Analogy-first`、`Ours w/o KG`、`Ours w/o Alignment` 是否都保留。
+- [ ] 人工评测样本量、标注者来源和费用安排。
+- [ ] 论文实验主表优先报告机器评测、LLM judge 还是人工评测。
+
+## 已完成
+
+- [x] 项目内六维评测 rubric、权重和硬性风险标记落地。
+- [x] 本地规则评测跑通 20 条数据。
+- [x] 导出 `eval_summary.jsonl`、`eval_summary.csv`、`eval_report.md`、`eval_analysis.svg`。
+- [x] 文档说明人工测试和对比模型为预留项。
+- [x] 创建本 TODO 文件，供定时检查继续维护。
+- [x] 增加 `kg-rag verify-eval-run` 完整度校验命令，检查 JSONL 行数、概念目录和 CSV/Markdown/SVG 产物。

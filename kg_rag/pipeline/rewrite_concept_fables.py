@@ -46,6 +46,7 @@ def rewrite_concept_fables(
     mode: str = "local",
     retry: int = 1,
     config: LLMConfig | None = None,
+    judge_configs: list[LLMConfig] | None = None,
 ) -> dict[str, Any]:
     if language != "zh-CN":
         raise ValueError("The first-stage rewrite runner currently supports only zh-CN.")
@@ -96,7 +97,8 @@ def rewrite_concept_fables(
                 raise ValueError(f"Unsupported rewrite mode: {mode}")
 
             (concept_dir / "draft_story.txt").write_text(draft, encoding="utf-8")
-            evaluation = evaluate_story_dir(concept_dir, mode="llm" if mode == "llm" else "rules", config=config)
+            eval_config = judge_configs if mode == "llm" else None
+            evaluation = evaluate_story_dir(concept_dir, mode="llm" if mode == "llm" else "rules", config=eval_config)
             updated_status = dict(current_status)
             updated_status.update(
                 {

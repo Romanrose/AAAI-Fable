@@ -119,30 +119,86 @@ def _mask_forbidden_terms(text: str, forbidden_terms: list[str]) -> str:
     return masked
 
 
+def _names_from_context(items: list[dict[str, Any]] | None, *, limit: int = 3) -> list[str]:
+    names: list[str] = []
+    for item in items or []:
+        if not isinstance(item, dict):
+            continue
+        name = item.get("name") or item.get("id")
+        if name:
+            names.append(str(name))
+        if len(names) >= limit:
+            break
+    return names
+
+
 def build_local_chinese_story(card: dict[str, Any], plan: dict[str, Any]) -> str:
     name = card.get("canonical_name") or "\u76ee\u6807\u6982\u5ff5"
     domain = plan.get("source_domain") or "\u5c0f\u9547"
     forbidden_terms = [str(item) for item in card.get("forbidden_terms_zh", []) if item]
     events = [_mask_forbidden_terms(str(item), forbidden_terms) for item in plan.get("event_chain", [])]
+    context = card.get("graph_context", {})
+    prerequisites = _names_from_context(context.get("prerequisites"))
+    related = _names_from_context(context.get("related_concepts"))
+    outcomes = _names_from_context(context.get("outcomes"))
+    experiments = _names_from_context(context.get("experiments"), limit=2)
+    exercises = _names_from_context(context.get("exercises"), limit=2)
+    variants = [
+        ("\u8bb0\u5f55\u5458", "\u6728\u724c", "\u95e8\u5eca"),
+        ("\u5b66\u5f92", "\u94dc\u724c", "\u68da\u67b6"),
+        ("\u5de1\u67e5\u5458", "\u7eb8\u5e26", "\u957f\u684c"),
+        ("\u5c0f\u5de5\u5320", "\u77f3\u724c", "\u4ed3\u95e8"),
+    ]
+    variant = variants[sum(ord(ch) for ch in str(card.get("concept_id", ""))) % len(variants)]
+    protagonist, marker, place = variant
+    prereq_hint = "\u4ed6\u5148\u786e\u8ba4\u5165\u53e3\u6761\u4ef6\u5df2\u7ecf\u51c6\u5907\u9f50\u5168\u3002" if prerequisites else "\u4ed6\u5148\u786e\u8ba4\u6bcf\u4e2a\u5165\u53e3\u6761\u4ef6\u90fd\u4e0d\u80fd\u88ab\u7701\u7565\u3002"
+    related_hint = "\u65c1\u8fb9\u7684\u76f8\u90bb\u5de5\u4f4d\u4e5f\u51fa\u73b0\u7c7b\u4f3c\u79e9\u5e8f\u3002" if related else "\u65c1\u8fb9\u7684\u5de5\u4f4d\u4e0d\u65f6\u63d0\u9192\u4ed6\u533a\u5206\u76f8\u4f3c\u73b0\u8c61\u3002"
+    outcome_hint = "\u6700\u540e\u7684\u53d8\u5316\u8bc1\u660e\u65e9\u5148\u7684\u5224\u65ad\u53ef\u4ee5\u88ab\u91cd\u590d\u9a8c\u8bc1\u3002" if outcomes else "\u6700\u540e\u7684\u53d8\u5316\u8ba9\u4ed6\u80fd\u9884\u5224\u4e0b\u4e00\u6b21\u7ed3\u679c\u3002"
+    experiment_hint = "\u4ed6\u6545\u610f\u6539\u53d8\u5176\u4e2d\u4e00\u4e2a\u6761\u4ef6\uff0c\u518d\u6bd4\u5bf9\u524d\u540e\u5dee\u5f02\u3002" if experiments else "\u4ed6\u7559\u4e0b\u4e00\u6b21\u5c0f\u68c0\u67e5\uff0c\u770b\u8fd9\u5957\u987a\u5e8f\u662f\u5426\u4ecd\u7136\u6210\u7acb\u3002"
     body_parts = [
         f"\u6807\u9898\uff1a{domain}\u91cc\u7684\u9690\u85cf\u89c4\u5219",
         "",
-        f"{domain}\u91cc\u6709\u4e00\u4f4d\u5e74\u8f7b\u7684\u8bb0\u5f55\u5458\uff0c\u4ed6\u603b\u89c9\u5f97\u773c\u524d\u7684\u53d8\u5316\u53ea\u662f\u5de7\u5408\u3002",
-        "\u4e00\u5929\uff0c\u4ed6\u628a\u6761\u4ef6\u3001\u884c\u52a8\u548c\u7ed3\u679c\u4e00\u4e00\u5199\u5728\u6728\u724c\u4e0a\uff0c\u53d1\u73b0\u53ea\u6709\u5f53\u51e0\u4e2a\u73af\u8282\u540c\u65f6\u914d\u5408\u65f6\uff0c\u90a3\u4e2a\u88ab\u89c2\u5bdf\u7684\u573a\u6240\u624d\u4f1a\u51fa\u73b0\u7a33\u5b9a\u53d8\u5316\u3002",
+        f"{domain}\u7684{place}\u8fb9\u6709\u4e00\u4f4d\u5e74\u8f7b\u7684{protagonist}\uff0c\u4ed6\u603b\u89c9\u5f97\u773c\u524d\u7684\u53d8\u5316\u53ea\u662f\u5de7\u5408\u3002",
+        f"\u4e00\u5929\uff0c\u4ed6\u628a\u6761\u4ef6\u3001\u884c\u52a8\u548c\u7ed3\u679c\u4e00\u4e00\u5199\u5728{marker}\u4e0a\u3002{prereq_hint}{related_hint}",
     ]
     for event in events[:3]:
         body_parts.append(str(event))
     body_parts.append(
-        "\u540e\u6765\uff0c\u8bb0\u5f55\u5458\u4e0d\u518d\u53ea\u770b\u8868\u9762\u7684\u7ed3\u679c\uff0c\u800c\u662f\u5148\u627e\u6761\u4ef6\uff0c\u518d\u770b\u8fc7\u7a0b\uff0c\u6700\u540e\u68c0\u67e5\u7ed3\u679c\u662f\u5426\u80fd\u91cd\u590d\u51fa\u73b0\u3002\u4ed6\u660e\u767d\uff0c\u771f\u6b63\u91cd\u8981\u7684\u4e0d\u662f\u67d0\u4e2a\u540d\u5b57\uff0c\u800c\u662f\u540d\u5b57\u80cc\u540e\u90a3\u5957\u80fd\u88ab\u8fa8\u8ba4\u7684\u5173\u7cfb\u3002"
+        f"{experiment_hint}{outcome_hint}\u540e\u6765\uff0c{protagonist}\u4e0d\u518d\u53ea\u770b\u8868\u9762\u7ed3\u679c\uff0c\u800c\u662f\u5148\u627e\u6761\u4ef6\uff0c\u518d\u770b\u8fc7\u7a0b\uff0c\u6700\u540e\u68c0\u67e5\u7ed3\u679c\u662f\u5426\u80fd\u91cd\u590d\u51fa\u73b0\u3002"
     )
     alignment = [
         {
-            "concept_role": "\u76ee\u6807\u6982\u5ff5",
+            "concept_role": "target concept",
             "story_evidence": "\u6545\u4e8b\u7528\u9690\u85cf\u89c4\u5219\u548c\u8fde\u7eed\u53d8\u5316\u6765\u5bf9\u5e94\u76ee\u6807\u6982\u5ff5\u3002",
         },
         {
-            "concept_role": "\u6838\u5fc3\u673a\u5236",
+            "concept_role": "core mechanism",
             "story_evidence": "\u6761\u4ef6\u3001\u8fc7\u7a0b\u548c\u7ed3\u679c\u88ab\u8bb0\u5f55\u5458\u6309\u987a\u5e8f\u68c0\u67e5\u3002",
+        },
+        {
+            "concept_role": "prerequisites",
+            "concept_items": prerequisites,
+            "story_evidence": prereq_hint,
+        },
+        {
+            "concept_role": "related concepts",
+            "concept_items": related,
+            "story_evidence": related_hint,
+        },
+        {
+            "concept_role": "outcomes",
+            "concept_items": outcomes,
+            "story_evidence": outcome_hint,
+        },
+        {
+            "concept_role": "experiments",
+            "concept_items": experiments,
+            "story_evidence": experiment_hint,
+        },
+        {
+            "concept_role": "exercises",
+            "concept_items": exercises,
+            "story_evidence": "\u6545\u4e8b\u7ed3\u5c3e\u4fdd\u7559\u4e86\u53ef\u590d\u67e5\u3001\u53ef\u8fc1\u79fb\u7684\u5224\u65ad\u4efb\u52a1\u3002",
         },
     ]
     # The target name is intentionally kept out of the story body, but allowed in this metadata table.

@@ -1,24 +1,18 @@
 # kg_rag
 
-Minimal Python scaffold for GraphRAG work in `AAAI-Fable`.
+Graph-grounded Concept-to-Fable prototype for `AAAI-Fable`.
 
-This package intentionally starts small. It is not yet a full pipeline.
+This package now supports a local end-to-end research loop:
 
-Current scope:
-
-- define a Python project entrypoint
-- centralize dataset and output paths
-- provide a CLI health check
-- normalize K12-KGraph into one enriched offline artifact
-- provide Neo4j loading and subgraph query entrypoints
-- reserve a stable package location for future ingestion and retrieval modules
-
-Planned next steps:
-
-1. improve query ranking and neighborhood selection
-2. package retrieved subgraphs into LLM-ready context blocks
-3. add GraphRAG prompt/context assembly
-4. connect downstream structure mapping and generation
+- normalize K12-KGraph into one offline artifact
+- select K12 Concept nodes
+- build and enrich Chinese concept cards
+- generate Simplified Chinese educational fables
+- keep a concept-to-story alignment table
+- evaluate generated fables with a six-dimensional rubric
+- export JSONL / CSV / Markdown / SVG reports
+- optionally call a multi-model LLM-as-Judge panel
+- rewrite `revise` / `reject` samples
 
 Current commands:
 
@@ -37,4 +31,25 @@ kg-rag run-local-demo "photosynthesis" --output-dir data/derived/kg_rag/demo_pho
 kg-rag run-llm-demo "photosynthesis" --output-dir data/derived/kg_rag/llm_demo_photosynthesis
 kg-rag run-batch-stories --mode local --limit 10 --output-dir data/derived/kg_rag/batch_runs/local_10
 kg-rag run-batch-stories --mode llm --subject biology --limit 50 --sleep-seconds 1 --retry 2 --output-dir data/derived/kg_rag/batch_runs/biology_llm_50
+kg-rag select-concept-nodes --limit-per-subject 5
+kg-rag build-concept-cards --selection-path data/derived/kg_rag/concept_selection/k12_concepts.jsonl
+kg-rag enrich-concept-cards --input data/derived/kg_rag/concept_cards/k12_concept_cards.raw.jsonl --output data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --mode rules
+kg-rag run-concept-fable-batch --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --output-dir data/derived/kg_rag/concept_runs/local_20_machine_eval --mode local --language zh-CN --limit 20 --evaluate-mode rules
+kg-rag evaluate-batch data/derived/kg_rag/concept_runs/local_20_machine_eval --mode rules
+kg-rag export-eval-report data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_summary.jsonl
+kg-rag rewrite-concept-fables --run-dir data/derived/kg_rag/concept_runs/local_20_machine_eval --status revise,reject --mode local
 ```
+
+Six-dimensional evaluation outputs:
+
+```text
+eval_summary.jsonl
+eval_summary.csv
+eval_report.md
+eval_analysis.svg
+```
+
+The detailed evaluation protocol and the current 20-sample machine run are documented in:
+
+- `doc/机器评测流程.md`
+- `doc/评估/README_机器评测与20条实验.md`

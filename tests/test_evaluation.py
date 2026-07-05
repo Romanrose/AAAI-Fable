@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
+from kg_rag.evaluation.report import verify_eval_run
 from kg_rag.evaluation.rubric import EvaluationInput, decide_status
 from kg_rag.evaluation.rules import evaluate_rules
 
@@ -69,3 +73,48 @@ def test_template_similarity_marks_template_like() -> None:
     assert flags["template_like"] is True
     assert scores["novelty"] <= 2
     assert findings["template_similarity"] >= 0.82
+
+
+def _write_jsonl(path: Path, rows: list[dict]) -> None:
+    path.write_text("\n".join(json.dumps(row) for row in rows) + "\n", encoding="utf-8")
+
+
+def test_verify_eval_run_accepts_complete_run(tmp_path: Path) -> None:
+    run_dir = tmp_path / "run"
+    concept_dir = run_dir / "concepts" / "c1"
+    concept_dir.mkdir(parents=True)
+    row = {
+        "concept_id": "c1",
+        "status": "success",
+        "scores": {
+            "faithfulness": 4,
+            "implicitness": 5,
+            "mapping_clarity": 4,
+            "readability": 4,
+            "pedagogical_value": 4,
+            "novelty": 4,
+        },
+        "hard_flags": {},
+        "weighted_overall": 4.15,
+        "final_status": "accept",
+    }
+    _write_jsonl(run_dir / "summary.jsonl", [row])
+    _write_jsonl(run_dir / "eval_summary.jsonl", [row])
+    for filename in ("eval_summary.csv", "eval_report.md", "eval_analysis.svg"):
+        (run_dir / filename).write_text("ok", encoding="utf-8")
+    for filename in (
+        "concept_card.json",
+        "subgraph_pack.json",
+        "structure_plan.json",
+        "story_prompt.txt",
+        "draft_story.txt",
+        "six_dim_eval.json",
+        "status.json",
+    ):
+        (concept_dir / filename).write_text("{}", encoding="utf-8")
+
+    result = verify_eval_run(run_dir, expected_count=1)
+
+    assert result["ok"] is True
+    assert result["eval_count"] == 1
+    assert result["missing_files"] == []
