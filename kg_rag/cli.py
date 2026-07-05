@@ -291,6 +291,34 @@ def build_parser() -> argparse.ArgumentParser:
     verify_eval_run.add_argument("run_dir", type=Path, help="Run directory containing concepts and eval reports.")
     verify_eval_run.add_argument("--expected-count", type=int, default=None, help="Expected number of generated/evaluated samples.")
 
+    machine_eval = subparsers.add_parser(
+        "run-machine-eval",
+        help="Run the local Concept-to-Fable machine evaluation workflow end to end.",
+    )
+    machine_eval.add_argument("--subjects", default="biology,chemistry,math,physics", help="Comma-separated subject prefixes.")
+    machine_eval.add_argument("--limit", type=int, default=20, help="Number of concept fables to generate and evaluate.")
+    machine_eval.add_argument("--limit-per-subject", type=int, default=5, help="Concept selection limit per subject.")
+    machine_eval.add_argument(
+        "--output-root",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag",
+        help="Root for concept selection, cards, and derived machine-eval inputs.",
+    )
+    machine_eval.add_argument(
+        "--normalized-graph-path",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "k12_kgraph_normalized.json",
+        help="Path to normalized K12 graph artifact.",
+    )
+    machine_eval.add_argument(
+        "--runs-root",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "concept_runs",
+        help="Root directory for timestamped evaluation runs.",
+    )
+    machine_eval.add_argument("--no-normalize", action="store_true", help="Reuse existing normalized graph if present.")
+    machine_eval.add_argument("--no-resume", action="store_true", help="Do not resume existing concept outputs in the generated run directory.")
+
     select_concepts = subparsers.add_parser(
         "select-concept-nodes",
         help="Select K12 Concept nodes for first-stage Chinese fable generation.",
@@ -625,6 +653,38 @@ def main(argv: list[str] | None = None) -> int:
         print(f"missing_files={result['missing_files']}")
         print(f"missing_concept_outputs={len(result['missing_concept_outputs'])}")
         print(f"failed_rows={len(result['failed_rows'])}")
+        return 0 if result["ok"] else 1
+    if args.command == "run-machine-eval":
+        from kg_rag.pipeline.machine_eval import MachineEvalOptions, run_machine_eval
+
+        result = run_machine_eval(
+            output_root=args.output_root,
+            normalized_graph_path=args.normalized_graph_path,
+            concept_runs_root=args.runs_root,
+            options=MachineEvalOptions(
+                subjects=args.subjects,
+                limit=args.limit,
+                limit_per_subject=args.limit_per_subject,
+                mode="local",
+                evaluate_mode="rules",
+                language="zh-CN",
+                no_normalize=args.no_normalize,
+                no_resume=args.no_resume,
+            ),
+        )
+        batch = result["batch"]
+        verification = result["verification"]
+        print(f"ok={result['ok']}")
+        print(f"output_dir={batch['output_dir']}")
+        print(f"summary_path={batch['summary_path']}")
+        print(f"eval_summary_path={batch['eval_summary_path']}")
+        print(f"report_path={batch.get('report_path')}")
+        print(f"analysis_chart_path={batch.get('analysis_chart_path')}")
+        print(f"run_index_path={batch.get('run_index_path')}")
+        print(f"concept_count={batch['concept_count']}")
+        print(f"success_count={batch['success_count']}")
+        print(f"failed_count={batch['failed_count']}")
+        print(f"verification_ok={verification['ok']}")
         return 0 if result["ok"] else 1
     if args.command == "select-concept-nodes":
         from kg_rag.concepts.selection import select_concept_nodes

@@ -49,6 +49,19 @@ python3 -m pytest tests/test_evaluation.py tests/test_judge_panel.py tests/test_
 
 ## 从零构建输入数据
 
+推荐的一键本地机器评测：
+
+```bash
+python3 -m kg_rag run-machine-eval \
+  --limit 20 \
+  --limit-per-subject 5 \
+  --no-resume
+```
+
+这会完成 normalized graph、concept selection、concept cards、rules enrichment、20 条本地生成、rules 评测、报告导出和完整度校验，并写入时间戳 run 目录。
+
+如果需要拆开调试，可按下面步骤逐条执行。
+
 ```bash
 python3 -m kg_rag normalize-k12
 

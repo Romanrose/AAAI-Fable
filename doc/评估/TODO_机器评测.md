@@ -1,6 +1,6 @@
 # 机器评测 TODO
 
-更新时间：2026-07-05 17:34 Asia/Shanghai
+更新时间：2026-07-05 17:39 Asia/Shanghai
 
 ## 本轮检查基线
 
@@ -11,7 +11,6 @@
 
 ## Codex 可自动完成
 
-- [ ] 增加一键机器评测入口，把 concept card 准备、20 条生成、评测、报告检查串起来。
 - [ ] 降低本地 `local` 故事生成器模板化，减少 `template_like=true` 的比例。
 - [ ] 增加针对报告图表导出的单元测试，覆盖 `eval_analysis.svg` 生成。
 
@@ -31,3 +30,4 @@
 - [x] 创建本 TODO 文件，供定时检查继续维护。
 - [x] 增加 `kg-rag verify-eval-run` 完整度校验命令，检查 JSONL 行数、概念目录和 CSV/Markdown/SVG 产物。
 - [x] 为机器实验增加 `--auto-run-dir` 时间戳目录和 `runs_index.jsonl` 运行索引，避免固定目录被覆盖。
+- [x] 增加 `kg-rag run-machine-eval` 一键机器评测入口，串起数据准备、生成、评测、报告和完整度校验。
