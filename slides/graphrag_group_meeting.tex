@@ -1,0 +1,467 @@
+\documentclass[aspectratio=169,UTF8]{ctexbeamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+
+\definecolor{FableBlue}{RGB}{36,88,151}
+\definecolor{FableGreen}{RGB}{61,132,94}
+\definecolor{FableOrange}{RGB}{214,128,42}
+\definecolor{FableGray}{RGB}{245,247,250}
+
+\setbeamercolor{title}{fg=FableBlue}
+\setbeamercolor{frametitle}{fg=FableBlue}
+\setbeamercolor{structure}{fg=FableBlue}
+
+\newcommand{\okmetric}[2]{\textcolor{FableGreen}{#1} & #2}
+\newcommand{\badcase}[1]{\textcolor{FableOrange}{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title[Graph RAG 组会汇报]{Graph RAG 驱动的隐性叙事生成初步探索}
+\subtitle{文献调研与已实现成果汇报}
+\author{Vincent Xing}
+\institute{AAAI-Fable / M2NA 项目}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{1. 研究问题：M2NA 是什么}
+  \begin{block}{任务定义}
+    \textbf{M2NA}：Mechanism-to-Narrative Analogy Generation。目标是把机制型概念转成短小、隐含、可解释的叙事类比。
+  \end{block}
+
+  \vspace{0.5em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \textbf{输入}
+      \begin{itemize}
+        \item 目标概念 $c$
+        \item 机制图 $G_c=(V_c,E_c)$
+        \item 禁用词集合 $T_c$
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \textbf{输出}
+      \begin{itemize}
+        \item 隐性短叙事 $N$
+        \item 节点对齐 $A_V$
+        \item 边/关系对齐 $A_E$
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.5em}
+  核心约束：\textbf{机制保持}、\textbf{词汇隐藏}、\textbf{结构可对齐}、\textbf{叙事最小性}。
+\end{frame}
+
+\begin{frame}{2. 为什么需要 Graph RAG}
+  直接让模型“写一个寓言/类比”会带来三个问题：
+
+  \begin{enumerate}
+    \item \textbf{知识来源不清楚}：故事可能合理，但机制事实没有 grounding。
+    \item \textbf{只覆盖关键词}：模型容易提到概念相关实体，却漏掉因果边或方向。
+    \item \textbf{评估难落地}：没有显式机制图和映射，无法计算节点/边覆盖。
+  \end{enumerate}
+
+  \vspace{0.8em}
+  \begin{block}{Graph RAG 在这里的角色}
+    从课程知识图谱中检索结构化证据，把“概念解释”拆成可验证的机制节点、关系和来源 ID，再进入生成阶段。
+  \end{block}
+\end{frame}
+
+\begin{frame}{3. 文献地图：M2NA 站在哪些工作之间}
+  \small
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.22\textwidth} X X}
+    \toprule
+    方向 & 代表工作 & 对本项目的启发 \\
+    \midrule
+    叙事类比 & ARN, TACL 2024；Curious Case, AAAI 2026 & 类比成功依赖 system / relational mapping，而不是表面相似。 \\
+    科学类比教学 & Scientific Concept Analogy, EMNLP 2024；LLM analogy tutoring & 类比可以服务概念理解，但需要控制准确性和教学有效性。 \\
+    Graph-to-Text & Graph-to-Text with LLMs, NAACL 2025 & 复杂图到文本的瓶颈在规划和归因，不只是 prompt。 \\
+    隐性映射 & Metaphoric Analogy, COLING 2025 & 隐含元素和结构化映射可以被抽取、标注和评估。 \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+\begin{frame}{4. 文献调研得到的方法判断}
+  \begin{itemize}
+    \item \textbf{结构对齐是主轴}：节点覆盖和边覆盖必须分开报告。
+    \item \textbf{先规划、后生成}：机制图提炼和叙事生成不能混成一个黑盒 prompt。
+    \item \textbf{hard negative 必须有}：只看主题相似会高估模型能力，需要方向反转、关系遗漏等负例。
+    \item \textbf{叙事质量单独评估}：故事自然不等于机制正确；机制正确也不等于故事好。
+    \item \textbf{教育价值是后续主实验}：当前先把自动结构评估和最小闭环跑通。
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{5. 我的工作定位}
+  \begin{block}{我重点负责}
+    Graph RAG / 生成流水线 / 自动评测闭环。
+  \end{block}
+
+  \vspace{0.5em}
+  已经落地的部分：
+  \begin{itemize}
+    \item 从 K12-KGraph 富属性图中定位概念并检索证据子图。
+    \item 将检索证据序列化给模型，区分原始边、机制路径和高层摘要。
+    \item 两阶段生成：机制图提炼 $\rightarrow$ 隐性叙事与结构映射。
+    \item 自动评测：格式、泄露、节点覆盖、边覆盖、映射精确率、方向准确率。
+    \item 批量脚本：支持多概念、多检索模式对比，并保留失败原因。
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{6. 当前系统流程}
+  \centering
+  \begin{tikzpicture}[
+    node distance=0.75cm,
+    box/.style={draw=FableBlue, rounded corners, fill=FableGray, align=center, minimum height=0.95cm, minimum width=2.05cm},
+    arrow/.style={-Latex, thick, draw=FableBlue}
+  ]
+    \node[box] (kg) {K12-KGraph\\概念定位};
+    \node[box, right=of kg] (retrieval) {Graph RAG\\证据检索};
+    \node[box, right=of retrieval] (mechanism) {机制图提炼\\节点/边/禁词};
+    \node[box, right=of mechanism] (gen) {隐性叙事\\结构映射};
+    \node[box, right=of gen] (eval) {M2NA\\自动评测};
+
+    \draw[arrow] (kg) -- (retrieval);
+    \draw[arrow] (retrieval) -- (mechanism);
+    \draw[arrow] (mechanism) -- (gen);
+    \draw[arrow] (gen) -- (eval);
+
+    \node[below=0.75cm of retrieval, align=center, text width=3.2cm] {\footnotesize 原始 KG 边\\路径证据\\高层摘要};
+    \node[below=0.75cm of gen, align=center, text width=3.2cm] {\footnotesize 正文不泄露概念词\\但必须可映射回机制};
+  \end{tikzpicture}
+
+  \vspace{0.8em}
+  \footnotesize
+  输出文件：\code{01\_retrieved\_subgraph.json}、\code{02\_mechanism\_graph.json}\\
+  \code{03\_generation.jsonl}、\code{04\_metrics.json}
+\end{frame}
+
+\begin{frame}{7. Graph RAG 检索模式总览}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\code{one\_hop}：局部邻域 baseline}
+        \textbf{做法}：只取目标概念的一跳关系边。\\
+        \textbf{价值}：上下文短、噪声少，适合做最小可控对照。
+      \end{block}
+
+      \begin{block}{\code{path\_pruned}：PathRAG 风格}
+        \textbf{做法}：先扩展 1--2 hop 候选路径，再裁剪出机制相关路径。\\
+        \textbf{价值}：比一跳更容易捕捉“条件 $\rightarrow$ 过程 $\rightarrow$ 结果”链条。
+      \end{block}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\code{dual\_level}：LightRAG 风格}
+        \textbf{做法}：同时提供低层原始边和高层主题摘要。\\
+        \textbf{价值}：让模型既看到证据细节，也看到全局结构。
+      \end{block}
+
+      \begin{block}{\code{path\_dual}：路径 + 双层上下文}
+        \textbf{做法}：在路径裁剪基础上补充高层摘要。\\
+        \textbf{价值}：信息最完整，适合正式生成，但上下文更长。
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.3em}
+  \footnotesize
+  共同原则：原始 KG 边、裁剪路径和高层摘要分层保存；只有带来源 ID 的原始边可作为 grounding。
+\end{frame}
+
+\begin{frame}{8. PathRAG 风格：从邻域噪声中找机制链}
+  \small
+  \centering
+  \begin{tikzpicture}[
+    node distance=0.55cm,
+    box/.style={draw=FableBlue, rounded corners, fill=FableGray, align=center, minimum height=0.85cm, minimum width=2.15cm},
+    arrow/.style={-Latex, thick, draw=FableBlue}
+  ]
+    \node[box] (target) {目标概念};
+    \node[box, right=of target] (expand) {1--2 hop\\候选路径};
+    \node[box, right=of expand] (score) {关系优先级\\证据完整度};
+    \node[box, right=of score] (prune) {裁剪为\\机制路径};
+    \node[box, right=of prune] (prompt) {写入\\selected\_paths};
+    \draw[arrow] (target) -- (expand);
+    \draw[arrow] (expand) -- (score);
+    \draw[arrow] (score) -- (prune);
+    \draw[arrow] (prune) -- (prompt);
+  \end{tikzpicture}
+
+  \vspace{0.8em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \textbf{为什么需要}
+      \begin{itemize}
+        \item 一跳边可能只给定义或分类。
+        \item 机制概念常需要多步关系链。
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \textbf{如何控制噪声}
+      \begin{itemize}
+        \item 限制 hop、路径数和边数。
+        \item 优先保留机制关系和教材证据。
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \textbf{给生成的作用}
+      \begin{itemize}
+        \item 明确“先后/因果”顺序。
+        \item 降低只复述散点知识的风险。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{9. LightRAG 风格：低层证据 + 高层摘要}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{低层：\code{raw\_edges}}
+        \begin{itemize}
+          \item 来自 K12-KGraph 的原始关系边。
+          \item 保留 source/target、relation、evidence 和来源 ID。
+          \item 用于机制图 grounding 和后续可追溯检查。
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{高层：\code{topic\_summary}}
+        \begin{itemize}
+          \item 根据检索结果生成规则化主题摘要。
+          \item 帮助模型把零散边组织成“条件、过程、结果”。
+          \item 只作为背景，不替代原始 KG 事实。
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.6em}
+  \begin{block}{组合策略：\code{path\_dual}}
+    先用 \code{path\_pruned} 选择机制路径，再补充 \code{topic\_summary} 给全局语义。它更适合复杂概念，但也带来更长上下文和更高验证压力。
+  \end{block}
+
+  \vspace{0.3em}
+  \footnotesize
+  排版到 prompt 时三类上下文明确分区：\code{raw\_edges} / \code{selected\_paths} / \code{topic\_summary}。
+\end{frame}
+
+\begin{frame}{10. 单样例 Demo：以“光合作用”为例}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \textbf{运行链路}
+      \begin{itemize}
+        \item 学科：biology
+        \item 概念：光合作用
+        \item 后端：fixture / DeepSeek
+        \item 输出：检索子图、机制图、叙事、指标
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \textbf{隐性叙事片段}
+      \begin{quote}
+        \footnotesize
+        海边工坊每天打开屋顶的绿色薄板，让晨光驱动机器。两条管道分别送来井水和空气中的一种废气，车间把它们合成耐储存的糖砖……
+      \end{quote}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.7em}
+  这个样例没有直接说出目标概念和高泄露术语，但保留了“光驱动、输入物、产物、能量储存、生态作用”的机制链。
+\end{frame}
+
+\begin{frame}{11. 自动评测：不只评故事好不好}
+  \small
+  \begin{tabularx}{\textwidth}{p{0.27\textwidth} X}
+    \toprule
+    指标 & 检查内容 \\
+    \midrule
+    format validity & 生成记录是否符合 schema 和映射结构要求。 \\
+    node coverage & 叙事是否覆盖机制图关键节点。 \\
+    edge coverage & 叙事是否覆盖机制图关键关系。 \\
+    alignment precision & 映射是否指向真实存在的叙事元素。 \\
+    direction accuracy & 边的 source/target 方向是否保持。 \\
+    concept / soft leakage & 是否泄露概念名或高提示性术语。 \\
+    template hit rate & 是否命中高频模板意象或套路。 \\
+    \bottomrule
+  \end{tabularx}
+
+  \vspace{0.7em}
+  修复后的评测器不依赖模型自报的 \code{direction\_preserved}，而是根据映射 source/target 独立计算方向。
+\end{frame}
+
+\begin{frame}{12. 初步结果：fixture demo 全链路跑通}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{tabular}{lr}
+        \toprule
+        指标 & 数值 \\
+        \midrule
+        format validity & 1.0 \\
+        node coverage & 1.0 \\
+        edge coverage & 1.0 \\
+        alignment precision & 1.0 \\
+        direction accuracy & 1.0 \\
+        exact leakage & 0.0 \\
+        soft leakage & 0.0 \\
+        template hit rate & 0.0 \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{解读}
+      \begin{itemize}
+        \item 单样例 fixture 不证明泛化能力。
+        \item 它证明了端到端接口、文件产物和评测闭环是可执行的。
+        \item 适合作为回归测试和组会 demo。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{13. 批量初步结果：优化后 40 个运行，33 个有效通过}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.45\textwidth}
+      \begin{tabular}{lrr}
+        \toprule
+        检索模式 & OK & Failed \\
+        \midrule
+        one\_hop & 7 & 3 \\
+        path\_pruned & 9 & 1 \\
+        dual\_level & 9 & 1 \\
+        path\_dual & 8 & 2 \\
+        \midrule
+        Total & 33 & 7 \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \textbf{通过样本上的平均指标}
+      \begin{itemize}
+        \item 四种模式的节点/边覆盖、映射精确率、方向准确率均为 1.0。
+        \item 精确概念泄露和软术语泄露均为 0.0。
+        \item 优化前通过 25/40；加入方向合同和两轮修复后提升到 33/40。
+        \item 本轮没有出现方向反转失败，剩余问题集中在长度和 anchor。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.5em}
+  注意：这里的 1.0 是\textbf{通过验证样本}的均值，不代表失败样本也合格。
+\end{frame}
+
+\begin{frame}{14. 剩余失败：验证器仍在拦截结构问题}
+  \begin{itemize}
+    \item \badcase{anchor 不在正文}：模型给出映射，但对应叙事片段并不存在。
+    \item \badcase{长度违规}：模型倾向生成过短物理类故事，不满足 90--260 字约束。
+    \item \textcolor{FableGreen}{方向反转失败已消除}：本轮失败中没有 source/target 反向错误。
+  \end{itemize}
+
+  \vspace{0.8em}
+  \begin{block}{这对研究是有用的}
+    优化后的主要瓶颈从“方向保持”转移到“锚点可验证”和“叙事长度控制”，下一步应做 anchor-first 生成或本地自动补锚。
+  \end{block}
+\end{frame}
+
+\begin{frame}{15. 当前不足：对应的研究风险}
+  \small
+  \begin{tabularx}{\textwidth}{p{0.22\textwidth} X X}
+    \toprule
+    不足 & 当前表现 & 风险 \\
+    \midrule
+    样本规模小 & pilot 级别，fixture 单样例可稳定复现 & 只能证明闭环可跑，不能证明方法泛化。 \\
+    生成稳定性不足 & 优化后通过率 33/40；剩余 anchor 缺失和长度违规 & 模型能写故事，但仍不稳定遵守可验证输出约束。 \\
+    自动评测需校准 & 目前主要依赖规则和结构化映射检查 & 需要证明自动指标和人工判断一致。 \\
+    叙事质量评估浅 & 重点检查结构、泄露和映射 & 还不能充分说明故事是否自然、有转折、少模板。 \\
+    教育效果未验证 & 尚未做人类学习实验 & 只能说“生成合格”，还不能说“帮助学习”。 \\
+    \bottomrule
+  \end{tabularx}
+
+  \vspace{0.6em}
+  \begin{block}{结论}
+    下一步不是单纯多跑样本，而是把失败类型转化为可验证的工程约束和评估设计。
+  \end{block}
+\end{frame}
+
+\begin{frame}{16. 基于不足的工程修改}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \begin{block}{1. 扩大概念集}
+        \begin{itemize}
+          \item 先扩到 20--50 个机制型概念。
+          \item 覆盖 biology / physics。
+          \item 每个概念保留 KG 来源和机制图版本。
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \begin{block}{2. 提高生成稳定性}
+        \begin{itemize}
+          \item 已加入机制边方向合同。
+          \item 提示模型先自检 anchor 再输出。
+          \item 验证失败后最多两轮定向 retry。
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \begin{block}{3. 强化结构自检}
+        \begin{itemize}
+          \item 检查 anchor 是否真实出现在正文。
+          \item 逐边验证 source/target 方向。
+          \item 针对长度、泄露、缺失映射给出修复反馈。
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.4em}
+  \begin{block}{具体改动目标}
+    本轮已把“生成后发现错误”推进到“生成时有方向合同、失败后可定位修复”。
+  \end{block}
+\end{frame}
+
+\begin{frame}{17. 评估补强与近期路线}
+  \footnotesize
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \textbf{人工/专家评估接入}
+      \begin{itemize}
+        \item 样本级评分：Faithfulness、Alignment、Concealment、Narrative Quality、Pedagogical Usefulness。
+        \item 节点映射：existence / correctness / specificity。
+        \item 边映射：relation correctness / direction correctness。
+        \item 错误标签：missing edge、reversed causality、theme-only analogy、template story。
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{下一轮实验设计}
+      \begin{itemize}
+        \item 构造 hard negatives：surface distractor、relation corruption、mechanism omission。
+        \item 对比 baseline：Direct Narrative、RAG-only、Alignment-then-Write、Full M2NA。
+        \item 报告自动指标与人工评分相关性。
+        \item 小规模学习实验验证 understanding / transfer / retention。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.25em}
+  \begin{block}{汇报结论}
+    当前已经完成 Graph RAG 到 M2NA 自动评测的最小闭环；下一阶段重点是提高生成稳定性，并把自动评测、人工评估和学习效果串起来。
+  \end{block}
+\end{frame}
+
+\end{document}

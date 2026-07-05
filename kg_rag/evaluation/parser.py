@@ -62,7 +62,19 @@ def build_evaluation_input_from_dir(story_dir: Path):
     target_concept = str(seed.get("name") or concept_id)
     concept_definition = str(seed.get("definition") or "")
     aliases = seed.get("aliases") if isinstance(seed.get("aliases"), list) else []
-    forbidden_terms = sorted({term for term in [target_concept, concept_id, *aliases] if isinstance(term, str) and term})
+    mechanism_plan = structure_plan.get("mechanism_plan", {}) if isinstance(structure_plan, dict) else {}
+    mechanism_terms = (
+        mechanism_plan.get("forbidden_terms", [])
+        if isinstance(mechanism_plan, dict) and isinstance(mechanism_plan.get("forbidden_terms"), list)
+        else []
+    )
+    forbidden_terms = sorted(
+        {
+            term
+            for term in [target_concept, concept_id, *aliases, *mechanism_terms]
+            if isinstance(term, str) and term
+        }
+    )
 
     return EvaluationInput(
         concept_id=concept_id,
@@ -74,4 +86,3 @@ def build_evaluation_input_from_dir(story_dir: Path):
         alignment_table=extract_alignment_table(draft_story, structure_plan),
         forbidden_terms=forbidden_terms,
     )
-

@@ -1,0 +1,94 @@
+{
+  "by_stress_type": {
+    "mechanism_omission": {
+      "detected_count": 5,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "alignment_precision": -0.2,
+        "edge_coverage": -0.6000000000000001,
+        "node_coverage": -0.45,
+        "relation_direction_accuracy": 0.0,
+        "weighted_edge_coverage": -0.6599999999999999,
+        "weighted_node_coverage": -0.54
+      },
+      "passed": true,
+      "sample_count": 5,
+      "undetected": []
+    },
+    "relation_corruption": {
+      "detected_count": 5,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "alignment_precision": 0.0,
+        "edge_coverage": 0.0,
+        "node_coverage": 0.0,
+        "relation_direction_accuracy": -0.33333333333333337,
+        "weighted_edge_coverage": 0.0,
+        "weighted_node_coverage": 0.0
+      },
+      "passed": true,
+      "sample_count": 5,
+      "undetected": []
+    },
+    "surface_distractor": {
+      "detected_count": 5,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "alignment_precision": -1.0,
+        "edge_coverage": -1.0,
+        "node_coverage": -1.0,
+        "relation_direction_accuracy": null,
+        "weighted_edge_coverage": -1.0,
+        "weighted_node_coverage": -1.0
+      },
+      "passed": true,
+      "sample_count": 5,
+      "undetected": []
+    }
+  },
+  "clean_samples": {
+    "details": [
+      {
+        "base_id": "cognitive-dissonance",
+        "false_positive": false,
+        "id": "cognitive-dissonance-clean",
+        "reasons": []
+      },
+      {
+        "base_id": "defamiliarization",
+        "false_positive": false,
+        "id": "defamiliarization-clean",
+        "reasons": []
+      },
+      {
+        "base_id": "overfitting",
+        "false_positive": false,
+        "id": "overfitting-clean",
+        "reasons": []
+      },
+      {
+        "base_id": "path-dependence",
+        "false_positive": false,
+        "id": "path-dependence-clean",
+        "reasons": []
+      },
+      {
+        "base_id": "tragedy-commons",
+        "false_positive": false,
+        "id": "tragedy-commons-clean",
+        "reasons": []
+      }
+    ],
+    "false_positive_count": 0,
+    "false_positive_rate": 0.0,
+    "passed": true,
+    "sample_count": 5
+  },
+  "passed": true,
+  "suite": {
+    "base_concept_count": 5,
+    "maximum_clean_false_positive_rate": 0.1,
+    "minimum_detection_rate": 0.9,
+    "record_count": 20
+  }
+}

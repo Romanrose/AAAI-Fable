@@ -2,7 +2,8 @@
 
 Minimal Python scaffold for GraphRAG work in `AAAI-Fable`.
 
-This package intentionally starts small. It is not yet a full pipeline.
+This package intentionally stays lightweight, but now includes the first K12
+Concept-to-Fable agentic workflow.
 
 Current scope:
 
@@ -11,14 +12,26 @@ Current scope:
 - provide a CLI health check
 - normalize K12-KGraph into one enriched offline artifact
 - provide Neo4j loading and subgraph query entrypoints
-- reserve a stable package location for future ingestion and retrieval modules
+- provide dual-level GraphRAG retrieval for K12 concept cards
+- run staged Concept-to-Fable generation with traceable intermediate artifacts
 
-Planned next steps:
+Workflow shape:
 
-1. improve query ranking and neighborhood selection
-2. package retrieved subgraphs into LLM-ready context blocks
-3. add GraphRAG prompt/context assembly
-4. connect downstream structure mapping and generation
+```text
+Concept Card
+-> Retrieval Agent
+-> Mechanism Planner Agent
+-> Analogy Planner Agent
+-> Fable Writer Agent
+-> Critic / Evaluator Agent
+-> Revision Agent
+-> Report Builder
+```
+
+The default GraphRAG mode for `run-concept-fable-batch` is `dual_level`. It
+keeps raw KG edges for grounding and builds a high-level topic summary for
+condition / process / effect planning. `selected_paths` is retained as an empty
+compatibility field.
 
 Current commands:
 
@@ -37,4 +50,12 @@ kg-rag run-local-demo "photosynthesis" --output-dir data/derived/kg_rag/demo_pho
 kg-rag run-llm-demo "photosynthesis" --output-dir data/derived/kg_rag/llm_demo_photosynthesis
 kg-rag run-batch-stories --mode local --limit 10 --output-dir data/derived/kg_rag/batch_runs/local_10
 kg-rag run-batch-stories --mode llm --subject biology --limit 50 --sleep-seconds 1 --retry 2 --output-dir data/derived/kg_rag/batch_runs/biology_llm_50
+kg-rag run-concept-fable-batch \
+  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
+  --normalized-graph-path data/derived/kg_rag/k12_kgraph_normalized.json \
+  --workflow agentic \
+  --retrieval-mode dual_level \
+  --mode local \
+  --limit 1 \
+  --output-dir data/derived/kg_rag/concept_runs/smoke_dual_level
 ```

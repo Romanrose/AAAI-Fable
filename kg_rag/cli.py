@@ -342,11 +342,22 @@ def build_parser() -> argparse.ArgumentParser:
     )
     concept_fables.add_argument("--concept-cards", type=Path, required=True, help="Input enriched concept_card JSONL path.")
     concept_fables.add_argument(
+        "--normalized-graph-path",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "k12_kgraph_normalized.json",
+        help="Path to the normalized K12 graph artifact used by the agentic GraphRAG workflow.",
+    )
+    concept_fables.add_argument(
         "--output-dir",
         type=Path,
         default=DEFAULT_DERIVED_DIR / "kg_rag" / "concept_runs" / "k12_concepts_zh_v1",
         help="Output run directory.",
     )
+    concept_fables.add_argument("--workflow", choices=("agentic", "card"), default="agentic", help="Use the agentic GraphRAG workflow or the legacy card-only workflow.")
+    concept_fables.add_argument("--retrieval-mode", choices=("dual_level",), default="dual_level", help="GraphRAG retrieval mode for the agentic workflow.")
+    concept_fables.add_argument("--max-edges", type=int, default=16, help="Maximum raw KG edges kept by dual_level retrieval.")
+    concept_fables.add_argument("--revision-rounds", type=int, default=1, help="Maximum in-batch revise/reject rewrite rounds.")
+    concept_fables.add_argument("--template-blacklist", default="default", help="Template blacklist profile for analogy planning.")
     concept_fables.add_argument("--mode", choices=("local", "llm"), default="local", help="Story generation mode.")
     concept_fables.add_argument("--language", choices=("zh-CN",), default="zh-CN", help="Story language.")
     concept_fables.add_argument("--subject", default=None, help="Optional subject filter.")
@@ -644,7 +655,9 @@ def main(argv: list[str] | None = None) -> int:
         result = run_concept_fable_batch(
             concept_cards_path=args.concept_cards,
             output_dir=args.output_dir,
+            normalized_graph_path=args.normalized_graph_path if args.workflow == "agentic" else None,
             options=ConceptFableOptions(
+                workflow=args.workflow,
                 mode=args.mode,
                 language=args.language,
                 subject=args.subject,
@@ -656,6 +669,10 @@ def main(argv: list[str] | None = None) -> int:
                 sleep_seconds=args.sleep_seconds,
                 resume=not args.no_resume,
                 evaluate_mode=args.evaluate_mode,
+                retrieval_mode=args.retrieval_mode,
+                max_edges=args.max_edges,
+                revision_rounds=args.revision_rounds,
+                template_blacklist=args.template_blacklist,
             ),
             config=config,
         )
