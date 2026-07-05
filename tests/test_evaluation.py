@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from kg_rag.evaluation.report import verify_eval_run
+from kg_rag.evaluation.report import export_reports, verify_eval_run
 from kg_rag.evaluation.rubric import EvaluationInput, decide_status
 from kg_rag.evaluation.rules import evaluate_rules
 
@@ -118,3 +118,37 @@ def test_verify_eval_run_accepts_complete_run(tmp_path: Path) -> None:
     assert result["ok"] is True
     assert result["eval_count"] == 1
     assert result["missing_files"] == []
+
+
+def test_export_reports_writes_analysis_svg(tmp_path: Path) -> None:
+    summary_path = tmp_path / "eval_summary.jsonl"
+    row = {
+        "concept_id": "biology_c1",
+        "target_concept": "hidden",
+        "scores": {
+            "faithfulness": 4,
+            "implicitness": 5,
+            "mapping_clarity": 4,
+            "readability": 4,
+            "pedagogical_value": 4,
+            "novelty": 3,
+        },
+        "hard_flags": {
+            "hard_leakage": False,
+            "concept_contradiction": False,
+            "template_like": False,
+        },
+        "weighted_overall": 4.05,
+        "final_status": "accept",
+    }
+    _write_jsonl(summary_path, [row])
+
+    result = export_reports(summary_path)
+    svg_text = (tmp_path / "eval_analysis.svg").read_text(encoding="utf-8")
+    report_text = (tmp_path / "eval_report.md").read_text(encoding="utf-8")
+
+    assert result["analysis_chart_path"].endswith("eval_analysis.svg")
+    assert '<svg xmlns="http://www.w3.org/2000/svg"' in svg_text
+    assert "Machine Evaluation Summary" in svg_text
+    assert "eval_analysis.svg" in report_text
+    assert (tmp_path / "eval_summary.csv").exists()
