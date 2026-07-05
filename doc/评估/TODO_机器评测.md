@@ -1,6 +1,6 @@
 # 机器评测 TODO
 
-更新时间：2026-07-05 17:42 Asia/Shanghai
+更新时间：2026-07-05 17:51 Asia/Shanghai
 
 ## 本轮检查基线
 
@@ -11,7 +11,7 @@
 
 ## Codex 可自动完成
 
-- [ ] 降低本地 `local` 故事生成器模板化，减少 `template_like=true` 的比例。
+当前无剩余 Codex 可独立完成的机器评测 TODO。后续自动任务若发现新的代码/文档一致性问题，再追加到本节。
 
 ## 需要用户完成或拍板
 
@@ -31,3 +31,4 @@
 - [x] 为机器实验增加 `--auto-run-dir` 时间戳目录和 `runs_index.jsonl` 运行索引，避免固定目录被覆盖。
 - [x] 增加 `kg-rag run-machine-eval` 一键机器评测入口，串起数据准备、生成、评测、报告和完整度校验。
 - [x] 增加报告图表导出测试，覆盖 `eval_analysis.svg`、Markdown 图表链接和 CSV 产物。
+- [x] 降低本地 `local` 故事生成器模板化：临时 20 条批量复评中 `template_like` 从原 12/20 降到 3/20，Accept 从 8/20 提升到 17/20。
