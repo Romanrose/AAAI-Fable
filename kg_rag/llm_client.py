@@ -41,7 +41,7 @@ def _openai_compatible_completion(*, config: LLMConfig, system_prompt: str, user
         },
     )
     try:
-        with request.urlopen(req, timeout=120) as resp:
+        with request.urlopen(req, timeout=config.timeout_seconds) as resp:
             result: dict[str, Any] = json.loads(resp.read().decode("utf-8"))
     except error.HTTPError as exc:
         try:
@@ -88,7 +88,7 @@ def _anthropic_completion(*, config: LLMConfig, system_prompt: str, user_prompt:
         },
     )
     try:
-        with request.urlopen(req, timeout=120) as resp:
+        with request.urlopen(req, timeout=config.timeout_seconds) as resp:
             result: dict[str, Any] = json.loads(resp.read().decode("utf-8"))
     except error.HTTPError as exc:
         try:
@@ -130,7 +130,7 @@ def _gemini_completion(*, config: LLMConfig, system_prompt: str, user_prompt: st
         headers={"Content-Type": "application/json"},
     )
     try:
-        with request.urlopen(req, timeout=120) as resp:
+        with request.urlopen(req, timeout=config.timeout_seconds) as resp:
             result: dict[str, Any] = json.loads(resp.read().decode("utf-8"))
     except error.HTTPError as exc:
         try:

@@ -16,6 +16,7 @@ class LLMConfig:
     model: str
     temperature: float = 0.3
     max_tokens: int = 1200
+    timeout_seconds: int = 120
 
     @classmethod
     def from_env(cls) -> "LLMConfig":
@@ -26,6 +27,7 @@ class LLMConfig:
         model = os.getenv("DEEPSEEK_MODEL", "deepseek-chat").strip() or "deepseek-chat"
         temperature = float(os.getenv("DEEPSEEK_TEMPERATURE", "0.3"))
         max_tokens = int(os.getenv("DEEPSEEK_MAX_TOKENS", "1200"))
+        timeout_seconds = int(os.getenv("DEEPSEEK_TIMEOUT_SECONDS", "120"))
 
         missing = [
             name
@@ -46,6 +48,7 @@ class LLMConfig:
             model=model,
             temperature=temperature,
             max_tokens=max_tokens,
+            timeout_seconds=timeout_seconds,
         )
 
     @classmethod
@@ -56,15 +59,19 @@ class LLMConfig:
         provider = os.getenv(f"{normalized}_PROVIDER", "openai-compatible").strip()
         base_url = os.getenv(f"{normalized}_BASE_URL", "").strip()
         api_key = os.getenv(f"{normalized}_API_KEY", "").strip()
+        api_key_env = os.getenv(f"{normalized}_API_KEY_ENV", "").strip()
+        if not api_key and api_key_env:
+            api_key = os.getenv(api_key_env, "").strip()
         model = os.getenv(f"{normalized}_MODEL", "").strip()
         temperature = float(os.getenv(f"{normalized}_TEMPERATURE", "0.0"))
         max_tokens = int(os.getenv(f"{normalized}_MAX_TOKENS", "1600"))
+        timeout_seconds = int(os.getenv(f"{normalized}_TIMEOUT_SECONDS", "120"))
 
         missing = [
             name
             for name, value in (
                 (f"{normalized}_BASE_URL", base_url),
-                (f"{normalized}_API_KEY", api_key),
+                (f"{normalized}_API_KEY or {normalized}_API_KEY_ENV", api_key),
                 (f"{normalized}_MODEL", model),
             )
             if not value
@@ -80,6 +87,7 @@ class LLMConfig:
             model=model,
             temperature=temperature,
             max_tokens=max_tokens,
+            timeout_seconds=timeout_seconds,
         )
 
 

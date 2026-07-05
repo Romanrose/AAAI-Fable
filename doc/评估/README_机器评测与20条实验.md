@@ -165,24 +165,37 @@ data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_analysis.svg
 | Revise | 12 |
 | Reject | 0 |
 
-## LLM Judge 预留
+## LLM Judge / Ark Doubao
 
-`.env.example` 已预留：
+当前项目的 `openai-compatible` judge client 可直接调用火山方舟 Ark。推荐先用一个 Doubao Seed 2.1 Turbo judge 做实测复核：
 
 ```text
-EVAL_JUDGE_COUNT=3
+ARK_API_KEY=replace-me-locally
+
+EVAL_JUDGE_COUNT=1
+EVAL_JUDGE_1_NAME=doubao_seed_2_1_turbo
 EVAL_JUDGE_1_PROVIDER=openai-compatible
-EVAL_JUDGE_2_PROVIDER=anthropic
-EVAL_JUDGE_3_PROVIDER=gemini
+EVAL_JUDGE_1_BASE_URL=https://ark.cn-beijing.volces.com/api/v3
+EVAL_JUDGE_1_API_KEY_ENV=ARK_API_KEY
+EVAL_JUDGE_1_MODEL=doubao-seed-2-1-turbo-260628
+EVAL_JUDGE_1_TEMPERATURE=0
+EVAL_JUDGE_1_MAX_TOKENS=1600
+EVAL_JUDGE_1_TIMEOUT_SECONDS=300
 ```
 
-配置 key 和 model 后可运行：
+设置本地 `ARK_API_KEY` 后可运行：
 
 ```bash
 python3 -m kg_rag evaluate-batch \
   data/derived/kg_rag/concept_runs/local_20_machine_eval \
   --mode llm \
   --no-resume
+```
+
+如果本地 Python 报证书错误，可临时设置：
+
+```bash
+export SSL_CERT_FILE="$(python3 -c 'import certifi; print(certifi.where())')"
 ```
 
 LLM 模式会为每个样本保存：
@@ -193,6 +206,8 @@ six_dim_eval_response_{index}_{judge}.txt
 six_dim_eval_judge_{index}_{judge}.json
 six_dim_eval.json
 ```
+
+若后续要做多模型 judge panel，可把 `EVAL_JUDGE_COUNT` 改回 3，并继续配置 Anthropic / Gemini / 其他 OpenAI-compatible judge。
 
 ## 人工测试和对比模型预留
 
