@@ -19,6 +19,7 @@ from kg_rag.evaluation.report import export_reports
 from kg_rag.io import write_json
 from kg_rag.llm_client import LLMRequestError, chat_completion
 from kg_rag.llm_config import LLMConfig
+from kg_rag.pipeline.run_registry import RUNS_INDEX_PATH, append_run_index
 
 
 @dataclass(frozen=True)
@@ -245,5 +246,7 @@ def run_concept_fable_batch(
     eval_summary_path = output_dir / "eval_summary.jsonl"
     if eval_summary_path.exists():
         result.update(export_reports(eval_summary_path))
+    append_run_index(result=result, manifest=manifest, index_path=RUNS_INDEX_PATH)
+    result["run_index_path"] = str(RUNS_INDEX_PATH)
     write_json(output_dir / "run_result.json", result)
     return result

@@ -34,7 +34,7 @@ kg-rag run-batch-stories --mode llm --subject biology --limit 50 --sleep-seconds
 kg-rag select-concept-nodes --limit-per-subject 5
 kg-rag build-concept-cards --selection-path data/derived/kg_rag/concept_selection/k12_concepts.jsonl
 kg-rag enrich-concept-cards --input data/derived/kg_rag/concept_cards/k12_concept_cards.raw.jsonl --output data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --mode rules
-kg-rag run-concept-fable-batch --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --output-dir data/derived/kg_rag/concept_runs/local_20_machine_eval --mode local --language zh-CN --limit 20 --evaluate-mode rules
+kg-rag run-concept-fable-batch --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl --mode local --language zh-CN --limit 20 --evaluate-mode rules --auto-run-dir
 kg-rag evaluate-batch data/derived/kg_rag/concept_runs/local_20_machine_eval --mode rules
 kg-rag export-eval-report data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_summary.jsonl
 kg-rag rewrite-concept-fables --run-dir data/derived/kg_rag/concept_runs/local_20_machine_eval --status revise,reject --mode local

@@ -354,6 +354,17 @@ def build_parser() -> argparse.ArgumentParser:
         default=DEFAULT_DERIVED_DIR / "kg_rag" / "concept_runs" / "k12_concepts_zh_v1",
         help="Output run directory.",
     )
+    concept_fables.add_argument(
+        "--auto-run-dir",
+        action="store_true",
+        help="Ignore --output-dir and create a timestamped run directory under --runs-root.",
+    )
+    concept_fables.add_argument(
+        "--runs-root",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "concept_runs",
+        help="Root directory for --auto-run-dir timestamped runs.",
+    )
     concept_fables.add_argument("--mode", choices=("local", "llm"), default="local", help="Story generation mode.")
     concept_fables.add_argument("--language", choices=("zh-CN",), default="zh-CN", help="Story language.")
     concept_fables.add_argument("--subject", default=None, help="Optional subject filter.")
@@ -661,12 +672,23 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "run-concept-fable-batch":
         from kg_rag.llm_config import LLMConfig, load_eval_judge_configs
         from kg_rag.pipeline.concept_fables import ConceptFableOptions, run_concept_fable_batch
+        from kg_rag.pipeline.run_registry import auto_concept_run_dir
 
         config = LLMConfig.from_env() if args.mode == "llm" else None
         judge_configs = load_eval_judge_configs() if args.evaluate_mode == "llm" else None
+        output_dir = (
+            auto_concept_run_dir(
+                mode=args.mode,
+                limit=args.limit,
+                evaluate_mode=args.evaluate_mode,
+                runs_root=args.runs_root,
+            )
+            if args.auto_run_dir
+            else args.output_dir
+        )
         result = run_concept_fable_batch(
             concept_cards_path=args.concept_cards,
-            output_dir=args.output_dir,
+            output_dir=output_dir,
             options=ConceptFableOptions(
                 mode=args.mode,
                 language=args.language,
@@ -685,6 +707,8 @@ def main(argv: list[str] | None = None) -> int:
         )
         print(f"summary_path={result['summary_path']}")
         print(f"eval_summary_path={result['eval_summary_path']}")
+        print(f"output_dir={result['output_dir']}")
+        print(f"run_index_path={result.get('run_index_path')}")
         print(f"concept_count={result['concept_count']}")
         print(f"success_count={result['success_count']}")
         print(f"failed_count={result['failed_count']}")

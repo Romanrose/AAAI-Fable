@@ -69,6 +69,31 @@ python3 -m kg_rag enrich-concept-cards \
 ```bash
 python3 -m kg_rag run-concept-fable-batch \
   --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
+  --mode local \
+  --language zh-CN \
+  --limit 20 \
+  --evaluate-mode rules \
+  --auto-run-dir \
+  --no-resume
+```
+
+`--auto-run-dir` 会在 `data/derived/kg_rag/concept_runs/` 下创建时间戳目录，例如：
+
+```text
+data/derived/kg_rag/concept_runs/20260705_173000_local_20_rules/
+```
+
+并追加记录到：
+
+```text
+data/derived/kg_rag/concept_runs/runs_index.jsonl
+```
+
+若需要复现本文档已经跑过的固定目录，也可以显式传入：
+
+```bash
+python3 -m kg_rag run-concept-fable-batch \
+  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
   --output-dir data/derived/kg_rag/concept_runs/local_20_machine_eval \
   --mode local \
   --language zh-CN \
