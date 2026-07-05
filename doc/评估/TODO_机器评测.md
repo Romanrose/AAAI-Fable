@@ -1,6 +1,6 @@
 # 机器评测 TODO
 
-更新时间：2026-07-05 18:07 Asia/Shanghai
+更新时间：2026-07-05 18:14 Asia/Shanghai
 
 ## 本轮检查基线
 
@@ -15,7 +15,7 @@
 
 ## 需要用户完成或拍板
 
-- [ ] Ark Doubao Seed 2.1 Turbo 单样本 LLM judge smoke test 已跑通；完整 20 条 LLM 复核需要确认成本、耗时和是否覆盖旧固定 run 结果。
+- [ ] 是否复制 `local_20_machine_eval` 后跑完整 20 条 Ark Doubao LLM 复核；需确认成本、耗时，以及是否把 LLM 结果作为论文主表或仅作辅助复核。
 - [ ] baseline 方法最终采用哪些：`Direct Prompting`、`CoT Planning`、`Analogy-first`、`Ours w/o KG`、`Ours w/o Alignment` 是否都保留。
 - [ ] 人工评测样本量、标注者来源和费用安排。
 - [ ] 论文实验主表优先报告机器评测、LLM judge 还是人工评测。

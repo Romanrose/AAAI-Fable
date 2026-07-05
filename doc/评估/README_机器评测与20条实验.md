@@ -209,6 +209,37 @@ six_dim_eval.json
 
 若后续要做多模型 judge panel，可把 `EVAL_JUDGE_COUNT` 改回 3，并继续配置 Anthropic / Gemini / 其他 OpenAI-compatible judge。
 
+### 已完成的 LLM smoke test
+
+已用 `doubao-seed-2-1-turbo-260628` 完成单样本 judge smoke test：
+
+```bash
+export SSL_CERT_FILE="$(python3 -c 'import certifi; print(certifi.where())')"
+EVAL_JUDGE_1_TIMEOUT_SECONDS=300 \
+python3 -m kg_rag evaluate-story \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval/concepts/biology_7a_rjb_cpt1 \
+  --mode llm
+```
+
+结果说明：
+
+- Ark base URL、模型名和 `ARK_API_KEY` 配置可用。
+- 长评测 prompt 需要较长 timeout，建议 `EVAL_JUDGE_1_TIMEOUT_SECONDS=300`。
+- 该旧样本被 LLM judge 判为 `reject`，主要原因是旧本地故事模板过强、概念映射空泛。这说明 LLM judge 比 rules 评测更严格，适合作为复核层，而不是直接替代本地规则预筛。
+
+不建议直接在 `local_20_machine_eval` 上跑完整 LLM 复核，因为会覆盖已有 `six_dim_eval.json`。更稳的方式是复制一个 run 目录再跑：
+
+```bash
+cp -R \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval_llm_doubao
+
+python3 -m kg_rag evaluate-batch \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval_llm_doubao \
+  --mode llm \
+  --no-resume
+```
+
 ## 人工测试和对比模型预留
 
 人工测试暂不在当前机器实验中执行。建议后续新增：
