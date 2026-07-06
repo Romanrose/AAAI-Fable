@@ -1,0 +1,261 @@
+# Concept-to-Fable 机器评测 README
+
+本文档说明如何在本项目中复现中文 Concept 寓言的机器评测流程，以及当前 20 条本地实验包含哪些测试。
+
+## 当前实现范围
+
+已实现：
+
+- 从 K12-KGraph 构建 Concept card。
+- 基于 Concept card 生成中文寓言和 alignment table。
+- 对每个样本进行六维机器评测。
+- 批量导出 `eval_summary.jsonl`、`eval_summary.csv`、`eval_report.md`、`eval_analysis.svg`。
+- 预留多模型 LLM-as-Judge panel。
+- 预留人工测试和 baseline 对比模型，不把未执行的人评结果写入当前机器实验。
+
+六维指标：
+
+| 维度 | 含义 |
+|---|---|
+| `faithfulness` | 知识机制是否忠实 |
+| `implicitness` | 是否避免术语直露 |
+| `mapping_clarity` | 概念结构和故事元素是否可对齐 |
+| `readability` | 中文故事是否自然可读 |
+| `pedagogical_value` | 是否支持教学理解和迁移 |
+| `novelty` | 是否避免模板化 |
+
+## 安装与测试
+
+推荐使用 `uv`：
+
+```bash
+uv sync --dev
+uv run pytest tests/test_evaluation.py tests/test_judge_panel.py tests/test_concept_fables.py
+```
+
+如果本地已经安装项目依赖，也可以使用：
+
+```bash
+python3 -m pytest tests/test_evaluation.py tests/test_judge_panel.py tests/test_concept_fables.py
+```
+
+这些测试覆盖：
+
+- 术语硬泄露会降低 `implicitness`。
+- 缺少核心映射会进入 `reject`。
+- 同批故事模板相似会触发 `template_like`。
+- 本地中文故事生成不会在正文直接暴露目标概念名。
+- 多 judge panel 的分数 median 聚合和硬标记多数投票。
+
+## 从零构建输入数据
+
+推荐的一键本地机器评测：
+
+```bash
+python3 -m kg_rag run-machine-eval \
+  --limit 20 \
+  --limit-per-subject 5 \
+  --no-resume
+```
+
+这会完成 normalized graph、concept selection、concept cards、rules enrichment、20 条本地生成、rules 评测、报告导出和完整度校验，并写入时间戳 run 目录。
+
+如果需要拆开调试，可按下面步骤逐条执行。
+
+```bash
+python3 -m kg_rag normalize-k12
+
+python3 -m kg_rag select-concept-nodes \
+  --limit-per-subject 5
+
+python3 -m kg_rag build-concept-cards \
+  --selection-path data/derived/kg_rag/concept_selection/k12_concepts.jsonl
+
+python3 -m kg_rag enrich-concept-cards \
+  --input data/derived/kg_rag/concept_cards/k12_concept_cards.raw.jsonl \
+  --output data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
+  --mode rules
+```
+
+## 跑 20 条生成与评测
+
+```bash
+python3 -m kg_rag run-concept-fable-batch \
+  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
+  --mode local \
+  --language zh-CN \
+  --limit 20 \
+  --evaluate-mode rules \
+  --auto-run-dir \
+  --no-resume
+```
+
+`--auto-run-dir` 会在 `data/derived/kg_rag/concept_runs/` 下创建时间戳目录，例如：
+
+```text
+data/derived/kg_rag/concept_runs/20260705_173000_local_20_rules/
+```
+
+并追加记录到：
+
+```text
+data/derived/kg_rag/concept_runs/runs_index.jsonl
+```
+
+若需要复现本文档已经跑过的固定目录，也可以显式传入：
+
+```bash
+python3 -m kg_rag run-concept-fable-batch \
+  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
+  --output-dir data/derived/kg_rag/concept_runs/local_20_machine_eval \
+  --mode local \
+  --language zh-CN \
+  --limit 20 \
+  --evaluate-mode rules \
+  --no-resume
+```
+
+这一步会生成每个概念的：
+
+```text
+concept_card.json
+subgraph_pack.json
+structure_plan.json
+story_prompt.txt
+draft_story.txt
+six_dim_eval.json
+status.json
+```
+
+## 单独重跑批量评测
+
+```bash
+python3 -m kg_rag evaluate-batch \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval \
+  --mode rules \
+  --no-resume
+```
+
+校验本次实验产物是否完整：
+
+```bash
+python3 -m kg_rag verify-eval-run \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval \
+  --expected-count 20
+```
+
+输出文件：
+
+```text
+data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_summary.jsonl
+data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_summary.csv
+data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_report.md
+data/derived/kg_rag/concept_runs/local_20_machine_eval/eval_analysis.svg
+```
+
+当前已跑通的 20 条结果：
+
+| 项目 | 数值 |
+|---|---:|
+| 样本数 | 20 |
+| 评测成功 | 20 |
+| 评测失败 | 0 |
+| 加权总分均值 | 4.03 |
+| Accept | 8 |
+| Revise | 12 |
+| Reject | 0 |
+
+## LLM Judge / Ark Doubao
+
+当前项目的 `openai-compatible` judge client 可直接调用火山方舟 Ark。推荐先用一个 Doubao Seed 2.1 Turbo judge 做实测复核：
+
+```text
+ARK_API_KEY=replace-me-locally
+
+EVAL_JUDGE_COUNT=1
+EVAL_JUDGE_1_NAME=doubao_seed_2_1_turbo
+EVAL_JUDGE_1_PROVIDER=openai-compatible
+EVAL_JUDGE_1_BASE_URL=https://ark.cn-beijing.volces.com/api/v3
+EVAL_JUDGE_1_API_KEY_ENV=ARK_API_KEY
+EVAL_JUDGE_1_MODEL=doubao-seed-2-1-turbo-260628
+EVAL_JUDGE_1_TEMPERATURE=0
+EVAL_JUDGE_1_MAX_TOKENS=1600
+EVAL_JUDGE_1_TIMEOUT_SECONDS=300
+```
+
+设置本地 `ARK_API_KEY` 后可运行：
+
+```bash
+python3 -m kg_rag evaluate-batch \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval \
+  --mode llm \
+  --no-resume
+```
+
+如果本地 Python 报证书错误，可临时设置：
+
+```bash
+export SSL_CERT_FILE="$(python3 -c 'import certifi; print(certifi.where())')"
+```
+
+LLM 模式会为每个样本保存：
+
+```text
+six_dim_eval_prompt.txt
+six_dim_eval_response_{index}_{judge}.txt
+six_dim_eval_judge_{index}_{judge}.json
+six_dim_eval.json
+```
+
+若后续要做多模型 judge panel，可把 `EVAL_JUDGE_COUNT` 改回 3，并继续配置 Anthropic / Gemini / 其他 OpenAI-compatible judge。
+
+### 已完成的 LLM smoke test
+
+已用 `doubao-seed-2-1-turbo-260628` 完成单样本 judge smoke test：
+
+```bash
+export SSL_CERT_FILE="$(python3 -c 'import certifi; print(certifi.where())')"
+EVAL_JUDGE_1_TIMEOUT_SECONDS=300 \
+python3 -m kg_rag evaluate-story \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval/concepts/biology_7a_rjb_cpt1 \
+  --mode llm
+```
+
+结果说明：
+
+- Ark base URL、模型名和 `ARK_API_KEY` 配置可用。
+- 长评测 prompt 需要较长 timeout，建议 `EVAL_JUDGE_1_TIMEOUT_SECONDS=300`。
+- 该旧样本被 LLM judge 判为 `reject`，主要原因是旧本地故事模板过强、概念映射空泛。这说明 LLM judge 比 rules 评测更严格，适合作为复核层，而不是直接替代本地规则预筛。
+
+不建议直接在 `local_20_machine_eval` 上跑完整 LLM 复核，因为会覆盖已有 `six_dim_eval.json`。更稳的方式是复制一个 run 目录再跑：
+
+```bash
+cp -R \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval_llm_doubao
+
+python3 -m kg_rag evaluate-batch \
+  data/derived/kg_rag/concept_runs/local_20_machine_eval_llm_doubao \
+  --mode llm \
+  --no-resume
+```
+
+## 人工测试和对比模型预留
+
+人工测试暂不在当前机器实验中执行。建议后续新增：
+
+- 专家标注：`faithfulness`、`mapping_clarity`、概念覆盖。
+- 普通读者标注：`implicitness`、`readability`、`pedagogical_value`。
+- 前后测：阅读前解释概念、阅读后机制选择题、迁移类比题。
+- 一致性：Krippendorff's alpha / ICC。
+
+对比模型暂不在当前 20 条结果中执行。建议后续新增：
+
+- `Direct Prompting`
+- `CoT Planning`
+- `Analogy-first`
+- `Ours`
+- `Ours w/o KG`
+- `Ours w/o Alignment`
+
+主实验报告应区分“已执行的机器评测结果”和“预留的人评/baseline 方案”。

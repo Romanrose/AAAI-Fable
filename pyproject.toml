@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aaai-fable"
 version = "0.1.0"
-description = "Minimal Python prototype scaffold for GraphRAG and concept-to-fable experiments."
+description = "Research prototypes for GraphRAG concept-to-fable and M2NA generation experiments."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -18,6 +18,11 @@ dev = [
   "pytest>=8.2.0",
 ]
 
+[dependency-groups]
+dev = [
+  "pytest>=8.2.0",
+]
+
 [project.scripts]
 kg-rag = "kg_rag.cli:main"
 
@@ -25,4 +30,12 @@ kg-rag = "kg_rag.cli:main"
 include-package-data = false
 
 [tool.setuptools.packages.find]
-include = ["kg_rag*"]
+include = ["kg_rag*", "m2na*"]
+where = [".", "src"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src"]

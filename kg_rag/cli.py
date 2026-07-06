@@ -284,6 +284,41 @@ def build_parser() -> argparse.ArgumentParser:
     export_eval_report.add_argument("summary_jsonl", type=Path, help="Path to eval_summary.jsonl.")
     export_eval_report.add_argument("--output-dir", type=Path, default=None, help="Optional output directory for report files.")
 
+    verify_eval_run = subparsers.add_parser(
+        "verify-eval-run",
+        help="Verify that a concept fable run has complete evaluation artifacts.",
+    )
+    verify_eval_run.add_argument("run_dir", type=Path, help="Run directory containing concepts and eval reports.")
+    verify_eval_run.add_argument("--expected-count", type=int, default=None, help="Expected number of generated/evaluated samples.")
+
+    machine_eval = subparsers.add_parser(
+        "run-machine-eval",
+        help="Run the local Concept-to-Fable machine evaluation workflow end to end.",
+    )
+    machine_eval.add_argument("--subjects", default="biology,chemistry,math,physics", help="Comma-separated subject prefixes.")
+    machine_eval.add_argument("--limit", type=int, default=20, help="Number of concept fables to generate and evaluate.")
+    machine_eval.add_argument("--limit-per-subject", type=int, default=5, help="Concept selection limit per subject.")
+    machine_eval.add_argument(
+        "--output-root",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag",
+        help="Root for concept selection, cards, and derived machine-eval inputs.",
+    )
+    machine_eval.add_argument(
+        "--normalized-graph-path",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "k12_kgraph_normalized.json",
+        help="Path to normalized K12 graph artifact.",
+    )
+    machine_eval.add_argument(
+        "--runs-root",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "concept_runs",
+        help="Root directory for timestamped evaluation runs.",
+    )
+    machine_eval.add_argument("--no-normalize", action="store_true", help="Reuse existing normalized graph if present.")
+    machine_eval.add_argument("--no-resume", action="store_true", help="Do not resume existing concept outputs in the generated run directory.")
+
     select_concepts = subparsers.add_parser(
         "select-concept-nodes",
         help="Select K12 Concept nodes for first-stage Chinese fable generation.",
@@ -358,6 +393,17 @@ def build_parser() -> argparse.ArgumentParser:
     concept_fables.add_argument("--max-edges", type=int, default=16, help="Maximum raw KG edges kept by dual_level retrieval.")
     concept_fables.add_argument("--revision-rounds", type=int, default=1, help="Maximum in-batch revise/reject rewrite rounds.")
     concept_fables.add_argument("--template-blacklist", default="default", help="Template blacklist profile for analogy planning.")
+    concept_fables.add_argument(
+        "--auto-run-dir",
+        action="store_true",
+        help="Ignore --output-dir and create a timestamped run directory under --runs-root.",
+    )
+    concept_fables.add_argument(
+        "--runs-root",
+        type=Path,
+        default=DEFAULT_DERIVED_DIR / "kg_rag" / "concept_runs",
+        help="Root directory for --auto-run-dir timestamped runs.",
+    )
     concept_fables.add_argument("--mode", choices=("local", "llm"), default="local", help="Story generation mode.")
     concept_fables.add_argument("--language", choices=("zh-CN",), default="zh-CN", help="Story language.")
     concept_fables.add_argument("--subject", default=None, help="Optional subject filter.")
@@ -569,9 +615,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "evaluate-story":
         from kg_rag.evaluation.pipeline import evaluate_story_dir
-        from kg_rag.llm_config import LLMConfig
+        from kg_rag.llm_config import load_eval_judge_configs
 
-        config = LLMConfig.from_env() if args.mode == "llm" else None
+        config = load_eval_judge_configs() if args.mode == "llm" else None
         result = evaluate_story_dir(args.story_dir, mode=args.mode, config=config)
         print(f"eval_path={args.story_dir / 'six_dim_eval.json'}")
         print(f"final_status={result['final_status']}")
@@ -579,9 +625,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "evaluate-batch":
         from kg_rag.evaluation.pipeline import evaluate_batch_dir
-        from kg_rag.llm_config import LLMConfig
+        from kg_rag.llm_config import load_eval_judge_configs
 
-        config = LLMConfig.from_env() if args.mode == "llm" else None
+        config = load_eval_judge_configs() if args.mode == "llm" else None
         result = evaluate_batch_dir(
             args.batch_dir,
             mode=args.mode,
@@ -591,6 +637,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"summary_path={result['summary_path']}")
         print(f"csv_path={result.get('csv_path')}")
         print(f"report_path={result.get('report_path')}")
+        print(f"analysis_chart_path={result.get('analysis_chart_path')}")
         print(f"evaluated_count={result['evaluated_count']}")
         print(f"skipped_count={result['skipped_count']}")
         print(f"failed_count={result['failed_count']}")
@@ -601,8 +648,55 @@ def main(argv: list[str] | None = None) -> int:
         result = export_reports(args.summary_jsonl, output_dir=args.output_dir)
         print(f"csv_path={result['csv_path']}")
         print(f"report_path={result['report_path']}")
+        print(f"analysis_chart_path={result['analysis_chart_path']}")
         print(f"row_count={result['row_count']}")
         return 0
+    if args.command == "verify-eval-run":
+        from kg_rag.evaluation.report import verify_eval_run
+
+        result = verify_eval_run(args.run_dir, expected_count=args.expected_count)
+        print(f"ok={result['ok']}")
+        print(f"run_dir={result['run_dir']}")
+        print(f"expected_count={result['expected_count']}")
+        print(f"summary_count={result['summary_count']}")
+        print(f"eval_count={result['eval_count']}")
+        print(f"concept_dir_count={result['concept_dir_count']}")
+        print(f"missing_files={result['missing_files']}")
+        print(f"missing_concept_outputs={len(result['missing_concept_outputs'])}")
+        print(f"failed_rows={len(result['failed_rows'])}")
+        return 0 if result["ok"] else 1
+    if args.command == "run-machine-eval":
+        from kg_rag.pipeline.machine_eval import MachineEvalOptions, run_machine_eval
+
+        result = run_machine_eval(
+            output_root=args.output_root,
+            normalized_graph_path=args.normalized_graph_path,
+            concept_runs_root=args.runs_root,
+            options=MachineEvalOptions(
+                subjects=args.subjects,
+                limit=args.limit,
+                limit_per_subject=args.limit_per_subject,
+                mode="local",
+                evaluate_mode="rules",
+                language="zh-CN",
+                no_normalize=args.no_normalize,
+                no_resume=args.no_resume,
+            ),
+        )
+        batch = result["batch"]
+        verification = result["verification"]
+        print(f"ok={result['ok']}")
+        print(f"output_dir={batch['output_dir']}")
+        print(f"summary_path={batch['summary_path']}")
+        print(f"eval_summary_path={batch['eval_summary_path']}")
+        print(f"report_path={batch.get('report_path')}")
+        print(f"analysis_chart_path={batch.get('analysis_chart_path')}")
+        print(f"run_index_path={batch.get('run_index_path')}")
+        print(f"concept_count={batch['concept_count']}")
+        print(f"success_count={batch['success_count']}")
+        print(f"failed_count={batch['failed_count']}")
+        print(f"verification_ok={verification['ok']}")
+        return 0 if result["ok"] else 1
     if args.command == "select-concept-nodes":
         from kg_rag.concepts.selection import select_concept_nodes
 
@@ -647,14 +741,25 @@ def main(argv: list[str] | None = None) -> int:
         print(f"failed_count={result['failed_count']}")
         return 0
     if args.command == "run-concept-fable-batch":
-        from kg_rag.llm_config import LLMConfig
+        from kg_rag.llm_config import LLMConfig, load_eval_judge_configs
         from kg_rag.pipeline.concept_fables import ConceptFableOptions, run_concept_fable_batch
+        from kg_rag.pipeline.run_registry import auto_concept_run_dir
 
-        needs_config = args.mode == "llm" or args.evaluate_mode == "llm"
-        config = LLMConfig.from_env() if needs_config else None
+        config = LLMConfig.from_env() if args.mode == "llm" else None
+        judge_configs = load_eval_judge_configs() if args.evaluate_mode == "llm" else None
+        output_dir = (
+            auto_concept_run_dir(
+                mode=args.mode,
+                limit=args.limit,
+                evaluate_mode=args.evaluate_mode,
+                runs_root=args.runs_root,
+            )
+            if args.auto_run_dir
+            else args.output_dir
+        )
         result = run_concept_fable_batch(
             concept_cards_path=args.concept_cards,
-            output_dir=args.output_dir,
+            output_dir=output_dir,
             normalized_graph_path=args.normalized_graph_path if args.workflow == "agentic" else None,
             options=ConceptFableOptions(
                 workflow=args.workflow,
@@ -675,21 +780,26 @@ def main(argv: list[str] | None = None) -> int:
                 template_blacklist=args.template_blacklist,
             ),
             config=config,
+            judge_configs=judge_configs,
         )
         print(f"summary_path={result['summary_path']}")
         print(f"eval_summary_path={result['eval_summary_path']}")
+        print(f"output_dir={result['output_dir']}")
+        print(f"run_index_path={result.get('run_index_path')}")
         print(f"concept_count={result['concept_count']}")
         print(f"success_count={result['success_count']}")
         print(f"failed_count={result['failed_count']}")
         print(f"skipped_count={result['skipped_count']}")
         print(f"csv_path={result.get('csv_path')}")
         print(f"report_path={result.get('report_path')}")
+        print(f"analysis_chart_path={result.get('analysis_chart_path')}")
         return 0
     if args.command == "rewrite-concept-fables":
-        from kg_rag.llm_config import LLMConfig
+        from kg_rag.llm_config import LLMConfig, load_eval_judge_configs
         from kg_rag.pipeline.rewrite_concept_fables import rewrite_concept_fables
 
         config = LLMConfig.from_env() if args.mode == "llm" else None
+        judge_configs = load_eval_judge_configs() if args.mode == "llm" else None
         result = rewrite_concept_fables(
             run_dir=args.run_dir,
             status=args.status,
@@ -697,6 +807,7 @@ def main(argv: list[str] | None = None) -> int:
             mode=args.mode,
             retry=args.retry,
             config=config,
+            judge_configs=judge_configs,
         )
         print(f"rewrite_summary_path={result['rewrite_summary_path']}")
         print(f"rewritten_count={result['rewritten_count']}")

@@ -1,0 +1,5 @@
+# Dependencies are managed by uv via pyproject.toml / uv.lock.
+# Runtime currently uses only the Python standard library.
+# For tests, use:
+#   uv sync --dev
+#   uv run pytest

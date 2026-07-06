@@ -1,3 +1,17 @@
 .DS_Store
+
+# Python
+.env
+.env.*
+!.env.example
+.venv/
+venv/
 __pycache__/
+*.pyc
 *.py[cod]
+.pytest_cache/
+
+# Derived data and run outputs
+data/derived/
+output/
+outputs/

@@ -20,6 +20,7 @@ from kg_rag.io import read_json, write_json
 from kg_rag.llm_client import LLMRequestError, chat_completion
 from kg_rag.llm_config import LLMConfig
 from kg_rag.pipeline.agentic_workflow import build_agentic_workflow_artifacts
+from kg_rag.pipeline.run_registry import append_run_index
 
 
 @dataclass(frozen=True)
@@ -144,6 +145,7 @@ def run_concept_fable_batch(
     options: ConceptFableOptions,
     normalized_graph_path: Path | None = None,
     config: LLMConfig | None = None,
+    judge_configs: list[LLMConfig] | None = None,
 ) -> dict[str, Any]:
     if options.language != "zh-CN":
         raise ValueError("The first-stage concept fable runner currently supports only zh-CN.")
@@ -234,7 +236,7 @@ def run_concept_fable_batch(
                 raise ValueError(f"Unsupported generation mode: {options.mode}")
             draft_path.write_text(draft, encoding="utf-8")
 
-            eval_config = config if options.evaluate_mode == "llm" else None
+            eval_config = judge_configs if options.evaluate_mode == "llm" else None
             evaluation = evaluate_story_dir(concept_dir, mode=options.evaluate_mode, config=eval_config)
             for revision_index in range(options.revision_rounds):
                 if evaluation.get("final_status") not in {"revise", "reject"}:
@@ -329,5 +331,8 @@ def run_concept_fable_batch(
     eval_summary_path = output_dir / "eval_summary.jsonl"
     if eval_summary_path.exists():
         result.update(export_reports(eval_summary_path))
+    run_index_path = output_dir.parent / "runs_index.jsonl"
+    append_run_index(result=result, manifest=manifest, index_path=run_index_path)
+    result["run_index_path"] = str(run_index_path)
     write_json(output_dir / "run_result.json", result)
     return result
