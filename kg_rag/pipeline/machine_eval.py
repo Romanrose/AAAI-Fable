@@ -77,7 +77,9 @@ def run_machine_eval(
     batch = run_concept_fable_batch(
         concept_cards_path=enriched_cards_path,
         output_dir=run_dir,
+        normalized_graph_path=normalized_graph_path,
         options=ConceptFableOptions(
+            workflow="agentic",
             mode=options.mode,
             language=options.language,
             subject=None,
@@ -89,6 +91,10 @@ def run_machine_eval(
             sleep_seconds=0.0,
             resume=not options.no_resume,
             evaluate_mode=options.evaluate_mode,
+            retrieval_mode="dual_level",
+            max_edges=16,
+            revision_rounds=0,
+            template_blacklist="default",
         ),
     )
     verification = verify_eval_run(run_dir, expected_count=options.limit)
