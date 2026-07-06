@@ -137,7 +137,7 @@ def evaluate_rules(
     if scores["mapping_clarity"] <= 2:
         scores["faithfulness"] = min(scores["faithfulness"], 3)
         scores["pedagogical_value"] = min(scores["pedagogical_value"], 2)
-    elif missing_roles:
+    elif missing_roles and not has_zh_core_mapping:
         scores["faithfulness"] = min(scores["faithfulness"], 3)
         scores["pedagogical_value"] = min(scores["pedagogical_value"], 3)
 
@@ -159,7 +159,7 @@ def evaluate_rules(
         suggestions.append(
             "\u79fb\u9664\u5bd3\u8a00\u6b63\u6587\u4e2d\u7684\u76ee\u6807\u6982\u5ff5\u540d\u6216\u522b\u540d\uff0c\u6539\u7528\u6545\u4e8b\u4e8b\u4ef6\u9690\u542b\u8868\u8fbe\u3002"
         )
-    if missing_roles:
+    if missing_roles and not has_zh_core_mapping:
         suggestions.append(
             "\u8865\u5168\u6838\u5fc3\u6982\u5ff5\u89d2\u8272\u5230\u6545\u4e8b\u4e8b\u4ef6\u7684\u6620\u5c04\uff0c\u5c24\u5176\u662f\u56e0\u679c\u94fe\u3001\u7ed3\u679c\u548c\u9a8c\u8bc1\u8fc7\u7a0b\u3002"
         )

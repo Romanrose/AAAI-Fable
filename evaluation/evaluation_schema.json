@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/m2na-evaluation.schema.json",
+  "title": "M2NA evaluation record",
+  "type": "object",
+  "required": ["id", "method", "concept", "mechanism_graph", "output"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "method": {"type": "string", "minLength": 1},
+    "concept": {
+      "type": "object",
+      "required": ["name", "forbidden_terms"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "aliases": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "forbidden_terms": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      }
+    },
+    "mechanism_graph": {
+      "type": "object",
+      "required": ["nodes", "edges"],
+      "additionalProperties": true,
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "text"],
+            "additionalProperties": true,
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "text": {"type": "string", "minLength": 1},
+              "weight": {"type": "number", "exclusiveMinimum": 0}
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "source", "target", "relation"],
+            "additionalProperties": true,
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "source": {"type": "string", "minLength": 1},
+              "target": {"type": "string", "minLength": 1},
+              "relation": {"type": "string", "minLength": 1},
+              "weight": {"type": "number", "exclusiveMinimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["narrative", "node_alignments", "edge_alignments"],
+      "additionalProperties": true,
+      "properties": {
+        "narrative": {"type": "string", "minLength": 1},
+        "node_alignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["concept_node_id", "narrative_element", "evidence"],
+            "additionalProperties": true,
+            "properties": {
+              "concept_node_id": {"type": "string", "minLength": 1},
+              "narrative_element": {"type": "string", "minLength": 1},
+              "evidence": {"type": "string", "minLength": 1},
+              "narrative_anchor": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "edge_alignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "concept_edge_id",
+              "narrative_relation",
+              "evidence",
+              "narrative_source_concept_node_id",
+              "narrative_target_concept_node_id"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "concept_edge_id": {"type": "string", "minLength": 1},
+              "narrative_relation": {"type": "string", "minLength": 1},
+              "evidence": {"type": "string", "minLength": 1},
+              "narrative_source_concept_node_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "narrative_target_concept_node_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "direction_preserved": {"type": "boolean"}
+              ,
+              "narrative_anchor": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    }
+  }
+}

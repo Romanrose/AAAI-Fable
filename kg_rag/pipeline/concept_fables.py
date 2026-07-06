@@ -16,13 +16,15 @@ from kg_rag.concepts.prompts import (
 from kg_rag.concepts.quality import chinese_char_ratio, safe_dir_name
 from kg_rag.evaluation.pipeline import evaluate_story_dir
 from kg_rag.evaluation.report import export_reports
-from kg_rag.io import write_json
+from kg_rag.io import read_json, write_json
 from kg_rag.llm_client import LLMRequestError, chat_completion
 from kg_rag.llm_config import LLMConfig
+from kg_rag.pipeline.agentic_workflow import build_agentic_workflow_artifacts
 
 
 @dataclass(frozen=True)
 class ConceptFableOptions:
+    workflow: str
     mode: str
     language: str
     subject: str | None
@@ -34,6 +36,10 @@ class ConceptFableOptions:
     sleep_seconds: float
     resume: bool
     evaluate_mode: str
+    retrieval_mode: str
+    max_edges: int
+    revision_rounds: int
+    template_blacklist: str
 
 
 def _filter_cards(cards: list[dict[str, Any]], options: ConceptFableOptions) -> list[dict[str, Any]]:
@@ -102,11 +108,41 @@ def _call_story_llm(*, config: LLMConfig, prompt: str, retry: int) -> str:
     raise last_error or RuntimeError("Unknown LLM request failure.")
 
 
+def _build_workflow_artifacts(
+    *,
+    card: dict[str, Any],
+    options: ConceptFableOptions,
+    normalized_graph: dict[str, Any] | None,
+) -> dict[str, Any]:
+    if options.workflow == "agentic":
+        if normalized_graph is None:
+            raise ValueError("Agentic workflow requires a normalized K12 graph artifact.")
+        return build_agentic_workflow_artifacts(
+            card=card,
+            normalized_graph=normalized_graph,
+            retrieval_mode=options.retrieval_mode,
+            max_edges=options.max_edges,
+            template_blacklist=options.template_blacklist,
+        )
+    if options.workflow == "card":
+        plan = build_chinese_structure_plan(card)
+        subgraph_pack = _subgraph_pack_from_card(card)
+        return {
+            "retrieval_package": {},
+            "mechanism_plan": {},
+            "analogy_plan": plan,
+            "structure_plan": plan,
+            "subgraph_pack": subgraph_pack,
+        }
+    raise ValueError(f"Unsupported workflow: {options.workflow}")
+
+
 def run_concept_fable_batch(
     *,
     concept_cards_path: Path,
     output_dir: Path,
     options: ConceptFableOptions,
+    normalized_graph_path: Path | None = None,
     config: LLMConfig | None = None,
 ) -> dict[str, Any]:
     if options.language != "zh-CN":
@@ -115,11 +151,13 @@ def run_concept_fable_batch(
         raise ValueError("LLM generation mode requires an LLMConfig.")
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    normalized_graph = read_json(normalized_graph_path) if normalized_graph_path else None
     cards = _filter_cards(read_jsonl(concept_cards_path), options)
     write_jsonl(output_dir / "concept_cards.jsonl", cards)
     manifest = {
         "concept_cards_path": str(concept_cards_path),
         "output_dir": str(output_dir),
+        "workflow": options.workflow,
         "mode": options.mode,
         "language": options.language,
         "subject": options.subject,
@@ -130,6 +168,11 @@ def run_concept_fable_batch(
         "retry": options.retry,
         "resume": options.resume,
         "evaluate_mode": options.evaluate_mode,
+        "retrieval_mode": options.retrieval_mode,
+        "max_edges": options.max_edges,
+        "revision_rounds": options.revision_rounds,
+        "template_blacklist": options.template_blacklist,
+        "normalized_graph_path": str(normalized_graph_path) if normalized_graph_path else None,
         "concept_count": len(cards),
     }
     write_json(output_dir / "manifest.json", manifest)
@@ -166,10 +209,18 @@ def run_concept_fable_batch(
 
         concept_dir.mkdir(parents=True, exist_ok=True)
         try:
-            plan = build_chinese_structure_plan(card)
-            subgraph_pack = _subgraph_pack_from_card(card)
+            artifacts = _build_workflow_artifacts(
+                card=card,
+                options=options,
+                normalized_graph=normalized_graph,
+            )
+            plan = artifacts["structure_plan"]
+            subgraph_pack = artifacts["subgraph_pack"]
             story_prompt = build_chinese_story_prompt(card, plan)
             write_json(concept_dir / "concept_card.json", card)
+            write_json(concept_dir / "retrieval_package.json", artifacts["retrieval_package"])
+            write_json(concept_dir / "mechanism_plan.json", artifacts["mechanism_plan"])
+            write_json(concept_dir / "analogy_plan.json", artifacts["analogy_plan"])
             write_json(concept_dir / "subgraph_pack.json", subgraph_pack)
             write_json(concept_dir / "structure_plan.json", plan)
             (concept_dir / "story_prompt.txt").write_text(story_prompt, encoding="utf-8")
@@ -185,6 +236,33 @@ def run_concept_fable_batch(
 
             eval_config = config if options.evaluate_mode == "llm" else None
             evaluation = evaluate_story_dir(concept_dir, mode=options.evaluate_mode, config=eval_config)
+            for revision_index in range(options.revision_rounds):
+                if evaluation.get("final_status") not in {"revise", "reject"}:
+                    break
+                (concept_dir / f"draft_story.v{revision_index + 1}.txt").write_text(
+                    draft,
+                    encoding="utf-8",
+                )
+                write_json(concept_dir / f"six_dim_eval.v{revision_index + 1}.json", evaluation)
+                if options.mode == "llm":
+                    assert config is not None
+                    revision_prompt = "\n\n".join(
+                        [
+                            story_prompt,
+                            "Revise the previous story using this evaluation JSON.",
+                            json.dumps(evaluation, ensure_ascii=False, indent=2),
+                            "Return only the revised story and JSON alignment table.",
+                        ]
+                    )
+                    (concept_dir / f"revision_prompt.v{revision_index + 1}.txt").write_text(
+                        revision_prompt,
+                        encoding="utf-8",
+                    )
+                    draft = _call_story_llm(config=config, prompt=revision_prompt, retry=options.retry)
+                else:
+                    draft = build_local_chinese_story(card, plan)
+                draft_path.write_text(draft, encoding="utf-8")
+                evaluation = evaluate_story_dir(concept_dir, mode=options.evaluate_mode, config=eval_config)
             status = {
                 "concept_id": concept_id,
                 "subject": subject,
@@ -192,9 +270,12 @@ def run_concept_fable_batch(
                 "concept_type": card.get("concept_type"),
                 "generation_priority": card.get("data_quality", {}).get("generation_priority"),
                 "generation_status": "success",
+                "workflow": options.workflow,
+                "retrieval_mode": options.retrieval_mode,
                 "evaluation_status": evaluation.get("final_status"),
                 "weighted_overall": evaluation.get("weighted_overall"),
                 "retry_count": options.retry,
+                "revision_rounds": options.revision_rounds,
                 "chinese_char_ratio": round(chinese_char_ratio(draft), 4),
             }
             _write_status(concept_dir, status)
@@ -204,6 +285,8 @@ def run_concept_fable_batch(
                 "subject": subject,
                 "status": "success",
                 "output_dir": str(concept_dir),
+                "workflow": options.workflow,
+                "retrieval_mode": options.retrieval_mode,
                 "final_status": evaluation.get("final_status"),
                 "weighted_overall": evaluation.get("weighted_overall"),
                 "chinese_char_ratio": status["chinese_char_ratio"],
@@ -240,6 +323,8 @@ def run_concept_fable_batch(
         "skipped_count": skipped_count,
         "mode": options.mode,
         "language": options.language,
+        "workflow": options.workflow,
+        "retrieval_mode": options.retrieval_mode,
     }
     eval_summary_path = output_dir / "eval_summary.jsonl"
     if eval_summary_path.exists():
