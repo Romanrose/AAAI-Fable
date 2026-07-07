@@ -7,6 +7,13 @@ from typing import Any
 ENRICH_SYSTEM_PROMPT = "You enrich K12 concept cards. Return strict JSON only."
 STORY_SYSTEM_PROMPT = "You write concise Simplified Chinese educational fables. Return the requested text only."
 
+STORY_BODY_META_TERMS = (
+    "\u6982\u5ff5",
+    "\u673a\u5236",
+    "\u5b9a\u4e49",
+    "\u672f\u8bed",
+)
+
 
 def build_enrichment_prompt(card: dict[str, Any]) -> str:
     payload = {
@@ -119,6 +126,13 @@ def _mask_forbidden_terms(text: str, forbidden_terms: list[str]) -> str:
     return masked
 
 
+def _mask_story_meta_terms(text: str) -> str:
+    masked = text
+    for term in STORY_BODY_META_TERMS:
+        masked = masked.replace(term, "\u9690\u7ebf")
+    return masked
+
+
 def _names_from_context(items: list[dict[str, Any]] | None, *, limit: int = 3) -> list[str]:
     names: list[str] = []
     for item in items or []:
@@ -145,6 +159,7 @@ def _clean_event_text(event: str) -> str:
     for prefix in prefixes:
         if cleaned.startswith(prefix):
             cleaned = cleaned[len(prefix) :].strip()
+    cleaned = _mask_story_meta_terms(cleaned)
     return cleaned or "\u524d\u540e\u6761\u4ef6\u4e4b\u95f4\u5b58\u5728\u53ef\u8ffd\u8e2a\u7684\u5173\u7cfb"
 
 

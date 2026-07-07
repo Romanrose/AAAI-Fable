@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 
 from kg_rag.concepts.cards import infer_concept_type
+from kg_rag.concepts.prompts import _clean_event_text
 from kg_rag.concepts.quality import generation_priority, text_quality
 
 
@@ -44,3 +45,10 @@ def test_json_line_can_keep_chinese_runtime_values() -> None:
 
     assert decoded["canonical_name"] == "\u751f\u7269"
 
+
+def test_local_story_event_text_masks_meta_language() -> None:
+    cleaned = _clean_event_text("\u7528\u6545\u4e8b\u4e8b\u4ef6\u9690\u542b\u8868\u8fbe\uff1a\u8fd9\u662f\u4e00\u4e2a\u6982\u5ff5\u7684\u5b9a\u4e49\u548c\u673a\u5236")
+
+    assert "\u6982\u5ff5" not in cleaned
+    assert "\u5b9a\u4e49" not in cleaned
+    assert "\u673a\u5236" not in cleaned
