@@ -20,6 +20,7 @@ dev = [
 
 [project.scripts]
 kg-rag = "kg_rag.cli:main"
+kg-rag-multi-agent = "kg_rag.multi_agent.cli:main"
 
 [tool.setuptools]
 include-package-data = false

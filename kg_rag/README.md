@@ -33,6 +33,32 @@ keeps raw KG edges for grounding and builds a high-level topic summary for
 condition / process / effect planning. `selected_paths` is retained as an empty
 compatibility field.
 
+The experimental M2NA pipeline has a separate entrypoint. It supports a
+standard LLM-planned strategy and a deterministic Copycat-inspired structure
+mapping strategy:
+
+```bash
+python -m kg_rag.multi_agent run-batch \
+  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
+  --normalized-graph data/derived/kg_rag/k12_kgraph_normalized.json \
+  --strategy copycat \
+  --subjects biology,chemistry,math,physics \
+  --limit-per-subject 5 \
+  --copycat-steps 30 \
+  --copycat-temperature-threshold 35 \
+  --revision-rounds 2 \
+  --six-dim-mode llm \
+  --judge-model deepseek-chat \
+  --output-dir data/derived/kg_rag/multi_agent_runs/example
+```
+
+Every run records input hashes, generator/judge model identities, fallback
+counts, candidate artifacts, revision rounds, and final reports. Missing or
+invalid alignments remain uncovered; the evaluator never invents evidence for
+an absent node or edge. External KG relations are stored in
+`concept_relation_graph.json` and are not attached by position to internal
+mechanism-step edges.
+
 Current commands:
 
 ```bash

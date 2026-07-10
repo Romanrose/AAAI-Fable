@@ -10,6 +10,10 @@ from kg_rag.llm_config import LLMConfig
 class LLMRequestError(RuntimeError):
     """Raised when the configured LLM request fails."""
 
+    def __init__(self, message: str, *, retriable: bool = False):
+        super().__init__(message)
+        self.retriable = retriable
+
 
 def chat_completion(*, config: LLMConfig, system_prompt: str, user_prompt: str) -> str:
     payload = {
@@ -40,15 +44,18 @@ def chat_completion(*, config: LLMConfig, system_prompt: str, user_prompt: str) 
         except Exception:
             body = "<unreadable response body>"
         raise LLMRequestError(
-            f"HTTP {exc.code} from {config.base_url}/chat/completions: {body}"
+            f"HTTP {exc.code} from {config.base_url}/chat/completions: {body}",
+            retriable=exc.code in {408, 409, 425, 429} or exc.code >= 500,
         ) from exc
     except error.URLError as exc:
         raise LLMRequestError(
-            f"Network error while calling {config.base_url}/chat/completions: {exc.reason}"
+            f"Network error while calling {config.base_url}/chat/completions: {exc.reason}",
+            retriable=True,
         ) from exc
     except TimeoutError as exc:
         raise LLMRequestError(
-            f"Timeout while calling {config.base_url}/chat/completions"
+            f"Timeout while calling {config.base_url}/chat/completions",
+            retriable=True,
         ) from exc
 
     try:
