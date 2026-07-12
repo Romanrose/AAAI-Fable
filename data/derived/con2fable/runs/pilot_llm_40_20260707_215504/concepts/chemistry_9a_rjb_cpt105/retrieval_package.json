@@ -1,0 +1,60 @@
+{
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt105",
+    "resolved_node_id": "chemistry_9a_rjb_cpt105",
+    "name": "高锰酸钾受热分解反应",
+    "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_11277",
+      "source_id": "chemistry_9a_rjb_cpt105",
+      "source_name": "高锰酸钾受热分解反应",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_22573",
+      "source_id": "chemistry_9a_rjb_exp16",
+      "source_name": "实验2-5 加热高锰酸钾制取氧气",
+      "target_id": "chemistry_9a_rjb_cpt105",
+      "target_name": "高锰酸钾受热分解反应",
+      "relation": "verifies",
+      "score": 0.89
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        "实验2-5 加热高锰酸钾制取氧气"
+      ],
+      "hierarchy": [
+        "分解反应"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 2,
+    "selected_edge_count": 2,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

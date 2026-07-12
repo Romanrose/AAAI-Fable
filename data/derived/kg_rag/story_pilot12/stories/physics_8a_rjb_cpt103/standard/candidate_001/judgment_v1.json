@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "Node n1 (凸透镜→葫芦藤) has exact substring evidence in the story, making it the strongest mapping. Node n3 (照相机成像→葫芦生长过程) and edge e2 (is_a relation from 照相机成像 to 实像) are weakest because the story never explicitly mentions '葫芦生长过程' as a distinct process, and the is_a relation between 照相机成像 and 实像 is not preserved in the story (大葫芦 is not an instance of 葫芦生长过程). The mapping plan attempts to map a process to a generic growth narrative, but the story lacks explicit process naming, and the is_a relation is lost."
+  },
+  "revision_instructions": [
+    "Explicitly name the process '葫芦生长过程' in the story to improve node coverage for n3.",
+    "Ensure that the is_a relation (e2) is preserved: the story should state that '大葫芦' is a type of '葫芦生长过程' outcome, or adjust the mapping to avoid is_a.",
+    "Add explicit textual evidence for edge e1 (葫芦藤 enables 葫芦生长过程) by stating that the vine makes the growth process possible.",
+    "For edge e3, clarify that '小葫芦远离主干' is a condition that enables the growth process, not just a pruning action.",
+    "For edge e4, explicitly link the growth process to the production of '又大又好的葫芦'.",
+    "For edge e5, show that '老农调整藤蔓支撑和养分分配' enables the growth process to continue."
+  ],
+  "final_status": "revise"
+}

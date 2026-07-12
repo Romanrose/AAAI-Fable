@@ -1,0 +1,203 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt100",
+    "subject": "physics",
+    "canonical_name": "焦点",
+    "aliases": [],
+    "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "焦点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "主光轴是通过透镜两个球面球心的直线",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt98:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-node:physics_8a_rjb_exp23:phenomena",
+          "kg-node:physics_8a_rjb_exp23:conclusion"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "焦点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-node:physics_8a_rjb_cpt100:name"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "焦距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt101:definition",
+          "kg-node:physics_8a_rjb_cpt101:name"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17246"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-edge:normalized:edge:23045"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19710"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "焦点"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt100",
+      "name": "焦点",
+      "label": "Concept",
+      "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt98",
+        "name": "主光轴"
+      },
+      {
+        "id": "physics_8a_rjb_exp23",
+        "name": "凸透镜对光的偏折演示"
+      },
+      {
+        "id": "physics_8a_rjb_cpt101",
+        "name": "焦距"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17246",
+        "source_id": "physics_8a_rjb_cpt98",
+        "source_name": "主光轴",
+        "target_id": "physics_8a_rjb_cpt100",
+        "target_name": "焦点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt98",
+        "neighbor_name": "主光轴",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:23045",
+        "source_id": "physics_8a_rjb_exp23",
+        "source_name": "凸透镜对光的偏折演示",
+        "target_id": "physics_8a_rjb_cpt100",
+        "target_name": "焦点",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_exp23",
+        "neighbor_name": "凸透镜对光的偏折演示",
+        "score": 0.95,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19710",
+        "source_id": "physics_8a_rjb_cpt100",
+        "source_name": "焦点",
+        "target_id": "physics_8a_rjb_cpt101",
+        "target_name": "焦距",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt101",
+        "neighbor_name": "焦距",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "焦点",
+      "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17246] 主光轴 --prerequisites_for--> 焦点"
+    ],
+    "process_summary": [
+      "[normalized:edge:23045] 凸透镜对光的偏折演示 --verifies--> 焦点",
+      "[normalized:edge:19710] 焦点 --relates_to--> 焦距"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17246",
+    "normalized:edge:23045",
+    "normalized:edge:19710"
+  ],
+  "provenance": {
+    "seed_sha256": "5367c2cc5705b4e82e97e625383daff41f120d61008eb2933f2a9dc41b52e9c1",
+    "retrieval_sha256": "20a90ef7164ceef86622228cb93096c6e6c0eccf1b79817ee3d0e41ec580209f",
+    "mechanism_record_sha256": "12cbc67ad65de693fce605fb952fc8cdccb4ac98fe4b94c61a1e17e87a662dcf"
+  }
+}

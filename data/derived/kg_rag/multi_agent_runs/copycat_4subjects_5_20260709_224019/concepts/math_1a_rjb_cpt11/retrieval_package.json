@@ -1,0 +1,49 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt11",
+    "label": "Concept",
+    "name": "加法的含义",
+    "properties": {
+      "definition": "表示两个数量合并在一起。",
+      "importance": "重要",
+      "retrieval_text": "加法的含义\nConcept\n表示两个数量合并在一起。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16375",
+      "source": "math_1a_rjb_cpt7",
+      "source_name": "数字1到5的认识",
+      "target": "math_1a_rjb_cpt11",
+      "target_name": "加法的含义",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "加法的含义",
+      "definition": "表示两个数量合并在一起。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16375] 数字1到5的认识 --prerequisites_for--> 加法的含义"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 266,
+    "summary_chars": 239,
+    "path_chars": 0,
+    "retrieval_context_chars": 505
+  }
+}

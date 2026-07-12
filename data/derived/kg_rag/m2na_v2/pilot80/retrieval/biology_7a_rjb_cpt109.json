@@ -1,0 +1,79 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt109",
+    "label": "Concept",
+    "name": "发芽率",
+    "properties": {
+      "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "importance": "掌握",
+      "formula": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+      "unit": "%",
+      "retrieval_text": "发芽率\nConcept\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。\n掌握\n%\n发芽率 = 发芽的种子数 / 供检测的种子数 × 100%"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_exp10",
+      "label": "Experiment",
+      "name": "测定种子的发芽率（培养皿样本检测）",
+      "properties": {
+        "instrument": "直径约10厘米培养皿；滤纸或纱布（2~4层）；适量清水；待测种子（示例100粒）；记录表",
+        "is_student": 1,
+        "process": "培养皿内铺滤纸/纱布并加水保持湿润，均匀摆放一定数量（示例100粒）种子；每天观察一次记录萌发粒数，连续约7天；重复测定多次并取平均。",
+        "conclusion": "按发芽率公式计算并用平均值作为测定结果，为播种提供依据。",
+        "retrieval_text": "测定种子的发芽率（培养皿样本检测）\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:22391",
+      "source": "biology_7a_rjb_exp10",
+      "source_name": "测定种子的发芽率（培养皿样本检测）",
+      "target": "biology_7a_rjb_cpt109",
+      "target_name": "发芽率",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "发芽率",
+      "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "formula": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:22391] 测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

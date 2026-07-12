@@ -1,0 +1,170 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "过氧化氢在常温下能缓慢分解生成水和氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_cpt107:formula"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "二氧化锰",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "加入催化剂如二氧化锰",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:process"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "分解速率显著加快，放出较多氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:phenomena"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "rule",
+        "text": "分解反应：一种物质生成两种或两种以上其他物质的化学反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "state",
+        "text": "二氧化锰质量和化学性质在反应前后没有变化",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n5",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11279"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:process"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:process"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n3",
+        "target": "n4",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:phenomena"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n2",
+        "target": "n6",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22574",
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n6",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "过氧化氢分解反应"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "a4e52042a30751fa250f8a501910ac6efc1e19eceb08d6e6bcc857553b9eac2a",
+    "retrieval_sha256": "3dd4a25daaeaa14dbeec8daa7ba4714db47db5118adbf8d8fbbcec13be63e42a",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "b5f346493e5bc9e36b7c224a9b22eb77e1e3e72695651a8a17461b6aee1dd530"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

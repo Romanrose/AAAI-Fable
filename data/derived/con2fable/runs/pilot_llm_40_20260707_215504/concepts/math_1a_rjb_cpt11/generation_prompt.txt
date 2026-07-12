@@ -1,0 +1,98 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "加法的含义"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "表示两个数量合并在一起。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：数字1到5的认识",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16375"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "水果摊合并水果",
+    "setting": "一个热闹的菜市场里，有两个相邻的水果摊，一个卖苹果，一个卖梨。摊主分别是小张和小李，他们每天都会把各自的水果摆得整整齐齐。",
+    "conflict": "一位顾客想买总共5个水果，但小张只有3个苹果，小李只有2个梨，他们需要想办法把各自的水果合在一起满足顾客的需求。",
+    "characters": [
+      {
+        "name": "小张",
+        "role": "苹果摊主，拥有3个苹果",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "小李",
+        "role": "梨摊主，拥有2个梨",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "顾客",
+        "role": "需要5个水果的买家",
+        "mapped_element": "m1"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "顾客想要5个水果，需要把两个摊的水果合并起来"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "小张认识自己摊上有3个苹果，小李认识自己摊上有2个梨"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "顾客来到小张的苹果摊，说想要5个水果。小张数了数自己的苹果，只有3个，不够。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小张想起隔壁小李有梨摊，他走过去和小李商量，小李数了数自己的梨，有2个。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "小张和小李决定把3个苹果和2个梨放在一起，总共凑成5个水果，卖给顾客。",
+        "mapped_elements": [
+          "m1"
+        ]
+      }
+    ],
+    "turning_point": "小张意识到自己一个人无法满足顾客，必须和小李合作，把两个摊的水果合并起来。",
+    "ending": "顾客高兴地买走了3个苹果和2个梨，小张和小李都卖出了自己的水果，皆大欢喜。",
+    "implied_moral": "当两个部分合在一起时，可以组成一个更大的整体，满足单独一个部分无法完成的需求。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

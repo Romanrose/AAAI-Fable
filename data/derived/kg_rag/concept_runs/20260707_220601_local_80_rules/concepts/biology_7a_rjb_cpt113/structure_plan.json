@@ -1,0 +1,247 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt113",
+  "concept_id": "biology_7a_rjb_cpt113",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "biology_7a_rjb_cpt113",
+    "label": "Concept",
+    "name": "雌蕊",
+    "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "雌蕊\n花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt113",
+      "label": "Concept",
+      "name": "雌蕊",
+      "properties": {
+        "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+        "importance": "了解",
+        "retrieval_text": "雌蕊\nConcept\n花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。\n了解"
+      }
+    },
+    "raw_edges": [],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "雌蕊",
+        "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 0,
+      "candidate_edge_count": 0,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 2,
+      "summary_chars": 188,
+      "path_chars": 0,
+      "retrieval_context_chars": 190
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "雌蕊的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      },
+      {
+        "step_id": "s2",
+        "text": "避免目的论解释。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      },
+      {
+        "step_id": "s3",
+        "text": "避免把个体努力写成进化原因。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s2",
+        "target_step_id": "s3",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "雌蕊",
+      "biology_7a_rjb_cpt113"
+    ],
+    "coverage_targets": {
+      "required_step_count": 3,
+      "required_dependency_count": 2,
+      "must_cover_edge_ids": [],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt113",
+    "concept_id": "biology_7a_rjb_cpt113",
+    "story_language": "zh-CN",
+    "source_domain": "屋顶育苗棚",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "让中间的行动承接前后变化：花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+      "让中间的行动承接前后变化：避免目的论解释。",
+      "让中间的行动承接前后变化：避免把个体努力写成进化原因。"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：避免目的论解释。"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：避免把个体努力写成进化原因。"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "雌蕊"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "屋顶育苗棚",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "让中间的行动承接前后变化：花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+    "让中间的行动承接前后变化：避免目的论解释。",
+    "让中间的行动承接前后变化：避免把个体努力写成进化原因。"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "雌蕊"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+        "避免目的论解释。",
+        "避免把个体努力写成进化原因。"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "避免目的论解释。",
+        "避免把个体努力写成进化原因。",
+        "保留生命系统的条件、过程和结果。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：避免目的论解释。"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：避免把个体努力写成进化原因。"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 2,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "Node n5 (氧气) and n6 (燃烧条件) are completely missing from the story, and their associated edges (e4, e5, e6, e7) have zero confidence. The story uses generic 'conditions' and 'materials' without mapping to the specific entity '氧气' or the condition set '有可燃物、充足的氧气或空气、达到着火点'. This makes the mapping weaker than a realization that explicitly includes these core mechanism elements."
+  },
+  "revision_instructions": [
+    "Add explicit story carriers for mechanism nodes n5 (氧气) and n6 (燃烧条件). For example, introduce a '供氧管道' or '风箱' as a carrier for oxygen, and a '条件牌组' that lists the three required conditions (可燃物、氧气、着火点) as a carrier for n6.",
+    "For edges e4, e5, e6, e7, create story relations that show the part_of and requires connections. For instance, show that the '供氧管道' is part of the second, third, and fourth transformation steps, and that the '条件牌组' must be checked before the third step can proceed.",
+    "Ensure that the story's '第五道转化环节' and '第六道转化环节' are explicitly mentioned and linked to the mechanism nodes n5 and n6 respectively, as per the mapping plan.",
+    "Revise the edge mappings for e1, e2, e3, e8, e9, e10 to more precisely reflect the is_a, produces, and relates_to relations, rather than generic '归入' or '比较' phrases. For example, show that the '入口条件核对' is a type of '第二道转化环节' (is_a), and that the '第七道转化环节' produces the '验收记录' (produces)."
+  ],
+  "final_status": "revise"
+}

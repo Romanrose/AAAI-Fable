@@ -1,0 +1,59 @@
+{
+  "query": "biology_7a_rjb_cpt101",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt101",
+    "label": "Concept",
+    "name": "种子萌发",
+    "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "种子萌发\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt102",
+        "label": "Concept",
+        "name": "种子萌发的环境条件",
+        "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt106",
+        "label": "Concept",
+        "name": "种子萌发的自身条件",
+        "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt102",
+        "label": "Concept",
+        "name": "种子萌发的环境条件",
+        "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt106",
+        "label": "Concept",
+        "name": "种子萌发的自身条件",
+        "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

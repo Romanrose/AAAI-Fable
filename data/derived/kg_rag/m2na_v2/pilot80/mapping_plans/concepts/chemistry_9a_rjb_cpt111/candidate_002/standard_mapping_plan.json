@@ -1,0 +1,92 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老园丁培育花园的故事",
+  "characters": [
+    "老园丁",
+    "花园里的植物们"
+  ],
+  "objects": [
+    "一袋特殊的肥料",
+    "花园",
+    "植物生长速度"
+  ],
+  "conflict": "植物们希望快速生长，但普通肥料效果有限，且老园丁只有一袋特殊肥料，担心使用后肥料会消耗殆尽。",
+  "event_chain": [
+    "老园丁有一袋特殊肥料，这种肥料能促进植物生长。",
+    "老园丁将特殊肥料施用到花园中，植物生长速度明显加快。",
+    "植物们担心特殊肥料会用完，但老园丁发现每次使用后，肥料的重量和成分都没有变化。",
+    "老园丁利用这袋特殊肥料，持续帮助花园里的植物快速生长，花园因此更加繁茂。"
+  ],
+  "turning_point": "植物们发现特殊肥料用不完，老园丁解释其特性后，植物们不再担忧。",
+  "resolution_state": "老园丁继续用特殊肥料促进花园生长，花园持续繁茂。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "特殊肥料",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "施肥促进生长的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "植物生长速度加快",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "特殊肥料每次使用后重量和成分不变",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "花园持续繁茂",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "特殊肥料与施肥促进生长的过程相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "施肥促进生长的过程导致植物生长速度加快",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "特殊肥料每次使用后重量和成分不变这一条件约束着施肥促进生长的过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "施肥促进生长的过程使得花园持续繁茂",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'催化作用'等禁止术语。",
+    "注意特殊肥料对应催化剂，其不变性对应催化剂质量化学性质不变，需明确体现。",
+    "花园持续繁茂对应工业应用，需保持方向一致。"
+  ],
+  "mapping_context_sha256": "a04bc2bca2bbdbd2e66f7d35bbff79eb0d27cbc7c8b40630af337d6a82fc0a12",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "8cca61bbfbed57865d844ca5ca667d02ba535a39bd3e31b20abfcd9754990da2"
+  }
+}

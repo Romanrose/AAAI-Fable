@@ -1,0 +1,85 @@
+{
+  "concept_id": "math_1a_rjb_cpt16",
+  "target_concept": "圆柱",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地体现了圆柱的定义：两个相等的圆形底面（石盘）和一个曲面，以及底面圆心之间的距离（高）决定了柱子的高度，没有遗漏或歪曲任何关键特征。",
+    "implicitness": "故事完全通过事件和测量（影子、绳子、尺子）来暗示圆柱的结构，没有直接使用'圆柱'或'圆柱体'等禁止术语，符合隐含性要求。",
+    "mapping_clarity": "故事中石柱的上下圆盘、曲面、圆心距离等元素与圆柱的底面、侧面、高一一对应，且通过小明的发现过程清晰展示了映射关系，易于理解。",
+    "readability": "故事语言流畅自然，情节简单有趣，适合目标年龄段的读者，没有生僻词汇或复杂句式，可读性高。",
+    "pedagogical_value": "故事通过观察、测量和验证的方式，引导学生理解圆柱的核心特征，并鼓励用类似方法探索其他物体，教学价值高。",
+    "novelty": "故事以谜题和探索的形式呈现，避免了直接说教，但整体结构较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可以增加一个对比物体（如圆锥或棱柱）来强化圆柱的独特性。",
+    "在结尾处可加入一个简单的问题，引导学生思考其他类似物体。"
+  ],
+  "rule_findings": {
+    "story_token_count": 467,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整准确地体现了圆柱的定义：两个相等的圆形底面（石盘）和一个曲面，以及底面圆心之间的距离（高）决定了柱子的高度，没有遗漏或歪曲任何关键特征。",
+      "implicitness": "故事完全通过事件和测量（影子、绳子、尺子）来暗示圆柱的结构，没有直接使用'圆柱'或'圆柱体'等禁止术语，符合隐含性要求。",
+      "mapping_clarity": "故事中石柱的上下圆盘、曲面、圆心距离等元素与圆柱的底面、侧面、高一一对应，且通过小明的发现过程清晰展示了映射关系，易于理解。",
+      "readability": "故事语言流畅自然，情节简单有趣，适合目标年龄段的读者，没有生僻词汇或复杂句式，可读性高。",
+      "pedagogical_value": "故事通过观察、测量和验证的方式，引导学生理解圆柱的核心特征，并鼓励用类似方法探索其他物体，教学价值高。",
+      "novelty": "故事以谜题和探索的形式呈现，避免了直接说教，但整体结构较为常见，新颖性中等偏上。"
+    },
+    "revision_suggestions": [
+      "可以增加一个对比物体（如圆锥或棱柱）来强化圆柱的独特性。",
+      "在结尾处可加入一个简单的问题，引导学生思考其他类似物体。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

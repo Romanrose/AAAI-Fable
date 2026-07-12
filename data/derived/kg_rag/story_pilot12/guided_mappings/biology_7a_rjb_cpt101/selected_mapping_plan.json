@@ -1,0 +1,44 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "烹饪",
+  "domain_rationale": "烹饪过程需要外部条件（火候、油温）和内部条件（食材新鲜度），类似种子萌发需要环境条件和自身条件。",
+  "conflict": "无直接冲突，但需注意烹饪中火候控制与种子萌发温度条件对应时的精确度差异。",
+  "event_chain": [
+    "将生米放入锅中",
+    "加入适量的水",
+    "盖上锅盖",
+    "开启炉火并调节至适宜温度",
+    "等待米饭煮熟"
+  ],
+  "turning_point": "米粒吸足水分并受热膨胀",
+  "resolution_state": "米饭熟透，成为可食用的状态",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "将生米煮成熟饭的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "煮饭所需的外界条件：适宜的火候、适量的水和锅盖的密封",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "米粒本身是否新鲜、无霉变、未受潮",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "使能：外界条件使煮饭过程得以进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "使能：米粒自身品质使煮饭过程得以成功",
+      "direction_preserved": true
+    }
+  ]
+}

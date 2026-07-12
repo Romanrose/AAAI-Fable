@@ -1,0 +1,198 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt113",
+    "subject": "physics",
+    "canonical_name": "远点",
+    "aliases": [],
+    "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "远点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "眼睛调节：通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "远点：眼睛依靠调节能看清的最远点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "近点：眼睛依靠调节能看清的最近点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "正常眼远点在无限远",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "正常眼近点约为10 cm",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17198"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17199"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "远点"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt113",
+      "name": "远点",
+      "label": "Concept",
+      "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt112",
+        "name": "眼睛调节"
+      },
+      {
+        "id": "physics_8a_rjb_cpt114",
+        "name": "近点"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17198",
+        "source_id": "physics_8a_rjb_cpt112",
+        "source_name": "眼睛调节",
+        "target_id": "physics_8a_rjb_cpt113",
+        "target_name": "远点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt112",
+        "neighbor_name": "眼睛调节",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17199",
+        "source_id": "physics_8a_rjb_cpt112",
+        "source_name": "眼睛调节",
+        "target_id": "physics_8a_rjb_cpt114",
+        "target_name": "近点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "physics_8a_rjb_cpt114",
+        "neighbor_name": "近点",
+        "score": 1.15,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "远点",
+      "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:17198] 眼睛调节 --prerequisites_for--> 远点",
+      "[normalized:edge:17199] 眼睛调节 --prerequisites_for--> 近点"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17198",
+    "normalized:edge:17199"
+  ],
+  "provenance": {
+    "seed_sha256": "b6e0417266c70cb430830a0a780cb2e0c884eda7b6cc9a6a2e4c861dff094648",
+    "retrieval_sha256": "12399f7f2bc67c7e6a2d8b86f1e86385c1c47054c0ba3cae68d45a856514c86e",
+    "mechanism_record_sha256": "99b3f40fd87b9e06cd35bde6b6814083f708472f448f1ba4be9aafb372e8c974"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员把两份相关记录放在一起比较，发现它们共同约束最后的判断",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 maps to '入口条件核对', node n2 maps to '结果验收记录', and edge e1 (enables relation from n1 to n2) is supported by the story evidence showing that comparing the two records (入口条件核对 and 结果验收记录) constrains the final judgment, preserving direction."
+}

@@ -1,0 +1,136 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt23",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "按顺序逐个计数理解数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl12:description",
+          "kg-node:math_1a_rjb_skl12:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "数字6",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition",
+          "kg-node:math_1a_rjb_cpt23:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "通过数物体、读写数字等方式认识数字6，理解6表示的数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition",
+          "kg-node:math_1a_rjb_cpt23:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "掌握所有得数是6或从6中减去的加减法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt25:definition",
+          "kg-node:math_1a_rjb_cpt25:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "rule",
+        "text": "用符号“>”“<”比较两个数量的大小",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt27:definition",
+          "kg-node:math_1a_rjb_cpt27:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16382"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition",
+          "kg-node:math_1a_rjb_cpt23:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16344"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19310"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数字6的认识"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "821877f91e1bbcb22a5b0dbb0c54eaa665c22c1de4a33becd99e895c33928f36",
+    "retrieval_sha256": "d348b6629958971c24215c3729df8569a8cd141962dfb25697b811edcfa1c882",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "06f7665d9657a55eacce8e5a8e5ad9f2cd78332a522ab7070654e4da4261dfe7"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

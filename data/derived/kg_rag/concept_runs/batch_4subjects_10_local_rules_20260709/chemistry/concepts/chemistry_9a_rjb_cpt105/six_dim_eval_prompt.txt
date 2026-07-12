@@ -1,0 +1,431 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "高锰酸钾受热分解反应",
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "concept_definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt105",
+    "高锰酸钾受热分解反应"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt105",
+      "label": "Concept",
+      "name": "高锰酸钾受热分解反应",
+      "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "高锰酸钾受热分解反应\n高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp16",
+          "label": "Experiment",
+          "name": "实验2-5 加热高锰酸钾制取氧气",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 526,
+      "summary_chars": 352,
+      "path_chars": 0,
+      "retrieval_context_chars": 878
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt105",
+    "concept_id": "chemistry_9a_rjb_cpt105",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt105",
+      "label": "Concept",
+      "name": "高锰酸钾受热分解反应",
+      "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "高锰酸钾受热分解反应\n高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "chemistry_9a_rjb_cpt105",
+        "label": "Concept",
+        "name": "高锰酸钾受热分解反应",
+        "properties": {
+          "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+          "importance": "掌握",
+          "formula": "高锰酸钾  →  锰酸钾 + 二氧化锰 + 氧气",
+          "retrieval_text": "高锰酸钾受热分解反应\nConcept\n高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。\n掌握\n高锰酸钾  →  锰酸钾 + 二氧化锰 + 氧气"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:11277",
+          "source": "chemistry_9a_rjb_cpt105",
+          "source_name": "高锰酸钾受热分解反应",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:22573",
+          "source": "chemistry_9a_rjb_exp16",
+          "source_name": "实验2-5 加热高锰酸钾制取氧气",
+          "target": "chemistry_9a_rjb_cpt105",
+          "target_name": "高锰酸钾受热分解反应",
+          "relation": "verifies",
+          "relation_description": "verifies",
+          "evidence": "",
+          "score": 0.95
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "高锰酸钾受热分解反应",
+          "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+          "formula": "高锰酸钾  →  锰酸钾 + 二氧化锰 + 氧气",
+          "importance": "掌握"
+        },
+        "condition_summary": [],
+        "process_summary": [
+          "[normalized:edge:11277] 高锰酸钾受热分解反应 --is_a--> 分解反应",
+          "[normalized:edge:22573] 实验2-5 加热高锰酸钾制取氧气 --verifies--> 高锰酸钾受热分解反应"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 2,
+        "candidate_edge_count": 2,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 526,
+        "summary_chars": 352,
+        "path_chars": 0,
+        "retrieval_context_chars": 878
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "高锰酸钾受热分解反应的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "高锰酸钾受热分解反应 --is_a--> 分解反应",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:11277"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "实验2-5 加热高锰酸钾制取氧气 --verifies--> 高锰酸钾受热分解反应",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:22573"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:11277",
+        "normalized:edge:22573"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "高锰酸钾受热分解反应",
+        "chemistry_9a_rjb_cpt105"
+      ],
+      "coverage_targets": {
+        "required_step_count": 3,
+        "required_dependency_count": 2,
+        "must_cover_edge_ids": [
+          "normalized:edge:11277",
+          "normalized:edge:22573"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "chemistry_9a_rjb_cpt105",
+      "concept_id": "chemistry_9a_rjb_cpt105",
+      "story_language": "zh-CN",
+      "source_domain": "材料试炼间",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应",
+        "让中间的行动承接前后变化：实验2-5 加热高锰酸钾制取氧气 --verifies--> 这条隐藏规则",
+        "让中间的行动承接前后变化：高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：实验2-5 加热高锰酸钾制取氧气 --verifies--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "高锰酸钾受热分解反应"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "高锰酸钾受热分解反应 --is_a--> 分解反应",
+            "实验2-5 加热高锰酸钾制取氧气 --verifies--> 高锰酸钾受热分解反应",
+            "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "区分化学反应和物理混合。",
+            "保留守恒关系和反应前后变化。",
+            "避免化学式或元素符号在故事正文中泄露。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "材料试炼间",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应",
+      "让中间的行动承接前后变化：实验2-5 加热高锰酸钾制取氧气 --verifies--> 这条隐藏规则",
+      "让中间的行动承接前后变化：高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "高锰酸钾受热分解反应"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "高锰酸钾受热分解反应 --is_a--> 分解反应",
+          "实验2-5 加热高锰酸钾制取氧气 --verifies--> 高锰酸钾受热分解反应",
+          "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：实验2-5 加热高锰酸钾制取氧气 --verifies--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "高锰酸钾受热分解反应"
+      ]
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "条件、过程和结果被记录员按顺序检查。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：材料试炼间里的隐藏规则\n\n材料试炼间里有一位年轻的记录员，他总觉得眼前的变化只是巧合。\n一天，他把条件、行动和结果一一写在木牌上，发现只有当几个环节同时配合时，那个被观察的场所才会出现稳定变化。\n让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应\n让中间的行动承接前后变化：实验2-5 加热高锰酸钾制取氧气 --verifies--> 这条隐藏规则\n让中间的行动承接前后变化：高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。\n后来，记录员不再只看表面的结果，而是先找条件，再看过程，最后检查结果是否能重复出现。他明白，真正重要的不是某个名字，而是名字背后那套能被辨认的关系。",
+  "rule_findings": {
+    "story_token_count": 259,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

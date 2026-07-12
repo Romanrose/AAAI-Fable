@@ -1,0 +1,228 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "沸点",
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "concept_definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt10",
+    "沸点"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt10",
+      "label": "Concept",
+      "name": "沸点",
+      "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "aliases": [],
+      "examples": [
+        "水的沸点为100℃（在101 kPa下）",
+        "大气稀薄处水的沸点降低"
+      ],
+      "retrieval_text": "沸点\n物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt12",
+          "label": "Concept",
+          "name": "水的熔点和沸点",
+          "definition": "在大气压强为101 kPa条件下，水的熔点为0℃，沸点为100℃。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt13",
+          "label": "Concept",
+          "name": "铁的熔点和沸点",
+          "definition": "在大气压强为101 kPa条件下，铁的熔点为1535℃，沸点为2750℃。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt14",
+          "label": "Concept",
+          "name": "铝的熔点和沸点",
+          "definition": "在大气压强为101 kPa条件下，铝的熔点为660.37℃，沸点为2467℃。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt15",
+          "label": "Concept",
+          "name": "氧气的熔点和沸点",
+          "definition": "在大气压强为101 kPa条件下，氧气的熔点为-218.4℃，沸点为-182.9℃。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt11",
+          "label": "Concept",
+          "name": "大气压强",
+          "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt21",
+          "label": "Concept",
+          "name": "条件对物质性质的影响",
+          "definition": "当外界条件改变时，物质的性质也会随着变化，因此描述物质性质时往往要注明条件。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt11",
+          "label": "Concept",
+          "name": "大气压强",
+          "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch1_s1",
+          "label": "Section",
+          "name": "课题1 物质的变化和性质",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt10",
+    "concept_id": "chemistry_9a_rjb_cpt10",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt10",
+      "label": "Concept",
+      "name": "沸点",
+      "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "aliases": [],
+      "examples": [
+        "水的沸点为100℃（在101 kPa下）",
+        "大气稀薄处水的沸点降低"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "沸点"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过山顶和山脚烧水时水剧烈汽化的温度不同，隐含了沸点随大气压强改变这一概念，但未直接使用'沸点'一词。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "山顶空气稀薄，水在较低温度下剧烈汽化（翻滚）；山脚下气压高，水需更高温度才剧烈汽化。这体现了沸点随压强变化的机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事只描述水的汽化（物理变化），未涉及化学反应；未出现化学式或元素符号；通过温度计测量和气泡观察保留变化前后的守恒关系。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：山顶上的茶\n\n从前，在一个山脚下的小镇上，住着一位老茶师。他每天都要用一口大铜壶烧水泡茶。镇上的居民都爱喝他泡的茶，因为那茶总是恰到好处，不苦不涩。\n\n一天，茶师的徒弟小松好奇地问：“师傅，为什么您烧水时总是盯着壶里的气泡看？水开了不就能泡茶了吗？”\n\n茶师笑了笑，没有直接回答，而是说：“明天你跟我去山顶走一趟吧。”\n\n第二天，师徒二人背着茶具和干粮，爬上了镇外最高的山峰。山顶上风很大，空气也稀薄。茶师支起小炉子，开始烧水。小松发现，水很快就翻滚起来，冒出大量气泡，比在山脚下快得多。他高兴地喊：“师傅，水开了！可以泡茶了！”\n\n茶师却摇摇头，说：“别急，再等一会儿。”他取出一支细长的温度计，插入水中。小松凑过去一看，温度计上显示的数字只有九十多度，远不到山脚下的一百度。\n\n“奇怪！明明水已经翻滚得这么厉害，温度却这么低？”小松挠着头。\n\n茶师解释道：“水翻滚得厉害，并不代表温度一定很高。它只说明水正在剧烈地变成水汽。而这个剧烈变化的温度，是会随着周围环境改变的。山顶上空气稀薄，水在更低的温度下就会剧烈汽化。所以，用这样的水泡茶，茶叶里的味道不能充分释放，茶汤就会淡而无味。”\n\n小松恍然大悟：“原来如此！难怪您在山脚下烧水时，总要多等一会儿，让水彻底沸腾。”\n\n茶师点点头：“对。在山脚下，水要到一百度才会剧烈汽化；而在山顶，九十多度就够了。所以，判断水是否适合泡茶，不能只看它翻滚得厉不厉害，还要看它真正达到的温度。不同的地方，水的脾气不一样。”\n\n回到镇上后，小松每次烧水都会先看看温度计，再根据当天的天气和地势调整火候。他泡的茶越来越好，居民们都夸他得了师傅的真传。\n\n小松明白了一个道理：许多事情看似相同，但背后的条件变了，结果也会不同。只有细心观察、尊重规律，才能把事情做好。",
+  "rule_findings": {
+    "story_token_count": 629,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

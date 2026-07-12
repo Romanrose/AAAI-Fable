@@ -1,0 +1,36 @@
+You are a fable-writing assistant.
+Write a short concept-grounded fable from the provided structure plan.
+Preserve the mechanism implied by the structure plan.
+Do not introduce unrelated subplots or excessive exposition.
+
+Target Concept: 光合作用
+Definition: 能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。
+Source Domain: garden workshop
+Entities:
+- a careful caretaker
+- a plot that depends on the right conditions
+- tools and routines that reveal whether growth is real
+Event Chain:
+- The caretaker prepares the conditions that must already be in place.
+- The plot uses those conditions to produce visible growth.
+- Nearby processes either support or compete with that growth.
+- Observation and trials reveal whether the growth is genuine and sustained.
+Conflict: The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.
+Turning Point: A visible change reveals which condition actually controls the outcome.
+Resolution State: The system stabilizes once the enabling conditions are understood and the resulting effects become observable.
+Concept-to-Story Alignment:
+- Concept role: target concept | Concept items: 光合作用 | Story role: central productive process
+- Concept role: prerequisites | Concept items: 光是绿色植物制造有机物不可缺少的条件, 叶绿素, 绿色植物是生物圈中的生产者（有机物的制造者）, 农业生产中光合作用的应用：合理密植, 叶绿体 | Story role: conditions or resources that must be prepared first
+- Concept role: related concepts | Concept items: 光合作用的产物（淀粉等有机物）, 呼吸作用, 碳—氧平衡, 光能的捕获与转化 | Story role: neighboring processes that contextualize or contrast the main process
+- Concept role: outcomes | Concept items: None | Story role: visible consequences produced by the core process
+- Concept role: experiments | Concept items: None | Story role: tests that reveal whether the process truly happened
+- Concept role: exercises | Concept items: 晚上，将金鱼藻放在盛有水的试管中，将试管先后放在离白炽灯不同距离处，记录每分钟产生的气泡数如下：10cm：60个；20cm：25个；30cm：10个；40cm：5个。①金鱼藻和光源的距离远近与其产生的气泡数目之间有什么关系？从中可以得出什么结论？②如果将这个试管放在黑暗中，你能预测出实验结果吗？ | Story role: follow-up checks that reinforce the lesson
+
+Write one concise story with:
+- 120 to 220 words
+- a clear beginning, development, and resolution
+- concrete actions instead of abstract explanation
+- no bullet points in the story body
+
+After the story, output a short alignment table in JSON with fields:
+  [{"concept_role": "...", "story_evidence": "..."}]

@@ -1,0 +1,179 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "质量"
+  ],
+  "concept_card": {
+    "concept_id": "physics_8a_rjb_cpt124",
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "canonical_name": "质量",
+    "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。",
+    "aliases": [],
+    "examples": [],
+    "teaching_level": "middle_school",
+    "concept_type": "mechanism",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt129",
+          "label": "Concept",
+          "name": "密度",
+          "definition": "物质的质量与体积之比，通常用公式 ρ = m / V 表示。"
+        },
+        {
+          "id": "physics_bx1_rjb_cpt63",
+          "label": "Concept",
+          "name": "加速度与质量的反比关系",
+          "definition": "在力不变时，加速度 a 与质量 m 成反比，即 a 与 1/m 成正比。"
+        },
+        {
+          "id": "physics_8b_rjb_cpt24",
+          "label": "Concept",
+          "name": "惯性",
+          "definition": "物体保持原来运动状态（静止或匀速直线运动）不变的性质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt125",
+          "label": "Concept",
+          "name": "质量单位",
+          "definition": "质量的基本单位是千克，常用单位还有克、毫克、吨。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt137",
+          "label": "Concept",
+          "name": "质量测量",
+          "definition": "使用天平或台秤测量物体质量的方法。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt126",
+          "label": "Concept",
+          "name": "质量守恒",
+          "definition": "物体的质量不随形状、物态和位置改变而改变。"
+        },
+        {
+          "id": "physics_bx1_rjb_cpt21",
+          "label": "Concept",
+          "name": "加速度",
+          "definition": "描述物体速度变化快慢的物理量，也可说是描述物体运动状态变化快慢的物理量。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch6_s1",
+          "label": "Section",
+          "name": "第一节 质量",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_ch6_s3",
+          "label": "Section",
+          "name": "第三节 测量物质的密度",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_ch6_s4",
+          "label": "Section",
+          "name": "第四节 密度与社会生活",
+          "definition": ""
+        },
+        {
+          "id": "physics_bx1_rjb_ch4_s1",
+          "label": "Section",
+          "name": "第一节 牛顿第一定律",
+          "definition": ""
+        },
+        {
+          "id": "physics_bx1_rjb_ch4_s2",
+          "label": "Section",
+          "name": "第二节 实验:探究加速度与力、质量的关系",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "质量"
+    ],
+    "subject_constraints_zh": [
+      "保留变量之间的关系。",
+      "避免把自然规律写成角色主观意志。",
+      "保留方向、大小、条件变化。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "high",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt124",
+    "concept_id": "physics_8a_rjb_cpt124",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt124",
+      "label": "Concept",
+      "name": "质量",
+      "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "质量"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

@@ -1,0 +1,76 @@
+{
+  "concept_id": "physics_8a_rjb_cpt10",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "参照物",
+  "definition": "判断物体运动或静止时所选取的标准物体。",
+  "aliases": [],
+  "examples": [
+    "地面",
+    "旁边的列车",
+    "树木",
+    "房屋"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt9",
+        "label": "Concept",
+        "name": "运动与静止的相对性",
+        "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt8",
+        "label": "Concept",
+        "name": "机械运动",
+        "definition": "物体的位置随时间不断地发生变化的运动形式。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt9",
+        "label": "Concept",
+        "name": "运动与静止的相对性",
+        "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "physics_8a_rjb_exe1",
+        "label": "Exercise",
+        "name": "鲁迅《社戏》中写道：“淡黑的起伏的连山……都远远地向船尾跑去了。”其中“山……向船尾跑去了”所选的参照物是（A. 山  B. 船  C. 流水  D. 河岸）。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch1_s2",
+        "label": "Section",
+        "name": "第二节 运动的描述",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "参照物"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

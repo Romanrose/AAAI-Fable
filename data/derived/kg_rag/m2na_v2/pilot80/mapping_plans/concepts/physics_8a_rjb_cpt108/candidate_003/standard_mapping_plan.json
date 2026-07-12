@@ -1,0 +1,75 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫与禾苗",
+  "characters": [
+    "农夫",
+    "禾苗"
+  ],
+  "objects": [
+    "田地",
+    "阳光",
+    "水分",
+    "肥料"
+  ],
+  "conflict": "禾苗生长缓慢，农夫急于求成，想缩短生长周期。",
+  "event_chain": [
+    "农夫播种禾苗，每日观察其高度。",
+    "禾苗高度（物距）与生长天数（像距）相关，天数越长，高度越高。",
+    "农夫发现禾苗高度不足，便过度施肥浇水（违背自然规律），试图加速生长。",
+    "过度干预导致禾苗枯萎（像距异常），无法正常成熟。",
+    "农夫意识到违背生长规律（凸透镜成像规律）导致失败。"
+  ],
+  "turning_point": "农夫过度施肥浇水后，禾苗开始枯萎。",
+  "resolution_state": "农夫认识到必须遵循自然生长规律，不可拔苗助长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "生长天数",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "禾苗高度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "自然生长规律",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "禾苗高度（物距）与生长天数（像距）相关，天数越长，高度越高。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "生长天数（像距）使农夫能够应用自然生长规律（凸透镜成像规律）判断成熟时机。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'像距'、'物距'、'凸透镜'等术语。",
+    "确保'生长天数'与'禾苗高度'的关系是正相关，与物距像距关系一致。",
+    "确保'自然生长规律'作为规则，由'生长天数'触发，而非由'禾苗高度'触发。",
+    "避免将'农夫'或'禾苗'直接映射为物理概念，仅作为载体。"
+  ],
+  "mapping_context_sha256": "13556a6b9418b3b1b25a095a28f663b6b2049c214be9cb048e342d20d36eb28c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "54315d9d2856c4726369e55ce19bff9ce5ef2112fa039ccdfe5d16b29104bbf3"
+  }
+}

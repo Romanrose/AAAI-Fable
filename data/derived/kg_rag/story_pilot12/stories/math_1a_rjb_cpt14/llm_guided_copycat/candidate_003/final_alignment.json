@@ -1,0 +1,75 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "所有汉字",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "“口”字",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "按结构分类只有几种——独体如“日”，上下如“泉”，左右如“林”",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "原来汉字可以拆解成基本构件，而“口”这个特殊而简单的字，竟在许多复合字中反复出现，成为最常用的部件",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "每个字的笔画所占面积",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "横平竖直，疏密匀称，重心居中",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "所有汉字虽然千变万化，但按结构分类只有几种",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "在所有汉字中，“口”是最特殊的一种结构——它方正、平衡，没有偏旁，没有上下之分，就像一个完美的方块",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "而其他汉字，无论是“田”还是“园”，都或多或少带有“口”的影子，仿佛“口”是它们共同的骨架",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "每个字的笔画所占面积是否也有规律？他找来一个“器”字，四周的四个“口”和中间的“犬”，各占多少地方？他用毛笔蘸墨，将每个笔画的覆盖区域涂上淡色",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "他想起年轻时师父教的结字秘诀：“横平竖直，疏密匀称，重心居中。”这不就是一套公式吗？他试着用这套规则去衡量每一个字",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "原来汉字可以拆解成基本构件，而“口”这个特殊而简单的字，竟在许多复合字中反复出现，成为最常用的部件",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有6个节点和6条边均在故事中找到直接对应的证据，且方向一致。"
+}

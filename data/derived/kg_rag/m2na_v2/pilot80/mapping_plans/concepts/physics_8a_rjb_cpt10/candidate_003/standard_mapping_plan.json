@@ -1,0 +1,82 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代寓言：刻舟求剑",
+  "characters": [
+    "渡江的楚人",
+    "船夫",
+    "同船的乘客"
+  ],
+  "objects": [
+    "楚人佩剑",
+    "船",
+    "江水",
+    "船帮刻痕"
+  ],
+  "conflict": "楚人佩剑不慎落入江中，他立即在船帮上刻下记号，认为从记号处下水就能找回剑，但船在行进中，位置已变。",
+  "event_chain": [
+    "楚人乘船渡江，佩剑挂在腰间。",
+    "船行至江心，楚人佩剑不慎滑落水中。",
+    "楚人急忙在船帮落剑处刻下记号。",
+    "船继续前行，远离落剑点。",
+    "船靠岸后，楚人从刻痕处跳入水中寻剑。",
+    "楚人自然找不到剑，因为船已移动，而剑沉在原处。"
+  ],
+  "turning_point": "船靠岸后，楚人从刻痕处跳入水中寻剑，却一无所获。",
+  "resolution_state": "楚人困惑，船夫和乘客指出：船在行，剑未动，刻痕随船移，故无法找到。楚人领悟到判断位置需以固定参照（岸或剑落点）为准。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "船帮刻痕（作为判断落剑位置的标准）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "船在江中行驶（位置随时间变化）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "楚人根据刻痕判断剑的位置，但刻痕随船移动，导致判断结果与实际情况不同（相对性）",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "船行驶（机械运动）与船帮刻痕（参照物）相关，因为刻痕位置随船移动而变化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "船帮刻痕（参照物）使得楚人能够判断剑的位置（运动与静止的相对性），但刻痕随船移动导致判断出错",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "楚人根据刻痕判断剑的位置（运动与静止的相对性）与船帮刻痕（参照物）相关，因为刻痕是判断的依据",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'参照物'一词，已用'船帮刻痕'替代。",
+    "注意刻舟求剑是经典寓言，需避免直接使用'参照物'等物理术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如教学提示）误认为因果机制。"
+  ],
+  "mapping_context_sha256": "1da7366c47ebe2c0a6ee8ba729b802e15600b53b489b67f694086ddfea110d56",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3c1d6ae7e8d37d12a88fde955dde4fa21e0bae35384ff392f2f4b60066dd78d1"
+  }
+}

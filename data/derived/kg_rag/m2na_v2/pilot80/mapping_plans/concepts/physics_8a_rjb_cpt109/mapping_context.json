@@ -1,0 +1,147 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt109",
+    "subject": "physics",
+    "canonical_name": "实像与虚像",
+    "aliases": [],
+    "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "实像与虚像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "实像可由光屏承接",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "虚像不能由光屏承接，需要从透镜方向观察",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "像的正倒与大小",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt110:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19713"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19713"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "实像与虚像"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt109",
+      "name": "实像与虚像",
+      "label": "Concept",
+      "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt110",
+        "name": "像的正倒与大小"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:19713",
+        "source_id": "physics_8a_rjb_cpt109",
+        "source_name": "实像与虚像",
+        "target_id": "physics_8a_rjb_cpt110",
+        "target_name": "像的正倒与大小",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt110",
+        "neighbor_name": "像的正倒与大小",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "实像与虚像",
+      "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19713] 实像与虚像 --relates_to--> 像的正倒与大小"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:19713"
+  ],
+  "provenance": {
+    "seed_sha256": "dd126ae56cdc50e05d5452517c9693efc182e007f3967880fa865a300ba5eeb0",
+    "retrieval_sha256": "2e42cdd4d25fa3f8249f7c2e6cb5d573faa45b71a32d843a3b05d01535303f42",
+    "mechanism_record_sha256": "8c3acd60d050840f1ac09d554bdfe3d9894b1da0ba9f80479736d227a5b88f28"
+  }
+}

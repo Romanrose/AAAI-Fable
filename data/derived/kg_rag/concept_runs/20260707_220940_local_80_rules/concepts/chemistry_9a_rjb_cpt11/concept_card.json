@@ -1,0 +1,73 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt11",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "大气压强",
+  "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+  "aliases": [
+    "气压",
+    "标准大气压强"
+  ],
+  "examples": [
+    "标准大气压强为101 kPa"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt10",
+        "label": "Concept",
+        "name": "沸点",
+        "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt10",
+        "label": "Concept",
+        "name": "沸点",
+        "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "课题1 物质的变化和性质",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+  ],
+  "must_preserve_zh": [
+    "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "大气压强",
+    "气压",
+    "标准大气压强"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

@@ -1,0 +1,193 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "数量的比较",
+  "concept_id": "math_1a_rjb_cpt27",
+  "concept_definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt27",
+    "数量的比较"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt27",
+      "label": "Concept",
+      "name": "数量的比较",
+      "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "数量的比较\n用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt23",
+          "label": "Concept",
+          "name": "数字6的认识",
+          "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。"
+        },
+        {
+          "id": "math_1a_rjb_cpt24",
+          "label": "Concept",
+          "name": "数字7的认识",
+          "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "6和7",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt27",
+    "concept_id": "math_1a_rjb_cpt27",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt27",
+      "label": "Concept",
+      "name": "数量的比较",
+      "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "数量的比较"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过天平倾斜的方向，隐含表达了比较两个数量大小的规则，但未直接提及概念名称。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "皮皮通过多次实验发现：左边5颗、右边6颗时天平向右斜（5<6）；左边7颗、右边6颗时天平向左斜（7>6）；两边相等时平衡（6=6）。这对应了用符号比较数量的机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了形式定义条件（天平倾斜方向与数量大小的对应关系）和规则一致性（每次实验都遵循同一规律）；通过观察和实验揭示数学结构，没有道德化；没有直接提及‘数量的比较’等禁止术语。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：天平上的秘密\n\n在数字森林的深处，有一座古老的规则谜城。城里最显眼的建筑是中央广场上的“公平天平”——它由两块巨大的石板组成，左边放红色果子，右边放蓝色果子。传说只要天平平衡，城门就会打开，居民们就能获得智慧果实。\n\n小猴皮皮是负责观察规则的学徒。他每天记录天平的状态：第一天，左边放了5颗红果，右边放了6颗蓝果，天平明显向右倾斜。皮皮在日志上画了一个向右的箭头。第二天，左边放了7颗红果，右边放了6颗蓝果，天平向左倾斜，皮皮画了向左的箭头。第三天，两边各放6颗，天平平衡，皮皮画了等号。\n\n皮皮发现，每次天平倾斜的方向都指向果子更多的那一边。他试着总结：当左边果子少时，天平向右斜；左边果子多时，天平向左斜。但为什么有时向左，有时向右呢？他决定做一次系统观察。\n\n他找来一堆红果和蓝果，每次只改变一边的数量。第一次：左边5颗，右边6颗——天平向右斜。第二次：左边6颗，右边5颗——天平向左斜。第三次：左边4颗，右边7颗——天平向右斜得更厉害。第四次：左边7颗，右边4颗——天平向左斜得更厉害。\n\n皮皮恍然大悟：天平倾斜的方向，完全取决于哪边的果子数量更大。如果左边数量小于右边，天平就向右斜；如果左边数量大于右边，天平就向左斜。他给这两种方向起了名字：向右斜表示“小于”，向左斜表示“大于”。而两边相等时，天平平衡，表示“等于”。\n\n从此，皮皮能根据天平的状态，立刻判断出两边果子数量的关系。他不再被表面现象迷惑，而是用这个规则去理解所有类似的情况。城门终于为他打开，智慧果实的光芒照亮了整个数字森林。",
+  "rule_findings": {
+    "story_token_count": 556,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

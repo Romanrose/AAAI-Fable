@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "沸点",
+    "aliases": [],
+    "forbidden_terms": [
+      "沸点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14999",
+        "source_name": "大气压强",
+        "target_name": "沸点",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:15075",
+        "source_name": "条件对物质性质的影响",
+        "target_name": "沸点",
+        "relation_semantic_role": "prerequisite"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "账房仓库的调度员老陈每天要处理几十批入库物料。这天验收员小周拿来一摞记录册，说：“这批货的登记册和封存箱对不上，分段记录册里写的状态和实际不一样。”\n\n老陈翻开记录，发现有人跳过了一个关键步骤：入库前必须核对条件牌，确认仓库内的温度、湿度、气压都满足要求，才能打开封存箱进行下一步登记。可这次，有人为了赶时间，直接跳过条件核对，先把物料搬进了仓库，然后才补写记录。\n\n“这不行，”老陈摇头，“条件牌没核对，后面的流程全是虚的。”\n\n他把记录员叫来，让他把条件核对记录和中间转化记录放在一起对比。记录员翻出两本册子，一本记着当天仓库的入口条件，另一本记着物料经过中间环节后的变化。两本册子一对照，问题立刻暴露：条件记录上写着“气压偏低”，可中间转化记录却按标准气压登记，结果自然对不上。\n\n老陈让小周重新走一遍流程：先核对条件牌，再推进中间转化，最后做验收记录。小周照做，这次每本册子都能互相承接，封存箱上的标签也和记录一致。\n\n调度员老李不信邪，私下试了一次倒着安排：先验收，再补条件。结果验收记录和中间记录根本接不上，封存箱里的物料状态和记录册全乱了。老李只好认输，按顺序重来。\n\n从此账房仓库定下规矩：先看条件牌，再做转化，最后验收记录，三步一步不能少。记录员在册子首页写下四个字——“顺序不可颠倒”。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "条件核对",
+        "evidence": "条件牌",
+        "narrative_anchor": "条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "中间转化",
+        "evidence": "中间转化记录",
+        "narrative_anchor": "中间转化记录",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "验收记录",
+        "evidence": "验收记录",
+        "narrative_anchor": "验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先核对条件牌，再推进中间转化",
+        "evidence": "先核对条件牌，再推进中间转化",
+        "narrative_anchor": "先核对条件牌，再推进中间转化",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先推进中间转化，最后做验收记录",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

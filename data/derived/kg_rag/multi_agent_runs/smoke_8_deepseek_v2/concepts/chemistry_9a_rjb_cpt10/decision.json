@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001通过仓库货物在不同天气下的状态变化（水桶冒泡、氧气瓶温度变化、铝器凝水）自然引出气压和温度对物质状态的影响，完全覆盖了机制节点和边，且未泄露任何目标概念。故事语言生动、不模板化，证据对齐度高，且确定性指标推荐该候选。",
+    "risk_notes": [
+      "故事中‘水桶里的水安安静静’等描述可能稍显平淡，但整体不影响机制表达。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

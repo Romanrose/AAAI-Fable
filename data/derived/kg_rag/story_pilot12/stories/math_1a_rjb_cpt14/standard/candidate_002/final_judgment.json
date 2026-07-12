@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully mapped with high confidence and correct direction. The story naturally embeds the mechanism without explicit target terms, and the pedagogical arc is clear. Edge e1 (n1→n3) is the weakest only because the story could more explicitly show the 'is_a' relation between the standard component and the classification frame, but it is still present."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt16",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一棵树与它的分类",
+  "characters": [
+    "一棵树",
+    "园丁",
+    "森林管理员"
+  ],
+  "objects": [
+    "一棵树",
+    "按形状分类的树木图鉴",
+    "旋转的陀螺",
+    "圆锥形的松果"
+  ],
+  "conflict": "一棵树不知道自己在森林中属于哪一类树木，园丁和森林管理员分别给出了不同的分类方式，但树感到困惑，因为它同时符合多种分类。",
+  "event_chain": [
+    "一棵树站在森林中，园丁拿出按形状分类的树木图鉴，指出树属于图鉴中的一类。",
+    "森林管理员路过，说树也可以看作一个旋转的陀螺，因为它的树干是旋转体。",
+    "树看到旁边有一个圆锥形的松果，园丁说树与松果有关联，因为都是旋转体家族。"
+  ],
+  "turning_point": "树意识到自己可以同时属于按形状分类的图鉴和旋转体家族，并且与松果有联系，从而理解了分类的多样性。",
+  "resolution_state": "树接受了它同时属于按形状分类和旋转体，并与松果相关联的身份，不再困惑。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "一棵树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "按形状分类的树木图鉴",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "旋转的陀螺",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "圆锥形的松果",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "一棵树属于按形状分类的树木图鉴",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "一棵树可以看作旋转的陀螺",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "一棵树与圆锥形的松果有关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'圆柱'、'圆柱体'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事是连贯的寓言，而非概念列表。",
+    "注意不要将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "c11ca6c389982bb6f47cd212f5a568b7242e1e9ee236b3d7fbcdde1a109b46bd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3e1bc650805a2169d6b26c268897fca2f1d4eb09ab3a22839b36df8e200d2ebb"
+  }
+}

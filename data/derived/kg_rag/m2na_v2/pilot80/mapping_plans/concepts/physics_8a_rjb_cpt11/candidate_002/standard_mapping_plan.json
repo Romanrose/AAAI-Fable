@@ -1,0 +1,121 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农在田地里观察庄稼生长",
+  "characters": [
+    "老农",
+    "庄稼"
+  ],
+  "objects": [
+    "田地",
+    "生长记录本",
+    "尺子"
+  ],
+  "conflict": "老农想知道庄稼长得快不快，但不同时间段的生长速度不一样，需要准确衡量。",
+  "event_chain": [
+    "老农每天用尺子量庄稼高度并记录时间",
+    "老农发现庄稼有时长得快有时慢",
+    "老农用总生长高度除以总时间算出平均生长速度",
+    "老农发现庄稼在阳光充足时长得均匀，速度不变",
+    "老农发现庄稼在阴雨天长得不均匀，速度变化",
+    "老农想测量某一瞬间的生长速度",
+    "老农用生长记录本画出高度随时间变化的曲线",
+    "老农用超声波测距仪精确记录位置和时间，计算机算出速度并显示曲线"
+  ],
+  "turning_point": "老农意识到需要区分不同时间尺度的生长速度来全面了解庄稼生长。",
+  "resolution_state": "老农掌握了各种生长速度的测量和表示方法，能准确描述庄稼生长快慢。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "生长速度（庄稼高度变化快慢和方向）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "平均生长速度（总生长高度除以总时间）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "匀速生长（每天生长高度相同）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "变速生长（每天生长高度不同）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "瞬时生长速度（某一时刻的生长快慢）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "生长高度-时间曲线图",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "用超声波测距仪记录位置和时间，计算机计算生长速度并显示曲线",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "平均生长速度是一种生长速度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "匀速生长是一种生长速度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "瞬时生长速度是一种生长速度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "用超声波测距仪记录位置和时间验证了生长速度的概念",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "生长速度使得匀速生长成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "生长速度使得变速生长成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "生长速度使得绘制生长高度-时间曲线图成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'速度'或'velocity'等禁止术语",
+    "所有映射均基于同一源领域（庄稼生长），避免混合隐喻",
+    "必须保留节点n1和边e1的映射"
+  ],
+  "mapping_context_sha256": "4f4517c0d1440695e4bdb25ffa3c8fb053976619fd2094573c7a8991498c530f",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f055c0850cc70310e0fb655fd1e91c801452d561eaf8edd31d8e88523cbf518a"
+  }
+}

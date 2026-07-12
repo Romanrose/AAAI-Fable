@@ -1,0 +1,158 @@
+{
+  "id": "chemistry_9a_rjb_cpt100",
+  "method": "con2fable",
+  "concept": {
+    "name": "缓慢氧化",
+    "aliases": [],
+    "forbidden_terms": [
+      "缓慢氧化"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：氧化反应",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：呼吸与氧气",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：氧化反应",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：燃烧",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15248"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18223"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18426"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18429"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老陈是这座沿海老桥的维护工，干这行已经三十年了。每天清晨，他都要提着工具箱，从桥头走到桥尾，敲敲打打，听听声音。\n\n这天，他走到第七根桥墩的连接处时，手里的锤子落下去，声音不对劲。正常的钢梁敲起来是清脆的“铛铛”声，可这一处，声音发闷，像敲在一块朽木上。老陈凑近了看，铆钉周围有一层细细的橘红色粉末，不仔细看根本发现不了。他用手指抹了一下，粉末沾在指腹上，涩涩的。\n\n老陈心里一沉。他知道，这座桥每天都在被海风和湿气包裹着，那些看不见的水汽像无数只细小的手，日日夜夜地抓着钢梁的表面。钢梁本身是结实的，可一旦遇上潮湿的空气，就会慢慢起变化。这种变化不像工地上焊枪烧铁那样火花四溅、热浪逼人，它安静得很，安静到让人容易忘记它的存在。\n\n老陈从工具箱里拿出一把铲子，轻轻刮掉那层橘红色的粉末。粉末下面，原本平整的钢梁表面已经变得坑坑洼洼，像被虫子啃过一样。他用手掌按了按，能感觉到钢板的厚度已经比原来薄了不少。这种变化虽然慢，但一刻也没有停过，就像潮水涨落一样，从不间断。\n\n不远处，几个工人正用明火焊枪修补桥面的裂缝。焊枪喷出的火焰蓝白刺眼，金属在高温下迅速熔化，发出“嗤嗤”的声响，火星四溅，所有人都离得远远的。老陈看着那边，又看看自己手下的这片锈迹，心里想：焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事。可说到底，都是铁在和什么东西起反应。一个快得让人害怕，一个慢得让人忽视。\n\n老陈没有叫人把整段钢梁拆掉。他根据铁锈的厚度和分布，判断出钢梁还能撑得住，只是需要把表面的锈清理干净，涂上防锈漆，再换掉几颗锈得最厉害的铆钉。工人们照做了。\n\n半年后，桥梁加固完毕，继续服役。老陈在巡检日志的最后一页写下了一句话：“最危险的敌人，往往不是那场大火，而是日复一日、悄无声息的侵蚀。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "铁生锈的过程",
+        "evidence": "这种变化不像工地上焊枪烧铁那样火花四溅、热浪逼人，它安静得很，安静到让人容易忘记它的存在",
+        "narrative_anchor": "这种变化不像工地上焊枪烧铁那样火花四溅、热浪逼人，它安静得很，安静到让人容易忘记它的存在"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "铁与潮湿空气的反应",
+        "evidence": "那些看不见的水汽像无数只细小的手，日日夜夜地抓着钢梁的表面。钢梁本身是结实的，可一旦遇上潮湿的空气，就会慢慢起变化",
+        "narrative_anchor": "一旦遇上潮湿的空气，就会慢慢起变化"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "呼吸与氧气的关系（通过铁生锈类比）",
+        "evidence": "铁生锈，是几年、十几年的事。可说到底，都是铁在和什么东西起反应",
+        "narrative_anchor": "都是铁在和什么东西起反应"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "铁生锈属于氧化反应",
+        "evidence": "都是铁在和什么东西起反应",
+        "narrative_anchor": "都是铁在和什么东西起反应"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "与燃烧的对比",
+        "evidence": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事",
+        "narrative_anchor": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "铁生锈的过程依赖于铁与潮湿空气的反应",
+        "evidence": "那些看不见的水汽像无数只细小的手，日日夜夜地抓着钢梁的表面。钢梁本身是结实的，可一旦遇上潮湿的空气，就会慢慢起变化",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "一旦遇上潮湿的空气，就会慢慢起变化"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "铁与潮湿空气的反应引出与呼吸（氧气）的类比",
+        "evidence": "都是铁在和什么东西起反应",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "都是铁在和什么东西起反应"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "呼吸（氧气）类比引出氧化反应概念",
+        "evidence": "都是铁在和什么东西起反应",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "都是铁在和什么东西起反应"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "氧化反应与燃烧的对比",
+        "evidence": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

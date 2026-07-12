@@ -1,0 +1,98 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "核心谜题：每种金属在特定炉火大小（压强）下，变成液态的‘门槛温度’是它自己的固有性质，且会随炉火大小改变。",
+      "evidence": "老铁匠让小锤守在熔铁炉旁，手里拿着温度计。",
+      "narrative_anchor": "老铁匠让小锤守在熔铁炉旁，手里拿着温度计。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "关键变量：风箱拉动的力度，代表了炉内压强（大气压强）的变化。",
+      "evidence": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+      "narrative_anchor": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "核心认知转变：小锤意识到外部条件（炉火大小/压强）会改变金属的‘脾气’（性质）。",
+      "evidence": "等它们完全化成水，记下温度计上的数。",
+      "narrative_anchor": "等它们完全化成水，记下温度计上的数。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "辅助观察：小锤观察氧气（助燃气体）在炉火中的状态变化，作为理解条件影响的例证。",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "辅助观察：小锤观察水（冷却剂）在炉火旁的沸腾情况，作为理解条件影响的例证。",
+      "evidence": "小锤点点头。",
+      "narrative_anchor": "小锤点点头。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n6",
+      "narrative_element": "核心实验对象：铁块在炉火中的状态变化，是故事中最重要的观察对象。",
+      "evidence": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+      "narrative_anchor": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从核心谜题到大气压强变量：小锤理解门槛温度随炉火大小变化，而炉火大小由风箱（压强）控制。",
+      "evidence": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+      "narrative_anchor": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从大气压强变量到条件对物质性质的影响：小锤通过拉风箱改变炉火大小，观察到外部条件改变金属性质。",
+      "evidence": "等它们完全化成水，记下温度计上的数。",
+      "narrative_anchor": "等它们完全化成水，记下温度计上的数。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从条件对物质性质的影响到氧气的熔点和沸点：小锤观察氧气状态随炉火大小变化，作为条件影响的例证。",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "从氧气的熔点和沸点到水的熔点和沸点：小锤观察水沸腾情况随炉火大小变化，作为条件影响的另一个例证。",
+      "evidence": "小锤点点头。",
+      "narrative_anchor": "小锤点点头。",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "从水的熔点和沸点到铁的熔点和沸点：小锤通过观察铁块熔化过程，理解铁的熔点是核心实验对象。",
+      "evidence": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+      "narrative_anchor": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+      "narrative_source_concept_node_id": "n5",
+      "narrative_target_concept_node_id": "n6",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

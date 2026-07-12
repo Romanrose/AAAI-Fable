@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "strategy": "llm_guided_copycat",
+  "candidate_id": "candidate_001",
+  "node_coverage": 0.6667,
+  "edge_coverage": 0.8,
+  "direction_accuracy": 1.0,
+  "hard_leakage": false,
+  "judge_status": "revise",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12\\stories\\biology_7a_rjb_cpt102\\llm_guided_copycat\\candidate_001",
+  "length_valid": true,
+  "judge_raw_status": "revise",
+  "quality_gate_reasons": [
+    "node_coverage_below_0.8"
+  ]
+}

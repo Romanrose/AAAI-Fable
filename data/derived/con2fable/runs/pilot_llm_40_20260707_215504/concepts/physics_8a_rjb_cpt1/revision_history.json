@@ -1,0 +1,53 @@
+[
+  {
+    "round": 1,
+    "issues": [
+      "low_edge_coverage",
+      "low_alignment_precision"
+    ],
+    "before": {
+      "id": "physics_8a_rjb_cpt1",
+      "method": "con2fable",
+      "format_validity": 1.0,
+      "validation_errors": [],
+      "exact_concept_leakage": 0.0,
+      "soft_term_leakage": 0.0,
+      "exact_leakage_hits": [],
+      "soft_leakage_hits": [],
+      "node_coverage": 0.6666666666666666,
+      "weighted_node_coverage": 0.7291666666666667,
+      "edge_coverage": 0.5,
+      "weighted_edge_coverage": 0.5,
+      "alignment_precision": 0.6,
+      "alignment_hallucination_rate": 0.4,
+      "relation_direction_accuracy": 1.0,
+      "template_hit_rate": 0.0,
+      "template_hits": [],
+      "narrative_char_count": 841,
+      "valid_node_alignment_count": 2,
+      "valid_edge_alignment_count": 1
+    },
+    "after": {
+      "id": "physics_8a_rjb_cpt1",
+      "method": "con2fable",
+      "format_validity": 1.0,
+      "validation_errors": [],
+      "exact_concept_leakage": 0.0,
+      "soft_term_leakage": 0.0,
+      "exact_leakage_hits": [],
+      "soft_leakage_hits": [],
+      "node_coverage": 0.3333333333333333,
+      "weighted_node_coverage": 0.4166666666666667,
+      "edge_coverage": 0.0,
+      "weighted_edge_coverage": 0.0,
+      "alignment_precision": 0.2,
+      "alignment_hallucination_rate": 0.8,
+      "relation_direction_accuracy": null,
+      "template_hit_rate": 0.0,
+      "template_hits": [],
+      "narrative_char_count": 1019,
+      "valid_node_alignment_count": 1,
+      "valid_edge_alignment_count": 0
+    }
+  }
+]

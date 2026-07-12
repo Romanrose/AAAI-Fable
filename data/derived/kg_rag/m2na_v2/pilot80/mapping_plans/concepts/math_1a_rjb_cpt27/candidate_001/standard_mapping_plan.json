@@ -1,0 +1,74 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt27",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一场关于两棵果树果实数量的比较",
+  "characters": [
+    "果农",
+    "小桃树",
+    "小杏树"
+  ],
+  "objects": [
+    "桃子",
+    "杏子",
+    "秤"
+  ],
+  "conflict": "果农需要比较小桃树和小杏树谁结的果实更多，以便决定给哪棵树多施肥。",
+  "event_chain": [
+    "果农先数了小桃树上的桃子数量，记下了数字。",
+    "果农又数了小杏树上的杏子数量，记下了数字。",
+    "果农用秤称量两堆果实，发现桃子的数量少于杏子的数量。",
+    "果农宣布小杏树结的果实更多，因此给小杏树多施肥。"
+  ],
+  "turning_point": "果农用秤比较两堆果实的数量，得出谁多谁少。",
+  "resolution_state": "果农根据比较结果，给小杏树多施肥，小桃树得到较少肥料。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小桃树及其结出的桃子数量",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小杏树及其结出的杏子数量",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "果农用秤比较两堆果实数量的过程",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "果农用秤比较的过程与桃子数量相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "果农用秤比较的过程与杏子数量相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数量的比较'或任何数学符号如'>'、'<'。",
+    "避免使用'数字6'、'数字7'等目标概念名称。",
+    "确保'秤'作为比较工具，不暗示任何数学符号。",
+    "故事中果农的比较行为必须明确是数量比较，而非其他属性比较。"
+  ],
+  "mapping_context_sha256": "c860fa62cf8bcb3e56c868bb1d59eaf3ddc22e992849da228effeb77f67098bd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "dff0cf700d277510b4f744d9bd2ce4578b509b49cdeff90bcce6b707364fd8b9"
+  }
+}

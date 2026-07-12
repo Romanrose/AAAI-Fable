@@ -1,0 +1,63 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一家世代相传的陶艺作坊",
+  "characters": [
+    "老陶匠（父亲）",
+    "小陶匠（儿子）"
+  ],
+  "objects": [
+    "陶土",
+    "陶坯",
+    "窑炉",
+    "成品陶器"
+  ],
+  "conflict": "小陶匠发现自己的陶器与父亲的作品在造型和纹路上既有相似之处，又总有细微不同，他困惑于这种既像又不像的现象。",
+  "event_chain": [
+    "老陶匠教小陶匠揉土、拉坯、修坯、上釉、烧制，小陶匠认真学习，模仿父亲的手法。",
+    "小陶匠独立制作第一批陶器，发现成品与父亲的陶器在器形、釉色上大致相同，但细节处（如把手弧度、纹路深浅）总有差异。",
+    "小陶匠反复对比，意识到自己做的陶器既继承了父亲的风格（相似），又带有自己的印记（差异）。",
+    "小陶匠向父亲请教原因，老陶匠解释这是自然规律：每个陶匠都会在传承中留下自己的痕迹。"
+  ],
+  "turning_point": "小陶匠在对比中领悟到：传承中必然伴随变化，这是陶艺生命力的体现。",
+  "resolution_state": "小陶匠接受并珍视这种既传承又创新的现象，继续在父亲的基础上发展自己的风格。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小陶匠制作的陶器与父亲陶器既相似又总有差异的现象",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "陶艺传承中的共同特征（如基本工序、风格传承、创新可能等）",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小陶匠陶器与父亲陶器既相似又总有差异的现象是陶艺传承中共同特征的一种表现",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'遗传'、'变异'、'遗传和变异'等词。",
+    "确保'陶艺传承中的共同特征'不直接对应'生物的共同特征'，而是类比关系。",
+    "确保事件链中因果关系清晰，不引入无关机制。"
+  ],
+  "mapping_context_sha256": "7dd6cb123b413c4d3b2b69f7edd5836497f31567db9f98254d7df7e8a740cf25",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "468d000cc97f775dfaf7a6fc68400d5db4d1f42c8fcd5db56e309f53d19595b5"
+  }
+}

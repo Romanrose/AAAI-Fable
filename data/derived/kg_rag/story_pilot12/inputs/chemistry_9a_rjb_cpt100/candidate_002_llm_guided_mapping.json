@@ -1,0 +1,108 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "古代酿酒过程",
+  "domain_rationale": "酿酒中粮食缓慢发酵（类似缓慢氧化）与蒸馏（类似剧烈燃烧）形成对比，且发酵和燃烧均涉及氧气作用。",
+  "conflict": "发酵缓慢、无明火，而蒸馏需加热至沸腾，现象对比明显，映射缓慢氧化与燃烧的差异。",
+  "event_chain": [
+    "粮食在酒曲作用下缓慢发酵，产生酒精，无明显放热发光。",
+    "发酵过程中，粮食与空气中氧气缓慢反应，生成有机酸。",
+    "将发酵液加热至沸腾，酒精蒸汽与氧气剧烈反应，燃烧产生蓝色火焰。",
+    "燃烧后产生水和二氧化碳。"
+  ],
+  "turning_point": "从发酵到蒸馏加热的转变，对应缓慢氧化到燃烧的转变。",
+  "resolution_state": "最终酒精完全燃烧，氧化过程结束。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "粮食在酒曲作用下缓慢发酵",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "粮食与氧气发生的化学反应",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "酒精蒸汽在空气中剧烈燃烧",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "粮食发酵过程中缓慢消耗氧气",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "空气中的氧气",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "酒精蒸汽、充足空气、达到燃点",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "蓝色火焰和大量热",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "发酵过程缓慢，无明显放热发光",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "粮食缓慢发酵是一种粮食与氧气的化学反应",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "酒精蒸汽剧烈燃烧是一种酒精与氧气的化学反应",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "粮食发酵缓慢消耗氧气是一种缓慢氧化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "空气中的氧气是粮食化学反应的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "空气中的氧气是酒精燃烧的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "空气中的氧气是粮食发酵消耗氧气的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "酒精蒸汽、充足空气、达到燃点是酒精剧烈燃烧所必需的条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "酒精剧烈燃烧产生蓝色火焰和大量热",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "粮食缓慢发酵产生酒精，无明显放热发光",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "粮食缓慢发酵与酒精剧烈燃烧相关",
+      "direction_preserved": true
+    }
+  ]
+}

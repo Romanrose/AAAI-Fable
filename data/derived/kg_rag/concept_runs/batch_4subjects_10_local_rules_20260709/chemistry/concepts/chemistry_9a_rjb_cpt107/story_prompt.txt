@@ -1,0 +1,365 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "过氧化氢分解反应"
+  ],
+  "concept_card": {
+    "concept_id": "chemistry_9a_rjb_cpt107",
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "canonical_name": "过氧化氢分解反应",
+    "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+    "aliases": [],
+    "examples": [
+      "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+    ],
+    "teaching_level": "middle_school",
+    "concept_type": "process",
+    "graph_context": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp17",
+          "label": "Experiment",
+          "name": "过氧化氢分解实验中二氧化锰的作用",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "过氧化氢分解反应"
+    ],
+    "subject_constraints_zh": [
+      "区分化学反应和物理混合。",
+      "保留守恒关系和反应前后变化。",
+      "避免化学式或元素符号在故事正文中泄露。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt107",
+    "concept_id": "chemistry_9a_rjb_cpt107",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt107",
+      "label": "Concept",
+      "name": "过氧化氢分解反应",
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "aliases": [],
+      "examples": [
+        "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+      ],
+      "retrieval_text": "过氧化氢分解反应\n过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "chemistry_9a_rjb_cpt107",
+        "label": "Concept",
+        "name": "过氧化氢分解反应",
+        "properties": {
+          "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+          "importance": "掌握",
+          "formula": "2H₂O₂  ⟶  2H₂O + O₂",
+          "examples": [
+            "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+          ],
+          "retrieval_text": "过氧化氢分解反应\nConcept\n过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。\n掌握\n2H₂O₂  ⟶  2H₂O + O₂\n教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:11279",
+          "source": "chemistry_9a_rjb_cpt107",
+          "source_name": "过氧化氢分解反应",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:22574",
+          "source": "chemistry_9a_rjb_exp17",
+          "source_name": "过氧化氢分解实验中二氧化锰的作用",
+          "target": "chemistry_9a_rjb_cpt107",
+          "target_name": "过氧化氢分解反应",
+          "relation": "verifies",
+          "relation_description": "verifies",
+          "evidence": "",
+          "score": 0.95
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "过氧化氢分解反应",
+          "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+          "formula": "2H₂O₂  ⟶  2H₂O + O₂",
+          "importance": "掌握"
+        },
+        "condition_summary": [],
+        "process_summary": [
+          "[normalized:edge:11279] 过氧化氢分解反应 --is_a--> 分解反应",
+          "[normalized:edge:22574] 过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 2,
+        "candidate_edge_count": 2,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 522,
+        "summary_chars": 342,
+        "path_chars": 0,
+        "retrieval_context_chars": 864
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "过氧化氢分解反应的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "过氧化氢分解反应 --is_a--> 分解反应",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:11279"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:22574"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:11279",
+        "normalized:edge:22574"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "过氧化氢分解反应",
+        "chemistry_9a_rjb_cpt107"
+      ],
+      "coverage_targets": {
+        "required_step_count": 3,
+        "required_dependency_count": 2,
+        "must_cover_edge_ids": [
+          "normalized:edge:11279",
+          "normalized:edge:22574"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "chemistry_9a_rjb_cpt107",
+      "concept_id": "chemistry_9a_rjb_cpt107",
+      "story_language": "zh-CN",
+      "source_domain": "材料试炼间",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应",
+        "让中间的行动承接前后变化：过氧化氢分解实验中二氧化锰的作用 --verifies--> 这条隐藏规则",
+        "让中间的行动承接前后变化：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：过氧化氢分解实验中二氧化锰的作用 --verifies--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "过氧化氢分解反应"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "过氧化氢分解反应 --is_a--> 分解反应",
+            "过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应",
+            "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "区分化学反应和物理混合。",
+            "保留守恒关系和反应前后变化。",
+            "避免化学式或元素符号在故事正文中泄露。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "材料试炼间",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应",
+      "让中间的行动承接前后变化：过氧化氢分解实验中二氧化锰的作用 --verifies--> 这条隐藏规则",
+      "让中间的行动承接前后变化：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "过氧化氢分解反应"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "过氧化氢分解反应 --is_a--> 分解反应",
+          "过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应",
+          "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 分解反应"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：过氧化氢分解实验中二氧化锰的作用 --verifies--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

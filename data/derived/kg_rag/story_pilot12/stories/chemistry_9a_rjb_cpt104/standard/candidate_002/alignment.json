@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "老农决定用传统方法制作豆腐",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "传统手工豆腐的制作方法",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "豆腐的成型方法",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "优质的黄豆和水",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "凝固原理",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "用机器制作豆腐",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "用现代工艺制作豆腐",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "老农的实践",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "老农决定用传统方法制作豆腐",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "传统手工豆腐的制作方法需要豆腐的成型方法",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "优质的黄豆和水是传统手工豆腐的制作方法所需要的",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "凝固原理是传统手工豆腐的制作方法所需要的",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "用机器制作豆腐是一种传统手工豆腐的制作方法",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "用现代工艺制作豆腐也是一种传统手工豆腐的制作方法",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "老农的实践验证了传统手工豆腐的制作方法",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact substrings from the story, with directions preserved. No missing elements."
+}

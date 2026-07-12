@@ -1,0 +1,161 @@
+{
+  "id": "chemistry_9a_rjb_cpt100",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "缓慢氧化",
+    "aliases": [],
+    "forbidden_terms": [
+      "缓慢氧化"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：氧化反应",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "与相关概念保持关系：呼吸与氧气 与 缓慢氧化",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "与相关概念保持关系：氧化反应 与 缓慢氧化",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n5",
+        "text": "与相关概念保持关系：燃烧 与 缓慢氧化",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:15248"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:18223"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:18426"
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:18429"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "阿铸把铁坯塞进炭火炉，双手拼命拉动风箱，火苗猛地蹿高，噼啪作响。他满心以为这样就能让铁坯很快烧透，可等了半天，铁坯表面只是微微泛红，里面似乎还是冷的。他急得直跺脚。\n\n铁匠师傅走过来，轻轻按住风箱手柄，把风量调小。炉火顿时温和下来，不再狂舞，而是像呼吸一样稳稳地舔舐着铁坯。阿铸不解：“师傅，火小了，铁什么时候才能热？”\n\n师傅没说话，只让阿铸等着。炉火不亮，没有刺眼的光芒，铁坯在里头安安静静地待着。过了好一阵，师傅用钳子夹出铁坯，放在铁砧上。阿铸伸手一试，整块铁竟从里到外都热得均匀，表面还覆着一层暗色的薄皮。师傅轻轻一锤，铁坯柔软听话，很快变了形状。\n\n阿铸忽然想起自己前几日偷偷试过——用猛火去烧另一块铁坯，结果表面都裂了纹，里头还是冷的，根本敲不动。他跑去角落看，那块废铁坯上已经冒出一片片红褐色的锈斑，像生了疮一样。\n\n而师傅养的这块铁，打成的器具光亮结实。阿铸终于明白：有些变化，看着不起眼，没有火光，没有巨响，却在安静中完成了最要紧的事。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "养火过程",
+        "evidence": "炉火不亮，没有刺眼的光芒",
+        "narrative_anchor": "炉火不亮，没有刺眼的光芒",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "铁生锈的基础现象",
+        "evidence": "红褐色的锈斑",
+        "narrative_anchor": "红褐色的锈斑",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "铁坯在炉中慢慢呼吸热量",
+        "evidence": "像呼吸一样稳稳地舔舐着铁坯",
+        "narrative_anchor": "像呼吸一样稳稳地舔舐着铁坯",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "养火与生锈的对比",
+        "evidence": "光亮结实",
+        "narrative_anchor": "光亮结实",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n5",
+        "narrative_element": "猛火与养火的对比",
+        "evidence": "用猛火去烧另一块铁坯",
+        "narrative_anchor": "用猛火去烧另一块铁坯",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "养火过程引出对氧化反应的理解",
+        "evidence": "炉火不亮，没有刺眼的光芒",
+        "narrative_anchor": "炉火不亮，没有刺眼的光芒",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "铁生锈现象引出呼吸与氧气的关系",
+        "evidence": "红褐色的锈斑",
+        "narrative_anchor": "红褐色的锈斑",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "养火与生锈对比引出氧化反应与缓慢氧化的关系",
+        "evidence": "光亮结实",
+        "narrative_anchor": "光亮结实",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "猛火与养火对比引出燃烧与缓慢氧化的关系",
+        "evidence": "用猛火去烧另一块铁坯",
+        "narrative_anchor": "用猛火去烧另一块铁坯",
+        "narrative_source_concept_node_id": "n4",
+        "narrative_target_concept_node_id": "n5",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

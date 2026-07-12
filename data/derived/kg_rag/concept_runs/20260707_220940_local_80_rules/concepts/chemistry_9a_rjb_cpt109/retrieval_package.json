@@ -1,0 +1,142 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt109",
+    "label": "Concept",
+    "name": "分解反应",
+    "properties": {
+      "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "importance": "重要",
+      "formula": "AB → A + B",
+      "examples": [
+        "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+        "过氧化氢分解生成水和氧气",
+        "氯酸钾分解生成氯化钾和氧气",
+        "水在电解时分解生成氢气和氧气，是分解反应。",
+        "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      ],
+      "retrieval_text": "分解反应\nConcept\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。\n重要\nAB → A + B\n高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气\n过氧化氢分解生成水和氧气\n氯酸钾分解生成氯化钾和氧气\n水在电解时分解生成氢气和氧气，是分解反应。\n讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14997",
+      "source": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14998",
+      "source": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target": "chemistry_9a_rjb_cpt251",
+      "target_name": "水的分解反应",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:15003",
+      "source": "chemistry_9a_rjb_cpt118",
+      "source_name": "化学学习中的分类思想",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:15263",
+      "source": "chemistry_9a_rjb_skl28",
+      "source_name": "用分类方法学习化学",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11281",
+      "source": "chemistry_9a_rjb_cpt108",
+      "source_name": "加热氯酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11279",
+      "source": "chemistry_9a_rjb_cpt107",
+      "source_name": "过氧化氢分解反应",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11277",
+      "source": "chemistry_9a_rjb_cpt105",
+      "source_name": "高锰酸钾受热分解反应",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:18225",
+      "source": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target": "chemistry_9a_rjb_cpt96",
+      "target_name": "化合反应",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "分解反应",
+      "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "formula": "AB → A + B",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:14997] 分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+      "[normalized:edge:14998] 分解反应 --prerequisites_for--> 水的分解反应",
+      "[normalized:edge:15003] 化学学习中的分类思想 --prerequisites_for--> 分解反应",
+      "[normalized:edge:15263] 用分类方法学习化学 --prerequisites_for--> 分解反应"
+    ],
+    "process_summary": [
+      "[normalized:edge:11281] 加热氯酸钾制取氧气 --is_a--> 分解反应",
+      "[normalized:edge:11279] 过氧化氢分解反应 --is_a--> 分解反应",
+      "[normalized:edge:11277] 高锰酸钾受热分解反应 --is_a--> 分解反应",
+      "[normalized:edge:18225] 分解反应 --relates_to--> 化合反应"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 8,
+    "candidate_edge_count": 8,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2127,
+    "summary_chars": 666,
+    "path_chars": 0,
+    "retrieval_context_chars": 2793
+  }
+}

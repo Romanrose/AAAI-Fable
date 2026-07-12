@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n2 (实像) to '缩小的水流' is consistent with the outcome n5, but the edge e2 (照相机成像 is_a 实像) requires the story to explicitly state that the process (治水过程) is a type of '缩小的水流'. The story only implies this through the outcome, not as a categorical relation. This makes e2 the weakest edge, as its relation is not directly preserved in the story narrative."
+  },
+  "revision_instructions": [
+    "Strengthen edge e2: Add a sentence explicitly stating that the flood-control process itself is a form of 'reduced water flow' (e.g., 'The entire flood-control process was essentially a method to create a reduced, manageable water flow').",
+    "Clarify edge e3: Make the causal link between '洪水远离堤坝' and the activation of the flood-control process more explicit. For example, add 'Because the floodwaters were so far from the embankment, the pressure triggered the need for the flood-control process.'",
+    "Ensure that the mapping of n2 and n5 as distinct nodes is maintained in the story; currently they share the same carrier '缩小的水流', which may cause confusion. Consider using slightly different terms (e.g., '缩小的水流' for outcome and '小股水流' for the entity)."
+  ],
+  "final_status": "revise"
+}

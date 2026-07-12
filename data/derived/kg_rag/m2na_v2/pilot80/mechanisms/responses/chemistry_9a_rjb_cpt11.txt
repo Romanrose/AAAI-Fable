@@ -1,0 +1,188 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "大气压强",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt11:definition",
+          "kg-node:chemistry_9a_rjb_cpt11:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "标准大气压强（101 kPa）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt11:definition",
+          "kg-node:chemistry_9a_rjb_cpt11:examples"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:definition",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "水的熔点和沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt12:definition",
+          "kg-node:chemistry_9a_rjb_cpt12:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "铁的熔点和沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt13:definition",
+          "kg-node:chemistry_9a_rjb_cpt13:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "铝的熔点和沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt14:definition",
+          "kg-node:chemistry_9a_rjb_cpt14:retrieval_text"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "entity",
+        "text": "氧气的熔点和沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt15:definition",
+          "kg-node:chemistry_9a_rjb_cpt15:retrieval_text"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "rule",
+        "text": "条件对物质性质的影响",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt21:definition",
+          "kg-node:chemistry_9a_rjb_cpt21:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt11:definition",
+          "kg-node:chemistry_9a_rjb_cpt11:examples"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14999",
+          "kg-edge:normalized:edge:18222"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14992",
+          "kg-node:chemistry_9a_rjb_cpt12:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n3",
+        "target": "n5",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14993",
+          "kg-node:chemistry_9a_rjb_cpt13:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n3",
+        "target": "n6",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14994",
+          "kg-node:chemistry_9a_rjb_cpt14:definition"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n3",
+        "target": "n7",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14995",
+          "kg-node:chemistry_9a_rjb_cpt15:definition"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n8",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15075",
+          "kg-node:chemistry_9a_rjb_cpt21:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7"
+    ]
+  }
+}
+```

@@ -1,0 +1,5 @@
+﻿concept_id,target_concept,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,template_like
+biology_7a_rjb_cpt1,生物,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt1,物质,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt1,数物体（数一数）,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt1,长度,4,5,4,4,4,4,4.15,accept,False,False,False

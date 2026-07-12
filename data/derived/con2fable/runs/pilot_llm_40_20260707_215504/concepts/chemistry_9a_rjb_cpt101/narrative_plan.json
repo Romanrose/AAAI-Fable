@@ -1,0 +1,54 @@
+{
+  "source_domain": "古代烽火台",
+  "setting": "边塞烽火台，守军需要确认远处烽火是否为本方信号。",
+  "conflict": "守军无法确定远处升起的烽烟是否为本方点燃的求救信号，需要一种可靠的方法来验证。",
+  "characters": [
+    {
+      "name": "校尉",
+      "role": "验证方法的执行者",
+      "mapped_element": "m1"
+    },
+    {
+      "name": "老兵",
+      "role": "提供验证条件的人",
+      "mapped_element": "m2"
+    }
+  ],
+  "mappings": [
+    {
+      "concept_element": "m1",
+      "narrative_carrier": "校尉用点燃的火把伸向烽火台中的余烬"
+    },
+    {
+      "concept_element": "m2",
+      "narrative_carrier": "烽火台中的余烬必须仍有火星（支持燃烧）"
+    }
+  ],
+  "plot_beats": [
+    {
+      "beat_id": "b1",
+      "event": "校尉看到远处烽火升起，怀疑是敌方假信号，决定验证。",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b2",
+      "event": "老兵提醒校尉，只有烽火台中的余烬还有火星，才能用火把引燃确认。",
+      "mapped_elements": [
+        "m2"
+      ]
+    },
+    {
+      "beat_id": "b3",
+      "event": "校尉检查烽火台，发现余烬仍有火星，便将火把伸入，火把瞬间复燃。",
+      "mapped_elements": [
+        "m1",
+        "m2"
+      ]
+    }
+  ],
+  "turning_point": "火把复燃的瞬间，校尉确认远处烽火为本方信号。",
+  "ending": "校尉下令点燃烽火回应，援军及时赶到，边塞得以保全。",
+  "implied_moral": "验证真伪需要借助已知的可靠条件，而非盲目相信表象。"
+}

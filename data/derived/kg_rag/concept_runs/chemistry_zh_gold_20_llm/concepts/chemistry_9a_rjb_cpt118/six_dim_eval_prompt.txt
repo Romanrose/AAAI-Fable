@@ -1,0 +1,197 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "化学学习中的分类思想",
+  "concept_id": "chemistry_9a_rjb_cpt118",
+  "concept_definition": "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt118",
+    "化学学习中的分类思想"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt118",
+      "label": "Concept",
+      "name": "化学学习中的分类思想",
+      "definition": "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。",
+      "aliases": [],
+      "examples": [
+        "把化学反应分为化合反应和分解反应",
+        "把物质分为纯净物和混合物"
+      ],
+      "retrieval_text": "化学学习中的分类思想\n在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt117",
+          "label": "Concept",
+          "name": "化学反应的分类方法",
+          "definition": "在化学学习中，根据反应物和生成物的组成特征，将化学反应分为化合反应、分解反应等的学习方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt118",
+    "concept_id": "chemistry_9a_rjb_cpt118",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt118",
+      "label": "Concept",
+      "name": "化学学习中的分类思想",
+      "definition": "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。",
+      "aliases": [],
+      "examples": [
+        "把化学反应分为化合反应和分解反应",
+        "把物质分为纯净物和混合物"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "化学学习中的分类思想"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "小聪从把所有账目混在一起，到学会按店铺类型、时间顺序分类记账，体现了根据一定标准把事物归类的思想。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "林先生通过展示不同颜色的账本和仓库中物品的存放方式，引导小聪发现分类的标准和意义，最终小聪能系统高效地处理账目。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中区分了物理混合（盐和糖混在一起）和分类整理（账本按类型分开）；账目总数不变，体现守恒关系；未出现化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：老账房的秘密\n\n从前，在一个小镇上，有一间老账房。账房先生姓林，他有个徒弟叫小聪。林先生每天都要整理许多账本，记录镇上各家店铺的货物进出。\n\n小聪刚开始学记账时，总是手忙脚乱。他把所有账目都混在一起：卖米的、卖布的、卖铁的，全记在一本账上。结果到了月底，他翻来翻去也理不清哪家赚了、哪家亏了。\n\n林先生见了，摇摇头说：“你这样记账，就像把盐和糖倒在一个罐子里，分不清谁是谁。你得学会把相似的东西放在一起。”\n\n小聪挠挠头：“可是，先生，这些账目看起来都差不多啊，都是数字。”\n\n林先生笑了笑，拿出一把钥匙，打开了一个大木柜。柜子里整整齐齐地放着好几摞账本，每摞上都贴着不同颜色的标签：红色的是粮食铺，蓝色的是布庄，黄色的是铁匠铺。\n\n“你看，”林先生说，“我把所有卖粮食的账本归成一类，所有卖布的归成另一类。这样，当我想知道粮食铺的盈亏时，就不用翻遍所有账本了。”\n\n小聪恍然大悟。他学着先生的样子，先把所有账目按店铺类型分开，又把每一家店铺的账目按时间顺序排列。这样一来，他很快就能找到任何一家店铺的收支情况。\n\n有一天，镇上来了个新商人，卖的是瓷器。小聪想：瓷器铺和铁匠铺都是卖器物的，是不是可以归为一类？他跑去问林先生。\n\n林先生没有直接回答，而是带他去看仓库。仓库里，铁器堆在一边，瓷器堆在另一边。林先生说：“你看，铁器不怕摔，瓷器却一碰就碎。它们虽然都是器物，但性质不同，存放方式也不同。记账也是一样，不能只看表面，要找到真正的共同点。”\n\n小聪明白了：分类不是随便分分，而是要根据事物本身的特点来分。从此，他每遇到新账目，都会先思考它属于哪一类，再决定记在哪本账上。\n\n几年后，小聪成了镇上最出色的账房先生。他不仅能把账目分得清清楚楚，还能根据分类快速找出问题所在。镇上的人都说：“小聪记账，又快又准，就像变魔术一样。”\n\n小聪知道，这不是魔术，而是学会了把复杂的事情变得有条理。",
+  "rule_findings": {
+    "story_token_count": 673,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "query": "physics_8a_rjb_cpt124",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt124",
+    "label": "Concept",
+    "name": "质量",
+    "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "质量\n物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt129",
+        "label": "Concept",
+        "name": "密度",
+        "definition": "物质的质量与体积之比，通常用公式 ρ = m / V 表示。"
+      },
+      {
+        "id": "physics_bx1_rjb_cpt63",
+        "label": "Concept",
+        "name": "加速度与质量的反比关系",
+        "definition": "在力不变时，加速度 a 与质量 m 成反比，即 a 与 1/m 成正比。"
+      },
+      {
+        "id": "physics_8b_rjb_cpt24",
+        "label": "Concept",
+        "name": "惯性",
+        "definition": "物体保持原来运动状态（静止或匀速直线运动）不变的性质。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt125",
+        "label": "Concept",
+        "name": "质量单位",
+        "definition": "质量的基本单位是千克，常用单位还有克、毫克、吨。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt137",
+        "label": "Concept",
+        "name": "质量测量",
+        "definition": "使用天平或台秤测量物体质量的方法。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt126",
+        "label": "Concept",
+        "name": "质量守恒",
+        "definition": "物体的质量不随形状、物态和位置改变而改变。"
+      },
+      {
+        "id": "physics_bx1_rjb_cpt21",
+        "label": "Concept",
+        "name": "加速度",
+        "definition": "描述物体速度变化快慢的物理量，也可说是描述物体运动状态变化快慢的物理量。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch6_s1",
+        "label": "Section",
+        "name": "第一节 质量",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_ch6_s3",
+        "label": "Section",
+        "name": "第三节 测量物质的密度",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_ch6_s4",
+        "label": "Section",
+        "name": "第四节 密度与社会生活",
+        "definition": ""
+      },
+      {
+        "id": "physics_bx1_rjb_ch4_s1",
+        "label": "Section",
+        "name": "第一节 牛顿第一定律",
+        "definition": ""
+      },
+      {
+        "id": "physics_bx1_rjb_ch4_s2",
+        "label": "Section",
+        "name": "第二节 实验:探究加速度与力、质量的关系",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt106",
+    "label": "Concept",
+    "name": "凸透镜成像规律",
+    "properties": {
+      "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+      "importance": "重要",
+      "retrieval_text": "凸透镜成像规律\nConcept\n凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt101",
+      "label": "Concept",
+      "name": "焦距",
+      "properties": {
+        "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+        "importance": "掌握",
+        "formula": "f = 光心到焦点的距离",
+        "unit": "cm",
+        "retrieval_text": "焦距\nConcept\n凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。\n掌握\ncm\nf = 光心到焦点的距离"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt107",
+      "label": "Concept",
+      "name": "物距",
+      "properties": {
+        "definition": "物体到凸透镜的距离，用u表示。",
+        "importance": "掌握",
+        "unit": "cm",
+        "retrieval_text": "物距\nConcept\n物体到凸透镜的距离，用u表示。\n掌握\ncm"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt108",
+      "label": "Concept",
+      "name": "像距",
+      "properties": {
+        "definition": "像到凸透镜的距离，用v表示。",
+        "importance": "掌握",
+        "unit": "cm",
+        "retrieval_text": "像距\nConcept\n像到凸透镜的距离，用v表示。\n掌握\ncm"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt119",
+      "label": "Concept",
+      "name": "显微镜",
+      "properties": {
+        "definition": "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。",
+        "importance": "重要",
+        "examples": "观察植物细胞",
+        "retrieval_text": "显微镜\nConcept\n由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。\n重要"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt120",
+      "label": "Concept",
+      "name": "望远镜",
+      "properties": {
+        "definition": "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。",
+        "importance": "重要",
+        "retrieval_text": "望远镜\nConcept\n由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。\n重要"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt121",
+      "label": "Concept",
+      "name": "物镜",
+      "properties": {
+        "definition": "显微镜或望远镜中靠近被观察物体的凸透镜，用于成实像。",
+        "importance": "掌握",
+        "retrieval_text": "物镜\nConcept\n显微镜或望远镜中靠近被观察物体的凸透镜，用于成实像。\n掌握"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt122",
+      "label": "Concept",
+      "name": "目镜",
+      "properties": {
+        "definition": "显微镜或望远镜中靠近眼睛的凸透镜，用来对实像进行放大。",
+        "importance": "掌握",
+        "retrieval_text": "目镜\nConcept\n显微镜或望远镜中靠近眼睛的凸透镜，用来对实像进行放大。\n掌握"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_exp27",
+      "label": "Experiment",
+      "name": "探究凸透镜成像的规律",
+      "properties": {
+        "instrument": "蜡烛、白色硬纸板（光屏）、凸透镜、透镜支架",
+        "is_student": 1,
+        "process": "改变物距u，调节光屏位置观察像的性质并记录u、v及像的特点。",
+        "phenomena": "物距不同导致像的虚实、大小、正倒发生变化。",
+        "conclusion": "凸透镜成像规律取决于物距与焦距之间的关系。",
+        "retrieval_text": "探究凸透镜成像的规律\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17190",
+      "source": "physics_8a_rjb_cpt101",
+      "source_name": "焦距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17191",
+      "source": "physics_8a_rjb_cpt106",
+      "source_name": "凸透镜成像规律",
+      "target": "physics_8a_rjb_cpt119",
+      "target_name": "显微镜",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17192",
+      "source": "physics_8a_rjb_cpt106",
+      "source_name": "凸透镜成像规律",
+      "target": "physics_8a_rjb_cpt120",
+      "target_name": "望远镜",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17193",
+      "source": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17194",
+      "source": "physics_8a_rjb_cpt108",
+      "source_name": "像距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12423",
+      "source": "physics_8a_rjb_cpt121",
+      "source_name": "物镜",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12424",
+      "source": "physics_8a_rjb_cpt122",
+      "source_name": "目镜",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:23050",
+      "source": "physics_8a_rjb_exp27",
+      "source_name": "探究凸透镜成像的规律",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "凸透镜成像规律",
+      "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17190] 焦距 --prerequisites_for--> 凸透镜成像规律",
+      "[normalized:edge:17191] 凸透镜成像规律 --prerequisites_for--> 显微镜",
+      "[normalized:edge:17192] 凸透镜成像规律 --prerequisites_for--> 望远镜",
+      "[normalized:edge:17193] 物距 --prerequisites_for--> 凸透镜成像规律",
+      "[normalized:edge:17194] 像距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:12423] 物镜 --is_a--> 凸透镜成像规律",
+      "[normalized:edge:12424] 目镜 --is_a--> 凸透镜成像规律",
+      "[normalized:edge:23050] 探究凸透镜成像的规律 --verifies--> 凸透镜成像规律"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 8,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 8,
+    "candidate_edge_count": 8,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 8,
+    "expanded_to_two_hop": false
+  }
+}

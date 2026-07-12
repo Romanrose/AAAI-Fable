@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "前置条件牌",
+      "narrative_anchor": "前置条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "记录册并排摊开",
+      "narrative_anchor": "记录册并排摊开",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "结果验收记录册",
+      "narrative_anchor": "结果验收记录册",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先确认前置条件牌，再登记支渠流量数值",
+      "evidence": "回到前置条件牌前",
+      "narrative_anchor": "回到前置条件牌前",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "用记录册比较和复查来检验判断",
+      "evidence": "对照一次主渠水位的历史记录",
+      "narrative_anchor": "对照一次主渠水位的历史记录",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

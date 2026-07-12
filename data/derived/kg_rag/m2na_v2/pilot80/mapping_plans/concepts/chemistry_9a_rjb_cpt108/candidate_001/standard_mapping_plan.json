@@ -1,0 +1,153 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农用祖传秘方熬制草药汤的故事",
+  "characters": [
+    "老农",
+    "秘方（祖传的草药配方）",
+    "火候",
+    "草药汤",
+    "一种特殊的草药（催化剂）",
+    "药渣（剩余固体）",
+    "药汤（有效成分）",
+    "分解反应（草药分解成不同成分）"
+  ],
+  "objects": [
+    "老农的草药锅",
+    "祖传秘方（写在羊皮纸上）",
+    "火炉",
+    "特殊草药（一种罕见的根茎）",
+    "药渣",
+    "药汤",
+    "分解反应规则"
+  ],
+  "conflict": "老农需要熬制出有效的药汤，但秘方要求必须加入一种特殊草药，且火候要恰到好处，否则药汤无效。",
+  "event_chain": [
+    "老农将祖传秘方上的草药（包括特殊草药）放入锅中，加入水。",
+    "老农点燃火炉，开始加热。",
+    "特殊草药在锅中，与其他草药一起被加热。",
+    "在火候和特殊草药的共同作用下，锅中的草药开始分解，生成药渣和药汤。",
+    "特殊草药在熬制过程中自身几乎不变，只是帮助其他草药分解。",
+    "药汤（有效成分）被熬制出来。",
+    "药渣（无用成分）也同时生成。",
+    "整个熬制过程符合“分解反应”的规则：一种物质（草药混合物）生成两种或多种其他物质（药渣和药汤）。"
+  ],
+  "turning_point": "当火候和特殊草药同时作用时，草药混合物开始分解，生成药渣和药汤。",
+  "resolution_state": "老农得到了有效的药汤，药渣被丢弃，特殊草药仍然存在且性质不变。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农将祖传秘方上的草药（包括特殊草药）放入锅中，加入水。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农点燃火炉，开始加热。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "在火候和特殊草药的共同作用下，锅中的草药开始分解，生成药渣和药汤。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "特殊草药（一种罕见的根茎）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "特殊草药在熬制过程中自身几乎不变，只是帮助其他草药分解。",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "药汤（有效成分）被熬制出来。",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "药渣（无用成分）也同时生成。",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "整个熬制过程符合“分解反应”的规则：一种物质（草药混合物）生成两种或多种其他物质（药渣和药汤）。",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农将祖传秘方上的草药放入锅中，这为后续分解提供了原料条件。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农点燃火炉加热，这为分解提供了能量条件。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "特殊草药的加入，使得分解过程得以发生。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "特殊草药在熬制过程中自身几乎不变，这与其帮助分解的特性相关。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "分解过程产生了药汤（有效成分）。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "分解过程同时产生了药渣（无用成分）。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "整个分解过程符合分解反应的规则。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "分解过程需要原料（草药混合物）的存在。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "分解过程需要加热（火候）的条件。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "分解过程需要特殊草药的参与。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何与化学相关的术语，如“催化剂”、“分解”、“氧气”等。",
+    "确保“特殊草药”在故事中明确表现为自身不变但促进其他草药分解，以映射催化剂的特性。",
+    "确保“火候”和“特殊草药”是分解发生的两个必要条件，缺一不可。",
+    "避免将“祖传秘方”本身视为一个因果机制，它只是背景信息。",
+    "整个故事应保持连贯，围绕老农熬药这一核心事件展开。"
+  ],
+  "mapping_context_sha256": "188b46a6e6a8f047a6521da68eef8b5eb187b4aa40cb2506e9ac5180899d40cb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "adfa98f76c769b619c0e398d656f1206b627bf1c9bc8cf14bf55984b9625d257"
+  }
+}

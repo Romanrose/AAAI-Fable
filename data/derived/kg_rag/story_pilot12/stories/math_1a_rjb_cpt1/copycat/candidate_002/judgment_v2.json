@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly distinguishes the three mechanism nodes: n1 (entrance condition check) is explicitly shown as a prerequisite, n2 (transformation step) is described as the subsequent alignment of two records, and n3 (result verification) is the final cross-check. Edge e1 (relates_to) is demonstrated by the comparison of two records that jointly constrain the judgment, and edge e2 (enables) is shown by the explicit statement that the entrance check enables the transformation step. The mapping is observably better than a version that would merely mention the endpoints without showing the relational structure, because here the story enacts the enabling and relating relations through concrete actions and dialogue."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

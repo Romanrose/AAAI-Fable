@@ -1,0 +1,87 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠制作青铜器的过程",
+  "characters": [
+    "老工匠",
+    "年轻学徒"
+  ],
+  "objects": [
+    "熔炉",
+    "铜矿石",
+    "锡矿石",
+    "青铜器模具",
+    "鼓风机"
+  ],
+  "conflict": "年轻学徒认为仅靠高温熔炼就能直接得到优质青铜器，而老工匠坚持必须使用特定的助熔剂（如木炭粉）才能去除杂质、使铜锡充分融合，否则无法铸造出坚固的器物。",
+  "event_chain": [
+    "老工匠向学徒展示如何将铜矿石和锡矿石放入熔炉中加热。",
+    "学徒尝试直接熔炼，结果得到的金属块质地疏松、易碎。",
+    "老工匠加入助熔剂（木炭粉）并调整鼓风机的风力。",
+    "助熔剂使矿石中的杂质形成炉渣浮出，铜锡融合成均匀的青铜液。",
+    "青铜液浇入模具，冷却后得到坚固的青铜器。",
+    "学徒领悟到助熔剂在青铜冶炼中的关键作用。"
+  ],
+  "turning_point": "老工匠加入助熔剂后，熔炉中原本浑浊的金属液变得清澈，杂质被分离出来。",
+  "resolution_state": "学徒认识到，许多优质青铜器的铸造都必须依赖助熔剂才能有效进行，从此虚心学习助熔剂的使用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "助熔剂在熔炉中促进铜锡融合并去除杂质的作用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "助熔剂在青铜器铸造中的广泛应用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "许多优质青铜器的铸造必须依靠助熔剂才能有效进行",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老工匠列举了铸造兵器、礼器、钱币时使用不同助熔剂的例子；学徒亲眼看到加入助熔剂前后金属液的变化",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "助熔剂的作用（n1）使得助熔剂在青铜器铸造中广泛应用（n2）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "助熔剂的广泛应用（n2）导致了‘许多优质青铜器的铸造必须依靠助熔剂才能有效进行’（n3）这一结果",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老工匠列举的例子和学徒的观察（n4）证实了助熔剂在青铜器铸造中的广泛应用（n2）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中未使用‘催化剂’、‘催化作用’、‘催化剂的工业应用’等任何禁止术语。",
+    "注意‘助熔剂’是源域载体，不可与目标域术语混淆。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将学徒的认知转变（课程桥）作为因果机制的一部分。"
+  ],
+  "mapping_context_sha256": "1625bbf52f153c8545e598a3d72c43ae369a6a183643024021e52116c47d774b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7e93e322196b362b4ae1547d9d2f41c50c4c9255647701b04d3f9927f4bc53af"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "大树",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "大树的根深深扎进土壤，像无数只小手，贪婪地吸收着水分和矿物质",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "大树的叶片张开了。它们像无数面绿色的镜子，把阳光和空气吞进去，又呼出清新的气息",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "枯黄的叶子纷纷飘落，枯枝也断裂在地。大树抖了抖身子，把不再有用的废物统统抛弃",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "大树的枝头冒出嫩绿的新芽，树干悄悄增粗了一圈。如果剖开树皮，就能看见一道崭新的年轮",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "大树开出了淡黄的花朵，花谢后结出饱满的种子。种子随风落地，在泥土里扎根，长出了小树苗",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "小树苗渐渐长大，它们和大树一样挺拔，但每棵的枝叶又略有不同。有的更茂密，有的更耐旱",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "大树伸出粗壮的根、笔直的茎、繁茂的叶。这些部分各司其职，根负责吸收，茎负责运输，叶负责制造养分。它们分工合作，构成了大树的全部",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "大树的根深深扎进土壤，像无数只小手，贪婪地吸收着水分和矿物质",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "大树的叶片张开了。它们像无数面绿色的镜子，把阳光和空气吞进去，又呼出清新的气息",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "枯黄的叶子纷纷飘落，枯枝也断裂在地。大树抖了抖身子，把不再有用的废物统统抛弃",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "大树的枝头冒出嫩绿的新芽，树干悄悄增粗了一圈。如果剖开树皮，就能看见一道崭新的年轮",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "大树开出了淡黄的花朵，花谢后结出饱满的种子。种子随风落地，在泥土里扎根，长出了小树苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "小树苗渐渐长大，它们和大树一样挺拔，但每棵的枝叶又略有不同。有的更茂密，有的更耐旱",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "大树伸出粗壮的根、笔直的茎、繁茂的叶。这些部分各司其职，根负责吸收，茎负责运输，叶负责制造养分。它们分工合作，构成了大树的全部",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All 8 mechanism nodes and 7 edges are fully aligned with exact contiguous substrings from the story. The story demonstrates each biological characteristic of a living organism through the life processes of a big tree, with correct direction for all requires relations."
+}

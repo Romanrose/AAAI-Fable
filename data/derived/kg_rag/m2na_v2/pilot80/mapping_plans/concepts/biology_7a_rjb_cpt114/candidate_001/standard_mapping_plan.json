@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代驿站传信系统",
+  "characters": [
+    "信使（自身传递）",
+    "邻驿信使（外部传递）",
+    "驿站总管（接收）"
+  ],
+  "objects": [
+    "信件",
+    "驿站",
+    "马匹"
+  ],
+  "conflict": "信件需要从出发地送达目的地，但信使可能独自完成全程，也可能借助其他驿站信使接力传递。",
+  "event_chain": [
+    "信使携带信件从出发地出发",
+    "若信使独自完成全程，则信件始终由同一信使送达同一驿站总管",
+    "若借助其他驿站信使，则信件由邻驿信使接力传递至另一驿站总管",
+    "信件送达驿站总管后，总管才能拆阅并执行后续命令"
+  ],
+  "turning_point": "信使决定是独自完成全程还是借助邻驿信使接力传递。",
+  "resolution_state": "信件成功送达驿站总管，总管得以执行后续命令。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "信件送达驿站总管的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "信使独自完成全程，信件由同一信使送达同一驿站总管",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "信件由邻驿信使接力传递至另一驿站总管",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "驿站总管拆阅信件并执行后续命令",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "是一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "是一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "使得能够",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'传粉'、'花粉'、'花药'、'柱头'等生物学词汇",
+    "确保'信件送达驿站总管的过程'（n1）是'信使独自完成'（n2）和'邻驿信使接力'（n3）的上位概念，符合is_a关系",
+    "确保'信件送达'（n1）是'总管拆阅执行命令'（n4）的前提，方向正确"
+  ],
+  "mapping_context_sha256": "f410822798847ccf1c53f421928715b2cdab1fedca7013e1bdbe0d894b8d2f86",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5484ed0c2980e930d4ac7e849c080aa98b71644894a6fa662b27a883cbc8185b"
+  }
+}

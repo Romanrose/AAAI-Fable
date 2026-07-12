@@ -1,0 +1,44 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "物质：构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt1:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "物质的变化：物质在一定条件下发生的状态、形态或本质的改变，包括物理变化和化学变化。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt2:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14991"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}

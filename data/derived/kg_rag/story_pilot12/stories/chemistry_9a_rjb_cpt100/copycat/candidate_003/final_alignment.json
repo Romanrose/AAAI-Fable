@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第四道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第五道环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "第六道环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "第七道环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "入口条件核对记录册与结果验收记录册并列",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第二道转化环节的记录册",
+      "direction_preserved": true,
+      "confidence": 0.7
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "入口条件核对记录册与结果验收记录册并列",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "第五道环节的记录册是第二道转化环节的一个必要组成部分",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "第五道环节的记录册分别与第三道、第四道转化环节的记录册放在一起",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "第五道环节的记录册分别与第三道、第四道转化环节的记录册放在一起",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "第六道环节的记录册是第三道转化环节的前提条件",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "第三道转化环节完成之后，会产生第七道环节的记录",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "入口条件核对记录册会产生这份结果验收记录册",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "入口条件核对记录册与第三道转化环节的记录册也有密切关联",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到对应证据，方向均保留。节点证据为故事中直接出现的短语；边证据为故事中明确描述关系的句子，部分边（e1、e2、e3）因故事中未明确提及is_a关系，仅通过并列或提及推断，置信度略低。"
+}

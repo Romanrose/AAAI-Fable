@@ -1,0 +1,80 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt10",
+    "label": "Concept",
+    "name": "参照物",
+    "properties": {
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "importance": "重要",
+      "examples": [
+        "地面",
+        "旁边的列车",
+        "树木",
+        "房屋"
+      ],
+      "retrieval_text": "参照物\nConcept\n判断物体运动或静止时所选取的标准物体。\n重要\n地面\n旁边的列车\n树木\n房屋"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17189",
+      "source": "physics_8a_rjb_cpt10",
+      "source_name": "参照物",
+      "target": "physics_8a_rjb_cpt9",
+      "target_name": "运动与静止的相对性",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:19745",
+      "source": "physics_8a_rjb_cpt8",
+      "source_name": "机械运动",
+      "target": "physics_8a_rjb_cpt10",
+      "target_name": "参照物",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    },
+    {
+      "source_edge_id": "normalized:edge:19747",
+      "source": "physics_8a_rjb_cpt9",
+      "source_name": "运动与静止的相对性",
+      "target": "physics_8a_rjb_cpt10",
+      "target_name": "参照物",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "参照物",
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17189] 参照物 --prerequisites_for--> 运动与静止的相对性"
+    ],
+    "process_summary": [
+      "[normalized:edge:19745] 机械运动 --relates_to--> 参照物",
+      "[normalized:edge:19747] 运动与静止的相对性 --relates_to--> 参照物"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 778,
+    "summary_chars": 350,
+    "path_chars": 0,
+    "retrieval_context_chars": 1128
+  }
+}

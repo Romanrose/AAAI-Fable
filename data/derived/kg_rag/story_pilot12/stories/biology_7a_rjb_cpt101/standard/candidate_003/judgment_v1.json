@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story embeds the external conditions (n2) into the narrative of the farmer preparing the field and the natural environment, but the enabling relation (e1) is shown through the process description rather than an explicit causal statement. In contrast, the internal conditions (n3) are explicitly selected and linked to germination success, making the mapping more direct. This is better than a story that merely mentions 'good conditions' without showing how they enable germination."
+  },
+  "revision_instructions": [
+    "Consider making the enabling role of external conditions (e1) more explicit, e.g., by stating that the warm water and air cause the seed to swell and start growing, to strengthen the causal link."
+  ],
+  "final_status": "accept"
+}

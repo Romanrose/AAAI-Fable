@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代中国的一个村庄，村民通过不同方式传递信息",
+  "characters": [
+    "信使甲（代表异花传粉）",
+    "信使乙（代表自花传粉）",
+    "驿站总管（代表传粉）",
+    "城守（代表受精）"
+  ],
+  "objects": [
+    "信件（代表花粉）",
+    "驿站（代表柱头）",
+    "城门（代表受精的场所）"
+  ],
+  "conflict": "信使甲和信使乙都声称自己的送信方式是正统的，但驿站总管必须决定哪种方式能确保信件最终送达城门。",
+  "event_chain": [
+    "信使甲借助风或鸟将信件送到另一户人家的驿站（异花传粉）。",
+    "信使乙将信件留在自己家的驿站（自花传粉）。",
+    "驿站总管收集所有信件，并统一送往城门（传粉）。",
+    "城守接收信件，完成最终确认（受精）。"
+  ],
+  "turning_point": "驿站总管意识到，无论信件来自何处，只有经过驿站统一传递，才能到达城门。",
+  "resolution_state": "信使甲和信使乙都接受驿站总管的规则，所有信件通过驿站系统送达城门。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "信使甲借助外力将信件送到另一户人家的驿站",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "驿站总管将信件从各个驿站收集并统一送往城门",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "信使乙将信件留在自己家的驿站",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "城守在城门接收信件并完成确认",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "信使甲的行为是驿站总管行为的一种具体方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "信使乙的行为是驿站总管行为的一种具体方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "驿站总管的行为使城守的行为成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'异花传粉'、'自花传粉'、'传粉'、'受精'等生物学术语。",
+    "确保所有映射保持机制图中边的方向。",
+    "确保故事连贯，不引入无关的比喻。"
+  ],
+  "mapping_context_sha256": "a3006a05d9b085cc20549f51682016f4afbd830730c0dee8f3d427333afb3726",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "20aa07a38646aff0ea1c68c32580ebfbde5c9cb32fb6966478eaa683b0010af7"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农在田地里调节水渠闸门，以控制水流灌溉庄稼",
+  "characters": [
+    "老农",
+    "田地",
+    "庄稼"
+  ],
+  "objects": [
+    "水渠闸门",
+    "水流",
+    "最远端的庄稼",
+    "最近端的庄稼",
+    "无限远的荒地"
+  ],
+  "conflict": "老农需要调节水渠闸门，使水流既能灌溉到最远端的庄稼，又能灌溉到最近端的庄稼，但水流有限，无法同时满足所有庄稼的需求。",
+  "event_chain": [
+    "老农调节水渠闸门，改变水流大小和方向",
+    "水流灌溉到最远端的庄稼，形成最远灌溉点",
+    "水流灌溉到最近端的庄稼，形成最近灌溉点",
+    "正常田地的最远灌溉点位于无限远的荒地（即水流可无限延伸）",
+    "正常田地的最近灌溉点约为10米处"
+  ],
+  "turning_point": "老农发现，当闸门完全打开时，水流可以灌溉到无限远的荒地，但近处的庄稼反而会被淹没；当闸门适当调节时，才能同时兼顾远近庄稼。",
+  "resolution_state": "老农通过精确调节闸门，使水流既能灌溉到最远端的庄稼（无限远），又能灌溉到最近端的庄稼（约10米处），实现了均衡灌溉。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农调节水渠闸门改变水流大小和方向",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "最远灌溉点（最远端的庄稼被灌溉的位置）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "最近灌溉点（最近端的庄稼被灌溉的位置）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "正常田地的最远灌溉点位于无限远的荒地",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "正常田地的最近灌溉点约为10米处",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农调节闸门产生最远灌溉点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农调节闸门产生最近灌溉点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "正常田地最远灌溉点条件约束最远灌溉点状态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "正常田地最近灌溉点条件约束最近灌溉点状态",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中未使用'远点'等禁止术语",
+    "确保所有机制节点和边均已映射，无遗漏",
+    "确保故事源域一致，未混用多个隐喻",
+    "确保未将课程桥接上下文视为因果机制"
+  ],
+  "mapping_context_sha256": "05101a708320bbcddea6fd8e57291889b464b2061a6d7ab75b44fc08734e26cb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "79571b89e8526db9aa56fe7c0fa7c54ed20071cf13d779ab1ddbfd5ece1b9d0b"
+  }
+}

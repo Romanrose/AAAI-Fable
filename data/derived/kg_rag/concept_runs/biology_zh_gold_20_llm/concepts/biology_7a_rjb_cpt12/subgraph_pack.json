@@ -1,0 +1,67 @@
+{
+  "query": "biology_7a_rjb_cpt12",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt12",
+    "label": "Concept",
+    "name": "病毒",
+    "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+    "aliases": [
+      "virus"
+    ],
+    "examples": [
+      "流感病毒",
+      "艾滋病病毒",
+      "烟草花叶病毒",
+      "噬菌体"
+    ],
+    "retrieval_text": "病毒\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_8a_rjb_cpt101",
+        "label": "Concept",
+        "name": "病毒的分类（按寄生细胞不同）",
+        "definition": "根据病毒寄生的细胞不同，可分为动物病毒、植物病毒和细菌病毒（噬菌体）三大类。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt11",
+        "label": "Concept",
+        "name": "细胞",
+        "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe4",
+        "label": "Exercise",
+        "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(4) 生物都是由细胞构成的。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一章 认识生物",
+        "definition": ""
+      },
+      {
+        "id": "biology_8a_rjb_ch5_s5",
+        "label": "Section",
+        "name": "第五章 病毒",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

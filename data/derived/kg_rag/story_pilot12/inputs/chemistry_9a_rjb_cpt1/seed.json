@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "chemistry_9a_rjb_cpt1",
+  "subject": "chemistry",
+  "canonical_name": "物质",
+  "aliases": [],
+  "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+  "concept_type": "entity",
+  "forbidden_terms": [
+    "物质"
+  ]
+}

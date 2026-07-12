@@ -1,0 +1,86 @@
+{
+  "concept_id": "biology_7a_rjb_cpt128",
+  "target_concept": "蒸腾作用的意义",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过老园丁的对话和观察，准确传达了蒸腾作用拉动水分运输和降低叶片温度的核心机制，没有歪曲或遗漏概念定义中的任何要点。",
+    "implicitness": "目标概念名称‘蒸腾作用的意义’未在故事中出现，而是通过‘出汗’、‘水汽跑出来’、‘拉动水向上’等比喻和现象自然隐含，符合隐含性要求。",
+    "mapping_clarity": "故事中的‘水汽从叶子背面小孔跑出’、‘带走热量’、‘拉动根吸上来的水向上运输’等情节清晰映射了蒸腾作用的两个核心意义，映射关系明确且易于理解。",
+    "readability": "语言简洁生动，对话自然，情节连贯，适合目标年龄段阅读，没有复杂术语或冗余描述。",
+    "pedagogical_value": "故事通过小孙子的疑问和老园丁的解释，逐步揭示蒸腾作用的意义，并纠正了‘植物出汗是浪费’的常见误解，教学价值高。",
+    "novelty": "故事采用了园圃和仙人掌的对比，以及小孙子观察的视角，有一定新意，但整体结构较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个对比场景，如干旱条件下蒸腾作用减弱导致植物萎蔫，进一步强化概念理解。",
+    "可在结尾处让小孙子用新知识解释仙人掌为何少浇水也能存活，增强知识迁移。"
+  ],
+  "rule_findings": {
+    "story_token_count": 560,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "蒸腾作用的意义",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过老园丁的对话和观察，准确传达了蒸腾作用拉动水分运输和降低叶片温度的核心机制，没有歪曲或遗漏概念定义中的任何要点。",
+      "implicitness": "目标概念名称‘蒸腾作用的意义’未在故事中出现，而是通过‘出汗’、‘水汽跑出来’、‘拉动水向上’等比喻和现象自然隐含，符合隐含性要求。",
+      "mapping_clarity": "故事中的‘水汽从叶子背面小孔跑出’、‘带走热量’、‘拉动根吸上来的水向上运输’等情节清晰映射了蒸腾作用的两个核心意义，映射关系明确且易于理解。",
+      "readability": "语言简洁生动，对话自然，情节连贯，适合目标年龄段阅读，没有复杂术语或冗余描述。",
+      "pedagogical_value": "故事通过小孙子的疑问和老园丁的解释，逐步揭示蒸腾作用的意义，并纠正了‘植物出汗是浪费’的常见误解，教学价值高。",
+      "novelty": "故事采用了园圃和仙人掌的对比，以及小孙子观察的视角，有一定新意，但整体结构较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个对比场景，如干旱条件下蒸腾作用减弱导致植物萎蔫，进一步强化概念理解。",
+      "可在结尾处让小孙子用新知识解释仙人掌为何少浇水也能存活，增强知识迁移。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对属于整个流程的第一类前提规则",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第四道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第五道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "第六道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "第七道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "入口条件核对属于整个流程的第一类前提规则",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第三道环节的货物数量核对属于第二道转化环节中的一项必要检查",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "第四道环节的摆放位置确认是第二道转化环节的一部分",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "调度员的转运单和验收员的入库凭证放在一起，发现这两份记录共同约束着最后的判断",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "调度员的转运单和验收员的入库凭证放在一起，发现这两份记录共同约束着最后的判断",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "调度员的转运单和验收员的入库凭证放在一起，发现这两份记录共同约束着最后的判断",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "第五道环节需要前置条件牌上的温度记录作为前提",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "第六道环节的封箱操作会导致第七道环节的通行牌发放结果",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "最后的结果验收记录与入口条件牌上的初始记录有关联",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "最后的结果验收记录与入口条件牌上的初始记录有关联",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges have been aligned with story evidence. Node mappings follow the frozen mapping plan, using story carriers like '入口条件核对' for n1, '第二道转化环节' for n2, etc. Edge alignments verify relations and directions: e1 (is_a) aligns with '入口条件核对属于整个流程的第一类前提规则'; e2 (is_a) with '第三道环节的货物数量核对属于第二道转化环节中的一项必要检查'; e3 (is_a) with '第四道环节的摆放位置确认是第二道转化环节的一部分'; e4-e6 (part_of) with '调度员的转运单和验收员的入库凭证放在一起，发现这两份记录共同约束着最后的判断'; e7 (requires) with '第五道环节需要前置条件牌上的温度记录作为前提'; e8 (produces) with '第六道环节的封箱操作会导致第七道环节的通行牌发放结果'; e9 (produces) with '最后的结果验收记录与入口条件牌上的初始记录有关联'; e10 (relates_to) with '最后的结果验收记录与入口条件牌上的初始记录有关联'. No missing nodes or edges."
+}

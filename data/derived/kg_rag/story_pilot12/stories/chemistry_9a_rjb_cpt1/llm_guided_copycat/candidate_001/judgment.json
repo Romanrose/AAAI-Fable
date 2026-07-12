@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (物质) is strongly represented by the concrete '一段上好的榆木' with rich sensory description. Node n2 (物质的变化) is partially represented by the processing actions, but the story does not explicitly frame these actions as a unified '变化' process; the edge e1 (enables) is only implicitly shown by the temporal sequence, lacking a clear causal or enabling statement. Compared to a better realization where the story explicitly states '原木的加工过程使其发生变化', this version relies on inference, weakening the mapping clarity."
+  },
+  "revision_instructions": [
+    "Increase node_coverage: explicitly mention '物质的变化' as a concept, e.g., add a sentence like '木匠的加工过程就是原木的变化过程'.",
+    "Strengthen edge e1: add a causal link such as '正是原木的存在使得木匠能够进行加工，从而引发变化' to make the enabling relation explicit.",
+    "Ensure the story length stays within 450-750 characters (current 641 is valid)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "一个一个地数着桃子",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "比较两个弟弟手中的桃子哪个多、哪个少、是否一样多",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "让两个弟弟把桃子一个个配对",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "小猴子先盯着大弟的桃子堆，又扭头看看小弟的桃子堆。它觉得大弟的桃子好像多一些，但又不敢肯定。于是它决定好好比一比。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "小猴子通过数桃子知道了总数，从而能进行一一配对比较",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。"
+}

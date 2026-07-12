@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "温度",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "湿度",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "通风",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "先核对入口条件，再依次经过五道转化环节",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他把这个现象记下来，没有当作孤立事件，而是对照后台通用的规则手册，发现这类情况属于“入口条件核对”范畴",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "他又依次比对了温度、湿度、通风等条件，每一件都归入对应的规则大类",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "他又依次比对了温度、湿度、通风等条件，每一件都归入对应的规则大类",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "他用记录、比较和复查来检验每一步判断，证据对上后才允许通过",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均已在故事中找到对应证据，方向一致，无缺失。"
+}

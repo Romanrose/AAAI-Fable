@@ -1,0 +1,78 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt115",
+    "label": "Concept",
+    "name": "自花传粉",
+    "properties": {
+      "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+      "importance": "了解",
+      "examples": [
+        "小麦、水稻、豌豆可自花传粉"
+      ],
+      "retrieval_text": "自花传粉\nConcept\n一朵花的花粉落到同一朵花柱头上的传粉现象。\n了解\n小麦、水稻、豌豆可自花传粉"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt114",
+      "label": "Concept",
+      "name": "传粉",
+      "properties": {
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+        "importance": "掌握",
+        "retrieval_text": "传粉\nConcept\n花粉从花药散放而落到雌蕊柱头上的过程。\n掌握"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:10778",
+      "source": "biology_7a_rjb_cpt115",
+      "source_name": "自花传粉",
+      "target": "biology_7a_rjb_cpt114",
+      "target_name": "传粉",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "自花传粉",
+      "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt115",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "花粉从花药散放而落到雌蕊柱头上的过程",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt114:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "一朵花的花粉落到同一朵花柱头上的传粉现象",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt115:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10778"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "自花传粉"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "c6b61a1b5eca2fcf36ae1e45fe24cc85454298e7ec981a2839b580dcb1d38614",
+    "retrieval_sha256": "2ec633b6b48279eaf1cb174eb7e4a8cd22075bebb6ee4b8724e938fd9946df23",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "daad95123475083569fe0b037d8c0eed328161b2f541053129bdfa25514688f4"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

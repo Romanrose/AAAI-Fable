@@ -1,0 +1,105 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "淘金者分离金沙与碎石",
+  "characters": [
+    "淘金者",
+    "金沙",
+    "碎石"
+  ],
+  "objects": [
+    "河水",
+    "淘金盘",
+    "水槽"
+  ],
+  "conflict": "金沙与碎石混合在一起，无法直接获得纯净的金沙。",
+  "event_chain": [
+    "淘金者将河水引入水槽，使沙石混合物浸入水中。",
+    "金沙和碎石的密度不同。",
+    "淘金者摇晃淘金盘，使密度较小的碎石随水流先被冲走。",
+    "淘金者获得纯净的金沙。",
+    "淘金者的方法是一种从混合物中分离出有价值物质的技术。"
+  ],
+  "turning_point": "淘金者利用密度差异，通过水流和摇晃使碎石先被分离。",
+  "resolution_state": "淘金者成功获得纯净的金沙。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "淘金者将河水引入水槽，使沙石混合物浸入水中",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "金沙和碎石的密度不同",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "淘金者摇晃淘金盘，使密度较小的碎石随水流先被冲走",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "淘金者获得纯净的金沙",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "淘金者的方法",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "从混合物中分离出有价值物质的技术",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "使沙石混合物浸入水中使得淘金者能够摇晃淘金盘使碎石先被冲走",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "密度差异使得淘金者能够通过摇晃使碎石先被冲走",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "摇晃淘金盘使碎石先被冲走导致淘金者获得纯净的金沙",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "淘金者的方法是一种从混合物中分离出有价值物质的技术",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "密度差异使得淘金者的方法得以实现",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何与化学或工业制氧相关的术语。",
+    "注意保持故事中密度差异作为关键条件，与机制中沸点差异对应。",
+    "避免将淘金者的方法直接称为‘分馏’或类似术语。",
+    "确保所有节点和边都被映射，且方向正确。"
+  ],
+  "mapping_context_sha256": "d423cf49f24edc59e0303fecccb6c63d78f86f7afcd187503fbcbe2d9de10410",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "67cf9096bad396150049bcd894c5e6ea1bdea667b69ac4423a6993a71ef2479a"
+  }
+}

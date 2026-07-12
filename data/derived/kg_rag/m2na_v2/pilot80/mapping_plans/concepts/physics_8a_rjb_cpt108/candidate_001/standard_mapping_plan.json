@@ -1,0 +1,72 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "农夫与树苗",
+  "characters": [
+    "农夫",
+    "树苗",
+    "园丁"
+  ],
+  "objects": [
+    "树苗",
+    "树坑",
+    "阳光"
+  ],
+  "conflict": "农夫想种一棵树，但树苗的根须必须与树坑的距离合适，否则树苗无法健康生长，而园丁的规则是树苗的根须必须与树坑保持特定距离才能成活。",
+  "event_chain": [
+    "农夫挖了一个树坑，树苗的根须与树坑的距离（物距）决定了树苗的根须与树坑的相对位置。",
+    "树苗的根须与树坑的距离（像距）受到树坑与树苗根须距离（物距）的影响。",
+    "树苗的根须与树坑的距离（像距）必须符合园丁的种植规则（凸透镜成像规律），树苗才能成活。"
+  ],
+  "turning_point": "农夫发现树苗的根须与树坑的距离不符合园丁的规则，于是调整树坑的位置，使树苗的根须与树坑的距离满足规则。",
+  "resolution_state": "树苗的根须与树坑的距离（像距）由树坑与树苗根须的距离（物距）决定，并且该距离必须符合园丁的规则，树苗最终健康生长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "树苗的根须与树坑的距离",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "树坑与树苗根须的距离",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "园丁的种植规则",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "树坑与树苗根须的距离（物距）决定了树苗的根须与树坑的距离（像距）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "树苗的根须与树坑的距离（像距）必须符合园丁的种植规则",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'像距'、'物距'、'凸透镜'等术语。",
+    "注意'树苗的根须与树坑的距离'和'树坑与树苗根须的距离'是两种不同的距离，方向相反，需在故事中明确区分。",
+    "园丁的种植规则是固定规则，不能解释为因果关系，仅作为条件约束。"
+  ],
+  "mapping_context_sha256": "13556a6b9418b3b1b25a095a28f663b6b2049c214be9cb048e342d20d36eb28c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ae696514b7ced988f166eb033e535dcf12ca4ed03f76450b61cad8c600c90a9c"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "concept_id": "math_1a_rjb_cpt22",
+  "target_concept": "分拆数6和7",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地呈现了将6和7拆分成两个部分的所有不同分法，与概念定义完全一致。",
+    "implicitness": "故事没有直接提及'分拆数6和7'或任何禁止术语，通过花圃分花的场景自然隐含了数学概念。",
+    "mapping_clarity": "故事中的分花操作与数学分拆一一对应，主角的探索过程清晰展示了所有分法，映射非常明确。",
+    "readability": "语言流畅，情节简单易懂，适合目标年龄段，角色和场景设置生动有趣。",
+    "pedagogical_value": "通过反复尝试和对比（七朵花六种分法、六朵花五种分法），有效强化了分拆概念，并隐含了奇偶数的区别，教学价值高。",
+    "novelty": "故事框架（花圃分花）较为常见，但结合了奇偶数的对比，有一定新意，不过整体新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑在结尾加入一个简单的应用场景，如让主角用新规则解决另一个分拆问题，以增强巩固。",
+    "可尝试使用更独特的场景（如分宝石、分音符等）来提升新颖性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 471,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整准确地呈现了将6和7拆分成两个部分的所有不同分法，与概念定义完全一致。",
+      "implicitness": "故事没有直接提及'分拆数6和7'或任何禁止术语，通过花圃分花的场景自然隐含了数学概念。",
+      "mapping_clarity": "故事中的分花操作与数学分拆一一对应，主角的探索过程清晰展示了所有分法，映射非常明确。",
+      "readability": "语言流畅，情节简单易懂，适合目标年龄段，角色和场景设置生动有趣。",
+      "pedagogical_value": "通过反复尝试和对比（七朵花六种分法、六朵花五种分法），有效强化了分拆概念，并隐含了奇偶数的区别，教学价值高。",
+      "novelty": "故事框架（花圃分花）较为常见，但结合了奇偶数的对比，有一定新意，不过整体新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可考虑在结尾加入一个简单的应用场景，如让主角用新规则解决另一个分拆问题，以增强巩固。",
+      "可尝试使用更独特的场景（如分宝石、分音符等）来提升新颖性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

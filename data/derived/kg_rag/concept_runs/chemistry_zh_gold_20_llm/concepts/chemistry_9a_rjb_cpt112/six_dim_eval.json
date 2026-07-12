@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt112",
+  "target_concept": "二氧化锰的催化作用",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确体现了二氧化锰的催化作用：黑色粉末（催化剂）显著加快醒墨水（过氧化氢分解）的反应速率，且反应前后质量和化学性质不变，完全符合概念定义。",
+    "implicitness": "目标概念名称和别名均未在故事正文中出现，仅通过‘黑色粉末’、‘隐形帮手’等隐喻暗示，符合隐含性要求。",
+    "mapping_clarity": "故事中黑色粉末与催化剂、醒墨水与反应物、字迹显现与反应产物之间的映射关系清晰，读者能自然联想到催化作用的核心机制。",
+    "readability": "故事语言流畅，情节生动，使用日常比喻（账房、醒墨水）降低理解门槛，适合初中生阅读。",
+    "pedagogical_value": "故事通过重复实验（称重、多次使用）强化催化剂‘反应前后不变’的关键特征，并延伸至‘热显墨’（氯酸钾分解）情境，教学价值高。",
+    "novelty": "将催化剂比喻为‘隐形帮手’有一定新意，但整体叙事框架（账房、商人）较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事结尾增加一个简短的科学注释，明确对应化学概念，但需注意不破坏隐含性。",
+    "可进一步丰富‘热显墨’情节的细节，以更清晰地映射氯酸钾分解实验。"
+  ],
+  "rule_findings": {
+    "story_token_count": 580,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确体现了二氧化锰的催化作用：黑色粉末（催化剂）显著加快醒墨水（过氧化氢分解）的反应速率，且反应前后质量和化学性质不变，完全符合概念定义。",
+      "implicitness": "目标概念名称和别名均未在故事正文中出现，仅通过‘黑色粉末’、‘隐形帮手’等隐喻暗示，符合隐含性要求。",
+      "mapping_clarity": "故事中黑色粉末与催化剂、醒墨水与反应物、字迹显现与反应产物之间的映射关系清晰，读者能自然联想到催化作用的核心机制。",
+      "readability": "故事语言流畅，情节生动，使用日常比喻（账房、醒墨水）降低理解门槛，适合初中生阅读。",
+      "pedagogical_value": "故事通过重复实验（称重、多次使用）强化催化剂‘反应前后不变’的关键特征，并延伸至‘热显墨’（氯酸钾分解）情境，教学价值高。",
+      "novelty": "将催化剂比喻为‘隐形帮手’有一定新意，但整体叙事框架（账房、商人）较为常见，新颖性中等偏上。"
+    },
+    "revision_suggestions": [
+      "可考虑在故事结尾增加一个简短的科学注释，明确对应化学概念，但需注意不破坏隐含性。",
+      "可进一步丰富‘热显墨’情节的细节，以更清晰地映射氯酸钾分解实验。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：长度单位（米及其倍数、子倍数）",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：使用刻度尺的方法",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17188"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12429"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "阿柱是镇上老木匠铺新来的学徒。他手脚麻利，干活也勤快，可就是有个毛病——做什么都凭感觉。\n\n这天，师傅让他做一张方凳，图纸上画得清清楚楚，凳腿要锯成一样的长短。阿柱看了看木料，心里估摸了一下，提起锯子就干。不一会儿，四根凳腿锯好了，可往凳面上一装，一根长出一截，一根又短了一截，整个凳子歪歪扭扭，根本站不稳。\n\n师傅走过来，拿起那根短了一截的凳腿，摇了摇头：“阿柱，你靠什么知道它该锯多长？”\n\n阿柱挠挠头：“我……我比划了一下，觉得差不多。”\n\n师傅没说话，转身从墙上取下一把老旧的木尺。那木尺磨得油光发亮，上面刻着一道道细细的线，旁边还标着“寸”和“分”的字样。\n\n“这把尺子，是我们铺子祖上传下来的。”师傅把木尺放在阿柱手里，“木料的长短，不是靠你觉得，而是要看它在这把尺子上占了多少个寸、多少个分。你看，这根木料，从这头到那头，正好是五寸三分。”\n\n阿柱接过木尺，翻来覆去地看，那些刻度整整齐齐，像一条条小路。\n\n师傅又拿起一根新木料，把木尺平放在上面，指着尺子的一端说：“你看好了。先把木料的一头，对准尺子上这个‘零’的位置，然后看另一头——它停在了哪个数字上，这个数字，就是木料真正的长短。”\n\n阿柱瞪大眼睛，顺着师傅的手指看过去。木料的尽头，正好落在“四寸”的刻线上。\n\n“四寸。”阿柱脱口而出。\n\n“对。”师傅点点头，“现在你按图纸上要求的尺寸，用这把尺子量好，再下锯。”\n\n阿柱照着师傅的样子，把木尺放在木料上，对准零刻度，找到图纸上要求的尺寸位置，用铅笔画了一道线，然后沿着线小心翼翼地锯下去。锯完一量，分毫不差。\n\n他越干越顺手，四根凳腿锯出来，长短一模一样。装到凳面上，严丝合缝，轻轻一推，稳稳当当。\n\n师傅看着做好的方凳，露出了笑容：“记住，感觉会骗人，尺子不会。”\n\n从那以后，阿柱再也不用眼睛估摸、用手比划了。他每次下锯前，都会先拿起那把老木尺，仔仔细细地量上一遍。他做出来的榫头和卯眼，再也没有出过差错，做成的家具结实耐用，成了铺子里最受欢迎的学徒。\n\n后来，铺子里又来了一个新学徒，也像阿柱当初一样，总是锯不准。阿柱便拿出那把老木尺，手把手地教他：“你看，先把木料的一头对准尺子的零刻度，再看另一头落在哪个数字上，这个数字就是木料真正的长短。记住，感觉会骗人，尺子不会。”新学徒照着做，果然锯出了准确的尺寸。阿柱这才真正明白，这把尺子上的刻度，就是大家公认的标准，只要照着它量，人人都能得到一样准的结果。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "描述物体空间延伸程度的物理量，需要通过测量工具获得",
+        "evidence": "木料的长短，不是靠你觉得，而是要看它在这把尺子上占了多少个寸、多少个分",
+        "narrative_anchor": "木料的长短"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "长度单位（寸、分）",
+        "evidence": "上面刻着一道道细细的线，旁边还标着“寸”和“分”的字样",
+        "narrative_anchor": "寸和分"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "使用刻度尺的方法",
+        "evidence": "先把木料的一头，对准尺子上这个“零”的位置，然后看另一头——它停在了哪个数字上",
+        "narrative_anchor": "对准零刻度，看另一头数字"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "长度概念引出长度单位",
+        "evidence": "木料的长短，不是靠你觉得，而是要看它在这把尺子上占了多少个寸、多少个分",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "木料的长短……占了多少个寸、多少个分"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "长度单位引出使用刻度尺的方法",
+        "evidence": "先把木料的一头，对准尺子上这个“零”的位置，然后看另一头——它停在了哪个数字上",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "对准零刻度，看另一头数字"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

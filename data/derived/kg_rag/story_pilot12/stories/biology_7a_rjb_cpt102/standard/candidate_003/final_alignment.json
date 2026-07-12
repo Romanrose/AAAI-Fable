@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "没有适宜的温度、足够的水分和充足的空气，种子就无法发芽",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "三颗种子同时用力，一起顶破了土层，探出了嫩绿的芽尖",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "这地底下冷得像冰窖，我的身子怎么也暖不起来",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "四周干巴巴的，一滴水珠也找不到",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "这土密不透风，我连一丝新鲜的气都吸不到",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "他先给田地上盖了一层薄薄的薄膜，让地里的温度慢慢升起来；接着引来渠水，细细地浇灌，让干裂的土吸饱了水分；最后，他用锄头把板结的土块敲碎、翻松，让空气能钻进去",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "没有适宜的温度、足够的水分和充足的空气，种子就无法发芽",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "没有适宜的温度、足够的水分和充足的空气，种子就无法发芽",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "没有适宜的温度、足够的水分和充足的空气，种子就无法发芽",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "没有适宜的温度、足够的水分和充足的空气，种子就无法发芽",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "他先给田地上盖了一层薄薄的薄膜，让地里的温度慢慢升起来；接着引来渠水，细细地浇灌，让干裂的土吸饱了水分；最后，他用锄头把板结的土块敲碎、翻松，让空气能钻进去",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，方向一致，无缺失。"
+}

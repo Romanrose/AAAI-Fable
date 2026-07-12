@@ -1,0 +1,151 @@
+{
+  "query": "biology_7a_rjb_cpt114",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt114",
+    "label": "Concept",
+    "name": "传粉",
+    "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "传粉\n花粉从花药散放而落到雌蕊柱头上的过程。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt117",
+        "label": "Concept",
+        "name": "受精",
+        "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt115",
+        "label": "Concept",
+        "name": "自花传粉",
+        "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt116",
+        "label": "Concept",
+        "name": "异花传粉",
+        "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe17",
+        "label": "Exercise",
+        "name": "花粉从花药散放而落到雌蕊柱头上的过程叫做什么？异花传粉通常需要哪些媒介？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:14139] 传粉 --prerequisites_for--> 受精\n- [normalized:edge:10779] 异花传粉 --is_a--> 传粉\n- [normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '传粉', 'definition': '花粉从花药散放而落到雌蕊柱头上的过程。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:14139] 传粉 --prerequisites_for--> 受精'], 'process_summary': ['[normalized:edge:10779] 异花传粉 --is_a--> 传粉', '[normalized:edge:10778] 自花传粉 --is_a--> 传粉'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt114",
+      "label": "Concept",
+      "name": "传粉",
+      "properties": {
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+        "importance": "掌握",
+        "retrieval_text": "传粉\nConcept\n花粉从花药散放而落到雌蕊柱头上的过程。\n掌握"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:14139",
+        "source": "biology_7a_rjb_cpt114",
+        "source_name": "传粉",
+        "target": "biology_7a_rjb_cpt117",
+        "target_name": "受精",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:10779",
+        "source": "biology_7a_rjb_cpt116",
+        "source_name": "异花传粉",
+        "target": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:10778",
+        "source": "biology_7a_rjb_cpt115",
+        "source_name": "自花传粉",
+        "target": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "传粉",
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精"
+      ],
+      "process_summary": [
+        "[normalized:edge:10779] 异花传粉 --is_a--> 传粉",
+        "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 748,
+      "summary_chars": 322,
+      "path_chars": 0,
+      "retrieval_context_chars": 1070
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 748,
+    "summary_chars": 322,
+    "path_chars": 0,
+    "retrieval_context_chars": 1070
+  }
+}

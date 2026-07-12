@@ -1,0 +1,108 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "一位老农用传统方法从芝麻中榨取香油",
+  "characters": [
+    "老农",
+    "芝麻",
+    "香油"
+  ],
+  "objects": [
+    "石磨",
+    "铁锅",
+    "木桶"
+  ],
+  "conflict": "老农发现自家芝麻收成虽好，但榨出的香油总是不够纯净，且出油率低，无法满足市场需求。",
+  "event_chain": [
+    "老农将芝麻放入石磨中研磨成浆",
+    "将芝麻浆倒入铁锅中加热搅拌",
+    "加热后芝麻浆分离出油层和渣滓",
+    "老农收集上层清亮的香油",
+    "剩余的渣滓用作肥料"
+  ],
+  "turning_point": "老农尝试改进加热时间和火候，发现适当延长加热时间能提高出油率，且油质更纯净。",
+  "resolution_state": "老农掌握了最佳加热工艺，香油产量和品质大幅提升，成为当地有名的榨油能手。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农用传统方法从芝麻中榨取香油",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "榨取香油的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "收集香油的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "香油",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "加热分离",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "用石磨研磨芝麻榨油",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "用铁锅炒芝麻榨油",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "老农多次试验记录",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农用传统方法从芝麻中榨取香油是一种榨取香油的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "榨取香油的方法需要收集香油的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "香油需要榨取香油的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "加热分离需要榨取香油的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "用石磨研磨芝麻榨油是一种榨取香油的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "用铁锅炒芝麻榨油是一种榨取香油的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "老农多次试验记录验证了榨取香油的方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'加热高锰酸钾制取氧气'等化学术语",
+    "注意'加热分离'不能直接对应'分解反应'，但保留了其作为子过程的关系",
+    "所有映射均基于榨油这一连贯的源域，没有引入无关隐喻"
+  ]
+}

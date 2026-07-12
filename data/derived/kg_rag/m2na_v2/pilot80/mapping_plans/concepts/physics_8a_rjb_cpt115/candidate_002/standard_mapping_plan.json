@@ -1,0 +1,63 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农在菜园里种菜的故事",
+  "characters": [
+    "老农",
+    "菜苗"
+  ],
+  "objects": [
+    "菜园",
+    "菜苗",
+    "锄头"
+  ],
+  "conflict": "菜苗生长需要合适的间距，但老农最初种得太密，导致菜苗拥挤、生长不良。",
+  "event_chain": [
+    "老农在菜园里种下一排菜苗，苗间距只有10厘米。",
+    "菜苗逐渐长大，叶子互相遮挡，根系纠缠，生长缓慢。",
+    "老农发现菜苗长势不好，决定重新调整间距。",
+    "老农将菜苗移栽，使每棵菜苗之间保持25厘米的距离。",
+    "移栽后，菜苗获得充足阳光和养分，生长茂盛，老农不再需要频繁照料。"
+  ],
+  "turning_point": "老农意识到最初10厘米的间距导致菜苗拥挤，决定移栽到25厘米的合适间距。",
+  "resolution_state": "菜苗在25厘米的间距下健康生长，老农轻松收获。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "菜苗之间保持25厘米的距离时，生长最茂盛且老农无需额外劳作",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "菜苗之间最初只有10厘米的间距，这是菜苗能存活的最小间距",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "最初10厘米的间距（近点）是导致老农必须调整到25厘米间距（明视距离）的原因",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'明视距离'、'近点'等术语。",
+    "注意映射中方向：近点（最小间距）导致明视距离（最佳间距），故事中10厘米间距导致25厘米间距，方向一致。",
+    "避免将课程桥接上下文（如视力、眼睛）作为因果机制。"
+  ],
+  "mapping_context_sha256": "3fc52931370d4dc54982c3e113027131acd5503ba7e3cbf5e278bd4499960b9a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "58000a7f33511d0de1ba520b45abbf71f8412a962cc6750bae43a3354c29e2e8"
+  }
+}

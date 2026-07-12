@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K12 概念中心知识图谱</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070A10;
+      --panel: rgba(16, 22, 34, 0.86);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #F6F8FC;
+      --muted: #AAB4C5;
+      --accent: #F5C542;
+      --path: #FACC15;
+      --shadow: 0 18px 56px rgba(0, 0, 0, 0.36);
+      font-family: Inter, "Microsoft YaHei", "PingFang SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    button, input { font: inherit; }
+
+    #app {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background:
+        radial-gradient(circle at 14% 16%, rgba(37, 99, 235, 0.16), transparent 34%),
+        radial-gradient(circle at 82% 18%, rgba(217, 119, 6, 0.16), transparent 32%),
+        radial-gradient(circle at 70% 86%, rgba(5, 150, 105, 0.14), transparent 38%),
+        linear-gradient(180deg, #101524 0%, #070A10 100%);
+    }
+
+    #stage {
+      position: absolute;
+      inset: 0;
+      cursor: grab;
+      touch-action: none;
+    }
+
+    #stage.dragging { cursor: grabbing; }
+    #graph {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .panel, .card, .tip {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .topbar {
+      position: absolute;
+      z-index: 5;
+      top: 16px;
+      left: 16px;
+      right: 16px;
+      display: grid;
+      grid-template-columns: minmax(270px, 420px) minmax(260px, 1fr) minmax(300px, 360px);
+      gap: 12px;
+      align-items: start;
+      pointer-events: none;
+    }
+
+    .topbar > * { pointer-events: auto; }
+    .brand, .search, .filters { border-radius: 8px; }
+    .brand { padding: 14px 16px; }
+
+    .eyebrow {
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .search {
+      min-width: 0;
+      padding: 10px;
+    }
+
+    .search input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .search input:focus {
+      border-color: rgba(245, 197, 66, 0.78);
+      box-shadow: 0 0 0 3px rgba(245, 197, 66, 0.14);
+    }
+
+    .results {
+      display: none;
+      max-height: min(360px, calc(100vh - 112px));
+      margin-top: 8px;
+      overflow: auto;
+      border-radius: 6px;
+    }
+
+    .results.on { display: block; }
+
+    .result, .row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 10px 1fr auto;
+      gap: 9px;
+      align-items: center;
+      min-height: 38px;
+      padding: 7px 9px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.055);
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .result:hover, .row:hover { background: rgba(255, 255, 255, 0.12); }
+
+    .title {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .filters {
+      max-height: calc(100vh - 32px);
+      overflow: auto;
+      padding: 12px;
+    }
+
+    .filter-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .small-button {
+      min-height: 28px;
+      padding: 0 9px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .small-button:hover { background: rgba(255, 255, 255, 0.14); }
+
+    .chip-grid {
+      display: grid;
+      gap: 7px;
+    }
+
+    .chip-grid.subjects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .chip-grid.types { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .chip-grid.edges { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .chip-grid.importance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .chip {
+      min-width: 0;
+      min-height: 31px;
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 6px 8px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .chip.off { opacity: 0.38; }
+    .chip span:last-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    .filter-section {
+      margin-top: 13px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .filter-section h2 {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .range-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .range-row label, .range-row span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    input[type="range"] {
+      grid-column: 1 / -1;
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    .card {
+      position: absolute;
+      z-index: 6;
+      right: 16px;
+      bottom: 16px;
+      width: min(500px, calc(100vw - 32px));
+      max-height: min(660px, calc(100vh - 140px));
+      display: none;
+      overflow: auto;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .card.on { display: block; }
+
+    .card-head {
+      display: grid;
+      grid-template-columns: 12px 1fr auto;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .card h2 {
+      margin: -3px 0 5px;
+      font-size: 21px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .close {
+      width: 32px;
+      height: 32px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .definition, .inline-list {
+      margin: 12px 0 0;
+      padding: 12px;
+      color: #DDE4F0;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.52;
+    }
+
+    .inline-list {
+      color: var(--muted);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .metric {
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 19px;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .section { margin-top: 14px; }
+    .section h3 {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tip {
+      position: absolute;
+      z-index: 7;
+      display: none;
+      width: min(330px, calc(100vw - 28px));
+      padding: 11px 12px;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    .tip.on { display: block; }
+    .tip-title {
+      margin: 4px 0;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .tip-meta {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hint {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      z-index: 4;
+      padding: 9px 11px;
+      color: var(--muted);
+      background: rgba(8, 10, 15, 0.62);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      font-size: 12px;
+      pointer-events: none;
+    }
+
+    .loading {
+      position: absolute;
+      inset: 0;
+      z-index: 9;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      background: var(--bg);
+    }
+
+    .loading.off { display: none; }
+
+    @media (max-width: 980px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        width: min(460px, calc(100vw - 32px));
+        right: auto;
+      }
+      .filters { max-height: 260px; }
+      .card {
+        left: 16px;
+        right: 16px;
+        width: auto;
+        max-height: 44vh;
+      }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="stage" aria-label="K12 concept relation graph">
+      <canvas id="graph"></canvas>
+    </div>
+
+    <div class="topbar">
+      <section class="panel brand">
+        <p class="eyebrow">Concept Graph</p>
+        <h1>K12 概念中心知识图谱</h1>
+        <div class="stats">
+          <span id="nodeCount">0 节点</span>
+          <span id="edgeCount">0 关系</span>
+          <span id="visibleCount">0 可见</span>
+        </div>
+      </section>
+
+      <section class="panel search">
+        <input id="search" type="search" placeholder="搜索概念、技能、实验、练习、章节" autocomplete="off" spellcheck="false">
+        <div id="results" class="results"></div>
+      </section>
+
+      <section class="panel filters">
+        <div class="filter-head">
+          <span>筛选</span>
+          <button id="reset" class="small-button" type="button">重置</button>
+        </div>
+        <div id="subjectChips" class="chip-grid subjects"></div>
+
+        <div class="filter-section">
+          <h2>节点类型</h2>
+          <div id="typeChips" class="chip-grid types"></div>
+        </div>
+
+        <div class="filter-section">
+          <h2>9 种关系类型</h2>
+          <div id="edgeChips" class="chip-grid edges"></div>
+        </div>
+
+        <div class="filter-section">
+          <h2>重要性</h2>
+          <div id="importanceChips" class="chip-grid importance"></div>
+        </div>
+
+        <div class="filter-section range-row">
+          <label for="orderMax">课程进度</label>
+          <span id="orderText"></span>
+          <input id="orderMax" type="range" min="0" max="23" value="23" step="1">
+        </div>
+      </section>
+    </div>
+
+    <aside id="card" class="card" aria-live="polite"></aside>
+    <div id="tip" class="tip"></div>
+    <div class="hint">左右拖动旋转，上下拖动平移；Alt + 上下拖动调整俯仰。滚轮或双指缩放。</div>
+    <div id="loading" class="loading">正在加载 graphdata.js...</div>
+  </div>
+
+  <script src="./graphdata.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      const DATA = window.CONCEPT_GRAPH;
+      const loading = document.getElementById('loading');
+      if (!DATA) {
+        loading.textContent = '缺少 graphdata.js，请先运行：node data/concept_kg_visualization/build-concept-viz-data.mjs';
+        return;
+      }
+      loading.classList.add('off');
+
+      const N = DATA.nodes;
+      const E = DATA.edges;
+      const SUBJECTS = DATA.subjects;
+      const COLORS = DATA.subjectColors;
+      const NODE_TYPES = DATA.nodeTypes;
+      const EDGE_TYPES = DATA.edgeTypes;
+      const edgeTypeIndex = new Map(EDGE_TYPES.map((type, index) => [type, index]));
+      const edgeNames = DATA.edgeNames;
+      const edgeCounts = DATA.edgeCounts || {};
+      const nodeNames = DATA.nodeNames || {};
+      const subjectNames = DATA.subjectNames;
+      const stageLabels = { primary: '小学', middle: '初中', highschool: '高中' };
+      const importanceOrder = ['掌握', '重要', '了解', '理解', ''];
+      const importanceNames = { '': '未标注' };
+
+      const activeSubjects = new Set(SUBJECTS.map((_, index) => index));
+      const activeTypes = new Set(NODE_TYPES.map((_, index) => index));
+      const defaultEdgeTypes = new Set(DATA.defaultEdgeTypes || EDGE_TYPES);
+      const activeEdges = new Set(EDGE_TYPES.map((type, index) => defaultEdgeTypes.has(type) ? index : -1).filter((index) => index >= 0));
+      const activeImportance = new Set(importanceOrder);
+
+      const stage = document.getElementById('stage');
+      const canvas = document.getElementById('graph');
+      const ctx = canvas.getContext('2d');
+      const search = document.getElementById('search');
+      const results = document.getElementById('results');
+      const card = document.getElementById('card');
+      const tip = document.getElementById('tip');
+      const orderMaxInput = document.getElementById('orderMax');
+      const orderText = document.getElementById('orderText');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      let dpr = 1;
+      let vw = 0;
+      let vh = 0;
+      let rotY = 0.55;
+      let tilt = -0.38;
+      let zoom = 0.98;
+      let panX = 0;
+      let panY = 0;
+      let spin = reduce ? 0 : 0.00005;
+      let maxOrder = DATA.maxOrder;
+      let dragging = false;
+      let moved = false;
+      let lastX = 0;
+      let lastY = 0;
+      let hover = -1;
+      let selected = -1;
+      let highlight = null;
+      let focusTarget = null;
+      let lastFrame = performance.now();
+      let pinchDistance = 0;
+      const pointers = new Map();
+      const visible = new Uint8Array(N.length);
+      const projected = new Float32Array(N.length * 4);
+      const order = N.map((_, index) => index);
+      const incident = Array.from({ length: N.length }, () => []);
+      const outByType = Array.from({ length: N.length }, () => Array.from({ length: EDGE_TYPES.length }, () => []));
+      const inByType = Array.from({ length: N.length }, () => Array.from({ length: EDGE_TYPES.length }, () => []));
+
+      E.forEach((edge, index) => {
+        const [source, target, type] = edge;
+        incident[source].push(index);
+        incident[target].push(index);
+        outByType[source][type].push(target);
+        inByType[target][type].push(source);
+      });
+
+      document.getElementById('nodeCount').textContent = `${N.length.toLocaleString()} 节点`;
+      document.getElementById('edgeCount').textContent = `${E.length.toLocaleString()} 关系`;
+      orderMaxInput.max = DATA.maxOrder;
+      orderMaxInput.value = DATA.maxOrder;
+
+      function esc(value) {
+        const div = document.createElement('div');
+        div.textContent = value ?? '';
+        return div.innerHTML;
+      }
+
+      function colorFor(n) {
+        return COLORS[n.g] || '#94A3B8';
+      }
+
+      function subjectLabel(index) {
+        const key = SUBJECTS[index];
+        return subjectNames[key] || key || '未知';
+      }
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        vw = stage.clientWidth;
+        vh = stage.clientHeight;
+        canvas.width = Math.max(1, Math.floor(vw * dpr));
+        canvas.height = Math.max(1, Math.floor(vh * dpr));
+        canvas.style.width = `${vw}px`;
+        canvas.style.height = `${vh}px`;
+      }
+
+      function updateOrderText() {
+        const labels = [
+          '一上', '一下', '二上', '二下', '三上', '三下', '四上', '四下',
+          '五上', '五下', '六上', '六下', '七上', '七下', '八上', '八下',
+          '九年级', '九下', '必修一', '必修二', '必修三', '选必一', '选必二', '选必三',
+        ];
+        orderText.textContent = `≤ ${labels[maxOrder] || maxOrder}`;
+      }
+
+      function updateVisible() {
+        let nodes = 0;
+        for (let i = 0; i < N.length; i++) {
+          const n = N[i];
+          const on = activeSubjects.has(n.g) && activeTypes.has(n.ty) && activeImportance.has(n.imp || '') && n.bo <= maxOrder;
+          visible[i] = on ? 1 : 0;
+          if (on) nodes++;
+        }
+        let edges = 0;
+        for (const edge of E) {
+          if (activeEdges.has(edge[2]) && visible[edge[0]] && visible[edge[1]]) edges++;
+        }
+        document.getElementById('visibleCount').textContent = selected >= 0 && highlight
+          ? `${highlight.nodes.size.toLocaleString()} 高亮`
+          : `${nodes.toLocaleString()} 节点 / ${edges.toLocaleString()} 关系`;
+      }
+
+      function project() {
+        const cy = Math.cos(rotY);
+        const sy = Math.sin(rotY);
+        const ct = Math.cos(tilt);
+        const st = Math.sin(tilt);
+        const scale = Math.min(vw / 3100, vh / 2450) * zoom;
+        const cx = vw * 0.5 + panX;
+        const centerY = vh * 0.54 + panY;
+        const fov = 1500;
+        for (let i = 0; i < N.length; i++) {
+          const n = N[i];
+          const wx = n.x;
+          const wy = n.y - DATA.height / 2;
+          const wz = n.z;
+          const x = wx * cy + wz * sy;
+          const z = -wx * sy + wz * cy;
+          const y = wy * ct - z * st;
+          const z2 = wy * st + z * ct;
+          const pf = fov / (fov + z2 * scale * 1.55);
+          projected[i * 4] = cx + x * scale * pf;
+          projected[i * 4 + 1] = centerY - y * scale * pf;
+          projected[i * 4 + 2] = pf;
+          projected[i * 4 + 3] = z2;
+        }
+      }
+
+      function nodeRadius(index) {
+        return (1.8 + N[index].r * 2.6) *
+          projected[index * 4 + 2] *
+          Math.min(1.65, Math.max(0.78, zoom));
+      }
+
+      function hexToRgba(hex, alpha) {
+        const n = Number.parseInt(hex.slice(1), 16);
+        return `rgba(${n >> 16}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
+      }
+
+      function buildHighlight(index) {
+        const prereqType = edgeTypeIndex.get('prerequisites_for');
+        const nodes = new Set([index]);
+        const edges = new Set();
+        const queue = [index];
+        for (let cursor = 0; cursor < queue.length; cursor++) {
+          const node = queue[cursor];
+          for (const edgeIndex of incident[node]) {
+            const edge = E[edgeIndex];
+            if (edge[2] !== prereqType || edge[1] !== node) continue;
+            edges.add(edgeIndex);
+            if (!nodes.has(edge[0])) {
+              nodes.add(edge[0]);
+              queue.push(edge[0]);
+            }
+          }
+        }
+        for (const edgeIndex of incident[index]) {
+          edges.add(edgeIndex);
+          nodes.add(E[edgeIndex][0]);
+          nodes.add(E[edgeIndex][1]);
+        }
+        highlight = { nodes, edges };
+      }
+
+      function focusNode(index) {
+        const n = N[index];
+        focusTarget = {
+          rotY: Math.atan2(-n.x, n.z),
+          tilt: -0.24,
+          zoom: Math.max(1.25, zoom),
+        };
+      }
+
+      function pick(mx, my) {
+        let best = -1;
+        let bestDistance = 24 * 24;
+        for (let i = 0; i < N.length; i++) {
+          if (!visible[i]) continue;
+          const dx = projected[i * 4] - mx;
+          const dy = projected[i * 4 + 1] - my;
+          const d = dx * dx + dy * dy;
+          const radius = Math.max(10, nodeRadius(i) + 6);
+          if (d <= radius * radius && d < bestDistance) {
+            best = i;
+            bestDistance = d;
+          }
+        }
+        return best;
+      }
+
+      function draw() {
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, vw, vh);
+        project();
+
+        const hasHighlight = !!highlight;
+        ctx.save();
+        ctx.lineCap = 'round';
+        for (let i = 0; i < E.length; i++) {
+          const [source, target, type] = E[i];
+          if (!activeEdges.has(type) || !visible[source] || !visible[target]) continue;
+          const typeName = EDGE_TYPES[type];
+          let alpha = 0.045;
+          let width = 0.75;
+          let color = '148, 163, 184';
+          let dashed = false;
+          if (typeName === 'prerequisites_for') { alpha = 0.16; width = 1.25; color = '59, 130, 246'; }
+          if (typeName === 'leads_to') { alpha = 0.11; width = 1.05; color = '34, 197, 94'; }
+          if (typeName === 'verifies') { alpha = 0.12; width = 1; color = '249, 115, 22'; }
+          if (typeName === 'is_a') { alpha = 0.07; width = 0.85; color = '156, 163, 175'; dashed = true; }
+          if (typeName === 'relates_to') { alpha = 0.05; width = 0.7; color = '180, 190, 210'; }
+          if (typeName === 'tests_concept' || typeName === 'tests_skill') { alpha = 0.08; width = 0.82; color = '168, 85, 247'; dashed = true; }
+          if (typeName === 'appears_in' || typeName === 'is_part_of') { alpha = 0.04; width = 0.65; color = '148, 163, 184'; dashed = true; }
+          if (hasHighlight) {
+            if (!highlight.edges.has(i)) {
+              alpha = 0.012;
+            } else {
+              alpha = typeName === 'prerequisites_for' ? 0.9 : 0.54;
+              width = typeName === 'prerequisites_for' ? 1.9 : 1.25;
+              color = typeName === 'prerequisites_for' ? '59, 130, 246' : '250, 204, 21';
+            }
+          }
+          ctx.setLineDash(dashed ? [4, 5] : []);
+          ctx.strokeStyle = `rgba(${color}, ${alpha})`;
+          ctx.lineWidth = width;
+          ctx.beginPath();
+          ctx.moveTo(projected[source * 4], projected[source * 4 + 1]);
+          ctx.lineTo(projected[target * 4], projected[target * 4 + 1]);
+          ctx.stroke();
+        }
+        ctx.setLineDash([]);
+        ctx.restore();
+
+        order.sort((a, b) => projected[a * 4 + 3] - projected[b * 4 + 3]);
+        for (const index of order) {
+          if (!visible[index]) continue;
+          const n = N[index];
+          const inHighlight = hasHighlight ? highlight.nodes.has(index) : true;
+          const isFocus = index === selected || index === hover;
+          let alpha = 0.76;
+          if (hasHighlight && !inHighlight) alpha = 0.11;
+          const color = colorFor(n);
+          const x = projected[index * 4];
+          const y = projected[index * 4 + 1];
+          const radius = nodeRadius(index) * (isFocus ? 1.75 : 1);
+          if (isFocus || (hasHighlight && inHighlight)) {
+            ctx.shadowColor = color;
+            ctx.shadowBlur = isFocus ? 18 : 8;
+          } else {
+            ctx.shadowBlur = 0;
+          }
+          ctx.fillStyle = hexToRgba(color, alpha);
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.shadowBlur = 0;
+          ctx.strokeStyle = hasHighlight && inHighlight ? 'rgba(250, 204, 21, 0.95)' : 'rgba(3, 5, 10, 0.68)';
+          ctx.lineWidth = hasHighlight && inHighlight ? 1.4 : 0.85;
+          ctx.beginPath();
+          ctx.arc(x, y, radius + (hasHighlight && inHighlight ? 1.5 : 0), 0, Math.PI * 2);
+          ctx.stroke();
+        }
+      }
+
+      function frame(now) {
+        const dt = Math.min(64, now - lastFrame);
+        lastFrame = now;
+        rotY += spin * dt;
+        if (focusTarget) {
+          const delta = ((focusTarget.rotY - rotY + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
+          rotY += delta * 0.1;
+          tilt += (focusTarget.tilt - tilt) * 0.1;
+          zoom += (focusTarget.zoom - zoom) * 0.1;
+          if (Math.abs(delta) < 0.004) focusTarget = null;
+        }
+        draw();
+        requestAnimationFrame(frame);
+      }
+
+      function showTip(index, event) {
+        const n = N[index];
+        tip.innerHTML = `
+          <div class="dot" style="background:${colorFor(n)}"></div>
+          <div class="tip-title">${esc(n.n)}</div>
+          <div class="tip-meta">${esc(subjectLabel(n.g))} · ${esc(stageLabels[n.st] || n.st)} · ${esc(n.imp || '未标注')} · 度数 ${n.deg}</div>
+        `;
+        tip.classList.add('on');
+        placeTip(event);
+      }
+
+      function placeTip(event) {
+        const pad = 14;
+        let x = event.clientX + 16;
+        let y = event.clientY + 16;
+        const w = tip.offsetWidth;
+        const h = tip.offsetHeight;
+        if (x + w > vw - pad) x = event.clientX - w - 16;
+        if (y + h > vh - pad) y = event.clientY - h - 16;
+        tip.style.left = `${Math.max(pad, x)}px`;
+        tip.style.top = `${Math.max(pad, y)}px`;
+      }
+
+      function hideTip() {
+        tip.classList.remove('on');
+      }
+
+      function sortedUnique(list) {
+        return [...new Set(list)].sort((a, b) => N[a].bo - N[b].bo || N[a].n.localeCompare(N[b].n));
+      }
+
+      function rows(title, indexes) {
+        const sorted = sortedUnique(indexes);
+        const body = sorted.length
+          ? sorted.slice(0, 14).map((index) => {
+              const n = N[index];
+              return `
+                <button class="row" type="button" data-node="${index}">
+                  <span class="dot" style="background:${colorFor(n)}"></span>
+                  <span class="title">${esc(n.n)}</span>
+                  <span class="meta">${esc(nodeNames[n.lab] || n.lab)} · ${esc(subjectLabel(n.g))}</span>
+                </button>
+              `;
+            }).join('')
+          : '<div class="empty">无</div>';
+        const more = sorted.length > 14 ? `<div class="meta" style="padding-top:7px">还有 ${sorted.length - 14} 个未显示</div>` : '';
+        return `<div class="section"><h3>${title}</h3>${body}${more}</div>`;
+      }
+
+      function plainRows(title, items) {
+        const body = items.length
+          ? items.slice(0, 8).map((item) => `
+              <div class="row" style="cursor:default">
+                <span class="dot" style="background:#94A3B8"></span>
+                <span class="title">${esc(item.name)}</span>
+                <span class="meta">${esc(item.label || '')}</span>
+              </div>
+            `).join('')
+          : '<div class="empty">无</div>';
+        const more = items.length > 8 ? `<div class="meta" style="padding-top:7px">还有 ${items.length - 8} 个未显示</div>` : '';
+        return `<div class="section"><h3>${title}</h3>${body}${more}</div>`;
+      }
+
+      function selectNode(index) {
+        selected = index;
+        buildHighlight(index);
+        focusNode(index);
+        spin = 0;
+        hideTip();
+        showCard(index);
+        updateVisible();
+      }
+
+      function clearSelection() {
+        selected = -1;
+        highlight = null;
+        focusTarget = null;
+        card.classList.remove('on');
+        if (!reduce) spin = 0.00005;
+        updateVisible();
+      }
+
+      function showCard(index) {
+        const n = N[index];
+        const prereqType = edgeTypeIndex.get('prerequisites_for');
+        const isaType = edgeTypeIndex.get('is_a');
+        const relatedType = edgeTypeIndex.get('relates_to');
+        const leadsType = edgeTypeIndex.get('leads_to');
+        const verifiesType = edgeTypeIndex.get('verifies');
+        const testsConceptType = edgeTypeIndex.get('tests_concept');
+        const testsSkillType = edgeTypeIndex.get('tests_skill');
+        const appearsType = edgeTypeIndex.get('appears_in');
+        const partOfType = edgeTypeIndex.get('is_part_of');
+        const incoming = (type) => type === undefined ? [] : inByType[index][type];
+        const outgoing = (type) => type === undefined ? [] : outByType[index][type];
+        const prerequisites = incoming(prereqType);
+        const unlocks = outgoing(prereqType);
+        const parents = outgoing(isaType);
+        const children = incoming(isaType);
+        const related = [...outgoing(relatedType), ...incoming(relatedType)];
+        const lineageSize = highlight ? Math.max(0, highlight.nodes.size - 1) : 0;
+        const extras = [];
+        if (n.alias && n.alias.length) extras.push(`别名：${n.alias.join('、')}`);
+        if (n.formula) extras.push(`公式：${n.formula}`);
+        if (n.unit) extras.push(`单位：${n.unit}`);
+        if (n.answer) extras.push(`答案：${n.answer}`);
+        if (n.examples && n.examples.length) extras.push(`例子：${n.examples.join('、')}`);
+        card.innerHTML = `
+          <div class="card-head">
+            <span class="dot" style="background:${colorFor(n)}; margin-top:6px"></span>
+            <div>
+              <h2>${esc(n.n)}</h2>
+              <div class="meta">${esc(n.id)} · ${esc(subjectLabel(n.g))} · ${esc(nodeNames[n.lab] || n.lab)} · ${esc(stageLabels[n.st] || n.st)} · ${esc(n.imp || '未标注')}</div>
+            </div>
+            <button class="close" type="button" aria-label="关闭">×</button>
+          </div>
+          <div class="definition">${esc(n.def || '该节点没有摘要字段。')}</div>
+          ${extras.length ? `<div class="inline-list">${esc(extras.join('；'))}</div>` : ''}
+          <div class="metrics">
+            <div class="metric"><strong>${lineageSize}</strong><span>先修链节点</span></div>
+            <div class="metric"><strong>${prerequisites.length}</strong><span>直接先修</span></div>
+            <div class="metric"><strong>${unlocks.length}</strong><span>后继节点</span></div>
+            <div class="metric"><strong>${n.deg}</strong><span>总度数</span></div>
+          </div>
+          ${rows('先修关系：前置节点', prerequisites)}
+          ${rows('先修关系：后继节点', unlocks)}
+          ${rows('上位分类', parents)}
+          ${rows('下位节点', children)}
+          ${rows('因果 / 导向：来源', incoming(leadsType))}
+          ${rows('因果 / 导向：结果', outgoing(leadsType))}
+          ${rows('验证关系：验证该节点', incoming(verifiesType))}
+          ${rows('验证关系：该节点验证', outgoing(verifiesType))}
+          ${rows('相关节点', related)}
+          ${rows('测试概念：考察该节点', incoming(testsConceptType))}
+          ${rows('测试概念：该节点考察', outgoing(testsConceptType))}
+          ${rows('测试技能：考察该节点', incoming(testsSkillType))}
+          ${rows('测试技能：该节点考察', outgoing(testsSkillType))}
+          ${rows('出现位置', outgoing(appearsType))}
+          ${rows('该位置包含内容', incoming(appearsType))}
+          ${rows('所属整体', outgoing(partOfType))}
+          ${rows('组成部分', incoming(partOfType))}
+        `;
+        card.querySelector('.close').addEventListener('click', clearSelection);
+        card.querySelectorAll('[data-node]').forEach((button) => {
+          button.addEventListener('click', () => selectNode(Number(button.dataset.node)));
+        });
+        card.classList.add('on');
+      }
+
+      function renderSubjects() {
+        const target = document.getElementById('subjectChips');
+        const counts = SUBJECTS.map(() => 0);
+        N.forEach((n) => counts[n.g]++);
+        target.innerHTML = '';
+        SUBJECTS.forEach((subject, index) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'chip';
+          button.innerHTML = `<span class="dot" style="background:${COLORS[index]}"></span><span>${esc(subjectNames[subject] || subject)} ${counts[index]}</span>`;
+          button.addEventListener('click', () => {
+            if (activeSubjects.has(index)) {
+              activeSubjects.delete(index);
+              button.classList.add('off');
+            } else {
+              activeSubjects.add(index);
+              button.classList.remove('off');
+            }
+            clearSelection();
+            updateVisible();
+          });
+          target.appendChild(button);
+        });
+      }
+
+      function renderTypeChips() {
+        const target = document.getElementById('typeChips');
+        const counts = NODE_TYPES.map(() => 0);
+        N.forEach((n) => counts[n.ty]++);
+        target.innerHTML = '';
+        NODE_TYPES.forEach((type, index) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = activeTypes.has(index) ? 'chip' : 'chip off';
+          button.innerHTML = `<span>${activeTypes.has(index) ? '●' : '○'}</span><span>${esc(nodeNames[type] || type)} ${counts[index] || 0}</span>`;
+          button.addEventListener('click', () => {
+            if (activeTypes.has(index)) activeTypes.delete(index);
+            else activeTypes.add(index);
+            button.classList.toggle('off', !activeTypes.has(index));
+            button.querySelector('span').textContent = activeTypes.has(index) ? '●' : '○';
+            clearSelection();
+            updateVisible();
+          });
+          target.appendChild(button);
+        });
+      }
+
+      function renderEdgeChips() {
+        const target = document.getElementById('edgeChips');
+        target.innerHTML = '';
+        EDGE_TYPES.forEach((type, index) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = activeEdges.has(index) ? 'chip' : 'chip off';
+          button.innerHTML = `<span>${activeEdges.has(index) ? '●' : '○'}</span><span>${esc(edgeNames[type] || type)} ${edgeCounts[type] || 0}</span>`;
+          button.addEventListener('click', () => {
+            if (activeEdges.has(index)) activeEdges.delete(index);
+            else activeEdges.add(index);
+            button.classList.toggle('off', !activeEdges.has(index));
+            button.querySelector('span').textContent = activeEdges.has(index) ? '●' : '○';
+            clearSelection();
+            updateVisible();
+          });
+          target.appendChild(button);
+        });
+      }
+
+      function renderImportanceChips() {
+        const target = document.getElementById('importanceChips');
+        const counts = new Map(importanceOrder.map((value) => [value, 0]));
+        N.forEach((n) => counts.set(n.imp || '', (counts.get(n.imp || '') || 0) + 1));
+        target.innerHTML = '';
+        importanceOrder.forEach((value) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = activeImportance.has(value) ? 'chip' : 'chip off';
+          button.innerHTML = `<span>${activeImportance.has(value) ? '●' : '○'}</span><span>${esc(importanceNames[value] || value)} ${counts.get(value) || 0}</span>`;
+          button.addEventListener('click', () => {
+            if (activeImportance.has(value)) activeImportance.delete(value);
+            else activeImportance.add(value);
+            button.classList.toggle('off', !activeImportance.has(value));
+            button.querySelector('span').textContent = activeImportance.has(value) ? '●' : '○';
+            clearSelection();
+            updateVisible();
+          });
+          target.appendChild(button);
+        });
+      }
+
+      function renderSearch() {
+        const query = search.value.trim().toLowerCase();
+        if (!query) {
+          results.classList.remove('on');
+          results.innerHTML = '';
+          return;
+        }
+        const matches = [];
+        for (let i = 0; i < N.length && matches.length < 24; i++) {
+          const n = N[i];
+          const text = `${n.n} ${n.id} ${n.lab} ${n.def} ${(n.alias || []).join(' ')} ${n.formula || ''} ${(n.examples || []).join(' ')}`.toLowerCase();
+          if (text.includes(query)) matches.push(i);
+        }
+        results.innerHTML = matches.length
+          ? matches.map((index) => {
+              const n = N[index];
+              return `
+                <button class="result" type="button" data-node="${index}">
+                  <span class="dot" style="background:${colorFor(n)}"></span>
+                  <span class="title">${esc(n.n)}</span>
+                  <span class="meta">${esc(nodeNames[n.lab] || n.lab)} · ${esc(subjectLabel(n.g))}</span>
+                </button>
+              `;
+            }).join('')
+          : '<div class="meta" style="padding:10px">没有匹配结果</div>';
+        results.classList.add('on');
+        results.querySelectorAll('[data-node]').forEach((button) => {
+          button.addEventListener('click', () => {
+            const index = Number(button.dataset.node);
+            const n = N[index];
+            activeSubjects.add(n.g);
+            activeTypes.add(n.ty);
+            activeImportance.add(n.imp || '');
+            maxOrder = Math.max(maxOrder, n.bo);
+            orderMaxInput.value = maxOrder;
+            updateOrderText();
+            updateVisible();
+            selectNode(index);
+            results.classList.remove('on');
+          });
+        });
+      }
+
+      stage.addEventListener('pointerdown', (event) => {
+        pointers.set(event.pointerId, [event.clientX, event.clientY]);
+        dragging = true;
+        moved = false;
+        lastX = event.clientX;
+        lastY = event.clientY;
+        stage.classList.add('dragging');
+        stage.setPointerCapture(event.pointerId);
+      });
+
+      stage.addEventListener('pointermove', (event) => {
+        if (pointers.has(event.pointerId)) pointers.set(event.pointerId, [event.clientX, event.clientY]);
+        if (pointers.size === 2) {
+          const pair = [...pointers.values()];
+          const distance = Math.hypot(pair[0][0] - pair[1][0], pair[0][1] - pair[1][1]);
+          if (pinchDistance) zoom = clamp(zoom * distance / pinchDistance, 0.38, 4.5);
+          pinchDistance = distance;
+          dragging = false;
+        }
+        const rect = canvas.getBoundingClientRect();
+        if (dragging) {
+          const dx = event.clientX - lastX;
+          const dy = event.clientY - lastY;
+          if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+          rotY += dx * 0.0048;
+          if (event.altKey) {
+            tilt = clamp(tilt - dy * 0.003, -1.12, 0.28);
+          } else {
+            panY = clamp(panY + dy, -vh * 1.4, vh * 1.4);
+          }
+          lastX = event.clientX;
+          lastY = event.clientY;
+          return;
+        }
+        const index = pick(event.clientX - rect.left, event.clientY - rect.top);
+        if (index !== hover) {
+          hover = index;
+          if (index >= 0) showTip(index, event);
+          else hideTip();
+        } else if (index >= 0) {
+          placeTip(event);
+        }
+      });
+
+      stage.addEventListener('pointerup', (event) => {
+        pointers.delete(event.pointerId);
+        if (pointers.size < 2) pinchDistance = 0;
+        dragging = false;
+        stage.classList.remove('dragging');
+        if (!moved) {
+          const rect = canvas.getBoundingClientRect();
+          const index = pick(event.clientX - rect.left, event.clientY - rect.top);
+          if (index >= 0) selectNode(index);
+          else clearSelection();
+        }
+      });
+
+      stage.addEventListener('pointercancel', (event) => {
+        pointers.delete(event.pointerId);
+        dragging = false;
+        stage.classList.remove('dragging');
+      });
+
+      stage.addEventListener('pointerleave', () => {
+        hover = -1;
+        hideTip();
+      });
+
+      stage.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        zoom = clamp(zoom * Math.exp(-event.deltaY * 0.0014), 0.38, 4.5);
+      }, { passive: false });
+
+      search.addEventListener('input', renderSearch);
+      search.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          search.value = '';
+          renderSearch();
+        }
+      });
+
+      orderMaxInput.addEventListener('input', () => {
+        maxOrder = Number(orderMaxInput.value);
+        updateOrderText();
+        clearSelection();
+        updateVisible();
+      });
+
+      document.getElementById('reset').addEventListener('click', () => {
+        activeSubjects.clear();
+        SUBJECTS.forEach((_, index) => activeSubjects.add(index));
+        activeTypes.clear();
+        NODE_TYPES.forEach((_, index) => activeTypes.add(index));
+        activeEdges.clear();
+        EDGE_TYPES.forEach((type, index) => { if (defaultEdgeTypes.has(type)) activeEdges.add(index); });
+        activeImportance.clear();
+        importanceOrder.forEach((value) => activeImportance.add(value));
+        maxOrder = DATA.maxOrder;
+        orderMaxInput.value = DATA.maxOrder;
+        rotY = 0.55;
+        tilt = -0.38;
+        zoom = 0.98;
+        panX = 0;
+        panY = 0;
+        renderSubjects();
+        renderTypeChips();
+        renderEdgeChips();
+        renderImportanceChips();
+        updateOrderText();
+        clearSelection();
+        updateVisible();
+      });
+
+      card.addEventListener('pointerdown', (event) => event.stopPropagation());
+      card.addEventListener('wheel', (event) => event.stopPropagation());
+      document.querySelector('.topbar').addEventListener('pointerdown', (event) => event.stopPropagation());
+      document.querySelector('.topbar').addEventListener('wheel', (event) => event.stopPropagation());
+
+      resize();
+      renderSubjects();
+      renderTypeChips();
+      renderEdgeChips();
+      renderImportanceChips();
+      updateOrderText();
+      updateVisible();
+      window.addEventListener('resize', resize);
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>

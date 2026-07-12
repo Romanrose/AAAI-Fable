@@ -1,0 +1,8 @@
+{
+  "input_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_cards\\machine_eval_concept_cards.raw.jsonl",
+  "output_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_cards\\machine_eval_concept_cards.enriched.jsonl",
+  "card_count": 80,
+  "enriched_count": 80,
+  "failed_count": 0,
+  "mode": "rules"
+}

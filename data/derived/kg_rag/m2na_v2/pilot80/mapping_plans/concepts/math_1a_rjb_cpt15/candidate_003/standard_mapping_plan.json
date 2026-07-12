@@ -1,0 +1,101 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt15",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠制作一套标准量器（如“嘉量”）的故事",
+  "characters": [
+    "一位经验丰富的工匠（代表“正方体”的认知主体）",
+    "一位学徒（代表“长方体”的认知主体）"
+  ],
+  "objects": [
+    "标准方斗（代表“正方体”）",
+    "普通方斗（代表“长方体”）",
+    "量器分类图谱（代表“按形状分类”）",
+    "组合量器套件（代表“拼搭立体图形”）",
+    "容积计算公式（代表“正方体体积公式”）"
+  ],
+  "conflict": "工匠制作的标准方斗（正方体）与学徒制作的普通方斗（长方体）在形状上相似但规格不同，学徒无法理解标准方斗为何是特殊的长方体，以及如何通过标准方斗推导出容积计算规则。",
+  "event_chain": [
+    "工匠制作了一个标准方斗（n1），其所有边长相等，由六块相同的正方形木板围成。",
+    "学徒制作了一个普通方斗（n2），其相对面相同，但边长不一定相等。",
+    "工匠指出标准方斗是普通方斗的一种特殊形式（e1: is_a），并展示标准方斗也属于量器分类图谱中的“方形容器”类别（e2: is_a）。",
+    "学徒发现普通方斗与标准方斗在结构上有关联（e3: relates_to），即普通方斗可以看作标准方斗的拉伸或压缩。",
+    "工匠利用标准方斗作为基础模块，与学徒一起拼搭出更复杂的组合量器套件（e4: enables）。",
+    "工匠根据标准方斗的边长，推导出容积计算公式（e5: enables），即边长自乘三次。"
+  ],
+  "turning_point": "学徒意识到标准方斗（正方体）是普通方斗（长方体）的一个特例，并且这个特例的规则（容积公式）可以推广到所有方斗。",
+  "resolution_state": "学徒掌握了标准方斗的容积计算规则，并能够利用标准方斗作为基础单元拼搭更复杂的量器，同时理解了分类中特殊与一般的关系。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "标准方斗",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "普通方斗",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "量器分类图谱",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "组合量器套件",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "容积计算公式",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "工匠指出标准方斗是普通方斗的一种特殊形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "工匠展示标准方斗也属于量器分类图谱中的方形容器类别",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "学徒发现普通方斗与标准方斗在结构上有关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "工匠利用标准方斗作为基础模块拼搭出更复杂的组合量器套件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "工匠根据标准方斗的边长推导出容积计算公式",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中“标准方斗”和“普通方斗”可能被误读为具体历史器物，但已避免使用“正方体”“立方体”等禁止术语。",
+    "确保所有机制节点和边均被映射，无遗漏。",
+    "方向性：e3是从n2到n1的relates_to，故事中“学徒发现普通方斗与标准方斗在结构上有关联”保持了从普通方斗到标准方斗的关联方向。"
+  ],
+  "mapping_context_sha256": "72a1ea28fa8fb23d6922116bc07ad10bdbf910780ded8b52596a77178676af58",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3205f4ac4874e9d8136f30c598bd70503b615b094c75fa84b63de8c69134b921"
+  }
+}

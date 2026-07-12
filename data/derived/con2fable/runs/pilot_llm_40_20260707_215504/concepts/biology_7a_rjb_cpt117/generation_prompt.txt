@@ -1,0 +1,232 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "受精",
+    "fertilization"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：传粉",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：卵子成熟到MⅡ期",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要考虑前置条件或输入：精子获能",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：合子（受精卵）",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：果实和种子的形成",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m7",
+        "text": "与相关概念保持可解释关系：胚胎工程",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14139"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14964"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14142"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14140"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14141"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14962"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "植物园温室中的传粉与种子萌发",
+    "setting": "一座大型植物园的温室内，一株高大的雌性银杏树正处在授粉期，其胚珠已发育成熟，等待花粉粒的到来。温室内还有一株雄性银杏树，其花粉囊已开裂，释放出大量花粉粒。",
+    "conflict": "花粉粒必须克服重重障碍，从雄性银杏树的花粉囊，精准地抵达雌性银杏树的胚珠，并完成融合，否则无法形成新的种子。",
+    "characters": [
+      {
+        "name": "花粉粒阿风",
+        "role": "代表一个成功抵达胚珠的花粉粒，是融合过程的主角。",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "雌性银杏树",
+        "role": "提供胚珠，代表等待融合的成熟卵细胞。",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "雄性银杏树",
+        "role": "提供花粉粒，代表精子的来源。",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "胚珠小室",
+        "role": "代表受精发生的场所（输卵管）。",
+        "mapped_element": "m5"
+      },
+      {
+        "name": "种子",
+        "role": "代表融合后形成的新生命体（合子）。",
+        "mapped_element": "m5"
+      },
+      {
+        "name": "果实",
+        "role": "代表由种子发育而来的下一阶段。",
+        "mapped_element": "m6"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "雄性银杏树释放花粉粒（传粉）"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "雌性银杏树的胚珠成熟到MⅡ期"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "花粉粒在雌性银杏树的柱头上萌发，长出花粉管（获能）"
+      },
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "花粉管中的精子与胚珠中的卵细胞结合"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "结合后形成受精卵（种子）"
+      },
+      {
+        "concept_element": "m6",
+        "narrative_carrier": "种子发育成新的银杏树（果实和种子的形成）"
+      },
+      {
+        "concept_element": "m7",
+        "narrative_carrier": "新银杏树在温室中生长，未来可能被用于人工培育（胚胎工程）"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "雄性银杏树在春风中释放出大量花粉粒，其中一粒名为阿风的花粉粒随风飘向雌性银杏树。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "雌性银杏树的胚珠已经发育成熟，其内部结构已为融合做好准备。",
+        "mapped_elements": [
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "阿风落在雌性银杏树的柱头上，在湿润的环境中萌发，长出一条细长的花粉管，向胚珠方向生长。",
+        "mapped_elements": [
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "花粉管内的两个精子顺着花粉管游动，最终抵达胚珠小室。其中一个精子与卵细胞相遇并融合。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "融合后的细胞开始分裂，形成一颗小小的种子，包裹在雌性银杏树的种皮内。",
+        "mapped_elements": [
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b6",
+        "event": "秋天，种子成熟后掉落在地，被园丁收集起来，准备在苗圃中培育成新的银杏树苗。",
+        "mapped_elements": [
+          "m6"
+        ]
+      },
+      {
+        "beat_id": "b7",
+        "event": "园丁利用这些种子，在温室中成功培育出数十株健康的银杏树苗，用于未来的城市绿化项目。",
+        "mapped_elements": [
+          "m7"
+        ]
+      }
+    ],
+    "turning_point": "花粉粒阿风的花粉管成功穿透胚珠小室，其内的一个精子与卵细胞相遇并融合的瞬间。",
+    "ending": "一颗新的种子在雌性银杏树上形成，并在园丁的照料下，最终长成一棵新的银杏树，为城市增添绿意。",
+    "implied_moral": "生命的延续需要精准的条件、耐心的准备和一次决定性的相遇，才能开启新的循环。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "导管",
+  "concept_id": "biology_7a_rjb_cpt122",
+  "concept_definition": "植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt122",
+    "导管",
+    "水分在茎内的运输结构"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt122",
+      "label": "Concept",
+      "name": "导管",
+      "definition": "植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。",
+      "aliases": [
+        "水分在茎内的运输结构"
+      ],
+      "examples": [
+        "叶脉变红而茎表面不变红的红墨水实验现象提示水在茎内沿导管运输"
+      ],
+      "retrieval_text": "导管\n植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt128",
+          "label": "Concept",
+          "name": "蒸腾作用的意义",
+          "definition": "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt84",
+          "label": "Concept",
+          "name": "输导组织",
+          "definition": "植物体内专门运输物质的通道（组织），存在于蕨类植物以及裸子植物、被子植物等更高等植物的根、茎、叶中。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt123",
+          "label": "Concept",
+          "name": "无机盐运输（随水运输）",
+          "definition": "溶解在水中的无机盐可通过导管形成的运输管网，随水一起被运输到植物体各个部分。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp12",
+          "label": "Experiment",
+          "name": "红墨水示踪水分在茎内的运输途径",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe18",
+          "label": "Exercise",
+          "name": "判断：茎中的导管是运输水分的管道，导管是由一个细胞构成的。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s3",
+          "label": "Section",
+          "name": "第三章 绿色植物与生物圈的水循环",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt122",
+    "concept_id": "biology_7a_rjb_cpt122",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt122",
+      "label": "Concept",
+      "name": "导管",
+      "definition": "植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。",
+      "aliases": [
+        "水分在茎内的运输结构"
+      ],
+      "examples": [
+        "叶脉变红而茎表面不变红的红墨水实验现象提示水在茎内沿导管运输"
+      ]
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "导管"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念（导管）",
+      "story_evidence": "故事中通过红墨水实验和削开树皮观察，揭示了植物体内存在从根到叶的连续管道，水沿这些管道运输，且管道位于木质部内，表面不可见。"
+    },
+    {
+      "concept_role": "核心机制（中空管道、运输水分和无机盐）",
+      "story_evidence": "老园丁用红墨水标记，小松观察到叶脉变红而树皮表面不变红，削开树皮看到细小孔洞，说明管道中空、连续，水从根部经茎到叶，同时携带养分。"
+    },
+    {
+      "concept_role": "学科约束（避免目的论、保留条件过程结果）",
+      "story_evidence": "故事没有说植物‘为了’运输而制造管道，而是通过观察实验条件（浇水、红墨水）和过程（水进入根部、沿管道上行、到达叶片）自然呈现结果（叶子变红）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃里的秘密通道\n\n老园丁在园圃里种下一棵小树苗。他每天浇水，可小树苗的叶子还是蔫蔫的。园丁的儿子小松好奇地问：“爸爸，水明明浇在土里，叶子怎么还渴呢？”\n\n老园丁没有直接回答，而是取来一瓶红墨水，倒进树苗旁的土壤里。小松蹲在一旁仔细观察。过了半天，他发现树苗的叶子边缘泛起了淡淡的红色，可树皮表面却干干净净，一点红色都没有。\n\n“奇怪，红水是怎么跑到叶子里的？树皮上又没有染红。”小松挠着头。\n\n老园丁说：“你拿一片叶子，对着光看看。”小松摘下那片泛红的叶子，对着阳光一照，只见叶脉里布满了细细的红线，像一张红色的网。\n\n“原来水是沿着叶脉走的！”小松恍然大悟。\n\n老园丁又带他来到一棵老柳树下，指着树干说：“你再看看这个。”他用小刀轻轻削去一小块树皮，露出里面白色的木质部。小松发现木质部上有一圈圈细小的孔洞，像无数根吸管并排在一起。\n\n“这些孔洞就是水走的通道吗？”小松问。\n\n“对，它们从根一直通到叶，中间没有隔断。水从根部进入，顺着这些通道往上走，把溶解在水里的养分也带上去。”老园丁说。\n\n小松想了想，又问：“那为什么树皮表面不红呢？”\n\n“因为通道藏在里面，外面是看不见的。只有当你切开或者用红墨水标记，才能发现它们的存在。”老园丁解释道。\n\n小松终于明白了：原来植物体内有一套看不见的运输系统，它由许多细长的管道连接而成，从根到茎再到叶，水就在这些管道里流动，把养分送到每个角落。表面看起来平静的树干，里面其实忙忙碌碌，一刻不停。\n\n从此，小松每次浇水时，都会想起那些藏在树皮下的秘密通道。",
+  "rule_findings": {
+    "story_token_count": 549,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

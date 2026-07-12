@@ -1,0 +1,141 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子成熟后在一段时期内即使环境适宜也不能萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "outcome",
+        "text": "有助于植物躲过不利季节（如严冬）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "种子处于休眠",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "胚完整且有活性",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "种子未处于休眠",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "outcome",
+        "text": "种子不能萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10777",
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n5",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n3",
+        "target": "n6",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  }
+}

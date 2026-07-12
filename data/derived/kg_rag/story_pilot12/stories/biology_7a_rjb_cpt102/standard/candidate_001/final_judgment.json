@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly maps '庆典的筹备' (n1) as a condition that must be satisfied before '庆典的成功举办' (n2) can occur, preserving the enables relation (e1). The three sub-conditions (n3, n4, n5) are clearly shown as is_a components of n1, and the evidence node (n6) is used to verify the condition via historical records. All edges maintain correct direction. The mapping is superior to a version where conditions are merely mentioned without causal linkage or where the evidence is omitted."
+  },
+  "revision_instructions": [],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "query": "physics_8a_rjb_cpt107",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt107",
+    "label": "Concept",
+    "name": "物距",
+    "definition": "物体到凸透镜的距离，用u表示。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "物距\n物体到凸透镜的距离，用u表示。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt106",
+        "label": "Concept",
+        "name": "凸透镜成像规律",
+        "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt108",
+        "label": "Concept",
+        "name": "像距",
+        "definition": "像到凸透镜的距离，用v表示。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s3",
+        "label": "Section",
+        "name": "第三节 凸透镜成像的规律",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "query": "physics_8a_rjb_cpt104",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt104",
+    "label": "Concept",
+    "name": "投影仪成像",
+    "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "投影仪成像\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt95",
+        "label": "Concept",
+        "name": "凸透镜",
+        "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt102",
+        "label": "Concept",
+        "name": "实像",
+        "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s2",
+        "label": "Section",
+        "name": "第二节 生活中的透镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:17244] 凸透镜 --prerequisites_for--> 投影仪成像\n- [normalized:edge:12420] 投影仪成像 --is_a--> 实像"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '投影仪成像', 'definition': '物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。', 'formula': '', 'importance': '重要'}, 'condition_summary': ['[normalized:edge:17244] 凸透镜 --prerequisites_for--> 投影仪成像'], 'process_summary': ['[normalized:edge:12420] 投影仪成像 --is_a--> 实像'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "physics_8a_rjb_cpt104",
+      "label": "Concept",
+      "name": "投影仪成像",
+      "properties": {
+        "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+        "importance": "重要",
+        "retrieval_text": "投影仪成像\nConcept\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。\n重要"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:17244",
+        "source": "physics_8a_rjb_cpt95",
+        "source_name": "凸透镜",
+        "target": "physics_8a_rjb_cpt104",
+        "target_name": "投影仪成像",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:12420",
+        "source": "physics_8a_rjb_cpt104",
+        "source_name": "投影仪成像",
+        "target": "physics_8a_rjb_cpt102",
+        "target_name": "实像",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "投影仪成像",
+        "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [
+        "[normalized:edge:17244] 凸透镜 --prerequisites_for--> 投影仪成像"
+      ],
+      "process_summary": [
+        "[normalized:edge:12420] 投影仪成像 --is_a--> 实像"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 511,
+      "summary_chars": 294,
+      "path_chars": 0,
+      "retrieval_context_chars": 805
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 511,
+    "summary_chars": 294,
+    "path_chars": 0,
+    "retrieval_context_chars": 805
+  }
+}

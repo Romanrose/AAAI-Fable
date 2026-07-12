@@ -1,0 +1,14 @@
+{
+  "pass_fail": true,
+  "missing_roles": [],
+  "draft_length": 295,
+  "alignment_roles_present": [
+    "exercises",
+    "experiments",
+    "outcomes",
+    "prerequisites",
+    "related concepts",
+    "target concept"
+  ],
+  "seed_concept": "苔藓植物是监测空气污染的指示植物"
+}

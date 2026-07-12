@@ -1,0 +1,109 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "农夫与耕牛",
+  "characters": [
+    "老农夫",
+    "耕牛",
+    "小牛犊"
+  ],
+  "objects": [
+    "田地",
+    "犁",
+    "草料"
+  ],
+  "conflict": "耕牛年老力衰，耕地缓慢，无法按时完成春耕。",
+  "event_chain": [
+    "老农夫让耕牛独自耕地，耕牛缓慢地翻土，一天只能耕一小块地。",
+    "老农夫牵来小牛犊，让它与耕牛并排拉犁。",
+    "小牛犊加入后，耕地速度显著加快，半天就耕完了原本一天的量。",
+    "耕牛虽然年老，但经验丰富，小牛犊虽然力壮，但缺乏技巧，两者配合默契。",
+    "耕地结束后，小牛犊被牵回牛棚，它的体力和技巧并未因这次合作而改变。"
+  ],
+  "turning_point": "老农夫牵来小牛犊，让它与耕牛并排拉犁。",
+  "resolution_state": "耕地速度显著加快，春耕按时完成。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "耕牛缓慢耕地",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小牛犊",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小牛犊与耕牛并排拉犁",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "耕地速度显著加快",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "合作耕地：多个劳力共同完成一项农活",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "小牛犊的体力和技巧在耕地前后没有变化",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "耕牛缓慢耕地是一种合作耕地的方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小牛犊与耕牛并排拉犁使得耕牛缓慢耕地得以加速",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "小牛犊是小牛犊与耕牛并排拉犁的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "小牛犊与耕牛并排拉犁导致耕地速度显著加快",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "小牛犊的体力和技巧在耕地前后没有变化验证了小牛犊的特性",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "小牛犊的体力和技巧在耕地前后没有变化与小牛犊相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'过氧化氢'、'分解'、'催化剂'等化学术语。",
+    "注意'小牛犊的体力和技巧在耕地前后没有变化'需明确指向小牛犊本身，而非耕牛。",
+    "避免将'小牛犊'比喻为'催化剂'，以免引入目标概念。"
+  ],
+  "mapping_context_sha256": "feb1dbda195fe2f45dc508c1fec77d113304fbec54f36a4174cad2a5fe739fc4",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "89704a829e3739f6baff18c8bd02a04c46714b10aba91618d4b9efaf6b5defa3"
+  }
+}

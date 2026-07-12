@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n6",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story vividly depicts the farmer's actions (翻地、浇水、观察墒情) as evidence verifying the conditions, making n6 the strongest. n2 (种子发芽) is only mentioned at the end as a result, lacking detailed process description, which weakens its mapping. Edge e1 (conditions enable germination) is implicitly present but not explicitly stated as a causal relation, making it the weakest edge."
+  },
+  "revision_instructions": [
+    "Increase node_coverage to at least 0.8 by explicitly mentioning all three conditions (温度、水分、空气) in the story. Currently, '适宜的温度' is not explicitly mentioned; the story only implies it through seasonal context (春分).",
+    "Strengthen the causal link between conditions and germination (edge e1) by adding a sentence like '正是这些适宜的条件，使得种子顺利萌发' to make the enables relation explicit.",
+    "Ensure edge_coverage reaches 0.8 or above; currently 0.8 is borderline but acceptable. However, to improve, explicitly mention the is_a relations for all conditions (e.g., '充足的阳光是田地的综合条件之一')."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"concept_id": "biology_7a_rjb_cpt1", "subject": "biology", "status": "success", "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\concepts\\biology_7a_rjb_cpt1", "workflow": "agentic", "retrieval_mode": "dual_level", "final_status": "accept", "weighted_overall": 4.25, "chinese_char_ratio": 0.8351, "index": 1}

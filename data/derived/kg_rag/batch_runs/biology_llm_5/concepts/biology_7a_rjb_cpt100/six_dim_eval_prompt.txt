@@ -1,0 +1,204 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "苔藓植物是监测空气污染的指示植物",
+  "concept_id": "biology_7a_rjb_cpt100",
+  "concept_definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt100",
+    "苔藓植物是监测空气污染的指示植物"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt100",
+      "label": "Concept",
+      "name": "苔藓植物是监测空气污染的指示植物",
+      "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+      "importance": "了解",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "苔藓植物是监测空气污染的指示植物\nConcept\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\n了解"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s1",
+          "label": "Section",
+          "name": "第一章 生物圈中有哪些绿色植物",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "第一章 生物圈中有哪些绿色植物\nSection"
+        }
+      ]
+    },
+    "meta": {
+      "node_count": 2,
+      "edge_count": 1
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt100",
+    "seed": {
+      "id": "biology_7a_rjb_cpt100",
+      "label": "Concept",
+      "name": "苔藓植物是监测空气污染的指示植物",
+      "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+      "importance": "了解",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "苔藓植物是监测空气污染的指示植物\nConcept\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\n了解"
+    },
+    "source_domain": "garden workshop",
+    "entities": [
+      "a careful caretaker",
+      "a plot that depends on the right conditions",
+      "tools and routines that reveal whether growth is real"
+    ],
+    "event_chain": [
+      "The caretaker prepares the conditions that must already be in place.",
+      "The plot uses those conditions to produce visible growth.",
+      "Nearby processes either support or compete with that growth.",
+      "Observation and trials reveal whether the growth is genuine and sustained."
+    ],
+    "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+    "turning_point": "A visible change reveals which condition actually controls the outcome.",
+    "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+    "alignment_plan": [
+      {
+        "concept_role": "target concept",
+        "concept_items": [
+          "苔藓植物是监测空气污染的指示植物"
+        ],
+        "story_role": "central productive process"
+      },
+      {
+        "concept_role": "prerequisites",
+        "concept_items": [],
+        "story_role": "conditions or resources that must be prepared first"
+      },
+      {
+        "concept_role": "related concepts",
+        "concept_items": [],
+        "story_role": "neighboring processes that contextualize or contrast the main process"
+      },
+      {
+        "concept_role": "outcomes",
+        "concept_items": [],
+        "story_role": "visible consequences produced by the core process"
+      },
+      {
+        "concept_role": "experiments",
+        "concept_items": [],
+        "story_role": "tests that reveal whether the process truly happened"
+      },
+      {
+        "concept_role": "exercises",
+        "concept_items": [],
+        "story_role": "follow-up checks that reinforce the lesson"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "target concept",
+      "story_evidence": "Moss with one cell layer sickened near car fumes and revived in clean air, showing it monitors pollution."
+    },
+    {
+      "concept_role": "prerequisites",
+      "story_evidence": "Elara prepared the plot and controlled air conditions (filtered vs. open) before growth could be observed."
+    },
+    {
+      "concept_role": "related concepts",
+      "story_evidence": "Car fumes and factory smoke acted as neighboring processes that contrasted with clean air."
+    },
+    {
+      "concept_role": "outcomes",
+      "story_evidence": "Moss turning brown or staying green were visible consequences of air quality."
+    },
+    {
+      "concept_role": "experiments",
+      "story_evidence": "Swapping plots and placing moss near the chimney revealed the mechanism of toxin detection."
+    },
+    {
+      "concept_role": "exercises",
+      "story_evidence": "Elara taught others to use moss as a living indicator, reinforcing the lesson through follow-up checks."
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "In a quiet garden workshop, a careful caretaker named Elara prepared a small plot of moss. She knew mosses had only one cell layer on their leaves, making them vulnerable to poisons from both sides. She placed the plot near a busy road where car fumes drifted daily.\n\nThe moss grew at first, but soon turned brown and brittle. Elara suspected the air was the cause. She set up a second plot in a sealed glass box with filtered air. That moss stayed lush and green. She then swapped their positions. The healthy moss in the open quickly sickened, while the sickly moss revived in clean air.\n\nTo test her understanding, Elara placed a third plot near a factory chimney. Within days, the moss withered. She realized the moss was not just growing—it was revealing invisible toxins. The plot’s condition was a direct measure of air purity.\n\nElara now used moss as a living indicator. She taught others: when moss thrives, the air is safe; when it fails, danger is present. The garden stabilized, and the moss became a silent guardian.",
+  "rule_findings": {
+    "story_token_count": 183,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [],
+    "template_hits": [],
+    "template_similarity": 0.0864
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

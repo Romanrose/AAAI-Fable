@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "星花",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "秤杆立刻向下倾斜",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "同一袋米，在这杆秤上称是八斤，换一杆星花不同的秤，可能就变成七斤或九斤",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "秤杆立刻向下倾斜",
+      "direction_preserved": true,
+      "confidence": 0.7
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "这颗星花告诉我，铁砣是三斤",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "同一袋米，在这杆秤上称是八斤，换一杆星花不同的秤，可能就变成七斤或九斤",
+      "direction_preserved": true,
+      "confidence": 0.7
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All three mechanism nodes and three edges are aligned to story evidence. Node n1 (参照物) aligns to '星花', n2 (机械运动) to '秤杆立刻向下倾斜', n3 (运动与静止的相对性) to the statement about different readings on different scales. Edge e1 (relates_to from n2 to n1) is supported by the same process evidence; e2 (enables from n1 to n3) by the star indicating weight; e3 (relates_to from n3 to n1) by the relative nature of weight readings. No nodes or edges are missing."
+}

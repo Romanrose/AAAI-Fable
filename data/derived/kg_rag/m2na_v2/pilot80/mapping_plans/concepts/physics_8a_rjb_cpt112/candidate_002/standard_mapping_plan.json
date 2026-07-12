@@ -1,0 +1,87 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农通过调节水闸来灌溉不同距离的田地",
+  "characters": [
+    "老农",
+    "水闸",
+    "水渠",
+    "近处田地",
+    "远处田地"
+  ],
+  "objects": [
+    "水闸",
+    "水渠",
+    "近处田地",
+    "远处田地"
+  ],
+  "conflict": "老农需要灌溉近处和远处两块田地，但水闸的开启程度必须根据田地距离调整，否则水要么太弱到不了远处，要么太强淹没近处。",
+  "event_chain": [
+    "老农观察水渠和两块田地的位置",
+    "老农调节水闸开口大小",
+    "水流经过水渠分别到达近处和远处田地",
+    "近处田地得到适量灌溉",
+    "远处田地得到适量灌溉"
+  ],
+  "turning_point": "老农根据田地距离精确调节水闸开口，使水流既能到达远处又不淹没近处。",
+  "resolution_state": "近处和远处田地都得到适量灌溉，庄稼生长良好。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农调节水闸开口大小",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水渠和水闸共同作用引导水流",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "远处田地能获得灌溉的最远距离点",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "近处田地能获得灌溉的最近距离点",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水渠和水闸共同作用引导水流（n2）与老农调节水闸开口大小（n1）相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农调节水闸开口大小（n1）使远处田地能获得灌溉（n3）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老农调节水闸开口大小（n1）使近处田地能获得灌溉（n4）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中水闸调节的因果关系与眼睛调节的机制一致，避免引入无关的桥梁概念。",
+    "避免使用“眼睛”、“调节”、“晶状体”等禁止术语。",
+    "注意水闸调节的“开口大小”对应晶状体形状变化，水流对应光线，田地距离对应物体距离。"
+  ],
+  "mapping_context_sha256": "b90f78bed0fce7c118a015c4f5541069afb28344e8c547e7f3f2760f1db8df39",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "80b962f0af9945e5cded15d0d173fdea773cbfbc69dab5c3fb7c30c241f43a92"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "concept_id": "math_1a_rjb_cpt26",
+  "target_concept": "7的加减法",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过花朵的组合与拆分，完整且准确地呈现了所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等，与概念定义完全一致。",
+    "implicitness": "故事完全未提及'7的加减法'或任何相关术语，而是通过花圃中花朵数量的变化隐含地展示数学关系，符合隐含性要求。",
+    "mapping_clarity": "故事中每个组合与拆分事件都清晰对应一个加减法算式，如红花黄花合并对应5+2=7，拿走黄花对应7-2=5，映射明确且易于理解。",
+    "readability": "故事语言流畅，情节简单有趣，适合低年级学生阅读，字数适中，无生僻词汇。",
+    "pedagogical_value": "故事通过重复的实践操作（组合与拆分）强化了7的加减法概念，并引导读者发现总数不变的核心规律，教学价值高。",
+    "novelty": "花圃场景虽常见，但通过多组花朵的对比和操作来呈现加减法，有一定新意，但整体框架较为常规。"
+  },
+  "revision_suggestions": [
+    "可增加一个需要主角解决的小谜题，如花圃中某块土地花朵数量变化后如何恢复总数，以增强互动性。",
+    "可引入更多样化的组合方式，如7可以分成0和7，以覆盖更全面的加减法情况。"
+  ],
+  "rule_findings": {
+    "story_token_count": 554,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过花朵的组合与拆分，完整且准确地呈现了所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等，与概念定义完全一致。",
+      "implicitness": "故事完全未提及'7的加减法'或任何相关术语，而是通过花圃中花朵数量的变化隐含地展示数学关系，符合隐含性要求。",
+      "mapping_clarity": "故事中每个组合与拆分事件都清晰对应一个加减法算式，如红花黄花合并对应5+2=7，拿走黄花对应7-2=5，映射明确且易于理解。",
+      "readability": "故事语言流畅，情节简单有趣，适合低年级学生阅读，字数适中，无生僻词汇。",
+      "pedagogical_value": "故事通过重复的实践操作（组合与拆分）强化了7的加减法概念，并引导读者发现总数不变的核心规律，教学价值高。",
+      "novelty": "花圃场景虽常见，但通过多组花朵的对比和操作来呈现加减法，有一定新意，但整体框架较为常规。"
+    },
+    "revision_suggestions": [
+      "可增加一个需要主角解决的小谜题，如花圃中某块土地花朵数量变化后如何恢复总数，以增强互动性。",
+      "可引入更多样化的组合方式，如7可以分成0和7，以覆盖更全面的加减法情况。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

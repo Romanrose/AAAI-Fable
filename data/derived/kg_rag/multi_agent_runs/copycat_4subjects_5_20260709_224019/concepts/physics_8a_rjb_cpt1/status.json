@@ -1,0 +1,15 @@
+{
+  "concept_id": "physics_8a_rjb_cpt1",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "strategy": "copycat",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.05,
+  "six_dim_mode": "llm",
+  "selected_candidate_id": "candidate_002",
+  "selection_mode": "copycat_temperature",
+  "selected_score": 1.8121,
+  "selected_temperature": 20.26,
+  "revision_applied": false
+}

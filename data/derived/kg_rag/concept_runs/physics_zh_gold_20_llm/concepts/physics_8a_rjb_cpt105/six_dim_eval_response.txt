@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确体现了凸透镜成像原理：物体在焦点以内形成放大、正立的虚像。小乐通过调整距离，发现只有将玻璃片（凸透镜）离物体很近时才能看到放大正立的像，完全符合概念定义。",
+    "implicitness": "故事未直接提及'放大镜成像'或'凸透镜'等术语，而是通过'中间厚、边缘薄的玻璃片'和'离得很近'等描述隐含地呈现原理，但'放大镜'一词在标题中出现，略有显性。",
+    "mapping_clarity": "故事中'玻璃片离物体很近'明确对应'物体位于焦点以内'，'放大、正立'的描述直接对应成像特点，距离变化导致的不同结果清晰展示了条件与结果的关系，映射非常清晰。",
+    "readability": "故事语言流畅自然，情节简单易懂，角色对话生动，适合目标年龄段读者，没有复杂术语或抽象描述。",
+    "pedagogical_value": "故事通过小乐的探索过程，生动展示了距离对成像的影响，并强调了关键条件（离得很近），能有效帮助学习者理解放大镜成像原理，教学价值高。",
+    "novelty": "故事以钟楼观察室为背景，有一定场景创意，但核心情节（通过调整距离发现成像规律）在科学教育故事中较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "将标题'钟楼里的秘密'改为更中性的标题，避免暗示'放大镜'，以增强隐含性。",
+    "可增加一个角色对'为什么只有离得近才能放大'的疑问，以强化对焦点概念的隐含引导。",
+    "在故事结尾可加入小乐用新规则判断其他场景的简短描述，以增强教学迁移。"
+  ]
+}

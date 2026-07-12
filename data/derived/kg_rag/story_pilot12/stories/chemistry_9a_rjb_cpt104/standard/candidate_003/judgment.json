@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story fails to explicitly map the mechanism nodes and edges as required. Node coverage is only 0.125 and edge coverage is 0.0, both far below the 0.8 threshold. The story does not contain the explicit relations from the mapping plan, such as '老农用传统方法从芝麻中榨取香油是一种榨取香油的方法' (e1) or any other edge relations. The story is a coherent narrative about sesame oil extraction but does not preserve the required mapping structure. This makes it worse than a story that explicitly includes the mapped relations."
+  },
+  "revision_instructions": [
+    "Rewrite the story to explicitly include all node mappings as defined in the frozen mapping plan. For example, include sentences that directly state '老农用传统方法从芝麻中榨取香油是一种榨取香油的方法' for edge e1, and similarly for all other edges.",
+    "Ensure that each mechanism node (n1 to n8) is clearly represented in the story with the exact story carrier text from the mapping plan.",
+    "Maintain the story length between 450 and 750 Chinese characters.",
+    "Avoid any chemical terms like '高锰酸钾' or '氧气' to prevent hard leakage."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "concept_id": "biology_7a_rjb_cpt106",
+  "target_concept": "种子萌发的自身条件",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过干瘪、被虫蛀、胚失去活力的种子不能发芽，以及完好但休眠的种子暂不发芽，准确传达了种子萌发需要胚完整、有活性且未处于休眠的内部条件，完全符合概念定义。",
+    "implicitness": "目标概念名称‘种子萌发的自身条件’未在故事正文中出现，核心机制通过小徒弟的观察和挖掘事件自然隐含，没有直接说教。",
+    "mapping_clarity": "每个种子状态（干瘪、被虫蛀、胚死亡、休眠）都清晰对应概念中的内部因素，且通过具体事件（挖开、纱布实验）展示，映射明确。",
+    "readability": "故事语言流畅，情节简单易懂，对话自然，适合目标年龄段阅读，无复杂术语。",
+    "pedagogical_value": "故事通过对比和实验揭示概念，引导读者从现象到本质思考，结尾总结强化理解，教学效果强。",
+    "novelty": "故事采用园圃师徒对话的常见框架，虽无硬伤但缺乏独特创意，新颖性一般。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个休眠种子在经历低温后发芽的情节，更完整展示休眠与萌发的关系。",
+    "结尾总结可更简洁，避免重复前文内容。"
+  ],
+  "rule_findings": {
+    "story_token_count": 554,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "种子萌发的自身条件",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过干瘪、被虫蛀、胚失去活力的种子不能发芽，以及完好但休眠的种子暂不发芽，准确传达了种子萌发需要胚完整、有活性且未处于休眠的内部条件，完全符合概念定义。",
+      "implicitness": "目标概念名称‘种子萌发的自身条件’未在故事正文中出现，核心机制通过小徒弟的观察和挖掘事件自然隐含，没有直接说教。",
+      "mapping_clarity": "每个种子状态（干瘪、被虫蛀、胚死亡、休眠）都清晰对应概念中的内部因素，且通过具体事件（挖开、纱布实验）展示，映射明确。",
+      "readability": "故事语言流畅，情节简单易懂，对话自然，适合目标年龄段阅读，无复杂术语。",
+      "pedagogical_value": "故事通过对比和实验揭示概念，引导读者从现象到本质思考，结尾总结强化理解，教学效果强。",
+      "novelty": "故事采用园圃师徒对话的常见框架，虽无硬伤但缺乏独特创意，新颖性一般。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个休眠种子在经历低温后发芽的情节，更完整展示休眠与萌发的关系。",
+      "结尾总结可更简洁，避免重复前文内容。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

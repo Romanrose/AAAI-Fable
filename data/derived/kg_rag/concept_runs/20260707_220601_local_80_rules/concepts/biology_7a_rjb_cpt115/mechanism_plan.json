@@ -1,0 +1,64 @@
+{
+  "core_question": "自花传粉的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "自花传粉 --is_a--> 传粉",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:10778"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "避免目的论解释。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s4",
+      "text": "避免把个体努力写成进化原因。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:10778"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "自花传粉",
+    "biology_7a_rjb_cpt115"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:10778"
+    ],
+    "must_cover_path_ids": []
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫与禾苗",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "禾苗",
+    "田地",
+    "阳光"
+  ],
+  "conflict": "农夫希望禾苗长得快，但禾苗的生长需要时间，不能急于求成。",
+  "event_chain": [
+    "农夫在田地里种下禾苗",
+    "禾苗从田地中吸收养分和水分",
+    "禾苗的生长需要阳光的照射",
+    "农夫每天观察禾苗的高度",
+    "禾苗的高度与生长时间相关",
+    "农夫根据禾苗的高度判断是否该施肥或浇水"
+  ],
+  "turning_point": "农夫发现禾苗长得很慢，于是决定拔苗助长，结果禾苗全部枯萎。",
+  "resolution_state": "农夫意识到禾苗的生长必须遵循自然规律，不能人为干预过度。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "禾苗从田地中吸收养分和水分",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "禾苗的高度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "禾苗的生长时间",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "禾苗的生长规律",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "禾苗从田地中吸收养分和水分是禾苗高度的条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "禾苗的高度与禾苗的生长时间相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "禾苗的高度使农夫能判断禾苗的生长规律",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保禾苗的高度不直接映射为物距，而是作为类比载体",
+    "避免使用任何与光学或凸透镜相关的术语",
+    "注意事件链中不引入课程桥接上下文（如凸透镜成像规律的具体内容）"
+  ],
+  "mapping_context_sha256": "fa097a8c4eed533b813ccfbd9697c0118ba2b3174970a01d288af42ad30adb53",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "055b1ffa795fc871857c32b69f5b5a2fed2bae048778a51b34e7d19eb4b83ff4"
+  }
+}

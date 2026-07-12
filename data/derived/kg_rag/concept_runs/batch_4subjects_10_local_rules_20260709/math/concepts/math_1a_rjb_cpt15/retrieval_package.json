@@ -1,0 +1,108 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt15",
+    "label": "Concept",
+    "name": "正方体",
+    "properties": {
+      "definition": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。",
+      "importance": "掌握",
+      "examples": [
+        "骰子",
+        "魔方的小方块",
+        "魔方",
+        "小正方体积木"
+      ],
+      "pages": "第3章·第1节",
+      "aliases": [
+        "立方体"
+      ],
+      "retrieval_text": "正方体\nConcept\n由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。\n掌握\n第3章·第1节\n立方体\n骰子\n魔方的小方块\n魔方\n小正方体积木"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16340",
+      "source": "math_1a_rjb_cpt15",
+      "source_name": "正方体",
+      "target": "math_5b_rjb_cpt17",
+      "target_name": "正方体体积公式",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:16339",
+      "source": "math_1a_rjb_cpt15",
+      "source_name": "正方体",
+      "target": "math_1a_rjb_skl9",
+      "target_name": "拼搭立体图形",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12134",
+      "source": "math_1a_rjb_cpt15",
+      "source_name": "正方体",
+      "target": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12133",
+      "source": "math_1a_rjb_cpt15",
+      "source_name": "正方体",
+      "target": "math_1a_rjb_cpt14",
+      "target_name": "长方体",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:19306",
+      "source": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target": "math_1a_rjb_cpt15",
+      "target_name": "正方体",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "正方体",
+      "definition": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:16340] 正方体 --prerequisites_for--> 正方体体积公式",
+      "[normalized:edge:16339] 正方体 --prerequisites_for--> 拼搭立体图形"
+    ],
+    "process_summary": [
+      "[normalized:edge:12134] 正方体 --is_a--> 按形状分类",
+      "[normalized:edge:12133] 正方体 --is_a--> 长方体",
+      "[normalized:edge:19306] 长方体 --relates_to--> 正方体"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 5,
+    "candidate_edge_count": 5,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1238,
+    "summary_chars": 464,
+    "path_chars": 0,
+    "retrieval_context_chars": 1702
+  }
+}

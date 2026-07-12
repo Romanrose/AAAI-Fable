@@ -1,0 +1,67 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt115",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "眼睛依靠调节能看清的最近点，正常眼近点约为10 cm",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19715"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "明视距离"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "3a88d65f3aee6fe117e5286393905bb067ab50c7df33712a7b93c3b6beea9e41",
+    "retrieval_sha256": "66bb46073738725bc43cc9f0c886f27a849c869581148c542ee863e5e75ec3e6",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "b21694b10db1a913579086f08c5f6a402faca7c7c05ed86220a4902b306ce6f3"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

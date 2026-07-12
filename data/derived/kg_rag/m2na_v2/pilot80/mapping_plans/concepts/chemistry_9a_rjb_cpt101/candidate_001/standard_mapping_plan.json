@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农鉴别土壤是否肥沃的故事",
+  "characters": [
+    "老农",
+    "徒弟"
+  ],
+  "objects": [
+    "干枯的稻草",
+    "一块待测的田地"
+  ],
+  "conflict": "徒弟无法判断一块田地是否肥沃，老农决定用简单方法测试。",
+  "event_chain": [
+    "老农将一根干枯的稻草点燃后吹灭，使其带有火星",
+    "老农将带有火星的稻草插入待测的田地中",
+    "稻草迅速复燃，冒出火焰",
+    "老农断定该田地土壤肥沃"
+  ],
+  "turning_point": "带有火星的稻草插入田地后迅速复燃",
+  "resolution_state": "田地土壤被确认为肥沃",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农将带有火星的稻草插入待测的田地中",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "肥沃的土壤",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "稻草复燃",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "该田地土壤肥沃",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "肥沃的土壤能支持燃烧",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农将带有火星的稻草插入田地导致稻草复燃",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "肥沃的土壤使稻草复燃成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "稻草复燃产生了该田地土壤肥沃的结论",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "肥沃的土壤能支持燃烧这一规则定义了肥沃的土壤",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "肥沃的土壤能支持燃烧这一规则使稻草复燃成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中未出现'氧气'、'木条'等化学术语",
+    "确保'肥沃的土壤'与'支持燃烧'的类比合理，避免牵强",
+    "注意'干枯的稻草'与'带有火星的木条'功能相似，但需明确稻草是干枯的以支持燃烧"
+  ],
+  "mapping_context_sha256": "f8d49bdc374420b20bfa1b9c7ae257a4243ee9eb2697e4ac13c59196a44fb9a9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5dea8ce4fd0e123fc0f4682ff5442a8d11e793f39249c5adf90ddac3fbdef858"
+  }
+}

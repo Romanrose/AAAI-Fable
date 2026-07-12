@@ -1,0 +1,80 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农在集市上卖瓜，不同买家对瓜的评判标准不同",
+  "characters": [
+    "老农",
+    "第一位买家",
+    "第二位买家"
+  ],
+  "objects": [
+    "瓜",
+    "称",
+    "摊位"
+  ],
+  "conflict": "两位买家对同一个瓜的评判结果不同，引发争议",
+  "event_chain": [
+    "老农在集市上摆摊卖瓜，瓜放在称上",
+    "第一位买家来买瓜，他根据瓜的个头大小判断瓜好不好",
+    "第一位买家认为这个瓜很大，所以是好瓜",
+    "第二位买家来买瓜，他根据瓜的敲击声音判断瓜好不好",
+    "第二位买家认为这个瓜声音沉闷，所以是坏瓜",
+    "两位买家对同一个瓜的评判结果不同，发生争执"
+  ],
+  "turning_point": "老农指出，两位买家评判瓜的标准不同，所以结论不同，但瓜本身没有变化",
+  "resolution_state": "两位买家意识到，评判标准不同导致结论不同，争执化解",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "评判瓜的标准（如个头大小、敲击声音）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "瓜被买家评判的过程（个头变化或声音变化）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "瓜是好是坏取决于评判标准，不同标准下结论不同",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "瓜被评判的过程（n2）与评判标准（n1）相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "评判标准（n1）使结论（n3）成立",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "结论（n3）与评判标准（n1）相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'参照物'等禁止术语",
+    "确保所有机制节点和边都被映射，且方向正确",
+    "避免将买家争执的解决过程误当作因果机制"
+  ],
+  "mapping_context_sha256": "1da7366c47ebe2c0a6ee8ba729b802e15600b53b489b67f694086ddfea110d56",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "32d00895ef3ad8b6c6d57b85dbf1010305458c0d7f1b79831f83468e4f778312"
+  }
+}

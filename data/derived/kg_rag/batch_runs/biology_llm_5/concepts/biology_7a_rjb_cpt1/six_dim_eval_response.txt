@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "The story accurately reflects the concept definition by demonstrating all key life characteristics: nutrition, respiration, response to stimuli, growth, and reproduction through the seed's development.",
+    "implicitness": "The term '生物' and its alias '生命体' are never used in the story body; the concept is conveyed entirely through the actions and observations of the plant.",
+    "mapping_clarity": "Each life characteristic is clearly mapped to a story event: nutrition (absorbing water), respiration (leaves breathing), response (stem bending), growth (shoot emerging), and reproduction (cutting rooting).",
+    "readability": "The story uses simple, vivid language with a clear narrative flow, making it easy for young readers to follow.",
+    "pedagogical_value": "The story effectively teaches the concept through a concrete example and includes experiments (touch test, light test, cutting) that reinforce learning.",
+    "novelty": "While the garden workshop setting is pleasant, the seed-growing plot is a common analogy for life; the inclusion of experiments adds some novelty."
+  },
+  "revision_suggestions": [
+    "Consider using a less common organism (e.g., a fungus or protist) to increase novelty.",
+    "Add a brief moment of confusion or misidentification to deepen the learning experience."
+  ]
+}

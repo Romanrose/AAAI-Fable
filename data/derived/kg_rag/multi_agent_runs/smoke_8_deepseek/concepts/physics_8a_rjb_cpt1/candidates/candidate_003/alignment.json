@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "船队各船之间的空间远近关系，需要通过带刻度的望远镜（测量工具）来获得具体数值，从而指导信号传递。",
+      "evidence": "瞭望员老陈和见习瞭望员小方在信号台值班。",
+      "narrative_anchor": "瞭望员老陈和见习瞭望员小方在信号台值班。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

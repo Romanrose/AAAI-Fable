@@ -1,0 +1,124 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt11",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "细胞是生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt11:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "组织是由形态相似、结构和功能相同的细胞联合在一起形成的细胞群。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt68:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "细胞是生命活动的基本单位：生物的生长、发育、生殖以及各种生理现象等生命活动的基础都需要到细胞层面去解释，生命活动离不开细胞。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_bx1_rjb_cpt1:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "state",
+        "text": "细胞是基本的生命系统：细胞是由多种组分相互作用、相互配合构成的有生命的系统，并且在各层次生命系统中处于最基本层次。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_bx1_rjb_cpt2:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "病毒是一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt12:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14135"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14136"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14137"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17836"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "细胞",
+      "cell"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "667837eef005034c4120e2175ffadd1d08b0931cf5959d196bdccec28aed022f",
+    "retrieval_sha256": "7e55ace78637628ba8712105a0795afa398d97b2ae41c9ea70a38f9efe335175",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "4d52eac519a1f9539a6e184d30a78be3aba9c84497d557e942e2c0fd55519083"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

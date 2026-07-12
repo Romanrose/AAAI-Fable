@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "水渠调度站中的入口条件核对",
+      "evidence": "先核对入口处的条件",
+      "narrative_anchor": "先核对入口处的条件",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "水渠调度站中的第2道转化环节",
+      "evidence": "第二道转化环节",
+      "narrative_anchor": "第二道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "水渠调度站中的结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "主角把这个具体现象归入“投影仪成像”这类更大的共同规则，而不是当成孤立事件。",
+      "evidence": "他把这个现象归入那条共同规则",
+      "narrative_anchor": "他把这个现象归入那条共同规则",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "主角把这个具体现象归入“照相机成像”这类更大的共同规则，而不是当成孤立事件。",
+      "evidence": "他再次把这个现象归入同一类规则",
+      "narrative_anchor": "他再次把这个现象归入同一类规则",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

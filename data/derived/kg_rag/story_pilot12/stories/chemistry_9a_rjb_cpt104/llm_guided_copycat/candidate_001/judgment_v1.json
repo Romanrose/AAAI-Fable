@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story explicitly maps '水稻种植方法' to n1 and '种植方法' to n2, and preserves the is_a relation (e1) clearly. However, node n3 (收获方法) and edge e2 (种植方法需要先了解收获方法) are completely absent from the story, making the mapping incomplete. The story also omits node n5 (生长过程) and edge e4, which are part of the core mechanism. This makes the mapping observably worse than a realization that includes all required nodes and edges."
+  },
+  "revision_instructions": [
+    "Add explicit mention of '收获方法' (n3) and its relation to '种植方法' (e2: 种植方法需要先了解收获方法).",
+    "Add explicit mention of '生长过程' (n5) and its relation to '种植方法' (e4: 生长过程是先了解种植方法的前提).",
+    "Ensure that the story includes all required edges from the mechanism graph, especially e2 and e4, to achieve full coverage."
+  ],
+  "final_status": "revise"
+}

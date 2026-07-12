@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "biology_7a_rjb_cpt101",
+  "subject": "biology",
+  "canonical_name": "种子萌发",
+  "aliases": [],
+  "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+  "concept_type": "process",
+  "forbidden_terms": [
+    "种子萌发"
+  ]
+}

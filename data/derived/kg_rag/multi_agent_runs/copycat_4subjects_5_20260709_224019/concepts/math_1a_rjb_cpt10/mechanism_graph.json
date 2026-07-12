@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "表示前面的数量比后面的数量少。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "保留形式定义条件和规则一致性。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "避免只有故事没有数学结构。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:16377",
+      "source_name": "等号含义",
+      "target_name": "小于号含义",
+      "relation_semantic_role": "prerequisite"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "relates_to",
+      "source_edge_id": "normalized:edge:19331",
+      "source_name": "等号含义",
+      "target_name": "小于号含义",
+      "relation_semantic_role": "association"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:16377",
+    "normalized:edge:19331"
+  ]
+}

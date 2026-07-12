@@ -1,0 +1,22 @@
+{
+  "id": "chemistry_9a_rjb_cpt10",
+  "method": "con2fable",
+  "format_validity": 1.0,
+  "validation_errors": [],
+  "exact_concept_leakage": 0.0,
+  "soft_term_leakage": 0.0,
+  "exact_leakage_hits": [],
+  "soft_leakage_hits": [],
+  "node_coverage": 0.0,
+  "weighted_node_coverage": 0.0,
+  "edge_coverage": 0.14285714285714285,
+  "weighted_edge_coverage": 0.14285714285714285,
+  "alignment_precision": 0.06666666666666667,
+  "alignment_hallucination_rate": 0.9333333333333333,
+  "relation_direction_accuracy": 1.0,
+  "template_hit_rate": 0.0,
+  "template_hits": [],
+  "narrative_char_count": 712,
+  "valid_node_alignment_count": 0,
+  "valid_edge_alignment_count": 1
+}

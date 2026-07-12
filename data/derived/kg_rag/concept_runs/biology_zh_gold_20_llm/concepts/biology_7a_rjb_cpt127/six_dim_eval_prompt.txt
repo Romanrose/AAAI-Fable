@@ -1,0 +1,199 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "保卫细胞",
+  "concept_id": "biology_7a_rjb_cpt127",
+  "concept_definition": "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt127",
+    "保卫细胞"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt127",
+      "label": "Concept",
+      "name": "保卫细胞",
+      "definition": "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "保卫细胞\n构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt126",
+          "label": "Concept",
+          "name": "气孔",
+          "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp13",
+          "label": "Experiment",
+          "name": "观察叶片的结构（徒手切片与下表皮装片）",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe20",
+          "label": "Exercise",
+          "name": "判断：植物可以通过控制保卫细胞的形状和大小来控制气体和水分的进出。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s3",
+          "label": "Section",
+          "name": "第三章 绿色植物与生物圈的水循环",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt127",
+    "concept_id": "biology_7a_rjb_cpt127",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt127",
+      "label": "Concept",
+      "name": "保卫细胞",
+      "definition": "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "保卫细胞"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念（保卫细胞）",
+      "story_evidence": "故事中‘一对半月形的门卫’、‘小卫士’指代保卫细胞，它们通过改变形状控制窗口（气孔）的开合。"
+    },
+    {
+      "concept_role": "核心机制（形状和大小调节使气孔张开或闭合）",
+      "story_evidence": "故事描述‘小卫士’吸足水分时膨胀弯曲推开窗口，失水时收缩变直关上窗口，体现了形状变化控制气孔开合的机制。"
+    },
+    {
+      "concept_role": "学科约束（避免目的论、保留条件过程结果）",
+      "story_evidence": "故事强调‘小卫士’不是有意识选择，而是受水分条件影响自动调节，避免了目的论解释；并完整呈现了条件（水分充足/干旱）、过程（吸水/失水导致形状变化）和结果（窗口开合）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃的秘密\n\n老园丁在园圃里种了一片豌豆。每天清晨，他都会仔细观察叶片上的露珠。小徒弟阿明觉得奇怪：“师父，为什么有的叶片上露珠多，有的却很少？”\n\n老园丁没有直接回答，只是让阿明每天记录叶片上小孔的开合情况。阿明发现，叶片上那些微小的“窗口”有时张开，有时闭合。清晨湿润时，窗口大多张开；正午炎热时，窗口却紧紧关闭。\n\n一天，阿明忍不住问：“师父，这些窗口是谁在开关呢？”\n\n老园丁指着叶片说：“你看，每个窗口旁边都有两个弯弯的‘小卫士’。它们就像一对半月形的门卫，能改变自己的形状。当它们吸足水分时，就会膨胀弯曲，把窗口推开；当它们失水时，就会收缩变直，把窗口关上。”\n\n阿明恍然大悟：“原来窗口的开合，是由这对‘小卫士’的形状变化决定的！”\n\n老园丁点点头：“对。当窗口打开时，空气可以进出，水汽也会散失；当窗口关闭时，交换就停止了。这些‘小卫士’根据环境条件调整自己的形状，从而控制窗口的开合。”\n\n阿明又问：“那它们怎么知道什么时候该开，什么时候该关呢？”\n\n“它们不是‘知道’，而是受到环境的影响。”老园丁解释道，“水分充足时，它们吸水膨胀，窗口自然打开；干旱或炎热时，它们失水收缩，窗口自然关闭。这是它们自身的特性决定的，不是有意识的选择。”\n\n阿明明白了：“所以，叶片上的窗口开合，不是谁在指挥，而是‘小卫士’根据水分条件自动调节的结果。”\n\n老园丁满意地笑了：“你终于看懂了园圃的秘密。”",
+  "rule_findings": {
+    "story_token_count": 489,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

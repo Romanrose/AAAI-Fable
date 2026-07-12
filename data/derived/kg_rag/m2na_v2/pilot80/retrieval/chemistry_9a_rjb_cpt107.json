@@ -1,0 +1,119 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt107",
+    "label": "Concept",
+    "name": "过氧化氢分解反应",
+    "properties": {
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "importance": "掌握",
+      "formula": "2H₂O₂  ⟶  2H₂O + O₂",
+      "examples": [
+        "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+      ],
+      "retrieval_text": "过氧化氢分解反应\nConcept\n过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。\n掌握\n2H₂O₂  ⟶  2H₂O + O₂\n教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt109",
+      "label": "Concept",
+      "name": "分解反应",
+      "properties": {
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+        "importance": "重要",
+        "formula": "AB → A + B",
+        "examples": [
+          "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+          "过氧化氢分解生成水和氧气",
+          "氯酸钾分解生成氯化钾和氧气",
+          "水在电解时分解生成氢气和氧气，是分解反应。",
+          "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+        ],
+        "retrieval_text": "分解反应\nConcept\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。\n重要\nAB → A + B\n高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气\n过氧化氢分解生成水和氧气\n氯酸钾分解生成氯化钾和氧气\n水在电解时分解生成氢气和氧气，是分解反应。\n讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_exp17",
+      "label": "Experiment",
+      "name": "过氧化氢分解实验中二氧化锰的作用",
+      "properties": {
+        "instrument": [
+          "试管",
+          "5 mL 5%过氧化氢溶液",
+          "二氧化锰固体",
+          "带火星的木条"
+        ],
+        "is_student": 1,
+        "process": "（1）在试管中加入5 mL 5%过氧化氢溶液，把带火星的木条伸入试管，观察现象。（2）向上述试管中加入少量二氧化锰，再把带火星的木条伸入试管观察现象。（3）待上述试管中没有现象发生时，重新加入过氧化氢溶液，并把带火星的木条伸入试管，观察现象。多次重复，并仔细观察反应前后的二氧化锰。",
+        "phenomena": "实验（1）中带火星的木条不能复燃，说明过氧化氢在常温下分解缓慢，放出的氧气很少；实验（2）中木条复燃，说明加入少量二氧化锰使过氧化氢分解加速，放出较多氧气；实验（3）重复多次后，二氧化锰质量和化学性质没有明显变化，似乎“永远用不完”。",
+        "conclusion": "二氧化锰能加速过氧化氢分解，而自身的质量和化学性质在反应前后没有变化，因此二氧化锰在该反应中起催化剂作用，体现了催化作用的特征。",
+        "retrieval_text": "过氧化氢分解实验中二氧化锰的作用\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:11279",
+      "source": "chemistry_9a_rjb_cpt107",
+      "source_name": "过氧化氢分解反应",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22574",
+      "source": "chemistry_9a_rjb_exp17",
+      "source_name": "过氧化氢分解实验中二氧化锰的作用",
+      "target": "chemistry_9a_rjb_cpt107",
+      "target_name": "过氧化氢分解反应",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "过氧化氢分解反应",
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "formula": "2H₂O₂  ⟶  2H₂O + O₂",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11279] 过氧化氢分解反应 --is_a--> 分解反应",
+      "[normalized:edge:22574] 过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

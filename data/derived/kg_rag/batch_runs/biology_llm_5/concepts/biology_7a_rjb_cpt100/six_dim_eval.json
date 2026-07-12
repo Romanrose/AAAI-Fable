@@ -1,0 +1,82 @@
+{
+  "concept_id": "biology_7a_rjb_cpt100",
+  "target_concept": "苔藓植物是监测空气污染的指示植物",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "The story accurately reflects the concept: moss with one cell layer is sensitive to air pollution, and its health indicates air quality. The mechanism of toxin entry from both sides is correctly implied.",
+    "implicitness": "The target concept is never directly named; instead, the story uses the moss's one-cell-layer structure and its response to polluted vs. clean air to convey the idea. The term 'indicator' appears but is used in a general sense, not as a direct quote of the concept.",
+    "mapping_clarity": "The mapping between story elements and concept components is very clear: the moss plot represents the target concept, air conditions represent prerequisites, car fumes and factory smoke represent related concepts, moss color changes represent outcomes, swapping plots represents experiments, and teaching others represents exercises.",
+    "readability": "The story is well-structured, uses simple language, and has a clear narrative flow. It is easy to read and understand for the target audience.",
+    "pedagogical_value": "The story effectively teaches the concept through a concrete example and a clear cause-effect demonstration. It includes an experiment and a practical application, reinforcing the lesson.",
+    "novelty": "While the story is well-crafted, the garden/caretaker setting and the use of moss as an indicator are common in educational contexts. The specific plot-swapping experiment adds some novelty, but overall the approach is not highly original."
+  },
+  "revision_suggestions": [
+    "Consider using a less common setting (e.g., a rooftop garden, a forest school) to increase novelty.",
+    "Add a subtle twist, such as a character who initially doubts the moss's reliability, to deepen engagement."
+  ],
+  "rule_findings": {
+    "story_token_count": 183,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [],
+    "template_hits": [],
+    "template_similarity": 0.0864
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "The story accurately reflects the concept: moss with one cell layer is sensitive to air pollution, and its health indicates air quality. The mechanism of toxin entry from both sides is correctly implied.",
+      "implicitness": "The target concept is never directly named; instead, the story uses the moss's one-cell-layer structure and its response to polluted vs. clean air to convey the idea. The term 'indicator' appears but is used in a general sense, not as a direct quote of the concept.",
+      "mapping_clarity": "The mapping between story elements and concept components is very clear: the moss plot represents the target concept, air conditions represent prerequisites, car fumes and factory smoke represent related concepts, moss color changes represent outcomes, swapping plots represents experiments, and teaching others represents exercises.",
+      "readability": "The story is well-structured, uses simple language, and has a clear narrative flow. It is easy to read and understand for the target audience.",
+      "pedagogical_value": "The story effectively teaches the concept through a concrete example and a clear cause-effect demonstration. It includes an experiment and a practical application, reinforcing the lesson.",
+      "novelty": "While the story is well-crafted, the garden/caretaker setting and the use of moss as an indicator are common in educational contexts. The specific plot-swapping experiment adds some novelty, but overall the approach is not highly original."
+    },
+    "revision_suggestions": [
+      "Consider using a less common setting (e.g., a rooftop garden, a forest school) to increase novelty.",
+      "Add a subtle twist, such as a character who initially doubts the moss's reliability, to deepen engagement."
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

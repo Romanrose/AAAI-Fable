@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "他摘一个，放一个，直到整棵树的苹果都收完了。左篮子渐渐满了起来。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "他看看左边的空篮子，又看看地上剩下的橘子，心里明白了——苹果比橘子多。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "他蹲下身，从左边篮子里拿出一个苹果，又从右边篮子里拿出一个橘子，把它们并排放在地上。再拿一个苹果，再拿一个橘子，就这样一对一对地摆下去。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他摘一个，放一个，直到整棵树的苹果都收完了。左篮子渐渐满了起来。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他摘一个，放一个，直到整棵树的苹果都收完了。左篮子渐渐满了起来。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均已在故事中找到直接对应的证据，方向正确，无缺失。"
+}

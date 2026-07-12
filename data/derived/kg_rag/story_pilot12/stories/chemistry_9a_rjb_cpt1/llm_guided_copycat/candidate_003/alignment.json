@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "一粒种子",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "种子的萌发过程",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "种子吸收水分、养分，胚芽萌发",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "The mechanism graph nodes and edge are fully aligned with the story. Node n1 (物质) is mapped to '一粒种子', which is a physical entity in the story. Node n2 (物质的变化) is mapped to '种子的萌发过程', the process of change. Edge e1 (enables) is supported by the story evidence '种子吸收水分、养分，胚芽萌发', which shows the entity enabling the process, with direction preserved."
+}

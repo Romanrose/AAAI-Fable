@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt11",
+  "target_concept": "速度",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过快铃和慢铃的摆动距离与时间的关系，准确体现了速度作为位移与时间之比的物理定义，且方向变化也被提及，完全忠实于概念。",
+    "implicitness": "故事全程未出现'速度'、'velocity'或概念ID等禁止词汇，完全通过比喻和情节隐含地传达核心机制，隐含性极佳。",
+    "mapping_clarity": "快铃和慢铃的摆动距离对应位移，呼吸次数对应时间，起点和终点变化对应方向，映射清晰且易于理解。",
+    "readability": "语言流畅自然，情节简单易懂，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过观察和发现的过程，引导学生理解速度的本质，并强调不能只看表面快慢，教学价值高。",
+    "novelty": "用钟楼铃铛的摆动比喻速度，角度新颖，但类似比喻在物理教学中已有一定使用，新颖性稍逊但仍有创意。"
+  },
+  "revision_suggestions": [
+    "可增加一个对比场景，如不同方向摆动的铃铛，进一步强化方向对速度的影响。",
+    "结尾可加入一个简短的问题，引导学生思考如何比较不同铃铛的快慢。"
+  ],
+  "rule_findings": {
+    "story_token_count": 512,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过快铃和慢铃的摆动距离与时间的关系，准确体现了速度作为位移与时间之比的物理定义，且方向变化也被提及，完全忠实于概念。",
+      "implicitness": "故事全程未出现'速度'、'velocity'或概念ID等禁止词汇，完全通过比喻和情节隐含地传达核心机制，隐含性极佳。",
+      "mapping_clarity": "快铃和慢铃的摆动距离对应位移，呼吸次数对应时间，起点和终点变化对应方向，映射清晰且易于理解。",
+      "readability": "语言流畅自然，情节简单易懂，适合目标年龄段阅读，无冗余或晦涩表达。",
+      "pedagogical_value": "故事通过观察和发现的过程，引导学生理解速度的本质，并强调不能只看表面快慢，教学价值高。",
+      "novelty": "用钟楼铃铛的摆动比喻速度，角度新颖，但类似比喻在物理教学中已有一定使用，新颖性稍逊但仍有创意。"
+    },
+    "revision_suggestions": [
+      "可增加一个对比场景，如不同方向摆动的铃铛，进一步强化方向对速度的影响。",
+      "结尾可加入一个简短的问题，引导学生思考如何比较不同铃铛的快慢。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

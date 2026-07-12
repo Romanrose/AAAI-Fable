@@ -1,0 +1,130 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt113",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "眼睛调节：通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "远点：眼睛依靠调节能看清的最远点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "近点：眼睛依靠调节能看清的最近点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "正常眼远点在无限远",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "正常眼近点约为10 cm",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17198"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17199"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "远点"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "b6e0417266c70cb430830a0a780cb2e0c884eda7b6cc9a6a2e4c861dff094648",
+    "retrieval_sha256": "12399f7f2bc67c7e6a2d8b86f1e86385c1c47054c0ba3cae68d45a856514c86e",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "6e2baf204a44bd027a6eb00b282e48aac0f7e1579a2ca5e2f89e64de7bd3429f"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

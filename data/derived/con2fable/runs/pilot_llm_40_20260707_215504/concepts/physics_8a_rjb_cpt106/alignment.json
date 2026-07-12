@@ -1,0 +1,117 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "蜡烛离透镜的远近，决定了看到的是什么样的影像",
+      "evidence": "蜡烛离透镜的远近，决定了看到的是什么样的影像",
+      "narrative_anchor": "蜡烛离透镜的远近，决定了看到的是什么样的影像"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "光屏的位置",
+      "evidence": "他移动光屏，忽然，光屏上出现了一个清晰的影像",
+      "narrative_anchor": "光屏的位置"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "透镜支架（焦距固定）",
+      "evidence": "支架上固定着一块透明的凸透镜",
+      "narrative_anchor": "凸透镜"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "蜡烛离透镜的距离（物距）",
+      "evidence": "将透镜支架推到离蜡烛很远的地方",
+      "narrative_anchor": "离蜡烛很远的地方"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "物镜（凸透镜作为物镜）",
+      "evidence": "支架上固定着一块透明的凸透镜",
+      "narrative_anchor": "凸透镜"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "目镜（透过透镜观察）",
+      "evidence": "直接透过透镜去看蜡烛",
+      "narrative_anchor": "透过透镜去看蜡烛"
+    },
+    {
+      "concept_node_id": "m7",
+      "narrative_element": "显微镜（未直接出现，但正立放大像类似显微镜原理）",
+      "evidence": "他看到了一个正立的、放大的火焰",
+      "narrative_anchor": "正立的、放大的火焰"
+    },
+    {
+      "concept_node_id": "m8",
+      "narrative_element": "望远镜（未直接出现，但倒立缩小像类似望远镜原理）",
+      "evidence": "光屏上出现了一个清晰的影像——蜡烛的火焰倒立着，比原来小了许多",
+      "narrative_anchor": "倒立着，比原来小了许多"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "物距变化导致成像规律变化",
+      "evidence": "蜡烛离透镜的远近，决定了看到的是什么样的影像",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "蜡烛离透镜的远近，决定了看到的是什么样的影像"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "像距（光屏位置）与焦距的关系",
+      "evidence": "他移动光屏，忽然，光屏上出现了一个清晰的影像",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "移动光屏"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "焦距固定，物距变化",
+      "evidence": "将透镜支架推到离蜡烛很远的地方",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "离蜡烛很远的地方"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "物距变化导致成像变化（物镜成像）",
+      "evidence": "离得远时，光屏上出现倒立缩小的像；离得近时，光屏上找不到像",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "离得远时，光屏上出现倒立缩小的像；离得近时，光屏上找不到像"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "物镜成像后，目镜观察",
+      "evidence": "直接透过透镜去看蜡烛",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "透过透镜去看蜡烛"
+    },
+    {
+      "concept_edge_id": "e6",
+      "narrative_relation": "目镜观察得到正立放大像（类似显微镜）",
+      "evidence": "他看到了一个正立的、放大的火焰",
+      "narrative_source_concept_node_id": "m6",
+      "narrative_target_concept_node_id": "m7",
+      "direction_preserved": true,
+      "narrative_anchor": "正立的、放大的火焰"
+    },
+    {
+      "concept_edge_id": "e7",
+      "narrative_relation": "物镜成像得到倒立缩小像（类似望远镜）",
+      "evidence": "光屏上出现了一个清晰的影像——蜡烛的火焰倒立着，比原来小了许多",
+      "narrative_source_concept_node_id": "m7",
+      "narrative_target_concept_node_id": "m8",
+      "direction_preserved": true,
+      "narrative_anchor": "倒立着，比原来小了许多"
+    }
+  ]
+}

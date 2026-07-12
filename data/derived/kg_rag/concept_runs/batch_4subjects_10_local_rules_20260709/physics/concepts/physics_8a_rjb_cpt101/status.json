@@ -1,0 +1,15 @@
+{
+  "concept_id": "physics_8a_rjb_cpt101",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "concept_type": "mechanism",
+  "generation_priority": "gold",
+  "generation_status": "success",
+  "workflow": "agentic",
+  "retrieval_mode": "dual_level",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.15,
+  "retry_count": 1,
+  "revision_rounds": 1,
+  "chinese_char_ratio": 0.74
+}

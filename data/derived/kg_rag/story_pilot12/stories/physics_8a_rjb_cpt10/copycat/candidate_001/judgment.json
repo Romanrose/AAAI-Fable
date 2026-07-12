@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (入口条件核对) is clearly and uniquely mapped to a story step with explicit evidence. Node n2 (第2道转化环节) is only vaguely referenced as '前一步留下的条件' without a distinct story carrier. Edge e1 (n2→n1, relates_to) is not preserved because the story describes a sequential dependency (n1 must precede n2) rather than a relates_to relation; the mapping plan incorrectly assigns the same story sentence to all three edges, failing to differentiate their semantics."
+  },
+  "revision_instructions": [
+    "Increase node_coverage to at least 0.8 by ensuring each mechanism node has a distinct, explicit story carrier. Currently n2 is not clearly represented.",
+    "Increase edge_coverage to at least 0.8 by assigning distinct story relations to each edge. Do not reuse the same sentence for e1, e2, and e3.",
+    "Ensure direction_accuracy remains 1.0; currently e1 direction is not preserved (story implies n1→n2, but mechanism requires n2→n1). Revise story to reflect n2 relates_to n1 (e.g., the transformation step is defined relative to the condition check).",
+    "Avoid using the same phrase '主角把两份相关记录放在一起比较' for multiple edges; each edge should have a unique story relation that matches its type (relates_to, enables).",
+    "Clarify the mapping of n2: introduce a distinct story element (e.g., a specific transformation step like '水位调节') that corresponds to the '第2道转化环节'."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

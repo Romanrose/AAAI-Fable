@@ -1,0 +1,151 @@
+{
+  "query": "chemistry_9a_rjb_cpt114",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt114",
+    "label": "Concept",
+    "name": "工业制取氧气的方法",
+    "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+    "aliases": [],
+    "examples": [
+      "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+      "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+    ],
+    "retrieval_text": "工业制取氧气的方法\n为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt66",
+        "label": "Concept",
+        "name": "氧气",
+        "definition": "一种重要的气体单质，空气中体积分数约为21%，可由高锰酸钾、过氧化氢溶液、氯酸钾等分解制取，是许多燃烧和化工过程必需的物质。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt115",
+        "label": "Concept",
+        "name": "液态空气的分馏制氧",
+        "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt116",
+        "label": "Concept",
+        "name": "膜分离制取富氧空气",
+        "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:15224] 氧气 --prerequisites_for--> 工业制取氧气的方法\n- [normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法\n- [normalized:edge:11285] 膜分离制取富氧空气 --is_a--> 工业制取氧气的方法"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '工业制取氧气的方法', 'definition': '为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。', 'formula': '', 'importance': '了解'}, 'condition_summary': ['[normalized:edge:15224] 氧气 --prerequisites_for--> 工业制取氧气的方法'], 'process_summary': ['[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法', '[normalized:edge:11285] 膜分离制取富氧空气 --is_a--> 工业制取氧气的方法'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "chemistry_9a_rjb_cpt114",
+      "label": "Concept",
+      "name": "工业制取氧气的方法",
+      "properties": {
+        "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+        "importance": "了解",
+        "examples": [
+          "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+          "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+        ],
+        "retrieval_text": "工业制取氧气的方法\nConcept\n为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。\n了解\n在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧\n在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:15224",
+        "source": "chemistry_9a_rjb_cpt66",
+        "source_name": "氧气",
+        "target": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:11284",
+        "source": "chemistry_9a_rjb_cpt115",
+        "source_name": "液态空气的分馏制氧",
+        "target": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:11285",
+        "source": "chemistry_9a_rjb_cpt116",
+        "source_name": "膜分离制取富氧空气",
+        "target": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "工业制取氧气的方法",
+        "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [
+        "[normalized:edge:15224] 氧气 --prerequisites_for--> 工业制取氧气的方法"
+      ],
+      "process_summary": [
+        "[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法",
+        "[normalized:edge:11285] 膜分离制取富氧空气 --is_a--> 工业制取氧气的方法"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 790,
+      "summary_chars": 378,
+      "path_chars": 0,
+      "retrieval_context_chars": 1168
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 790,
+    "summary_chars": 378,
+    "path_chars": 0,
+    "retrieval_context_chars": 1168
+  }
+}

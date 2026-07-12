@@ -1,0 +1,81 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代中国寓言：两兄弟种树",
+  "characters": [
+    "哥哥",
+    "弟弟",
+    "老农"
+  ],
+  "objects": [
+    "树苗",
+    "竹篮",
+    "水桶",
+    "阳光"
+  ],
+  "conflict": "哥哥和弟弟种下相同的树苗，哥哥用竹篮浇水，水漏光，树苗枯萎；弟弟用水桶浇水，树苗茁壮。但两人都声称自己的方法正确，争执不下。",
+  "event_chain": [
+    "哥哥和弟弟各得一棵树苗，决定比赛谁种得更好。",
+    "哥哥用竹篮打水浇树，水从篮孔漏尽，树苗因缺水而枯死。",
+    "弟弟用水桶打水浇树，水被树根吸收，树苗茁壮成长。",
+    "老农路过，指出哥哥的方法无效，弟弟的方法有效。",
+    "哥哥不服，说树苗已死，无法验证；老农让弟弟从树苗方向观察，发现树苗虽小但根深叶绿。",
+    "老农总结：能承接水的方法才能让树活，不能承接水的方法只能看到树苗的假象。"
+  ],
+  "turning_point": "老农指出哥哥的方法无效，并让弟弟从树苗方向观察，揭示树苗的真实状态。",
+  "resolution_state": "哥哥承认自己的方法失败，弟弟的方法成功，两人明白：有效的方法才能带来真实的结果，无效的方法只能看到虚假的表象。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "弟弟用水桶浇水，树苗能吸收水而生长",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "哥哥用竹篮浇水，水漏光，树苗枯死，但老农让弟弟从树苗方向观察，发现树苗根深叶绿（虚像）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "树苗的生死与大小（哥哥的树苗枯死，弟弟的树苗茁壮）",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "弟弟的方法（水桶）与哥哥的方法（竹篮）形成对比，前者有效后者无效",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "弟弟的方法（水桶）导致树苗茁壮（正像），哥哥的方法（竹篮）导致树苗枯死（倒像）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "哥哥的方法（竹篮）导致树苗枯死，但观察方向不同（从树苗方向）看到虚假的绿意（虚像）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中'竹篮'和'水桶'分别对应'虚像'和'实像'的机制，避免使用'实像与虚像'等禁止术语。",
+    "注意'树苗的生死与大小'对应'像的正倒与大小'，但需避免直接提及物理概念。",
+    "老农的总结需明确区分'能承接水'（实像）和'不能承接水'（虚像）的机制，但用寓言语言表达。"
+  ],
+  "mapping_context_sha256": "1233aac61dc892ec5a357400522e7840ceb4b4d846ca11d1b72b697e71f30b37",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "fcf2ea8bdac41543bb68ede8ae9271ba29faf19d72d36849f46a2964a801f1a6"
+  }
+}

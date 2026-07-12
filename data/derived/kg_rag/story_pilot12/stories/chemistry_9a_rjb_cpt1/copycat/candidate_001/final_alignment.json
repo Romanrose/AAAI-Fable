@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "记录员先核对入口条件",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "验收员最后凭结果验收记录发放通行牌",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员把入口条件核对的结果交给调度员，调度员据此完成搬运后，再把结果验收记录交给验收员——两份记录放在一起比较，发现它们共同约束了最后的判断",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 (物质) aligns with '记录员先核对入口条件' as the structural carrier for the entity concept. Node n2 (物质的变化) aligns with '验收员最后凭结果验收记录发放通行牌' as the structural carrier for the process concept. Edge e1 (enables) aligns with the story substring showing that the entry condition check (n1) enables the result verification record (n2) through the documented comparison, with direction preserved."
+}

@@ -1,0 +1,107 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt101",
+    "label": "Concept",
+    "name": "氧气的检验方法",
+    "properties": {
+      "definition": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "importance": "重要",
+      "retrieval_text": "氧气的检验方法\nConcept\n验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt89",
+      "label": "Concept",
+      "name": "支持燃烧",
+      "properties": {
+        "definition": "某种气体能使可燃物继续或更加剧烈地燃烧或复燃的性质，氧气具有能支持燃烧的特性。",
+        "importance": "掌握",
+        "examples": [
+          "氧气使带有火星的木条复燃",
+          "氧气使铁丝、硫等燃烧得比在空气中更剧烈"
+        ],
+        "retrieval_text": "支持燃烧\nConcept\n某种气体能使可燃物继续或更加剧烈地燃烧或复燃的性质，氧气具有能支持燃烧的特性。\n掌握\n氧气使带有火星的木条复燃\n氧气使铁丝、硫等燃烧得比在空气中更剧烈"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_exp13",
+      "label": "Experiment",
+      "name": "实验2-2 带火星木条在氧气中的复燃",
+      "properties": {
+        "instrument": "集气瓶（内盛氧气）、带有火星的木条",
+        "is_student": 1,
+        "process": "把带有火星的木条伸到盛有氧气的集气瓶中，观察木条是否复燃。",
+        "phenomena": "带有火星的木条在氧气中能够复燃。",
+        "conclusion": "说明氧气能支持燃烧，可用作检验氧气的依据。",
+        "retrieval_text": "实验2-2 带火星木条在氧气中的复燃\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15246",
+      "source": "chemistry_9a_rjb_cpt89",
+      "source_name": "支持燃烧",
+      "target": "chemistry_9a_rjb_cpt101",
+      "target_name": "氧气的检验方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22566",
+      "source": "chemistry_9a_rjb_exp13",
+      "source_name": "实验2-2 带火星木条在氧气中的复燃",
+      "target": "chemistry_9a_rjb_cpt101",
+      "target_name": "氧气的检验方法",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "氧气的检验方法",
+      "definition": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:15246] 支持燃烧 --prerequisites_for--> 氧气的检验方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:22566] 实验2-2 带火星木条在氧气中的复燃 --verifies--> 氧气的检验方法"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "concept_id": "physics_8a_rjb_cpt101",
+  "target_concept": "焦距",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事中水晶到铜盘的距离决定光点大小和清晰度，完全对应焦距决定凸透镜对光的偏折能力。",
+    "implicitness": "全文未出现'焦距'一词，仅通过'最佳工作距离'暗示，符合隐含性要求。",
+    "mapping_clarity": "水晶对应凸透镜，铜盘对应光屏，距离变化导致光点大小变化，映射清晰直观。",
+    "readability": "语言流畅，情节连贯，适合初中生阅读，无生僻术语。",
+    "pedagogical_value": "通过调整距离观察光点变化，自然引出焦距概念，有助于理解透镜成像规律。",
+    "novelty": "钟楼报时场景有一定新意，但水晶聚焦阳光是常见类比，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加不同天气或不同时间阳光角度变化，进一步强化条件变化对聚焦的影响。",
+    "可加入其他角色对距离调整的疑问，增强冲突和教学互动。"
+  ],
+  "rule_findings": {
+    "story_token_count": 574,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "老人"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事中水晶到铜盘的距离决定光点大小和清晰度，完全对应焦距决定凸透镜对光的偏折能力。",
+      "implicitness": "全文未出现'焦距'一词，仅通过'最佳工作距离'暗示，符合隐含性要求。",
+      "mapping_clarity": "水晶对应凸透镜，铜盘对应光屏，距离变化导致光点大小变化，映射清晰直观。",
+      "readability": "语言流畅，情节连贯，适合初中生阅读，无生僻术语。",
+      "pedagogical_value": "通过调整距离观察光点变化，自然引出焦距概念，有助于理解透镜成像规律。",
+      "novelty": "钟楼报时场景有一定新意，但水晶聚焦阳光是常见类比，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加不同天气或不同时间阳光角度变化，进一步强化条件变化对聚焦的影响。",
+      "可加入其他角色对距离调整的疑问，增强冲突和教学互动。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

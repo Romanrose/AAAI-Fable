@@ -1,0 +1,72 @@
+{
+  "seed": {
+    "id": "physics_8a_rjb_cpt101",
+    "resolved_node_id": "physics_8a_rjb_cpt101",
+    "name": "焦距",
+    "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_17247",
+      "source_id": "physics_8a_rjb_cpt99",
+      "source_name": "光心",
+      "target_id": "physics_8a_rjb_cpt101",
+      "target_name": "焦距",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_17190",
+      "source_id": "physics_8a_rjb_cpt101",
+      "source_name": "焦距",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_19710",
+      "source_id": "physics_8a_rjb_cpt100",
+      "source_name": "焦点",
+      "target_id": "physics_8a_rjb_cpt101",
+      "target_name": "焦距",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+    "condition_summary": [
+      "光心"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "光心"
+      ],
+      "related_concepts": [
+        "凸透镜成像规律",
+        "焦点"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 3,
+    "selected_edge_count": 3,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

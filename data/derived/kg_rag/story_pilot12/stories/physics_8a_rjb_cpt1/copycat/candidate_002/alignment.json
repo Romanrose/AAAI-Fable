@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第2道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第3道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他把这个现象归入滑道试验场里的入口条件核对规则——这不是某个人的习惯，而是整座试验场通行的共同规则，就像所有长度测量都必须统一用米及其倍数、子倍数来比较一样。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "记录员核对完入口条件牌上的数据，确认无误后才在册上填写。接着，第2道转化环节按前一步留下的条件继续推进，记录员将转化结果记入下一栏。调度员递来一份新数据，记录员没有直接录入，而是把新数据与上一环节的数值放在一起比较、复查，直到证据对上才允许通过。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "记录员核对完入口条件牌上的数据，确认无误后才在册上填写。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story. Node mappings follow the frozen mapping plan. Edge e1 aligns to the story's classification of the empty check as a universal rule; e2 aligns to the verification process using comparison and review; e3 aligns to the enabling relation where the entry condition check allows the subsequent recording method to proceed. Direction is preserved for all edges."
+}

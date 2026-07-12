@@ -1,0 +1,96 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：传粉",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m3",
+      "text": "需要考虑前置条件或输入：卵子成熟到MⅡ期",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m4",
+      "text": "需要考虑前置条件或输入：精子获能",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m5",
+      "text": "与相关概念保持可解释关系：合子（受精卵）",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m6",
+      "text": "与相关概念保持可解释关系：果实和种子的形成",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m7",
+      "text": "与相关概念保持可解释关系：胚胎工程",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14139"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14964"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14142"
+    },
+    {
+      "id": "e4",
+      "source": "m4",
+      "target": "m5",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14140"
+    },
+    {
+      "id": "e5",
+      "source": "m5",
+      "target": "m6",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14141"
+    },
+    {
+      "id": "e6",
+      "source": "m6",
+      "target": "m7",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14962"
+    }
+  ]
+}

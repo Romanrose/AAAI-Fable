@@ -1,0 +1,244 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt103",
+    "subject": "physics",
+    "canonical_name": "照相机成像",
+    "aliases": [],
+    "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "照相机成像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt95:definition",
+          "kg-node:physics_8a_rjb_cpt95:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt102:definition",
+          "kg-node:physics_8a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "照相机成像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition",
+          "kg-node:physics_8a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "物体远离凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "outcome",
+        "text": "缩小、倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "调节像距以成清晰像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_skl18:description",
+          "kg-node:physics_8a_rjb_skl18:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17243"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12419"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n3",
+        "target": "n5",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17251"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "照相机成像"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt103",
+      "name": "照相机成像",
+      "label": "Concept",
+      "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt95",
+        "name": "凸透镜"
+      },
+      {
+        "id": "physics_8a_rjb_skl18",
+        "name": "调节像距以成清晰像"
+      },
+      {
+        "id": "physics_8a_rjb_cpt102",
+        "name": "实像"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17243",
+        "source_id": "physics_8a_rjb_cpt95",
+        "source_name": "凸透镜",
+        "target_id": "physics_8a_rjb_cpt103",
+        "target_name": "照相机成像",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt95",
+        "neighbor_name": "凸透镜",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17251",
+        "source_id": "physics_8a_rjb_skl18",
+        "source_name": "调节像距以成清晰像",
+        "target_id": "physics_8a_rjb_cpt103",
+        "target_name": "照相机成像",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_skl18",
+        "neighbor_name": "调节像距以成清晰像",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12419",
+        "source_id": "physics_8a_rjb_cpt103",
+        "source_name": "照相机成像",
+        "target_id": "physics_8a_rjb_cpt102",
+        "target_name": "实像",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt102",
+        "neighbor_name": "实像",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "照相机成像",
+      "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17243] 凸透镜 --prerequisites_for--> 照相机成像",
+      "[normalized:edge:17251] 调节像距以成清晰像 --prerequisites_for--> 照相机成像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12419] 照相机成像 --is_a--> 实像"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17243",
+    "normalized:edge:17251",
+    "normalized:edge:12419"
+  ],
+  "provenance": {
+    "seed_sha256": "e93dad2c980c8073cd087b319c0924d9cc1f757833cf43ae4b3c5c5901bf5e0e",
+    "retrieval_sha256": "3492dd1ed17da3b6583f434f2546e5c11c0a87c6290dbe47647725bcd3a905f4",
+    "mechanism_record_sha256": "7e5ae6e9d66ee8061cc43fa37417c2cb853f0b9e2256f143aa5f79ada0c83665"
+  }
+}

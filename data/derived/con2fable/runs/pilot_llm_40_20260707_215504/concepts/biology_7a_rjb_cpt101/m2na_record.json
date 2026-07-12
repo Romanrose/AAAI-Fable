@@ -1,0 +1,158 @@
+{
+  "id": "biology_7a_rjb_cpt101",
+  "method": "con2fable",
+  "concept": {
+    "name": "种子萌发",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：种子萌发的环境条件",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：种子萌发的自身条件",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要保留上下位关系：种子萌发的环境条件",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：种子萌发的自身条件",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14133"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14134"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10772"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10776"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "工地上堆着几袋水泥，旁边是沙石堆、搅拌机和几根钢筋。一袋新到的水泥躺在角落里，它看着周围的一切，心里充满了期待。\n\n“我要变成坚固的柱子，撑起这栋大楼！”水泥袋兴奋地说。\n\n水管听见了，笑着说：“别急，我先给你加点水，你才能变软、变黏。”\n\n水管打开阀门，清水哗哗地喷在水泥上。水泥渐渐湿润了，它觉得身体在发生变化。\n\n这时，搅拌机轰隆隆地转起来，把湿水泥和沙石一起搅动。水泥在搅拌机里翻滚，和沙石紧紧抱在一起。\n\n“还不够呢！”沙石堆说，“没有我们，你就算湿了也成不了大梁。”\n\n钢筋也开口了：“对，还得有我。你裹住我，凝固之后，我们才能一起撑起重量。”\n\n水泥在搅拌机里转啊转，觉得一切都配合得很好。可就在这时，水管突然不出水了。\n\n“怎么回事？”水泥急了，“我还没吸够水呢！”\n\n搅拌机也空转起来，发出干涩的噪音。水泥在里头越来越干，结成一块块硬疙瘩。\n\n工人跑过来检查，发现是水管被石头堵住了。他赶紧疏通，水又重新喷了出来。\n\n“快！快！”水泥大喊。\n\n水管重新供水，搅拌机继续转动，沙石和钢筋也各就各位。水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。\n\n几天后，模具拆开，一根又粗又直的混凝土柱子立了起来。它稳稳地撑住上方的楼板，整个工地都因为它而更加牢固。\n\n水泥看着自己，心想：原来要变成有用的东西，既要有水、有沙石、有钢筋，还得自己吸足水、混合均匀，缺一样都不行啊。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "种子吸水利用贮藏营养，胚根胚芽发育成幼苗的过程",
+        "evidence": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。几天后，模具拆开，一根又粗又直的混凝土柱子立了起来。",
+        "narrative_anchor": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。几天后，模具拆开，一根又粗又直的混凝土柱子立了起来。"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "环境条件：水",
+        "evidence": "水管打开阀门，清水哗哗地喷在水泥上。",
+        "narrative_anchor": "水管打开阀门，清水哗哗地喷在水泥上。"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "自身条件：水泥自身吸足水",
+        "evidence": "水泥终于吸足了水",
+        "narrative_anchor": "水泥终于吸足了水"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "环境条件的具体表现：水、沙石、钢筋的配合",
+        "evidence": "既要有水、有沙石、有钢筋",
+        "narrative_anchor": "既要有水、有沙石、有钢筋"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "自身条件的具体表现：水泥吸足水、混合均匀",
+        "evidence": "还得自己吸足水、混合均匀",
+        "narrative_anchor": "还得自己吸足水、混合均匀"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "水泥吸水后开始变化，为后续混合做准备",
+        "evidence": "水泥渐渐湿润了，它觉得身体在发生变化。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "水泥渐渐湿润了，它觉得身体在发生变化。"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "吸水后水泥自身条件满足，继续混合",
+        "evidence": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "环境条件的具体配合（水、沙石、钢筋）",
+        "evidence": "既要有水、有沙石、有钢筋",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "既要有水、有沙石、有钢筋"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "自身条件的具体要求（吸足水、混合均匀）",
+        "evidence": "还得自己吸足水、混合均匀",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "还得自己吸足水、混合均匀"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "biology",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "采蘑菇的小姑娘",
+  "domain_rationale": "采蘑菇的过程包含采摘、比较、配对等环节，与数物体、比较数量、一一对应比较法高度吻合。",
+  "conflict": "无冲突，采蘑菇本身就是一种物体计数和比较的活动。",
+  "event_chain": [
+    "小姑娘在森林里仔细地采摘蘑菇，每采一朵就数一朵。",
+    "她将两个篮子里的蘑菇数量进行比较，判断哪个篮子里的蘑菇多、哪个少、是否一样多。",
+    "她把两个篮子里的蘑菇一个个配对，看看哪个篮子多出几朵。"
+  ],
+  "turning_point": "小姑娘发现左边篮子比右边篮子多3朵蘑菇，通过配对确认。",
+  "resolution_state": "小姑娘清楚每个篮子的蘑菇数量，并知道差异。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小姑娘每采一朵蘑菇就数一朵",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小姑娘比较两个篮子里的蘑菇数量，判断多少或相同",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小姑娘将两个篮子里的蘑菇一一配对",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小姑娘数完蘑菇后，比较两个篮子的蘑菇数量",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小姑娘通过数蘑菇知道了每篮的数量，从而能进行一一配对比较",
+      "direction_preserved": true
+    }
+  ]
+}

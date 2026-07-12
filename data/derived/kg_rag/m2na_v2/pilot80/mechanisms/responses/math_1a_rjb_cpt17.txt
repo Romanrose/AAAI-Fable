@@ -1,0 +1,49 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "球体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt17:definition",
+          "kg-node:math_1a_rjb_cpt17:examples",
+          "kg-node:math_1a_rjb_cpt17:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "按形状分类",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt18:definition",
+          "kg-node:math_1a_rjb_cpt18:examples",
+          "kg-node:math_1a_rjb_cpt18:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12137"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}

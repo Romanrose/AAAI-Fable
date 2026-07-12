@@ -1,0 +1,53 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "厨艺",
+  "domain_rationale": "厨艺中食材的软硬度需要通过烹饪工具和技法来确认，类似长度需要测量工具和单位来定义。",
+  "conflict": "食材软硬度是主观感受，而长度是客观物理量，但两者都需要标准化工具才能准确描述。",
+  "event_chain": [
+    "厨师想要判断一块牛肉的嫩度",
+    "嫩度需要嫩度单位（如纹理等级）来量化",
+    "厨师用嫩度计或叉子按压来测量嫩度",
+    "使用嫩度计的方法（如插入角度、力度）确保测量准确"
+  ],
+  "turning_point": "厨师使用嫩度计按压牛肉，得到纹理等级读数，从而确认嫩度。",
+  "resolution_state": "牛肉的嫩度通过嫩度计和标准化方法被准确测量，厨师据此决定烹饪方式。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "牛肉的嫩度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "嫩度单位（纹理等级）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用嫩度计测量嫩度",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "使用嫩度计的方法",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "嫩度单位（纹理等级）是牛肉嫩度的一种量化表示",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "用嫩度计测量嫩度的过程验证了牛肉的嫩度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "牛肉的嫩度使得使用嫩度计的方法成为必要",
+      "direction_preserved": true
+    }
+  ]
+}

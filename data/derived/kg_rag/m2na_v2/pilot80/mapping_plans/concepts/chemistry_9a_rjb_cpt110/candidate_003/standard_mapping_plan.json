@@ -1,0 +1,134 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠与铸剑",
+  "characters": [
+    "铸剑大师",
+    "学徒",
+    "铁匠铺众人"
+  ],
+  "objects": [
+    "铁块",
+    "铸剑炉",
+    "淬火池",
+    "磨石",
+    "秘制粉末"
+  ],
+  "conflict": "学徒发现铁块在铸剑炉中加热后难以锻打成锋利的剑，速度太慢且质量不佳。",
+  "event_chain": [
+    "学徒将铁块放入铸剑炉加热，但铁块变化缓慢，难以成型。",
+    "铸剑大师取出一小撮秘制粉末撒入炉中，铁块迅速变软，易于锻打。",
+    "学徒用铁钳夹出铁块，放入淬火池冷却，铁块变硬。",
+    "学徒再次加热铁块，发现铁块依然能快速变软，秘制粉末似乎没有减少。",
+    "学徒将铁块反复锻打、淬火，最终制成锋利的剑。",
+    "铸剑大师解释：秘制粉末能加快铁块变软，但自身不消耗，可重复使用。",
+    "学徒尝试用不同粉末，发现只有这种粉末对铁块有效，对其他金属无效。"
+  ],
+  "turning_point": "铸剑大师撒入秘制粉末后，铁块迅速变软，锻打效率显著提高。",
+  "resolution_state": "学徒掌握了使用秘制粉末加速铸剑的方法，并理解了粉末的特性。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "秘制粉末",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "秘制粉末加速铁块变软的作用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "秘制粉末在铸剑过程中的具体表现",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "某种特殊植物灰烬（类似秘制粉末但来源不同）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "铁块变软的速度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "影响铁块变软速度的因素（炉温、粉末等）",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "秘制粉末对铁块变软速度的影响规律",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "通过对比有无粉末及重复使用粉末来验证粉末作用",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "秘制粉末（n1）与秘制粉末加速铁块变软的作用（n2）相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "秘制粉末（n1）与铁块变软的速度（n5）相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "秘制粉末（n1）是影响铁块变软速度的因素（n6）的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "秘制粉末在铸剑过程中的具体表现（n3）是秘制粉末（n1）的一种实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "秘制粉末对铁块变软速度的影响规律（n7）是秘制粉末（n1）的一种规则",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "某种特殊植物灰烬（n4）与秘制粉末（n1）相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "秘制粉末（n1）使秘制粉末在铸剑过程中的具体表现（n3）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "通过对比有无粉末及重复使用粉末来验证粉末作用（n8）使秘制粉末（n1）的作用得以揭示",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "注意：秘制粉末对应催化剂，但未使用任何禁止术语。",
+    "注意：所有机制节点和边均已映射，方向保持。",
+    "注意：未使用课程桥接上下文作为因果机制。",
+    "注意：故事载体均来自同一源域（铸剑），无无关隐喻。"
+  ],
+  "mapping_context_sha256": "7e619c8cf80380535c48d5420dbf94eb74ba988bbf0b4ee16bdc7e6cf863110c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1d4daf76c0d6ecb90e952b447a7cfa1d3f28cdf457b2040c0e988068abe8cee2"
+  }
+}

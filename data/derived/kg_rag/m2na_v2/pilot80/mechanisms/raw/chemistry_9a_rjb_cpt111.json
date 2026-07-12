@@ -1,0 +1,133 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "chemistry_9a_rjb_cpt111",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "催化剂",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt110:definition",
+          "kg-node:chemistry_9a_rjb_cpt110:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "催化作用",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition",
+          "kg-node:chemistry_9a_rjb_cpt111:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "outcome",
+        "text": "反应速率改变",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "催化剂自身质量和化学性质在反应前后基本不变",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "催化剂的工业应用",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt113:definition",
+          "kg-node:chemistry_9a_rjb_cpt113:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18226"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "constrains",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n2",
+        "target": "n5",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15001"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "催化作用"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "d2be78cb634f7a3e5fb93a9f6d089d6256f0d5e08974949dae840930b5afa838",
+    "retrieval_sha256": "de6d0119623350a1d51c12dfe7e8b26f785c2d0d35c3e0f18fc40f02464c234e",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "317d92dc3bbfa563d466f1147966e901fd89b9eee8c20ee4d20208965a1b6162"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "每种印章在标准文牒厚度下有一个最佳盖印温度，且该温度随文牒厚度改变",
+      "evidence": "主簿新官上任，第一道令就贴在了印章局门口：“日后所有文牒用印，印章需在同一炉火温",
+      "narrative_anchor": "主簿新官上任，第一道令就贴在了印章局门口：“日后所有文牒用印，印章需在同一炉火温",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "文牒堆叠的厚度代表外部压强",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "最佳温度依赖于外部条件（文牒厚度）",
+      "evidence": "老刻工摸了摸花白胡子，没吭声。",
+      "narrative_anchor": "老刻工摸了摸花白胡子，没吭声。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "不同材质印章各有其最佳温度（类比不同物质不同特性）",
+      "evidence": "学徒好奇，取来铜印，在火炉上烤到掌心发烫，往标准厚度的文牒上一按，印迹鲜红饱满，",
+      "narrative_anchor": "学徒好奇，取来铜印，在火炉上烤到掌心发烫，往标准厚度的文牒上一按，印迹鲜红饱满，",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "铜印在标准条件下有固定最佳温度（类比水的熔点和沸点）",
+      "evidence": "“好！",
+      "narrative_anchor": "“好！",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n6",
+      "narrative_element": "木印在标准条件下有另一个固定最佳温度（类比铁的熔点和沸点）",
+      "evidence": "”主簿点头。",
+      "narrative_anchor": "”主簿点头。",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "最佳盖印温度依赖于文牒厚度（压强）",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "压强（文牒厚度）作为条件影响印章性质",
+      "evidence": "老刻工摸了摸花白胡子，没吭声。",
+      "narrative_anchor": "老刻工摸了摸花白胡子，没吭声。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "不同材质印章各有最佳温度（条件影响的具体化）",
+      "evidence": "学徒好奇，取来铜印，在火炉上烤到掌心发烫，往标准厚度的文牒上一按，印迹鲜红饱满，",
+      "narrative_anchor": "学徒好奇，取来铜印，在火炉上烤到掌心发烫，往标准厚度的文牒上一按，印迹鲜红饱满，",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "铜印的最佳温度作为具体实例",
+      "evidence": "“好！",
+      "narrative_anchor": "“好！",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "木印的最佳温度作为对比实例",
+      "evidence": "”主簿点头。",
+      "narrative_anchor": "”主簿点头。",
+      "narrative_source_concept_node_id": "n5",
+      "narrative_target_concept_node_id": "n6",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "与相关概念保持可解释关系：一一对应比较法",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m3",
+      "text": "与相关概念保持可解释关系：比较数量（多、少、一样多）",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_16335"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_19305"
+    }
+  ]
+}

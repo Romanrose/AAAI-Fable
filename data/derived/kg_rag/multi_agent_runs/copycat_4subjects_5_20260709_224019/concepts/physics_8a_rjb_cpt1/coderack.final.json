@@ -1,0 +1,27 @@
+{
+  "concept_id": "physics_8a_rjb_cpt1",
+  "items": [
+    {
+      "item_id": "candidate_001:coderack:001",
+      "codelet_type": "RepairDirectionCodelet",
+      "urgency": 0.5,
+      "temperature_sensitivity": 0.45,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_001",
+      "reason": "repair reversed story event order",
+      "evidence": {
+        "relation_direction_accuracy": 0.5
+      }
+    },
+    {
+      "item_id": "candidate_002:coderack:001",
+      "codelet_type": "EvaluateStructureStrengthCodelet",
+      "urgency": 0.25,
+      "temperature_sensitivity": 0.2,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_002",
+      "reason": "candidate has no dominant failure pressure",
+      "evidence": {}
+    }
+  ]
+}

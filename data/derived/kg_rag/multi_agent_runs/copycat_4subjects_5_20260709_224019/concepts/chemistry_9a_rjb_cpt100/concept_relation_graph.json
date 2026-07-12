@@ -1,0 +1,82 @@
+{
+  "target_concept": {
+    "id": "chemistry_9a_rjb_cpt100",
+    "name": "缓慢氧化",
+    "label": "Concept",
+    "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+  },
+  "neighbors": [
+    {
+      "id": "chemistry_9a_rjb_cpt97",
+      "name": "氧化反应"
+    },
+    {
+      "id": "chemistry_9a_rjb_cpt102",
+      "name": "呼吸与氧气"
+    },
+    {
+      "id": "chemistry_9a_rjb_cpt99",
+      "name": "燃烧"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:15248",
+      "source_id": "chemistry_9a_rjb_cpt97",
+      "source_name": "氧化反应",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming",
+      "neighbor_id": "chemistry_9a_rjb_cpt97",
+      "neighbor_name": "氧化反应",
+      "score": 1.35,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:18223",
+      "source_id": "chemistry_9a_rjb_cpt102",
+      "source_name": "呼吸与氧气",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "incoming",
+      "neighbor_id": "chemistry_9a_rjb_cpt102",
+      "neighbor_name": "呼吸与氧气",
+      "score": 0.9,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:18426",
+      "source_id": "chemistry_9a_rjb_cpt97",
+      "source_name": "氧化反应",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "incoming",
+      "neighbor_id": "chemistry_9a_rjb_cpt97",
+      "neighbor_name": "氧化反应",
+      "score": 0.9,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:18429",
+      "source_id": "chemistry_9a_rjb_cpt99",
+      "source_name": "燃烧",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "incoming",
+      "neighbor_id": "chemistry_9a_rjb_cpt99",
+      "neighbor_name": "燃烧",
+      "score": 0.9,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 4,
+  "source": "dual_level_graphrag"
+}

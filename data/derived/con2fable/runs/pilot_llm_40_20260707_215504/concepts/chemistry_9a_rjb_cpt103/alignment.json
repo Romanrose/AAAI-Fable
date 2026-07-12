@@ -1,0 +1,117 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "老匠人用三种不同方法制取纯净的“精气”",
+      "evidence": "他需要大量纯净的“精气”……他最先拿起那瓶翠绿的碧玉液……接着是白晶砂……最后，他看向那堆深紫色的紫晶石",
+      "narrative_anchor": "他需要大量纯净的“精气”"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "将一种东西分解成更简单的东西",
+      "evidence": "万物皆可化一为二，只要找到那把钥匙……将一种东西分解成更简单的东西",
+      "narrative_anchor": "将一种东西分解成更简单的东西"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "收集到的无形之气（精气）",
+      "evidence": "三个琉璃瓶摆在案上，里面都充盈着同样的无形之气",
+      "narrative_anchor": "同样的无形之气"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "通过观察气泡和气息纯净度来推断气体性质",
+      "evidence": "老匠人举起瓶子对着光，仔细观察气泡的动静和气息的纯净度，确认无一杂质",
+      "narrative_anchor": "仔细观察气泡的动静和气息的纯净度"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "用碧玉液（过氧化氢）制取精气",
+      "evidence": "他最先拿起那瓶翠绿的碧玉液。这药液性子温和，只需往里面撒一小撮黑色粉末，盆中便咕嘟咕嘟冒出无数细密的气泡",
+      "narrative_anchor": "碧玉液"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "用白晶砂（氯酸钾）制取精气",
+      "evidence": "接着是白晶砂。这白色结晶粉末性子倔强，必须与一种红色矿石粉混合，再放入耐火泥炉中用猛火煅烧",
+      "narrative_anchor": "白晶砂"
+    },
+    {
+      "concept_node_id": "m7",
+      "narrative_element": "用紫晶石（高锰酸钾）制取精气",
+      "evidence": "最后，他看向那堆深紫色的紫晶石。这是最危险的材料。他将石块敲碎，投入铁釜，盖上留有细孔的盖子，用炭火直接加热",
+      "narrative_anchor": "紫晶石"
+    },
+    {
+      "concept_node_id": "m8",
+      "narrative_element": "用琉璃集气瓶收集精气",
+      "evidence": "老匠人用琉璃集气瓶小心地接住……迅速用另一个琉璃瓶将其收拢……用最大的琉璃瓶将其一滴不漏地收集起来",
+      "narrative_anchor": "琉璃集气瓶"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "老匠人先理解分解原理，再开始制取精气",
+      "evidence": "他决定先弄明白这个根本道理——将一种东西分解成更简单的东西。他最先拿起那瓶翠绿的碧玉液",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "他决定先弄明白这个根本道理"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "分解原理导致产生精气（氧气）",
+      "evidence": "盆中便咕嘟咕嘟冒出无数细密的气泡。一股清凉的气息升腾起来",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "一股清凉的气息升腾起来"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "收集到精气后通过观察现象推断其性质",
+      "evidence": "三个琉璃瓶摆在案上，里面都充盈着同样的无形之气。老匠人举起瓶子对着光，仔细观察气泡的动静和气息的纯净度",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "仔细观察气泡的动静和气息的纯净度"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "通过观察现象，确认碧玉液分解制气的方法可行",
+      "evidence": "老匠人用琉璃集气瓶小心地接住，看着瓶中渐渐充盈的无形之气，满意地点了点头",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "满意地点了点头"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "从碧玉液方法过渡到白晶砂方法",
+      "evidence": "接着是白晶砂",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "接着是白晶砂"
+    },
+    {
+      "concept_edge_id": "e6",
+      "narrative_relation": "从白晶砂方法过渡到紫晶石方法",
+      "evidence": "最后，他看向那堆深紫色的紫晶石",
+      "narrative_source_concept_node_id": "m6",
+      "narrative_target_concept_node_id": "m7",
+      "direction_preserved": true,
+      "narrative_anchor": "最后，他看向那堆深紫色的紫晶石"
+    },
+    {
+      "concept_edge_id": "e7",
+      "narrative_relation": "紫晶石制气后，用琉璃瓶收集精气",
+      "evidence": "他屏住呼吸，用最大的琉璃瓶将其一滴不漏地收集起来",
+      "narrative_source_concept_node_id": "m7",
+      "narrative_target_concept_node_id": "m8",
+      "direction_preserved": true,
+      "narrative_anchor": "用最大的琉璃瓶将其一滴不漏地收集起来"
+    }
+  ]
+}

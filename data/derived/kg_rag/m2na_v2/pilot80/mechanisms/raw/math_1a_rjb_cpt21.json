@@ -1,0 +1,113 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt21",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "分拆数6和7：把6或7分成两个部分，了解所有不同的分法。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt22:definition",
+          "kg-edge:normalized:edge:16343"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "通过观察图示提出数学问题：能够根据情境图提出“有多少”“还剩多少”等数学问题。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl10:description",
+          "kg-edge:normalized:edge:16380"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "数字6和7的认识：能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt19:definition",
+          "kg-edge:normalized:edge:19309"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "6和7的减法：通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt21:definition",
+          "kg-node:math_1a_rjb_cpt21:formula"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16343"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16380"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19309"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "6和7的减法"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "ceea356723a158347bc0c0a85cb8eea4878cc5179a4b1a56d058986f0304cdb2",
+    "retrieval_sha256": "d6b3af3b1ec6e38236b47baf58c55285861f12fd3e227b92470a72488e0ced68",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "84da910cd149f35913bd79dfc4f4de3ef9a78c8aa0f671998ca86ac708abc23b"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

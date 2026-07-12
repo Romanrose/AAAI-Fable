@@ -1,0 +1,213 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "焦距",
+  "concept_id": "physics_8a_rjb_cpt101",
+  "concept_definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt101",
+    "焦距"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt101",
+      "label": "Concept",
+      "name": "焦距",
+      "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "焦距\n凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt106",
+          "label": "Concept",
+          "name": "凸透镜成像规律",
+          "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt99",
+          "label": "Concept",
+          "name": "光心",
+          "definition": "通过该点的光传播方向不变，可认为位于薄透镜中心。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt100",
+          "label": "Concept",
+          "name": "焦点",
+          "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "physics_8a_rjb_exe12",
+          "label": "Exercise",
+          "name": "太阳光可视为平行光。如何利用阳光测量凸透镜的焦距？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "第一节 透镜",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_ch5_s3",
+          "label": "Section",
+          "name": "第三节 凸透镜成像的规律",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt101",
+    "concept_id": "physics_8a_rjb_cpt101",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt101",
+      "label": "Concept",
+      "name": "焦距",
+      "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "焦距"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念（焦距）",
+      "story_evidence": "水晶到铜盘的距离决定了光点的大小和清晰度；太近或太远光点都会变大变散，只有特定距离才能让光汇聚得最集中。"
+    },
+    {
+      "concept_role": "核心机制（焦距决定凸透镜对光的偏折能力）",
+      "story_evidence": "小杰通过调整水晶高度，发现光点大小随距离变化：近则散、远则散，只有中间一个位置光点最小最亮，即水晶的‘最佳工作距离’决定了汇聚效果。"
+    },
+    {
+      "concept_role": "学科约束（保留变量关系、避免主观意志、保留条件变化）",
+      "story_evidence": "光点大小随距离连续变化（变量关系）；规则由自然现象揭示，非角色主观决定；不同距离导致不同结果（条件变化）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼的光影\n\n小镇广场上有一座古老的钟楼，钟楼顶部有一块巨大的透明水晶，据说是百年前一位工匠精心打磨的。水晶能把阳光聚成一束，在正午时分照亮钟楼地面上的一个铜盘，铜盘上刻着十二个时辰的标记。镇上的老人说，这块水晶是钟楼的“眼睛”，只要它对准了，钟楼就能准时报时。\n\n小杰是镇上的学徒，负责每天检查水晶是否干净、位置是否端正。他爬上钟楼，发现水晶其实是一块中间厚、边缘薄的透明镜片，阳光穿过它后会在下方形成一个明亮的光点。老钟表匠告诉他：“你要让这个光点正好落在铜盘的中心，钟楼才能走得准。”\n\n小杰试着调整水晶的高度和倾斜角度。他发现，当水晶离铜盘很近时，光点很大、很散，几乎看不清边界；当他慢慢把水晶升高，光点逐渐缩小，变得又亮又圆。他继续升高，光点却又开始变大、变模糊。小杰反复试验，终于找到了一个位置，光点最小、最亮，正好落在铜盘正中央。他固定好水晶，钟楼的指针果然开始平稳走动。\n\n几天后，一场大风把水晶吹歪了。小杰再次爬上钟楼，发现光点偏离了铜盘，而且形状也不圆了。他试着左右移动水晶，光点跟着移动；他上下调整高度，光点的大小也随之变化。小杰想起老钟表匠的话：“光点最小时，就是水晶最准的时候。”他耐心地微调，直到光点再次缩成一个小亮点，稳稳地落在铜盘中心。钟楼又恢复了准时。\n\n小杰终于明白：水晶到铜盘的距离决定了光点的大小和清晰度。太近或太远，光点都会变大变散；只有那个特定的距离，才能让光汇聚得最集中。这个距离，就是水晶的“最佳工作距离”。从此，他每次调整都先找到这个距离，钟楼再也没有出过差错。",
+  "rule_findings": {
+    "story_token_count": 574,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "老人"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

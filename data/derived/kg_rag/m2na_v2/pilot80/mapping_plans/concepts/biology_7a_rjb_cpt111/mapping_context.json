@@ -1,0 +1,139 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt111",
+    "subject": "biology",
+    "canonical_name": "花的基本结构",
+    "aliases": [],
+    "definition": "一朵花由花柄、花托、萼片、花瓣、雄蕊和雌蕊等组成，其中主要结构是雄蕊和雌蕊。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "花的基本结构"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "花的基本结构",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt111:definition",
+          "kg-node:biology_7a_rjb_cpt111:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "雄蕊",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "雌蕊",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "花柄、花托、萼片、花瓣",
+        "weight": 0.5,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt111:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt111:definition",
+          "kg-node:biology_7a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt111:definition",
+          "kg-node:biology_7a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "part_of",
+        "weight": 0.5,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt111:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "花的基本结构"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt111",
+      "name": "花的基本结构",
+      "label": "Concept",
+      "definition": "一朵花由花柄、花托、萼片、花瓣、雄蕊和雌蕊等组成，其中主要结构是雄蕊和雌蕊。"
+    },
+    "neighbors": [],
+    "relations": [],
+    "raw_edge_count": 0,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "花的基本结构",
+      "definition": "一朵花由花柄、花托、萼片、花瓣、雄蕊和雌蕊等组成，其中主要结构是雄蕊和雌蕊。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": [
+      "[normalized:edge:15] 花的基本结构 --appears_in--> 第二章 被子植物的一生",
+      "[normalized:edge:16] 雄蕊 --appears_in--> 第二章 被子植物的一生",
+      "[normalized:edge:17] 雌蕊 --appears_in--> 第二章 被子植物的一生",
+      "花的基本结构 --课程章节--> 雄蕊（定义显式提及：雄蕊）",
+      "花的基本结构 --课程章节--> 雌蕊（定义显式提及：雌蕊）"
+    ]
+  },
+  "retrieval_edge_ids": [],
+  "provenance": {
+    "seed_sha256": "307ed7c39e2aee53410577380440746fc4bfa09a08a31b7012e9eab7d1773712",
+    "retrieval_sha256": "d63b6dd887bf47d34034d1728fe3052ddf9936e1d0aab5542650d7795f7ca45d",
+    "mechanism_record_sha256": "e3421e13f2ba6753ef3e79e5efcdac59b70402a00ad06ccf3ea3a6bbf3b3aff1"
+  }
+}

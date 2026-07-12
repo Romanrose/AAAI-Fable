@@ -1,0 +1,54 @@
+{
+  "query": "physics_8a_rjb_cpt119",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt119",
+    "label": "Concept",
+    "name": "显微镜",
+    "definition": "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。",
+    "aliases": [],
+    "examples": [
+      "观",
+      "察",
+      "植",
+      "物",
+      "细",
+      "胞"
+    ],
+    "retrieval_text": "显微镜\n由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt106",
+        "label": "Concept",
+        "name": "凸透镜成像规律",
+        "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp29",
+        "label": "Experiment",
+        "name": "自制显微镜实验",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s5",
+        "label": "Section",
+        "name": "第五节 显微镜和望远镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

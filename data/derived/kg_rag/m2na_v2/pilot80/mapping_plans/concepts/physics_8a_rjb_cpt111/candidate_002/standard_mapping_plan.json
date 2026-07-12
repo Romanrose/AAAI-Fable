@@ -1,0 +1,105 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠制作铜镜",
+  "characters": [
+    "老铜匠",
+    "小徒弟"
+  ],
+  "objects": [
+    "铜镜坯",
+    "磨镜石",
+    "铜镜面",
+    "小铜锤"
+  ],
+  "conflict": "小徒弟发现铜镜照出的影像模糊不清，无法清晰映照人脸。",
+  "event_chain": [
+    "老铜匠将铜镜坯和磨镜石组合成磨镜工具",
+    "磨镜工具将铜镜坯打磨成光滑的铜镜面",
+    "光滑的铜镜面清晰映照出人脸",
+    "小徒弟用小铜锤敲击铜镜坯边缘，改变其形状",
+    "改变形状后的铜镜坯经过打磨，能清晰映照不同距离的人脸"
+  ],
+  "turning_point": "小徒弟用小铜锤敲击铜镜坯边缘，调整其曲度。",
+  "resolution_state": "铜镜坯经过小铜锤调整形状后，再打磨成镜面，能清晰映照远近不同的人脸。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜镜坯与磨镜石",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "磨镜工具",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "打磨铜镜坯使其表面光滑",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铜镜面",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "小铜锤",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "敲击铜镜坯边缘改变其形状",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铜镜坯与磨镜石组合成磨镜工具",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "磨镜工具使铜镜坯表面变得光滑",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "光滑的铜镜面清晰映照人脸",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "小铜锤敲击铜镜坯边缘改变其形状",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "改变形状后的铜镜坯经过打磨能清晰映照不同距离的人脸",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用任何与眼睛、晶状体、角膜、凸透镜、视网膜、睫状体等相关的术语。",
+    "确保故事载体来自同一源域（铜镜制作），不混用其他领域。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如眼睛调节）作为因果机制的一部分。"
+  ],
+  "mapping_context_sha256": "209a85252e5fd7f77e409684bde5ad49f2245d390a7cd6c7d972dc17e158cefd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "eb05c6414874f27d4d642918d5584c8289c11985279d9dc60694be121194162c"
+  }
+}

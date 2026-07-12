@@ -1,0 +1,54 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt10",
+  "concept_id": "biology_7a_rjb_cpt10",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "biology_7a_rjb_cpt10",
+    "label": "Concept",
+    "name": "遗传和变异",
+    "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+    "aliases": [],
+    "examples": [
+      "狗的一家体现亲子相似与差异",
+      "同一株碧桃上的花存在差异"
+    ]
+  },
+  "source_domain": "园圃工坊",
+  "entities": [
+    "负责观察规则的主角",
+    "一个需要按条件运转的场所",
+    "用来显示变化的物件或行动"
+  ],
+  "event_chain": [
+    "用故事事件隐含表达：子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。"
+  ],
+  "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+  "turning_point": "一次具体观察或检验让主角发现关键关系。",
+  "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "遗传和变异"
+      ],
+      "story_role": "故事中隐含的核心规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。"
+      ],
+      "story_role": "主要事件链和转折"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "避免目的论解释。",
+        "避免把个体努力写成进化原因。",
+        "保留生命系统的条件、过程和结果。"
+      ],
+      "story_role": "避免误导性类比的写作约束"
+    }
+  ]
+}

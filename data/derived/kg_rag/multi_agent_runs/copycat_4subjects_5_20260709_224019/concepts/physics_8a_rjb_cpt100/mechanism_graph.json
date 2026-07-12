@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "保留变量之间的关系。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "避免把自然规律写成角色主观意志。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:17246",
+      "source_name": "主光轴",
+      "target_name": "焦点",
+      "relation_semantic_role": "prerequisite"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "verifies",
+      "source_edge_id": "normalized:edge:23045",
+      "source_name": "凸透镜对光的偏折演示",
+      "target_name": "焦点",
+      "relation_semantic_role": "evidence_verification"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:17246",
+    "normalized:edge:23045",
+    "normalized:edge:19710"
+  ]
+}

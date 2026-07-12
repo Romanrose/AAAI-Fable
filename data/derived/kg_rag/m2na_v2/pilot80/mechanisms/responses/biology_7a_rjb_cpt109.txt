@@ -1,0 +1,106 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "rule",
+        "text": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt109:formula"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "培养皿内铺滤纸/纱布并加水保持湿润，均匀摆放一定数量（示例100粒）种子；每天观察一次记录萌发粒数，连续约7天；重复测定多次并取平均",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:process"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "按发芽率公式计算并用平均值作为测定结果，为播种提供依据",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:conclusion"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "直径约10厘米培养皿；滤纸或纱布（2~4层）；适量清水；待测种子（示例100粒）；记录表",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:instrument"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n5",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:instrument",
+          "kg-node:biology_7a_rjb_exp10:process"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:process",
+          "kg-node:biology_7a_rjb_exp10:conclusion"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22391"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt109:definition",
+          "kg-node:biology_7a_rjb_cpt109:formula"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}
+```

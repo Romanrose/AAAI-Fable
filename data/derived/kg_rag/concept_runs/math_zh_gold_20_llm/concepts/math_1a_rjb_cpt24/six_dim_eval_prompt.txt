@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "数字7的认识",
+  "concept_id": "math_1a_rjb_cpt24",
+  "concept_definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt24",
+    "数字7的认识"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt24",
+      "label": "Concept",
+      "name": "数字7的认识",
+      "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "数字7的认识\n通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt26",
+          "label": "Concept",
+          "name": "7的加减法",
+          "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt27",
+          "label": "Concept",
+          "name": "数量的比较",
+          "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "6和7",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt24",
+    "concept_id": "math_1a_rjb_cpt24",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt24",
+      "label": "Concept",
+      "name": "数字7的认识",
+      "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "数字7的认识"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过数七种颜色、七块石头、七片花瓣等情节，让主角认识数字7及其表示的数量，但未直接提及'数字7的认识'。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿灵通过数物体（颜色、石头、花瓣）逐步理解7表示的数量，体现了'通过数物体、读写数字等方式认识数字7'的机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了数数的形式规则（按顺序数、一一对应），通过数学结构（数到7对应七个物体）推动情节，未将概念道德化。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：七色桥的秘密\n\n在彩虹镇的尽头，有一座神奇的七色桥。传说只要数对桥上的颜色，就能实现一个愿望。小狐狸阿灵一直想去桥对面的星星花园，但每次走到桥头，桥上的颜色都会变化。\n\n第一天，阿灵看到桥上闪着红、橙、黄、绿、青、蓝六种颜色。她数了数：“一、二、三、四、五、六。”刚数完，桥就消失了。她沮丧地坐在河边。\n\n第二天，颜色变成了红、橙、黄、绿、青、蓝、紫。阿灵又数：“一、二、三、四、五、六。”她漏掉了紫色。桥再次消失。\n\n第三天，阿灵请来好朋友小兔跳跳帮忙。跳跳说：“我们先把颜色按顺序排好。”他们找来七块小石头，每块代表一种颜色。阿灵摆好石头：红、橙、黄、绿、青、蓝、紫。她指着石头数：“一、二、三、四、五、六、七。”数到第七块紫色时，她惊喜地发现，桥上的颜色和石头一一对应。\n\n“原来有七种颜色！”阿灵说。她重新走到桥头，这次她仔细地指着每种颜色数：“一、二、三、四、五、六、七。”数完第七种紫色，桥身发出柔和的光，稳稳地架在河上。\n\n阿灵和跳跳走过桥，来到星星花园。花园里有七朵不同颜色的花，每朵花的花瓣数也是七片。阿灵数了数花瓣：“一、二、三、四、五、六、七。”她明白了，七这个数代表的就是这样一组完整的集合。\n\n从此，阿灵学会了用数数来认识事物的数量。她知道，数到七就是有七个东西，不多也不少。彩虹镇的动物们都说，阿灵是第一个真正理解七色桥秘密的小狐狸。",
+  "rule_findings": {
+    "story_token_count": 454,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

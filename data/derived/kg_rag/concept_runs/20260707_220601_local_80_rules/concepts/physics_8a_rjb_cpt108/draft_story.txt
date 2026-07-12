@@ -1,0 +1,53 @@
+标题：不会说话的线索
+
+每到日落，轨道调度台的屋角都会留下一串奇怪迹象，调弦师把它们收进墨格里逐一对照。
+一天，他没有立刻下结论，而是把所见的前后变化分段写在墨格上。他先查看前面几道门槛是否都已到位。旁边的几件事看似相近，他却在{marker}上用不同符号区分。
+他没把淡黄纸角当作装饰，而是用它标出一段必须保留的顺序：先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 凸透镜成像规律。
+墨格上的淡黄纸角被移到另一行后，他看出同一条隐线仍然通向：让中间的行动承接前后变化：物距 --relates_to--> 这条隐藏规则。
+当旁人只看见表面迹象时，调弦师指着淡黄纸角说，先别跳过这一段：让中间的行动承接前后变化：像到凸透镜的距离，用v表示。。
+他特意延后一个小步骤，并把前后两次结果放在一起比对。后来的痕迹与他的记录对上了，原来变化并非随意而来。新来的人请教时，调弦师只把墨格推过去，让对方按顺序自己查看。
+
+```json
+[
+  {
+    "concept_role": "target concept",
+    "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+    "concept_items": [
+      "像距"
+    ]
+  },
+  {
+    "concept_role": "core mechanism",
+    "story_evidence": "前后变化被调弦师按顺序记录、改动和复查。"
+  },
+  {
+    "concept_role": "prerequisites",
+    "concept_items": [
+      "凸透镜成像规律"
+    ],
+    "story_evidence": "他先查看前面几道门槛是否都已到位。"
+  },
+  {
+    "concept_role": "related concepts",
+    "concept_items": [
+      "物距"
+    ],
+    "story_evidence": "旁边的几件事看似相近，他却在{marker}上用不同符号区分。"
+  },
+  {
+    "concept_role": "outcomes",
+    "concept_items": [],
+    "story_evidence": "后来的痕迹与他的记录对上了，原来变化并非随意而来。"
+  },
+  {
+    "concept_role": "experiments",
+    "concept_items": [],
+    "story_evidence": "他特意延后一个小步骤，并把前后两次结果放在一起比对。"
+  },
+  {
+    "concept_role": "exercises",
+    "concept_items": [],
+    "story_evidence": "故事结尾保留了可复查、可迁移的判断任务。"
+  }
+]
+```

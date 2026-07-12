@@ -1,0 +1,76 @@
+{
+  "concept_id": "biology_7a_rjb_cpt116",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "canonical_name": "异花传粉",
+  "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+  "aliases": [],
+  "examples": [
+    "玉米传粉主要依靠风",
+    "鼠尾草、油菜可依靠昆虫",
+    "人工异花传粉用于杂交实验"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt114",
+        "label": "Concept",
+        "name": "传粉",
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe17",
+        "label": "Exercise",
+        "name": "花粉从花药散放而落到雌蕊柱头上的过程叫做什么？异花传粉通常需要哪些媒介？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      },
+      {
+        "id": "biology_bx2_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一节 孟德尔的豌豆杂交实验(一)",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+  ],
+  "must_preserve_zh": [
+    "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "异花传粉"
+  ],
+  "subject_constraints_zh": [
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。",
+    "保留生命系统的条件、过程和结果。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

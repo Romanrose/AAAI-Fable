@@ -1,0 +1,119 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "中国古代寓言：匠人制器",
+  "characters": [
+    "老匠人",
+    "学徒"
+  ],
+  "objects": [
+    "筛网",
+    "粗沙",
+    "细沙",
+    "风箱",
+    "压力",
+    "精沙"
+  ],
+  "conflict": "学徒想从粗沙中快速得到大量细沙，但直接筛选效率低且细沙纯度不足。",
+  "event_chain": [
+    "学徒尝试用普通筛网筛粗沙，得到细沙但含杂质。",
+    "老匠人指出筛网孔隙太大，无法有效分离细沙。",
+    "老匠人制作一张特殊筛网，其孔隙大小恰好能让细沙通过而粗沙留下。",
+    "老匠人用风箱对筛网施加一定压力，使粗沙更快通过筛网。",
+    "特殊筛网在压力下，细沙透过速度远快于粗沙，得到较纯的细沙。",
+    "老匠人将一次筛得的细沙再次用更细的筛网分级，得到更纯的精沙。"
+  ],
+  "turning_point": "老匠人制作特殊筛网并施加压力，使细沙与粗沙分离效率大幅提升。",
+  "resolution_state": "学徒学会用特殊筛网和压力分级筛选，最终得到高纯度精沙。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "用特殊筛网和风箱压力筛选细沙的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "匠人制器获取精沙的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "细沙",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "用普通筛网多次筛沙获取细沙的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "特殊筛网",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "风箱施加的压力",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "精沙",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "用特殊筛网和风箱压力筛选细沙的过程是匠人制器获取精沙方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "细沙是匠人制器获取精沙方法所涉及的材料",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "用普通筛网多次筛沙获取细沙的方法是匠人制器获取精沙方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "特殊筛网使得用特殊筛网和风箱压力筛选细沙的过程能够进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "风箱施加的压力使得用特殊筛网和风箱压力筛选细沙的过程能够进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "用特殊筛网和风箱压力筛选细沙的过程产生精沙",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'膜'、'氧气'、'富氧空气'等化学术语。",
+    "确保'筛网'对应'薄膜'，'细沙'对应'氧气'，'粗沙'对应'其他气体'，'精沙'对应'富氧空气'，映射清晰。",
+    "确保'风箱压力'对应'一定压力'，且是分离条件。",
+    "确保'普通筛网多次筛沙'对应'液态空气分馏制氧'，属于同一大类方法。",
+    "确保所有机制节点和边均被映射，且方向正确。"
+  ],
+  "mapping_context_sha256": "176a6f19774e004581b66a659675baf0ff4d36e6a9c3f31dd949d151e4739b2c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ddc034ec4e00143ea244c4f5d9d92c7f466cc8921e081c4548ad7425dbe1efb7"
+  }
+}

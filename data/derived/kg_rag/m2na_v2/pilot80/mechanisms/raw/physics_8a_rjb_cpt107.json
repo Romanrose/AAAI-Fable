@@ -1,0 +1,107 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt107",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "物体到凸透镜的距离",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "物距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition",
+          "kg-node:physics_8a_rjb_cpt107:name"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "像距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt108:definition",
+          "kg-node:physics_8a_rjb_cpt108:name"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "凸透镜成像规律",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt106:definition",
+          "kg-node:physics_8a_rjb_cpt106:name"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19712"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17193"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "物距"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "ec4a9b6b52de58e66fcfd3faca2831a68ca2b7b4747bce2e69be9f3fc24258d7",
+    "retrieval_sha256": "33f880469216a4e683cb14266371d39d49cd4973ffd702e8d443df5d4cad417a",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "1a7fd9349f1bffbc8a07ee672b07a72eedf0361658ebcc237246b98f375a262a"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

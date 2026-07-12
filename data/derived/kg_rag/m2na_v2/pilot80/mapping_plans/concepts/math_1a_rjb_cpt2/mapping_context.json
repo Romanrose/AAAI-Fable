@@ -1,0 +1,159 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt2",
+    "subject": "math",
+    "canonical_name": "比较数量（多、少、一样多）",
+    "aliases": [],
+    "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "比较数量（多、少、一样多）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "数物体（数一数）：通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt1:definition",
+          "kg-node:math_1a_rjb_cpt1:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "一一对应比较法：通过将两组物体一一配对来比较数量的多少。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt3:definition",
+          "kg-node:math_1a_rjb_cpt3:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "比较数量（多、少、一样多）：根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt2:definition",
+          "kg-node:math_1a_rjb_cpt2:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19305"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12138"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "比较数量（多、少、一样多）"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt2",
+      "name": "比较数量（多、少、一样多）",
+      "label": "Concept",
+      "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt3",
+        "name": "一一对应比较法"
+      },
+      {
+        "id": "math_1a_rjb_cpt1",
+        "name": "数物体（数一数）"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:12138",
+        "source_id": "math_1a_rjb_cpt3",
+        "source_name": "一一对应比较法",
+        "target_id": "math_1a_rjb_cpt2",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt3",
+        "neighbor_name": "一一对应比较法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19305",
+        "source_id": "math_1a_rjb_cpt1",
+        "source_name": "数物体（数一数）",
+        "target_id": "math_1a_rjb_cpt2",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt1",
+        "neighbor_name": "数物体（数一数）",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "比较数量（多、少、一样多）",
+      "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:12138] 一一对应比较法 --is_a--> 比较数量（多、少、一样多）",
+      "[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:12138",
+    "normalized:edge:19305"
+  ],
+  "provenance": {
+    "seed_sha256": "5282268a3a60c3c0fef26310626d6475a4838771829e5d752b3ea6745242a41c",
+    "retrieval_sha256": "ae4492c1a6ccf4181867fb986f582d8a4ad19b20ada8b409c2f0e5ac34173457",
+    "mechanism_record_sha256": "2bb5dad78ee77d3b486f6a951ff5f932ed1391a81bf439ebc7fe736530e2caf3"
+  }
+}

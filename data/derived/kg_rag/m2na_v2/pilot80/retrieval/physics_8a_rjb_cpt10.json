@@ -1,0 +1,132 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt10",
+    "label": "Concept",
+    "name": "参照物",
+    "properties": {
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "importance": "重要",
+      "examples": [
+        "地面",
+        "旁边的列车",
+        "树木",
+        "房屋"
+      ],
+      "retrieval_text": "参照物\nConcept\n判断物体运动或静止时所选取的标准物体。\n重要\n地面\n旁边的列车\n树木\n房屋"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt8",
+      "label": "Concept",
+      "name": "机械运动",
+      "properties": {
+        "definition": "物体的位置随时间不断地发生变化的运动形式。",
+        "importance": "重要",
+        "examples": [
+          "彗星运动",
+          "猎豹奔跑",
+          "蜗牛爬行",
+          "江河奔流",
+          "天体运动",
+          "地壳运动"
+        ],
+        "retrieval_text": "机械运动\nConcept\n物体的位置随时间不断地发生变化的运动形式。\n重要\n彗星运动\n猎豹奔跑\n蜗牛爬行\n江河奔流\n天体运动\n地壳运动"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt9",
+      "label": "Concept",
+      "name": "运动与静止的相对性",
+      "properties": {
+        "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。",
+        "importance": "掌握",
+        "examples": [
+          "两列火车并排时的错觉",
+          "地面看车辆在运动，而车辆之间可能相对静止"
+        ],
+        "retrieval_text": "运动与静止的相对性\nConcept\n一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。\n掌握\n两列火车并排时的错觉\n地面看车辆在运动，而车辆之间可能相对静止"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17189",
+      "source": "physics_8a_rjb_cpt10",
+      "source_name": "参照物",
+      "target": "physics_8a_rjb_cpt9",
+      "target_name": "运动与静止的相对性",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:19745",
+      "source": "physics_8a_rjb_cpt8",
+      "source_name": "机械运动",
+      "target": "physics_8a_rjb_cpt10",
+      "target_name": "参照物",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:19747",
+      "source": "physics_8a_rjb_cpt9",
+      "source_name": "运动与静止的相对性",
+      "target": "physics_8a_rjb_cpt10",
+      "target_name": "参照物",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "参照物",
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17189] 参照物 --prerequisites_for--> 运动与静止的相对性"
+    ],
+    "process_summary": [
+      "[normalized:edge:19745] 机械运动 --relates_to--> 参照物",
+      "[normalized:edge:19747] 运动与静止的相对性 --relates_to--> 参照物"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 3,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 3,
+    "expanded_to_two_hop": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt107",
+  "strategy": "copycat",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "园圃值守所",
+  "characters": [
+    "记录员",
+    "调度员",
+    "验收员"
+  ],
+  "objects": [
+    "分段记录册",
+    "封存箱",
+    "通行牌"
+  ],
+  "conflict": "园圃值守所里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。",
+  "event_chain": [
+    "主角把这个具体现象归入“种子萌发的自身条件”这类更大的共同规则，而不是当成孤立事件。",
+    "主角先在园圃值守所中确认园圃值守所中的入口条件核对是否成立。",
+    "随后，园圃值守所中的第2道转化环节按前一步留下的条件继续推进。",
+    "随后，园圃值守所中的第3道转化环节按前一步留下的条件继续推进。",
+    "随后，园圃值守所中的第4道转化环节按前一步留下的条件继续推进。",
+    "随后，园圃值守所中的第5道转化环节按前一步留下的条件继续推进。",
+    "最后，众人用园圃值守所中的结果验收记录核对整条安排是否得到可靠结果。"
+  ],
+  "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。",
+  "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "园圃值守所中的入口条件核对",
+      "mapping_type": "structural_carrier"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "园圃值守所中的第2道转化环节",
+      "mapping_type": "structural_carrier"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "园圃值守所中的第3道转化环节",
+      "mapping_type": "structural_carrier"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "园圃值守所中的第4道转化环节",
+      "mapping_type": "structural_carrier"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "园圃值守所中的第5道转化环节",
+      "mapping_type": "structural_carrier"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "园圃值守所中的结果验收记录",
+      "mapping_type": "structural_carrier"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "主角把这个具体现象归入“园圃值守所中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "正文不能出现目标概念名、别名或禁用术语。",
+    "事件必须保留 GraphRAG 概念关系的类型语义，不要把 is_a、verifies、relates_to 全部写成顺序因果。"
+  ],
+  "mapping_context_sha256": "a89f1a24978e8d95beb169bedc1b6dc26af79db25883da81516c71c646910017",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "algorithm": "copycat-inspired deterministic structure mapping"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt111",
+    "label": "Concept",
+    "name": "催化作用",
+    "properties": {
+      "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "importance": "重要",
+      "retrieval_text": "催化作用\nConcept\n催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15001",
+      "source": "chemistry_9a_rjb_cpt111",
+      "source_name": "催化作用",
+      "target": "chemistry_9a_rjb_cpt113",
+      "target_name": "催化剂的工业应用",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:18226",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_9a_rjb_cpt111",
+      "target_name": "催化作用",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "催化作用",
+      "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:15001] 催化作用 --prerequisites_for--> 催化剂的工业应用"
+    ],
+    "process_summary": [
+      "[normalized:edge:18226] 催化剂 --relates_to--> 催化作用"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 536,
+    "summary_chars": 324,
+    "path_chars": 0,
+    "retrieval_context_chars": 860
+  }
+}

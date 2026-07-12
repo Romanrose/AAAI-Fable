@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "老张数苹果",
+      "evidence": "用手指着树上的苹果，一个一个地数过去",
+      "narrative_anchor": "用手指着树上的苹果，一个一个地数过去"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "小李用石子一一对应核对",
+      "evidence": "每摘下一个，就在地上放一颗小石子。摘完所有的苹果后，他蹲下来数地上的石子",
+      "narrative_anchor": "每摘下一个，就在地上放一颗小石子"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "王婶比较两筐苹果数量",
+      "evidence": "第一筐比第二筐多了3个苹果",
+      "narrative_anchor": "第一筐比第二筐多了3个苹果"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "老张数完后，小李用一一对应法核对",
+      "evidence": "小李开始摘苹果，每摘下一个，就在地上放一颗小石子。摘完所有的苹果后，他蹲下来数地上的石子",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "小李开始摘苹果，每摘下一个，就在地上放一颗小石子"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "小李用石子核对后，王婶用一一对应比较数量多少",
+      "evidence": "王婶把第一筐的苹果一个个摆在地上，排成一行，又把第二筐的苹果也摆成一行，让它们一个对着一个。王婶仔细看了看，大声说：“第一筐比第二筐多了3个苹果”",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "王婶把第一筐的苹果一个个摆在地上，排成一行，又把第二筐的苹果也摆成一行，让它们一个对着一个"
+    }
+  ]
+}

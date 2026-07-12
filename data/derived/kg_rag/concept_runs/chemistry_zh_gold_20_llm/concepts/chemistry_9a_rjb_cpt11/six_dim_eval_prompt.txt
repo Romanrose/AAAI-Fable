@@ -1,0 +1,206 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "大气压强",
+  "concept_id": "chemistry_9a_rjb_cpt11",
+  "concept_definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt11",
+    "大气压强",
+    "标准大气压强",
+    "气压"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt11",
+      "label": "Concept",
+      "name": "大气压强",
+      "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+      "aliases": [
+        "气压",
+        "标准大气压强"
+      ],
+      "examples": [
+        "标准大气压强为101 kPa"
+      ],
+      "retrieval_text": "大气压强\n大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt10",
+          "label": "Concept",
+          "name": "沸点",
+          "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt10",
+          "label": "Concept",
+          "name": "沸点",
+          "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch1_s1",
+          "label": "Section",
+          "name": "课题1 物质的变化和性质",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt11",
+    "concept_id": "chemistry_9a_rjb_cpt11",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt11",
+      "label": "Concept",
+      "name": "大气压强",
+      "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+      "aliases": [
+        "气压",
+        "标准大气压强"
+      ],
+      "examples": [
+        "标准大气压强为101 kPa"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "大气压强"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中通过吸盘贴墙、水沸腾温度变化等情节，暗示了大气对单位面积所产生的压力，且该压力不是固定不变的。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "老铁匠用铁罐烧水、吸盘实验、水沸腾温度变化等事件，展示了大气压力对物体表面的作用以及其可变性；最后提到人们规定了一个常见的标准，对应101 kPa的标准大气压强。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事全程未提及‘大气压强’、‘气压’、‘标准大气压强’等禁止术语；未出现化学式或元素符号；通过物理现象（吸盘、水沸腾）解释概念，未混淆化学反应与物理混合。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：看不见的秤砣\n\n从前，在一个山脚下的村庄里，住着一位老铁匠。他每天都要用风箱给炉子鼓风，把铁块烧得通红，然后锻打成农具。\n\n一天，老铁匠的孙子小铁好奇地问：“爷爷，为什么风箱一拉，火就旺起来？为什么把铁块烧红后，它反而变软了？”\n\n老铁匠笑着说：“你问得好。来，我教你一个道理。”\n\n他拿来一个密封的铁罐，里面装了半罐水，盖上盖子，放在炉子上烧。不一会儿，铁罐发出“噗噗”的响声，盖子被顶得跳了起来。小铁惊讶地瞪大了眼睛。\n\n老铁匠说：“你看，水烧开时，罐子里有东西在往外推盖子。可你知道吗？其实我们周围到处都有看不见的东西在压着我们。”\n\n小铁更疑惑了：“看不见的东西？在哪里？”\n\n老铁匠没有直接回答，而是拿出一个吸盘，往墙上一按，吸盘就牢牢地贴住了。小铁使劲拉，却怎么也拉不下来。老铁匠说：“你试试把吸盘边缘撬开一点。”小铁一撬，吸盘“啪”地掉了下来。\n\n“这是怎么回事？”小铁问。\n\n“那个看不见的东西，平时压住吸盘，让它贴紧墙壁。当你撬开边缘时，外面的东西跑进去，两边平衡了，吸盘就掉了。”老铁匠解释道。\n\n小铁若有所思。老铁匠又说：“你注意过吗？我们烧水时，水沸腾的温度，有时高有时低。晴天烧水，水开得早；阴天烧水，水开得晚。这是因为那个看不见的东西，在晴天时压得轻一些，阴天时压得重一些。”\n\n小铁恍然大悟：“原来那个看不见的东西，就像一个大秤砣，压在我们身上，但它的大小还会变化！”\n\n老铁匠点点头：“对。不过，人们为了方便，规定了一个常见的秤砣大小，作为标准。就像我们打铁时，总有一个最常用的锤子一样。”\n\n小铁明白了：世界上有许多看不见的力量，它们虽然无形，却实实在在地影响着我们的生活。只有细心观察，才能发现它们的规律。\n\n从此，小铁更加用心地观察周围的一切，懂得了许多书本上学不到的道理。",
+  "rule_findings": {
+    "story_token_count": 617,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "村庄"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

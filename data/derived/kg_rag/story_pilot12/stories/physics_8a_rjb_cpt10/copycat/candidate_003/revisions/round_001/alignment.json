@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第2道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "第2道转化环节的结果必须依赖入口条件核对的结果，因为航道限宽正是从入口条件里来的",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "那我得先看看你们的入口条件核对结果，才能确定验收记录怎么写",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "确认入口条件全部合格，这才翻开自己的验收记录，写下“入口条件已满足”",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 maps to '入口条件核对', n2 to '第2道转化环节', n3 to '结果验收记录'. Edge e1 (n2→n1, relates_to) is evidenced by the dependency of the transformation step on the entry condition check. Edge e2 (n1→n3, enables) is evidenced by the requirement to check entry conditions before writing the acceptance record. Edge e3 (n3→n1, relates_to) is evidenced by the acceptance record referencing the entry condition result. Directions are preserved."
+}

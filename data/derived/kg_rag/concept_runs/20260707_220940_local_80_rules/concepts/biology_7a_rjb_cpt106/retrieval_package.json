@@ -1,0 +1,73 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt106",
+    "label": "Concept",
+    "name": "种子萌发的自身条件",
+    "properties": {
+      "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "importance": "掌握",
+      "retrieval_text": "种子萌发的自身条件\nConcept\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。\n掌握"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14134",
+      "source": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:10777",
+      "source": "biology_7a_rjb_cpt107",
+      "source_name": "种子休眠",
+      "target": "biology_7a_rjb_cpt106",
+      "target_name": "种子萌发的自身条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:10776",
+      "source": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "种子萌发的自身条件",
+      "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14134] 种子萌发的自身条件 --prerequisites_for--> 种子萌发",
+      "[normalized:edge:10777] 种子休眠 --is_a--> 种子萌发的自身条件",
+      "[normalized:edge:10776] 种子萌发的自身条件 --is_a--> 种子萌发"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 771,
+    "summary_chars": 395,
+    "path_chars": 0,
+    "retrieval_context_chars": 1166
+  }
+}

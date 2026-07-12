@@ -1,0 +1,85 @@
+{
+  "query": "biology_7a_rjb_cpt113",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt113",
+    "label": "Concept",
+    "name": "雌蕊",
+    "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "雌蕊\n花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": ""
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '雌蕊', 'definition': '花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。', 'formula': '', 'importance': '了解'}, 'condition_summary': [], 'process_summary': [], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt113",
+      "label": "Concept",
+      "name": "雌蕊",
+      "properties": {
+        "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+        "importance": "了解",
+        "retrieval_text": "雌蕊\nConcept\n花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。\n了解"
+      }
+    },
+    "raw_edges": [],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "雌蕊",
+        "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 0,
+      "candidate_edge_count": 0,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 2,
+      "summary_chars": 188,
+      "path_chars": 0,
+      "retrieval_context_chars": 190
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 0,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2,
+    "summary_chars": 188,
+    "path_chars": 0,
+    "retrieval_context_chars": 190
+  }
+}

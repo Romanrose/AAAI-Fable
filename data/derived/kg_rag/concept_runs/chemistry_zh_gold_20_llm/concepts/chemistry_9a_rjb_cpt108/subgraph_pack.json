@@ -1,0 +1,53 @@
+{
+  "query": "chemistry_9a_rjb_cpt108",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt108",
+    "label": "Concept",
+    "name": "加热氯酸钾制取氧气",
+    "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "加热氯酸钾制取氧气\n在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt103",
+        "label": "Concept",
+        "name": "实验室制取氧气的方法",
+        "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt109",
+        "label": "Concept",
+        "name": "分解反应",
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "chemistry_9a_rjb_exp18",
+        "label": "Experiment",
+        "name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

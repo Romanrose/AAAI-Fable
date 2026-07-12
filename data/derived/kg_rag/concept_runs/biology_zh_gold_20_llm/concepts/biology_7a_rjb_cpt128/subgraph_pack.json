@@ -1,0 +1,53 @@
+{
+  "query": "biology_7a_rjb_cpt128",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt128",
+    "label": "Concept",
+    "name": "蒸腾作用的意义",
+    "definition": "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "蒸腾作用的意义\n蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt122",
+        "label": "Concept",
+        "name": "导管",
+        "definition": "植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt124",
+        "label": "Concept",
+        "name": "蒸腾作用",
+        "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe19",
+        "label": "Exercise",
+        "name": "判断：植物吸收的水分，通过蒸腾作用大量散失掉了，这对植物来说是一种浪费。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s3",
+        "label": "Section",
+        "name": "第三章 绿色植物与生物圈的水循环",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

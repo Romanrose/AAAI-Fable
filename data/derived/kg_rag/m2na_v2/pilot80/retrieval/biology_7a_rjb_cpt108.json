@@ -1,0 +1,143 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt108",
+    "label": "Concept",
+    "name": "种子萌发的过程",
+    "properties": {
+      "definition": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+      "importance": "掌握",
+      "retrieval_text": "种子萌发的过程\nConcept\n种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。\n掌握"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_ch3_s2",
+      "label": "Section",
+      "name": "第二章 被子植物的一生",
+      "properties": {
+        "retrieval_text": "第二章 被子植物的一生\nSection"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "properties": {
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "importance": "掌握",
+        "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:10",
+      "source": "biology_7a_rjb_cpt108",
+      "source_name": "种子萌发的过程",
+      "target": "biology_7a_rjb_ch3_s2",
+      "target_name": "第二章 被子植物的一生",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 1,
+      "retrieval_role": "curriculum_bridge",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:3",
+      "source": "biology_7a_rjb_cpt101",
+      "source_name": "种子萌发",
+      "target": "biology_7a_rjb_ch3_s2",
+      "target_name": "第二章 被子植物的一生",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.2,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    }
+  ],
+  "selected_paths": [
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt108",
+        "biology_7a_rjb_ch3_s2",
+        "biology_7a_rjb_cpt101"
+      ],
+      "node_names": [
+        "种子萌发的过程",
+        "第二章 被子植物的一生",
+        "种子萌发"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:10",
+          "source": "biology_7a_rjb_cpt108",
+          "source_name": "种子萌发的过程",
+          "target": "biology_7a_rjb_ch3_s2",
+          "target_name": "第二章 被子植物的一生",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:3",
+          "source": "biology_7a_rjb_cpt101",
+          "source_name": "种子萌发",
+          "target": "biology_7a_rjb_ch3_s2",
+          "target_name": "第二章 被子植物的一生",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.2,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.5333,
+      "lexical_anchor": "种子萌发"
+    }
+  ],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "种子萌发的过程",
+      "definition": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": [
+      "[normalized:edge:10] 种子萌发的过程 --appears_in--> 第二章 被子植物的一生",
+      "[normalized:edge:3] 种子萌发 --appears_in--> 第二章 被子植物的一生",
+      "种子萌发的过程 --课程章节--> 种子萌发（定义显式提及：种子萌发）"
+    ]
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 0,
+    "direct_structure_sufficient": false,
+    "direct_structure_reasons": [
+      "no_core_direct_edges"
+    ],
+    "expanded_to_two_hop": true,
+    "expansion_reason": "no_core_direct_edges",
+    "expansion_mode": "curriculum_lexical_bridge"
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 1,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 0,
+    "expanded_to_two_hop": true
+  }
+}

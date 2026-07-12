@@ -1,0 +1,73 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "农业",
+  "domain_rationale": "农民种地需要满足土壤、水分、阳光等条件，对应种子萌发需要温度、水分、空气的环境条件。",
+  "conflict": "无",
+  "event_chain": [
+    "农民准备播种一块田地",
+    "田地里必须有适宜的墒情（水分）、足够的阳光和松软的土壤（空气）",
+    "农民通过观察墒情、翻地、浇水来验证这些条件是否具备",
+    "条件满足后，种子才能发芽"
+  ],
+  "turning_point": "农民检查墒情、翻地、浇水，确认条件具备",
+  "resolution_state": "种子成功发芽，长出幼苗",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "田地的综合条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子发芽",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "充足的阳光",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "适宜的墒情（水分）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "松软的土壤（空气）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "农民翻地、浇水、观察墒情",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "田地的综合条件使种子发芽成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "充足的阳光是田地的综合条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "适宜的墒情是田地的综合条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "松软的土壤是田地的综合条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "农民翻地、浇水、观察墒情验证了田地的综合条件",
+      "direction_preserved": true
+    }
+  ]
+}

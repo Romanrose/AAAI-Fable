@@ -1,0 +1,59 @@
+{
+  "query": "biology_7a_rjb_cpt1",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt1",
+    "label": "Concept",
+    "name": "生物",
+    "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+    "importance": "重要",
+    "aliases": [
+      "生命体"
+    ],
+    "examples": [
+      "小麦",
+      "海豚",
+      "鲸",
+      "人",
+      "含羞草",
+      "幼鳄",
+      "蘑菇",
+      "狗",
+      "珊瑚虫"
+    ],
+    "retrieval_text": "生物\nConcept\n具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。\n重要\n生命体\n小麦\n海豚\n鲸\n人\n含羞草\n幼鳄\n蘑菇\n狗\n珊瑚虫"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一章 认识生物",
+        "definition": null,
+        "importance": null,
+        "aliases": [],
+        "examples": [],
+        "retrieval_text": "第一章 认识生物\nSection"
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Target Concept",
+      "text": "Name: 生物\nLabel: Concept\nDefinition: 具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。\nImportance: 重要\nAliases: 生命体"
+    },
+    {
+      "title": "Hierarchy",
+      "text": "第一章 认识生物"
+    }
+  ],
+  "meta": {
+    "node_count": 2,
+    "edge_count": 1
+  }
+}

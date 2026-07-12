@@ -1,0 +1,38 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "Node n5 (氧气) is mapped to '第五道转化环节' with zero confidence, indicating a complete mismatch; the story does not mention oxygen or any equivalent entity. Edge e4 (氧气 part_of 氧化反应) is mapped to a generic 'comparing two records' phrase that fails to convey the part-whole relation between oxygen and oxidation. This is observably worse than a mapping that would embed oxygen as a required material (e.g., '鼓风机送入的空气') and show its role in each transformation step."
+  },
+  "revision_instructions": [
+    "Replace the mapping of node n5 (氧气) with a concrete foundry element such as '鼓风机送入的空气' or '氧化剂添加记录', and ensure it appears in the story as a necessary component for each transformation step.",
+    "For edges e4, e5, e6 (part_of relations), replace the generic 'comparing two records' with explicit story actions showing that the oxygen-equivalent is a constituent of each step (e.g., '工匠检查鼓风机是否开启，确认空气已进入炉膛').",
+    "For edges e7, e8, e9, e10, replace the generic phrase with specific dependency or production relations (e.g., '只有燃料湿度达标，第三道环节才能点火' for e7; '第三道环节产出高温铁水，第四道环节据此计算冷却时间' for e8).",
+    "Reduce story length to 450-750 Chinese characters (currently 770).",
+    "Ensure node_coverage and edge_coverage each reach at least 0.8 (currently 0.625 and 0.3)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

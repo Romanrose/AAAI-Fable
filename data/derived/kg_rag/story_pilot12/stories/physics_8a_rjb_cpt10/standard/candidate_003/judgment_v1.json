@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n3 (运动与静止的相对性) is most strongly realized through the character's mistaken judgment and the explicit explanation by the boatman, which directly illustrates the relativity concept. Node n2 (机械运动) is only implicitly present as '船行至江心' and '船继续前行', but the story does not emphasize the continuous change of position over time as a core process; it is merely background. Edge e1 (relates_to between n2 and n1) is weakly evidenced because the story does not explicitly connect the boat's motion to the mark's creation; the mark is created at the moment of loss, not as a result of motion. A stronger realization would have the character re-carve the mark after the boat moves, or explicitly state that the mark moves with the boat."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping of node n2 (机械运动) by explicitly describing the boat's continuous motion and its effect on the mark's position relative to the sword's location.",
+    "Improve edge e1 by adding a sentence that directly links the boat's motion to the mark's changing position, e.g., '随着船继续前行，刻痕也随船移动，离落剑处越来越远。'",
+    "Ensure that the story's resolution explicitly states the principle of relativity without using the term '参照物', but by contrasting the fixed sword location with the moving boat/mark."
+  ],
+  "final_status": "accept"
+}

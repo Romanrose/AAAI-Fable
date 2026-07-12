@@ -1,0 +1,54 @@
+{
+  "query": "biology_7a_rjb_cpt127",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt127",
+    "label": "Concept",
+    "name": "保卫细胞",
+    "definition": "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "保卫细胞\n构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt126",
+        "label": "Concept",
+        "name": "气孔",
+        "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp13",
+        "label": "Experiment",
+        "name": "观察叶片的结构（徒手切片与下表皮装片）",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe20",
+        "label": "Exercise",
+        "name": "判断：植物可以通过控制保卫细胞的形状和大小来控制气体和水分的进出。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s3",
+        "label": "Section",
+        "name": "第三章 绿色植物与生物圈的水循环",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

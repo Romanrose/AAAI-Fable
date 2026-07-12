@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001以水渠闸门刻度为例，自然引出测量工具的必要性，故事完整且无概念泄露，覆盖所有机制节点和边，证据对齐准确，中文叙述流畅不模板化。候选002和003虽指标相同，但候选001在叙事自然度和完整性上略优。",
+    "risk_notes": [
+      "无显著风险，所有指标均达标。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

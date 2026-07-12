@@ -1,0 +1,111 @@
+[
+  {
+    "codelet_name": "CheckLeakageCodelet",
+    "target_candidate_id": "candidate_002",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {
+      "failure.leakage": 0.0
+    },
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 1.0,
+    "notes": [
+      "no_leakage_detected"
+    ]
+  },
+  {
+    "codelet_name": "CheckDirectionCodelet",
+    "target_candidate_id": "candidate_002",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {
+      "failure.direction_error": 0.0
+    },
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 1.0,
+    "notes": [
+      "relation_direction_accuracy=1.0000"
+    ]
+  },
+  {
+    "codelet_name": "CheckAlignmentEvidenceCodelet",
+    "target_candidate_id": "candidate_002",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {
+      "failure.weak_alignment": 0.0
+    },
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 1.0,
+    "notes": [
+      "alignment_precision=1.0000",
+      "missing_evidence_count=0"
+    ]
+  },
+  {
+    "codelet_name": "CheckTemplateRiskCodelet",
+    "target_candidate_id": "candidate_002",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {
+      "failure.template_like": 0.75
+    },
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 0.9,
+    "notes": [
+      "template_hit_rate=0.0000",
+      "short_sentence_count=5"
+    ]
+  },
+  {
+    "codelet_name": "EvaluateStructureStrengthCodelet",
+    "target_candidate_id": "candidate_002",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 1.0,
+    "notes": [
+      "weak_structure_count=0"
+    ]
+  },
+  {
+    "codelet_name": "ProposeAlternativeSourceDomainCodelet",
+    "target_candidate_id": "candidate_002",
+    "structures_added": [
+      {
+        "structure_id": "candidate_002:alternative_source_domain:001",
+        "structure_type": "AlternativeSourceDomainStructure",
+        "content": {
+          "source_domain": "港口检疫站",
+          "replaces": null,
+          "repair_target": "template_like"
+        },
+        "strength": 0.6,
+        "salience": 0.8,
+        "support": [
+          "failure.template_like",
+          "copycat.source_domain_pool"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ProposeAlternativeSourceDomainCodelet",
+        "candidate_id": "candidate_002"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {
+      "failure.template_like": -0.35
+    },
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 0.72,
+    "notes": [
+      "alternative_source_domain=港口检疫站"
+    ]
+  }
+]

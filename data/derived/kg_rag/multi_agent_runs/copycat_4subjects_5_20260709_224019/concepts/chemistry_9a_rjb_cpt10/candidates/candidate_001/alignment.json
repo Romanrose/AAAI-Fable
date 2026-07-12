@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "条件核对",
+      "evidence": "条件牌",
+      "narrative_anchor": "条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "中间转化",
+      "evidence": "中间转化记录",
+      "narrative_anchor": "中间转化记录",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "验收记录",
+      "evidence": "验收记录",
+      "narrative_anchor": "验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先核对条件牌，再推进中间转化",
+      "evidence": "先核对条件牌，再推进中间转化",
+      "narrative_anchor": "先核对条件牌，再推进中间转化",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先推进中间转化，最后做验收记录",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

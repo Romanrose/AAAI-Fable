@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt101",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt101:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14133"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14134"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "种子萌发"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "d58fdf591bfd01f5137c891fe49f3a2aa57aca94e1f68db7be2fd7f28189a917",
+    "retrieval_sha256": "2f00bd47cb75be1a8d153960bfc02cafa05a2020c924770ea5517d17fc295181",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "b4e0adeda2695554095c9ab8b2943523c022ad953c42c15bbe352e4e78a5fead"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

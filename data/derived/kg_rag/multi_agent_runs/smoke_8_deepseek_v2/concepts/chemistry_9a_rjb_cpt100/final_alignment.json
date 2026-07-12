@@ -1,0 +1,81 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "霉斑在账本上缓慢蔓延、纸张逐渐发脆的过程，没有明显的发热或剧烈变化，但持续造成破坏。",
+      "evidence": "纸张发脆，边缘卷曲，上面隐约浮现出斑斑点点的霉迹",
+      "narrative_anchor": "纸张发脆，边缘卷曲，上面隐约浮现出斑斑点点的霉迹",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "学徒需要先理解‘物质与空气接触会发生缓慢变化’这个基本原理（对应氧化反应），才能理解霉斑和纸张发脆的原因。",
+      "evidence": "潮湿和空气会慢慢让纸张腐烂，就像火在暗中烧",
+      "narrative_anchor": "潮湿和空气会慢慢让纸张腐烂，就像火在暗中烧",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "翻晒账本的过程相当于让账本‘呼吸’新鲜空气，但同时也加速了氧气与纸张的接触（对应呼吸与氧气的关系），需要平衡。",
+      "evidence": "每天花一个时辰，把这些旧账本搬到后院通风处翻晒",
+      "narrative_anchor": "每天花一个时辰，把这些旧账本搬到后院通风处翻晒",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "霉斑和纸张发脆的本质是纸张与空气中的氧气发生了缓慢的氧化反应，与剧烈燃烧（如火灾）是同一类化学变化，只是速度不同。",
+      "evidence": "潮湿和空气会慢慢让纸张腐烂，就像火在暗中烧",
+      "narrative_anchor": "潮湿和空气会慢慢让纸张腐烂，就像火在暗中烧",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "如果仓库通风不良且堆积易燃物，缓慢氧化积累的热量可能最终引发剧烈燃烧（火灾），学徒的偷懒行为埋下了火灾隐患。",
+      "evidence": "如果不每天翻晒通风，霉斑会从旧账本爬到新账本，整间仓库的账本都保不住",
+      "narrative_anchor": "如果不每天翻晒通风，霉斑会从旧账本爬到新账本，整间仓库的账本都保不住",
+      "confidence": 0.8
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "霉斑在账本上缓慢蔓延、纸张逐渐发脆的过程（n1）导致学徒需要先理解物质与空气接触会发生缓慢变化（n2）。",
+      "evidence": "纸张发脆，边缘卷曲，上面隐约浮现出斑斑点点的霉迹",
+      "narrative_anchor": "纸张发脆，边缘卷曲，上面隐约浮现出斑斑点点的霉迹",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "学徒理解物质与空气接触会发生缓慢变化（n2）后，认识到翻晒账本相当于让账本‘呼吸’新鲜空气（n3）。",
+      "evidence": "每天花一个时辰，把这些旧账本搬到后院通风处翻晒",
+      "narrative_anchor": "每天花一个时辰，把这些旧账本搬到后院通风处翻晒",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "翻晒账本让账本‘呼吸’新鲜空气（n3）与霉斑和纸张发脆的本质是纸张与空气中的氧气发生了缓慢的氧化反应（n4）相关联。",
+      "evidence": "潮湿和空气会慢慢让纸张腐烂，就像火在暗中烧",
+      "narrative_anchor": "潮湿和空气会慢慢让纸张腐烂，就像火在暗中烧",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "霉斑和纸张发脆的本质是缓慢氧化（n4）与如果仓库通风不良可能引发剧烈燃烧（n5）相关联。",
+      "evidence": "如果不每天翻晒通风，霉斑会从旧账本爬到新账本，整间仓库的账本都保不住",
+      "narrative_anchor": "如果不每天翻晒通风，霉斑会从旧账本爬到新账本，整间仓库的账本都保不住",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ]
+}

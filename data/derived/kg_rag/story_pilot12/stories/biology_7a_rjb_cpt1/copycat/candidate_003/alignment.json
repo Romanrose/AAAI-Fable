@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "老匠人开始核对入口条件。他检查母版的涂墨是否均匀，新件的纸张是否平整，确认两者都符合要求后，才让学徒开始第一道转化。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "学徒按前一步留下的条件，将母版平稳地压在纸上，用力均匀，不敢有丝毫偏差。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "接着，第二道转化环节要求保持压力恒定，学徒调整了手掌的力度。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第三道环节需要等待墨迹半干，他停下动作，默默计数。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第四道环节要检查边缘是否清晰，他仔细端详每一道线条。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "第五道环节要求补墨，他蘸取少量墨汁，轻轻涂抹。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "第六道环节再次压印，他重复之前的动作。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "最后，众人用结果验收记录核对整条安排，终于所有记录能够互相印证。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "他反复对照，确认这两份记录共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。节点证据为故事中描述的具体操作或状态，边证据为故事中主角比较记录并发现共同约束的表述，符合机制中“requires”关系。"
+}

@@ -1,0 +1,90 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt122",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "氧气的实验室制取",
+  "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。",
+  "aliases": [],
+  "examples": [
+    "加热高锰酸钾，用排水法在集气瓶中收集氧气。"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt124",
+        "label": "Concept",
+        "name": "气体发生装置",
+        "definition": "为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt125",
+        "label": "Concept",
+        "name": "气体收集装置",
+        "definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt126",
+        "label": "Concept",
+        "name": "排水法收集气体",
+        "definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt127",
+        "label": "Concept",
+        "name": "装置气密性",
+        "definition": "实验装置连接处是否漏气的性质，气密性良好可以保证生成的气体不泄漏、外界空气不进入。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt128",
+        "label": "Concept",
+        "name": "倒吸现象",
+        "definition": "加热停止或装置冷却时，外部液体因内外压强差通过导管被吸入加热容器的现象，可能导致容器骤冷、炸裂。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt133",
+        "label": "Concept",
+        "name": "加热玻璃仪器的安全操作",
+        "definition": "使用酒精灯加热试管等玻璃仪器时，为避免炸裂和烫伤，需要先让试管均匀受热、开口不对人、停止加热时先移出导管再熄灯等操作规范。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt123",
+        "label": "Concept",
+        "name": "高锰酸钾制氧气",
+        "definition": "在试管中装入少量高锰酸钾并加热，高锰酸钾受热分解产生氧气的一种实验室制氧方法。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s4",
+        "label": "Section",
+        "name": "实验活动1 氧气的实验室制取与性质",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "氧气的实验室制取"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

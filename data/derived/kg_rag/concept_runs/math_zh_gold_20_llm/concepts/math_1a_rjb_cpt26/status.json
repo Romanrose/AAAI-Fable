@@ -1,0 +1,13 @@
+{
+  "concept_id": "math_1a_rjb_cpt26",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "concept_type": "relation",
+  "generation_priority": "gold",
+  "generation_status": "rewritten",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.8,
+  "retry_count": 2,
+  "chinese_char_ratio": 0.791,
+  "rewrite_retry_count": 1
+}

@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "催化作用",
+  "concept_id": "chemistry_9a_rjb_cpt111",
+  "concept_definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt111",
+    "催化作用"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt111",
+      "label": "Concept",
+      "name": "催化作用",
+      "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "催化作用\n催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt113",
+          "label": "Concept",
+          "name": "催化剂的工业应用",
+          "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt110",
+          "label": "Concept",
+          "name": "催化剂",
+          "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt111",
+    "concept_id": "chemistry_9a_rjb_cpt111",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt111",
+      "label": "Concept",
+      "name": "催化作用",
+      "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "催化作用"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "灰石使稻谷发霉速度变慢，而自身质量和性质基本不变，隐含了催化作用的核心特征。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "灰石加速水分蒸发从而减缓发霉，且重量几乎不变，体现了催化剂改变反应速率而自身不变。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事区分了灰石与稻谷的物理接触（表面水珠）和化学反应（发霉过程），且未使用化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个繁华的城邦里，有一位年轻的账房先生，名叫阿明。他负责管理城邦的粮仓，每天都要记录粮食的进出账目。粮仓里堆满了稻谷，但阿明发现，每当雨季来临，稻谷就容易发霉变质，导致大量损失。城邦的长老们非常着急，要求阿明想办法减少损失。\n\n阿明观察了很久，发现粮仓里有一种特殊的“灰石”，它看起来像普通的石头，但每次把它放在潮湿的稻谷堆里，稻谷的发霉速度就会明显变慢。更奇怪的是，阿明每次检查灰石，发现它的大小和重量几乎不变，只是表面会沾上一些水珠。阿明心想：“这灰石难道有魔力吗？它自己没变，却能阻止稻谷发霉？”\n\n为了验证，阿明做了一次实验。他取了两堆同样潮湿的稻谷，一堆放入灰石，另一堆不放。几天后，有灰石的稻谷只发霉了一小部分，而没灰石的稻谷几乎全坏了。阿明又仔细称量灰石，发现它的重量只减少了微不足道的一点点，几乎可以忽略不计。他还把灰石放在干燥的地方，发现它很快又恢复了原来的样子。\n\n阿明恍然大悟：原来灰石并不是自己消耗掉，而是帮助稻谷更快地排出水分，从而减缓发霉的过程。它就像一个默默无闻的助手，加速了水分的蒸发，而自己却几乎没有变化。阿明把这个发现报告给长老们，从此粮仓里都放上了这种灰石，粮食损失大大减少。\n\n后来，阿明还发现，同样的灰石也能帮助其他东西更快地变化，比如让木材更快地干燥，或者让水果更快地成熟。但无论用在什么地方，灰石本身始终保持着原来的质量和性质。\n\n阿明终于明白：有些东西看似不起眼，却能悄悄地改变整个过程的快慢，而自己却几乎不留下任何痕迹。这就像城邦里那些默默奉献的人，他们不张扬，却让一切运转得更顺畅。",
+  "rule_findings": {
+    "story_token_count": 602,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

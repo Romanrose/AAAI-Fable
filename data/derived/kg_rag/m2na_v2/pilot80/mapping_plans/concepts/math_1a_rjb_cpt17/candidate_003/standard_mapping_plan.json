@@ -1,0 +1,61 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt17",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个关于水果分类的寓言",
+  "characters": [
+    "果农",
+    "孩子们"
+  ],
+  "objects": [
+    "一个完美的圆形苹果",
+    "一堆各种形状的水果"
+  ],
+  "conflict": "果农让孩子们把水果按形状分类，但孩子们对苹果属于哪一类有争议。",
+  "event_chain": [
+    "果农拿出一堆水果，要求孩子们按形状分类。",
+    "孩子们看到苹果，有的说它是圆形，有的说它是水果的一种。",
+    "果农指出苹果是圆形水果的一个例子。",
+    "孩子们将苹果放入圆形水果的类别中。"
+  ],
+  "turning_point": "果农指出苹果是圆形水果的一个例子，帮助孩子们理解分类的层次。",
+  "resolution_state": "孩子们成功地将苹果归类为圆形水果，理解了类别成员关系。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "苹果",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "按形状分类",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "苹果是圆形水果的一个例子，属于按形状分类的范畴",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保苹果不被直接称为球体，避免使用目标概念名称。",
+    "确保分类过程不被误解为课程桥接上下文。",
+    "确保故事连贯，不引入无关的隐喻。"
+  ],
+  "mapping_context_sha256": "50a1cd176bd51998a41e6b89316f3c0abc88ea8bd4376b369c4d1a9c8fd78dff",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "75cb71c6c911495f1996a96d9ebecbb585f5da204bc0ee6920ce9ce7596525b4"
+  }
+}

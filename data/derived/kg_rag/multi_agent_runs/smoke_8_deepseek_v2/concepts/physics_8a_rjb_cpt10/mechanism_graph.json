@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "判断物体运动或静止时所选取的标准物体。",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n2",
+      "text": "需要先满足或理解：运动与静止的相对性",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n3",
+      "text": "与相关概念保持关系：机械运动 与 参照物",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n4",
+      "text": "与相关概念保持关系：运动与静止的相对性 与 参照物",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:17189"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:19745"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:19747"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:17189",
+    "normalized:edge:19745",
+    "normalized:edge:19747"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt101",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "焦距",
+  "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt106",
+        "label": "Concept",
+        "name": "凸透镜成像规律",
+        "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt99",
+        "label": "Concept",
+        "name": "光心",
+        "definition": "通过该点的光传播方向不变，可认为位于薄透镜中心。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt100",
+        "label": "Concept",
+        "name": "焦点",
+        "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "physics_8a_rjb_exe12",
+        "label": "Exercise",
+        "name": "太阳光可视为平行光。如何利用阳光测量凸透镜的焦距？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s1",
+        "label": "Section",
+        "name": "第一节 透镜",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_ch5_s3",
+        "label": "Section",
+        "name": "第三节 凸透镜成像的规律",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+  ],
+  "must_preserve_zh": [
+    "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "焦距"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

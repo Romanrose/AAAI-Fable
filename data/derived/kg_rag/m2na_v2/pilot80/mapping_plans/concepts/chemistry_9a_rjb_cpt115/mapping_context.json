@@ -1,0 +1,223 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt115",
+    "subject": "chemistry",
+    "canonical_name": "液态空气的分馏制氧",
+    "aliases": [],
+    "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "液态空气的分馏制氧"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "低温条件下加压使空气转变为液态",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "氮气和氧气沸点不同",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition",
+          "kg-node:chemistry_9a_rjb_cpt121:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "升温使氮气先蒸出",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition",
+          "kg-node:chemistry_9a_rjb_cpt115:examples"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "获得氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "液态空气的分馏制氧",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:name"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "工业制取氧气的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition",
+          "kg-node:chemistry_9a_rjb_cpt121:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11284"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n2",
+        "target": "n5",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15004"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "液态空气的分馏制氧"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt115",
+      "name": "液态空气的分馏制氧",
+      "label": "Concept",
+      "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt121",
+        "name": "气体沸点差异的利用"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt114",
+        "name": "工业制取氧气的方法"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:15004",
+        "source_id": "chemistry_9a_rjb_cpt121",
+        "source_name": "气体沸点差异的利用",
+        "target_id": "chemistry_9a_rjb_cpt115",
+        "target_name": "液态空气的分馏制氧",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "chemistry_9a_rjb_cpt121",
+        "neighbor_name": "气体沸点差异的利用",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:11284",
+        "source_id": "chemistry_9a_rjb_cpt115",
+        "source_name": "液态空气的分馏制氧",
+        "target_id": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt114",
+        "neighbor_name": "工业制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "液态空气的分馏制氧",
+      "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:15004] 气体沸点差异的利用 --prerequisites_for--> 液态空气的分馏制氧"
+    ],
+    "process_summary": [
+      "[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:15004",
+    "normalized:edge:11284"
+  ],
+  "provenance": {
+    "seed_sha256": "117703211594e64451622090331873da5fa0c2ffee0be00e009c4637fa935bab",
+    "retrieval_sha256": "ff6ad7f5557d50105d8c608c76373fe926b6c3be32bf47307e8b07a514d6692f",
+    "mechanism_record_sha256": "19db1a57930e7f596b23d8dd2592abe8472bb33704e3aa6a31d6d8833084fd59"
+  }
+}

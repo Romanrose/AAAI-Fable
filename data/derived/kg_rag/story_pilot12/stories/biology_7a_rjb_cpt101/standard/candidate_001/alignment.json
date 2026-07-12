@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "磨盘缓缓旋转。随着磨盘上下两片咬合，谷物被碾碎，细腻的面粉从磨缝中簌簌落下",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "水流变得湍急起来，水车重新开始转动",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "他把这些谷物摊在门前的空地上，用木耙反复翻晒。太阳晒了一整天，谷物变得干爽结实",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "水流变得湍急起来，水车重新开始转动",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他把这些谷物摊在门前的空地上，用木耙反复翻晒。太阳晒了一整天，谷物变得干爽结实",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are directly aligned to explicit story evidence. Node n1 (磨盘转动磨面) aligns to the grinding action; n2 (水车获得足够水流) aligns to the water flow restoration; n3 (谷物干燥未霉变) aligns to the drying of grains. Edges e1 and e2 are supported by the same evidence as their source nodes, with direction preserved (conditions enabling the process)."
+}

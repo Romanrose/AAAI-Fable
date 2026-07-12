@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt104",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位老农在田间用简陋的农具劳作",
+  "characters": [
+    "老农"
+  ],
+  "objects": [
+    "简陋的农具",
+    "田地",
+    "种子",
+    "丰收的果实"
+  ],
+  "conflict": "老农希望用简陋的农具在贫瘠的田地上种出好庄稼，但农具简陋，田地贫瘠，难以实现丰收。",
+  "event_chain": [
+    "老农拥有简陋的农具",
+    "老农靠近田地，开始劳作",
+    "老农用农具在田地上播种、耕耘",
+    "田地最终长出丰收的果实"
+  ],
+  "turning_point": "老农不放弃，坚持用简陋的农具在贫瘠的田地上辛勤劳作，最终田地长出丰收的果实。",
+  "resolution_state": "老农用简陋的农具在贫瘠的田地上种出了丰收的果实，实现了愿望。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "简陋的农具",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农靠近田地，开始劳作",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农用农具在田地上播种、耕耘",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "丰收的果实",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "简陋的农具使得老农能够靠近田地劳作",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农靠近田地劳作导致他使用农具播种耕耘",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "播种耕耘的过程最终产生了丰收的果实",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'投影仪成像'及其同义词或相关术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "确保故事载体来自同一源领域，不混用不同隐喻。",
+    "注意不要将课程桥接上下文（如'凸透镜'、'实像'等）作为因果机制引入故事。"
+  ],
+  "mapping_context_sha256": "f7ddcef0437976190d49c77b505d826b340d785e4ffeca335badf09b41c64af2",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3bda0d4ee21911b6214608f05b27687b4da37ec38e034565343323abc49bfe9e"
+  }
+}

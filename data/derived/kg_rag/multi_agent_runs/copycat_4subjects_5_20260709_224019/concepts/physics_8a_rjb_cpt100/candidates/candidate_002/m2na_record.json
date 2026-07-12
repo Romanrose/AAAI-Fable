@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt100",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "焦点",
+    "aliases": [],
+    "forbidden_terms": [
+      "焦点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:17246",
+        "source_name": "主光轴",
+        "target_name": "焦点",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "verifies",
+        "source_edge_id": "normalized:edge:23045",
+        "source_name": "凸透镜对光的偏折演示",
+        "target_name": "焦点",
+        "relation_semantic_role": "evidence_verification"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "滑道试验场的入口处立着一块铁牌，上面刻着试验物的初始条件。记录员每天第一件事就是核对这块牌上的数值是否与调度员报来的数据一致。今天也不例外，他翻开分段记录册，将铁牌上的数字一一抄下，然后对照调度员递来的纸条。确认无误后，他才在册子首页签上名字。调度员说，没有这一步，后面的登记流程根本不能启动。\n\n记录员把核对过的条件填进封存箱的标签栏里。调度员推来一辆载满滑道组件的推车，说第2道转化环节需要这些条件作为基础。记录员将封存箱的钥匙交给调度员，调度员按标签上的数值调整了滑道的坡度与转向器。两人共同在通行牌上写下当前参数，挂在滑道入口。\n\n验收员走过来，拿起通行牌看了看，又翻开自己的记录册。他要求记录员和调度员把各自册子上的数值栏对齐，一一比对。记录员翻到分段记录册中段，调度员翻到滑道参数记录页，两人把两份记录并排放在桌上。验收员用红笔圈出几个数字，说这些必须与封存箱里的原始条件一致。三人重新打开封存箱，取出底层记录纸，逐行对照。数值全部吻合后，验收员才在通行牌上盖了章。\n\n有一次，调度员想跳过核对铁牌的步骤，直接调整滑道。他凭记忆设了一个坡度，结果记录员在后续登记时发现数值栏里的数据与封存箱里的原始条件对不上。验收员卡住了流程，整个试验场被迫停工半天。调度员这才明白，入口条件核对与第2道转化环节之间的承接顺序不能颠倒。\n\n后来，三人重新按条件、过程和结果把整条安排衔接起来。记录员先确认铁牌，调度员再按条件调整滑道，验收员最后用两份记录册和封存箱里的原始纸核对。所有环节互相印证后，通行牌上的签章才完整。滑道试验场的记录终于能可靠地指向同一个结果。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "铁牌",
+        "narrative_anchor": "铁牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "第2道转化环节",
+        "narrative_anchor": "第2道转化环节",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "验收员",
+        "narrative_anchor": "验收员",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节",
+        "evidence": "记录员每天第一件事就是核对这块牌上的数值是否与调度员报来的数据一致。",
+        "narrative_anchor": "记录员每天第一件事就是核对这块牌上的数值是否与调度员报来的数据一致。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "主角用记录、比较和复查来检验这条判断，证据对上后才允许通过。",
+        "evidence": "验收员用红笔圈出几个数字",
+        "narrative_anchor": "验收员用红笔圈出几个数字",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

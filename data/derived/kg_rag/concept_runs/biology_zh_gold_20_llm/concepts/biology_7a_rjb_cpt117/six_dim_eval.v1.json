@@ -1,0 +1,89 @@
+{
+  "concept_id": "biology_7a_rjb_cpt117",
+  "target_concept": "受精",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 2,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "weighted_overall": 3.7,
+  "hard_flags": {
+    "hard_leakage": true,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过种子唤醒、花粉管生长、精卵结合等事件，准确传达了受精前的准备阶段和受精阶段，且未出现与概念定义相矛盾的内容。",
+    "implicitness": "故事在正文中直接使用了'受精卵'和'受精极核'等术语，并明确提及'受精'过程，违反了禁止直接暴露目标概念名称的规则。",
+    "mapping_clarity": "故事中种子唤醒对应精子获能，花粉管生长对应受精准备，精卵结合对应受精核心机制，映射关系清晰且易于理解。",
+    "readability": "语言流畅自然，对话生动，情节连贯，适合目标读者阅读。",
+    "pedagogical_value": "故事通过植物和动物的类比，帮助学生理解受精的普遍性，并隐含了受精前的准备条件，教学价值较高。",
+    "novelty": "以种子唤醒作为类比起点有一定新意，但整体叙事结构较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "将正文中出现的'受精卵'替换为'结合后的新细胞'或'新生命的起点'，避免直接暴露术语。",
+    "将'受精极核'替换为'另一个结合后的细胞'，保持隐含性。",
+    "在阿福解释部分，用'结合过程'或'融合过程'替代'受精'，确保不直接使用目标概念名称。"
+  ],
+  "rule_findings": {
+    "story_token_count": 537,
+    "leaked_terms": [
+      "受精"
+    ],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 2,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": true,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过种子唤醒、花粉管生长、精卵结合等事件，准确传达了受精前的准备阶段和受精阶段，且未出现与概念定义相矛盾的内容。",
+      "implicitness": "故事在正文中直接使用了'受精卵'和'受精极核'等术语，并明确提及'受精'过程，违反了禁止直接暴露目标概念名称的规则。",
+      "mapping_clarity": "故事中种子唤醒对应精子获能，花粉管生长对应受精准备，精卵结合对应受精核心机制，映射关系清晰且易于理解。",
+      "readability": "语言流畅自然，对话生动，情节连贯，适合目标读者阅读。",
+      "pedagogical_value": "故事通过植物和动物的类比，帮助学生理解受精的普遍性，并隐含了受精前的准备条件，教学价值较高。",
+      "novelty": "以种子唤醒作为类比起点有一定新意，但整体叙事结构较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "将正文中出现的'受精卵'替换为'结合后的新细胞'或'新生命的起点'，避免直接暴露术语。",
+      "将'受精极核'替换为'另一个结合后的细胞'，保持隐含性。",
+      "在阿福解释部分，用'结合过程'或'融合过程'替代'受精'，确保不直接使用目标概念名称。"
+    ]
+  },
+  "final_status": "reject",
+  "mode": "llm"
+}

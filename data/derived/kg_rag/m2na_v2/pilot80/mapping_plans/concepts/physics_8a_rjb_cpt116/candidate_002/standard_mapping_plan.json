@@ -1,0 +1,82 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个农夫种稻的故事",
+  "characters": [
+    "农夫",
+    "稻苗"
+  ],
+  "objects": [
+    "稻田",
+    "水渠",
+    "凹形锄头"
+  ],
+  "conflict": "农夫发现稻田里的水渠太深或田埂太高，导致远处的水源无法顺畅流到稻田中央，稻苗因缺水而生长不良。",
+  "event_chain": [
+    "农夫发现稻田的水渠过深或田埂过高（对应n1：折光过强或眼球过长）",
+    "远处的水源无法流到稻田中央，稻苗缺水枯萎（对应n2：远处物体成像在视网膜前）",
+    "农夫用凹形锄头挖开一条新水渠，将远处的水引到稻田中央（对应n3：用凹透镜矫正）",
+    "新水渠的宽度和深度需要精确计算，即水渠的“引水能力”（对应n4：透镜焦度）"
+  ],
+  "turning_point": "农夫意识到必须用凹形锄头改造水渠，而不是加深原有水渠。",
+  "resolution_state": "新水渠成功将远处水源引到稻田中央，稻苗恢复生机。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "水渠过深或田埂过高",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "远处水源无法流到稻田中央，稻苗缺水枯萎",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫用凹形锄头挖开新水渠引水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "新水渠的引水能力（宽度和深度）",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "导致",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "转变",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "关联于",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现“近视眼”、“矫正”、“凹透镜”等禁止术语。",
+    "水渠的“引水能力”作为透镜焦度的类比，需避免直接提及“焦度”或“透镜”。",
+    "所有映射均保持原机制图的节点和边，未遗漏或改变方向。"
+  ],
+  "mapping_context_sha256": "dc55808e887494b790752e23596aafc76ab2f0d5e1b6cdf4ac33e7f13135086c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "87c512422e440eb7ece3648d9c7fdf4315e30d95b9d77d62e638323785939af2"
+  }
+}

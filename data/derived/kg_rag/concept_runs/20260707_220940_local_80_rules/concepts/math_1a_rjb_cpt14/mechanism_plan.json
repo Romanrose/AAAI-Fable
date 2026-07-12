@@ -1,0 +1,106 @@
+{
+  "core_question": "长方体的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "长方体 --prerequisites_for--> 表面积",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:16337"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "长方体 --prerequisites_for--> 长方体体积公式",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:16338"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "长方体 --prerequisites_for--> 拼搭立体图形",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:16336"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "正方体 --is_a--> 长方体",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12133"
+      ]
+    },
+    {
+      "step_id": "s5",
+      "text": "长方体 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12132"
+      ]
+    },
+    {
+      "step_id": "s6",
+      "text": "长方体 --relates_to--> 正方体",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:19306"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s4",
+      "target_step_id": "s5",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s5",
+      "target_step_id": "s6",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:16337",
+    "normalized:edge:16338",
+    "normalized:edge:16336",
+    "normalized:edge:12133",
+    "normalized:edge:12132",
+    "normalized:edge:19306"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "长方体",
+    "math_1a_rjb_cpt14"
+  ],
+  "coverage_targets": {
+    "required_step_count": 6,
+    "required_dependency_count": 5,
+    "must_cover_edge_ids": [
+      "normalized:edge:16337",
+      "normalized:edge:16338",
+      "normalized:edge:16336",
+      "normalized:edge:12133",
+      "normalized:edge:12132",
+      "normalized:edge:19306"
+    ],
+    "must_cover_path_ids": []
+  }
+}

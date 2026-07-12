@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "记录员先放下册子，走到坊门口去确认那块前置条件牌。上面写着：必须有完整的旧地图编号，才能开始登记。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "验收员最后用结果验收记录核对整条安排",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员重新核对入口条件，调度员按顺序传递地图，验收员最后用结果验收记录核对整条安排。所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中，记录员先确认前置条件牌（对应n1），然后调度员按顺序传递地图，最后验收员用结果验收记录核对（对应n2），且顺序为n1先于n2，方向一致，证据充分。"
+}

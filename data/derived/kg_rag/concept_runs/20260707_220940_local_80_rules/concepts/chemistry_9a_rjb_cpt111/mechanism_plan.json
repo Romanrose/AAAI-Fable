@@ -1,0 +1,68 @@
+{
+  "core_question": "催化作用的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "催化作用 --prerequisites_for--> 催化剂的工业应用",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15001"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "催化剂 --relates_to--> 催化作用",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:18226"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s4",
+      "text": "区分化学反应和物理混合。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:15001",
+    "normalized:edge:18226"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "催化作用",
+    "chemistry_9a_rjb_cpt111"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:15001",
+      "normalized:edge:18226"
+    ],
+    "must_cover_path_ids": []
+  }
+}

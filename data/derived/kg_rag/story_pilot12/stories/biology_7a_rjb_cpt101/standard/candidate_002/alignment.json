@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "饱满的花种纷纷破土而出，嫩绿的芽苗顶开土块，迎着阳光舒展开来",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "肥沃的土壤里水分充足，温度适宜，空气流通",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "有的圆润饱满，泛着健康的光泽；有的却干瘪皱缩，甚至带着虫眼",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "肥沃的土壤里水分充足，温度适宜，空气流通——这些外界条件无一不备",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "再肥沃的土壤、再充足的阳光和水分，也无法让一粒本身已经坏死的花种发芽",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向正确。"
+}

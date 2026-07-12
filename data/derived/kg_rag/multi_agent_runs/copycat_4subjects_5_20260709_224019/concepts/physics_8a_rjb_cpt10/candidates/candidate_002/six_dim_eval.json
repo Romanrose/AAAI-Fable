@@ -1,0 +1,32 @@
+{
+  "concept_id": "physics_8a_rjb_cpt10",
+  "target_concept": "参照物",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "weighted_overall": 5.0,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+    "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+    "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+    "readability": "根据正文长度和完整性做轻量规则估计。",
+    "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+    "novelty": "根据常见模板词命中率自动估计。"
+  },
+  "revision_suggestions": [],
+  "final_status": "accept",
+  "mode": "rules"
+}

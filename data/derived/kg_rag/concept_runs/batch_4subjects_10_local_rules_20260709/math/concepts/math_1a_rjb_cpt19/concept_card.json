@@ -1,0 +1,66 @@
+{
+  "concept_id": "math_1a_rjb_cpt19",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "数字6和7的认识",
+  "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+  "aliases": [],
+  "examples": [
+    "摆6个、摆7个；比较5<6、6>5；第7个的位置"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt22",
+        "label": "Concept",
+        "name": "分拆数6和7",
+        "definition": "把6或7分成两个部分，了解所有不同的分法。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt20",
+        "label": "Concept",
+        "name": "6和7的加法",
+        "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+      },
+      {
+        "id": "math_1a_rjb_cpt21",
+        "label": "Concept",
+        "name": "6和7的减法",
+        "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5",
+        "label": "Chapter",
+        "name": "6~10的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "数字6和7的认识"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

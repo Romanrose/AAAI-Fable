@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "入口条件",
+      "narrative_anchor": "入口条件",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "变量之间的关系",
+      "narrative_anchor": "变量之间的关系",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "入口条件核对导致第2道转化环节",
+      "evidence": "推进第2道转化",
+      "narrative_anchor": "推进第2道转化",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "第2道转化环节导致结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

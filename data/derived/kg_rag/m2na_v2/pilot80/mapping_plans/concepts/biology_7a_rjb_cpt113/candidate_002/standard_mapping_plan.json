@@ -1,0 +1,106 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一座古代城池的防御体系",
+  "characters": [
+    "守城将军",
+    "敌军信使"
+  ],
+  "objects": [
+    "主城门",
+    "内城藏兵洞",
+    "城楼瞭望台",
+    "烽火信号"
+  ],
+  "conflict": "敌军即将攻城，守城将军需确保主城门能有效接收敌军信使带来的假情报，以诱敌深入。",
+  "event_chain": [
+    "守城将军（主城门）是防御体系的核心入口。",
+    "主城门（n1）是防御体系（n2）的一种。",
+    "主城门（n1）包含内城藏兵洞（n3）。",
+    "内城藏兵洞（n3）包含伏兵（n4）。",
+    "主城门（n1）包含城楼瞭望台（n5）。",
+    "城楼瞭望台（n5）用于接收烽火信号（n6）。"
+  ],
+  "turning_point": "城楼瞭望台成功接收烽火信号，确认敌军假情报，守城将军下令伏兵出击。",
+  "resolution_state": "敌军中计，伏兵从内城藏兵洞杀出，大败敌军。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "主城门",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "防御体系",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "内城藏兵洞",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "伏兵",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "城楼瞭望台",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "接收烽火信号",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "主城门是防御体系的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "主城门包含内城藏兵洞",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "内城藏兵洞包含伏兵",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "主城门包含城楼瞭望台",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "城楼瞭望台用于接收烽火信号",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'雌蕊'或其别名。",
+    "所有机制节点和边均已映射，方向保留。",
+    "未使用课程桥接上下文作为因果机制。",
+    "故事载体均来自单一源域（古代城池防御），无无关隐喻。"
+  ],
+  "mapping_context_sha256": "32eb2b52bb092ccd1b13546f876ec44be086b80c3a6c8fdff1847c677db05331",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ef90c0a351e00132f39864d032a3d750b6860a6bfdee43cb9a46f6b7e5ee5093"
+  }
+}

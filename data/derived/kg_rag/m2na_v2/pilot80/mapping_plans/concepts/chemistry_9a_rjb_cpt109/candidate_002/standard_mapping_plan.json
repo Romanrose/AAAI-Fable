@@ -1,0 +1,133 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的家族分裂故事",
+  "characters": [
+    "老族长（代表分解反应）",
+    "大儿子（代表高锰酸钾受热分解反应）",
+    "二儿子（代表过氧化氢分解反应）",
+    "三女儿（代表加热氯酸钾制取氧气）",
+    "四女儿（代表水的分解反应）",
+    "邻村族长（代表化合反应）",
+    "族中长老（代表化学学习中的分类思想）",
+    "族谱编纂者（代表用分类方法学习化学）"
+  ],
+  "objects": [
+    "家族祖宅（代表一种物质）",
+    "分家文书（代表条件）",
+    "新宅基（代表生成的其他物质）"
+  ],
+  "conflict": "老族长年迈，决定将祖宅分给子女各自独立成家，但子女们对如何分家各执一词，且邻村族长主张合并家族，引发内部矛盾。",
+  "event_chain": [
+    "老族长召集子女宣布分家决定（n1: 分解反应发生）",
+    "大儿子按父亲要求，将祖宅的一部分拆分成自己的新宅基（n2: 高锰酸钾受热分解反应）",
+    "二儿子在族中长老的帮助下，缓慢拆分祖宅的另一部分（n3: 过氧化氢分解反应）",
+    "三女儿在族谱编纂者的协助下，快速拆分祖宅的又一部分（n4: 加热氯酸钾制取氧气）",
+    "四女儿利用水流的力量，将祖宅的一部分拆分（n5: 水的分解反应）",
+    "邻村族长前来提议合并两家祖宅，但被老族长拒绝（n6: 化合反应与分解反应相关）",
+    "族中长老根据家族传统，将分家行为归类为‘自立门户’（n7: 分类思想）",
+    "族谱编纂者记录分家过程，总结出分家的共同特征（n8: 用分类方法学习）"
+  ],
+  "turning_point": "邻村族长提出合并建议，老族长坚持分家，并让子女各自展示分家成果，最终统一了分家方案。",
+  "resolution_state": "子女们各自成功建立新家，家族虽分但各自兴旺，老族长欣慰，邻村族长理解并尊重其选择。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老族长宣布分家决定",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大儿子拆分祖宅一部分",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "二儿子缓慢拆分祖宅",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "三女儿快速拆分祖宅",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "四女儿利用水流拆分祖宅",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "邻村族长提议合并祖宅",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "族中长老归类分家行为",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "族谱编纂者记录分家特征",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大儿子的分家方式是老族长分家决定的一种具体实现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "二儿子的分家方式是老族长分家决定的一种具体实现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "三女儿的分家方式是老族长分家决定的一种具体实现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "四女儿的分家方式是老族长分家决定的一种具体实现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "老族长的分家决定与邻村族长的合并提议相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "族中长老的分类思想使得分家决定得以顺利实施",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "族谱编纂者的记录方法使得分家决定得以系统化",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中'分家'可能暗示分解反应，但未使用'分解反应'一词，符合要求。",
+    "所有机制节点和边均已映射，方向保留。",
+    "未使用目标概念名称或别名。",
+    "故事源域一致，为家族分裂故事。"
+  ],
+  "mapping_context_sha256": "b7516c887838c74d1b39d9a86349266c460fda066268d338a96069df1322c0df",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "a82299830c79944fdb90ce5537f601766a1392d6579a548ad42c948f551076bb"
+  }
+}

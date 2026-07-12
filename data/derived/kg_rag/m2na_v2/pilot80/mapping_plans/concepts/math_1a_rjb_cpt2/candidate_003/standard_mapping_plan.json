@@ -1,0 +1,74 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt2",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "赛马比赛",
+  "characters": [
+    "老马",
+    "小马",
+    "裁判"
+  ],
+  "objects": [
+    "马厩",
+    "跑道",
+    "终点旗"
+  ],
+  "conflict": "老马和小马都认为自己跑得更快，但无法直接看出谁更快。",
+  "event_chain": [
+    "老马和小马站在同一起跑线上，准备比赛。",
+    "裁判发出信号，两匹马同时起跑。",
+    "两匹马奋力奔跑，几乎同时冲过终点。",
+    "裁判仔细观察，发现两匹马的前蹄几乎同时踏过终点线。",
+    "裁判宣布两匹马一样快。"
+  ],
+  "turning_point": "裁判通过观察两匹马同时冲过终点的瞬间，发现它们的前蹄几乎同时触线。",
+  "resolution_state": "裁判宣布两匹马速度一样快，比赛平局。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "裁判观察两匹马从起跑到冲过终点的全过程，并计数它们跑过的步数（隐含）。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "裁判将两匹马的前蹄同时触线的情况进行一一对应比较，发现没有先后差异。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "裁判根据比较结果，判断两匹马的速度一样快。",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "裁判的观察（数步数）导致了裁判对速度的比较判断。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "裁判的一一对应比较法是裁判进行速度比较的一种具体方式。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'比较数量（多、少、一样多）'等禁止术语。",
+    "注意'数步数'是隐含的，避免直接提及计数，以免与目标概念冲突。",
+    "确保'一一对应比较'在故事中体现为同时触线的比较，而非其他方式。"
+  ],
+  "mapping_context_sha256": "447cc7e089522b02cfde713bf7a9b99dfc685ed2d3193bd0587811a0f926bb3c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "947f678f222a3b47b21c8971de4cb0345baee39e69a9a9aa333b868ac57e211a"
+  }
+}

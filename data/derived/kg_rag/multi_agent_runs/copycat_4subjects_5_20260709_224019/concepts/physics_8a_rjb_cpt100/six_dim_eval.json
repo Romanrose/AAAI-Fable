@@ -1,0 +1,122 @@
+{
+  "concept_id": "physics_8a_rjb_cpt100",
+  "target_concept": "焦点",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "weighted_overall": 4.25,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过前置条件牌、记录册对照和验收流程，准确表达了平行光经凸透镜会聚到主轴上一点的核心机制，即条件（主渠水位达标）决定结果（支渠流量数值正确），且保留了变量之间的因果关系，没有写成主观意志。",
+    "implicitness": "正文未出现'焦点'、'主光轴'、'凸透镜'等任何禁用术语或别名，完全通过水渠调度场景隐喻，符合隐含性要求。",
+    "mapping_clarity": "故事中前置条件牌对应平行光条件，记录册对照对应光路验证，验收记录对应焦点形成，映射关系清晰，但水渠调度场景与光学机制之间的类比稍显间接，部分读者可能需要额外思考才能完全对应。",
+    "readability": "故事语言流畅自然，情节连贯，角色对话和行动合理，适合中学生阅读，无生硬术语或复杂句式。",
+    "pedagogical_value": "故事通过调度站流程展示了条件-过程-结果的因果链，有助于理解'焦点'概念中平行光经透镜会聚的机制，但教学价值略受限于场景类比不够直观，可能无法完全替代直接的光学演示。",
+    "novelty": "故事采用水渠调度站作为隐喻，避免了常见的太阳光、放大镜等模板化场景，具有一定新颖性，但调度站流程与光学机制的对应关系在寓言中较为常见。"
+  },
+  "evidence": {
+    "faithfulness": "故事中'前置条件牌'对应平行光条件，'记录册对照'对应光路验证，'验收记录'对应焦点形成，且强调顺序不可颠倒，符合核心机制。",
+    "implicitness": "全文未出现'焦点'、'主光轴'、'凸透镜'等术语，仅使用'前置条件牌'、'记录册'、'验收记录'等隐喻。",
+    "mapping_clarity": "前置条件牌（平行光条件）→ 记录册对照（光路验证）→ 验收记录（焦点形成）的映射链清晰，但水渠调度与光学之间的类比需要读者主动联想。",
+    "readability": "故事包含对话、动作和情节转折，语言平实，无冗余描述，阅读体验流畅。",
+    "pedagogical_value": "故事通过调度站流程展示了条件-过程-结果的因果链，有助于理解'焦点'概念，但场景类比可能不如直接光学演示直观。",
+    "novelty": "水渠调度站场景避免了常见的太阳光、放大镜等模板，但调度站流程与光学机制的对应关系在寓言中较为常见。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事中更明确地暗示'平行'和'会聚'的概念，例如增加'所有支渠的水流都沿着同一方向汇入主渠'等细节，以增强与光学机制的映射。",
+    "建议在故事结尾增加一句总结性隐喻，如'就像所有平行水流最终汇聚到一点'，以强化教学效果。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过前置条件牌、记录册对照和验收流程，准确表达了平行光经凸透镜会聚到主轴上一点的核心机制，即条件（主渠水位达标）决定结果（支渠流量数值正确），且保留了变量之间的因果关系，没有写成主观意志。",
+      "implicitness": "正文未出现'焦点'、'主光轴'、'凸透镜'等任何禁用术语或别名，完全通过水渠调度场景隐喻，符合隐含性要求。",
+      "mapping_clarity": "故事中前置条件牌对应平行光条件，记录册对照对应光路验证，验收记录对应焦点形成，映射关系清晰，但水渠调度场景与光学机制之间的类比稍显间接，部分读者可能需要额外思考才能完全对应。",
+      "readability": "故事语言流畅自然，情节连贯，角色对话和行动合理，适合中学生阅读，无生硬术语或复杂句式。",
+      "pedagogical_value": "故事通过调度站流程展示了条件-过程-结果的因果链，有助于理解'焦点'概念中平行光经透镜会聚的机制，但教学价值略受限于场景类比不够直观，可能无法完全替代直接的光学演示。",
+      "novelty": "故事采用水渠调度站作为隐喻，避免了常见的太阳光、放大镜等模板化场景，具有一定新颖性，但调度站流程与光学机制的对应关系在寓言中较为常见。"
+    },
+    "evidence": {
+      "faithfulness": "故事中'前置条件牌'对应平行光条件，'记录册对照'对应光路验证，'验收记录'对应焦点形成，且强调顺序不可颠倒，符合核心机制。",
+      "implicitness": "全文未出现'焦点'、'主光轴'、'凸透镜'等术语，仅使用'前置条件牌'、'记录册'、'验收记录'等隐喻。",
+      "mapping_clarity": "前置条件牌（平行光条件）→ 记录册对照（光路验证）→ 验收记录（焦点形成）的映射链清晰，但水渠调度与光学之间的类比需要读者主动联想。",
+      "readability": "故事包含对话、动作和情节转折，语言平实，无冗余描述，阅读体验流畅。",
+      "pedagogical_value": "故事通过调度站流程展示了条件-过程-结果的因果链，有助于理解'焦点'概念，但场景类比可能不如直接光学演示直观。",
+      "novelty": "水渠调度站场景避免了常见的太阳光、放大镜等模板，但调度站流程与光学机制的对应关系在寓言中较为常见。"
+    },
+    "revision_suggestions": [
+      "可考虑在故事中更明确地暗示'平行'和'会聚'的概念，例如增加'所有支渠的水流都沿着同一方向汇入主渠'等细节，以增强与光学机制的映射。",
+      "建议在故事结尾增加一句总结性隐喻，如'就像所有平行水流最终汇聚到一点'，以强化教学效果。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "physics_8a_rjb_cpt100",
+    "target_concept": "焦点",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

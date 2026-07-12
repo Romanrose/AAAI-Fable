@@ -1,0 +1,390 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt106",
+    "subject": "physics",
+    "canonical_name": "凸透镜成像规律",
+    "aliases": [],
+    "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+    "concept_type": "law",
+    "forbidden_terms": [
+      "凸透镜成像规律"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "焦距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt101:definition",
+          "kg-edge:normalized:edge:17190"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "物距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition",
+          "kg-edge:normalized:edge:17193"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "像距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt108:definition",
+          "kg-edge:normalized:edge:17194"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "凸透镜成像规律",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt106:definition",
+          "kg-node:physics_8a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "物镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt121:definition",
+          "kg-edge:normalized:edge:12423"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "目镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt122:definition",
+          "kg-edge:normalized:edge:12424"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "entity",
+        "text": "显微镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt119:definition",
+          "kg-edge:normalized:edge:17191"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "entity",
+        "text": "望远镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt120:definition",
+          "kg-edge:normalized:edge:17192"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17190"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17193"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17194"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12423"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12424"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n4",
+        "target": "n7",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17191"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n4",
+        "target": "n8",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17192"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "凸透镜成像规律"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt106",
+      "name": "凸透镜成像规律",
+      "label": "Concept",
+      "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt101",
+        "name": "焦距"
+      },
+      {
+        "id": "physics_8a_rjb_cpt119",
+        "name": "显微镜"
+      },
+      {
+        "id": "physics_8a_rjb_cpt120",
+        "name": "望远镜"
+      },
+      {
+        "id": "physics_8a_rjb_cpt107",
+        "name": "物距"
+      },
+      {
+        "id": "physics_8a_rjb_cpt108",
+        "name": "像距"
+      },
+      {
+        "id": "physics_8a_rjb_cpt121",
+        "name": "物镜"
+      },
+      {
+        "id": "physics_8a_rjb_cpt122",
+        "name": "目镜"
+      },
+      {
+        "id": "physics_8a_rjb_exp27",
+        "name": "探究凸透镜成像的规律"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17190",
+        "source_id": "physics_8a_rjb_cpt101",
+        "source_name": "焦距",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt101",
+        "neighbor_name": "焦距",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17191",
+        "source_id": "physics_8a_rjb_cpt106",
+        "source_name": "凸透镜成像规律",
+        "target_id": "physics_8a_rjb_cpt119",
+        "target_name": "显微镜",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt119",
+        "neighbor_name": "显微镜",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17192",
+        "source_id": "physics_8a_rjb_cpt106",
+        "source_name": "凸透镜成像规律",
+        "target_id": "physics_8a_rjb_cpt120",
+        "target_name": "望远镜",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt120",
+        "neighbor_name": "望远镜",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17193",
+        "source_id": "physics_8a_rjb_cpt107",
+        "source_name": "物距",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt107",
+        "neighbor_name": "物距",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17194",
+        "source_id": "physics_8a_rjb_cpt108",
+        "source_name": "像距",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt108",
+        "neighbor_name": "像距",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12423",
+        "source_id": "physics_8a_rjb_cpt121",
+        "source_name": "物镜",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt121",
+        "neighbor_name": "物镜",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12424",
+        "source_id": "physics_8a_rjb_cpt122",
+        "source_name": "目镜",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt122",
+        "neighbor_name": "目镜",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:23050",
+        "source_id": "physics_8a_rjb_exp27",
+        "source_name": "探究凸透镜成像的规律",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_exp27",
+        "neighbor_name": "探究凸透镜成像的规律",
+        "score": 0.95,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 8,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "凸透镜成像规律",
+      "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17190] 焦距 --prerequisites_for--> 凸透镜成像规律",
+      "[normalized:edge:17191] 凸透镜成像规律 --prerequisites_for--> 显微镜",
+      "[normalized:edge:17192] 凸透镜成像规律 --prerequisites_for--> 望远镜",
+      "[normalized:edge:17193] 物距 --prerequisites_for--> 凸透镜成像规律",
+      "[normalized:edge:17194] 像距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:12423] 物镜 --is_a--> 凸透镜成像规律",
+      "[normalized:edge:12424] 目镜 --is_a--> 凸透镜成像规律",
+      "[normalized:edge:23050] 探究凸透镜成像的规律 --verifies--> 凸透镜成像规律"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17190",
+    "normalized:edge:17191",
+    "normalized:edge:17192",
+    "normalized:edge:17193",
+    "normalized:edge:17194",
+    "normalized:edge:12423",
+    "normalized:edge:12424",
+    "normalized:edge:23050"
+  ],
+  "provenance": {
+    "seed_sha256": "21e78cbf1af078ad1bfe1f4680907513acc433908fabfb29e6bd65be44747c58",
+    "retrieval_sha256": "e60aa5ce4780d782dcb22f4467d2a63b83d56a498f99653a3849d1e7a793a51d",
+    "mechanism_record_sha256": "ef860f7b7d6d56a5b4b57db25af80b5b5978ea7b1844a4692a1a19badeb649b4"
+  }
+}

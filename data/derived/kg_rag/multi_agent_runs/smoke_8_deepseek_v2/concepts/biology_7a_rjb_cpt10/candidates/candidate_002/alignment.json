@@ -1,0 +1,30 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "月季新枝与母株的相似与差异现象",
+      "evidence": "有几枝新枝开出的花和母株一模一样，也是深红色、重瓣的。可另外两枝却完全不同：一枝开出粉色的单瓣花，另一枝的花瓣边缘竟然镶着一圈白边",
+      "narrative_anchor": "有几枝新枝开出的花和母株一模一样，也是深红色、重瓣的。可另外两枝却完全不同：一枝开出粉色的单瓣花，另一枝的花瓣边缘竟然镶着一圈白边",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "年轻园丁认识到月季的相似与差异是生物共同特征",
+      "evidence": "这些新枝都从同一棵母株长出来，它们带着母株的底子，可每一枝又都有自己的模样。这不是乱，这是它们的本性",
+      "narrative_anchor": "这些新枝都从同一棵母株长出来，它们带着母株的底子，可每一枝又都有自己的模样。这不是乱，这是它们的本性",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "月季新枝的相似与差异现象（n1）被年轻园丁认识到是生物共同特征（n2）",
+      "evidence": "这些新枝都从同一棵母株长出来，它们带着母株的底子，可每一枝又都有自己的模样。这不是乱，这是它们的本性",
+      "narrative_anchor": "这些新枝都从同一棵母株长出来，它们带着母株的底子，可每一枝又都有自己的模样。这不是乱，这是它们的本性",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

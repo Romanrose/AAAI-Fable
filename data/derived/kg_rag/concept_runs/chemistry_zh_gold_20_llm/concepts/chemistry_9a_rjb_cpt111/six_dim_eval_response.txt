@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确传达了催化作用的核心：灰石（催化剂）加速水分蒸发（反应速率改变），自身质量和性质基本不变。但灰石加速的是物理过程（蒸发），而非化学反应，与定义中的“化学反应”略有偏差，因此扣1分。",
+    "implicitness": "故事完全未出现“催化作用”或“催化剂”等术语，通过灰石的行为和主角的观察自然隐含概念，符合隐含性要求。",
+    "mapping_clarity": "灰石对应催化剂，水分蒸发对应反应速率改变，质量不变对应催化剂性质守恒，映射清晰。但蒸发是物理变化，与化学反应不完全对应，稍显模糊。",
+    "readability": "故事语言流畅，情节简单易懂，适合初中生阅读，无生僻词汇或复杂结构。",
+    "pedagogical_value": "故事通过实验对比和主角的发现过程，有效展示了催化作用的核心特征，能帮助学生理解概念。但物理变化与化学反应的混淆可能削弱教学准确性。",
+    "novelty": "使用“灰石”作为催化剂载体有一定新意，但整体情节（发现特殊物质加速过程）较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "将水分蒸发改为一个简单的化学反应过程（如稻谷中的糖分分解），以更贴合催化作用的定义。",
+    "在故事结尾可略微提示灰石的作用类似于某些化学中的催化剂，但避免直接使用术语。",
+    "增加一个细节：灰石在多次使用后仍保持原样，以强化“化学性质不变”的体现。"
+  ]
+}

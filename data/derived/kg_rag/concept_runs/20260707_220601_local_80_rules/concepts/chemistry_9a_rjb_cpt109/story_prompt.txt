@@ -1,0 +1,592 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "分解反应"
+  ],
+  "concept_card": {
+    "concept_id": "chemistry_9a_rjb_cpt109",
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "canonical_name": "分解反应",
+    "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+    "aliases": [],
+    "examples": [
+      "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+      "过氧化氢分解生成水和氧气",
+      "氯酸钾分解生成氯化钾和氧气",
+      "水在电解时分解生成氢气和氧气，是分解反应。",
+      "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+    ],
+    "teaching_level": "middle_school",
+    "concept_type": "process",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt103",
+          "label": "Concept",
+          "name": "实验室制取氧气的方法",
+          "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt251",
+          "label": "Concept",
+          "name": "水的分解反应",
+          "definition": "水在电流等作用下分解生成氢气和氧气的化学变化，是一种分解反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt118",
+          "label": "Concept",
+          "name": "化学学习中的分类思想",
+          "definition": "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt105",
+          "label": "Concept",
+          "name": "高锰酸钾受热分解反应",
+          "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt107",
+          "label": "Concept",
+          "name": "过氧化氢分解反应",
+          "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt108",
+          "label": "Concept",
+          "name": "加热氯酸钾制取氧气",
+          "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt96",
+          "label": "Concept",
+          "name": "化合反应",
+          "definition": "由两种或两种以上物质起反应，生成一种新物质的化学反应，称为化合反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "chemistry_9a_rjb_exe16",
+          "label": "Exercise",
+          "name": "比较下列反应，并回答问题：\n（1）高锰酸钾受热分解：高锰酸钾 → 锰酸钾 + 二氧化锰 + 氧气\n（2）过氧化氢分解：过氧化氢 ⟶(二氧化锰) 水 + 氧气\n（3）氯酸钾受热分解：氯酸钾 ⟶(加热, 二氧化锰) 氯化钾 + 氧气\n① 这三种反应属于同一类型的化学反应，这种反应类型的名称是什么？\n② 与化合反应（可表示为 A + B → AB）比较，这类反应在反应物和生成物数量关系上有什么特点？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_9a_rjb_ch4_s3",
+          "label": "Section",
+          "name": "课题3 水的组成",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [
+      "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+    ],
+    "must_preserve_zh": [
+      "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "区分化学反应和物理混合。",
+      "保留守恒关系和反应前后变化。"
+    ],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "分解反应"
+    ],
+    "subject_constraints_zh": [
+      "区分化学反应和物理混合。",
+      "保留守恒关系和反应前后变化。",
+      "避免化学式或元素符号在故事正文中泄露。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "high",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold",
+      "enrichment_confidence": 0.72
+    },
+    "enrichment_confidence": 0.72
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt109",
+    "concept_id": "chemistry_9a_rjb_cpt109",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt109",
+      "label": "Concept",
+      "name": "分解反应",
+      "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "aliases": [],
+      "examples": [
+        "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+        "过氧化氢分解生成水和氧气",
+        "氯酸钾分解生成氯化钾和氧气",
+        "水在电解时分解生成氢气和氧气，是分解反应。",
+        "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      ],
+      "retrieval_text": "分解反应\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "chemistry_9a_rjb_cpt109",
+        "label": "Concept",
+        "name": "分解反应",
+        "properties": {
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+          "importance": "重要",
+          "formula": "AB → A + B",
+          "examples": [
+            "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+            "过氧化氢分解生成水和氧气",
+            "氯酸钾分解生成氯化钾和氧气",
+            "水在电解时分解生成氢气和氧气，是分解反应。",
+            "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+          ],
+          "retrieval_text": "分解反应\nConcept\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。\n重要\nAB → A + B\n高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气\n过氧化氢分解生成水和氧气\n氯酸钾分解生成氯化钾和氧气\n水在电解时分解生成氢气和氧气，是分解反应。\n讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:14997",
+          "source": "chemistry_9a_rjb_cpt109",
+          "source_name": "分解反应",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14998",
+          "source": "chemistry_9a_rjb_cpt109",
+          "source_name": "分解反应",
+          "target": "chemistry_9a_rjb_cpt251",
+          "target_name": "水的分解反应",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:15003",
+          "source": "chemistry_9a_rjb_cpt118",
+          "source_name": "化学学习中的分类思想",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:15263",
+          "source": "chemistry_9a_rjb_skl28",
+          "source_name": "用分类方法学习化学",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:11281",
+          "source": "chemistry_9a_rjb_cpt108",
+          "source_name": "加热氯酸钾制取氧气",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:11279",
+          "source": "chemistry_9a_rjb_cpt107",
+          "source_name": "过氧化氢分解反应",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:11277",
+          "source": "chemistry_9a_rjb_cpt105",
+          "source_name": "高锰酸钾受热分解反应",
+          "target": "chemistry_9a_rjb_cpt109",
+          "target_name": "分解反应",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:18225",
+          "source": "chemistry_9a_rjb_cpt109",
+          "source_name": "分解反应",
+          "target": "chemistry_9a_rjb_cpt96",
+          "target_name": "化合反应",
+          "relation": "relates_to",
+          "relation_description": "relates_to",
+          "evidence": "",
+          "score": 0.9
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+          "formula": "AB → A + B",
+          "importance": "重要"
+        },
+        "condition_summary": [
+          "[normalized:edge:14997] 分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+          "[normalized:edge:14998] 分解反应 --prerequisites_for--> 水的分解反应",
+          "[normalized:edge:15003] 化学学习中的分类思想 --prerequisites_for--> 分解反应",
+          "[normalized:edge:15263] 用分类方法学习化学 --prerequisites_for--> 分解反应"
+        ],
+        "process_summary": [
+          "[normalized:edge:11281] 加热氯酸钾制取氧气 --is_a--> 分解反应",
+          "[normalized:edge:11279] 过氧化氢分解反应 --is_a--> 分解反应",
+          "[normalized:edge:11277] 高锰酸钾受热分解反应 --is_a--> 分解反应",
+          "[normalized:edge:18225] 分解反应 --relates_to--> 化合反应"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 8,
+        "candidate_edge_count": 8,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 2127,
+        "summary_chars": 666,
+        "path_chars": 0,
+        "retrieval_context_chars": 2793
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "分解反应的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14997"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "分解反应 --prerequisites_for--> 水的分解反应",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14998"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "化学学习中的分类思想 --prerequisites_for--> 分解反应",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:15003"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "用分类方法学习化学 --prerequisites_for--> 分解反应",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:15263"
+          ]
+        },
+        {
+          "step_id": "s5",
+          "text": "加热氯酸钾制取氧气 --is_a--> 分解反应",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:11281"
+          ]
+        },
+        {
+          "step_id": "s6",
+          "text": "过氧化氢分解反应 --is_a--> 分解反应",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:11279"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s4",
+          "target_step_id": "s5",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s5",
+          "target_step_id": "s6",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:14997",
+        "normalized:edge:14998",
+        "normalized:edge:15003",
+        "normalized:edge:15263",
+        "normalized:edge:11281",
+        "normalized:edge:11279"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "分解反应",
+        "chemistry_9a_rjb_cpt109"
+      ],
+      "coverage_targets": {
+        "required_step_count": 6,
+        "required_dependency_count": 5,
+        "must_cover_edge_ids": [
+          "normalized:edge:14997",
+          "normalized:edge:14998",
+          "normalized:edge:15003",
+          "normalized:edge:15263",
+          "normalized:edge:11281",
+          "normalized:edge:11279"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "chemistry_9a_rjb_cpt109",
+      "concept_id": "chemistry_9a_rjb_cpt109",
+      "story_language": "zh-CN",
+      "source_domain": "材料试炼间",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 实验室制取氧气的方法",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 水的这条隐藏规则",
+        "先确认一个起点条件是否具备：化学学习中的分类思想 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：用分类方法学习化学 --prerequisites_for--> 这条隐藏规则",
+        "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则",
+        "让中间的行动承接前后变化：过氧化氢这条隐藏规则 --is_a--> 这条隐藏规则"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 实验室制取氧气的方法"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 水的这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：化学学习中的分类思想 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：用分类方法学习化学 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s5",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s6",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：过氧化氢这条隐藏规则 --is_a--> 这条隐藏规则"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "分解反应"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+            "分解反应 --prerequisites_for--> 水的分解反应",
+            "化学学习中的分类思想 --prerequisites_for--> 分解反应",
+            "用分类方法学习化学 --prerequisites_for--> 分解反应",
+            "加热氯酸钾制取氧气 --is_a--> 分解反应",
+            "过氧化氢分解反应 --is_a--> 分解反应"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "区分化学反应和物理混合。",
+            "保留守恒关系和反应前后变化。",
+            "避免化学式或元素符号在故事正文中泄露。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "材料试炼间",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 实验室制取氧气的方法",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 水的这条隐藏规则",
+      "先确认一个起点条件是否具备：化学学习中的分类思想 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：用分类方法学习化学 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则",
+      "让中间的行动承接前后变化：过氧化氢这条隐藏规则 --is_a--> 这条隐藏规则"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "分解反应"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+          "分解反应 --prerequisites_for--> 水的分解反应",
+          "化学学习中的分类思想 --prerequisites_for--> 分解反应",
+          "用分类方法学习化学 --prerequisites_for--> 分解反应",
+          "加热氯酸钾制取氧气 --is_a--> 分解反应",
+          "过氧化氢分解反应 --is_a--> 分解反应"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 实验室制取氧气的方法"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 水的这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：化学学习中的分类思想 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：用分类方法学习化学 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s5",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s6",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：过氧化氢这条隐藏规则 --is_a--> 这条隐藏规则"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

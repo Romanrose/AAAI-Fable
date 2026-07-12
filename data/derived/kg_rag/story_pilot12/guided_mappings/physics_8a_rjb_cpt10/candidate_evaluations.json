@@ -1,0 +1,191 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "古代工匠制秤",
+      "domain_rationale": "制秤过程中，秤杆上的星花（参照物）是衡量物体重量的标准，与参照物在物理学中作为判断运动的标准相似。",
+      "conflict": "秤杆星花是固定标准，而参照物可以是任意选择的，但映射中星花作为固定参考点，忽略了参照物的可选性。",
+      "event_chain": [
+        "工匠将重物挂在秤钩上",
+        "重物使秤杆发生倾斜（机械运动）",
+        "工匠移动秤砣寻找平衡",
+        "秤杆平衡时，秤砣所在位置的星花（参照物）指示重量"
+      ],
+      "turning_point": "秤砣位置与星花对齐，确定重量",
+      "resolution_state": "秤杆恢复水平，重量被准确读出",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "秤杆上的星花",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "秤杆倾斜与回正的过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "不同星花对应不同重量，同一物体在不同星花下重量读数不同",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "秤杆倾斜过程（机械运动）与星花（参照物）的关系是：倾斜程度需通过星花来量化",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "星花（参照物）使工匠能够判断重量（运动与静止的相对性）",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "重量读数（运动与静止的相对性结果）反过来确认星花（参照物）的准确性",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.92,
+      "temperature": 8.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 0.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "古代航海观星",
+      "domain_rationale": "航海时，北极星（参照物）是判断船只位置和方向的标准，与参照物作为运动判断标准一致。",
+      "conflict": "北极星是固定天体，而参照物可以是任何物体，映射中北极星的固定性限制了参照物的可变性。",
+      "event_chain": [
+        "船只在大海中航行（机械运动）",
+        "水手观察北极星的位置",
+        "水手根据北极星判断船只的航向和纬度",
+        "在不同海域，同一北极星位置下船只的方位判断不同（运动与静止的相对性）"
+      ],
+      "turning_point": "北极星位置与海平面的夹角确定方位",
+      "resolution_state": "船只航向与纬度被准确确定",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "北极星",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "船只的航行过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "同一北极星下，不同海域的船只方位判断不同",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "船只航行（机械运动）与北极星（参照物）的关系是：航行中需要北极星来定向",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "北极星（参照物）使水手能够判断船只方位（运动与静止的相对性）",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "方位判断结果（运动与静止的相对性）反过来验证北极星（参照物）的可靠性",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.92,
+      "temperature": 8.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 0.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "古代科举评卷",
+      "domain_rationale": "评卷时，考官心中的标准答案（参照物）是评判考卷优劣的基准，与参照物作为判断标准相似。",
+      "conflict": "标准答案是主观设定的，而参照物是客观选取的，映射中标准答案的主观性可能弱化物理概念的客观性。",
+      "event_chain": [
+        "考生完成考卷（机械运动：思维活动与书写）",
+        "考官拿到考卷",
+        "考官比照心中的标准答案进行评阅",
+        "同一考卷在不同考官（不同标准答案）下可能得到不同评判（运动与静止的相对性）"
+      ],
+      "turning_point": "考官将考卷内容与标准答案对比",
+      "resolution_state": "考卷被判定为合格或不合格",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "考官心中的标准答案",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "考生完成考卷的思维与书写过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "同一考卷在不同标准答案下可能被评为不同等级",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "考生完成考卷（机械运动）与标准答案（参照物）的关系是：考卷内容需与标准答案对照",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "标准答案（参照物）使考官能够评判考卷优劣（运动与静止的相对性）",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "评判结果（运动与静止的相对性）反过来影响标准答案（参照物）的修正或确认",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.92,
+      "temperature": 8.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 0.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  }
+]

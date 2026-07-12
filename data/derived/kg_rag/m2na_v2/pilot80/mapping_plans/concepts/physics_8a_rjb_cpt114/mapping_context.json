@@ -1,0 +1,160 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt114",
+    "subject": "physics",
+    "canonical_name": "近点",
+    "aliases": [],
+    "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "近点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "眼睛调节：通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition",
+          "kg-node:physics_8a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "近点：眼睛依靠调节能看清的最近点，正常眼约10 cm",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition",
+          "kg-node:physics_8a_rjb_cpt114:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "明视距离：正常眼观察近处物体最清晰而不疲劳的距离，约25 cm",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt115:definition",
+          "kg-node:physics_8a_rjb_cpt115:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17199"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19715"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "近点"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt114",
+      "name": "近点",
+      "label": "Concept",
+      "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt112",
+        "name": "眼睛调节"
+      },
+      {
+        "id": "physics_8a_rjb_cpt115",
+        "name": "明视距离"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17199",
+        "source_id": "physics_8a_rjb_cpt112",
+        "source_name": "眼睛调节",
+        "target_id": "physics_8a_rjb_cpt114",
+        "target_name": "近点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt112",
+        "neighbor_name": "眼睛调节",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19715",
+        "source_id": "physics_8a_rjb_cpt114",
+        "source_name": "近点",
+        "target_id": "physics_8a_rjb_cpt115",
+        "target_name": "明视距离",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt115",
+        "neighbor_name": "明视距离",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "近点",
+      "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:17199] 眼睛调节 --prerequisites_for--> 近点"
+    ],
+    "process_summary": [
+      "[normalized:edge:19715] 近点 --relates_to--> 明视距离"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17199",
+    "normalized:edge:19715"
+  ],
+  "provenance": {
+    "seed_sha256": "e723da32edfde7dd24d61f5f5899ff24a31958cfb25838becc92575670f3bcd6",
+    "retrieval_sha256": "310d83c097dd26c0a5eb86d1e9a42c750b3aeb9b7c34ed5cc8c293e2deaa6043",
+    "mechanism_record_sha256": "e28b7f9e7dcd31e591007bf0da60b6e93d72bdde600ea3f1cc14cd6be7cfd37e"
+  }
+}

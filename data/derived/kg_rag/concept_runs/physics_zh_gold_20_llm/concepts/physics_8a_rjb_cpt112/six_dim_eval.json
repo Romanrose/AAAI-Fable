@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt112",
+  "target_concept": "眼睛调节",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了眼睛调节的核心机制：通过改变晶状体形状（变凸或变扁）使不同距离的物体成像在视网膜上。阿明的观察和老师的解释完全符合概念定义。",
+    "implicitness": "概念名称“眼睛调节”未在故事正文中出现，但机制通过阿明的实验和老师的解释间接呈现，隐含性较好。标题和正文均无直接泄露。",
+    "mapping_clarity": "故事中阿明在不同楼层观察近处和远处物体的清晰度变化，明确映射了晶状体形状改变与距离的关系。老师的解释直接点明了机制，映射清晰。",
+    "readability": "故事语言流畅，情节简单易懂，适合目标读者。钟楼场景与观察实验结合自然，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过实验和解释，有效传达了眼睛调节的原理，并强调了自然调整而非主观控制，教学价值高。",
+    "novelty": "故事采用钟楼观察场景，但核心情节（远近清晰度对比）较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个角色因误解调节机制而戴错眼镜的冲突，以增强转折和教学深度。",
+    "可加入近点或远点的概念作为铺垫，但需注意避免泄露目标概念。"
+  ],
+  "rule_findings": {
+    "story_token_count": 445,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确描述了眼睛调节的核心机制：通过改变晶状体形状（变凸或变扁）使不同距离的物体成像在视网膜上。阿明的观察和老师的解释完全符合概念定义。",
+      "implicitness": "概念名称“眼睛调节”未在故事正文中出现，但机制通过阿明的实验和老师的解释间接呈现，隐含性较好。标题和正文均无直接泄露。",
+      "mapping_clarity": "故事中阿明在不同楼层观察近处和远处物体的清晰度变化，明确映射了晶状体形状改变与距离的关系。老师的解释直接点明了机制，映射清晰。",
+      "readability": "故事语言流畅，情节简单易懂，适合目标读者。钟楼场景与观察实验结合自然，无冗余或晦涩表达。",
+      "pedagogical_value": "故事通过实验和解释，有效传达了眼睛调节的原理，并强调了自然调整而非主观控制，教学价值高。",
+      "novelty": "故事采用钟楼观察场景，但核心情节（远近清晰度对比）较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个角色因误解调节机制而戴错眼镜的冲突，以增强转折和教学深度。",
+      "可加入近点或远点的概念作为铺垫，但需注意避免泄露目标概念。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -4,13 +4,8 @@ __pycache__/
 .pytest_cache/
 .uv-cache/
 *.egg-info/
-build/
-dist/
 
 .env
 .env.*
 !.env.example
 
-data/derived/
-data/kg_visualization/
-data/concept_kg_visualization/

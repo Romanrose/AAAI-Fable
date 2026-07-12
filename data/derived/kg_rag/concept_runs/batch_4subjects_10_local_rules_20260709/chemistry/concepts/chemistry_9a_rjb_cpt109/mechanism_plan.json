@@ -1,0 +1,106 @@
+{
+  "core_question": "分解反应的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:14997"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "分解反应 --prerequisites_for--> 水的分解反应",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:14998"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "化学学习中的分类思想 --prerequisites_for--> 分解反应",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15003"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "用分类方法学习化学 --prerequisites_for--> 分解反应",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15263"
+      ]
+    },
+    {
+      "step_id": "s5",
+      "text": "加热氯酸钾制取氧气 --is_a--> 分解反应",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11281"
+      ]
+    },
+    {
+      "step_id": "s6",
+      "text": "过氧化氢分解反应 --is_a--> 分解反应",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11279"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s4",
+      "target_step_id": "s5",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s5",
+      "target_step_id": "s6",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:14997",
+    "normalized:edge:14998",
+    "normalized:edge:15003",
+    "normalized:edge:15263",
+    "normalized:edge:11281",
+    "normalized:edge:11279"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "分解反应",
+    "chemistry_9a_rjb_cpt109"
+  ],
+  "coverage_targets": {
+    "required_step_count": 6,
+    "required_dependency_count": 5,
+    "must_cover_edge_ids": [
+      "normalized:edge:14997",
+      "normalized:edge:14998",
+      "normalized:edge:15003",
+      "normalized:edge:15263",
+      "normalized:edge:11281",
+      "normalized:edge:11279"
+    ],
+    "must_cover_path_ids": []
+  }
+}

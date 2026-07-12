@@ -1,0 +1,62 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫种萝卜的故事",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "萝卜种子",
+    "土地",
+    "水",
+    "阳光",
+    "萝卜"
+  ],
+  "conflict": "农夫想种出大萝卜，但必须先准备好种子和土地，才能播种并收获。",
+  "event_chain": [
+    "农夫认识并数出5颗萝卜种子，理解每颗种子对应一个坑位。",
+    "农夫将两颗种子合并种在一个坑里。",
+    "坑里长出两个小萝卜。"
+  ],
+  "turning_point": "农夫将两颗种子合并种在一个坑里，而不是分开种。",
+  "resolution_state": "坑里长出两个小萝卜，表示两个数量合并在一起的结果。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫认识并数出5颗萝卜种子，理解每颗种子对应一个坑位",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫将两颗种子合并种在一个坑里",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识并数出种子后，才能进行合并种植",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'加法'、'加法的含义'等禁止术语。",
+    "确保'合并'动作明确表示两个数量（两颗种子）的合并，而非其他含义。",
+    "确保条件节点（认识并数出1到5的数量）被准确映射为农夫数种子的具体行为。"
+  ],
+  "mapping_context_sha256": "def66297622a81daa0ce9a0261e381780c802c9375fedf671cc23be100b88cdb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4e8ab243e52378715c985a4bd085dba7a5f0adff27082d7ec2e8408930cb1892"
+  }
+}

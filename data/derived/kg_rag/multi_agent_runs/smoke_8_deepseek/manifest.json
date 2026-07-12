@@ -1,0 +1,14 @@
+{
+  "pipeline": "kg_rag.multi_agent",
+  "language": "zh-CN",
+  "concept_cards_path": "data\\derived\\kg_rag\\concept_cards\\k12_concept_cards.enriched.jsonl",
+  "normalized_graph_path": "data\\derived\\kg_rag\\k12_kgraph_normalized.json",
+  "subjects": "biology,chemistry,math,physics",
+  "priority": "gold",
+  "limit_per_subject": 2,
+  "limit": null,
+  "num_plans": 3,
+  "revision_rounds": 1,
+  "max_edges": 16,
+  "selected_count": 8
+}

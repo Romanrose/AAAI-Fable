@@ -1,0 +1,76 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt2",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "两个果园的果实比较",
+  "characters": [
+    "果农老张",
+    "果农老李"
+  ],
+  "objects": [
+    "苹果树",
+    "梨树",
+    "苹果",
+    "梨",
+    "篮子",
+    "果园"
+  ],
+  "conflict": "老张和老李都认为自己的果园果实更多，但无法直接判断谁对谁错。",
+  "event_chain": [
+    "老张和老李各自数自己果园里果树的果实数量（苹果或梨）。",
+    "老张数出自己果园有30个苹果，老李数出自己果园有20个梨。",
+    "两人争论谁的果实多，但苹果和梨不同，无法直接比较。",
+    "他们决定用一一对应的方法：将苹果和梨一对一配对，看谁有剩余。",
+    "老张的苹果和老李的梨一一配对后，苹果剩下10个，说明苹果比梨多。"
+  ],
+  "turning_point": "采用一一对应配对的方法，将苹果和梨一对一配对，发现苹果有剩余。",
+  "resolution_state": "通过一一对应比较，得出老张的苹果比老李的梨多。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老张和老李各自数自己果园里果树的果实数量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "将苹果和梨一对一配对，看谁有剩余",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "通过配对发现苹果比梨多，得出老张的果园果实更多",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "数果实数量（n1）是得出比较结果（n3）的前提步骤",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "一一对应配对法（n2）是一种比较方法，属于比较结果（n3）的具体实现方式",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'比较数量'、'多'、'少'、'一样多'等禁止术语。",
+    "注意一一对应配对法（n2）是n3的一种具体方法，映射时需体现is_a关系。",
+    "避免将课程桥接上下文（如教学步骤）误当作因果机制。"
+  ],
+  "mapping_context_sha256": "447cc7e089522b02cfde713bf7a9b99dfc685ed2d3193bd0587811a0f926bb3c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "40969919e4d7860deba778ad5389c588c7ba92faee2f8fbc8cb2aa8fe3970c25"
+  }
+}

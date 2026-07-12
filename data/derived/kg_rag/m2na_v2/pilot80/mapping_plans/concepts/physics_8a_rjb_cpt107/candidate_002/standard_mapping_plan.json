@@ -1,0 +1,81 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农夫与禾苗",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "禾苗",
+    "田地",
+    "阳光"
+  ],
+  "conflict": "农夫希望禾苗长得快，但禾苗的生长需要时间，不能急于求成。",
+  "event_chain": [
+    "农夫将禾苗种在田地里",
+    "禾苗与田地的距离影响其生长",
+    "农夫根据禾苗与田地的距离调整灌溉和施肥",
+    "禾苗的生长规律决定了其最终收成"
+  ],
+  "turning_point": "农夫意识到不能拔苗助长，必须尊重禾苗与田地的自然距离。",
+  "resolution_state": "农夫遵循禾苗的生长规律，耐心等待，最终获得丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "禾苗与田地的距离",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "禾苗与田地的距离",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "禾苗的生长高度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "禾苗的生长规律",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "禾苗与田地的距离是禾苗与田地的距离",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "禾苗与田地的距离影响禾苗的生长高度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "禾苗与田地的距离使农夫能够应用禾苗的生长规律",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不出现'物距'等禁止术语",
+    "确保故事连贯，不引入无关隐喻",
+    "注意'禾苗与田地的距离'作为条件映射到n1和n2，避免混淆"
+  ],
+  "mapping_context_sha256": "fa097a8c4eed533b813ccfbd9697c0118ba2b3174970a01d288af42ad30adb53",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "c87e6d931fc42db3a93536cdf774d22f343f5652a5335d212607bf54ea8c0ddc"
+  }
+}

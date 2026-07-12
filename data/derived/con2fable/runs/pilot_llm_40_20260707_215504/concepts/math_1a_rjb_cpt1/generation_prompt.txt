@@ -1,0 +1,112 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "数物体（数一数）"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：一一对应比较法",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：比较数量（多、少、一样多）",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16335"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19305"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "果园采摘",
+    "setting": "一个秋天的果园里，果树上挂满了红彤彤的苹果。果农老张带着他的孙子小明在树下，准备采摘苹果。",
+    "conflict": "小明不知道如何准确知道每棵树上结了多少苹果，以便决定先摘哪一棵。",
+    "characters": [
+      {
+        "name": "老张",
+        "role": "经验丰富的果农，引导小明学习计数方法",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "小明",
+        "role": "好奇的孙子，通过实践掌握计数",
+        "mapped_element": "m1"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "小明逐个点数树上的苹果"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "小明将两棵树的苹果一一对应比较"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "小明比较后说出哪棵树苹果多、少或一样多"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老张让小明数一数第一棵树上苹果的个数，小明用手指着苹果，一个一个地数：“1、2、3……”最后说出总数。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老张又让小明数第二棵树，小明同样逐个点数，得到另一个总数。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老张问小明：“这两棵树哪个苹果多？”小明把两棵树的苹果一个一个对应起来看，发现第一棵树的苹果比第二棵树多两个。",
+        "mapped_elements": [
+          "m2",
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "小明从只会数数，到学会用一一对应的方法比较两堆东西的多少。",
+    "ending": "小明高兴地告诉老张：“第一棵树苹果多，我们先摘那棵吧！”老张笑着点头。",
+    "implied_moral": "通过仔细观察和逐一对应，就能准确知道事物的数量并比较多少。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

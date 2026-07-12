@@ -1,0 +1,338 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "房屋建造",
+      "domain_rationale": "房屋建造过程需要满足一系列基本条件，如同生物需要满足生命特征。房屋必须进行基础施工（需要营养）、通风（呼吸）、排水（排出废物）、扩建（生长）、装修（繁殖）、设计蓝图（遗传和变异）、由砖石构成（由细胞构成）。",
+      "conflict": "房屋建造是人工设计过程，而生物是自然存在，但两者都依赖一系列必要环节才能成为完整实体。",
+      "event_chain": [
+        "房屋建造开始",
+        "需要材料供应（如水泥、钢筋）",
+        "需要通风系统",
+        "需要排水系统",
+        "需要扩建楼层",
+        "需要装修装饰",
+        "需要设计图纸和风格延续",
+        "由砖石和混凝土构成"
+      ],
+      "turning_point": "当所有环节都满足时，房屋才能成为宜居的建筑。",
+      "resolution_state": "房屋成为完整的居住空间。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "房屋",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "材料供应",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "通风系统",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "排水系统",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "扩建楼层",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "装修装饰",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "设计图纸和风格延续",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "砖石和混凝土构成",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "房屋需要材料供应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "房屋需要通风系统",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "房屋需要排水系统",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "房屋需要扩建楼层",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "房屋需要装修装饰",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "房屋需要设计图纸和风格延续",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "房屋需要砖石和混凝土构成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "河流生态系统",
+      "domain_rationale": "一条健康的河流需要持续的水源（需要营养）、氧气交换（呼吸）、沉积物排出（排出废物）、河道扩展（生长）、支流分支（繁殖）、流域特征遗传（遗传和变异）、由水滴和矿物质构成（由细胞构成）。",
+      "conflict": "河流是自然地理实体，生物是生命体，但两者都依赖一系列维持其存在和功能的必要条件。",
+      "event_chain": [
+        "河流形成",
+        "需要上游水源补给",
+        "需要水流与空气接触",
+        "需要排出泥沙和杂质",
+        "需要河道拓宽",
+        "需要分流形成支流",
+        "需要保持流域地貌特征",
+        "由水滴和矿物质组成"
+      ],
+      "turning_point": "当所有条件满足时，河流才能稳定流动并滋养生态。",
+      "resolution_state": "河流成为健康的水系。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "河流",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "上游水源补给",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "水流与空气接触",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "排出泥沙和杂质",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "河道拓宽",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "分流形成支流",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "保持流域地貌特征",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "水滴和矿物质组成",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "河流需要上游水源补给",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "河流需要水流与空气接触",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "河流需要排出泥沙和杂质",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "河流需要河道拓宽",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "河流需要分流形成支流",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "河流需要保持流域地貌特征",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "河流需要水滴和矿物质组成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "帝国王朝",
+      "domain_rationale": "一个帝国需要资源补给（需要营养）、情报流通（呼吸）、清除叛乱（排出废物）、领土扩张（生长）、分封诸侯（繁殖）、传承典章制度（遗传和变异）、由城池和人口构成（由细胞构成）。",
+      "conflict": "帝国是社会组织，生物是生命体，但两者都依赖一系列维持其存续的核心条件。",
+      "event_chain": [
+        "帝国建立",
+        "需要粮草和税收",
+        "需要驿站和情报网",
+        "需要剿灭流寇和叛军",
+        "需要开拓疆土",
+        "需要分封诸侯",
+        "需要传承律法和礼仪",
+        "由城池和百姓组成"
+      ],
+      "turning_point": "当所有条件都具备时，帝国才能长治久安。",
+      "resolution_state": "帝国成为繁荣稳定的王朝。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "帝国",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "粮草和税收",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "驿站和情报网",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "剿灭流寇和叛军",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "开拓疆土",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "分封诸侯",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "传承律法和礼仪",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "城池和百姓组成",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "帝国需要粮草和税收",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "帝国需要驿站和情报网",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "帝国需要剿灭流寇和叛军",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "帝国需要开拓疆土",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "帝国需要分封诸侯",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "帝国需要传承律法和礼仪",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "帝国需要城池和百姓组成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:15248",
+    "normalized:edge:18223",
+    "normalized:edge:18426",
+    "normalized:edge:18429"
+  ]
+}

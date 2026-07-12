@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt104",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代农田灌溉",
+  "characters": [
+    "老农",
+    "禾苗"
+  ],
+  "objects": [
+    "水渠",
+    "水闸",
+    "田地",
+    "雨水",
+    "烈日"
+  ],
+  "conflict": "禾苗需要适量的水才能生长，但水渠的水量要么太少导致干旱，要么太多导致水涝，老农必须精准调控水闸。",
+  "event_chain": [
+    "老农打开水闸，水渠中的水流向田地。",
+    "水渠中的水量必须适中，既不能太少也不能太多。",
+    "水量太少时，禾苗因干旱而枯萎。",
+    "水量太多时，禾苗因水涝而烂根。",
+    "只有水量恰到好处，禾苗才能茁壮成长。"
+  ],
+  "turning_point": "老农根据天气和土壤湿度，精准调节水闸，使水量适中。",
+  "resolution_state": "禾苗在适量灌溉下茁壮成长，田地丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "水渠中的适量水流",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "禾苗生长所需的外界条件（适量水、适宜温度、充足空气）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "禾苗茁壮成长",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "水量太少导致禾苗干旱枯萎",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "水量太多导致禾苗水涝烂根",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水渠中的适量水流是禾苗生长所需外界条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "禾苗生长所需的外界条件（包括适量水）使禾苗茁壮成长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "水量太少阻碍禾苗茁壮成长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "水量太多阻碍禾苗茁壮成长",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'一定的水分'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如种子萌发的环境条件）作为因果机制。",
+    "保持单一源域（古代农田灌溉）的连贯性。"
+  ],
+  "mapping_context_sha256": "e9a9938a86f91a9e44059f6d017e5175ab15d1f91790dbf98c0f96f1655f93dd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "9ac942f223183844f61a1413edcf49037539a2a19ca605f0b80d4098b2bd938b"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位农夫用不同方式运送稻谷的故事",
+  "characters": [
+    "农夫",
+    "挑夫"
+  ],
+  "objects": [
+    "稻谷",
+    "扁担",
+    "箩筐",
+    "山路",
+    "平路",
+    "驿站"
+  ],
+  "conflict": "农夫需要将稻谷从山上运到集市，但山路崎岖，平路遥远，挑夫们用不同方式运送，有的快慢不均，有的匀速前进，农夫难以判断哪种方式最可靠。",
+  "event_chain": [
+    "农夫决定将稻谷运到集市，他请来挑夫帮忙。",
+    "挑夫们用扁担挑着箩筐出发，有的走山路，有的走平路。",
+    "一位挑夫走平路，步伐均匀，始终保持相同速度。",
+    "另一位挑夫走山路，有时快有时慢，速度不断变化。",
+    "农夫在驿站记录每个挑夫出发和到达的时间，并计算他们平均每段路的快慢。",
+    "农夫发现，走平路的挑夫速度恒定，可以准确预测到达时间。",
+    "农夫用沙漏测量挑夫在某一瞬间的步伐快慢，发现瞬时速度能反映那一刻的实际情况。",
+    "农夫将每个挑夫的速度随时间变化画在竹简上，形成一条曲线。",
+    "通过曲线，农夫看出谁在何时快何时慢，从而判断谁最稳定。"
+  ],
+  "turning_point": "农夫用沙漏测量瞬时速度并绘制速度曲线，从而能够精确比较不同挑夫的运送效率。",
+  "resolution_state": "农夫掌握了不同运送方式的特点，最终选择匀速挑夫并信任其准时到达。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "稻谷运送的快慢程度（即挑夫每段时间内走过的路程与所用时间之比）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "挑夫走完整段路程的平均快慢（总路程除以总时间）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "走平路的挑夫始终保持相同步伐和速度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "走山路的挑夫速度时快时慢",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "农夫用沙漏测量挑夫在某一瞬间的步伐快慢",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "农夫在竹简上画出的速度随时间变化的曲线",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "农夫用沙漏和竹简记录并计算挑夫每段路程的快慢",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "挑夫走完整段路程的平均快慢是稻谷运送快慢程度的一种表现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "走平路的挑夫保持恒定速度是稻谷运送快慢程度的一种特例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫用沙漏测量的瞬时步伐快慢是稻谷运送快慢程度的一种精确体现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "农夫用沙漏和竹简记录计算的过程验证了稻谷运送快慢程度的存在",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "稻谷运送快慢程度使得走平路的挑夫能够保持匀速前进",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "稻谷运送快慢程度使得走山路的挑夫速度变化成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "稻谷运送快慢程度使得农夫能够绘制速度随时间变化的曲线",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'速度'、'velocity'等禁止词。",
+    "所有映射均基于同一农夫运稻谷的故事，未引入无关隐喻。",
+    "节点n1（速度）映射为'稻谷运送的快慢程度'，避免直接使用目标概念。",
+    "边缘方向均与机制图一致，未反转。"
+  ],
+  "mapping_context_sha256": "4f4517c0d1440695e4bdb25ffa3c8fb053976619fd2094573c7a8991498c530f",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "46b447ccd45dddc236b5578e9b821b58b3397304bb2747f8f104fca4a8ed4d8d"
+  }
+}

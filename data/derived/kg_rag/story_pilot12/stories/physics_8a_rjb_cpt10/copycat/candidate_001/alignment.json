@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第2道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均已在故事中找到对应证据，节点证据为故事中明确出现的短语，边证据为故事中描述比较记录并发现共同约束的句子，方向均得到保留。"
+}

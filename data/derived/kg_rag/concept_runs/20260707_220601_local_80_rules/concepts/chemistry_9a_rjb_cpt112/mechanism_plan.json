@@ -1,0 +1,76 @@
+{
+  "core_question": "二氧化锰的催化作用的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "催化剂 --prerequisites_for--> 二氧化锰的催化作用",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15000"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "二氧化锰的催化作用 --is_a--> 催化剂",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11283"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "加热混有二氧化锰的氯酸钾固体制取氧气 --verifies--> 二氧化锰的催化作用",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:22577"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "过氧化氢分解实验中二氧化锰的作用 --verifies--> 二氧化锰的催化作用",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:22575"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:15000",
+    "normalized:edge:11283",
+    "normalized:edge:22577",
+    "normalized:edge:22575"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "二氧化锰的催化作用",
+    "chemistry_9a_rjb_cpt112"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:15000",
+      "normalized:edge:11283",
+      "normalized:edge:22577",
+      "normalized:edge:22575"
+    ],
+    "must_cover_path_ids": []
+  }
+}

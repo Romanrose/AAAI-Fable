@@ -1,0 +1,162 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt108",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子吸收水分",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "胚根突破种皮形成根",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "胚轴伸长",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "process",
+        "text": "胚芽发育成茎和叶",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "种子萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt101:definition",
+          "kg-node:biology_7a_rjb_cpt101:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n2",
+        "target": "n5",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt108:definition",
+          "kg-node:biology_7a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt101:definition",
+          "kg-node:biology_7a_rjb_cpt101:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "种子萌发的过程"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "bc86387c5da206e63490ef3505a84823cdc997dfb4db1114d8a557e2e5fcfd6f",
+    "retrieval_sha256": "6eb1aef9adc696a1bea7e56f37461a704c8c2941af30a6f7e932ad79475e0c2c",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "769e48c481ce9f68b6d866cb1c078bc43116fd3a5ea759d185a545fc09e4cea6"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

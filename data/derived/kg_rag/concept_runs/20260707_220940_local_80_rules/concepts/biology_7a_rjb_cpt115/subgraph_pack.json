@@ -1,0 +1,111 @@
+{
+  "query": "biology_7a_rjb_cpt115",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt115",
+    "label": "Concept",
+    "name": "自花传粉",
+    "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+    "aliases": [],
+    "examples": [
+      "小麦、水稻、豌豆可自花传粉"
+    ],
+    "retrieval_text": "自花传粉\n一朵花的花粉落到同一朵花柱头上的传粉现象。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt114",
+        "label": "Concept",
+        "name": "传粉",
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '自花传粉', 'definition': '一朵花的花粉落到同一朵花柱头上的传粉现象。', 'formula': '', 'importance': '了解'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:10778] 自花传粉 --is_a--> 传粉'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt115",
+      "label": "Concept",
+      "name": "自花传粉",
+      "properties": {
+        "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+        "importance": "了解",
+        "examples": [
+          "小麦、水稻、豌豆可自花传粉"
+        ],
+        "retrieval_text": "自花传粉\nConcept\n一朵花的花粉落到同一朵花柱头上的传粉现象。\n了解\n小麦、水稻、豌豆可自花传粉"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:10778",
+        "source": "biology_7a_rjb_cpt115",
+        "source_name": "自花传粉",
+        "target": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "自花传粉",
+        "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 241,
+      "summary_chars": 227,
+      "path_chars": 0,
+      "retrieval_context_chars": 468
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 241,
+    "summary_chars": 227,
+    "path_chars": 0,
+    "retrieval_context_chars": 468
+  }
+}

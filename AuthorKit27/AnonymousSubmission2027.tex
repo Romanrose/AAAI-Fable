@@ -1,0 +1,270 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\setcounter{secnumdepth}{0}
+
+\title{ConceptFableBench: A Dataset, Generation Pipeline, and Evaluation Benchmark for Graph-Grounded Educational Fables}
+
+\author{
+    Anonymous Submission
+}
+\affiliations{
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We introduce ConceptFableBench, a benchmark for converting curriculum concepts into short educational fables that hide the target terminology while preserving the underlying conceptual mechanism. The benchmark is built from 6,574 Concept nodes in a K--12 knowledge graph covering biology, chemistry, mathematics, and physics. Each instance contains a target concept, a cleaned concept card, a graph-retrieved conceptual context, a mechanism-oriented representation, a narrative plan, a generated fable, and an explicit alignment between conceptual mechanisms and narrative elements. The paper contributes three artifacts: a concept-to-fable dataset, a graph-grounded data generation method, and an evaluation benchmark combining six-dimensional pedagogical quality judgments with structural alignment metrics. The method follows the planning-oriented tradition of controllable story generation and plan-and-write systems, while adapting graph-constrained generation ideas to educational analogy. The experimental design compares direct prompting, card-only generation, graph retrieval variants, mechanism planning, analogy planning, and revision-based full generation under automatic, human, and stress-test evaluation protocols.
+\end{abstract}
+
+\section{Method}
+
+\subsection{Task Formulation}
+
+We study \emph{Mechanism-to-Narrative Analogy Generation} (M2NA), a graph-grounded version of educational fable generation. Given a target curriculum concept $c$, the system receives a concept definition $D_c$, a concept-centered graph context $G_c=(V_c,E_c)$, and a forbidden term set $T_c$ containing the concept name, aliases, and high-leakage terminology. The goal is to generate a short narrative $N$ and an alignment $A$ such that the story does not directly reveal terms in $T_c$, but its characters, objects, events, and causal chain preserve the conceptual mechanism encoded by $G_c$.
+
+This task differs from ordinary story generation in three ways. First, the output is not only a fluent narrative but also an instructional analogy. Second, success requires lexical concealment: the target concept should be inferable from structure rather than named in the text. Third, the output must be auditable through an explicit alignment between mechanism elements and narrative elements. We therefore define each example as
+\[
+x_c = \{c, D_c, G_c, T_c, P_c, N_c, A_c, E_c\},
+\]
+where $P_c$ is a narrative plan and $E_c$ is the evaluation record.
+
+\subsection{Benchmark Construction}
+
+The dataset is derived from a K--12 knowledge graph with 10,685 nodes and 23,278 edges. We focus on the 6,574 nodes labeled \texttt{Concept}; non-Concept nodes such as chapters, sections, exercises, skills, books, and experiments are retained only as retrieval context. The first release covers four subjects: chemistry, biology, mathematics, and physics. Table~\ref{tab:dataset_stats} summarizes the target node distribution.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lr}
+\toprule
+Subject & Concept Nodes \\
+\midrule
+Chemistry & 2,302 \\
+Biology & 1,648 \\
+Mathematics & 1,470 \\
+Physics & 1,154 \\
+\midrule
+Total & 6,574 \\
+\bottomrule
+\end{tabular}
+\caption{Concept nodes used in ConceptFableBench.}
+\label{tab:dataset_stats}
+\end{table}
+
+For each Concept node, we construct a \emph{concept card}. The card contains a stable concept identifier, subject, canonical name, definition, aliases, examples, teaching level, concept type, graph neighborhood summary, mechanism notes, misconceptions, subject-specific constraints, and forbidden terms. We classify examples into four priority levels: \emph{gold} examples have readable names, usable definitions, and rich graph context; \emph{silver} examples have usable text but weaker context; \emph{bronze} examples have short or mechanism-poor definitions; \emph{repair} examples contain missing or corrupted text and are withheld from the main experimental set unless enriched or manually reviewed.
+
+The benchmark is designed to support three use cases. First, it is a dataset of concept-to-fable instances for model development. Second, it is a data generation protocol for producing aligned educational fables at scale. Third, it is an evaluation benchmark for measuring conceptual faithfulness, concealment, alignment quality, pedagogical usefulness, and structural consistency.
+
+\subsection{Graph-Grounded Data Generation}
+
+The generation pipeline follows a staged plan-and-generate design inspired by prior controllable story generation and plan-and-write methods \citep{arxiv1808_10113,arxiv1811_05701}, but replaces free-form story planning with a graph-grounded mechanism planning step. The graph-conditioned design follows the broader direction of structure-aware generation \citep{arxiv2410_16803}, while the benchmark contribution is organized in the dataset-generation-evaluation style of recent synthetic fable benchmark work \citep{arxiv2504_20605}. Figure~\ref{fig:pipeline} gives the high-level workflow.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\small
+Concept Card $\rightarrow$ Dual-Level GraphRAG $\rightarrow$ Mechanism Plan $\rightarrow$ Analogy Plan $\rightarrow$ Fable Writer $\rightarrow$ Alignment Builder $\rightarrow$ Evaluation and Revision
+\end{minipage}}
+\caption{Overview of the ConceptFableBench data generation pipeline.}
+\label{fig:pipeline}
+\end{figure}
+
+\paragraph{Concept Selection and Cleaning.}
+We first normalize the K--12 graph and select nodes whose label is \texttt{Concept}. Text fields are cleaned without modifying raw graph files. Definitions, aliases, and examples are extracted from node properties when available. Nodes with missing or suspicious text are marked for enrichment; unrecoverable text is placed in a repair queue rather than silently treated as clean input.
+
+\paragraph{Dual-Level GraphRAG Retrieval.}
+For each target concept, a retriever collects local graph evidence while preserving node and edge identifiers. The retrieval package contains raw graph edges for traceability and a high-level topic summary for planning. The summary is organized around conditions, processes, effects, prerequisites, related concepts, hierarchy, exercises, and experiments. This follows the intuition that graph-constrained generation should expose both symbolic evidence and compact reasoning context.
+
+\paragraph{Mechanism Planning.}
+The mechanism planner converts the concept card and graph retrieval package into a mechanism-oriented representation. The plan records the core mechanism, necessary conditions, input-output relations, causal direction, likely misconceptions, and subject-specific constraints. For example, biology concepts emphasize life processes, environmental conditions, feedback, inheritance, and ecological relations; chemistry concepts emphasize particle rearrangement, conservation, reaction states, and macro-micro links; physics concepts emphasize variable relations, magnitude, direction, conservation, and boundary conditions; mathematics concepts emphasize definitions, operations, constraints, and premise-to-conclusion structure.
+
+\paragraph{Analogy Planning.}
+The analogy planner maps conceptual roles to a narrative source domain. Instead of asking a model to invent a story from scratch, the planner chooses a domain, entities, conflict, turning point, event chain, resolution state, and alignment plan. The source domains are subject-aware: biology may use gardens, workshops, ports, or theaters; chemistry may use ledgers, warehouses, exchanges, or foundries; physics may use waterways, traffic systems, scales, or fleets; mathematics may use rule games, maps, courts, puzzles, or ordered cities. This stage is intended to prevent purely decorative stories that have characters but no recoverable mechanism mapping.
+
+\paragraph{Fable Writing and Alignment.}
+The fable writer receives the concept card and structure plan and generates a Chinese fable. The narrative must not contain the target concept name or forbidden terms in the story body. It should express the mechanism through plot, conflict, and resolution rather than through textbook-style explanation. The system also records an alignment table connecting concept roles, mechanism elements, story elements, and textual evidence.
+
+\paragraph{Evaluation-Guided Revision.}
+Generated stories are evaluated immediately. Samples marked \texttt{revise} or \texttt{reject} can enter a revision loop. Leakage errors trigger story-body rewriting; low mapping clarity triggers analogy-plan repair; low faithfulness triggers mechanism-plan repair; low novelty triggers a new source domain; low readability triggers surface rewriting while preserving the alignment.
+
+\begin{algorithm}[t]
+\caption{Graph-Grounded Concept-to-Fable Generation}
+\label{alg:generation}
+\textbf{Input}: normalized graph $\mathcal{G}$, concept node $c$, language $\ell$\\
+\textbf{Output}: fable $N$, alignment $A$, evaluation record $E$
+\begin{algorithmic}[1]
+\STATE build concept card $C_c$ from $c$ and graph properties
+\STATE construct forbidden terms $T_c$ from names, aliases, and high-leakage terms
+\STATE retrieve graph package $R_c$ with dual-level GraphRAG
+\STATE infer mechanism plan $M_c$ from $(C_c, R_c)$
+\STATE construct analogy plan $P_c$ from $(C_c, M_c)$
+\STATE generate fable $N$ under lexical concealment constraints
+\STATE extract or generate alignment $A$ between $M_c$ and $N$
+\STATE evaluate $(C_c, R_c, M_c, P_c, N, A)$
+\IF{status is \texttt{revise} or \texttt{reject}}
+    \STATE repair the failed stage and regenerate $N$
+\ENDIF
+\STATE \textbf{return} $N, A, E$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Contribution as Dataset, Generator, and Benchmark}
+
+ConceptFableBench is intended to mirror recent benchmark-oriented work in which the contribution is not a single model but a full task resource: data, generation method, and evaluation protocol. The dataset contribution is the set of curriculum concept instances with graph context, concept cards, forbidden terms, generated fables, alignments, and evaluation records. The generation contribution is a reproducible pipeline that turns graph-grounded concept evidence into concealed educational narratives. The benchmark contribution is a suite of automatic, LLM-judge, structural, stress-test, and human evaluation protocols.
+
+This organization makes the resource useful even when the generator changes. Future systems can use the same concept cards and graph contexts, produce new fables and alignments, and evaluate them under the same benchmark metrics.
+
+\section{Experimental Design}
+
+\subsection{Research Questions}
+
+The experiments are designed to answer five questions:
+\begin{enumerate}
+\item Does graph-grounded mechanism planning improve conceptual faithfulness over direct prompting?
+\item Does explicit analogy planning improve mapping clarity and pedagogical usefulness?
+\item Can a system maintain high lexical concealment without sacrificing teaching value?
+\item Do structural M2NA metrics capture failures that six-dimensional story scoring misses?
+\item Does evaluation-guided revision increase the proportion of acceptable fables?
+\end{enumerate}
+
+\subsection{Evaluation Sets}
+
+We use three evaluation scales. The \emph{pilot set} contains 50 concepts per subject and is used for prompt debugging, failure taxonomy development, and metric calibration. The \emph{main evaluation set} contains 200 concepts per subject, for a total of 800 concepts, stratified by subject, priority level, and concept type. The \emph{full generation set} contains all 6,574 Concept nodes and is used for coverage, scalability, cost, and failure-rate analysis. Repair examples are excluded from the main set unless they are enriched and pass text-quality checks.
+
+\subsection{Systems and Ablations}
+
+We compare the full method against direct prompting and component ablations. All systems use the same generator model, language, decoding settings, and target story length unless otherwise specified.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+ID & System & Description \\
+\midrule
+B1 & Direct Prompt & Provide only the concept name and definition; ask the model to write a fable. \\
+B2 & Card Only & Use the cleaned concept card and forbidden terms, without graph retrieval. \\
+B3 & One-Hop GraphRAG & Use a one-hop concept subgraph without dual-level topic summaries. \\
+B4 & Dual-Level GraphRAG & Use dual-level retrieval, but no explicit mechanism planner. \\
+B5 & Mechanism Only & Use a mechanism plan, but no explicit analogy/source-domain planning. \\
+B6 & Full Graph-M2NA & Use concept card, dual-level GraphRAG, mechanism plan, analogy plan, alignment, and revision. \\
+B7 & Full w/o Forbidden Terms & Remove lexical concealment constraints from the full system. \\
+B8 & Full w/o Revision & Disable evaluation-guided rewriting. \\
+\bottomrule
+\end{tabular}
+\caption{Baselines and ablations for the main experiments.}
+\label{tab:baselines}
+\end{table*}
+
+The comparison is designed so that each component has a measurable target. Graph retrieval should improve node and edge coverage; mechanism planning should improve faithfulness and relation direction accuracy; analogy planning should improve mapping clarity and pedagogical usefulness; forbidden terms should reduce leakage; revision should improve accept rate.
+
+\subsection{Automatic Six-Dimensional Evaluation}
+
+Each generated fable is evaluated on six dimensions using a 1--5 Likert scale: faithfulness, implicitness, mapping clarity, readability, pedagogical value, and novelty. The weighted score is
+\[
+S = 0.25F + 0.15I + 0.20M + 0.10R + 0.20P + 0.10N,
+\]
+where $F$ is faithfulness, $I$ is implicitness, $M$ is mapping clarity, $R$ is readability, $P$ is pedagogical value, and $N$ is novelty.
+
+A story is accepted if faithfulness, implicitness, mapping clarity, and pedagogical value are at least 4, readability and novelty are at least 3, and no hard failure flag is present. A story is rejected if faithfulness or mapping clarity is at most 2, if the target concept is directly leaked, if the mechanism contradicts the concept, or if a core mechanism cannot be mapped to the story. Otherwise, it is marked for revision.
+
+We report per-dimension means, standard deviations, weighted scores, and \texttt{accept}/\texttt{revise}/\texttt{reject} ratios. When multiple LLM judges are used, scores are aggregated by median per dimension and hard flags are aggregated by majority vote.
+
+\subsection{Structural M2NA Metrics}
+
+Six-dimensional scoring captures human-facing story quality, but it is insufficient for verifying mechanism preservation. We therefore add structural metrics over the generated alignment:
+\begin{itemize}
+\item \textbf{Exact concept leakage}: whether the story body contains the concept name or aliases.
+\item \textbf{Soft term leakage}: whether the story contains high-leakage terminology.
+\item \textbf{Node coverage}: the proportion of mechanism nodes aligned to story evidence.
+\item \textbf{Edge coverage}: the proportion of mechanism edges aligned to story evidence.
+\item \textbf{Alignment precision}: the proportion of alignments with valid IDs and evidence that appears in the narrative.
+\item \textbf{Hallucination rate}: the proportion of alignments with invalid IDs or unsupported evidence.
+\item \textbf{Direction accuracy}: whether narrative source and target roles preserve the direction of conceptual relations.
+\item \textbf{Template hit rate}: the rate of common formulaic story patterns.
+\end{itemize}
+
+These metrics allow the benchmark to distinguish a fluent story from a structurally faithful analogy.
+
+\subsection{Human Evaluation}
+
+Human evaluation is conducted on a stratified subset of the main evaluation set. We recommend 40 concepts per subject, with three systems per concept: direct prompting, one-hop GraphRAG, and full Graph-M2NA. Each story is rated by at least three annotators.
+
+The protocol has two stages. In the first stage, annotators see only the fable body and rate implicitness, readability, and novelty. In the second stage, annotators see the target concept, definition, mechanism graph, and alignment table, then rate faithfulness, mapping clarity, and pedagogical usefulness. We also include two lightweight learning questions: (1) what mechanism does the story seem to describe, and (2) which story elements correspond to which conceptual elements after the concept is revealed?
+
+We report mean human scores, inter-annotator agreement, concept-guessing accuracy, alignment-recovery accuracy, and Spearman correlation between human scores and automatic judge scores.
+
+\subsection{Stress Tests}
+
+To test whether the evaluation benchmark detects known failures, we construct adversarial variants of clean examples. A \emph{surface distractor} preserves topical similarity but removes structural mapping. A \emph{relation corruption} reverses a mechanism edge while keeping surface evidence. A \emph{mechanism omission} removes a key mechanism node and its associated relation evidence. We report detection rates for each stress type and the false-positive rate on clean samples.
+
+\subsection{Main Results to Report}
+
+The main table compares all systems on six-dimensional quality, structural metrics, and accept rate:
+\[
+\text{Method} \rightarrow \{\text{six scores}, S, \text{Accept\%}, \text{Leakage\%}, \text{Coverage}, \text{Direction Accuracy}\}.
+\]
+We additionally report subject-level performance for biology, chemistry, mathematics, and physics. We expect biology and physics to benefit strongly from mechanism planning, chemistry to reveal errors in conservation and macro-micro mapping, and mathematics to stress-test whether narratives preserve formal constraints rather than only moral themes.
+
+\subsection{Full-Scale Generation Study}
+
+After the main comparison, the full method is run on all 6,574 Concept nodes. The purpose of this study is not to manually judge every story, but to measure dataset-scale feasibility. We report generation success rate, evaluation success rate, average weighted score, accept/revise/reject ratio, hard leakage rate, alignment failure rate, average token cost, and average latency. This full-scale run forms the first release of ConceptFableBench.
+
+\subsection{Case Studies and Failure Analysis}
+
+The paper should include three qualitative cases: a successful fable with clear mechanism preservation, a fluent but structurally weak fable, and a revised fable whose score improves after leakage removal or mapping repair. Failure categories include direct concept leakage, soft-term leakage, reversed causality, missing mechanism, unsupported mapping evidence, template story, misleading pedagogical analogy, and subject-specific misconception.
+
+\subsection{Statistical Testing}
+
+For paired method comparisons, each concept is treated as a unit. We use paired bootstrap resampling or Wilcoxon signed-rank tests to compare the full method against baselines on weighted score, mapping clarity, pedagogical usefulness, node coverage, and edge coverage. We report significance markers and effect sizes where space permits.
+
+\subsection{Limitations and Ethics}
+
+The benchmark currently focuses on Chinese fables generated from K--12 Concept nodes. Non-Concept nodes are used as graph context but are not story-generation targets. Some concepts are definitional or highly formal, especially in mathematics, and may require shorter or more conservative narrative forms. Automatic LLM-as-judge evaluation must be calibrated against human annotations and should not be treated as a replacement for expert review.
+
+The system is intended to assist educational content creation, not to replace teachers or textbooks. Generated stories may simplify or distort scientific concepts, so accepted outputs should still be reviewed before classroom use. The benchmark explicitly tracks leakage, misconception, and misleading analogy risks to reduce the chance of presenting fluent but conceptually incorrect narratives as learning material.
+
+\begin{thebibliography}{99}
+
+\bibitem[arXiv(2024)]{arxiv2410_16803}
+arXiv. 2024.
+\newblock arXiv:2410.16803.
+\newblock \url{https://arxiv.org/abs/2410.16803}.
+
+\bibitem[arXiv(2018a)]{arxiv1808_10113}
+arXiv. 2018a.
+\newblock arXiv:1808.10113.
+\newblock \url{https://arxiv.org/abs/1808.10113}.
+
+\bibitem[arXiv(2018b)]{arxiv1811_05701}
+arXiv. 2018b.
+\newblock arXiv:1811.05701.
+\newblock \url{https://arxiv.org/abs/1811.05701}.
+
+\bibitem[arXiv(2025)]{arxiv2504_20605}
+arXiv. 2025.
+\newblock arXiv:2504.20605.
+\newblock \url{https://arxiv.org/abs/2504.20605}.
+
+\end{thebibliography}
+
+\end{document}

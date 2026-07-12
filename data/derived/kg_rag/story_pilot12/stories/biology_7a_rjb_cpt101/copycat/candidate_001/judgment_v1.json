@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story fails to map the mechanism nodes and edges to distinct story carriers. Node n2 (external conditions) and n3 (internal conditions) are both mapped to the same story carrier '港口检疫站中的入口条件核对' and '港口检疫站中的结果验收记录' respectively, but the story does not differentiate between external and internal conditions. Edge e1 and e2 are both mapped to the same story relation '主角把两份相关记录放在一起比较，发现它们共同约束最后判断', which conflates the two distinct enabling relations. This makes the mapping observably worse than a realization where each node and edge has a unique, distinguishable carrier and relation."
+  },
+  "revision_instructions": [
+    "Assign distinct story carriers for n2 (external conditions) and n3 (internal conditions). For example, n2 could be '入口条件牌上的环境要求' and n3 could be '货物自身的检疫状态记录'.",
+    "Differentiate the two edge mappings: e1 (external conditions enable germination) should be shown as '主角先确认外部条件牌，再启动转化环节', while e2 (internal conditions enable germination) should be shown as '主角检查货物自身状态记录，再决定是否允许转化'.",
+    "Ensure that the story explicitly shows the enabling relation (condition → process) for each edge, not just a generic comparison of records.",
+    "Remove the conflation of the two edges into a single story relation; each must have its own distinct narrative action."
+  ],
+  "final_status": "reject"
+}

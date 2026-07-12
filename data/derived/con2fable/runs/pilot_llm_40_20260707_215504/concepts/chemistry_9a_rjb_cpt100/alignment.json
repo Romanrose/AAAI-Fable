@@ -1,0 +1,72 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "铁生锈的过程",
+      "evidence": "这种变化不像工地上焊枪烧铁那样火花四溅、热浪逼人，它安静得很，安静到让人容易忘记它的存在",
+      "narrative_anchor": "这种变化不像工地上焊枪烧铁那样火花四溅、热浪逼人，它安静得很，安静到让人容易忘记它的存在"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "铁与潮湿空气的反应",
+      "evidence": "那些看不见的水汽像无数只细小的手，日日夜夜地抓着钢梁的表面。钢梁本身是结实的，可一旦遇上潮湿的空气，就会慢慢起变化",
+      "narrative_anchor": "一旦遇上潮湿的空气，就会慢慢起变化"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "呼吸与氧气的关系（通过铁生锈类比）",
+      "evidence": "铁生锈，是几年、十几年的事。可说到底，都是铁在和什么东西起反应",
+      "narrative_anchor": "都是铁在和什么东西起反应"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "铁生锈属于氧化反应",
+      "evidence": "都是铁在和什么东西起反应",
+      "narrative_anchor": "都是铁在和什么东西起反应"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "与燃烧的对比",
+      "evidence": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事",
+      "narrative_anchor": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "铁生锈的过程依赖于铁与潮湿空气的反应",
+      "evidence": "那些看不见的水汽像无数只细小的手，日日夜夜地抓着钢梁的表面。钢梁本身是结实的，可一旦遇上潮湿的空气，就会慢慢起变化",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "一旦遇上潮湿的空气，就会慢慢起变化"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "铁与潮湿空气的反应引出与呼吸（氧气）的类比",
+      "evidence": "都是铁在和什么东西起反应",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "都是铁在和什么东西起反应"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "呼吸（氧气）类比引出氧化反应概念",
+      "evidence": "都是铁在和什么东西起反应",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "都是铁在和什么东西起反应"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "氧化反应与燃烧的对比",
+      "evidence": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "焊枪烧铁，是眨眼间的事；铁生锈，是几年、十几年的事"
+    }
+  ]
+}

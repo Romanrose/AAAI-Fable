@@ -1,0 +1,157 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子萌发的环境条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "种子萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt101:definition",
+          "kg-node:biology_7a_rjb_cpt101:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "适宜的温度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition",
+          "kg-node:biology_7a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "一定的水分",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "充足的空气（氧气）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "evidence",
+        "text": "探究种子萌发的环境条件（四瓶对照实验）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp9:conclusion",
+          "kg-node:biology_7a_rjb_exp9:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14133"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10773"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10774"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10775"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22413"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "种子萌发的环境条件"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "92b6c84c6a22a78c130aa21a9834212ace89e0d5c93649007da46ba6994b5a3b",
+    "retrieval_sha256": "062b880eca71af1496ddfad47a1be60ae46e79f14b8121920981f9680b53226a",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "f15022543b0b9c57e8d8270c6f596219528798a515b76ce319c1554ea2ba283c"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

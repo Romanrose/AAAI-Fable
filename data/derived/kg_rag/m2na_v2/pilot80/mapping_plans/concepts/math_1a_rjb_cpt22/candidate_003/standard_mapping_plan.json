@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt22",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫分粮",
+  "characters": [
+    "农夫",
+    "大儿子",
+    "二儿子"
+  ],
+  "objects": [
+    "6袋米",
+    "7袋米",
+    "粮仓",
+    "分粮记录"
+  ],
+  "conflict": "农夫需要将6袋米和7袋米分别分给两个儿子，但两个儿子都想得到更多，农夫必须找出所有公平的分法。",
+  "event_chain": [
+    "农夫认识粮仓里有多少袋米（6袋和7袋），并会数数和比较大小。",
+    "农夫用摆米袋和画图的方式，理解6袋米和7袋米的数量。",
+    "农夫把6袋米分成两部分，找出所有不同的分法（如1和5、2和4、3和3等）。",
+    "农夫把7袋米分成两部分，找出所有不同的分法（如1和6、2和5、3和4等）。",
+    "大儿子根据分法，将两部分米合并，得到6或7的加法算式（如1+5=6）。",
+    "二儿子根据分法，从总数中去掉一部分，得到6或7的减法算式（如6-1=5）。"
+  ],
+  "turning_point": "农夫发现分法记录可以同时用于加法和减法，两个儿子都满意了。",
+  "resolution_state": "农夫成功将6袋米和7袋米公平分给两个儿子，并教会他们加法和减法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫认识粮仓里有多少袋米（6袋和7袋），并会数数和比较大小。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫用摆米袋和画图的方式，理解6袋米和7袋米的数量。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫把6袋米和7袋米分别分成两部分，找出所有不同的分法。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "大儿子根据分法，将两部分米合并，得到6或7的加法算式。",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "二儿子根据分法，从总数中去掉一部分，得到6或7的减法算式。",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识米袋数量后，开始分粮。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫用摆画理解数量后，开始分粮。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "分粮完成后，大儿子进行合并加法。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "分粮完成后，二儿子进行减法。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'分拆数6和7'等禁止术语。",
+    "确保所有机制节点和边都被映射。",
+    "确保故事连贯，不引入无关隐喻。"
+  ],
+  "mapping_context_sha256": "a02f4725aead900495b6a480264624d2cdefafe80032478d3737c2db640bddca",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "32f748606a8afadc19e58f205942aa8b42925eef8544500908ecc69173770052"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "concept_id": "biology_7a_rjb_cpt108",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "canonical_name": "种子萌发的过程",
+  "definition": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。"
+  ],
+  "must_preserve_zh": [
+    "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "种子萌发的过程"
+  ],
+  "subject_constraints_zh": [
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。",
+    "保留生命系统的条件、过程和结果。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "low",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

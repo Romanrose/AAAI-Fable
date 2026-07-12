@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "每采一朵就数一朵",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "她先把左边篮子的蘑菇一朵一朵拿出来，每拿一朵就在心里记一个数，数完左边篮子，她又数右边篮子。数完后，她皱起眉头：“左边比右边多几朵呢？”",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "她蹲下来，把左边的一朵蘑菇和右边的一朵蘑菇放在一起，左边第二朵和右边第二朵放在一起。她就这样一朵对一朵地配对。配到最后，左边篮子剩下三朵蘑菇，右边篮子的蘑菇全配完了。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "她先把左边篮子的蘑菇一朵一朵拿出来，每拿一朵就在心里记一个数，数完左边篮子，她又数右边篮子。数完后，她皱起眉头：“左边比右边多几朵呢？”",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "她先把左边篮子的蘑菇一朵一朵拿出来，每拿一朵就在心里记一个数，数完左边篮子，她又数右边篮子。数完后，她皱起眉头：“左边比右边多几朵呢？”",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All three mechanism nodes and both edges are directly supported by the story. Node n1 (counting) is evidenced by '每采一朵就数一朵'. Node n2 (comparison) is evidenced by the counting and questioning of which basket has more. Node n3 (pairwise comparison) is evidenced by the explicit one-to-one pairing of mushrooms. Edge e1 (relates_to from counting to comparison) is supported because the story shows counting leading to comparison. Edge e2 (enables from counting to pairwise comparison) is supported because counting provides the prerequisite knowledge for the pairing activity. No nodes or edges are missing."
+}

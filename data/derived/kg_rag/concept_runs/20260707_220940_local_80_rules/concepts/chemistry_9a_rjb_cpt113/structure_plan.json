@@ -1,0 +1,303 @@
+{
+  "found": true,
+  "query": "chemistry_9a_rjb_cpt113",
+  "concept_id": "chemistry_9a_rjb_cpt113",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt113",
+    "label": "Concept",
+    "name": "催化剂的工业应用",
+    "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+    "aliases": [],
+    "examples": [
+      "生产化肥、农药、多种化工原料都要使用催化剂",
+      "石油炼制过程中用高效催化剂生产汽油、煤油等",
+      "汽车尾气处理中用催化剂促进有害气体的转化",
+      "酿造工业和制药工业中用酶作催化剂"
+    ],
+    "retrieval_text": "催化剂的工业应用\n催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "chemistry_9a_rjb_cpt113",
+      "label": "Concept",
+      "name": "催化剂的工业应用",
+      "properties": {
+        "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+        "importance": "了解",
+        "examples": [
+          "生产化肥、农药、多种化工原料都要使用催化剂",
+          "石油炼制过程中用高效催化剂生产汽油、煤油等",
+          "汽车尾气处理中用催化剂促进有害气体的转化",
+          "酿造工业和制药工业中用酶作催化剂"
+        ],
+        "retrieval_text": "催化剂的工业应用\nConcept\n催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。\n了解\n生产化肥、农药、多种化工原料都要使用催化剂\n石油炼制过程中用高效催化剂生产汽油、煤油等\n汽车尾气处理中用催化剂促进有害气体的转化\n酿造工业和制药工业中用酶作催化剂"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:15001",
+        "source": "chemistry_9a_rjb_cpt111",
+        "source_name": "催化作用",
+        "target": "chemistry_9a_rjb_cpt113",
+        "target_name": "催化剂的工业应用",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "催化剂的工业应用",
+        "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [
+        "[normalized:edge:15001] 催化作用 --prerequisites_for--> 催化剂的工业应用"
+      ],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 278,
+      "summary_chars": 267,
+      "path_chars": 0,
+      "retrieval_context_chars": 545
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "催化剂的工业应用的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "催化作用 --prerequisites_for--> 催化剂的工业应用",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:15001"
+        ]
+      },
+      {
+        "step_id": "s2",
+        "text": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+        "kind": "effect",
+        "supporting_edge_ids": []
+      },
+      {
+        "step_id": "s3",
+        "text": "区分化学反应和物理混合。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      },
+      {
+        "step_id": "s4",
+        "text": "保留守恒关系和反应前后变化。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s2",
+        "target_step_id": "s3",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s3",
+        "target_step_id": "s4",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [
+      "normalized:edge:15001"
+    ],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "催化剂的工业应用",
+      "chemistry_9a_rjb_cpt113"
+    ],
+    "coverage_targets": {
+      "required_step_count": 4,
+      "required_dependency_count": 3,
+      "must_cover_edge_ids": [
+        "normalized:edge:15001"
+      ],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt113",
+    "concept_id": "chemistry_9a_rjb_cpt113",
+    "story_language": "zh-CN",
+    "source_domain": "材料试炼间",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "先确认一个起点条件是否具备：催化作用 --prerequisites_for--> 这条隐藏规则",
+      "再观察这个变化会留下什么结果：催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+      "让中间的行动承接前后变化：区分化学反应和物理混合。",
+      "让中间的行动承接前后变化：保留守恒关系和反应前后变化。"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：催化作用 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "effect",
+        "story_event": "再观察这个变化会留下什么结果：催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：区分化学反应和物理混合。"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：保留守恒关系和反应前后变化。"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "催化剂的工业应用"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "催化作用 --prerequisites_for--> 催化剂的工业应用",
+          "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "材料试炼间",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "先确认一个起点条件是否具备：催化作用 --prerequisites_for--> 这条隐藏规则",
+    "再观察这个变化会留下什么结果：催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+    "让中间的行动承接前后变化：区分化学反应和物理混合。",
+    "让中间的行动承接前后变化：保留守恒关系和反应前后变化。"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "催化剂的工业应用"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "催化作用 --prerequisites_for--> 催化剂的工业应用",
+        "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+        "区分化学反应和物理混合。",
+        "保留守恒关系和反应前后变化。"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "区分化学反应和物理混合。",
+        "保留守恒关系和反应前后变化。",
+        "避免化学式或元素符号在故事正文中泄露。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：催化作用 --prerequisites_for--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "effect",
+      "story_event": "再观察这个变化会留下什么结果：催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：区分化学反应和物理混合。"
+    },
+    {
+      "mechanism_step_id": "s4",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：保留守恒关系和反应前后变化。"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

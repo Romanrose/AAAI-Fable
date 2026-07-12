@@ -1,0 +1,67 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt12",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "认识并能数出1到5的数量，理解数字与数量的一一对应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt7:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "从一个数量中去掉一部分",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt12:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16376"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "减法的含义"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "04b87242bd97992f962f1c0fb71981dae19ff28730355a0bec069929490ddc20",
+    "retrieval_sha256": "b6f2ff6d0d6944e7ee97e12feb9eab7e97e3c001a14473ba986dffa980706df8",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "bf16c9411188c9ac0fdfbc86f9191a3b28ae692a545e858e14e592df1f6de31d"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

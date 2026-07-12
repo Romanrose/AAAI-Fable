@@ -1,87 +1,47 @@
-# kg_rag
+# `kg_rag`：Concept2Fable 实验包
 
-Minimal Python scaffold for GraphRAG work in `AAAI-Fable`.
+`kg_rag` 是 Concept2Fable（M2NA）的 Python 实验包。当前正式实验围绕“知识图谱 → 可审核机制图 → 结构映射 → 寓言 → 统一评估”展开。
 
-This package intentionally stays lightweight, but now includes the first K12
-Concept-to-Fable agentic workflow.
+## 当前入口
 
-Current scope:
+| 模块 | 用途 | 默认产物 |
+|---|---|---|
+| `kg_rag.m2na_v2` | Core80 的种子、检索、机制、审核、Standard/Copycat 映射和正式双策略运行 | `data/derived/kg_rag/m2na_v2/pilot80/` |
+| `kg_rag.story_pilot` | Pilot12 的三策略故事比较与人工审核 | `data/derived/kg_rag/story_pilot12/` |
+| `kg_rag.aaai_eval` | 冻结数据集、实验协议、统一记录和论文结果表 | `data/derived/kg_rag/aaai_eval/` |
+| `kg_rag.experiment_hub` | 本地审核与图谱可视化工作台 | 浏览器端口 `8769` |
 
-- define a Python project entrypoint
-- centralize dataset and output paths
-- provide a CLI health check
-- normalize K12-KGraph into one enriched offline artifact
-- provide Neo4j loading and subgraph query entrypoints
-- provide dual-level GraphRAG retrieval for K12 concept cards
-- run staged Concept-to-Fable generation with traceable intermediate artifacts
+共享实现包括：`copycat/`（确定性映射）、`llm_guided_copycat/`（第三种映射策略）、`multi_agent/`（生成与审核）、`ingest/`（图谱规范化）、`retrievers/`（检索）和 `evaluation/`（当前多智能体仍使用的 rubric）。
 
-Workflow shape:
-
-```text
-Concept Card
--> Retrieval Agent
--> Mechanism Planner Agent
--> Analogy Planner Agent
--> Fable Writer Agent
--> Critic / Evaluator Agent
--> Revision Agent
--> Report Builder
-```
-
-The default GraphRAG mode for `run-concept-fable-batch` is `dual_level`. It
-keeps raw KG edges for grounding and builds a high-level topic summary for
-condition / process / effect planning. `selected_paths` is retained as an empty
-compatibility field.
-
-The experimental M2NA pipeline has a separate entrypoint. It supports a
-standard LLM-planned strategy and a deterministic Copycat-inspired structure
-mapping strategy:
+## 常用命令
 
 ```bash
-python -m kg_rag.multi_agent run-batch \
-  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
-  --normalized-graph data/derived/kg_rag/k12_kgraph_normalized.json \
-  --strategy copycat \
-  --subjects biology,chemistry,math,physics \
-  --limit-per-subject 5 \
-  --copycat-steps 30 \
-  --copycat-temperature-threshold 35 \
-  --revision-rounds 2 \
-  --six-dim-mode llm \
-  --judge-model deepseek-chat \
-  --output-dir data/derived/kg_rag/multi_agent_runs/example
+# 查看 M2NA V2 准备状态
+python -m kg_rag.m2na_v2 status
+
+# 运行或恢复 12 概念三策略 Pilot
+python -m kg_rag.story_pilot prepare-guided-mappings --model deepseek-chat
+python -m kg_rag.story_pilot run-initial --generator-model deepseek-chat --judge-model deepseek-chat --workers 4
+
+# 生成统一结果表
+python -m kg_rag.aaai_eval report \
+  --protocol data/derived/kg_rag/aaai_eval/story_pilot12/protocol.json
+
+# 启动审核工作台
+python -m kg_rag.experiment_hub
 ```
 
-Every run records input hashes, generator/judge model identities, fallback
-counts, candidate artifacts, revision rounds, and final reports. Missing or
-invalid alignments remain uncovered; the evaluator never invents evidence for
-an absent node or edge. External KG relations are stored in
-`concept_relation_graph.json` and are not attached by position to internal
-mechanism-step edges.
+完整阶段命令见各模块 README：
 
-Current commands:
+- [Concept2Fable V2](m2na_v2/README.md)
+- [Story Pilot](story_pilot/README.md)
+- [AAAI Evaluation](aaai_eval/README.md)
+- [Experiment Hub](experiment_hub/README.md)
 
-```bash
-kg-rag doctor
-kg-rag normalize-k12
-kg-rag load-neo4j
-kg-rag query-subgraph "光合作用" --preview-only
-kg-rag query-subgraph "光合作用" --preview-only --pack-output-path data/derived/kg_rag/photosynthesis_pack.json
-kg-rag build-prompt --pack-path data/derived/kg_rag/photosynthesis_pack.json --mode mapping
-kg-rag build-structure-plan --pack-path data/derived/kg_rag/photosynthesis_pack.json --output-path data/derived/kg_rag/photosynthesis_plan.json
-kg-rag build-story-prompt --plan-path data/derived/kg_rag/photosynthesis_plan.json --output-path data/derived/kg_rag/photosynthesis_story_prompt.txt
-kg-rag build-review-prompt --plan-path data/derived/kg_rag/photosynthesis_plan.json --draft-path kg_rag/examples/sample_draft.txt
-kg-rag review-checklist --plan-path data/derived/kg_rag/photosynthesis_plan.json --draft-path kg_rag/examples/sample_draft.txt
-kg-rag run-local-demo "photosynthesis" --output-dir data/derived/kg_rag/demo_photosynthesis
-kg-rag run-llm-demo "photosynthesis" --output-dir data/derived/kg_rag/llm_demo_photosynthesis
-kg-rag run-batch-stories --mode local --limit 10 --output-dir data/derived/kg_rag/batch_runs/local_10
-kg-rag run-batch-stories --mode llm --subject biology --limit 50 --sleep-seconds 1 --retry 2 --output-dir data/derived/kg_rag/batch_runs/biology_llm_50
-kg-rag run-concept-fable-batch \
-  --concept-cards data/derived/kg_rag/concept_cards/k12_concept_cards.enriched.jsonl \
-  --normalized-graph-path data/derived/kg_rag/k12_kgraph_normalized.json \
-  --workflow agentic \
-  --retrieval-mode dual_level \
-  --mode local \
-  --limit 1 \
-  --output-dir data/derived/kg_rag/concept_runs/smoke_dual_level
-```
+## 数据和跨设备同步
+
+原始图谱位于 `data/K12-KGraph/`；规范化图谱、审核记录、映射计划、生成故事和评估报告位于 `data/derived/`。这些内容应与代码一起提交，保证另一台设备可直接查看和继续实验。真实 API 密钥仅存在根 `.env`，不得提交。
+
+## 历史兼容层
+
+`concepts/` 中除 `jsonl.py` 外的 Concept Card 逻辑、`pipeline/`、`generation/`、`prompts/` 和 `structure_mapping/` 主要支持历史 Concept-to-Fable 流程或回归测试。根 `python -m kg_rag` CLI 也保留了相应兼容命令；它们不属于当前正式实验入口。

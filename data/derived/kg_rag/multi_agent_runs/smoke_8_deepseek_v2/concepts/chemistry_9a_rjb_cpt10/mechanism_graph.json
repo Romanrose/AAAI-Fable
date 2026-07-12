@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n2",
+      "text": "需要先满足或理解：大气压强",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n3",
+      "text": "需要先满足或理解：条件对物质性质的影响",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n4",
+      "text": "需要先满足或理解：氧气的熔点和沸点",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n5",
+      "text": "需要先满足或理解：水的熔点和沸点",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n6",
+      "text": "需要先满足或理解：铁的熔点和沸点",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:14999"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:15075"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:14995"
+    },
+    {
+      "id": "e4",
+      "source": "n4",
+      "target": "n5",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:14992"
+    },
+    {
+      "id": "e5",
+      "source": "n5",
+      "target": "n6",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:14993"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:14999",
+    "normalized:edge:15075",
+    "normalized:edge:14995",
+    "normalized:edge:14992",
+    "normalized:edge:14993",
+    "normalized:edge:14994",
+    "normalized:edge:18222"
+  ]
+}

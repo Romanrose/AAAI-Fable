@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt23",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农夫与六只小鸡",
+  "characters": [
+    "农夫",
+    "小鸡们"
+  ],
+  "objects": [
+    "鸡舍",
+    "六只小鸡",
+    "食槽",
+    "栅栏"
+  ],
+  "conflict": "农夫需要教会小鸡们认识‘六’这个数量，以便它们能正确分食和计数，但小鸡们最初只会乱跑乱叫，无法理解数量的概念。",
+  "event_chain": [
+    "农夫按顺序一只一只地数小鸡，让它们排队进入鸡舍（对应n1）。",
+    "通过反复数小鸡、在食槽前摆放六粒米、教小鸡读写‘六’的符号，小鸡们逐渐理解‘六’代表六只小鸡的数量（对应n3）。",
+    "小鸡们认识了数字6（对应n2）。",
+    "小鸡们掌握了所有得数是6或从6中减去的加减法，比如6只小鸡一起吃饭，或2只离开后剩4只（对应n4）。",
+    "农夫用栅栏比较两边小鸡的数量，用符号表示大小，比如左边3只右边3只，或左边4只右边2只（对应n5）。"
+  ],
+  "turning_point": "当小鸡们通过数数和读写，真正理解‘六’代表它们全体时，它们开始能进行简单的加减和比较。",
+  "resolution_state": "小鸡们不仅认识了数字6，还能进行6以内的加减和数量比较，农夫满意地笑了。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫按顺序一只一只地数小鸡，让它们排队进入鸡舍",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小鸡们认识了数字6（即‘六’这个符号和它所代表的数量）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "通过数小鸡、摆米粒、读写‘六’的方式，小鸡们理解‘六’表示六只小鸡的数量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "小鸡们掌握了所有得数是6或从6中减去的加减法，如6只一起吃饭，或2只离开后剩4只",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "农夫用栅栏比较两边小鸡的数量，用符号表示大小，比如左边3只右边3只，或左边4只右边2只",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "按顺序数小鸡（n1）使小鸡们能够通过数物体等方式认识数字6（n3）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "通过数物体、读写等方式认识数字6（n3）产生了数字6这个认识（n2）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "通过数物体、读写等方式认识数字6（n3）使小鸡们掌握了6的加减法（n4）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "数量比较的规则（n5）与数字6（n2）相关联，因为比较时涉及6的数量",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未直接使用‘数字6的认识’等禁止术语。",
+    "所有机制节点和边均已映射，方向保持。",
+    "未将课程桥接上下文（如‘数数方法’、‘6的加减法’等）作为因果机制处理，仅作为故事中的自然事件。",
+    "故事载体统一在‘农夫与六只小鸡’的源域中，未引入无关隐喻。"
+  ],
+  "mapping_context_sha256": "34cf1d147f6fb26fe4fb75130601eba75a5b5f700b2a1dfa918432ed703799c8",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3b1698f34139e9078186bc43ee714919fcefc5be85146fd1492cadb8dba9b7a2"
+  }
+}

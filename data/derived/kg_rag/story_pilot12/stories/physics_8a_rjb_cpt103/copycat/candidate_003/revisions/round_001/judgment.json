@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "Node n2 (实像) is mapped to '第2道转化环节' but the story never explains that this step is a category or generalization of the imaging process (照相机成像). The edge e2 (is_a) is not realized; the story only mentions sequential steps without the hierarchical relation. In contrast, node n1 (凸透镜) is clearly mapped to '入口条件核对' and its enabling role (e1) is explicitly stated as '根基' that makes subsequent steps possible. This makes n1 the strongest and e2 the weakest."
+  },
+  "revision_instructions": [
+    "Explicitly show that the second step (第2道转化环节) is a broader category that includes the third step (第3道转化环节), e.g., by having the record员 say '这个现象属于实像这一类' or similar.",
+    "For edges e3, e4, e5, the story uses generic phrases like '共同约束最后判断' which do not preserve the specific relations (enables, produces). Replace with distinct actions: e.g., for e3 (物体远离凸透镜 enables 照相机成像), show that skipping the fourth step (第4道转化环节) prevents the third step from working; for e4 (照相机成像 produces 缩小倒立的实像), show that the fifth step (第5道转化环节) is the direct result of the third; for e5 (调节像距 enables 照相机成像), show that the final verification (结果验收记录) adjusts the process to get a clear image.",
+    "Ensure that the story length stays within 450-750 Chinese characters (currently 733, acceptable but close to upper bound)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "淘金者分离金沙",
+  "characters": [
+    "淘金者",
+    "助手"
+  ],
+  "objects": [
+    "含金沙的矿石",
+    "水",
+    "筛子",
+    "金粒",
+    "沙粒"
+  ],
+  "conflict": "淘金者需要从含金沙的矿石中分离出金粒，但沙粒和金粒混合在一起，难以直接获取金粒。",
+  "event_chain": [
+    "淘金者将含金沙的矿石放入水中，并用力搅拌，使矿石变成泥浆状。",
+    "淘金者利用沙粒和金粒的密度不同，将泥浆倒入筛子中，并用水冲洗。",
+    "密度较小的沙粒随水流走，密度较大的金粒留在筛子上。",
+    "淘金者收集筛子上的金粒，获得纯净的金子。"
+  ],
+  "turning_point": "淘金者利用密度差异，通过水洗筛分，成功将沙粒和金粒分离。",
+  "resolution_state": "淘金者获得了纯净的金粒，实现了从矿石中提取金子的目标。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "淘金者将含金沙的矿石放入水中并搅拌成泥浆",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "沙粒和金粒的密度不同",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用水冲洗筛子，使沙粒随水流走",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "获得纯净的金粒",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "淘金者分离金沙的方法",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "从矿石中提取金子的方法",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "淘金者将矿石制成泥浆，使得后续水洗筛分成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "沙粒和金粒的密度差异，使得水洗筛分能够分离它们",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "水洗筛分过程产生了金粒的收集结果",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "淘金者分离金沙的方法是从矿石中提取金子的一种具体方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "沙粒和金粒的密度差异是淘金者分离金沙方法能够成立的前提条件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'液态空气'、'分馏'、'制氧'、'氮气'、'氧气'、'沸点'等目标概念术语。",
+    "确保'密度不同'对应'沸点不同'，'水洗筛分'对应'升温蒸出'，'泥浆'对应'液态空气'，'金粒'对应'氧气'，'沙粒'对应'氮气'。",
+    "确保所有机制节点和边都被映射，且边方向正确。",
+    "避免使用'工业制取氧气的方法'等目标概念别名。"
+  ],
+  "mapping_context_sha256": "d423cf49f24edc59e0303fecccb6c63d78f86f7afcd187503fbcbe2d9de10410",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "fbaef0002391e9b1b23ade1d12f33ce9afe30465910ad2c317963931f483d035"
+  }
+}

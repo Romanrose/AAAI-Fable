@@ -1,0 +1,15 @@
+{
+  "concept_cards_path": "data\\derived\\kg_rag\\concept_cards\\k12_concept_cards.enriched.jsonl",
+  "output_dir": "data\\derived\\kg_rag\\concept_runs\\biology_zh_gold_5_llm",
+  "mode": "llm",
+  "language": "zh-CN",
+  "subject": "biology",
+  "priority": "gold",
+  "limit": 5,
+  "offset": 0,
+  "batch_size": 100,
+  "retry": 2,
+  "resume": false,
+  "evaluate_mode": "llm",
+  "concept_count": 5
+}

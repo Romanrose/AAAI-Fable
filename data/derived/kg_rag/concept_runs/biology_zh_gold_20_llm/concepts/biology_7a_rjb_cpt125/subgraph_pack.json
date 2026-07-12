@@ -1,0 +1,47 @@
+{
+  "query": "biology_7a_rjb_cpt125",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt125",
+    "label": "Concept",
+    "name": "叶片的结构（表皮、叶肉、叶脉）",
+    "definition": "叶片由表皮、叶肉与叶脉三部分组成；上下表皮为排列紧密的一层细胞；表皮上分布有气孔。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "叶片的结构（表皮、叶肉、叶脉）\n叶片由表皮、叶肉与叶脉三部分组成；上下表皮为排列紧密的一层细胞；表皮上分布有气孔。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt124",
+        "label": "Concept",
+        "name": "蒸腾作用",
+        "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp13",
+        "label": "Experiment",
+        "name": "观察叶片的结构（徒手切片与下表皮装片）",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s3",
+        "label": "Section",
+        "name": "第三章 绿色植物与生物圈的水循环",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

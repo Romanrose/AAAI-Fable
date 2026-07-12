@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:17188",
+        "source_name": "长度",
+        "target_name": "使用刻度尺的方法",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:12429",
+        "source_name": "长度单位（米及其倍数、子倍数）",
+        "target_name": "长度",
+        "relation_semantic_role": "category_membership"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "水渠调度站里新来了一批分段记录册，记录员小陈负责把每一段渠道的入口条件登记下来。调度员老周站在一旁，指着墙上的前置条件牌说：“先核对这块牌子上的数据，缺了这一步，后面的登记不能开始。”\n\n小陈翻开记录册，第一栏写着“入口宽度”。他走到渠口，用随身带的刻度尺量了量，记下数字。老周点点头，又说：“别急着填下一栏，你得把这个具体数值归入我们统一的标准——米及其倍数、子倍数，不能当成孤立事件。”\n\n小陈想了想，把刚才量的结果换算成标准单位，填进册子。可这时，验收员老李推门进来，手里拿着封存箱：“你们先别封箱，我得用记录、比较和复查来检验这条判断，证据对上才能允许通过。”\n\n老李取出前一班的记录，和小陈的数值一一比对。确认无误后，他把通行牌递给小陈：“入口条件核对稳定了，现在可以推动第2道转化环节。”\n\n小陈正要继续，调度员老周却拦住了他：“有人试过倒过来安排，先做转化环节再核对入口条件，结果后面的验收根本接不上。只有先稳定入口条件核对，再推动转化，前后两步才能在记录中互相承接。”\n\n小陈恍然大悟，他先在水渠调度站中确认入口条件核对是否成立，随后第2道转化环节按前一步留下的条件继续推进。老李最后用水渠调度站中的结果验收记录核对整条安排，发现所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。\n\n老周把封存箱锁好，感叹道：“方向和顺序不能颠倒，提前跳过中间承接，只会让整条水渠的调度乱套。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "前置条件牌",
+        "narrative_anchor": "前置条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "转化环节",
+        "narrative_anchor": "转化环节",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "调度员老周站在一旁，指着墙上的前置条件牌说：“先核对这块牌子上的数据，缺了这一步",
+        "narrative_anchor": "调度员老周站在一旁，指着墙上的前置条件牌说：“先核对这块牌子上的数据，缺了这一步",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "把具体现象归入更大的共同规则",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n1",
+        "direction_preserved": false,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

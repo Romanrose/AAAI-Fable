@@ -1,0 +1,88 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "古代工匠制作铜镜",
+  "characters": [
+    "老铜匠",
+    "学徒"
+  ],
+  "objects": [
+    "铜镜模具",
+    "铜镜"
+  ],
+  "conflict": "学徒发现铜镜模具离熔铜炉越远，浇铸出的铜镜越小且图案左右颠倒，但老铜匠要求必须通过调整模具与炉口的距离来获得清晰的镜面图案。",
+  "event_chain": [
+    "老铜匠使用铜镜模具（凸透镜）来浇铸铜镜（照相机成像）。",
+    "铜镜模具（凸透镜）使得浇铸过程（照相机成像）成为可能。",
+    "浇铸过程（照相机成像）产生铜镜（实像）。",
+    "学徒将铜镜模具远离熔铜炉（物体远离凸透镜）时，浇铸过程（照相机成像）得以进行。",
+    "浇铸过程（照相机成像）产生缩小、倒立的铜镜图案（缩小、倒立的实像）。",
+    "老铜匠调节模具与炉口的距离（调节像距以成清晰像）来确保浇铸过程（照相机成像）顺利进行。"
+  ],
+  "turning_point": "学徒发现模具离炉越远，铜镜图案越小且颠倒，但老铜匠指导他通过精细调节模具与炉口的距离，最终得到清晰的镜面图案。",
+  "resolution_state": "学徒掌握了通过调节模具与炉口的距离来浇铸出清晰铜镜的技艺，铜镜图案虽小且颠倒，但清晰可用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜镜模具",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "铜镜",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "浇铸铜镜的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铜镜模具远离熔铜炉",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "缩小、倒立的铜镜图案",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "调节模具与炉口的距离",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铜镜模具使得浇铸铜镜的过程成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "浇铸铜镜的过程产生铜镜",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "铜镜模具远离熔铜炉使得浇铸铜镜的过程得以进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "浇铸铜镜的过程产生缩小、倒立的铜镜图案",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "调节模具与炉口的距离使得浇铸铜镜的过程顺利进行",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'照相机成像'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保'调节像距以成清晰像'被映射为'调节模具与炉口的距离'，而不是作为背景。",
+    "确保故事载体来自单一源域（铜镜制作），不混用其他隐喻。"
+  ]
+}

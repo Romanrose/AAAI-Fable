@@ -1,0 +1,12 @@
+{
+  "target_concept": {
+    "id": "biology_7a_rjb_cpt100",
+    "name": "苔藓植物是监测空气污染的指示植物",
+    "label": "Concept",
+    "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。"
+  },
+  "neighbors": [],
+  "relations": [],
+  "raw_edge_count": 0,
+  "source": "dual_level_graphrag"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "math_1a_rjb_cpt1",
+  "subject": "math",
+  "canonical_name": "数物体（数一数）",
+  "aliases": [],
+  "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+  "concept_type": "relation",
+  "forbidden_terms": [
+    "数物体（数一数）"
+  ]
+}

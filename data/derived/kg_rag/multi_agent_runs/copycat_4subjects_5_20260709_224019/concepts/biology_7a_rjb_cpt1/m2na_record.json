@@ -1,0 +1,110 @@
+{
+  "id": "biology_7a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "生物",
+    "aliases": [
+      "生命体"
+    ],
+    "forbidden_terms": [
+      "生物",
+      "生命体"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "避免目的论解释。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把个体努力写成进化原因。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老匠人带着学徒在瓷器作坊里做一套新件。母版摆在中央，学徒照着它的轮廓、纹样骨架和比例，捏出一只碗的泥坯。老匠人翻着细节记录册，指着母版说：“先核对入口条件——母版的轮廓、纹样骨架和比例，新件必须全部保留。这是第一步，定了才能往下走。”\n\n学徒点头，把母版和新件并排放在台上，用卡尺量了轮廓，又用拓片比了纹样骨架，最后对照比例尺，一一确认无误。老匠人这才说：“好，现在可以进第二道转化环节——调整局部釉色、纹理疏密和边角细节。记住，只改这些，不改根本。”\n\n学徒调了釉料，在新件的碗沿加了一道浅青，又把碗底的纹理疏密改得比母版略松些。老匠人看着，没说话。\n\n几天后，验收员来了。他拿起新件，又看看母版，皱眉道：“不对。碗沿的釉色和碗底的纹理，你们改得太随意，但这不是问题。问题是——你们跳过核对顺序了？”\n\n学徒一愣。验收员把细节记录册翻开：“你们先改了釉色和纹理，才去核对轮廓？入口条件还没稳定，就急着推第二道转化环节，结果后面的验收记录根本接不上。轮廓、纹样骨架和比例没先确认，改出来的东西就没了根。”\n\n老匠人叹口气，把母版和新件重新摆好，让学徒从头来：先核对轮廓、纹样骨架和比例，再调整釉色和纹理疏密。这次，验收员拿过新件，又翻翻记录册，终于点头：“这样，每一步都能在记录里互相承接。入口条件对了，转化环节才有依据；转化环节稳了，验收记录才能成立。”\n\n学徒这才明白：顺序不能颠倒，跳过中间那一步，结果就接不上来。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "老匠人带着学徒在瓷器作坊里做一套新件。",
+        "narrative_anchor": "老匠人带着学徒在瓷器作坊里做一套新件。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "第二道转化环节",
+        "narrative_anchor": "第二道转化环节",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "验收记录",
+        "narrative_anchor": "验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "母版摆在中央，学徒照着它的轮廓、纹样骨架和比例，捏出一只碗的泥坯。",
+        "narrative_anchor": "母版摆在中央，学徒照着它的轮廓、纹样骨架和比例，捏出一只碗的泥坯。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+        "evidence": "转化环节稳了，验收记录才能成立",
+        "narrative_anchor": "转化环节稳了，验收记录才能成立",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

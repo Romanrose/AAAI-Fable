@@ -1,0 +1,137 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的家族传承故事",
+  "characters": [
+    "老族长（代表分解反应的概念）",
+    "大儿子（代表高锰酸钾受热分解反应）",
+    "二女儿（代表过氧化氢分解反应）",
+    "三儿子（代表加热氯酸钾制取氧气）",
+    "小女儿（代表水的分解反应）",
+    "邻村族长（代表化合反应）",
+    "家族长老会（代表化学学习中的分类思想）",
+    "家族族谱编纂者（代表用分类方法学习化学）"
+  ],
+  "objects": [
+    "家族祖训（代表分解反应的定义）",
+    "大儿子的铁匠铺（代表高锰酸钾受热分解反应）",
+    "二女儿的染坊（代表过氧化氢分解反应）",
+    "三儿子的陶窑（代表加热氯酸钾制取氧气）",
+    "小女儿的水车磨坊（代表水的分解反应）",
+    "邻村的合并契约（代表化合反应）",
+    "长老会的分类竹简（代表化学学习中的分类思想）",
+    "族谱编纂者的分类图谱（代表用分类方法学习化学）"
+  ],
+  "conflict": "老族长年迈，需要将家族祖训传承给后代，但后代们各自经营不同的产业，需要理解祖训中‘一分为多’的智慧，同时还要面对邻村合并契约的挑战。",
+  "event_chain": [
+    "老族长召集后代，宣布要传授家族祖训（分解反应的定义）。",
+    "大儿子展示铁匠铺如何将一块铁矿石锻造成多种铁器（高锰酸钾受热分解反应）。",
+    "二女儿展示染坊如何将一桶染料调配出多种颜色（过氧化氢分解反应）。",
+    "三儿子展示陶窑如何将一块黏土烧制成多种陶器（加热氯酸钾制取氧气）。",
+    "小女儿展示水车磨坊如何将水流转化为动力和面粉（水的分解反应）。",
+    "长老会拿出分类竹简，将后代们的产业归类为‘一物生多物’的类别（分类思想）。",
+    "族谱编纂者根据分类图谱，将祖训与后代产业对应记录（用分类方法学习化学）。",
+    "邻村族长送来合并契约，要求两村合并（化合反应），老族长对比祖训，指出合并与分解的不同。"
+  ],
+  "turning_point": "长老会通过分类竹简，指出所有后代的产业都体现了‘一物生多物’的祖训，而邻村的合并契约是‘多物合一’，两者相反。",
+  "resolution_state": "后代们理解了祖训的普遍性，并决定坚守‘一物生多物’的家族传统，拒绝合并契约，同时将分类图谱传给下一代。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老族长传授的家族祖训：一物生多物",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大儿子的铁匠铺：将一块铁矿石锻造成多种铁器",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "二女儿的染坊：将一桶染料调配出多种颜色",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "三儿子的陶窑：将一块黏土烧制成多种陶器",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "小女儿的水车磨坊：将水流转化为动力和面粉",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "邻村族长的合并契约：多村合一村",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "长老会的分类竹简：将后代产业归类为‘一物生多物’",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "族谱编纂者的分类图谱：根据产业特征记录祖训",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大儿子的铁匠铺是家族祖训‘一物生多物’的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "二女儿的染坊是家族祖训‘一物生多物’的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "三儿子的陶窑是家族祖训‘一物生多物’的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "小女儿的水车磨坊是家族祖训‘一物生多物’的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "家族祖训‘一物生多物’与邻村的合并契约‘多村合一村’相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "长老会的分类竹简使后代能够理解家族祖训‘一物生多物’",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "族谱编纂者的分类图谱使后代能够理解家族祖训‘一物生多物’",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中‘一物生多物’可能被误解为物理变化而非化学变化，需在教学中明确类比的是分解反应。",
+    "‘合并契约’与‘化合反应’的类比可能不够精确，因为化合反应是生成一种新物质，而合并契约是多个实体合并，需注意区分。",
+    "避免使用‘分解’等化学术语，已全部替换为‘一物生多物’等日常语言。"
+  ],
+  "mapping_context_sha256": "b7516c887838c74d1b39d9a86349266c460fda066268d338a96069df1322c0df",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f6a4fe6e6c44330408c796d11f03723abf59144d8a4e307d866a32d26d270a79"
+  }
+}

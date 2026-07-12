@@ -1,0 +1,5 @@
+﻿variant_id,display_name,graphrag,mechanism_graph,structure_mapping,multi_agent,status
+full_m2na,Full M2NA,True,True,True,True,planned
+no_graphrag,No GraphRAG,False,True,True,True,planned
+no_mechanism_graph,No Explicit Mechanism Graph,True,False,True,True,planned
+direct_llm,Direct LLM Baseline,False,False,False,False,planned

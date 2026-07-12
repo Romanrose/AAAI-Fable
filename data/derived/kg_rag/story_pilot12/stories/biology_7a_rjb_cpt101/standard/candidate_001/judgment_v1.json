@@ -1,0 +1,23 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are explicitly and correctly mapped with high confidence. The story clearly shows the enabling relations: water flow enables millstone grinding, and dry grain enables millstone grinding. The mapping is observably better than a version where the conditions are merely mentioned but not shown to enable the process, or where the conditions are conflated (e.g., water flow also drying grain). Here, each condition is independently resolved and then directly enables the grinding, preserving the parallel enabling structure of the mechanism graph."
+  },
+  "revision_instructions": [],
+  "final_status": "accept"
+}

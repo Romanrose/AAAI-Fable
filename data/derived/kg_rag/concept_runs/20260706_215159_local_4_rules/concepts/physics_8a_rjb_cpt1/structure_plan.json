@@ -1,0 +1,333 @@
+{
+  "found": true,
+  "query": "physics_8a_rjb_cpt1",
+  "concept_id": "physics_8a_rjb_cpt1",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "physics_8a_rjb_cpt1",
+    "label": "Concept",
+    "name": "长度",
+    "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+    "aliases": [],
+    "examples": [
+      "帽檐直径",
+      "课桌高度"
+    ],
+    "retrieval_text": "长度\n描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "physics_8a_rjb_cpt1",
+      "label": "Concept",
+      "name": "长度",
+      "properties": {
+        "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "importance": "重要",
+        "examples": [
+          "帽檐直径",
+          "课桌高度"
+        ],
+        "unit": "m",
+        "retrieval_text": "长度\nConcept\n描述物体空间延伸程度的物理量，需要通过测量工具获得。\n重要\nm\n帽檐直径\n课桌高度"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:17188",
+        "source": "physics_8a_rjb_cpt1",
+        "source_name": "长度",
+        "target": "physics_8a_rjb_skl1",
+        "target_name": "使用刻度尺的方法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:12429",
+        "source": "physics_8a_rjb_cpt2",
+        "source_name": "长度单位（米及其倍数、子倍数）",
+        "target": "physics_8a_rjb_cpt1",
+        "target_name": "长度",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:23027",
+        "source": "physics_8a_rjb_exp1",
+        "source_name": "用刻度尺测量长度",
+        "target": "physics_8a_rjb_cpt1",
+        "target_name": "长度",
+        "relation": "verifies",
+        "relation_description": "verifies",
+        "evidence": "",
+        "score": 0.95
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "长度",
+        "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [
+        "[normalized:edge:17188] 长度 --prerequisites_for--> 使用刻度尺的方法"
+      ],
+      "process_summary": [
+        "[normalized:edge:12429] 长度单位（米及其倍数、子倍数） --is_a--> 长度",
+        "[normalized:edge:23027] 用刻度尺测量长度 --verifies--> 长度"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 765,
+      "summary_chars": 354,
+      "path_chars": 0,
+      "retrieval_context_chars": 1119
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "长度的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "长度 --prerequisites_for--> 使用刻度尺的方法",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:17188"
+        ]
+      },
+      {
+        "step_id": "s2",
+        "text": "长度单位（米及其倍数、子倍数） --is_a--> 长度",
+        "kind": "process",
+        "supporting_edge_ids": [
+          "normalized:edge:12429"
+        ]
+      },
+      {
+        "step_id": "s3",
+        "text": "用刻度尺测量长度 --verifies--> 长度",
+        "kind": "process",
+        "supporting_edge_ids": [
+          "normalized:edge:23027"
+        ]
+      },
+      {
+        "step_id": "s4",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s2",
+        "target_step_id": "s3",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s3",
+        "target_step_id": "s4",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [
+      "normalized:edge:17188",
+      "normalized:edge:12429",
+      "normalized:edge:23027"
+    ],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "长度",
+      "physics_8a_rjb_cpt1"
+    ],
+    "coverage_targets": {
+      "required_step_count": 4,
+      "required_dependency_count": 3,
+      "must_cover_edge_ids": [
+        "normalized:edge:17188",
+        "normalized:edge:12429",
+        "normalized:edge:23027"
+      ],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt1",
+    "concept_id": "physics_8a_rjb_cpt1",
+    "story_language": "zh-CN",
+    "source_domain": "轨道调度台",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 使用刻度尺的方法",
+      "让中间的行动承接前后变化：这条隐藏规则单位（米及其倍数、子倍数） --is_a--> 这条隐藏规则",
+      "让中间的行动承接前后变化：用刻度尺测量这条隐藏规则 --verifies--> 这条隐藏规则",
+      "让中间的行动承接前后变化：描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 使用刻度尺的方法"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：这条隐藏规则单位（米及其倍数、子倍数） --is_a--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：用刻度尺测量这条隐藏规则 --verifies--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "长度"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "长度 --prerequisites_for--> 使用刻度尺的方法",
+          "长度单位（米及其倍数、子倍数） --is_a--> 长度",
+          "用刻度尺测量长度 --verifies--> 长度",
+          "描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "轨道调度台",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 使用刻度尺的方法",
+    "让中间的行动承接前后变化：这条隐藏规则单位（米及其倍数、子倍数） --is_a--> 这条隐藏规则",
+    "让中间的行动承接前后变化：用刻度尺测量这条隐藏规则 --verifies--> 这条隐藏规则",
+    "让中间的行动承接前后变化：描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "长度"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "长度 --prerequisites_for--> 使用刻度尺的方法",
+        "长度单位（米及其倍数、子倍数） --is_a--> 长度",
+        "用刻度尺测量长度 --verifies--> 长度",
+        "描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "保留变量之间的关系。",
+        "避免把自然规律写成角色主观意志。",
+        "保留方向、大小、条件变化。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 使用刻度尺的方法"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：这条隐藏规则单位（米及其倍数、子倍数） --is_a--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：用刻度尺测量这条隐藏规则 --verifies--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s4",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

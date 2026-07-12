@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "条件牌上的数字——前面的数量比后面的数量少",
+      "narrative_anchor": "条件牌上的数字——前面的数量比后面的数量少",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "把通行牌上的条件转成封存箱的登记格式",
+      "narrative_anchor": "把通行牌上的条件转成封存箱的登记格式",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "用结果验收记录核对整条安排",
+      "narrative_anchor": "用结果验收记录核对整条安排",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+      "evidence": "必须先稳定入口条件核对，再推动第2道转化环节",
+      "narrative_anchor": "必须先稳定入口条件核对，再推动第2道转化环节",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "两份记录共同约束最后判断",
+      "evidence": "两份记录共同约束着最后判断",
+      "narrative_anchor": "两份记录共同约束着最后判断",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ]
+}

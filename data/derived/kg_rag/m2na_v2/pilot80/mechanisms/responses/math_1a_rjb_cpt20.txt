@@ -1,0 +1,72 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "认识数字6和7，包括数物体、读数字、写数字、比较大小",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt19:definition",
+          "kg-node:math_1a_rjb_cpt19:examples"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "掌握分拆数6和7的所有不同分法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt22:definition",
+          "kg-node:math_1a_rjb_cpt22:examples"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt20:definition",
+          "kg-node:math_1a_rjb_cpt20:formula",
+          "kg-node:math_1a_rjb_cpt20:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19308"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16342"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  }
+}
+```

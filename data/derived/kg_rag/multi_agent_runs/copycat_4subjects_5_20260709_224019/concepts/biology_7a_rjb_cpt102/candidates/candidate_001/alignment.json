@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "条件牌上的条目：温度、水分、空气",
+      "evidence": "条件牌",
+      "narrative_anchor": "条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "避免目的论解释",
+      "evidence": "归入同一组规则",
+      "narrative_anchor": "归入同一组规则",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "避免把个体努力写成进化原因",
+      "evidence": "证据全部对上",
+      "narrative_anchor": "证据全部对上",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件的核对，再推动第二道转化",
+      "evidence": "先稳定入口条件的核对，再推动第二道转化",
+      "narrative_anchor": "先稳定入口条件的核对，再推动第二道转化",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "把具体现象归入更大的共同规则",
+      "evidence": "归入同一组规则",
+      "narrative_anchor": "归入同一组规则",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

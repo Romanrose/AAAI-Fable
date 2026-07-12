@@ -1,0 +1,148 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "参照物"
+  ],
+  "concept_card": {
+    "concept_id": "physics_8a_rjb_cpt10",
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "canonical_name": "参照物",
+    "definition": "判断物体运动或静止时所选取的标准物体。",
+    "aliases": [],
+    "examples": [
+      "地面",
+      "旁边的列车",
+      "树木",
+      "房屋"
+    ],
+    "teaching_level": "middle_school",
+    "concept_type": "mechanism",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt9",
+          "label": "Concept",
+          "name": "运动与静止的相对性",
+          "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt8",
+          "label": "Concept",
+          "name": "机械运动",
+          "definition": "物体的位置随时间不断地发生变化的运动形式。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt9",
+          "label": "Concept",
+          "name": "运动与静止的相对性",
+          "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "physics_8a_rjb_exe1",
+          "label": "Exercise",
+          "name": "鲁迅《社戏》中写道：“淡黑的起伏的连山……都远远地向船尾跑去了。”其中“山……向船尾跑去了”所选的参照物是（A. 山  B. 船  C. 流水  D. 河岸）。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch1_s2",
+          "label": "Section",
+          "name": "第二节 运动的描述",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "参照物"
+    ],
+    "subject_constraints_zh": [
+      "保留变量之间的关系。",
+      "避免把自然规律写成角色主观意志。",
+      "保留方向、大小、条件变化。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt10",
+    "concept_id": "physics_8a_rjb_cpt10",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt10",
+      "label": "Concept",
+      "name": "参照物",
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "aliases": [],
+      "examples": [
+        "地面",
+        "旁边的列车",
+        "树木",
+        "房屋"
+      ]
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：判断物体运动或静止时所选取的标准物体。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "参照物"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "判断物体运动或静止时所选取的标准物体。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

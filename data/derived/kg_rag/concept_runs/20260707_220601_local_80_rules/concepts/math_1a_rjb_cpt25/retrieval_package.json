@@ -1,0 +1,61 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt25",
+    "label": "Concept",
+    "name": "6的加减法",
+    "properties": {
+      "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+      "importance": "重要",
+      "retrieval_text": "6的加减法\nConcept\n掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16346",
+      "source": "math_1a_rjb_cpt28",
+      "source_name": "分与合（拆分与组合）",
+      "target": "math_1a_rjb_cpt25",
+      "target_name": "6的加减法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:16344",
+      "source": "math_1a_rjb_cpt23",
+      "source_name": "数字6的认识",
+      "target": "math_1a_rjb_cpt25",
+      "target_name": "6的加减法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "6的加减法",
+      "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16346] 分与合（拆分与组合） --prerequisites_for--> 6的加减法",
+      "[normalized:edge:16344] 数字6的认识 --prerequisites_for--> 6的加减法"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 534,
+    "summary_chars": 325,
+    "path_chars": 0,
+    "retrieval_context_chars": 859
+  }
+}

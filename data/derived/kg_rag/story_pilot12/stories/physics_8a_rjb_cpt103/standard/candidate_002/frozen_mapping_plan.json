@@ -1,0 +1,87 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "农夫与禾苗",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "禾苗",
+    "田地",
+    "烈日",
+    "水渠"
+  ],
+  "conflict": "禾苗在烈日下生长缓慢，农夫希望禾苗快速长高，但直接拔苗会伤害禾苗。",
+  "event_chain": [
+    "农夫在田地里种下禾苗",
+    "烈日照射禾苗，禾苗生长缓慢",
+    "农夫通过水渠引水灌溉，调节水分",
+    "禾苗在适宜的水分下，逐渐长高",
+    "禾苗最终长成高大的植株"
+  ],
+  "turning_point": "农夫意识到不能拔苗助长，而是通过调节水分来帮助禾苗生长。",
+  "resolution_state": "禾苗在农夫合理灌溉下，自然长高，获得丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "田地",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "高大的禾苗",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "禾苗生长",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "烈日照射",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "高大的禾苗",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "农夫通过水渠引水灌溉",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "田地是禾苗生长的基础",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "禾苗生长最终形成高大的禾苗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "烈日照射促使禾苗生长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "禾苗生长产生高大的禾苗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "农夫灌溉帮助禾苗生长",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘照相机成像’等禁止术语。",
+    "注意‘烈日照射’作为条件，对应‘物体远离凸透镜’，需保持因果方向。",
+    "‘高大的禾苗’同时映射n2和n5，需确保故事中一致。"
+  ]
+}

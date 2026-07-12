@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "抄纸帘",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "薄而均匀的纸页",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "纸浆逐渐远离抄纸帘",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "薄而均匀的纸页",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "压榨工序",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "纸浆逐渐远离抄纸帘",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "一张薄而均匀的纸页呈现在眼前",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "压榨工序开始了",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges have been aligned to story evidence. Node n3 (照相机成像) has no direct story substring, but its process is implied by the overall narrative. Edges e1 and e2 lack explicit story evidence for the relation, but e3, e4, and e5 are supported by contiguous substrings."
+}

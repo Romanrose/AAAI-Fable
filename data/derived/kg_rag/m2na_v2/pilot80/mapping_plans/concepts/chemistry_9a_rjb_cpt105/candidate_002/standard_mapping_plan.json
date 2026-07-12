@@ -1,0 +1,93 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的磨坊",
+  "characters": [
+    "磨坊主",
+    "村民"
+  ],
+  "objects": [
+    "小麦",
+    "石磨",
+    "面粉、麸皮、麦糠"
+  ],
+  "conflict": "磨坊主需要将小麦磨成面粉，但小麦是完整的颗粒，无法直接使用。",
+  "event_chain": [
+    "磨坊主将小麦放入石磨中",
+    "推动石磨转动（施加外力）",
+    "小麦被研磨分解",
+    "产生面粉、麸皮和麦糠三种产物"
+  ],
+  "turning_point": "石磨开始转动，小麦被研磨分解成多种产物。",
+  "resolution_state": "小麦被成功分解为面粉、麸皮和麦糠，村民可以用面粉制作食物。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小麦是完整的颗粒，需要研磨才能使用",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "磨坊主推动石磨研磨小麦，小麦被分解成面粉、麸皮和麦糠",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "面粉、麸皮、麦糠",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "研磨：将一种完整的食材通过机械力分解成多种不同成分的加工方式",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "村民用筛子分离面粉和麸皮，发现面粉可以做成馒头，验证了研磨的有效性",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小麦的完整状态使得研磨成为必要",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "研磨过程产生了面粉、麸皮和麦糠",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "研磨小麦属于研磨这种加工方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "村民用筛子分离并验证了研磨的结果",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用任何化学术语或目标概念名称",
+    "确保每个机制节点和边都被映射",
+    "确保方向正确，特别是e4是从证据到过程",
+    "避免将课程上下文（如实验步骤）作为因果机制"
+  ],
+  "mapping_context_sha256": "be1e3be8ebf2134d3e7248f262be72550fac329ad662a6672b57feb081700425",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "238ae0b7e5bcedf73fdf078cefe21610d33f8d9a768b27c92c67211ffb8c9b53"
+  }
+}

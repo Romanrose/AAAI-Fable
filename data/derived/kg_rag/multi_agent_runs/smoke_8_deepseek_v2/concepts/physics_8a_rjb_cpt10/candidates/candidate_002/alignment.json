@@ -1,0 +1,64 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "总工程师提出的‘标准位置’概念，即判断物体运动快慢时所选取的基准点。",
+      "evidence": "标准位置",
+      "narrative_anchor": "标准位置",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "小林和小张对同一测试球运动快慢的不同判断，体现了运动快慢的相对性。",
+      "evidence": "标准位置不同，结论自然不同",
+      "narrative_anchor": "标准位置不同，结论自然不同",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "测试球在滑道上的滑动是机械运动，判断其运动快慢需要参照点。",
+      "evidence": "滑道",
+      "narrative_anchor": "滑道",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "两人对测试球运动快慢的不同结论，直接展示了运动与静止的相对性依赖于参照点的选择。",
+      "evidence": "标准位置不同，结论自然不同",
+      "narrative_anchor": "标准位置不同，结论自然不同",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "总工程师指出标准位置的概念，进而引出两人判断不同的原因。",
+      "evidence": "标准位置",
+      "narrative_anchor": "标准位置",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "两人判断不同体现了运动快慢的相对性，而测试球的滑动是机械运动，需要参照点。",
+      "evidence": "标准位置不同，结论自然不同",
+      "narrative_anchor": "标准位置不同，结论自然不同",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "两人判断不同直接展示了运动与静止的相对性依赖于参照点的选择，而机械运动需要参照点。",
+      "evidence": "标准位置不同，结论自然不同",
+      "narrative_anchor": "标准位置不同，结论自然不同",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

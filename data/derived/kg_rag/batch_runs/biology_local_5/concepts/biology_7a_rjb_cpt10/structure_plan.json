@@ -1,0 +1,68 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt10",
+  "seed": {
+    "id": "biology_7a_rjb_cpt10",
+    "label": "Concept",
+    "name": "遗传和变异",
+    "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+    "importance": "掌握",
+    "aliases": [],
+    "examples": [
+      "狗的一家体现亲子相似与差异",
+      "同一株碧桃上的花存在差异"
+    ],
+    "retrieval_text": "遗传和变异\nConcept\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\n掌握\n狗的一家体现亲子相似与差异\n同一株碧桃上的花存在差异"
+  },
+  "source_domain": "garden workshop",
+  "entities": [
+    "a careful caretaker",
+    "a plot that depends on the right conditions",
+    "tools and routines that reveal whether growth is real"
+  ],
+  "event_chain": [
+    "The caretaker prepares the conditions that must already be in place.",
+    "The plot uses those conditions to produce visible growth.",
+    "Nearby processes either support or compete with that growth.",
+    "Observation and trials reveal whether the growth is genuine and sustained."
+  ],
+  "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+  "turning_point": "A visible change reveals which condition actually controls the outcome.",
+  "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+  "alignment_plan": [
+    {
+      "concept_role": "target concept",
+      "concept_items": [
+        "遗传和变异"
+      ],
+      "story_role": "central productive process"
+    },
+    {
+      "concept_role": "prerequisites",
+      "concept_items": [],
+      "story_role": "conditions or resources that must be prepared first"
+    },
+    {
+      "concept_role": "related concepts",
+      "concept_items": [],
+      "story_role": "neighboring processes that contextualize or contrast the main process"
+    },
+    {
+      "concept_role": "outcomes",
+      "concept_items": [],
+      "story_role": "visible consequences produced by the core process"
+    },
+    {
+      "concept_role": "experiments",
+      "concept_items": [],
+      "story_role": "tests that reveal whether the process truly happened"
+    },
+    {
+      "concept_role": "exercises",
+      "concept_items": [
+        "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。"
+      ],
+      "story_role": "follow-up checks that reinforce the lesson"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "这个过程无声无息，既没有热浪，也没有光亮",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "铜与氧气发生化学反应",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "剑身与炉中充足的氧气骤然发生剧烈反应",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "铜剑就这样在潮湿的空气中，与无处不在的氧气悄悄结合",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "氧气",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "铜剑架在炭火之上，鼓风催火。炉膛内温度急剧攀升，铜剑渐渐变得通红",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "大量热浪扑面而来，剑身发出耀眼的红光",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "这个过程无声无息，既没有热浪，也没有光亮",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "铜剑在潮湿空气中缓慢生锈是一种铜与氧气的化学反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "铜在炉火中剧烈氧化是一种铜与氧气的化学反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "铜剑长期暴露在空气中逐渐腐蚀是一种缓慢氧化",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "空气中的氧气是铜与氧气反应的一部分",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "空气中的氧气是铜剧烈氧化的一部分",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "空气中的氧气是铜剑长期腐蚀的一部分",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "铜剑、充足空气、达到红热温度是铜剧烈氧化所必需的条件",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "铜剧烈氧化产生大量热和红光",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "铜剑缓慢生锈产生铜锈，无明显发热发光",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "铜剑缓慢生锈与铜剧烈氧化相关",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with story evidence. The story explicitly describes slow oxidation (rusting) and combustion (heating) of a copper sword, matching the mechanism graph's definitions and relations."
+}

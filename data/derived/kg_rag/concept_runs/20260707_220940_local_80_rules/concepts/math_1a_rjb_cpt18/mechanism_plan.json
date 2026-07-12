@@ -1,0 +1,91 @@
+{
+  "core_question": "按形状分类的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "观察与比较立体图形 --prerequisites_for--> 按形状分类",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:16390"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "圆柱 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12135"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "正方体 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12134"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "球体 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12137"
+      ]
+    },
+    {
+      "step_id": "s5",
+      "text": "长方体 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12132"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s4",
+      "target_step_id": "s5",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:16390",
+    "normalized:edge:12135",
+    "normalized:edge:12134",
+    "normalized:edge:12137",
+    "normalized:edge:12132"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "按形状分类",
+    "math_1a_rjb_cpt18"
+  ],
+  "coverage_targets": {
+    "required_step_count": 5,
+    "required_dependency_count": 4,
+    "must_cover_edge_ids": [
+      "normalized:edge:16390",
+      "normalized:edge:12135",
+      "normalized:edge:12134",
+      "normalized:edge:12137",
+      "normalized:edge:12132"
+    ],
+    "must_cover_path_ids": []
+  }
+}

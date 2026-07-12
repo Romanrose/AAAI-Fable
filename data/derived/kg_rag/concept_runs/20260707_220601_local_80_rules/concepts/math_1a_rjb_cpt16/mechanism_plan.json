@@ -1,0 +1,73 @@
+{
+  "core_question": "圆柱的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "圆柱 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12135"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "圆柱 --is_a--> 旋转体",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12136"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "圆柱 --relates_to--> 圆锥",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:19307"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:12135",
+    "normalized:edge:12136",
+    "normalized:edge:19307"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "圆柱",
+    "math_1a_rjb_cpt16",
+    "圆柱体"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:12135",
+      "normalized:edge:12136",
+      "normalized:edge:19307"
+    ],
+    "must_cover_path_ids": []
+  }
+}

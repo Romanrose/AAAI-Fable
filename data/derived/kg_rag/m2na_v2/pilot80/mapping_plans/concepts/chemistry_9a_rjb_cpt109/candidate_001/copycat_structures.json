@@ -1,0 +1,1089 @@
+[
+  {
+    "structure_id": "candidate_001:target_concept:001",
+    "structure_type": "TargetConceptStructure",
+    "content": {
+      "concept_id": "chemistry_9a_rjb_cpt109",
+      "name": "分解反应",
+      "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "forbidden_terms": [
+        "分解反应"
+      ]
+    },
+    "strength": 0.9,
+    "salience": 1.0,
+    "support": [
+      "concept_card"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BootstrapTargetConceptCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:source_domain:001",
+    "structure_type": "SourceDomainStructure",
+    "content": {
+      "source_domain": "账房仓库",
+      "selection_basis": "subject_rotating_domain_pool"
+    },
+    "strength": 0.72,
+    "salience": 0.82,
+    "support": [
+      "copycat.source_domain_pool",
+      "subject=chemistry"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:001",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:14997",
+      "source_id": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target_id": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "neighbor_name": "实验室制取氧气的方法",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "outgoing"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:002",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:14998",
+      "source_id": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target_id": "chemistry_9a_rjb_cpt251",
+      "target_name": "水的分解反应",
+      "neighbor_name": "水的分解反应",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "outgoing"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:003",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:15003",
+      "source_id": "chemistry_9a_rjb_cpt118",
+      "source_name": "化学学习中的分类思想",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "neighbor_name": "化学学习中的分类思想",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:004",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:15263",
+      "source_id": "chemistry_9a_rjb_skl28",
+      "source_name": "用分类方法学习化学",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "neighbor_name": "用分类方法学习化学",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:005",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:11277",
+      "source_id": "chemistry_9a_rjb_cpt105",
+      "source_name": "高锰酸钾受热分解反应",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "neighbor_name": "高锰酸钾受热分解反应",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:006",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:11279",
+      "source_id": "chemistry_9a_rjb_cpt107",
+      "source_name": "过氧化氢分解反应",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "neighbor_name": "过氧化氢分解反应",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:007",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:11281",
+      "source_id": "chemistry_9a_rjb_cpt108",
+      "source_name": "加热氯酸钾制取氧气",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "neighbor_name": "加热氯酸钾制取氧气",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:008",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:18225",
+      "source_id": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target_id": "chemistry_9a_rjb_cpt96",
+      "target_name": "化合反应",
+      "neighbor_name": "化合反应",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "outgoing"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_role:001",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "reactants",
+      "role_label": "反应物",
+      "role_type": "input",
+      "source_evidence": "物质"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_role:002",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "products",
+      "role_label": "生成物",
+      "role_type": "outcome",
+      "source_evidence": "新物质"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_role:003",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "condition",
+      "role_label": "条件",
+      "role_type": "condition",
+      "source_evidence": "条件"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_role:004",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "change",
+      "role_label": "变化",
+      "role_type": "process",
+      "source_evidence": "反应"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_role:005",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "state",
+      "role_label": "状态",
+      "role_type": "state",
+      "source_evidence": "固体"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:role_correspondence:001",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "reactants",
+      "role_label": "反应物",
+      "role_type": "input",
+      "story_role": "账房仓库中的入库前的原始材料",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_001:concept_role:001",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:role_correspondence:002",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "products",
+      "role_label": "生成物",
+      "role_type": "outcome",
+      "story_role": "账房仓库中的最终验收记录",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_001:concept_role:002",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:role_correspondence:003",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "condition",
+      "role_label": "条件",
+      "role_type": "condition",
+      "story_role": "账房仓库中的入场前必须核对的条件牌",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_001:concept_role:003",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:role_correspondence:004",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "change",
+      "role_label": "变化",
+      "role_type": "process",
+      "story_role": "账房仓库中的按顺序推进的中间流程",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_001:concept_role:004",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:role_correspondence:005",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "state",
+      "role_label": "状态",
+      "role_type": "state",
+      "story_role": "账房仓库中的被记录下来的状态标签",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_001:concept_role:005",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:001",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:14997",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认账房仓库里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "分解反应",
+      "target_name": "实验室制取氧气的方法"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:001",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:002",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:14998",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认账房仓库里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "分解反应",
+      "target_name": "水的分解反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:002",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:003",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:15003",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认账房仓库里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "化学学习中的分类思想",
+      "target_name": "分解反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:003",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:004",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:15263",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认账房仓库里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "用分类方法学习化学",
+      "target_name": "分解反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:004",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:005",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:11277",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“高锰酸钾受热分解反应”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "高锰酸钾受热分解反应",
+      "target_name": "分解反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:005",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:006",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:11279",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“过氧化氢分解反应”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "过氧化氢分解反应",
+      "target_name": "分解反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:006",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:007",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:11281",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“加热氯酸钾制取氧气”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "加热氯酸钾制取氧气",
+      "target_name": "分解反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:007",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:008",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:18225",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "分解反应",
+      "target_name": "化合反应"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:008",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:001",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "分解反应：一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "narrative_carrier": "账房仓库中的入口条件核对",
+      "role": "入口条件核对"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:002",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "高锰酸钾受热分解反应：高锰酸钾受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "narrative_carrier": "账房仓库中的第2道转化环节",
+      "role": "第2道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:003",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "过氧化氢分解反应：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "narrative_carrier": "账房仓库中的第3道转化环节",
+      "role": "第3道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:004",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n4",
+      "mechanism_text": "加热氯酸钾制取氧气：在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气。",
+      "narrative_carrier": "账房仓库中的第4道转化环节",
+      "role": "第4道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:005",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n5",
+      "mechanism_text": "水的分解反应：水在电流等作用下分解生成氢气和氧气。",
+      "narrative_carrier": "账房仓库中的第5道转化环节",
+      "role": "第5道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:006",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n6",
+      "mechanism_text": "化合反应：由两种或两种以上物质起反应，生成一种新物质的化学反应。",
+      "narrative_carrier": "账房仓库中的第6道转化环节",
+      "role": "第6道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:007",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n7",
+      "mechanism_text": "化学学习中的分类思想：根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识。",
+      "narrative_carrier": "账房仓库中的第7道转化环节",
+      "role": "第7道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:008",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n8",
+      "mechanism_text": "用分类方法学习化学：根据物质或反应的共同特征进行分类，通过对类的掌握来提高学习效率。",
+      "narrative_carrier": "账房仓库中的结果验收记录",
+      "role": "结果验收记录"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:001",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e1",
+      "source": "n2",
+      "target": "n1",
+      "relation": "is_a",
+      "kg_relation": "is_a",
+      "source_edge_id": null,
+      "narrative_relation": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。",
+      "event_evidence": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:002",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e2",
+      "source": "n3",
+      "target": "n1",
+      "relation": "is_a",
+      "kg_relation": "is_a",
+      "source_edge_id": null,
+      "narrative_relation": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。",
+      "event_evidence": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:003",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e3",
+      "source": "n4",
+      "target": "n1",
+      "relation": "is_a",
+      "kg_relation": "is_a",
+      "source_edge_id": null,
+      "narrative_relation": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。",
+      "event_evidence": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:004",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e4",
+      "source": "n5",
+      "target": "n1",
+      "relation": "is_a",
+      "kg_relation": "is_a",
+      "source_edge_id": null,
+      "narrative_relation": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。",
+      "event_evidence": "主角把这个具体现象归入“账房仓库中的入口条件核对”这类更大的共同规则，而不是当成孤立事件。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:005",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e5",
+      "source": "n1",
+      "target": "n6",
+      "relation": "relates_to",
+      "kg_relation": "relates_to",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:006",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e6",
+      "source": "n7",
+      "target": "n1",
+      "relation": "enables",
+      "kg_relation": "enables",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:007",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e7",
+      "source": "n8",
+      "target": "n1",
+      "relation": "enables",
+      "kg_relation": "enables",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:conflict:001",
+    "structure_type": "ConflictStructure",
+    "content": {
+      "conflict": "账房仓库里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+    },
+    "strength": 0.62,
+    "salience": 0.62,
+    "support": [
+      "copycat.source_domain",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:001",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "主角先在账房仓库中确认账房仓库中的入口条件核对是否成立。",
+      "position": 1,
+      "mapped_mechanism_node_id": "n1",
+      "mapped_mechanism_text": "分解反应：一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:002",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，账房仓库中的第2道转化环节按前一步留下的条件继续推进。",
+      "position": 2,
+      "mapped_mechanism_node_id": "n2",
+      "mapped_mechanism_text": "高锰酸钾受热分解反应：高锰酸钾受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:002"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:003",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，账房仓库中的第3道转化环节按前一步留下的条件继续推进。",
+      "position": 3,
+      "mapped_mechanism_node_id": "n3",
+      "mapped_mechanism_text": "过氧化氢分解反应：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:003"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:004",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，账房仓库中的第4道转化环节按前一步留下的条件继续推进。",
+      "position": 4,
+      "mapped_mechanism_node_id": "n4",
+      "mapped_mechanism_text": "加热氯酸钾制取氧气：在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:004"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:005",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，账房仓库中的第5道转化环节按前一步留下的条件继续推进。",
+      "position": 5,
+      "mapped_mechanism_node_id": "n5",
+      "mapped_mechanism_text": "水的分解反应：水在电流等作用下分解生成氢气和氧气。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:005"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:006",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，账房仓库中的第6道转化环节按前一步留下的条件继续推进。",
+      "position": 6,
+      "mapped_mechanism_node_id": "n6",
+      "mapped_mechanism_text": "化合反应：由两种或两种以上物质起反应，生成一种新物质的化学反应。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:006"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:007",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，账房仓库中的第7道转化环节按前一步留下的条件继续推进。",
+      "position": 7,
+      "mapped_mechanism_node_id": "n7",
+      "mapped_mechanism_text": "化学学习中的分类思想：根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:007"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:008",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "最后，众人用账房仓库中的结果验收记录核对整条安排是否得到可靠结果。",
+      "position": 8,
+      "mapped_mechanism_node_id": "n8",
+      "mapped_mechanism_text": "用分类方法学习化学：根据物质或反应的共同特征进行分类，通过对类的掌握来提高学习效率。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:008"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:turning_point:001",
+    "structure_type": "TurningPointStructure",
+    "content": {
+      "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+    },
+    "strength": 0.63,
+    "salience": 0.7,
+    "support": [
+      "candidate_001:edge_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:resolution_state:001",
+    "structure_type": "ResolutionStructure",
+    "content": {
+      "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+    },
+    "strength": 0.63,
+    "salience": 0.68,
+    "support": [
+      "copycat.event_chain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  }
+]

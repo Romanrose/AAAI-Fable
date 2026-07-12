@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "田地",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "高大的禾苗",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "禾苗生长",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "烈日照射",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "高大的禾苗",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "农夫通过水渠引水灌溉",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "农夫在田地里种下一片禾苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "禾苗在适宜的水分滋养下，一天比一天茁壮，渐渐拔高，变得挺拔翠绿。到了秋天，田地里长满了高大的禾苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "烈日依旧高悬，禾苗生长得更慢了",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "禾苗在适宜的水分滋养下，一天比一天茁壮，渐渐拔高，变得挺拔翠绿。到了秋天，田地里长满了高大的禾苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "农夫拿起锄头，沿着水渠清理淤泥和碎石。他挖开一条小沟，把远处溪流的水引进来。清亮的水顺着沟渠缓缓流入田地，滋润了干裂的泥土。禾苗喝足了水，叶子舒展开来",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到对应证据，方向一致，无缺失。"
+}

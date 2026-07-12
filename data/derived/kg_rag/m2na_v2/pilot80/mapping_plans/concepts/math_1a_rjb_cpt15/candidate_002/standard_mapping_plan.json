@@ -1,0 +1,102 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt15",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠制作标准砖块的故事",
+  "characters": [
+    "老工匠",
+    "小徒弟"
+  ],
+  "objects": [
+    "标准方砖",
+    "普通砖块",
+    "砖窑",
+    "砖模",
+    "砖窑分类法",
+    "砌墙技艺",
+    "方砖体积计算口诀"
+  ],
+  "conflict": "小徒弟想用普通砖块砌墙，但老工匠坚持必须先用标准方砖打好基础，否则墙体会不稳固。",
+  "event_chain": [
+    "老工匠向小徒弟展示一块标准方砖，说明它由六个完全相同的正方形面组成，所有棱长相等。",
+    "老工匠指出标准方砖是一种特殊的普通砖块，因为普通砖块的面可以是长方形，而标准方砖的面都是正方形。",
+    "小徒弟将标准方砖和普通砖块都放入砖窑，按形状分类。",
+    "老工匠用标准方砖和普通砖块进行砌墙练习，发现标准方砖能更好地拼搭出稳固结构。",
+    "老工匠教小徒弟计算标准方砖体积的口诀：棱长×棱长×棱长。"
+  ],
+  "turning_point": "小徒弟意识到标准方砖的特殊性，理解了它作为基础的重要性。",
+  "resolution_state": "小徒弟学会用标准方砖打基础，再结合普通砖块砌墙，最终建成稳固的墙体。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "标准方砖",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "普通砖块",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "砖窑分类法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "砌墙技艺",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "方砖体积计算口诀",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准方砖是一种特殊的普通砖块",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "标准方砖属于砖窑分类法中的一类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "普通砖块与标准方砖有关联（普通砖块包含标准方砖）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "标准方砖使砌墙技艺成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "标准方砖使方砖体积计算口诀成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'正方体'、'立方体'等禁止术语。",
+    "保持所有映射边方向与机制图一致。",
+    "避免将课程桥接上下文（如教学顺序）作为因果机制。"
+  ],
+  "mapping_context_sha256": "72a1ea28fa8fb23d6922116bc07ad10bdbf910780ded8b52596a77178676af58",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3d6d47eee62ff3cc0b782fc3a0b1359140c2b2586d0134fe888b069044eb5297"
+  }
+}

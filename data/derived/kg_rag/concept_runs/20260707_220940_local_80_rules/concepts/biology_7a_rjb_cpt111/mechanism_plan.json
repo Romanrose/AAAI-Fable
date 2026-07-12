@@ -1,0 +1,47 @@
+{
+  "core_question": "花的基本结构的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "一朵花由花柄、花托、萼片、花瓣、雄蕊和雌蕊等组成，其中主要结构是雄蕊和雌蕊。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s2",
+      "text": "避免目的论解释。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "避免把个体努力写成进化原因。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "花的基本结构",
+    "biology_7a_rjb_cpt111"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [],
+    "must_cover_path_ids": []
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "concept_id": "physics_8a_rjb_cpt11",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "速度",
+  "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+  "aliases": [
+    "velocity"
+  ],
+  "examples": [
+    "汽车速度表上的读数",
+    "刘翔跨栏的平均速度"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt13",
+        "label": "Concept",
+        "name": "匀速直线运动",
+        "definition": "速度大小和方向都保持不变的直线运动。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt14",
+        "label": "Concept",
+        "name": "变速直线运动",
+        "definition": "物体沿直线但速度随时间变化的运动。"
+      },
+      {
+        "id": "physics_bx1_rjb_cpt19",
+        "label": "Concept",
+        "name": "速度—时间图像",
+        "definition": "以速度为纵轴、时间为横轴描绘的图像，用于表示物体速度随时间变化的规律。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt12",
+        "label": "Concept",
+        "name": "平均速度",
+        "definition": "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt13",
+        "label": "Concept",
+        "name": "匀速直线运动",
+        "definition": "速度大小和方向都保持不变的直线运动。"
+      },
+      {
+        "id": "physics_bx1_rjb_cpt17",
+        "label": "Concept",
+        "name": "瞬时速度",
+        "definition": "物体在某一时刻或某一很短时间内的速度，用以描述该时刻运动的快慢。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp4",
+        "label": "Experiment",
+        "name": "利用超声波位置传感器测速度",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch1_s3",
+        "label": "Section",
+        "name": "第三节 运动的快慢",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_ch1_s4",
+        "label": "Section",
+        "name": "第四节 测量平均速度",
+        "definition": ""
+      },
+      {
+        "id": "physics_bx1_rjb_ch1_s3",
+        "label": "Section",
+        "name": "第三节 位置变化快慢的描述——速度",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。"
+  ],
+  "must_preserve_zh": [
+    "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "速度",
+    "velocity"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

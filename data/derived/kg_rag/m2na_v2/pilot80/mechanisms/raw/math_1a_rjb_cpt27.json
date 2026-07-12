@@ -1,0 +1,88 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt27",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "数字6的认识：通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "数字7的认识：通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt24:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt27:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n3",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19310"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19311"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数量的比较"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "b7764036dbfa3eb751edce2a78c04cd09fe072ea2df1d6f1547b9391c187f13d",
+    "retrieval_sha256": "932af923d423f4528373ae80da00901474778908a579e3657ee5233e9e03cc81",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "89d2b11fdcb0f09aa218127ac7676a334b7a2c67919ac5088e41bf17252470d9"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

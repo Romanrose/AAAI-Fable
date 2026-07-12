@@ -1,0 +1,374 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "减法的含义"
+  ],
+  "concept_card": {
+    "concept_id": "math_1a_rjb_cpt12",
+    "subject": "math",
+    "story_language": "zh-CN",
+    "canonical_name": "减法的含义",
+    "definition": "表示从一个数量中去掉一部分。",
+    "aliases": [],
+    "examples": [],
+    "teaching_level": "middle_school",
+    "concept_type": "relation",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt7",
+          "label": "Concept",
+          "name": "数字1到5的认识",
+          "definition": "认识并能数出1到5的数量，理解数字与数量的一一对应。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "math_1a_rjb_exe9",
+          "label": "Exercise",
+          "name": "图中有5只鸟飞走1只，还剩几只？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch3",
+          "label": "Chapter",
+          "name": "5以内数的认识和加减法",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [
+      "表示从一个数量中去掉一部分。"
+    ],
+    "must_preserve_zh": [
+      "表示从一个数量中去掉一部分。",
+      "保留形式定义条件和规则一致性。",
+      "避免只有故事没有数学结构。"
+    ],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "减法的含义"
+    ],
+    "subject_constraints_zh": [
+      "保留形式定义条件和规则一致性。",
+      "避免只有故事没有数学结构。",
+      "避免把数学概念道德化。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold",
+      "enrichment_confidence": 0.72
+    },
+    "enrichment_confidence": 0.72
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt12",
+    "concept_id": "math_1a_rjb_cpt12",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt12",
+      "label": "Concept",
+      "name": "减法的含义",
+      "definition": "表示从一个数量中去掉一部分。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "减法的含义\n表示从一个数量中去掉一部分。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "math_1a_rjb_cpt12",
+        "label": "Concept",
+        "name": "减法的含义",
+        "properties": {
+          "definition": "表示从一个数量中去掉一部分。",
+          "importance": "重要",
+          "retrieval_text": "减法的含义\nConcept\n表示从一个数量中去掉一部分。\n重要"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:16376",
+          "source": "math_1a_rjb_cpt7",
+          "source_name": "数字1到5的认识",
+          "target": "math_1a_rjb_cpt12",
+          "target_name": "减法的含义",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "减法的含义",
+          "definition": "表示从一个数量中去掉一部分。",
+          "formula": "",
+          "importance": "重要"
+        },
+        "condition_summary": [
+          "[normalized:edge:16376] 数字1到5的认识 --prerequisites_for--> 减法的含义"
+        ],
+        "process_summary": [],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 1,
+        "candidate_edge_count": 1,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 266,
+        "summary_chars": 241,
+        "path_chars": 0,
+        "retrieval_context_chars": 507
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "减法的含义的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "数字1到5的认识 --prerequisites_for--> 减法的含义",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:16376"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "表示从一个数量中去掉一部分。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        },
+        {
+          "step_id": "s3",
+          "text": "保留形式定义条件和规则一致性。",
+          "kind": "condition",
+          "supporting_edge_ids": []
+        },
+        {
+          "step_id": "s4",
+          "text": "避免只有故事没有数学结构。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:16376"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "减法的含义",
+        "math_1a_rjb_cpt12"
+      ],
+      "coverage_targets": {
+        "required_step_count": 4,
+        "required_dependency_count": 3,
+        "must_cover_edge_ids": [
+          "normalized:edge:16376"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "math_1a_rjb_cpt12",
+      "concept_id": "math_1a_rjb_cpt12",
+      "story_language": "zh-CN",
+      "source_domain": "折纸修复台",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：数字1到5的认识 --prerequisites_for--> 这条隐藏规则",
+        "让中间的行动承接前后变化：表示从一个数量中去掉一部分。",
+        "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。",
+        "让中间的行动承接前后变化：避免只有故事没有数学结构。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：数字1到5的认识 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：表示从一个数量中去掉一部分。"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：避免只有故事没有数学结构。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "减法的含义"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "数字1到5的认识 --prerequisites_for--> 减法的含义",
+            "表示从一个数量中去掉一部分。",
+            "保留形式定义条件和规则一致性。",
+            "避免只有故事没有数学结构。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "保留形式定义条件和规则一致性。",
+            "避免只有故事没有数学结构。",
+            "避免把数学概念道德化。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "折纸修复台",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：数字1到5的认识 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：表示从一个数量中去掉一部分。",
+      "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。",
+      "让中间的行动承接前后变化：避免只有故事没有数学结构。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "减法的含义"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "数字1到5的认识 --prerequisites_for--> 减法的含义",
+          "表示从一个数量中去掉一部分。",
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：数字1到5的认识 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：表示从一个数量中去掉一部分。"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：避免只有故事没有数学结构。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

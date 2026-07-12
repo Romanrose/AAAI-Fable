@@ -1,0 +1,124 @@
+{
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt109",
+    "resolved_node_id": "chemistry_9a_rjb_cpt109",
+    "name": "分解反应",
+    "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_14997",
+      "source_id": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target_id": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14998",
+      "source_id": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target_id": "chemistry_9a_rjb_cpt251",
+      "target_name": "水的分解反应",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_15003",
+      "source_id": "chemistry_9a_rjb_cpt118",
+      "source_name": "化学学习中的分类思想",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_15263",
+      "source_id": "chemistry_9a_rjb_skl28",
+      "source_name": "用分类方法学习化学",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "prerequisites_for",
+      "score": 1.12
+    },
+    {
+      "source_edge_id": "edge_11281",
+      "source_id": "chemistry_9a_rjb_cpt108",
+      "source_name": "加热氯酸钾制取氧气",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_11279",
+      "source_id": "chemistry_9a_rjb_cpt107",
+      "source_name": "过氧化氢分解反应",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_11277",
+      "source_id": "chemistry_9a_rjb_cpt105",
+      "source_name": "高锰酸钾受热分解反应",
+      "target_id": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_18225",
+      "source_id": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target_id": "chemistry_9a_rjb_cpt96",
+      "target_name": "化合反应",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+    "condition_summary": [
+      "化学学习中的分类思想",
+      "用分类方法学习化学"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "化学学习中的分类思想",
+        "用分类方法学习化学"
+      ],
+      "related_concepts": [
+        "实验室制取氧气的方法",
+        "水的分解反应",
+        "化合反应"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "加热氯酸钾制取氧气",
+        "过氧化氢分解反应",
+        "高锰酸钾受热分解反应"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 8,
+    "selected_edge_count": 8,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "query": "math_1a_rjb_cpt2",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt2",
+    "label": "Concept",
+    "name": "比较数量（多、少、一样多）",
+    "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+    "aliases": [],
+    "examples": [
+      "比较两组小棒的数量",
+      "判断哪个图形数量更多"
+    ],
+    "retrieval_text": "比较数量（多、少、一样多）\n根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt3",
+        "label": "Concept",
+        "name": "一一对应比较法",
+        "definition": "通过将两组物体一一配对来比较数量的多少。"
+      },
+      {
+        "id": "math_1a_rjb_cpt1",
+        "label": "Concept",
+        "name": "数物体（数一数）",
+        "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe1",
+        "label": "Exercise",
+        "name": "看图，比较两组小棒的数量，在较多的一组后画“√”。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch1",
+        "label": "Chapter",
+        "name": "准备课",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:12138] 一一对应比较法 --is_a--> 比较数量（多、少、一样多）\n- [normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '比较数量（多、少、一样多）', 'definition': '根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。', 'formula': '', 'importance': '重要'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:12138] 一一对应比较法 --is_a--> 比较数量（多、少、一样多）', '[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt2",
+      "label": "Concept",
+      "name": "比较数量（多、少、一样多）",
+      "properties": {
+        "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+        "importance": "重要",
+        "pages": "P1-P10",
+        "examples": [
+          "比较两组小棒的数量",
+          "判断哪个图形数量更多"
+        ],
+        "retrieval_text": "比较数量（多、少、一样多）\nConcept\n根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。\n重要\nP1-P10\n比较两组小棒的数量\n判断哪个图形数量更多"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:12138",
+        "source": "math_1a_rjb_cpt3",
+        "source_name": "一一对应比较法",
+        "target": "math_1a_rjb_cpt2",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:19305",
+        "source": "math_1a_rjb_cpt1",
+        "source_name": "数物体（数一数）",
+        "target": "math_1a_rjb_cpt2",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "比较数量（多、少、一样多）",
+        "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:12138] 一一对应比较法 --is_a--> 比较数量（多、少、一样多）",
+        "[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 503,
+      "summary_chars": 327,
+      "path_chars": 0,
+      "retrieval_context_chars": 830
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 503,
+    "summary_chars": 327,
+    "path_chars": 0,
+    "retrieval_context_chars": 830
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt114",
+    "subject": "biology",
+    "canonical_name": "传粉",
+    "aliases": [],
+    "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+    "concept_type": "process",
+    "forbidden_terms": [
+      "传粉"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "传粉：花粉从花药散放而落到雌蕊柱头上的过程。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt114:definition",
+          "kg-node:biology_7a_rjb_cpt114:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "自花传粉：一朵花的花粉落到同一朵花柱头上的传粉现象。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt115:definition",
+          "kg-node:biology_7a_rjb_cpt115:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "异花传粉：花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt116:definition",
+          "kg-node:biology_7a_rjb_cpt116:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "受精：精子与卵子结合形成合子（即受精卵）的过程。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt117:definition",
+          "kg-node:biology_7a_rjb_cpt117:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10778"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10779"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14139"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "传粉"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt114",
+      "name": "传粉",
+      "label": "Concept",
+      "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt117",
+        "name": "受精"
+      },
+      {
+        "id": "biology_7a_rjb_cpt115",
+        "name": "自花传粉"
+      },
+      {
+        "id": "biology_7a_rjb_cpt116",
+        "name": "异花传粉"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:14139",
+        "source_id": "biology_7a_rjb_cpt114",
+        "source_name": "传粉",
+        "target_id": "biology_7a_rjb_cpt117",
+        "target_name": "受精",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt117",
+        "neighbor_name": "受精",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10778",
+        "source_id": "biology_7a_rjb_cpt115",
+        "source_name": "自花传粉",
+        "target_id": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "biology_7a_rjb_cpt115",
+        "neighbor_name": "自花传粉",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10779",
+        "source_id": "biology_7a_rjb_cpt116",
+        "source_name": "异花传粉",
+        "target_id": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "biology_7a_rjb_cpt116",
+        "neighbor_name": "异花传粉",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "传粉",
+      "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精"
+    ],
+    "process_summary": [
+      "[normalized:edge:10778] 自花传粉 --is_a--> 传粉",
+      "[normalized:edge:10779] 异花传粉 --is_a--> 传粉"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:14139",
+    "normalized:edge:10778",
+    "normalized:edge:10779"
+  ],
+  "provenance": {
+    "seed_sha256": "ec935fa1d6a3e032b2269a47614fb876b52b88e9d7df1742ea10d74b6a727d6a",
+    "retrieval_sha256": "8ae51d88b9b7bd96c5df930bf5c96b4232594897753ea95294e9b92bea6ffb2d",
+    "mechanism_record_sha256": "abd02ffadc530b44440ab1bdbef7a8c6d015ac30bd9d3a72bb29083b7a18dec0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story vividly depicts the transformation of raw dough into bread, but the mapping plan assigns '厨师的烹饪操作' as the carrier for n2 (物质的变化). However, the story focuses on the change itself (dough becoming bread) rather than the operation as a process. The edge e1 (enables) is not explicitly realized as a causal relation in the story; the cooking operation is present but the enabling relation between matter and change is not clearly shown. This makes the mapping weaker than a story that directly shows the process of change as a distinct event."
+  },
+  "revision_instructions": [
+    "Revise the mapping for n2: map '物质的变化' to the actual transformation event (e.g., '面团变成面包的过程') rather than to '厨师的烹饪操作'.",
+    "Ensure edge e1 is explicitly realized in the story by adding a sentence that shows the cooking operation enables the transformation (e.g., '正是王伯的烹饪操作，使生面团变成了面包').",
+    "Increase node_coverage and edge_coverage to at least 0.8 by aligning all mechanism nodes and edges to distinct story elements."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

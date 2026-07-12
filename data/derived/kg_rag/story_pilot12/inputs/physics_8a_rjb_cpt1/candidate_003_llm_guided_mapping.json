@@ -1,0 +1,53 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "中医诊断",
+  "domain_rationale": "中医的脉象需要通过脉诊和脉象单位来辨识，类似长度需要测量和单位。",
+  "conflict": "脉象是生理状态，而长度是物理量，但两者都依赖特定工具和标准化方法才能准确判定。",
+  "event_chain": [
+    "郎中想要判断病人的气血情况",
+    "气血情况需要脉象类型（如浮、沉、数、迟）来分类",
+    "郎中通过切脉（手指按压寸关尺）来测量脉象",
+    "切脉的方法（如取位、力度、时间）确保诊断准确"
+  ],
+  "turning_point": "郎中通过切脉感知到脉象类型，从而确认气血状况。",
+  "resolution_state": "病人的气血情况通过脉象类型和标准切脉方法被准确诊断，郎中据此开方。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "病人的气血情况",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "脉象类型（浮、沉、数、迟）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "通过切脉测量脉象",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "切脉的方法",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "脉象类型是气血情况的一种分类表示",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "切脉的过程验证了气血情况",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "气血情况使得切脉的方法成为必要",
+      "direction_preserved": true
+    }
+  ]
+}

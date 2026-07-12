@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt104",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农用井水浇灌菜园的故事",
+  "characters": [
+    "老农"
+  ],
+  "objects": [
+    "水井",
+    "菜园",
+    "水桶",
+    "井水"
+  ],
+  "conflict": "老农想用井水浇灌菜园，但水桶离水面太远，无法直接取水。",
+  "event_chain": [
+    "老农有一口水井，井水很深。",
+    "老农将水桶靠近井口。",
+    "水桶靠近井口后，老农用绳子将水桶放下井中，水桶装满井水。",
+    "老农提起水桶，得到井水浇灌菜园。"
+  ],
+  "turning_point": "老农将水桶靠近井口并放下绳子取水。",
+  "resolution_state": "老农成功用井水浇灌了菜园。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "水井",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水桶靠近井口",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农用绳子将水桶放下井中，水桶装满井水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "井水",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水井的存在使得水桶靠近井口成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "水桶靠近井口导致老农用绳子放下水桶取水",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老农用绳子放下水桶取水的过程产生了井水",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事载体不使用任何目标概念名称、别名或禁止术语，如'投影仪成像'。",
+    "确保每个必须保留的机制节点和边都被映射，且边方向正确。",
+    "确保课程桥接上下文不被视为因果机制。",
+    "确保使用单一连贯的源域，而不是不相关的隐喻列表。"
+  ],
+  "mapping_context_sha256": "f7ddcef0437976190d49c77b505d826b340d785e4ffeca335badf09b41c64af2",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "294240dd492e793085800828f953b3ec7d61131fbff9c9d3e76f2230e97e9221"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "减法的含义"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "表示从一个数量中去掉一部分。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：数字1到5的认识",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16376"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "厨房烹饪",
+    "setting": "一个家庭厨房里，妈妈正在准备晚餐，小明在旁边帮忙。",
+    "conflict": "小明需要从一篮苹果中取出一些给客人，但不知道如何确定剩下的数量。",
+    "characters": [
+      {
+        "name": "小明",
+        "role": "学习者，需要理解从整体中取出一部分后剩余多少",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "妈妈",
+        "role": "引导者，提供初始数量和操作步骤",
+        "mapped_element": "m2"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "小明从一篮苹果中取出3个给客人"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "妈妈告诉小明篮子里原来有5个苹果"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "妈妈告诉小明篮子里原来有5个苹果，并让他取出3个给客人。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小明取出3个苹果后，看着剩下的苹果数了数，发现还有2个。",
+        "mapped_elements": [
+          "m1"
+        ]
+      }
+    ],
+    "turning_point": "小明数完剩下的苹果后，意识到从5个中拿走3个，剩下的就是2个。",
+    "ending": "小明成功地将3个苹果给了客人，并告诉妈妈篮子里还剩2个苹果。",
+    "implied_moral": "从一个整体中取出一部分，剩下的数量可以通过已知的初始数量和取出的数量来确定。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

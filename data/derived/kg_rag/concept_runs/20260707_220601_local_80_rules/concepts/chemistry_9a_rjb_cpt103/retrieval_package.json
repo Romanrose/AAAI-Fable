@@ -1,0 +1,139 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt103",
+    "label": "Concept",
+    "name": "实验室制取氧气的方法",
+    "properties": {
+      "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+      "importance": "重要",
+      "examples": [
+        "加热高锰酸钾制取氧气",
+        "在二氧化锰催化下分解过氧化氢制取氧气",
+        "加热混有二氧化锰的氯酸钾固体制取氧气"
+      ],
+      "retrieval_text": "实验室制取氧气的方法\nConcept\n在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。\n重要\n加热高锰酸钾制取氧气\n在二氧化锰催化下分解过氧化氢制取氧气\n加热混有二氧化锰的氯酸钾固体制取氧气"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14997",
+      "source": "chemistry_9a_rjb_cpt109",
+      "source_name": "分解反应",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14996",
+      "source": "chemistry_9a_rjb_cpt103",
+      "source_name": "实验室制取氧气的方法",
+      "target": "chemistry_9a_rjb_cpt119",
+      "target_name": "氧气的收集方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:15223",
+      "source": "chemistry_9a_rjb_cpt66",
+      "source_name": "氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:15261",
+      "source": "chemistry_9a_rjb_skl26",
+      "source_name": "通过实验现象推断气体性质",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11278",
+      "source": "chemistry_9a_rjb_cpt106",
+      "source_name": "分解过氧化氢制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11280",
+      "source": "chemistry_9a_rjb_cpt108",
+      "source_name": "加热氯酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11276",
+      "source": "chemistry_9a_rjb_cpt104",
+      "source_name": "加热高锰酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:22572",
+      "source": "chemistry_9a_rjb_exp16",
+      "source_name": "实验2-5 加热高锰酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "实验室制取氧气的方法",
+      "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:14997] 分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+      "[normalized:edge:14996] 实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+      "[normalized:edge:15223] 氧气 --prerequisites_for--> 实验室制取氧气的方法",
+      "[normalized:edge:15261] 通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:11278] 分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:11280] 加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:11276] 加热高锰酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:22572] 实验2-5 加热高锰酸钾制取氧气 --verifies--> 实验室制取氧气的方法"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 8,
+    "candidate_edge_count": 8,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2175,
+    "summary_chars": 729,
+    "path_chars": 0,
+    "retrieval_context_chars": 2904
+  }
+}

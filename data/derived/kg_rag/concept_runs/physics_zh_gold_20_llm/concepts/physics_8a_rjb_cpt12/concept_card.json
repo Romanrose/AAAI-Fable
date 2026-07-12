@@ -1,0 +1,97 @@
+{
+  "concept_id": "physics_8a_rjb_cpt12",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "平均速度",
+  "definition": "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。",
+  "aliases": [],
+  "examples": [
+    "刘翔110 m跨栏的平均速度"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt11",
+        "label": "Concept",
+        "name": "速度",
+        "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt13",
+        "label": "Concept",
+        "name": "匀速直线运动",
+        "definition": "速度大小和方向都保持不变的直线运动。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp3",
+        "label": "Experiment",
+        "name": "测量物体运动的平均速度",
+        "definition": ""
+      },
+      {
+        "id": "physics_bx1_rjb_exp2",
+        "label": "Experiment",
+        "name": "测量纸带的平均速度",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "physics_8a_rjb_exe2",
+        "label": "Exercise",
+        "name": "刘翔在2004雅典奥运会上完成110 m跨栏的时间为12.91 s，求他的平均速度。",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_exe3",
+        "label": "Exercise",
+        "name": "在测量平均速度的实验中，应该用什么测量路程，用什么测量时间，并用什么公式求出平均速度？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch1_s3",
+        "label": "Section",
+        "name": "第三节 运动的快慢",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_ch1_s4",
+        "label": "Section",
+        "name": "第四节 测量平均速度",
+        "definition": ""
+      },
+      {
+        "id": "physics_bx1_rjb_ch1_s3",
+        "label": "Section",
+        "name": "第三节 位置变化快慢的描述——速度",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "平均速度"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt106",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子萌发的自身条件：胚完整且有活性、种子未处于休眠",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "种子萌发：种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt101:definition",
+          "kg-node:biology_7a_rjb_cpt101:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "种子休眠：种子成熟后在一段时期内即使环境适宜也不能萌发的现象",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14134",
+          "kg-edge:normalized:edge:10776"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10777"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "种子萌发的自身条件"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "b6ad6737eae719cd31228ef916f543118a33507666a9865e910b500fd2c5ef9e",
+    "retrieval_sha256": "15d36f831573a2a936a1b4d506e9491ae9311d1892c1645b2a3c1e0db52093e2",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "b2d3501fb5a2e86cc0ca286c65e39c98d5f25c7c4ccd698b00497cef76570985"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

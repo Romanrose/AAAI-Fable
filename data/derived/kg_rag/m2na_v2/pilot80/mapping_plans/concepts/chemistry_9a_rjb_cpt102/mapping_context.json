@@ -1,0 +1,233 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt102",
+    "subject": "chemistry",
+    "canonical_name": "呼吸与氧气",
+    "aliases": [],
+    "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+    "concept_type": "process",
+    "forbidden_terms": [
+      "呼吸与氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition",
+          "kg-node:chemistry_9a_rjb_cpt100:definition",
+          "kg-node:chemistry_9a_rjb_cpt100:examples"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "环境中氧气含量偏低",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "吸氧可以给人体呼吸提供适量的氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "缓解高原反应等症状",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition",
+          "kg-node:chemistry_9a_rjb_cpt16:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "state",
+        "text": "氧气的物理性质：密度比空气略大，不易溶于水",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt16:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n5",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt16:definition"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n6",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18224"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "呼吸与氧气"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt102",
+      "name": "呼吸与氧气",
+      "label": "Concept",
+      "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt100",
+        "name": "缓慢氧化"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt16",
+        "name": "氧气的物理性质"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:18223",
+        "source_id": "chemistry_9a_rjb_cpt102",
+        "source_name": "呼吸与氧气",
+        "target_id": "chemistry_9a_rjb_cpt100",
+        "target_name": "缓慢氧化",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt100",
+        "neighbor_name": "缓慢氧化",
+        "score": 0.9,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:18224",
+        "source_id": "chemistry_9a_rjb_cpt102",
+        "source_name": "呼吸与氧气",
+        "target_id": "chemistry_9a_rjb_cpt16",
+        "target_name": "氧气的物理性质",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt16",
+        "neighbor_name": "氧气的物理性质",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "呼吸与氧气",
+      "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:18223] 呼吸与氧气 --relates_to--> 缓慢氧化",
+      "[normalized:edge:18224] 呼吸与氧气 --relates_to--> 氧气的物理性质"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:18223",
+    "normalized:edge:18224"
+  ],
+  "provenance": {
+    "seed_sha256": "7c6667888be73e45fc5bada62052dd681511fdc1e5d2740f2055ce8b2e934101",
+    "retrieval_sha256": "431ba6ac146820b31b0a2f8518b877338ea2558d8f850346e59f803cd955e7f3",
+    "mechanism_record_sha256": "78c38d0ba28c6116289ee3ebbb8b66b71273682d27d76e823e4bc33cdd228b6d"
+  }
+}

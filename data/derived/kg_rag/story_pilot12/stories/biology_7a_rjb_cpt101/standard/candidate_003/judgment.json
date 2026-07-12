@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully and accurately mapped with high confidence. The story embeds the mechanism naturally without explicit terminology, and the mapping is clear and pedagogically sound. The only minor point is that the story is slightly conventional, but this does not detract from its quality."
+  },
+  "revision_instructions": [],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

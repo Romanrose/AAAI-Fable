@@ -1,0 +1,25 @@
+{
+  "pipeline": "con2fable",
+  "concept_cards_path": "data\\derived\\kg_rag\\concept_cards\\k12_concept_cards.enriched.jsonl",
+  "normalized_graph_path": "data\\derived\\kg_rag\\k12_kgraph_normalized.json",
+  "concept_count": 4,
+  "subjects": [
+    "biology",
+    "chemistry",
+    "math",
+    "physics"
+  ],
+  "priorities": [
+    "gold"
+  ],
+  "limit": null,
+  "limit_per_subject": 1,
+  "options": {
+    "language": "zh-CN",
+    "max_edges": 16,
+    "revision_rounds": 0,
+    "method": "con2fable",
+    "run_six_dim_llm": false,
+    "six_dim_judge_count": 1
+  }
+}

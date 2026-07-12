@@ -1,0 +1,231 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "实验室制取氧气的方法",
+  "concept_id": "chemistry_9a_rjb_cpt103",
+  "concept_definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt103",
+    "实验室制取氧气的方法"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt103",
+      "label": "Concept",
+      "name": "实验室制取氧气的方法",
+      "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+      "aliases": [],
+      "examples": [
+        "加热高锰酸钾制取氧气",
+        "在二氧化锰催化下分解过氧化氢制取氧气",
+        "加热混有二氧化锰的氯酸钾固体制取氧气"
+      ],
+      "retrieval_text": "实验室制取氧气的方法\n在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt119",
+          "label": "Concept",
+          "name": "氧气的收集方法",
+          "definition": "实验室制取氧气后，将生成的氧气导出并收集起来的具体方法，如排水法等。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt66",
+          "label": "Concept",
+          "name": "氧气",
+          "definition": "一种重要的气体单质，空气中体积分数约为21%，可由高锰酸钾、过氧化氢溶液、氯酸钾等分解制取，是许多燃烧和化工过程必需的物质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt104",
+          "label": "Concept",
+          "name": "加热高锰酸钾制取氧气",
+          "definition": "在试管中装入少量高锰酸钾并加热，使其受热分解生成二氧化锰、锰酸钾和氧气的实验室制氧方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt106",
+          "label": "Concept",
+          "name": "分解过氧化氢制取氧气",
+          "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt108",
+          "label": "Concept",
+          "name": "加热氯酸钾制取氧气",
+          "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp16",
+          "label": "Experiment",
+          "name": "实验2-5 加热高锰酸钾制取氧气",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt103",
+    "concept_id": "chemistry_9a_rjb_cpt103",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt103",
+      "label": "Concept",
+      "name": "实验室制取氧气的方法",
+      "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+      "aliases": [],
+      "examples": [
+        "加热高锰酸钾制取氧气",
+        "在二氧化锰催化下分解过氧化氢制取氧气",
+        "加热混有二氧化锰的氯酸钾固体制取氧气"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "实验室制取氧气的方法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "三种秘方都能得到同一种气体，对应实验室制取氧气的三种方法：加热高锰酸钾、分解过氧化氢、加热氯酸钾。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "紫色晶体加热分解（对应加热高锰酸钾）；无色液体加黑色粉末不加热即产生气体（对应过氧化氢在二氧化锰催化下分解）；白色粉末加黑色粉末加热产生气体（对应氯酸钾在二氧化锰催化下加热分解）。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中未出现化学式或元素符号；区分了原料变化（紫色晶体变黑色粉末和暗色物质）与催化剂不变（黑色粉末在第二、三种方法中几乎无变化）；隐含质量守恒（原料变成新物质）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的三种秘方\n\n从前，在一个繁华的城邦里，有一位年轻的账房学徒叫阿明。他负责管理城邦的仓库，仓库里存放着各种珍贵的物资。阿明发现，仓库里有一种无色无味的气体，能让火焰烧得更旺，还能让生病的人呼吸顺畅。这种气体非常宝贵，但每次用完后，都需要重新补充。\n\n阿明向老账房先生请教如何获得这种气体。老账房先生笑了笑，带他来到仓库后面的小作坊，指着三样东西说：“这里有三种秘方，都能帮你得到那种气体。但每种方法都有不同的规矩，你要仔细观察。”\n\n第一种秘方：老账房先生取出一块紫色的晶体，放进一个陶罐里，然后点燃陶罐底下的炭火。不一会儿，陶罐里冒出了那种宝贵的气体。阿明看到，紫色的晶体慢慢变成了黑色的粉末和另一种暗色的物质。老账房先生说：“这种方法需要持续加热，晶体才会分解。”\n\n第二种秘方：老账房先生拿出一瓶无色透明的液体，倒进另一个陶罐里，然后加入一些黑色的粉末。奇怪的是，没有加热，陶罐里就冒出了那种气体。阿明惊讶地发现，黑色的粉末在反应后几乎没有变化。老账房先生说：“这种液体自己就能分解，黑色的粉末只是帮忙加速，它本身并不消耗。”\n\n第三种秘方：老账房先生取出一堆白色的粉末，和少量黑色粉末混合在一起，放进第三个陶罐里加热。很快，陶罐里也冒出了那种气体。阿明看到，白色的粉末变成了另一种白色物质，而黑色粉末依然没有变化。\n\n阿明恍然大悟：“原来，三种方法都能得到同一种气体，但用的原料和条件不同：有的需要加热，有的不需要；有的原料会变成新物质，有的只是帮忙加速。”老账房先生点点头：“记住，每种方法都有它的道理，你要根据情况选择最合适的。”\n\n从此，阿明学会了如何根据需要，用不同的方法获得那种宝贵的气体。",
+  "rule_findings": {
+    "story_token_count": 617,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

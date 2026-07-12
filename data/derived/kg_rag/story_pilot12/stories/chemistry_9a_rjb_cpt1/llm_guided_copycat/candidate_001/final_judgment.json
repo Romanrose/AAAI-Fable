@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (物质) is strongly mapped to '一段原木' with concrete, sustained presence throughout the story. Node n2 (物质的变化) is mapped to '木匠的加工过程', but the story focuses more on the carpenter's actions than on the abstract concept of change; the process is described but not explicitly framed as '变化' until the final line. Edge e1 (enables) is explicitly stated in the sentence '正是原木的存在，让老陈能够动手加工，从而引发这场变化', preserving direction, but the relation could be more deeply integrated into the narrative rather than stated as a meta-commentary."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping of node n2 by explicitly linking the carpenter's processing steps to the concept of '物质的变化' (e.g., using phrases like '原木在加工中发生了物理变化' or '木匠的每一步都在改变原木的形态').",
+    "Integrate the enables relation more naturally into the story flow, avoiding explicit meta-commentary; for example, show how the log's properties (e.g., hardness, grain) directly enable specific processing steps.",
+    "Ensure the story length stays within 450-750 Chinese characters (current 686 is acceptable).",
+    "Improve node_coverage (currently 0.5) by ensuring both mechanism nodes are equally represented; consider adding a sentence that explicitly names the change process as '变化'."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

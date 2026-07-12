@@ -1,0 +1,130 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：使用刻度尺的方法",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "属于或连接到上位结构：长度单位（米及其倍数、子倍数）",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "可以通过相关证据或实验验证：用刻度尺测量长度",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:17188"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:12429"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:23027"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "小周第一次独自在信号台上值勤。远处海面上，一艘货船正缓缓归来。他举起望远镜，盯着那模糊的船影，心里盘算着什么时候该升起入港旗。\n\n“差不多了。”他凭感觉拉动了旗绳。\n\n可旗子刚升到一半，对讲机里就传来调度长恼怒的声音：“谁让你升旗的？船离信号台还远得很！后面的船队全被你搞乱了，减速太早，队形全散了！”\n\n小周脸涨得通红。他确实觉得那船“看起来差不多近了”，可实际差距却那么大。\n\n瞭望员老陈走了过来，手里拿着一本翻旧了的信号手册。“小周，判断距离不能靠感觉。你看这里——”他翻开手册，指着一行字，“手册规定，入港旗的升起时机必须根据测距标杆的读数来确定。”\n\n老陈从工具柜里取出一根细长的标杆，上面刻着均匀的格子。“用这个来校准你的眼睛。你透过望远镜看目标，数一数它在标杆上占了几格。一格代表一个固定单位，几格就是几个单位。这样，你就能把‘看起来多远’变成‘标杆上的几格’，准确知道船和信号台之间到底隔了多远。”\n\n小周接过标杆，照着老陈教的方法反复练习。他一次次举起望远镜，观察不同距离的船只，在标杆上读出读数，再对照手册上的标准值。渐渐地，他不再凭模糊的感觉，而是有了一个可重复、可参照的判断依据。\n\n几天后，又一艘货船靠近。小周沉着地举起望远镜，透过标杆读出读数——三格半。他迅速对照手册，在正确的时机拉动了旗绳。\n\n旗子升起的那一刻，船队编队流畅地转向，整齐地驶入港口。对讲机里传来调度长满意的声音：“时机正好。”\n\n小周放下望远镜，看着手中的测距标杆。这根带有固定刻度的工具，把他眼中模糊的“远与近”，变成了清晰可辨的“几格”。他不再需要猜，只需要看、数、读。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "小周需要判断的‘货船与信号台之间的空间间隔’",
+        "evidence": "船和信号台之间到底隔了多远",
+        "narrative_anchor": "船和信号台之间到底隔了多远",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "小周学习使用测距标杆的方法",
+        "evidence": "照着老陈教的方法反复练习",
+        "narrative_anchor": "照着老陈教的方法反复练习",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "测距标杆上的‘一格’对应长度单位",
+        "evidence": "一格代表一个固定单位",
+        "narrative_anchor": "一格代表一个固定单位",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "小周通过实际测量验证判断",
+        "evidence": "透过标杆读出读数——三格半",
+        "narrative_anchor": "透过标杆读出读数——三格半",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "小周先学习使用测距标杆，才能准确测量空间间隔",
+        "evidence": "照着老陈教的方法反复练习",
+        "narrative_anchor": "照着老陈教的方法反复练习",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "掌握测距标杆使用方法后，才能将间隔转化为长度单位",
+        "evidence": "一格代表一个固定单位",
+        "narrative_anchor": "一格代表一个固定单位",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "通过实际测量验证长度单位的应用",
+        "evidence": "透过标杆读出读数——三格半",
+        "narrative_anchor": "透过标杆读出读数——三格半",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

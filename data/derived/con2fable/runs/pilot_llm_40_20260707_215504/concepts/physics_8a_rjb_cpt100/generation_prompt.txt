@@ -1,0 +1,117 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "焦点"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：主光轴",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：焦距",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17246"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_23045"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "光学实验",
+    "setting": "一间光线充足的物理实验室，实验台上摆放着凸透镜、光源和光屏。",
+    "conflict": "一束平行光经过凸透镜后无法准确汇聚到一点，导致光屏上的光斑散乱。",
+    "characters": [
+      {
+        "name": "小光",
+        "role": "实验操作者，负责调整光源和透镜",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "透镜",
+        "role": "凸透镜，负责折射光线",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "光屏",
+        "role": "接收光线的屏幕，显示汇聚效果",
+        "mapped_element": "m3"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "小光将平行光束对准透镜中心"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "透镜的对称轴（主光轴）确保光束方向正确"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "光屏上出现一个明亮的小点，代表光线汇聚"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "小光打开光源，一束平行光射向凸透镜，但光屏上光斑散乱。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小光检查透镜是否正对光源，确保光束沿透镜的对称轴入射。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "调整后，平行光穿过透镜，在光屏上汇聚成一个明亮的小点。",
+        "mapped_elements": [
+          "m1",
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "小光发现光斑散乱是因为光束没有沿透镜的对称轴入射，调整后光线成功汇聚。",
+    "ending": "光屏上出现一个清晰的小点，实验成功，小光理解了光线汇聚的条件。",
+    "implied_moral": "只有沿着正确的路径，分散的力量才能集中到一处，产生最大的效果。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

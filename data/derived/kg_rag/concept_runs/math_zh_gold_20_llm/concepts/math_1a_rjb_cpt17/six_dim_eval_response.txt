@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地传达了'球体'的定义：表面上所有点到中心的距离都相等。通过阿明的测量和守城老人的解释，数学机制被正确呈现，无任何矛盾或错误。",
+    "implicitness": "故事完全避免了直接使用'球体'一词，而是用'圆石'作为替代，且未出现任何禁止术语。概念通过事件和对话自然隐含，符合隐含性要求。",
+    "mapping_clarity": "故事中的测量事件（绳子长度不变）与数学定义（距离处处相等）之间的映射非常清晰。守城老人的总结直接点明了核心机制，使读者能明确理解概念。",
+    "readability": "语言流畅、情节连贯，适合目标年龄段的读者。叙述简洁，没有冗余或复杂句式，易于理解。",
+    "pedagogical_value": "故事通过观察、测量和验证的过程，有效教授了球体的定义。结尾还扩展到识别其他球体（篮球、弹珠），并区分非球体（方石、长石），强化了学习效果。",
+    "novelty": "故事采用了常见的'探索-发现-解释'叙事模式，场景（广场、石柱、影子）和角色（观察者、老人）较为典型，新颖性一般。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个对比实验，例如让阿明测量方石或长石，发现其表面到中心的距离不相等，从而更突出球体的特性。",
+    "结尾部分可更自然地融入'按形状分类'的相关概念，以呼应子图包中的关联概念。"
+  ]
+}

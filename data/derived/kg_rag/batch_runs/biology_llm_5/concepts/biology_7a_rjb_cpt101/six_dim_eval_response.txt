@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "The story accurately depicts seed germination as requiring both internal stored food and external conditions (warmth, moisture, air), matching the concept definition and prerequisites.",
+    "implicitness": "The target concept '种子萌发' is never mentioned; it is conveyed entirely through the narrative of seeds, soil, and growth.",
+    "mapping_clarity": "Each story element clearly maps to a concept component: plump seed (viable embryo), cracked seed (dormant but viable), hollow seed (dead), warmth/moisture (environmental conditions), and the apprentice's test (experiment).",
+    "readability": "The story is concise, uses simple language, and flows naturally with a clear cause-and-effect sequence.",
+    "pedagogical_value": "The story effectively teaches that both internal and external conditions are necessary for germination, reinforced by contrasting examples and a test.",
+    "novelty": "While the garden workshop setting is common, the use of three seed types and a test adds some originality, but the core scenario is familiar."
+  },
+  "revision_suggestions": [
+    "Consider adding a brief mention of air/oxygen to explicitly cover all three environmental conditions.",
+    "The hollow seed rotting could be clarified as lacking internal food rather than just 'rotting' to strengthen the internal condition lesson."
+  ]
+}

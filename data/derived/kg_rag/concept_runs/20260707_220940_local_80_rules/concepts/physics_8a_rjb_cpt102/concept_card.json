@@ -1,0 +1,84 @@
+{
+  "concept_id": "physics_8a_rjb_cpt102",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "实像",
+  "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt103",
+        "label": "Concept",
+        "name": "照相机成像",
+        "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt104",
+        "label": "Concept",
+        "name": "投影仪成像",
+        "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt82",
+        "label": "Concept",
+        "name": "虚像",
+        "definition": "光线通过透镜后并未真正会聚，人眼倒推光线形成的像，不能被光屏承接，物体与像在透镜同侧。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp25",
+        "label": "Experiment",
+        "name": "自制模型照相机实验",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_exp26",
+        "label": "Experiment",
+        "name": "投影仪演示实验",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s2",
+        "label": "Section",
+        "name": "第二节 生活中的透镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+  ],
+  "must_preserve_zh": [
+    "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "实像"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

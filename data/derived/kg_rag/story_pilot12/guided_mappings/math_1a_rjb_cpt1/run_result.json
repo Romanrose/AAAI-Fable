@@ -1,0 +1,85 @@
+{
+  "pipeline_version": "llm-guided-copycat-mvp/v1",
+  "created_at_utc": "2026-07-10T10:31:02.576434+00:00",
+  "concept_id": "math_1a_rjb_cpt1",
+  "mapping_context_sha256": "d352606f2cdd485b8538c171b80a51d6a53299e2966530529ee79a2f6533c77f",
+  "candidate_count": 3,
+  "selected_candidate_id": "candidate_001",
+  "selected_mapping": {
+    "candidate_id": "candidate_001",
+    "source_domain": "农夫种菜",
+    "domain_rationale": "农夫种菜的过程包含准备、种植、收获等步骤，与数物体、比较数量、一一对应比较法有结构上的相似性。",
+    "conflict": "无直接冲突，但农夫种菜中“数种子”与“数物体”类似，但“比较菜苗数量”与“比较物体数量”可能不完全对应。",
+    "event_chain": [
+      "农夫在菜地里挖坑，将种子一粒一粒地放入坑中。",
+      "农夫观察菜苗长出后，比较哪块地的菜苗多、哪块少、是否一样多。",
+      "农夫将两块地的菜苗一一配对，以比较数量的多少。"
+    ],
+    "turning_point": "农夫发现A地菜苗比B地多，通过一一配对确认。",
+    "resolution_state": "农夫清楚每块地的菜苗数量，并知道哪块多哪块少。",
+    "node_mappings": [
+      {
+        "mechanism_node_id": "n1",
+        "story_carrier": "农夫将种子一粒一粒地放入坑中",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n2",
+        "story_carrier": "农夫观察菜苗长出后，比较哪块地的菜苗多、哪块少、是否一样多",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n3",
+        "story_carrier": "农夫将两块地的菜苗一一配对，以比较数量的多少",
+        "mapping_type": "process"
+      }
+    ],
+    "edge_mappings": [
+      {
+        "mechanism_edge_id": "e1",
+        "story_relation": "农夫在种完种子后，根据菜苗数量进行比较",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e2",
+        "story_relation": "农夫通过种种子掌握了菜苗数量，从而能进行一一配对比较",
+        "direction_preserved": true
+      }
+    ]
+  },
+  "selected_evaluation": {
+    "score": 1.0,
+    "temperature": 0.0,
+    "node_coverage": 1.0,
+    "edge_coverage": 1.0,
+    "carrier_diversity": 1.0,
+    "relation_diversity": 1.0,
+    "leakage_free": 1.0,
+    "narrative_complete": 1.0,
+    "template_issues": [],
+    "validation_errors": [],
+    "mechanism_node_count": 3
+  },
+  "scout_trace": {
+    "status": "success",
+    "prompt_version": "semantic-scout/v1",
+    "prompt_sha256": "bec2a5c0a8227875c533d58e9e37e144800c0d2fb3036edf23ca5963503bfcf1",
+    "model": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    }
+  },
+  "refiner_trace": {
+    "status": "not_needed"
+  },
+  "model": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "休眠种球在适宜的温度、水分和内部胚体完好的条件下，外壳吸水变软，胚根和胚芽开始发育，最终长成幼苗的过程。",
+      "evidence": "种球外壳裂开一道缝，幼嫩的胚根和胚芽伸了出来",
+      "narrative_anchor": "种球外壳裂开一道缝，幼嫩的胚根和胚芽伸了出来",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

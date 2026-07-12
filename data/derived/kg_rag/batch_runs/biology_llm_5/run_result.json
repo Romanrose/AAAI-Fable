@@ -1,0 +1,8 @@
+{
+  "summary_path": "data\\derived\\kg_rag\\batch_runs\\biology_llm_5\\summary.jsonl",
+  "manifest_path": "data\\derived\\kg_rag\\batch_runs\\biology_llm_5\\manifest.json",
+  "concept_count": 5,
+  "success_count": 5,
+  "failed_count": 0,
+  "skipped_count": 0
+}

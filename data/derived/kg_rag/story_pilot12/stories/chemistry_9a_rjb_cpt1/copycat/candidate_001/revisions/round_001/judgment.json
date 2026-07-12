@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (物质) is mapped to '入口条件核对' which is a static condition check, not the entity '物质' itself. Node n2 (物质的变化) is mapped to '结果验收记录' which is a verification step, not the process of change. Edge e1 (enables) is partially preserved as a sequential dependency, but the story adds an extra intermediate step (调度员搬运) that is not in the mechanism graph, diluting the direct enables relation. The story's turning point (skipping the middle step) actually highlights a different relation (order dependency) rather than the enables relation between n1 and n2."
+  },
+  "revision_instructions": [
+    "Reduce story length to 450-750 Chinese characters (currently 827).",
+    "Increase node_coverage: ensure both mechanism nodes are directly represented as the intended concepts (物质 and 物质的变化) rather than procedural steps.",
+    "Remove the extra intermediate step (调度员搬运) or explicitly map it as part of the enables relation chain.",
+    "Ensure the edge relation 'enables' is shown as a direct causal link from the entity (物质) to the process (物质的变化), not just a sequential dependency.",
+    "Avoid using terms like '入口条件核对' and '结果验收记录' which are too close to the mapping plan's carrier names; use more implicit, story-embedded references."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

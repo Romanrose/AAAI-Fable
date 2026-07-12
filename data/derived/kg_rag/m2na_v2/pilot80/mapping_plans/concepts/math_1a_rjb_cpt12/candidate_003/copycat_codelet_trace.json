@@ -1,0 +1,587 @@
+[
+  {
+    "codelet_name": "BootstrapTargetConceptCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:target_concept:001",
+        "structure_type": "TargetConceptStructure",
+        "content": {
+          "concept_id": "math_1a_rjb_cpt12",
+          "name": "减法的含义",
+          "definition": "表示从一个数量中去掉一部分。",
+          "forbidden_terms": [
+            "减法的含义"
+          ]
+        },
+        "strength": 0.9,
+        "salience": 1.0,
+        "support": [
+          "concept_card"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BootstrapTargetConceptCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 72.0,
+    "temperature_after": 66.0,
+    "confidence": 0.9,
+    "notes": [
+      "target_concept=减法的含义"
+    ],
+    "step": 1,
+    "coderack_item": {
+      "item_id": "candidate_003:build:001",
+      "codelet_type": "BootstrapTargetConceptCodelet",
+      "urgency": 0.9,
+      "temperature_sensitivity": 0.65,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "bootstrap target concept as the workspace subject",
+      "evidence": {},
+      "adjusted_urgency": 1.3212
+    }
+  },
+  {
+    "codelet_name": "ProposeSourceDomainCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:source_domain:001",
+        "structure_type": "SourceDomainStructure",
+        "content": {
+          "source_domain": "地图修补坊",
+          "selection_basis": "subject_rotating_domain_pool"
+        },
+        "strength": 0.72,
+        "salience": 0.82,
+        "support": [
+          "copycat.source_domain_pool",
+          "subject=math"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ProposeSourceDomainCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 66.0,
+    "temperature_after": 58.0,
+    "confidence": 0.82,
+    "notes": [
+      "source_domain=地图修补坊"
+    ],
+    "step": 2,
+    "coderack_item": {
+      "item_id": "candidate_003:build:002",
+      "codelet_type": "ProposeSourceDomainCodelet",
+      "urgency": 0.78,
+      "temperature_sensitivity": 0.6,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "target concept exists; choose a source domain",
+      "evidence": {},
+      "adjusted_urgency": 1.08888
+    }
+  },
+  {
+    "codelet_name": "BuildConceptRelationStructuresCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:concept_relation:001",
+        "structure_type": "ConceptRelationStructure",
+        "content": {
+          "source_edge_id": "normalized:edge:16376",
+          "source_id": "math_1a_rjb_cpt7",
+          "source_name": "数字1到5的认识",
+          "target_id": "math_1a_rjb_cpt12",
+          "target_name": "减法的含义",
+          "neighbor_name": "数字1到5的认识",
+          "kg_relation": "prerequisites_for",
+          "relation_semantic_role": "prerequisite",
+          "direction": "incoming"
+        },
+        "strength": 0.76,
+        "salience": 0.96,
+        "support": [
+          "concept_relation_graph.relations"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 58.0,
+    "temperature_after": 48.0,
+    "confidence": 0.82,
+    "notes": [
+      "concept_relation_count=1"
+    ],
+    "step": 3,
+    "coderack_item": {
+      "item_id": "candidate_003:build:003",
+      "codelet_type": "BuildConceptRelationStructuresCodelet",
+      "urgency": 0.86,
+      "temperature_sensitivity": 0.5,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "source domain exists; preserve typed GraphRAG concept relations",
+      "evidence": {},
+      "adjusted_urgency": 1.1094
+    }
+  },
+  {
+    "codelet_name": "ExtractConceptRolesCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:concept_role:001",
+        "structure_type": "ConceptRoleStructure",
+        "content": {
+          "concept_role_id": "object",
+          "role_label": "对象",
+          "role_type": "entity",
+          "source_evidence": "数"
+        },
+        "strength": 0.7,
+        "salience": 0.88,
+        "support": [
+          "concept_card.definition",
+          "mechanism_graph.nodes"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ExtractConceptRolesCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:concept_role:002",
+        "structure_type": "ConceptRoleStructure",
+        "content": {
+          "concept_role_id": "relation",
+          "role_label": "关系",
+          "role_type": "relation",
+          "source_evidence": "对应"
+        },
+        "strength": 0.7,
+        "salience": 0.88,
+        "support": [
+          "concept_card.definition",
+          "mechanism_graph.nodes"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ExtractConceptRolesCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 48.0,
+    "temperature_after": 38.0,
+    "confidence": 0.8,
+    "notes": [
+      "concept_role_count=2"
+    ],
+    "step": 4,
+    "coderack_item": {
+      "item_id": "candidate_003:build:004",
+      "codelet_type": "ExtractConceptRolesCodelet",
+      "urgency": 0.84,
+      "temperature_sensitivity": 0.5,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "concept relations exist; extract target concept roles",
+      "evidence": {},
+      "adjusted_urgency": 1.0416
+    }
+  },
+  {
+    "codelet_name": "MapConceptRolesToSourceDomainCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:role_correspondence:001",
+        "structure_type": "RoleCorrespondence",
+        "content": {
+          "concept_role_id": "object",
+          "role_label": "对象",
+          "role_type": "entity",
+          "story_role": "地图修补坊中的被观察和登记的对象",
+          "mapping_reason": "concept role mapped into the selected source domain"
+        },
+        "strength": 0.69,
+        "salience": 0.86,
+        "support": [
+          "candidate_003:concept_role:001",
+          "copycat.source_domain"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:role_correspondence:002",
+        "structure_type": "RoleCorrespondence",
+        "content": {
+          "concept_role_id": "relation",
+          "role_label": "关系",
+          "role_type": "relation",
+          "story_role": "地图修补坊中的两份记录之间的对应关系",
+          "mapping_reason": "concept role mapped into the selected source domain"
+        },
+        "strength": 0.69,
+        "salience": 0.86,
+        "support": [
+          "candidate_003:concept_role:002",
+          "copycat.source_domain"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 38.0,
+    "temperature_after": 29.0,
+    "confidence": 0.78,
+    "notes": [
+      "role_correspondence_count=2"
+    ],
+    "step": 5,
+    "coderack_item": {
+      "item_id": "candidate_003:build:005",
+      "codelet_type": "MapConceptRolesToSourceDomainCodelet",
+      "urgency": 0.84,
+      "temperature_sensitivity": 0.48,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "concept roles exist; map them into the selected source domain",
+      "evidence": {},
+      "adjusted_urgency": 0.993216
+    }
+  },
+  {
+    "codelet_name": "MapTypedRelationCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:relation_correspondence:001",
+        "structure_type": "RelationCorrespondence",
+        "content": {
+          "source_edge_id": "normalized:edge:16376",
+          "kg_relation": "prerequisites_for",
+          "relation_semantic_role": "prerequisite",
+          "story_relation_type": "prerequisite",
+          "story_relation": "主角先确认地图修补坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+          "source_name": "数字1到5的认识",
+          "target_name": "减法的含义"
+        },
+        "strength": 0.71,
+        "salience": 0.9,
+        "support": [
+          "candidate_003:concept_relation:001",
+          "copycat.typed_relation_mapping"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "MapTypedRelationCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 29.0,
+    "temperature_after": 20.0,
+    "confidence": 0.8,
+    "notes": [
+      "relation_correspondence_count=1"
+    ],
+    "step": 6,
+    "coderack_item": {
+      "item_id": "candidate_003:build:006",
+      "codelet_type": "MapTypedRelationCodelet",
+      "urgency": 0.86,
+      "temperature_sensitivity": 0.55,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "role correspondences exist; map typed concept relations to story relations",
+      "evidence": {},
+      "adjusted_urgency": 0.99717
+    }
+  },
+  {
+    "codelet_name": "ProposeNodeCorrespondenceCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:node_correspondence:001",
+        "structure_type": "NodeCorrespondence",
+        "content": {
+          "mechanism_node_id": "n1",
+          "mechanism_text": "认识并能数出1到5的数量，理解数字与数量的一一对应",
+          "narrative_carrier": "地图修补坊中的入口条件核对",
+          "role": "入口条件核对"
+        },
+        "strength": 0.68,
+        "salience": 0.9,
+        "support": [
+          "mechanism_graph.nodes"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:node_correspondence:002",
+        "structure_type": "NodeCorrespondence",
+        "content": {
+          "mechanism_node_id": "n2",
+          "mechanism_text": "从一个数量中去掉一部分",
+          "narrative_carrier": "地图修补坊中的结果验收记录",
+          "role": "结果验收记录"
+        },
+        "strength": 0.68,
+        "salience": 0.9,
+        "support": [
+          "mechanism_graph.nodes"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 20.0,
+    "temperature_after": 20.0,
+    "confidence": 0.78,
+    "notes": [
+      "node_count=2"
+    ],
+    "step": 7,
+    "coderack_item": {
+      "item_id": "candidate_003:build:007",
+      "codelet_type": "ProposeNodeCorrespondenceCodelet",
+      "urgency": 0.72,
+      "temperature_sensitivity": 0.45,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "typed relation mapping exists; add legacy mechanism-node correspondences",
+      "evidence": {},
+      "adjusted_urgency": 0.7848
+    }
+  },
+  {
+    "codelet_name": "ProposeEdgeCorrespondenceCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:edge_correspondence:001",
+        "structure_type": "EdgeCorrespondence",
+        "content": {
+          "mechanism_edge_id": "e1",
+          "source": "n1",
+          "target": "n2",
+          "relation": "enables",
+          "kg_relation": "enables",
+          "source_edge_id": null,
+          "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+          "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+        },
+        "strength": 0.66,
+        "salience": 0.92,
+        "support": [
+          "mechanism_graph.edges",
+          "copycat.node_correspondences"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 20.0,
+    "temperature_after": 20.0,
+    "confidence": 0.76,
+    "notes": [
+      "edge_count=1"
+    ],
+    "step": 8,
+    "coderack_item": {
+      "item_id": "candidate_003:build:008",
+      "codelet_type": "ProposeEdgeCorrespondenceCodelet",
+      "urgency": 0.86,
+      "temperature_sensitivity": 0.55,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "node correspondences exist; map mechanism edges to event relations",
+      "evidence": {},
+      "adjusted_urgency": 0.9546
+    }
+  },
+  {
+    "codelet_name": "StrengthenEdgeCausalityCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 20.0,
+    "temperature_after": 20.0,
+    "confidence": 0.8,
+    "notes": [
+      "edge_causality_repairs=0"
+    ],
+    "step": 9,
+    "coderack_item": {
+      "item_id": "candidate_003:build:009",
+      "codelet_type": "StrengthenEdgeCausalityCodelet",
+      "urgency": 0.88,
+      "temperature_sensitivity": 0.6,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "edge correspondences exist; strengthen causal evidence before story assembly",
+      "evidence": {},
+      "adjusted_urgency": 0.9856
+    }
+  },
+  {
+    "codelet_name": "RepairDirectionCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 20.0,
+    "temperature_after": 20.0,
+    "confidence": 0.77,
+    "notes": [
+      "direction_repairs=0"
+    ],
+    "step": 10,
+    "coderack_item": {
+      "item_id": "candidate_003:repair_direction:010",
+      "codelet_type": "RepairDirectionCodelet",
+      "urgency": 0.7,
+      "temperature_sensitivity": 0.45,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "causal evidence exists; add a direction-preservation guard",
+      "evidence": {},
+      "adjusted_urgency": 0.763
+    }
+  },
+  {
+    "codelet_name": "BuildEventChainFragmentCodelet",
+    "target_candidate_id": "candidate_003",
+    "structures_added": [
+      {
+        "structure_id": "candidate_003:conflict:001",
+        "structure_type": "ConflictStructure",
+        "content": {
+          "conflict": "地图修补坊里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+        },
+        "strength": 0.62,
+        "salience": 0.62,
+        "support": [
+          "copycat.source_domain",
+          "copycat.node_correspondences"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BuildEventChainFragmentCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:event_fragment:001",
+        "structure_type": "EventChainFragment",
+        "content": {
+          "event": "主角先在地图修补坊中确认地图修补坊中的入口条件核对是否成立。",
+          "position": 1,
+          "mapped_mechanism_node_id": "n1",
+          "mapped_mechanism_text": "认识并能数出1到5的数量，理解数字与数量的一一对应"
+        },
+        "strength": 0.67,
+        "salience": 0.75,
+        "support": [
+          "candidate_003:node_correspondence:001"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BuildEventChainFragmentCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:event_fragment:002",
+        "structure_type": "EventChainFragment",
+        "content": {
+          "event": "最后，众人用地图修补坊中的结果验收记录核对整条安排是否得到可靠结果。",
+          "position": 2,
+          "mapped_mechanism_node_id": "n2",
+          "mapped_mechanism_text": "从一个数量中去掉一部分"
+        },
+        "strength": 0.67,
+        "salience": 0.75,
+        "support": [
+          "candidate_003:node_correspondence:002"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BuildEventChainFragmentCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:turning_point:001",
+        "structure_type": "TurningPointStructure",
+        "content": {
+          "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+        },
+        "strength": 0.63,
+        "salience": 0.7,
+        "support": [
+          "candidate_003:edge_correspondence:001"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BuildEventChainFragmentCodelet",
+        "candidate_id": "candidate_003"
+      },
+      {
+        "structure_id": "candidate_003:resolution_state:001",
+        "structure_type": "ResolutionStructure",
+        "content": {
+          "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+        },
+        "strength": 0.63,
+        "salience": 0.68,
+        "support": [
+          "copycat.event_chain"
+        ],
+        "conflicts": [],
+        "created_by_codelet": "BuildEventChainFragmentCodelet",
+        "candidate_id": "candidate_003"
+      }
+    ],
+    "structures_removed": [],
+    "activations_delta": {},
+    "temperature_before": 20.0,
+    "temperature_after": 20.0,
+    "confidence": 0.74,
+    "notes": [
+      "fragment_count=5"
+    ],
+    "step": 11,
+    "coderack_item": {
+      "item_id": "candidate_003:build:010",
+      "codelet_type": "BuildEventChainFragmentCodelet",
+      "urgency": 0.64,
+      "temperature_sensitivity": 0.35,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_003",
+      "reason": "edge correspondences exist; build narrative event-chain fragments",
+      "evidence": {},
+      "adjusted_urgency": 0.6848
+    }
+  }
+]

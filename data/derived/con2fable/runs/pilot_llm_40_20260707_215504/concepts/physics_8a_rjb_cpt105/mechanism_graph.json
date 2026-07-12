@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：凸透镜",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m3",
+      "text": "需要保留上下位关系：虚像",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17245"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_12421"
+    }
+  ]
+}

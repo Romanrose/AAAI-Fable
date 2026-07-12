@@ -1,0 +1,93 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt23",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫种桃树的故事",
+  "characters": [
+    "农夫",
+    "桃树"
+  ],
+  "objects": [
+    "六颗桃子",
+    "篮子",
+    "秤"
+  ],
+  "conflict": "农夫需要准确数出六颗桃子，但每次数数都会出错，导致无法正确装篮和比较重量。",
+  "event_chain": [
+    "农夫按顺序从树上摘下桃子，一颗一颗地数，确保每摘一颗就数一个数。",
+    "农夫通过数桃子、写数字等方式认识‘六’这个数量，理解六颗桃子代表的总数。",
+    "农夫掌握了所有关于六颗桃子的加减法，比如三颗加三颗等于六颗，六颗减去两颗等于四颗。",
+    "农夫用秤比较两篮桃子的重量，发现一篮有六颗，另一篮有五颗，用符号表示六大于五。"
+  ],
+  "turning_point": "农夫学会用数数方法准确数出六颗桃子，并理解了六的含义。",
+  "resolution_state": "农夫成功用六颗桃子进行加减运算和比较大小，不再出错。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫按顺序从树上摘下桃子，一颗一颗地数，确保每摘一颗就数一个数。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "六颗桃子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫通过数桃子、写数字等方式认识‘六’这个数量，理解六颗桃子代表的总数。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫掌握了所有关于六颗桃子的加减法，比如三颗加三颗等于六颗，六颗减去两颗等于四颗。",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "农夫用秤比较两篮桃子的重量，发现一篮有六颗，另一篮有五颗，用符号表示六大于五。",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫按顺序数桃子的行为使他能够通过数桃子认识‘六’这个数量。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "通过数桃子认识‘六’这个数量，产生了‘六颗桃子’这个实体概念。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "通过数桃子认识‘六’这个数量，使农夫能够掌握关于六颗桃子的加减法。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "农夫用秤比较桃子重量的规则与‘六颗桃子’这个实体相关，因为比较时涉及六这个数量。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘数字6的认识’或其任何别名。",
+    "确保‘六颗桃子’只作为数量实体，不直接对应目标概念名称。",
+    "确保事件链中的加减法和比较大小不直接使用‘6的加减法’或‘数量的比较’等术语。",
+    "确保农夫数桃子的顺序性映射了‘按顺序逐个计数’的条件。"
+  ],
+  "mapping_context_sha256": "34cf1d147f6fb26fe4fb75130601eba75a5b5f700b2a1dfa918432ed703799c8",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ee35afaf8d205456d7e4216757081104765ab32a61d946039382f4ab0bd370a0"
+  }
+}

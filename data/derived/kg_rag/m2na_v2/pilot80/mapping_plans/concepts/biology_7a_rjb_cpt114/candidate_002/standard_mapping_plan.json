@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的种子传播",
+  "characters": [
+    "风",
+    "蜜蜂",
+    "农民"
+  ],
+  "objects": [
+    "种子",
+    "田地",
+    "花朵"
+  ],
+  "conflict": "种子需要从一朵花传播到另一朵花才能生长，但有些种子落在同一朵花上，有些则需要外力帮助才能到达其他花朵。",
+  "event_chain": [
+    "种子从花药散落到柱头上",
+    "种子落在同一朵花上",
+    "种子借助风或蜜蜂落到另一朵花上",
+    "种子在柱头上萌发并生长"
+  ],
+  "turning_point": "种子成功到达合适的柱头，开始萌发。",
+  "resolution_state": "种子萌发，新的植物生长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "种子从花药散落到柱头上的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子落在同一朵花上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "种子借助风或蜜蜂落到另一朵花上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "种子在柱头上萌发并生长",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "种子落在同一朵花上是种子从花药散落到柱头上的一个特例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "种子借助外力落到另一朵花上是种子从花药散落到柱头上的一个特例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "种子从花药散落到柱头上使得种子萌发成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'传粉'等禁止术语",
+    "确保所有机制节点和边都被映射",
+    "确保映射关系保持原方向"
+  ],
+  "mapping_context_sha256": "f410822798847ccf1c53f421928715b2cdab1fedca7013e1bdbe0d894b8d2f86",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "43c64e8e6a88bfce8999c6adee73143ad1807e837bceffff566d1874a9e7c091"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001的故事通过学徒敷衍翻晒旧账本导致新账本受潮发霉的情节，自然隐喻了‘缓慢扩散’的机制，覆盖了所有节点和边，且无任何概念泄露。故事中文流畅、不模板化，证据对齐完美，六维评分全5，字符数适中，整体质量最高。",
+    "risk_notes": [
+      "无显著风险"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

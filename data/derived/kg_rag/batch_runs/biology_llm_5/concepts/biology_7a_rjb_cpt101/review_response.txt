@@ -1,0 +1,7 @@
+{
+  "pass_fail": true,
+  "missing_roles": [],
+  "unsupported_story_parts": [],
+  "coherence_issues": [],
+  "suggested_revision": []
+}

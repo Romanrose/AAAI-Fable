@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "所有条件都检查完毕的那天傍晚",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "一座钢筋混凝土拱桥稳稳地横跨在峡谷之上",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "地基必须扎在岩层上，不能是浮土",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "水泥和钢筋从山外运来，每一批都要取样",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "施工空间也不能马虎。峡谷里风大，桥墩要浇注混凝土，必须保证通风",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "工程师勘探、材料测试、现场检查",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "所有条件都检查完毕的那天傍晚，老周站在崖边，看着夕阳把整座峡谷染成金色。他拿起对讲机，对全体队员说：“地基牢了，材料够了，通风通了。明天，开工。”",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "地基必须扎在岩层上，不能是浮土",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "水泥和钢筋从山外运来，每一批都要取样",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "施工空间也不能马虎。峡谷里风大，桥墩要浇注混凝土，必须保证通风",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "所有条件都检查完毕的那天傍晚",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story. The story describes a bridge construction project where conditions (stable foundation, suitable materials, ventilation) are verified before construction begins, mirroring the seed germination conditions. The evidence for each node and edge is directly stated in the story."
+}

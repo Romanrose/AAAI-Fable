@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly and repeatedly anchors '铁铺' as the entity corresponding to '生物', with clear narrative presence. Node n2 ('需要营养') is mapped to '需要原料和燃料', which is accurate but less directly tied to the biological concept of nutrition; the story could more explicitly link '原料和燃料' to the idea of nourishment. Edge e1 ('生物 requires 需要营养') is preserved in direction and content, but the mapping is straightforward and lacks the depth of other edges like e7 (细胞构成)."
+  },
+  "revision_instructions": [
+    "Consider explicitly stating that '原料和燃料' are the '营养' of the workshop, to strengthen the analogy.",
+    "Ensure that the story's length remains within 450-750 Chinese characters (current 690 is valid)."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

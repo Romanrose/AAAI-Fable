@@ -1,0 +1,245 @@
+{
+  "id": "physics_8a_rjb_cpt106",
+  "method": "con2fable",
+  "concept": {
+    "name": "凸透镜成像规律",
+    "aliases": [],
+    "forbidden_terms": [
+      "凸透镜成像规律"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：像距",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：焦距",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要考虑前置条件或输入：物距",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：物镜",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m6",
+        "text": "需要保留上下位关系：目镜",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m7",
+        "text": "与相关概念保持可解释关系：显微镜",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：望远镜",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17194"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17191"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17192"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17190"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17193"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12423"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12424"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "小光走进物理实验室，今天他要为一场重要的科普演示做准备。实验台上，一盏蜡烛静静燃烧，旁边放着一块可以前后滑动的透镜支架，支架上固定着一块透明的凸透镜，不远处还有一块白色的光屏。\n\n小光点燃蜡烛，将透镜支架推到离蜡烛很远的地方。他移动光屏，忽然，光屏上出现了一个清晰的影像——蜡烛的火焰倒立着，比原来小了许多。小光兴奋地记下光屏的位置。\n\n接着，他慢慢将透镜支架向蜡烛方向移动。光屏上的影像逐渐变大，但依然是倒立的。小光继续移动，影像越来越大，直到变得模糊不清，像一团晃动的光晕。\n\n小光有些困惑，他继续将透镜支架向蜡烛靠近。当支架移到某个位置时，光屏上竟然怎么也找不到影像了，只有一片亮光。他反复调整光屏的位置，前后移动，却始终一无所获。小光皱起眉头，心想：这难道是一个分界点？\n\n他决定换个方法，不再看光屏，而是直接透过透镜去看蜡烛。奇迹发生了——他看到了一个正立的、放大的火焰，比原来大得多，而且清晰无比！小光惊讶地揉了揉眼睛，又试了几次，每次都是如此。\n\n小光恍然大悟：原来，蜡烛离透镜的远近，决定了看到的是什么样的影像。离得远时，光屏上出现倒立缩小的像；离得近时，光屏上找不到像，但透过透镜却能看到正立放大的像。而那个光屏上找不到像的位置，正是两种影像的分界线。\n\n科普演示那天，小光胸有成竹。他先让观众看到倒立缩小的像，又调整支架，让大家透过透镜看到正立放大的像。观众们惊叹不已，掌声如雷。小光微笑着想：改变距离，就能改变结果，找到那个临界点，就能掌握变化的规律。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "蜡烛离透镜的远近，决定了看到的是什么样的影像",
+        "evidence": "蜡烛离透镜的远近，决定了看到的是什么样的影像",
+        "narrative_anchor": "蜡烛离透镜的远近，决定了看到的是什么样的影像"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "光屏的位置",
+        "evidence": "他移动光屏，忽然，光屏上出现了一个清晰的影像",
+        "narrative_anchor": "光屏的位置"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "透镜支架（焦距固定）",
+        "evidence": "支架上固定着一块透明的凸透镜",
+        "narrative_anchor": "凸透镜"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "蜡烛离透镜的距离（物距）",
+        "evidence": "将透镜支架推到离蜡烛很远的地方",
+        "narrative_anchor": "离蜡烛很远的地方"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "物镜（凸透镜作为物镜）",
+        "evidence": "支架上固定着一块透明的凸透镜",
+        "narrative_anchor": "凸透镜"
+      },
+      {
+        "concept_node_id": "m6",
+        "narrative_element": "目镜（透过透镜观察）",
+        "evidence": "直接透过透镜去看蜡烛",
+        "narrative_anchor": "透过透镜去看蜡烛"
+      },
+      {
+        "concept_node_id": "m7",
+        "narrative_element": "显微镜（未直接出现，但正立放大像类似显微镜原理）",
+        "evidence": "他看到了一个正立的、放大的火焰",
+        "narrative_anchor": "正立的、放大的火焰"
+      },
+      {
+        "concept_node_id": "m8",
+        "narrative_element": "望远镜（未直接出现，但倒立缩小像类似望远镜原理）",
+        "evidence": "光屏上出现了一个清晰的影像——蜡烛的火焰倒立着，比原来小了许多",
+        "narrative_anchor": "倒立着，比原来小了许多"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "物距变化导致成像规律变化",
+        "evidence": "蜡烛离透镜的远近，决定了看到的是什么样的影像",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "蜡烛离透镜的远近，决定了看到的是什么样的影像"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "像距（光屏位置）与焦距的关系",
+        "evidence": "他移动光屏，忽然，光屏上出现了一个清晰的影像",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "移动光屏"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "焦距固定，物距变化",
+        "evidence": "将透镜支架推到离蜡烛很远的地方",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "离蜡烛很远的地方"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "物距变化导致成像变化（物镜成像）",
+        "evidence": "离得远时，光屏上出现倒立缩小的像；离得近时，光屏上找不到像",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "离得远时，光屏上出现倒立缩小的像；离得近时，光屏上找不到像"
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "物镜成像后，目镜观察",
+        "evidence": "直接透过透镜去看蜡烛",
+        "narrative_source_concept_node_id": "m5",
+        "narrative_target_concept_node_id": "m6",
+        "direction_preserved": true,
+        "narrative_anchor": "透过透镜去看蜡烛"
+      },
+      {
+        "concept_edge_id": "e6",
+        "narrative_relation": "目镜观察得到正立放大像（类似显微镜）",
+        "evidence": "他看到了一个正立的、放大的火焰",
+        "narrative_source_concept_node_id": "m6",
+        "narrative_target_concept_node_id": "m7",
+        "direction_preserved": true,
+        "narrative_anchor": "正立的、放大的火焰"
+      },
+      {
+        "concept_edge_id": "e7",
+        "narrative_relation": "物镜成像得到倒立缩小像（类似望远镜）",
+        "evidence": "光屏上出现了一个清晰的影像——蜡烛的火焰倒立着，比原来小了许多",
+        "narrative_source_concept_node_id": "m7",
+        "narrative_target_concept_node_id": "m8",
+        "direction_preserved": true,
+        "narrative_anchor": "倒立着，比原来小了许多"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "law",
+    "generation_priority": "gold"
+  }
+}

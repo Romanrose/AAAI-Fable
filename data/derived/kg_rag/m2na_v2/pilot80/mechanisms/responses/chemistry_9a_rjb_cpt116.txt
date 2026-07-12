@@ -1,0 +1,157 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "膜分离制取富氧空气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition",
+          "kg-node:chemistry_9a_rjb_cpt116:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "工业制取氧气的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt114:definition",
+          "kg-node:chemistry_9a_rjb_cpt114:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt66:definition",
+          "kg-node:chemistry_9a_rjb_cpt66:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "液态空气的分馏制氧",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition",
+          "kg-node:chemistry_9a_rjb_cpt115:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "具有富集氧气功能的薄膜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "condition",
+        "text": "一定压力",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "state",
+        "text": "富氧空气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition",
+          "kg-node:chemistry_9a_rjb_cpt116:examples"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11285"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15224"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11284"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n7",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ]
+  }
+}
+```

@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "闸门开度（即闸门提升的高度）是一个描述空间延伸程度的属性，需要通过带有刻度的标杆（测量工具）来获得其具体数值。",
+      "evidence": "闸门开度",
+      "narrative_anchor": "闸门开度",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

@@ -1,0 +1,61 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt27",
+    "label": "Concept",
+    "name": "数量的比较",
+    "properties": {
+      "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+      "importance": "掌握",
+      "retrieval_text": "数量的比较\nConcept\n用符号“>”“<”比较两个数量的大小，如5<6、6>5。\n掌握"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:19310",
+      "source": "math_1a_rjb_cpt27",
+      "source_name": "数量的比较",
+      "target": "math_1a_rjb_cpt23",
+      "target_name": "数字6的认识",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    },
+    {
+      "source_edge_id": "normalized:edge:19311",
+      "source": "math_1a_rjb_cpt27",
+      "source_name": "数量的比较",
+      "target": "math_1a_rjb_cpt24",
+      "target_name": "数字7的认识",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "数量的比较",
+      "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19310] 数量的比较 --relates_to--> 数字6的认识",
+      "[normalized:edge:19311] 数量的比较 --relates_to--> 数字7的认识"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 500,
+    "summary_chars": 302,
+    "path_chars": 0,
+    "retrieval_context_chars": 802
+  }
+}

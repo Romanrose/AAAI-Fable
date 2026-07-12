@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "村庄",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "村庄需要从田地获取粮食",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "村庄需要水井提供水源",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "村庄需要清理垃圾和污水",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "村庄需要扩建房屋和道路",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "村庄需要新生儿和外来人口",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "村庄需要传承技艺和适应变化",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "村庄需要由房屋、街道等基本单元构成",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "村庄需要从田地获取粮食",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "村庄需要水井提供水源",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "村庄需要清理垃圾和污水",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "村庄需要新生儿和外来人口",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "村庄需要传承技艺和适应变化",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "村庄需要由房屋、街道等基本单元构成",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to story evidence. Node n5 (扩建房屋和道路) and edge e4 (n1->n5) lack direct story evidence; the story mentions '扩建房屋和道路' only in the mapping plan, not in the story text. All other alignments have exact contiguous substrings from the story."
+}

@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "确认入口条件成立后",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三道环节",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第四道",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第五道",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "第六道",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "第七道",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "确认入口条件成立后",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第二道转化环节",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "第四道",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "他把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges have been aligned to story evidence. Node alignments map each mechanism process/entity/condition/outcome to a corresponding story carrier (e.g., '入口条件核对', '第二道转化环节', etc.) with exact substrings from the story. Edge alignments use story phrases that indicate the relation (e.g., '确认入口条件成立后' for is_a, '他把两份相关记录放在一起比较' for part_of/requires/produces/relates_to) while preserving direction. No nodes or edges are missing."
+}

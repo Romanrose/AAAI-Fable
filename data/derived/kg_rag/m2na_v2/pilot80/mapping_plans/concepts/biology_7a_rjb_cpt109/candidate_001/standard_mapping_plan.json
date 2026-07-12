@@ -1,0 +1,97 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农在集市上卖自家腌制的咸鸭蛋，他需要判断一筐鸭蛋中哪些是优质的好蛋，以便定价出售。",
+  "characters": [
+    "老农（经验丰富的卖蛋人）",
+    "顾客（偶尔询问的买蛋人）"
+  ],
+  "objects": [
+    "一筐待售的咸鸭蛋（供检测的种子）",
+    "一盆清水（培养皿、滤纸、纱布等条件）",
+    "记录本（记录表）",
+    "好蛋（能够萌发的种子）",
+    "坏蛋（不能萌发的种子）"
+  ],
+  "conflict": "老农无法直接看出筐里有多少个好蛋，需要一种可靠的方法来估算好蛋的比例，从而合理定价并避免顾客买到坏蛋。",
+  "event_chain": [
+    "老农准备好一盆清水和记录本（条件n5：培养皿等工具）",
+    "老农从筐中随机取出100个鸭蛋（均匀摆放一定数量种子）",
+    "老农将鸭蛋逐个放入清水中观察：好蛋会沉底，坏蛋会浮起（每天观察记录萌发粒数）",
+    "老农每天重复这个测试，连续7天，并记录每天沉底的好蛋数量（连续约7天观察）",
+    "老农重复整个测试多次，取平均沉底数（重复测定多次取平均）"
+  ],
+  "turning_point": "老农通过多次测试和平均，得出了这筐鸭蛋中好蛋的比例大约为85%（按公式计算平均值）。",
+  "resolution_state": "老农根据这个比例，将好蛋挑出单独定价出售，剩余的坏蛋降价处理或丢弃，从而保证了信誉和收益（为播种提供依据）。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "好蛋在整筐鸭蛋中的比例（即好蛋数/总蛋数）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "好蛋比例 = 沉底的好蛋数 / 测试的总蛋数 × 100%",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农每天将100个鸭蛋放入清水，观察沉底的好蛋并记录，连续7天，多次重复取平均",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农根据沉底好蛋的平均数计算出好蛋比例，并据此分拣定价",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "一盆清水、记录本、100个待测鸭蛋",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农准备好清水和记录本（条件）使得他能够进行每日的沉蛋测试（过程）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "每日沉蛋测试（过程）产生了沉底好蛋的平均数（结果）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "沉底好蛋的平均数（结果）验证了好蛋比例（实体）的准确性",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "好蛋比例（实体）与计算公式（规则）相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'发芽率'、'种子'、'培养皿'等生物学原词，已用咸鸭蛋、清水等替代。",
+    "注意'好蛋'对应'能够萌发的种子'，'坏蛋'对应'不能萌发的种子'，但避免直接提及萌发。",
+    "边缘e1、e2、e3、e4的方向均已严格保留，且n1节点（好蛋比例）作为实体被映射。",
+    "故事中未使用任何目标概念名称或别名。",
+    "整个故事围绕'老农卖咸鸭蛋'这一单一源域展开，没有引入无关比喻。"
+  ],
+  "mapping_context_sha256": "48dddd9f36a442734e10bd4ba8ffc416c9fbeb06a3c155b678e7d4ebb2835e58",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3cf9d3fd463f7886aa52d658f8d66cc62667cdd06521128e74e702f913081cd0"
+  }
+}

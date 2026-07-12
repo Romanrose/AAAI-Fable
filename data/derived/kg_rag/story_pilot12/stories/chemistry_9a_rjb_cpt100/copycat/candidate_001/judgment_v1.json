@@ -1,0 +1,29 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": true
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "The story maps n5 (氧气) to '第5道转化环节' but fails to preserve its role as a shared entity (part_of multiple processes). Instead, it is treated as just another sequential step, losing the relational semantics. Edge e4 (氧气 part_of 氧化反应) is mapped to '他把两份相关记录放在一起比较', which is a generic comparison action that does not convey the part-whole relation. This is observably worse than a mapping that would show oxygen as a common ingredient across multiple processes."
+  },
+  "revision_instructions": [
+    "Revise the mapping of node n5 (氧气) to a story carrier that represents a shared resource or ingredient, not a sequential step. For example, use '仓库中的通用物料' or '共用原料'.",
+    "For edges e4, e5, e6 (part_of relations), replace the generic '他把两份相关记录放在一起比较' with story actions that explicitly show the shared entity being used in multiple processes, e.g., '调度员发现氧气瓶同时出现在入口核对单、转运单和验收单上'.",
+    "For edges e7, e8, e9 (requires/produces), use distinct story actions that reflect condition, outcome, or causal relation, not just comparison. For example, '调度员确认第六道环节的温湿度条件满足后，才允许货物进入第七道' for e7.",
+    "Ensure that the turning point (skipping intermediate steps) explicitly violates the is_a hierarchy (e.g., skipping a sub-process that is a type of a larger process) rather than just a sequential order.",
+    "Remove template-like phrasing such as '主角把两份相关记录放在一起比较' repeated verbatim for multiple edges; vary the language to match each specific relation."
+  ],
+  "final_status": "revise"
+}

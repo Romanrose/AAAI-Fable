@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "田地",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "高大的禾苗",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "禾苗生长",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "烈日",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "高大的禾苗",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "农夫通过水渠引水灌溉",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "农夫在田地里种下一片禾苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "禾苗在阳光和适宜水分的共同滋养下，一天比一天茁壮，渐渐拔高，变得挺拔翠绿。到了秋天，田地里长满了高大的禾苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "烈日照射",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "禾苗在阳光和适宜水分的共同滋养下，一天比一天茁壮，渐渐拔高，变得挺拔翠绿。到了秋天，田地里长满了高大的禾苗",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "农夫通过水渠引水灌溉",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to the story. The story uses '田地' for the convex lens, '禾苗生长' for camera imaging, '烈日' for the condition of object moving away from the lens, '高大的禾苗' for the real image and the outcome, and '农夫通过水渠引水灌溉' for adjusting image distance. Edges are verified with directional consistency: e1 (田地 enables 禾苗生长), e2 (禾苗生长 is_a 高大的禾苗), e3 (烈日 enables 禾苗生长), e4 (禾苗生长 produces 高大的禾苗), e5 (农夫灌溉 enables 禾苗生长). No missing elements."
+}

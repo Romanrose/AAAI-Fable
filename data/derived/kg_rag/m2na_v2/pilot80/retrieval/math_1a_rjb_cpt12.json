@@ -1,0 +1,75 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt12",
+    "label": "Concept",
+    "name": "减法的含义",
+    "properties": {
+      "definition": "表示从一个数量中去掉一部分。",
+      "importance": "重要",
+      "retrieval_text": "减法的含义\nConcept\n表示从一个数量中去掉一部分。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "math_1a_rjb_cpt7",
+      "label": "Concept",
+      "name": "数字1到5的认识",
+      "properties": {
+        "definition": "认识并能数出1到5的数量，理解数字与数量的一一对应。",
+        "importance": "掌握",
+        "retrieval_text": "数字1到5的认识\nConcept\n认识并能数出1到5的数量，理解数字与数量的一一对应。\n掌握"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16376",
+      "source": "math_1a_rjb_cpt7",
+      "source_name": "数字1到5的认识",
+      "target": "math_1a_rjb_cpt12",
+      "target_name": "减法的含义",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "减法的含义",
+      "definition": "表示从一个数量中去掉一部分。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16376] 数字1到5的认识 --prerequisites_for--> 减法的含义"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

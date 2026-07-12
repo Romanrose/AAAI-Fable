@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "physics_8a_rjb_cpt10",
+  "subject": "physics",
+  "canonical_name": "参照物",
+  "aliases": [],
+  "definition": "判断物体运动或静止时所选取的标准物体。",
+  "concept_type": "mechanism",
+  "forbidden_terms": [
+    "参照物"
+  ]
+}

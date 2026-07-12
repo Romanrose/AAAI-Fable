@@ -1,0 +1,60 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt12",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个农夫分梨的故事",
+  "characters": [
+    "农夫",
+    "孩子们"
+  ],
+  "objects": [
+    "一篮梨",
+    "分出去的梨"
+  ],
+  "conflict": "农夫有一篮梨，孩子们想吃，但农夫需要从总数中分出一部分给孩子们，剩下的梨变少了。",
+  "event_chain": [
+    "农夫数了数篮子里有5个梨。",
+    "孩子们来了，农夫从篮子里拿出2个梨分给孩子们。",
+    "篮子里剩下的梨变少了，只有3个。"
+  ],
+  "turning_point": "农夫从篮子里拿出梨分给孩子们的动作，导致篮子里梨的数量减少。",
+  "resolution_state": "孩子们得到了梨，农夫篮子里剩下的梨数量变少，体现了从总数中去掉一部分的过程。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫数出篮子里有5个梨，知道每个孩子分一个梨需要几个",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫从篮子里拿出2个梨分给孩子们",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫数出梨的数量并知道一一对应后，才能进行分梨的动作",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'减法'、'减法的含义'等禁止术语。",
+    "注意故事中'分梨'的动作要明确体现'从一个数量中去掉一部分'，避免被误解为其他运算。",
+    "确保'数出5个梨'作为前提条件，与后续'拿出2个'形成因果链，方向正确。"
+  ],
+  "mapping_context_sha256": "312e483443dfa31df95f381a76ff16faca2943c8a4c7cd094e1faee96bb4b1f7",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "e9f31cc830eeb53a7afc334d08e04d26a5b436fab5ecadf817dccae9e6a4406f"
+  }
+}

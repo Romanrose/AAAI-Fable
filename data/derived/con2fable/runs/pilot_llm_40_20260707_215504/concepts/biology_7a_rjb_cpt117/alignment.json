@@ -1,0 +1,102 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "精子与卵细胞相遇并融合形成新细胞",
+      "evidence": "其中一个精子与卵细胞相遇了，它们紧紧拥抱在一起，融合成了一个全新的细胞。",
+      "narrative_anchor": "融合成了一个全新的细胞"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "传粉：花粉粒被风带到雌性银杏树的柱头",
+      "evidence": "无数细小的花粉粒被风卷起，飘向温室的另一头。阿风在雌性银杏树的枝头轻轻落下，落在了一个叫做柱头的平台上。",
+      "narrative_anchor": "落在了一个叫做柱头的平台上"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "卵子成熟：胚珠成熟，内部有卵细胞",
+      "evidence": "她的胚珠已经成熟，像一个个小小的绿色摇篮，内部柔软而湿润，正等待着什么。",
+      "narrative_anchor": "胚珠已经成熟"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "精子获能：花粉萌发长出花粉管，精子沿花粉管游动",
+      "evidence": "他慢慢萌发，长出了一条细长的花粉管。阿风体内的两个精子顺着花粉管游动，像两个勇敢的探险者。",
+      "narrative_anchor": "精子顺着花粉管游动"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "合子（受精卵）形成",
+      "evidence": "融合成了一个全新的细胞。",
+      "narrative_anchor": "全新的细胞"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "种子形成：融合后的细胞分裂生长形成种子",
+      "evidence": "融合后的细胞开始忙碌地分裂、生长，渐渐形成了一颗小小的种子，被包裹在雌性银杏树的种皮里，像一颗绿色的珍珠。",
+      "narrative_anchor": "形成了一颗小小的种子"
+    },
+    {
+      "concept_node_id": "m7",
+      "narrative_element": "胚胎工程：园丁照料种子，培育成树苗",
+      "evidence": "园丁发现了它，小心翼翼地将它捡起，放进了苗圃的育苗盆中。在园丁的照料下，种子破土而出，长成了一株嫩绿的银杏树苗。",
+      "narrative_anchor": "园丁的照料下，种子破土而出"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "传粉是受精的前提",
+      "evidence": "阿风在雌性银杏树的枝头轻轻落下，落在了一个叫做柱头的平台上。这里温暖而潮湿，阿风感到自己体内涌起一股力量，他慢慢萌发，长出了一条细长的花粉管。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "落在了一个叫做柱头的平台上"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "传粉后卵子成熟是受精的前提",
+      "evidence": "她的胚珠已经成熟，像一个个小小的绿色摇篮，内部柔软而湿润，正等待着什么。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "胚珠已经成熟"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "卵子成熟后精子获能是受精的前提",
+      "evidence": "阿风体内的两个精子顺着花粉管游动，像两个勇敢的探险者。",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "精子顺着花粉管游动"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "精子获能后形成合子",
+      "evidence": "其中一个精子与卵细胞相遇了，它们紧紧拥抱在一起，融合成了一个全新的细胞。",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "融合成了一个全新的细胞"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "合子发育形成种子",
+      "evidence": "融合后的细胞开始忙碌地分裂、生长，渐渐形成了一颗小小的种子，被包裹在雌性银杏树的种皮里，像一颗绿色的珍珠。",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "形成了一颗小小的种子"
+    },
+    {
+      "concept_edge_id": "e6",
+      "narrative_relation": "种子在人工照料下发育成树苗，对应胚胎工程",
+      "evidence": "园丁发现了它，小心翼翼地将它捡起，放进了苗圃的育苗盆中。在园丁的照料下，种子破土而出，长成了一株嫩绿的银杏树苗。",
+      "narrative_source_concept_node_id": "m6",
+      "narrative_target_concept_node_id": "m7",
+      "direction_preserved": true,
+      "narrative_anchor": "园丁的照料下，种子破土而出"
+    }
+  ]
+}

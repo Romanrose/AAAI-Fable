@@ -1,0 +1,129 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "呼吸与氧气"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：氧气的物理性质",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：缓慢氧化",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18224"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18223"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "高原登山队补给系统",
+    "setting": "一支登山队在海拔5000米的高原营地，队员因缺氧出现高原反应，队医通过氧气瓶和面罩为队员提供补充氧气，缓解症状。",
+    "conflict": "队员因高原氧气稀薄导致呼吸困难和体力下降，队医必须通过有限的氧气瓶和面罩，为队员提供适量氧气，帮助其恢复。",
+    "characters": [
+      {
+        "name": "老张",
+        "role": "出现高原反应的队员，代表需要消耗氧气的呼吸系统",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "李队医",
+        "role": "负责提供氧气的队医，代表氧气供给系统",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "氧气瓶与面罩",
+        "role": "提供氧气的工具，代表氧气的物理性质（可压缩、可输送）",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "缓慢的呼吸过程",
+        "role": "代表缓慢氧化反应，即呼吸消耗氧气的过程",
+        "mapped_element": "m3"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老张因高原缺氧而呼吸急促、体力不支"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "李队医使用氧气瓶和面罩为老张提供补充氧气"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "老张通过面罩缓慢呼吸，氧气被身体消耗，症状缓解"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老张在营地突然感到头晕、气短，无法正常行走，队医判断是高原反应，需要补充氧气。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "李队医从急救包中取出氧气瓶和面罩，检查氧气瓶压力，确保氧气可以正常输出。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "李队医将面罩戴在老张口鼻上，打开氧气瓶阀门，调节流量，让老张开始缓慢呼吸。",
+        "mapped_elements": [
+          "m2",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "老张按照队医指导，缓慢而深长地呼吸，氧气通过面罩进入肺部，被身体利用，头晕逐渐减轻，体力恢复。",
+        "mapped_elements": [
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "当老张开始使用氧气面罩并缓慢呼吸时，氧气被身体有效利用，高原反应症状开始缓解。",
+    "ending": "老张恢复体力，继续登山，李队医提醒他注意呼吸节奏，并告诉他氧气瓶是有限的，要珍惜使用。",
+    "implied_moral": "在资源匮乏的环境中，适量补充关键资源可以缓解系统压力，但需要与消耗过程匹配，才能实现平衡与恢复。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "input_path": "data\\derived\\kg_rag\\concept_cards\\smoke_concept_cards.raw.jsonl",
+  "output_path": "data\\derived\\kg_rag\\concept_cards\\smoke_concept_cards.enriched.jsonl",
+  "card_count": 8,
+  "enriched_count": 8,
+  "failed_count": 0,
+  "mode": "rules"
+}

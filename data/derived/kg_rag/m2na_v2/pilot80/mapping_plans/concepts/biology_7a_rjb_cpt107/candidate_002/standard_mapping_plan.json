@@ -1,0 +1,108 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位隐居深山的铸剑师与他的宝剑",
+  "characters": [
+    "铸剑师",
+    "宝剑"
+  ],
+  "objects": [
+    "铸剑炉",
+    "剑匣",
+    "磨刀石"
+  ],
+  "conflict": "宝剑铸成后，铸剑师却将其封入剑匣，即使有客人求剑也不出售，导致宝剑无法展现锋芒。",
+  "event_chain": [
+    "铸剑师精心铸造了一柄宝剑，剑胚完整且锋利。",
+    "宝剑被放入剑匣中，处于封存状态。",
+    "即使有客人上门求剑，铸剑师也拒绝出售，宝剑无法出鞘。",
+    "宝剑被封存，有助于它避免在不利时机（如战乱或无人赏识）被滥用或损坏。",
+    "宝剑封存的状态就是它被收入剑匣。",
+    "剑胚完整且有活性（锋利）是宝剑能够出鞘的前提条件。",
+    "宝剑未处于封存状态（即出鞘），才能展现锋芒。",
+    "宝剑出鞘后，才能被使用和展现价值。",
+    "宝剑处于封存状态直接导致它无法展现锋芒。"
+  ],
+  "turning_point": "铸剑师在合适的时机（如太平盛世、遇到真正懂剑之人）打开剑匣，取出宝剑。",
+  "resolution_state": "宝剑出鞘，锋芒毕露，被用于正道，避免了在乱世中被滥用或损毁。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "即使有客人上门求剑，铸剑师也拒绝出售，宝剑无法出鞘",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "有助于它避免在不利时机（如战乱或无人赏识）被滥用或损坏",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "宝剑被封存的状态就是它被收入剑匣",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "剑胚完整且有活性（锋利）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "宝剑未处于封存状态（即出鞘）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "宝剑无法展现锋芒",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "导致",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "是...的一种形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "是...的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "使得能够",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "直接导致",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "未使用任何目标概念名称、别名或禁止术语。",
+    "所有必须保留的机制节点和边均已映射，且方向正确。",
+    "课程桥接上下文未作为因果机制处理。",
+    "源域连贯，未使用无关隐喻列表。"
+  ],
+  "mapping_context_sha256": "a89f1a24978e8d95beb169bedc1b6dc26af79db25883da81516c71c646910017",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "2015bd443108eb790292ad6e11c8356b5697389a0bd6074bc8dda752e3678308"
+  }
+}

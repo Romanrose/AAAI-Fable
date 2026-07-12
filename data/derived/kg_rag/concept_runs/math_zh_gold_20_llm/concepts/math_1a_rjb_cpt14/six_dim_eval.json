@@ -1,0 +1,89 @@
+{
+  "concept_id": "math_1a_rjb_cpt14",
+  "target_concept": "长方体",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "weighted_overall": 4.4,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了长方体的所有核心特征：6个面（两个相对的面是正方形，其余是长方形）、12条棱（相对的棱长度相等）、8个顶点（每个顶点连接三条棱），且相对的面完全相同，与概念定义完全一致。",
+    "implicitness": "故事完全避免了直接使用'长方体'一词，而是通过'六面屋'、'六个面'、'十二条棱'、'八个顶点'等描述性语言隐含地传达了概念，符合禁止术语要求。",
+    "mapping_clarity": "故事通过小智的观察和操作，清晰地映射了长方体的结构特征，如相对的面相同、相对的棱等长、顶点连接三条棱等，但部分细节（如每个面与四个其他面相邻）稍显冗余，略有模糊。",
+    "readability": "语言流畅自然，情节简单易懂，适合目标年龄段，没有复杂词汇或句式，易于理解。",
+    "pedagogical_value": "故事通过探索和发现的过程，有效引导读者理解长方体的几何特征，但缺乏与前后概念（如表面积、体积）的联系，教学深度有限。",
+    "novelty": "故事采用了常见的探索式叙事模式，虽然情节合理，但缺乏独特的创意或新颖的视角，整体较为常规。"
+  },
+  "revision_suggestions": [
+    "可增加与表面积或体积相关的隐含线索，以增强教学深度。",
+    "可引入更独特的场景或角色互动，提升新颖性。",
+    "可减少对每个面与四个面相邻的描述，避免分散对核心特征的注意力。"
+  ],
+  "rule_findings": {
+    "story_token_count": 468,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确描述了长方体的所有核心特征：6个面（两个相对的面是正方形，其余是长方形）、12条棱（相对的棱长度相等）、8个顶点（每个顶点连接三条棱），且相对的面完全相同，与概念定义完全一致。",
+      "implicitness": "故事完全避免了直接使用'长方体'一词，而是通过'六面屋'、'六个面'、'十二条棱'、'八个顶点'等描述性语言隐含地传达了概念，符合禁止术语要求。",
+      "mapping_clarity": "故事通过小智的观察和操作，清晰地映射了长方体的结构特征，如相对的面相同、相对的棱等长、顶点连接三条棱等，但部分细节（如每个面与四个其他面相邻）稍显冗余，略有模糊。",
+      "readability": "语言流畅自然，情节简单易懂，适合目标年龄段，没有复杂词汇或句式，易于理解。",
+      "pedagogical_value": "故事通过探索和发现的过程，有效引导读者理解长方体的几何特征，但缺乏与前后概念（如表面积、体积）的联系，教学深度有限。",
+      "novelty": "故事采用了常见的探索式叙事模式，虽然情节合理，但缺乏独特的创意或新颖的视角，整体较为常规。"
+    },
+    "revision_suggestions": [
+      "可增加与表面积或体积相关的隐含线索，以增强教学深度。",
+      "可引入更独特的场景或角色互动，提升新颖性。",
+      "可减少对每个面与四个面相邻的描述，避免分散对核心特征的注意力。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

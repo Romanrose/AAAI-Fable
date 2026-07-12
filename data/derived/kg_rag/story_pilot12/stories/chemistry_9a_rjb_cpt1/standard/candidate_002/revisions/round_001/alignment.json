@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "田地",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "耕作田地",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "田地需要耕作才能生长庄稼",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact story evidence. Node n1 maps to '田地', node n2 maps to '耕作田地', and edge e1 (enables) is supported by the story statement '田地需要耕作才能生长庄稼' with correct direction."
+}

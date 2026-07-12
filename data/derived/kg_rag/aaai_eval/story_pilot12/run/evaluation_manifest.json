@@ -1,0 +1,73 @@
+{
+  "runner_version": "aaai-eval-runner/v1",
+  "created_at_utc": "2026-07-11T08:08:41.233438+00:00",
+  "experiment_id": "story-pilot-12-import-v1",
+  "dataset_id": "story-pilot-12",
+  "protocol_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\story_pilot12\\protocol.json",
+  "protocol_sha256": "ea81353234d3c98c8a9510e7a99ad64af22c035614356e46945e6be0ea0583c5",
+  "dataset_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\story_pilot12\\datasets\\story_pilot12.jsonl",
+  "dataset_sha256": "c4a72300b3641fdcba0d350cbb00b2500ab73f12d39377e08b1a3ae2ee45722d",
+  "concept_count": 12,
+  "method_count": 3,
+  "record_count": 108,
+  "failure_count": 0,
+  "expected_record_count": 108,
+  "official_ready": true,
+  "fairness": {
+    "mapping.standard": {
+      "expected_record_count": 36,
+      "actual_record_count": 36,
+      "budget_complete": true
+    },
+    "mapping.deterministic_copycat": {
+      "expected_record_count": 36,
+      "actual_record_count": 36,
+      "budget_complete": true
+    },
+    "mapping.llm_guided_copycat": {
+      "expected_record_count": 36,
+      "actual_record_count": 36,
+      "budget_complete": true
+    }
+  },
+  "methods": [
+    {
+      "method_id": "mapping.standard",
+      "display_name": "Standard Mapping",
+      "family": "mapping",
+      "version": "v1",
+      "adapter": "story_pilot_artifact",
+      "config": {
+        "pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+        "strategy": "standard"
+      }
+    },
+    {
+      "method_id": "mapping.deterministic_copycat",
+      "display_name": "Deterministic Copycat",
+      "family": "mapping",
+      "version": "v1",
+      "adapter": "story_pilot_artifact",
+      "config": {
+        "pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+        "strategy": "copycat"
+      }
+    },
+    {
+      "method_id": "mapping.llm_guided_copycat",
+      "display_name": "LLM-guided Copycat",
+      "family": "mapping",
+      "version": "v1",
+      "adapter": "story_pilot_artifact",
+      "config": {
+        "pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+        "strategy": "llm_guided_copycat"
+      }
+    }
+  ],
+  "budget": {
+    "candidate_count": 3,
+    "revision_rounds": 1,
+    "max_story_tokens": 1800
+  }
+}

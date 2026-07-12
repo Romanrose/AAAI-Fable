@@ -1,0 +1,53 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt116",
+    "label": "Concept",
+    "name": "膜分离制取富氧空气",
+    "properties": {
+      "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。",
+      "importance": "了解",
+      "examples": [
+        "利用该膜技术得到含90%以上氧气的富氧空气",
+        "富氧膜用于医疗、发酵工业、化学工业、富氧燃烧等"
+      ],
+      "retrieval_text": "膜分离制取富氧空气\nConcept\n利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。\n了解\n利用该膜技术得到含90%以上氧气的富氧空气\n富氧膜用于医疗、发酵工业、化学工业、富氧燃烧等"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:11285",
+      "source": "chemistry_9a_rjb_cpt116",
+      "source_name": "膜分离制取富氧空气",
+      "target": "chemistry_9a_rjb_cpt114",
+      "target_name": "工业制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "膜分离制取富氧空气",
+      "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11285] 膜分离制取富氧空气 --is_a--> 工业制取氧气的方法"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 257,
+    "summary_chars": 293,
+    "path_chars": 0,
+    "retrieval_context_chars": 550
+  }
+}

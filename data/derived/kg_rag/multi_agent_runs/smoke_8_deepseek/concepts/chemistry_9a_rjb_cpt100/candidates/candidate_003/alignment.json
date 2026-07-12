@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "新印泥与纸张的缓慢结合过程",
+      "evidence": "章局主事把一摞文书推到学徒小印面前，又递过一盒新印泥：“今日之内，全部盖完。",
+      "narrative_anchor": "章局主事把一摞文书推到学徒小印面前，又递过一盒新印泥：“今日之内，全部盖完。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

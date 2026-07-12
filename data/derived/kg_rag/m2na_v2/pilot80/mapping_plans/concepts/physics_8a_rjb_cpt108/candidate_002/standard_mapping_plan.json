@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农夫与禾苗",
+  "characters": [
+    "农夫",
+    "禾苗"
+  ],
+  "objects": [
+    "禾苗的高度",
+    "阳光雨露",
+    "生长规律"
+  ],
+  "conflict": "农夫希望禾苗快速长高，但禾苗的生长需要遵循自然规律，不能急于求成。",
+  "event_chain": [
+    "农夫每天测量禾苗的高度，记录其变化。",
+    "禾苗的高度与阳光雨露的充足程度密切相关。",
+    "禾苗的高度决定了它是否能够遵循生长规律，顺利抽穗结实。"
+  ],
+  "turning_point": "农夫发现禾苗高度不足，于是过度浇水施肥，试图强行促进生长，反而导致禾苗枯萎。",
+  "resolution_state": "农夫认识到禾苗的高度必须与阳光雨露的供给相匹配，且必须遵循生长规律，才能健康生长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "禾苗的高度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "阳光雨露",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "生长规律",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "阳光雨露的充足程度与禾苗的高度相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "禾苗的高度决定了它是否能够遵循生长规律",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保禾苗的高度不直接映射为像距，阳光雨露不映射为物距，生长规律不映射为凸透镜成像规律。",
+    "避免使用任何与物理光学相关的术语，如焦距、透镜、成像等。",
+    "故事中农夫的行为（过度浇水）是冲突的体现，不是机制的一部分，需注意不将其视为因果机制。"
+  ],
+  "mapping_context_sha256": "13556a6b9418b3b1b25a095a28f663b6b2049c214be9cb048e342d20d36eb28c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ff0df6060483bfcf7a24887e2f3e916610e6026e8c6cc44ce2ab84601b83e269"
+  }
+}

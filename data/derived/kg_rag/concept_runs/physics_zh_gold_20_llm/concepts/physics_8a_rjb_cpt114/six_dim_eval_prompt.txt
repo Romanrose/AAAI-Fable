@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "近点",
+  "concept_id": "physics_8a_rjb_cpt114",
+  "concept_definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt114",
+    "近点"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt114",
+      "label": "Concept",
+      "name": "近点",
+      "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "近点\n眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt112",
+          "label": "Concept",
+          "name": "眼睛调节",
+          "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt115",
+          "label": "Concept",
+          "name": "明视距离",
+          "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s4",
+          "label": "Section",
+          "name": "第四节 眼睛和眼镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt114",
+    "concept_id": "physics_8a_rjb_cpt114",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt114",
+      "label": "Concept",
+      "name": "近点",
+      "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "近点"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中隐含的核心规则：声音清晰度存在一个最近有效距离，太近反而模糊，对应眼睛依靠调节能看清的最近点。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小钟通过试验发现，小芳站在10米外声音最清晰，2米时几乎听不见，体现了‘眼睛依靠调节能看清的最近点’的机制，正常眼近点约为10 cm被类比为10米。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了距离与清晰度之间的变量关系（方向：太近变模糊；大小：10米最佳；条件变化：不同距离导致不同效果），且规律由试验发现，非角色主观意志决定。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼里的秘密\n\n小城中央有一座古老的钟楼，每天正午和午夜都会准时敲响。守钟人老陈退休后，新来的小钟负责维护这座钟。老陈临走前叮嘱他：“钟楼里有个秘密，你要自己发现。”\n\n小钟每天爬上钟楼，检查齿轮、发条和摆锤。他发现，每当有人靠近钟楼时，钟声似乎会变得模糊，而离远一些反而听得更清楚。他心想：难道钟声会怕人吗？\n\n一天，小钟决定做个试验。他让朋友小芳站在钟楼下的广场上，自己则从钟楼顶层慢慢往下走。每走一层，他就让小芳喊一声“听到了吗？”起初，小芳在顶层时，小钟能清晰听到她的声音。可当他走到第三层时，小芳的声音变得断断续续。到了第一层，小芳几乎喊破了嗓子，小钟却只能听见模糊的回音。\n\n小钟纳闷了：明明离得越近，声音应该越清楚才对，为什么反而听不清了呢？他想起老陈的话，决定再试一次。这次，他让小芳站在钟楼外不同距离的地方，自己则固定在顶层。结果发现，小芳站在10米外时，声音最清晰；再近一些，声音反而开始模糊；当小芳站到离钟楼只有2米时，小钟几乎听不见她在说什么。\n\n小钟恍然大悟：原来声音的清晰度并不是越近越好，而是有一个最合适的距离。太远了声音太弱，太近了反而会因回声和干扰而模糊。他记下这个规律，并把它用在调整钟楼的钟声上——让钟声在广场中央最清晰，而不是在钟楼下。\n\n从此，小钟成了最懂钟楼的守钟人。每当有人问他秘诀，他总是笑着说：“有些东西，不是越近越清楚，找到那个刚刚好的距离，才是关键。”",
+  "rule_findings": {
+    "story_token_count": 522,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt17",
+    "label": "Concept",
+    "name": "球体",
+    "properties": {
+      "definition": "表面上所有点到中心的距离都相等的立体图形。",
+      "importance": "掌握",
+      "examples": [
+        "篮球",
+        "乒乓球"
+      ],
+      "retrieval_text": "球体\nConcept\n表面上所有点到中心的距离都相等的立体图形。\n掌握\n篮球\n乒乓球"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "math_1a_rjb_cpt18",
+      "label": "Concept",
+      "name": "按形状分类",
+      "properties": {
+        "definition": "根据物体或图形的外形特征进行分类的方法。",
+        "importance": "重要",
+        "examples": [
+          "把立体图形分成长方体、正方体、圆柱和球体"
+        ],
+        "retrieval_text": "按形状分类\nConcept\n根据物体或图形的外形特征进行分类的方法。\n重要\n把立体图形分成长方体、正方体、圆柱和球体"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:12137",
+      "source": "math_1a_rjb_cpt17",
+      "source_name": "球体",
+      "target": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "球体",
+      "definition": "表面上所有点到中心的距离都相等的立体图形。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:12137] 球体 --is_a--> 按形状分类"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

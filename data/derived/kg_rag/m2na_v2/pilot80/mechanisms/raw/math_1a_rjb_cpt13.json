@@ -1,0 +1,70 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt13",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "数字0",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt13:definition",
+          "kg-node:math_1a_rjb_cpt13:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "没有数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt13:definition",
+          "kg-node:math_1a_rjb_cpt13:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt13:definition",
+          "kg-node:math_1a_rjb_cpt13:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数字0的含义"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "c83cd1298de70d64287fee66416ae0565bef95e7f7bbac87aeecff5553d1a34d",
+    "retrieval_sha256": "53b5407a21b12d203b2533bd96b7896a74a0a159d904185f075a777e783fc7da",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "3e0865d2a9cba8ede4ca2e3b83dd2b056427f9c7f82ac50e6a4e01c768bf1fae"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

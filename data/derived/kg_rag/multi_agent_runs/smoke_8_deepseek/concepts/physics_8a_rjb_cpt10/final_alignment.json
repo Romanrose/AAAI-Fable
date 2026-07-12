@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "判断物体运动或静止时所选取的标准物体",
+      "evidence": "判断依据",
+      "narrative_anchor": "判断依据",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": []
+}

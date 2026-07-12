@@ -1,0 +1,158 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt112",
+    "subject": "biology",
+    "canonical_name": "雄蕊",
+    "aliases": [],
+    "definition": "花的雄性生殖结构，花药内含有花粉。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "雄蕊"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "雄蕊",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:name",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "花",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "花药",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "花粉",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "雄性生殖结构",
+        "weight": 0.9,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ],
+        "canonicalized_from": "contains"
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "雄蕊"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt112",
+      "name": "雄蕊",
+      "label": "Concept",
+      "definition": "花的雄性生殖结构，花药内含有花粉。"
+    },
+    "neighbors": [],
+    "relations": [],
+    "raw_edge_count": 0,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "雄蕊",
+      "definition": "花的雄性生殖结构，花药内含有花粉。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [],
+  "provenance": {
+    "seed_sha256": "d87de7d63e744fcf4b25465a0ac2b2777498700d738d4a104c83686bfd295c39",
+    "retrieval_sha256": "4cf7bd2aa828187a3adef6b6f979fe28af658e79d6a803496c84dea06cfbfe58",
+    "mechanism_record_sha256": "12031e04b602e0b205d0f5882527cac4b2087bbd658bbae7a8ac46273ad31e25"
+  }
+}

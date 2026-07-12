@@ -1,0 +1,52 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt104",
+    "label": "Concept",
+    "name": "加热高锰酸钾制取氧气",
+    "properties": {
+      "definition": "在试管中装入少量高锰酸钾并加热，使其受热分解生成二氧化锰、锰酸钾和氧气的实验室制氧方法。",
+      "importance": "掌握",
+      "examples": [
+        "实验2-5：把少量高锰酸钾装入试管中，用排水法收集一瓶氧气"
+      ],
+      "retrieval_text": "加热高锰酸钾制取氧气\nConcept\n在试管中装入少量高锰酸钾并加热，使其受热分解生成二氧化锰、锰酸钾和氧气的实验室制氧方法。\n掌握\n实验2-5：把少量高锰酸钾装入试管中，用排水法收集一瓶氧气"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:11276",
+      "source": "chemistry_9a_rjb_cpt104",
+      "source_name": "加热高锰酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "加热高锰酸钾制取氧气",
+      "definition": "在试管中装入少量高锰酸钾并加热，使其受热分解生成二氧化锰、锰酸钾和氧气的实验室制氧方法。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11276] 加热高锰酸钾制取氧气 --is_a--> 实验室制取氧气的方法"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 259,
+    "summary_chars": 270,
+    "path_chars": 0,
+    "retrieval_context_chars": 529
+  }
+}

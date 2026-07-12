@@ -1,0 +1,154 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt103",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "适宜的温度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition",
+          "kg-node:biology_7a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "种子萌发的环境条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "种子萌发生理活动",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "种子完成萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "温度过低",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition",
+          "kg-node:biology_7a_rjb_cpt102:examples"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "outcome",
+        "text": "抑制萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10773"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n6",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "适宜的温度"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "c319c2dba1ad7dfb6a406f05349fdba6f4a0c557ed5bfeb919c09a1a089e1b53",
+    "retrieval_sha256": "90537434a311b3fdd7fdf8725f398dcc25ab5e625664cf449b2d54443dd5e6b0",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "27726b74e6371c6746daa2e0104543e499f8e844c778a5cf489b26a81586c198"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

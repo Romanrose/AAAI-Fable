@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "记录员用木条试了封存箱，木条复燃",
+      "narrative_anchor": "记录员用木条试了封存箱，木条复燃",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第二道转化环节",
+      "evidence": "调度员接过通行牌，把材料送进熔炉，确认了转化过程不是简单的混合",
+      "narrative_anchor": "调度员接过通行牌，把材料送进熔炉，确认了转化过程不是简单的混合",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "验收员最后翻开记录册，对照封存箱里的成品，又看了看通行牌上的状态",
+      "narrative_anchor": "验收员最后翻开记录册，对照封存箱里的成品，又看了看通行牌上的状态",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第二道转化环节",
+      "evidence": "先稳定入口条件核对，再推动第二道转化环节",
+      "narrative_anchor": "先稳定入口条件核对，再推动第二道转化环节",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "用记录、比较和复查来检验这条判断",
+      "evidence": "验收员最后翻开记录册，对照封存箱里的成品，又看了看通行牌上的状态",
+      "narrative_anchor": "验收员最后翻开记录册，对照封存箱里的成品，又看了看通行牌上的状态",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

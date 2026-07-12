@@ -1,0 +1,335 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "农业生产",
+      "domain_rationale": "农田生态系统满足所有生命特征，直接对应生物概念，且每个特征都有具体农事体现。",
+      "conflict": "无直接冲突，但需注意农田作物与生物概念一一对应。",
+      "event_chain": [
+        "农田需要施肥（需要营养）",
+        "农田作物进行光合作用释放氧气（能进行呼吸）",
+        "农田通过落叶和根系分泌废物（能排出废物）",
+        "农田作物从种子长成植株（能生长）",
+        "农田作物开花结果产生新种子（能繁殖）",
+        "农田作物品种代代相传但偶有变异（具有遗传和变异）",
+        "农田作物由细胞构成（由细胞构成）"
+      ],
+      "turning_point": "无转折点，为并列特征描述。",
+      "resolution_state": "农田是一个具有完整生命特征的生态系统。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "农田",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "需要施肥",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "进行光合作用释放氧气",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "通过落叶和根系分泌废物",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "从种子长成植株",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "开花结果产生新种子",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "品种代代相传但偶有变异",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "由细胞构成",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "农田需要施肥",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "农田进行光合作用释放氧气",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "农田通过落叶和根系分泌废物",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "农田从种子长成植株",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "农田开花结果产生新种子",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "农田品种代代相传但偶有变异",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "农田由细胞构成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "城市交通系统",
+      "domain_rationale": "城市交通系统作为有机整体，具有类似生命的各种需求与功能，每个特征可映射到交通元素。",
+      "conflict": "交通系统无生物意义上的细胞结构，需抽象为节点（如车站、车辆）。",
+      "event_chain": [
+        "交通系统需要燃油和电力（需要营养）",
+        "交通系统通过排放尾气和散热（能进行呼吸）",
+        "交通系统通过维修厂和废料处理（能排出废物）",
+        "交通系统路线延长和网络扩张（能生长）",
+        "交通系统新建线路和站点（能繁殖）",
+        "交通系统时刻表传承和路线调整（具有遗传和变异）",
+        "交通系统由车站、车辆、轨道等单元构成（由细胞构成）"
+      ],
+      "turning_point": "无转折点，为并列特征描述。",
+      "resolution_state": "城市交通系统是一个具有类似生命特征的综合体系。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "城市交通系统",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "需要燃油和电力",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "排放尾气和散热",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "通过维修厂和废料处理",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "路线延长和网络扩张",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "新建线路和站点",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "时刻表传承和路线调整",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "由车站、车辆、轨道等单元构成",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "城市交通系统需要燃油和电力",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "城市交通系统排放尾气和散热",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "城市交通系统通过维修厂和废料处理",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "城市交通系统路线延长和网络扩张",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "城市交通系统新建线路和站点",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "城市交通系统时刻表传承和路线调整",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "城市交通系统由车站、车辆、轨道等单元构成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "手工作坊系统",
+      "domain_rationale": "传统手工作坊如陶窑、铁铺，具有输入、输出、生长、传承等类似生命特征，适合映射。",
+      "conflict": "手工作坊无细胞概念，需将工序单元视为基本构件。",
+      "event_chain": [
+        "作坊需要原料和燃料（需要营养）",
+        "作坊通过烟囱排气和鼓风（能进行呼吸）",
+        "作坊通过废料和残渣清理（能排出废物）",
+        "作坊从初建到扩建规模（能生长）",
+        "作坊开设分号或收徒传艺（能繁殖）",
+        "作坊技艺代代相传并改进（具有遗传和变异）",
+        "作坊由工作台、工具、原料等基本单元构成（由细胞构成）"
+      ],
+      "turning_point": "无转折点，为并列特征描述。",
+      "resolution_state": "手工作坊系统具备类似生命的完整特征。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "手工作坊系统",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "需要原料和燃料",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "通过烟囱排气和鼓风",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "通过废料和残渣清理",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "从初建到扩建规模",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "开设分号或收徒传艺",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "技艺代代相传并改进",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "由工作台、工具、原料等基本单元构成",
+          "mapping_type": "state"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "手工作坊系统需要原料和燃料",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "手工作坊系统通过烟囱排气和鼓风",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "手工作坊系统通过废料和残渣清理",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "手工作坊系统从初建到扩建规模",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "手工作坊系统开设分号或收徒传艺",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "手工作坊系统技艺代代相传并改进",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "手工作坊系统由工作台、工具、原料等基本单元构成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  }
+]

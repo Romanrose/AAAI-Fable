@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully covered with high confidence and direction accuracy. The story uses a consistent workshop metaphor to represent the biological mechanism, with each process step clearly mapped to a specific '转化环节'. The edges are all represented by the same phrase '入口条件没核对，后面全白费', which, while uniform, correctly conveys the dependency direction from the entity (入口条件) to each process. The story avoids forbidden terms and maintains a coherent narrative. The only minor weakness is the uniform edge representation, which could be more varied, but it does not violate any requirements."
+  },
+  "revision_instructions": [
+    "No revisions needed. The story meets all requirements."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

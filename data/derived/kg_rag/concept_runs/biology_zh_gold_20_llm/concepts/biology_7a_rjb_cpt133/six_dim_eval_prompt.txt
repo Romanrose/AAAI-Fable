@@ -1,0 +1,199 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "叶绿素",
+  "concept_id": "biology_7a_rjb_cpt133",
+  "concept_definition": "叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt133",
+    "叶绿素"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt133",
+      "label": "Concept",
+      "name": "叶绿素",
+      "definition": "叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "叶绿素\n叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt4",
+          "label": "Concept",
+          "name": "光合作用",
+          "definition": "能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt52",
+          "label": "Concept",
+          "name": "叶绿体",
+          "definition": "存在于植物叶片细胞中，色素能吸收光能，将光能转变成化学能，并把化学能储存在其制造的糖类等有机物中；是细胞中的能量转换器。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe22",
+          "label": "Exercise",
+          "name": "判断：叶绿素是绿叶进行光合作用的主要场所。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s4",
+          "label": "Section",
+          "name": "第四章 绿色植物是生物圈中有机物的制造者",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt133",
+    "concept_id": "biology_7a_rjb_cpt133",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt133",
+      "label": "Concept",
+      "name": "叶绿素",
+      "definition": "叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "叶绿素"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中通过东墙豆苗叶片绿色深、西墙豆苗叶片绿色浅的对比，以及热水浸泡后东墙叶片水变绿、西墙叶片水无色的实验，暗示叶片中存在一种绿色物质。这种物质就是叶绿素，但故事中未直接提及该名称。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事中老园丁指出：阳光充足的东墙豆苗绿色物质多，叶片绿得深；阳光少的西墙豆苗绿色物质少，叶片黄。这种绿色物质能捕捉阳光，帮助植物把水和空气变成养料。这对应了叶绿素捕获太阳光、为光合作用提供能量的机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事避免了目的论解释（如‘植物为了生长才制造叶绿素’），而是通过阳光条件影响绿色物质含量的观察，呈现了条件（阳光充足与否）、过程（绿色物质多寡影响叶片颜色和生长）和结果（东墙豆苗更壮实）。没有把个体努力写成进化原因。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃的秘密\n\n老园丁在园圃里种了两排豆苗。一排种在向阳的东墙下，一排种在背阴的西墙下。小徒弟阿明每天浇水，却奇怪地发现：东墙的豆苗绿得发亮，西墙的豆苗却黄瘦许多。\n\n阿明问：“师傅，为什么同样的种子、同样的水，长出来颜色差这么多？”\n\n老园丁说：“你每天早晨来观察，记下它们的变化。”\n\n阿明照做。第一天清晨，东墙豆苗的叶片上挂着露珠，在阳光下泛着翠绿；西墙豆苗的叶片却显得暗淡。第三天，阿明发现东墙豆苗的叶片更厚实了，用手一摸，感觉硬挺；西墙的叶片薄而软。第五天，阿明摘下一片东墙的叶子和一片西墙的叶子，对着光看：东墙的叶片里好像藏着许多细小的绿色颗粒，密密麻麻；西墙的叶片里绿色颗粒很少，颜色也浅。\n\n阿明跑去问：“师傅，叶片里那些绿色的小东西是什么？”\n\n老园丁说：“你再做一件事：把两片叶子分别泡在热水里，看看水会变成什么颜色。”\n\n阿明照做。东墙叶片泡过的水渐渐染上淡淡的绿色，西墙叶片泡过的水几乎无色。阿明恍然大悟：“原来东墙的叶片里藏着更多那种绿色物质！”\n\n老园丁点点头：“那种绿色物质能捕捉阳光。东墙的豆苗得到充足阳光，绿色物质就多，叶片就绿得深；西墙的豆苗阳光少，绿色物质就少，叶片就黄。有了阳光和那种绿色物质，豆苗才能把水和空气变成养料，长得壮实。”\n\n阿明从此明白：植物叶片里的绿色物质，是阳光和生命之间的桥梁。没有它，再好的种子也长不出健康的绿意。",
+  "rule_findings": {
+    "story_token_count": 499,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

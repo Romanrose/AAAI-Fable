@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "缸中粮食在酒曲作用下缓慢发酵",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "粮食与氧气发生的化学反应",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "酒精蒸汽与氧气剧烈反应，蓝色火焰猛地蹿起",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "粮食发酵过程中缓慢消耗着空气中的氧气",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "空气中的氧气",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "酒精蒸汽、充足空气、达到燃点",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "蓝色火焰猛地蹿起，瞬间吞噬碗口，热浪扑面",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "缸壁温热却无半点火光",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "缸中粮食在酒曲作用下缓慢发酵",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "酒精蒸汽与氧气剧烈反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "粮食发酵过程中缓慢消耗着空气中的氧气",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "粮食与氧气发生的化学反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "酒精蒸汽与氧气剧烈反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "粮食发酵过程中缓慢消耗着空气中的氧气",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "酒精蒸汽与氧气剧烈反应",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "蓝色火焰猛地蹿起，瞬间吞噬碗口，热浪扑面",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "缸壁温热却无半点火光",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "同是粮食与氧气的交融，一个藏于暗处，一个显于烈火",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact story substrings. Node n6 (condition) and edge e7 (requires) have low confidence because the story does not explicitly state the three conditions together; only the reaction is described. Edge e10 is supported by the explicit contrast in the story."
+}

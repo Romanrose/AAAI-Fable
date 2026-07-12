@@ -1,0 +1,85 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠的技艺传承与行业应用",
+  "characters": [
+    "老工匠（精通一门独门技艺）",
+    "年轻学徒（渴望掌握技艺）",
+    "作坊主（经营多种行业）"
+  ],
+  "objects": [
+    "独门技艺（如特殊冶炼法）",
+    "作坊（生产各类器具）",
+    "产品（如农具、兵器、日常用品）",
+    "失败品（因缺少技艺而低效生产）"
+  ],
+  "conflict": "作坊主发现许多产品的生产必须依靠老工匠的独门技艺才能高效完成，否则产量低、质量差。",
+  "event_chain": [
+    "老工匠掌握一门独门技艺（对应n1:催化作用）",
+    "老工匠将独门技艺应用于作坊的多种产品生产（对应n2:催化剂的工业应用）",
+    "作坊主意识到许多产品的生产必须依靠该技艺才能有效进行（对应n3:化工生产中许多过程必须依靠催化剂才能有效进行）",
+    "列举实例：农具锻造、兵器淬火、日常用品铸造等都需要该技艺（对应n4:生产化肥、农药等例子）"
+  ],
+  "turning_point": "作坊主决定将独门技艺系统传授给学徒，并推广到所有生产环节。",
+  "resolution_state": "作坊的生产效率和质量大幅提升，所有关键产品都依赖该技艺。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老工匠的独门技艺",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "独门技艺在作坊多种产品生产中的应用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "作坊主意识到许多产品必须依靠独门技艺才能有效生产",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农具、兵器、日常用品等具体产品实例",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "独门技艺（n1）使得其应用于多种产品生产（n2）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "独门技艺的应用（n2）导致作坊主认识到必须依靠该技艺（n3）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "具体产品实例（n4）验证了独门技艺的应用（n2）的必要性",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保未使用任何禁止术语，如'催化剂'、'催化'等。",
+    "确保所有节点和边均已映射，无遗漏。",
+    "确保故事载体来自同一源域（古代工匠行业），未混入其他领域。",
+    "确保未将课程桥接上下文（如'催化作用'概念）作为因果机制的一部分。"
+  ],
+  "mapping_context_sha256": "1625bbf52f153c8545e598a3d72c43ae369a6a183643024021e52116c47d774b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "55ba619b033522ddfec3ea47c35ac0431ea98227b17e89a77b659a29b41765f2"
+  }
+}

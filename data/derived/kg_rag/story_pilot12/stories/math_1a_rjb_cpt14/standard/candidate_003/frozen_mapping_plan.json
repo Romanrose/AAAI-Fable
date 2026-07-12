@@ -1,0 +1,98 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "一座由六块不同形状的木板拼成的六面木箱，每块木板形状不同但两两相对，木箱有十二条木棱和八个角钉，木箱的棱长有特定关系。",
+  "characters": [
+    "木匠",
+    "学徒"
+  ],
+  "objects": [
+    "六面木箱（由六块长方形木板组成，相对的面完全相同，相对的棱长度相等）",
+    "正方木盒（由六块完全相同的正方形木板组成，所有棱长相等，是六面木箱的特殊情况）",
+    "木工分类法（按形状分类）",
+    "拼搭木结构（用木块组合、拆分形成新结构）",
+    "木箱表面积（六块木板面积之和）",
+    "木箱容积公式（长×宽×高）"
+  ],
+  "conflict": "学徒想用六块完全相同的正方形木板做一个木盒，但木匠指出这种正方木盒只是六面木箱的一种特殊情况，不能代表所有木箱。",
+  "event_chain": [
+    "木匠向学徒展示六面木箱，说明它由六块长方形木板组成，相对的面完全相同，相对的棱长度相等。",
+    "学徒注意到六面木箱属于木工分类法中的一种形状。",
+    "学徒拿出正方木盒，认为它也是木箱的一种，木匠确认正方木盒是六面木箱的特殊情况（所有面都是正方形）。",
+    "木匠指出六面木箱与正方木盒有关联，但正方木盒不能替代六面木箱。",
+    "木匠用六面木箱作为基础，教学徒计算木箱表面积（六块木板面积之和）。",
+    "木匠用六面木箱作为基础，教学徒木箱容积公式（长×宽×高）。",
+    "木匠用六面木箱作为基础，教学徒拼搭木结构（用木块组合、拆分形成新结构）。"
+  ],
+  "turning_point": "木匠强调正方木盒只是六面木箱的一种特例，不能混淆两者的关系。",
+  "resolution_state": "学徒理解了六面木箱的基本特征及其与正方木盒的关系，并掌握了基于六面木箱的表面积、容积公式和拼搭方法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "六面木箱",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "正方木盒",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "木工分类法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "拼搭木结构",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "木箱表面积",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "木箱容积公式",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "六面木箱是木工分类法中的一种形状",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "正方木盒是六面木箱的一种特殊情况",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "六面木箱与正方木盒有关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "六面木箱是学习木箱表面积的基础",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "六面木箱是学习木箱容积公式的基础",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "六面木箱是学习拼搭木结构的基础",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'长方体'一词，已用'六面木箱'替代。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保正方木盒是六面木箱的特殊情况，关系清晰。",
+    "确保木箱容积公式不直接使用目标概念名称。"
+  ]
+}

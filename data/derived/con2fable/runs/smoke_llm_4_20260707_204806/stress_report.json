@@ -1,0 +1,93 @@
+{
+  "suite": {
+    "base_concept_count": 4,
+    "record_count": 16,
+    "minimum_detection_rate": 0.9,
+    "maximum_clean_false_positive_rate": 0.1
+  },
+  "by_stress_type": {
+    "surface_distractor": {
+      "sample_count": 4,
+      "detected_count": 4,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "node_coverage": -0.6666666666666666,
+        "edge_coverage": -0.5357142857142857,
+        "weighted_node_coverage": -0.671875,
+        "weighted_edge_coverage": -0.5357142857142857,
+        "alignment_precision": -0.6166666666666667,
+        "relation_direction_accuracy": null
+      },
+      "undetected": [],
+      "passed": true
+    },
+    "relation_corruption": {
+      "sample_count": 4,
+      "detected_count": 3,
+      "detection_rate": 0.75,
+      "mean_metric_delta_from_clean": {
+        "node_coverage": 0.0,
+        "edge_coverage": 0.0,
+        "weighted_node_coverage": 0.0,
+        "weighted_edge_coverage": 0.0,
+        "alignment_precision": 0.0,
+        "relation_direction_accuracy": -0.75
+      },
+      "undetected": [
+        {
+          "id": "physics_8a_rjb_cpt1-relation_corruption",
+          "base_id": "physics_8a_rjb_cpt1",
+          "detected": false,
+          "expectation": "relation_direction_accuracy should decrease"
+        }
+      ],
+      "passed": false
+    },
+    "mechanism_omission": {
+      "sample_count": 4,
+      "detected_count": 4,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "node_coverage": -0.5,
+        "edge_coverage": -0.4107142857142857,
+        "weighted_node_coverage": -0.5335144927536232,
+        "weighted_edge_coverage": -0.4107142857142857,
+        "alignment_precision": -0.3666666666666667,
+        "relation_direction_accuracy": 0.0
+      },
+      "undetected": [],
+      "passed": true
+    }
+  },
+  "clean_samples": {
+    "false_positive_count": 3,
+    "false_positive_rate": 0.75,
+    "failures": [
+      {
+        "base_id": "chemistry_9a_rjb_cpt10",
+        "failures": [
+          "node_coverage=0.0",
+          "edge_coverage=0.14285714285714285",
+          "alignment_precision=0.06666666666666667"
+        ]
+      },
+      {
+        "base_id": "math_1a_rjb_cpt1",
+        "failures": [
+          "edge_coverage=0.5",
+          "alignment_precision=0.8"
+        ]
+      },
+      {
+        "base_id": "physics_8a_rjb_cpt1",
+        "failures": [
+          "node_coverage=0.6666666666666666",
+          "edge_coverage=0.5",
+          "alignment_precision=0.6"
+        ]
+      }
+    ],
+    "passed": false
+  },
+  "passed": false
+}

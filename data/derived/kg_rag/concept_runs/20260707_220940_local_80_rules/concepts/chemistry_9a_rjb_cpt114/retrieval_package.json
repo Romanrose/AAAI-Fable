@@ -1,0 +1,78 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt114",
+    "label": "Concept",
+    "name": "工业制取氧气的方法",
+    "properties": {
+      "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+      "importance": "了解",
+      "examples": [
+        "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+        "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+      ],
+      "retrieval_text": "工业制取氧气的方法\nConcept\n为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。\n了解\n在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧\n在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15224",
+      "source": "chemistry_9a_rjb_cpt66",
+      "source_name": "氧气",
+      "target": "chemistry_9a_rjb_cpt114",
+      "target_name": "工业制取氧气的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:11284",
+      "source": "chemistry_9a_rjb_cpt115",
+      "source_name": "液态空气的分馏制氧",
+      "target": "chemistry_9a_rjb_cpt114",
+      "target_name": "工业制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11285",
+      "source": "chemistry_9a_rjb_cpt116",
+      "source_name": "膜分离制取富氧空气",
+      "target": "chemistry_9a_rjb_cpt114",
+      "target_name": "工业制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "工业制取氧气的方法",
+      "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:15224] 氧气 --prerequisites_for--> 工业制取氧气的方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法",
+      "[normalized:edge:11285] 膜分离制取富氧空气 --is_a--> 工业制取氧气的方法"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 790,
+    "summary_chars": 378,
+    "path_chars": 0,
+    "retrieval_context_chars": 1168
+  }
+}

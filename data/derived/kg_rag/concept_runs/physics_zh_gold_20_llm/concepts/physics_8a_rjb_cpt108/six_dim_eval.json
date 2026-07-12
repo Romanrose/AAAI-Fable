@@ -1,0 +1,87 @@
+{
+  "concept_id": "physics_8a_rjb_cpt108",
+  "target_concept": "像距",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事中光点到镜片的距离随灯的位置变化，准确对应了像距v的定义（像到凸透镜的距离），且物距与像距的反向关系符合凸透镜成像规律，无任何矛盾。",
+    "implicitness": "目标概念“像距”及其别名从未在故事正文或标题中出现，完全通过“光点的位置”“光点到镜片的距离”等隐喻表达，符合隐含性要求。",
+    "mapping_clarity": "灯的位置（物距u）与光点位置（像距v）的对应关系清晰呈现：灯远则光点近，灯近则光点远，且通过小林的具体观察和记录强化了映射，读者能明确理解。",
+    "readability": "语言流畅自然，情节连贯，用词简单易懂，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "通过连续观察和规律发现，有效传递了像距与物距的依赖关系，且结尾点明规律普遍适用，有助于学习者迁移理解，教学价值高。",
+    "novelty": "以钟楼光点比喻凸透镜成像，场景有一定新意，但整体叙事结构（观察-发现规律-应用）较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个具体数值或比例关系的暗示（如“灯远一倍，光点近一半”），以强化定量理解。",
+    "可加入一个与物距/像距相关的简单实验或测量环节，提升互动性。",
+    "结尾可更明确地联系到凸透镜成像的其他规律（如虚实、大小变化），扩展教学深度。"
+  ],
+  "rule_findings": {
+    "story_token_count": 569,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事中光点到镜片的距离随灯的位置变化，准确对应了像距v的定义（像到凸透镜的距离），且物距与像距的反向关系符合凸透镜成像规律，无任何矛盾。",
+      "implicitness": "目标概念“像距”及其别名从未在故事正文或标题中出现，完全通过“光点的位置”“光点到镜片的距离”等隐喻表达，符合隐含性要求。",
+      "mapping_clarity": "灯的位置（物距u）与光点位置（像距v）的对应关系清晰呈现：灯远则光点近，灯近则光点远，且通过小林的具体观察和记录强化了映射，读者能明确理解。",
+      "readability": "语言流畅自然，情节连贯，用词简单易懂，适合目标年龄段阅读，无冗余或晦涩表达。",
+      "pedagogical_value": "通过连续观察和规律发现，有效传递了像距与物距的依赖关系，且结尾点明规律普遍适用，有助于学习者迁移理解，教学价值高。",
+      "novelty": "以钟楼光点比喻凸透镜成像，场景有一定新意，但整体叙事结构（观察-发现规律-应用）较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个具体数值或比例关系的暗示（如“灯远一倍，光点近一半”），以强化定量理解。",
+      "可加入一个与物距/像距相关的简单实验或测量环节，提升互动性。",
+      "结尾可更明确地联系到凸透镜成像的其他规律（如虚实、大小变化），扩展教学深度。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,47 @@
+You are a strict reviewer for concept-grounded story generation.
+Evaluate whether the draft story preserves the intended concept structure.
+Focus on fidelity, coverage, coherence, and whether the story actually realizes the planned mapping.
+Reject stories that replace the target mechanism with a vague proxy such as generic growth or improvement.
+Check whether experiment and exercise are clearly distinct when both roles are expected.
+Return valid JSON only. Do not use markdown. Do not add prose outside the JSON object.
+
+Target Concept: 种子萌发
+Definition: 种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。
+Expected Alignment Roles:
+- target concept
+- prerequisites
+- related concepts
+- outcomes
+- experiments
+- exercises
+
+Draft Story:
+In a sun-dappled garden workshop, Old Tobin prepared a plot of fine soil, checking its moisture and warmth with careful hands. He buried three seeds—one plump, one cracked, one hollow—each in identical beds. Each day, he watered them equally and watched.
+
+After a week, the plump seed split the soil with a pale shoot. The cracked seed swelled but remained still. The hollow seed rotted. Tobin then dug up the cracked seed and placed it in a warmer, darker box with steady dampness. Within days, it too sent out a root.
+
+“The seed’s own store fed the first push,” Tobin told his apprentice. “But without the right warmth and water, even a good seed stays asleep. The hollow one had no food inside—no amount of care could wake it.”
+
+To test, the apprentice planted a plump seed in dry sand and another in cold clay. Neither grew. Only when both inner readiness and outer conditions met did the hidden life stir upward.
+
+The garden flourished not by wishing, but by preparing what the seeds silently required.
+
+```json
+[
+  {"concept_role": "target concept", "story_evidence": "The plump seed uses its stored food to produce a shoot when warmth and moisture are present."},
+  {"concept_role": "prerequisites", "story_evidence": "Tobin checks soil moisture and warmth; the cracked seed only grows after being moved to a warmer, damper box; the hollow seed lacks internal food."},
+  {"concept_role": "related concepts", "story_evidence": "The hollow seed rots (contrast); the cracked seed swells but doesn't grow until conditions improve."},
+  {"concept_role": "outcomes", "story_evidence": "Visible shoot from plump seed; root from cracked seed after condition change."},
+  {"concept_role": "experiments", "story_evidence": "Tobin digs up the cracked seed and changes its environment; apprentice plants plump seeds in dry sand and cold clay to test."},
+  {"concept_role": "exercises", "story_evidence": "The apprentice's test with dry sand and cold clay reinforces that both inner and outer conditions are necessary."}
+]
+```
+
+Return a JSON object with exactly these fields:
+{
+  "pass_fail": true,
+  "missing_roles": ["..."],
+  "unsupported_story_parts": ["..."],
+  "coherence_issues": ["..."],
+  "suggested_revision": ["..."]
+}

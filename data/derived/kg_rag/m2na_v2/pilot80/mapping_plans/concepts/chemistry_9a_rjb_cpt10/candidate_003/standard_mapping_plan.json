@@ -1,0 +1,120 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代铸剑术",
+  "characters": [
+    "铸剑大师",
+    "学徒"
+  ],
+  "objects": [
+    "剑炉",
+    "鼓风皮囊",
+    "剑胚",
+    "淬火池"
+  ],
+  "conflict": "学徒发现剑炉温度总是不够高，无法将剑胚烧至最佳状态，而大师指出这是因为鼓风皮囊漏气，气压不足。",
+  "event_chain": [
+    "学徒在铸剑时，发现剑炉温度始终达不到让剑胚完全软化的程度。",
+    "大师检查后，发现鼓风皮囊有微小破损，导致送入炉中的气压不足。",
+    "大师修补皮囊，恢复气压。",
+    "炉温升高，剑胚达到最佳锻造温度。",
+    "学徒成功锻造出锋利宝剑。",
+    "大师教导学徒：不同金属（如铁、铝）所需的炉温不同，但都依赖足够的气压。"
+  ],
+  "turning_point": "大师修补鼓风皮囊，气压恢复正常，炉温随之达到所需温度。",
+  "resolution_state": "学徒理解了气压对炉温的决定性作用，并掌握了根据金属种类调整炉温的方法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "剑炉的锻造温度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "鼓风皮囊的气压",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "剑胚完全软化时的温度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "气压影响炉温的规律",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "铁剑胚在标准气压下达到最佳锻造温度",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "皮囊漏气时炉温降低",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "铁、铝、铜等不同金属剑胚所需的锻造温度不同",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "鼓风皮囊的气压决定了剑炉的锻造温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "剑炉的锻造温度是剑胚完全软化时的温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "气压影响炉温的规律与剑炉的锻造温度相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "剑炉的锻造温度产生了铁剑胚在标准气压下达到最佳锻造温度这一实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "鼓风皮囊的气压不足导致了皮囊漏气时炉温降低",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "剑炉的锻造温度与不同金属剑胚所需的锻造温度相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "剑炉的锻造温度与鼓风皮囊的气压相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'沸点'、'大气压强'等化学术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如水的沸点100℃）作为因果机制，仅作为证据实例。"
+  ],
+  "mapping_context_sha256": "6b6436878992bd80891f5ffb421a54cef1877977da0d46051b9dcf377f32bdfc",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b01c81c82dc8cb52750327aae35fa4b7abfea4c2bee630bb775114def16e5ca6"
+  }
+}

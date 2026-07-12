@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "biology",
+    "samples": 10,
+    "success": 10,
+    "failed": 0,
+    "accept": 10,
+    "revise": 0,
+    "reject": 0,
+    "avg_weighted_overall": 4.15,
+    "report": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\biology\\eval_report.md",
+    "csv": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\biology\\eval_summary.csv"
+  },
+  {
+    "subject": "chemistry",
+    "samples": 10,
+    "success": 10,
+    "failed": 0,
+    "accept": 10,
+    "revise": 0,
+    "reject": 0,
+    "avg_weighted_overall": 4.15,
+    "report": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\chemistry\\eval_report.md",
+    "csv": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\chemistry\\eval_summary.csv"
+  },
+  {
+    "subject": "math",
+    "samples": 10,
+    "success": 10,
+    "failed": 0,
+    "accept": 10,
+    "revise": 0,
+    "reject": 0,
+    "avg_weighted_overall": 4.15,
+    "report": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\eval_report.md",
+    "csv": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\eval_summary.csv"
+  },
+  {
+    "subject": "physics",
+    "samples": 10,
+    "success": 10,
+    "failed": 0,
+    "accept": 10,
+    "revise": 0,
+    "reject": 0,
+    "avg_weighted_overall": 4.15,
+    "report": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\eval_report.md",
+    "csv": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\eval_summary.csv"
+  }
+]

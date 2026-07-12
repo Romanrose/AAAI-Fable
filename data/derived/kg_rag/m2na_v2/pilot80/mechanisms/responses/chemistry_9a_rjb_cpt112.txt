@@ -1,0 +1,124 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "二氧化锰的催化作用",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt112:definition",
+          "kg-node:chemistry_9a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "催化剂",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt110:definition",
+          "kg-node:chemistry_9a_rjb_cpt110:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "evidence",
+        "text": "过氧化氢分解实验中二氧化锰的作用",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp17:conclusion",
+          "kg-node:chemistry_9a_rjb_exp17:phenomena",
+          "kg-node:chemistry_9a_rjb_exp17:process",
+          "kg-node:chemistry_9a_rjb_exp17:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "evidence",
+        "text": "加热混有二氧化锰的氯酸钾固体制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp18:conclusion",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena",
+          "kg-node:chemistry_9a_rjb_exp18:process",
+          "kg-node:chemistry_9a_rjb_exp18:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt112:definition",
+          "kg-node:chemistry_9a_rjb_cpt112:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11283",
+          "kg-node:chemistry_9a_rjb_cpt112:definition",
+          "kg-node:chemistry_9a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22575",
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22577",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt112:definition",
+          "kg-node:chemistry_9a_rjb_cpt112:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  }
+}
+```

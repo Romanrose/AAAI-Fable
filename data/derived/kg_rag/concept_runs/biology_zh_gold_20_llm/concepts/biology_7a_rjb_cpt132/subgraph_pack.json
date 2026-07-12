@@ -1,0 +1,59 @@
+{
+  "query": "biology_7a_rjb_cpt132",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt132",
+    "label": "Concept",
+    "name": "光合作用的产物（淀粉等有机物）",
+    "definition": "绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。",
+    "aliases": [],
+    "examples": [
+      "淀粉（遇碘变蓝）",
+      "糖类",
+      "蛋白质",
+      "脂肪"
+    ],
+    "retrieval_text": "光合作用的产物（淀粉等有机物）\n绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt137",
+        "label": "Concept",
+        "name": "有机物构建植物体并提供能量",
+        "definition": "光合作用制造的有机物运输到植物体各处细胞，为细胞生命活动提供能量，并参与构建植物细胞、组织、器官直至整个植物体。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt4",
+        "label": "Concept",
+        "name": "光合作用",
+        "definition": "能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp15",
+        "label": "Experiment",
+        "name": "绿叶在光下制造有机物",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s4",
+        "label": "Section",
+        "name": "第四章 绿色植物是生物圈中有机物的制造者",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

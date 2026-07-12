@@ -1,0 +1,45 @@
+You are a strict reviewer for concept-grounded story generation.
+Evaluate whether the draft story preserves the intended concept structure.
+Focus on fidelity, coverage, coherence, and whether the story actually realizes the planned mapping.
+Reject stories that replace the target mechanism with a vague proxy such as generic growth or improvement.
+Check whether experiment and exercise are clearly distinct when both roles are expected.
+Return valid JSON only. Do not use markdown. Do not add prose outside the JSON object.
+
+Target Concept: 苔藓植物是监测空气污染的指示植物
+Definition: 许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。
+Expected Alignment Roles:
+- target concept
+- prerequisites
+- related concepts
+- outcomes
+- experiments
+- exercises
+
+Draft Story:
+In a quiet garden workshop, a careful caretaker named Elara prepared a small plot of moss. She knew mosses had only one cell layer on their leaves, making them vulnerable to poisons from both sides. She placed the plot near a busy road where car fumes drifted daily.
+
+The moss grew at first, but soon turned brown and brittle. Elara suspected the air was the cause. She set up a second plot in a sealed glass box with filtered air. That moss stayed lush and green. She then swapped their positions. The healthy moss in the open quickly sickened, while the sickly moss revived in clean air.
+
+To test her understanding, Elara placed a third plot near a factory chimney. Within days, the moss withered. She realized the moss was not just growing—it was revealing invisible toxins. The plot’s condition was a direct measure of air purity.
+
+Elara now used moss as a living indicator. She taught others: when moss thrives, the air is safe; when it fails, danger is present. The garden stabilized, and the moss became a silent guardian.
+
+```json
+[
+  {"concept_role": "target concept", "story_evidence": "Moss with one cell layer sickened near car fumes and revived in clean air, showing it monitors pollution."},
+  {"concept_role": "prerequisites", "story_evidence": "Elara prepared the plot and controlled air conditions (filtered vs. open) before growth could be observed."},
+  {"concept_role": "related concepts", "story_evidence": "Car fumes and factory smoke acted as neighboring processes that contrasted with clean air."},
+  {"concept_role": "outcomes", "story_evidence": "Moss turning brown or staying green were visible consequences of air quality."},
+  {"concept_role": "experiments", "story_evidence": "Swapping plots and placing moss near the chimney revealed the mechanism of toxin detection."},
+  {"concept_role": "exercises", "story_evidence": "Elara taught others to use moss as a living indicator, reinforcing the lesson through follow-up checks."}
+]
+```
+
+Return a JSON object with exactly these fields:
+{
+  "pass_fail": true,
+  "missing_roles": ["..."],
+  "unsupported_story_parts": ["..."],
+  "coherence_issues": ["..."],
+  "suggested_revision": ["..."]
+}

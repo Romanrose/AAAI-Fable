@@ -1,0 +1,139 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个关于“山间泉水”的寓言",
+  "characters": [
+    "山泉（泉水）",
+    "标准泉眼（泉眼）",
+    "各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）",
+    "山间条件（如：海拔、季节）"
+  ],
+  "objects": [
+    "山泉（泉水）",
+    "标准泉眼（泉眼）",
+    "清泉沸点",
+    "温泉沸点",
+    "冷泉沸点",
+    "矿泉沸点",
+    "雨泉沸点",
+    "山间条件（如：海拔、季节）"
+  ],
+  "conflict": "山泉（泉水）的力量（压强）不是固定不变的，但人们常以标准泉眼（泉眼）的流量作为基准，而山间条件（如：海拔、季节）会影响各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）的表现，导致泉水沸腾的温度不同。",
+  "event_chain": [
+    "山泉（泉水）是山间流淌的水源，其力量（压强）随环境变化。",
+    "人们规定标准泉眼（泉眼）的流量为101单位，作为衡量其他泉水的基准。",
+    "山泉（泉水）的力量（压强）决定了各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）的高低。",
+    "各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）分别产生了各自对应的泉水特性（如：清泉的沸腾温度、温泉的沸腾温度、冷泉的沸腾温度、矿泉的沸腾温度、雨泉的沸腾温度）。",
+    "山间条件（如：海拔、季节）约束着各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）的变化规律。"
+  ],
+  "turning_point": "山间条件（如：海拔、季节）的变化导致各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）不再遵循标准泉眼（泉眼）的基准，从而揭示了山泉（泉水）力量（压强）与泉水沸腾温度之间的内在联系。",
+  "resolution_state": "山泉（泉水）的力量（压强）是影响各种泉水沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）的关键因素，而山间条件（如：海拔、季节）则进一步调节这一关系，使得不同泉水在不同环境下表现出不同的沸腾温度。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "山泉（泉水）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "标准泉眼（泉眼）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "清泉的沸腾温度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "温泉的沸腾温度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "冷泉的沸腾温度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "矿泉的沸腾温度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "山间条件（如：海拔、季节）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "山泉（泉水）是标准泉眼（泉眼）的一种表现形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "山泉（泉水）的力量（压强）决定了各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）的高低",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "各种泉水的沸点（如：清泉沸点）产生了清泉的沸腾温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "各种泉水的沸点（如：温泉沸点）产生了温泉的沸腾温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "各种泉水的沸点（如：冷泉沸点）产生了冷泉的沸腾温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "各种泉水的沸点（如：矿泉沸点）产生了矿泉的沸腾温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "山间条件（如：海拔、季节）约束着各种泉水的沸点（如：清泉沸点、温泉沸点、冷泉沸点、矿泉沸点、雨泉沸点）的变化规律",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保“山泉（泉水）”不直接映射为“大气压强”或“气压”，而是作为其载体。",
+    "确保“标准泉眼（泉眼）”不直接映射为“标准大气压强”，而是作为其载体。",
+    "确保“各种泉水的沸点”不直接映射为“沸点”，而是作为其载体。",
+    "确保“清泉的沸腾温度”不直接映射为“水的熔点和沸点”，而是作为其载体。",
+    "确保“温泉的沸腾温度”不直接映射为“铁的熔点和沸点”，而是作为其载体。",
+    "确保“冷泉的沸腾温度”不直接映射为“铝的熔点和沸点”，而是作为其载体。",
+    "确保“矿泉的沸腾温度”不直接映射为“氧气的熔点和沸点”，而是作为其载体。",
+    "确保“山间条件（如：海拔、季节）”不直接映射为“条件对物质性质的影响”，而是作为其载体。",
+    "避免使用任何目标概念名称、别名或禁止术语。",
+    "保持整个寓言使用一个连贯的源域（山间泉水），不引入无关隐喻。",
+    "确保所有机制边方向被保留。",
+    "注意：课程桥上下文（如“条件对物质性质的影响”）不被视为因果机制，但在此处作为规则节点映射，其约束关系需保留。"
+  ],
+  "mapping_context_sha256": "743017e0063ce0e1b71101c89a92c9c8767fa2c9c7bf90fa3db6a4ea9b437116",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "bee8abf3f0a25ed2cc1a63305755258726123419ee717c93ba5cc7b1a7ed31f3"
+  }
+}

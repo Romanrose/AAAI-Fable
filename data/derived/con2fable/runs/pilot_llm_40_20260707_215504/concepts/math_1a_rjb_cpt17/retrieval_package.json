@@ -1,0 +1,49 @@
+{
+  "seed": {
+    "id": "math_1a_rjb_cpt17",
+    "resolved_node_id": "math_1a_rjb_cpt17",
+    "name": "球体",
+    "definition": "表面上所有点到中心的距离都相等的立体图形。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_12137",
+      "source_id": "math_1a_rjb_cpt17",
+      "source_name": "球体",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "表面上所有点到中心的距离都相等的立体图形。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "按形状分类"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 1,
+    "selected_edge_count": 1,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

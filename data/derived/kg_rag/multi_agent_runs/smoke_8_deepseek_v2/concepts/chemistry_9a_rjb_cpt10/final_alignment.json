@@ -1,0 +1,98 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "老账房先生解释的核心原理：每种液体货物都有一个特定的汽化温度，这个温度会随仓库内气压变化而变化。",
+      "evidence": "先生指着水桶说",
+      "narrative_anchor": "先生指着水桶说",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "老账房先生首先引入气压计，测量仓库当前气压，作为解释的前提。",
+      "evidence": "老账房先生不慌不忙",
+      "narrative_anchor": "老账房先生不慌不忙",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "先生强调，货物的性质（如汽化温度）不是固定不变的，而是受外界条件（气压）影响。",
+      "evidence": "先生合上账册",
+      "narrative_anchor": "先生合上账册",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "先生举例氧气瓶中的液态氧，说明在仓库当前气压下，其汽化温度是多少。",
+      "evidence": "先生指着水桶说",
+      "narrative_anchor": "先生指着水桶说",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "先生举例水桶中的水，说明在仓库当前气压下，其汽化温度（沸点）是多少。",
+      "evidence": "先生指着水桶说",
+      "narrative_anchor": "先生指着水桶说",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n6",
+      "narrative_element": "先生举例铁器，说明铁的汽化温度很高，在仓库条件下不会汽化，从而对比不同货物的差异。",
+      "evidence": "小陈若有所思",
+      "narrative_anchor": "小陈若有所思",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先生先测量气压，再解释汽化温度随气压变化。",
+      "evidence": "老账房先生不慌不忙",
+      "narrative_anchor": "老账房先生不慌不忙",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先生从气压变化引出条件对物质性质的影响。",
+      "evidence": "先生合上账册",
+      "narrative_anchor": "先生合上账册",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "先生从条件影响物质性质，具体举例氧气。",
+      "evidence": "先生指着水桶说",
+      "narrative_anchor": "先生指着水桶说",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "先生从氧气举例过渡到水举例。",
+      "evidence": "先生指着水桶说",
+      "narrative_anchor": "先生指着水桶说",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "先生从水举例对比铁，说明铁不受影响。",
+      "evidence": "小陈若有所思",
+      "narrative_anchor": "小陈若有所思",
+      "narrative_source_concept_node_id": "n5",
+      "narrative_target_concept_node_id": "n6",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

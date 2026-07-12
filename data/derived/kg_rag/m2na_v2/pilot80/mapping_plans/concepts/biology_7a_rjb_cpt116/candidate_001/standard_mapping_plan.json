@@ -1,0 +1,88 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个关于‘借力传播’的寓言，讲述村庄中不同花朵通过风或昆虫的帮助将花粉送到另一朵花上，以及自花传粉和传粉后受精的过程。",
+  "characters": [
+    "风婆婆（代表外力媒介）",
+    "小蜜蜂（代表外力媒介）",
+    "桃花姐姐（代表进行异花传粉的花）",
+    "杏花妹妹（代表进行自花传粉的花）",
+    "花粉粒（代表花粉）",
+    "花柱头（代表雌蕊柱头）"
+  ],
+  "objects": [
+    "花园（代表传粉发生的环境）",
+    "花粉囊（代表花药）",
+    "柱头（代表雌蕊柱头）"
+  ],
+  "conflict": "桃花姐姐需要将花粉送到另一朵花的柱头上，但自己无法移动；杏花妹妹则坚持自己给自己传粉，认为不需要外力。",
+  "event_chain": [
+    "桃花姐姐的花粉从花粉囊散放出来。",
+    "风婆婆和小蜜蜂帮助桃花姐姐的花粉落到另一朵花的柱头上（异花传粉）。",
+    "杏花妹妹的花粉直接落到自己的柱头上（自花传粉）。",
+    "无论是异花传粉还是自花传粉，花粉落到柱头上后，都开始准备受精。",
+    "花粉粒在柱头上萌发，精子与卵子结合形成受精卵（受精）。"
+  ],
+  "turning_point": "杏花妹妹发现自花传粉后，虽然也能受精，但后代不如异花传粉的桃花姐姐的后代强壮，从而认识到借力传播的重要性。",
+  "resolution_state": "花园中的花朵都明白了：传粉是受精的前提，而异花传粉和自花传粉都是传粉的方式，但异花传粉需要外力帮助，能带来更丰富的后代。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "桃花姐姐的花粉在风婆婆或小蜜蜂帮助下落到另一朵花的柱头上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "花粉从花粉囊散放并落到柱头上的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "杏花妹妹的花粉直接落到自己的柱头上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "花粉粒在柱头上萌发，精子与卵子结合形成受精卵",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "桃花姐姐的异花传粉是一种传粉方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "杏花妹妹的自花传粉也是一种传粉方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "传粉（花粉落到柱头上）之后才能发生受精",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘异花传粉’等禁止术语，已用‘借力传播’等替代。",
+    "注意‘传粉’作为父类概念，在故事中通过‘花粉落到柱头上’体现，避免直接使用术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如受精的细节）作为因果机制，只保留必要的‘传粉使能受精’关系。"
+  ],
+  "mapping_context_sha256": "a3006a05d9b085cc20549f51682016f4afbd830730c0dee8f3d427333afb3726",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "6ec75394aaa265128e41388e6dfad3ddf9aadbe580d5ccda91ac236c6b9925a6"
+  }
+}

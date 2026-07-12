@@ -1,0 +1,49 @@
+{
+  "seed": {
+    "id": "biology_7a_rjb_cpt109",
+    "resolved_node_id": "biology_7a_rjb_cpt109",
+    "name": "发芽率",
+    "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_22391",
+      "source_id": "biology_7a_rjb_exp10",
+      "source_name": "测定种子的发芽率（培养皿样本检测）",
+      "target_id": "biology_7a_rjb_cpt109",
+      "target_name": "发芽率",
+      "relation": "verifies",
+      "score": 0.89
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        "测定种子的发芽率（培养皿样本检测）"
+      ],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 1,
+    "selected_edge_count": 1,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "两个农夫比粮食",
+  "characters": [
+    "老张",
+    "老李"
+  ],
+  "objects": [
+    "老张的粮仓",
+    "老李的粮仓",
+    "老张的粮食堆",
+    "老李的粮食堆"
+  ],
+  "conflict": "老张和老李各自认为自己的粮食更多，但实际需要比较谁多谁少。",
+  "event_chain": [
+    "老张和老李各自收获粮食，分别堆放在自己的粮仓里。",
+    "两人相遇，都声称自己的粮食更多，互不相让。",
+    "村长前来调解，提议用天平比较两堆粮食的重量。",
+    "天平两边分别放上老张的粮食和老李的粮食，天平平衡，显示两边粮食一样多。",
+    "村长指出，既然天平平衡，说明两人的粮食数量相同。",
+    "接着，村长让老李从自己粮仓里取出一些粮食，天平向老张一侧倾斜。",
+    "村长解释，现在老张的粮食比老李的粮食多，因为天平向老张那边倾斜。"
+  ],
+  "turning_point": "村长通过天平倾斜，直观展示了一边粮食比另一边多的情况。",
+  "resolution_state": "老张和老李明白了天平倾斜的方向代表了哪边的粮食更多，从而理解了比较大小的含义。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "天平平衡时，两边粮食一样多",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "天平向老张一侧倾斜，表示老张的粮食比老李的多",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "从天平平衡（等量）到天平倾斜（不等量）的对比关系",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未直接使用'小于号'或'等号'等术语，符合要求。",
+    "天平倾斜的方向需要明确对应'前面比后面少'的关系，此处用'老张的粮食比老李的多'作为反面例子，可能需调整以准确对应'小于'。建议改为：天平向老李一侧倾斜，表示老张的粮食比老李的少，从而映射'前面的数量比后面的数量少'。"
+  ],
+  "mapping_context_sha256": "8f7fb6fd774d6b0e0f1339084cb6e4d5acf17fc6752ca221af32d9633af4bb93",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "fd6a760822fc12bed387a4dbc03daf4b2b248153d88d2905273bbab4af7bd991"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "光合作用的产物（淀粉等有机物）",
+  "concept_id": "biology_7a_rjb_cpt132",
+  "concept_definition": "绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt132",
+    "光合作用的产物（淀粉等有机物）"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt132",
+      "label": "Concept",
+      "name": "光合作用的产物（淀粉等有机物）",
+      "definition": "绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。",
+      "aliases": [],
+      "examples": [
+        "淀粉（遇碘变蓝）",
+        "糖类",
+        "蛋白质",
+        "脂肪"
+      ],
+      "retrieval_text": "光合作用的产物（淀粉等有机物）\n绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt137",
+          "label": "Concept",
+          "name": "有机物构建植物体并提供能量",
+          "definition": "光合作用制造的有机物运输到植物体各处细胞，为细胞生命活动提供能量，并参与构建植物细胞、组织、器官直至整个植物体。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt4",
+          "label": "Concept",
+          "name": "光合作用",
+          "definition": "能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp15",
+          "label": "Experiment",
+          "name": "绿叶在光下制造有机物",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s4",
+          "label": "Section",
+          "name": "第四章 绿色植物是生物圈中有机物的制造者",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt132",
+    "concept_id": "biology_7a_rjb_cpt132",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt132",
+      "label": "Concept",
+      "name": "光合作用的产物（淀粉等有机物）",
+      "definition": "绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。",
+      "aliases": [],
+      "examples": [
+        "淀粉（遇碘变蓝）",
+        "糖类",
+        "蛋白质",
+        "脂肪"
+      ]
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "光合作用的产物（淀粉等有机物）"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "光合作用的产物（淀粉等有机物）",
+      "story_evidence": "阳光下的叶片滴碘液后变蓝，暗处的叶片不变蓝，表明光下叶片制造了淀粉；老园丁提到淀粉可转化为糖、蛋白质、脂肪等有机物，对应概念定义。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事通过对比实验（阳光/暗处叶片）和碘液检验，展示绿叶在光下制造淀粉的过程；阿明观察果实甜度变化，暗示糖类等产物。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "避免目的论解释：植物制造淀粉是自然过程，非‘为了’生长；保留条件（光、水）、过程（叶片制造）和结果（淀粉变蓝、果实变甜）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃的秘密\n\n老园丁退休后，把园圃交给徒弟阿明。园圃里有一间玻璃暖房，里面种着几株绿油油的植物。老园丁叮嘱：“每天只给它们浇水，别做别的。”阿明点头答应。\n\n头几天，阿明发现植物没什么变化。他心想：“光浇水，它们能长好吗？”于是，他偷偷往土里加了些肥料。可过了几天，植物反而有些蔫了。阿明慌了，赶紧去请教老园丁。\n\n老园丁没责怪他，只是说：“你跟我来。”他带阿明到暖房角落，那里放着几个密封的玻璃罐，罐里各有一片叶子。有的罐子放在阳光下，有的放在暗处。老园丁说：“三天后，你来看看。”\n\n三天后，阿明打开罐子。阳光下的叶子颜色变深，摸起来有点硬；暗处的叶子却软塌塌的，颜色也淡了。老园丁取来一瓶棕色液体，滴在叶片上。阳光下的叶片立刻变成深蓝色，暗处的叶片却没什么变化。\n\n“这液体是碘液，能让一种叫淀粉的物质变蓝。”老园丁说，“阳光下的叶子制造了淀粉，所以变蓝；暗处的叶子没有阳光，就没造出淀粉。”\n\n阿明恍然大悟：“原来植物需要光才能制造东西！可为什么我施肥反而害了它们？”\n\n老园丁笑道：“植物在光下能自己制造养分，你多施肥反而破坏了平衡。记住，光和水是它们工作的条件，淀粉只是其中一种产物。这些产物还能变成其他物质，比如糖、蛋白质，甚至脂肪，用来生长和结果。”\n\n阿明回到暖房，仔细观察。他发现，阳光充足的叶片更厚实，颜色更深；背阴处的叶片则薄而淡。他还注意到，同一株植物上，向阳的果实更饱满，味道更甜。\n\n“原来，植物在光下制造的不仅是淀粉，还有糖分，让果实变甜。”阿明自言自语。\n\n从此，阿明不再乱施肥，而是精心调节光照和水分。园圃里的植物越长越好，果实累累。他明白了：植物的秘密，藏在光与叶的协作中，而淀粉只是其中一种可见的证明。",
+  "rule_findings": {
+    "story_token_count": 600,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "光合作用的产物（淀粉等有机物）",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

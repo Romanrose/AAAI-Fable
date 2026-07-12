@@ -1,0 +1,108 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "古代铜器氧化变色",
+  "domain_rationale": "铜器在空气中缓慢氧化生成铜绿（类似缓慢氧化），与加热铜器使其剧烈氧化形成对比，映射缓慢氧化与燃烧的差异。",
+  "conflict": "铜器自然生锈缓慢、无光热，而加热铜器时铜与氧气剧烈反应生成黑色氧化铜并放热，现象对比明显。",
+  "event_chain": [
+    "铜剑在潮湿空气中缓慢氧化，表面逐渐生成绿色铜锈。",
+    "铜锈继续缓慢氧化，铜器逐渐腐蚀。",
+    "将铜剑置于炉火中加热至红热，铜与氧气剧烈反应，表面生成黑色氧化铜。",
+    "反应放出大量热，铜剑表面发红。"
+  ],
+  "turning_point": "从自然生锈到加热氧化的转变，对应缓慢氧化到燃烧的转变。",
+  "resolution_state": "铜器最终完全氧化成铜锈或氧化铜，氧化过程完成。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜剑在潮湿空气中缓慢生锈",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "铜与氧气发生化学反应生成铜锈",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "铜在炉火中剧烈氧化生成黑色氧化铜",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铜剑长期暴露在空气中逐渐腐蚀",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "空气中的氧气",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "铜剑、充足空气、达到红热温度",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "大量热和红光",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "铜锈缓慢形成，无明显发热发光",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铜剑在潮湿空气中缓慢生锈是一种铜与氧气的化学反应",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "铜在炉火中剧烈氧化是一种铜与氧气的化学反应",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "铜剑长期暴露在空气中逐渐腐蚀是一种缓慢氧化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "空气中的氧气是铜与氧气反应的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "空气中的氧气是铜剧烈氧化的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "空气中的氧气是铜剑长期腐蚀的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "铜剑、充足空气、达到红热温度是铜剧烈氧化所必需的条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "铜剧烈氧化产生大量热和红光",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "铜剑缓慢生锈产生铜锈，无明显发热发光",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "铜剑缓慢生锈与铜剧烈氧化相关",
+      "direction_preserved": true
+    }
+  ]
+}

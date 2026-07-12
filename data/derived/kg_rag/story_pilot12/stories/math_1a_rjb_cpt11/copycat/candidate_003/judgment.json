@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "n1（入口条件核对）在故事中有明确的行为和对话支撑，而n2（结果验收记录）仅在结尾被提及一次，缺乏过程展示；e1（enables关系）在故事中表现为顺序因果，但未体现n1对n2的使能逻辑（即条件满足后过程才能进行），而是简单的时间先后。"
+  },
+  "revision_instructions": [
+    "将n2（结果验收记录）从仅结尾提及改为在故事中作为关键步骤展开，例如验收员使用记录核对时发现错误并修正的过程。",
+    "强化e1的使能关系：在故事中明确写出n1（条件核对）完成后，n2（结果验收）才被允许开始，例如调度员只有在记录员确认条件后才传递地图给验收员。",
+    "当前node_coverage为0.5，低于0.8，需增加n2的覆盖，确保两个节点都有充分的叙事体现。"
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

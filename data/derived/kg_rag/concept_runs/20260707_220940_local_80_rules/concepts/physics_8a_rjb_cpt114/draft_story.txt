@@ -1,0 +1,53 @@
+标题：暗格里的顺序
+
+轨道调度台的回廊边经常出现令人摸不着头脑的变化，年轻的守库人决定把它追查到底。
+一天，他没有立刻下结论，而是把所见的前后变化分段写在竹签上。他把起点处的材料、时机和方向分别留下标记。一个相邻设备给出了对照：外表差不多，内里的顺序却另有差别。
+当旁人只看见表面迹象时，守库人指着浅绿印记说，先别跳过这一段：先确认一个起点条件是否具备：眼睛调节 --prerequisites_for--> 这条隐藏规则。
+守库人在竹签角上画下浅绿印记，因为这条线索指向：让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 明视距离。
+第3次复查时，浅绿印记旁的痕迹提醒他：让中间的行动承接前后变化：眼睛依靠调节能看清的最这条隐藏规则。正常眼这条隐藏规则约为10 cm。。
+他请同伴重复一遍记录，自己只在边上检查哪些环节不能丢。当同样的顺序再次带来相近的结果，他才敢在旁边画下小圈。从那以后，守库人每遇到新迹象，都先画出起点，再沿着线索追到结尾。
+
+```json
+[
+  {
+    "concept_role": "target concept",
+    "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+    "concept_items": [
+      "近点"
+    ]
+  },
+  {
+    "concept_role": "core mechanism",
+    "story_evidence": "前后变化被守库人按顺序记录、改动和复查。"
+  },
+  {
+    "concept_role": "prerequisites",
+    "concept_items": [
+      "眼睛调节"
+    ],
+    "story_evidence": "他把起点处的材料、时机和方向分别留下标记。"
+  },
+  {
+    "concept_role": "related concepts",
+    "concept_items": [
+      "明视距离"
+    ],
+    "story_evidence": "一个相邻设备给出了对照：外表差不多，内里的顺序却另有差别。"
+  },
+  {
+    "concept_role": "outcomes",
+    "concept_items": [],
+    "story_evidence": "当同样的顺序再次带来相近的结果，他才敢在旁边画下小圈。"
+  },
+  {
+    "concept_role": "experiments",
+    "concept_items": [],
+    "story_evidence": "他请同伴重复一遍记录，自己只在边上检查哪些环节不能丢。"
+  },
+  {
+    "concept_role": "exercises",
+    "concept_items": [],
+    "story_evidence": "故事结尾保留了可复查、可迁移的判断任务。"
+  }
+]
+```

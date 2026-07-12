@@ -1,0 +1,62 @@
+{
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt11",
+    "resolved_node_id": "chemistry_9a_rjb_cpt11",
+    "name": "大气压强",
+    "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+    "aliases": [
+      "气压",
+      "标准大气压强"
+    ]
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_14999",
+      "source_id": "chemistry_9a_rjb_cpt11",
+      "source_name": "大气压强",
+      "target_id": "chemistry_9a_rjb_cpt10",
+      "target_name": "沸点",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_18222",
+      "source_id": "chemistry_9a_rjb_cpt10",
+      "source_name": "沸点",
+      "target_id": "chemistry_9a_rjb_cpt11",
+      "target_name": "大气压强",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "沸点",
+        "沸点"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 2,
+    "selected_edge_count": 2,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 # K12-KGraph
 
+> **Concept2Fable project note.** This directory is the immutable raw-data source for the Concept2Fable experiments. Keep it under version control with `data/derived/`, which contains the normalized graph and experiment artifacts generated from this release. Do not edit raw graph files in place; regenerate derived artifacts through the Python pipeline when the source data changes.
+
 This repository contains the dataset release for the paper **"K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs"**.
 
 ## Overview

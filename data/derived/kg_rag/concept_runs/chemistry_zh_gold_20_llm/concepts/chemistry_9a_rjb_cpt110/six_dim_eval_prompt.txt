@@ -1,0 +1,277 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "催化剂",
+  "concept_id": "chemistry_9a_rjb_cpt110",
+  "concept_definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt110",
+    "催化剂",
+    "化学催化剂",
+    "触媒"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt110",
+      "label": "Concept",
+      "name": "催化剂",
+      "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+      "aliases": [
+        "触媒",
+        "化学催化剂"
+      ],
+      "examples": [
+        "二氧化锰在过氧化氢分解反应中起催化剂作用",
+        "二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用",
+        "硫酸铜溶液对过氧化氢分解具有催化作用",
+        "酶在酿造工业和制药工业中的催化作用",
+        "催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。",
+        "MnO2在过氧化氢分解反应中的催化作用。",
+        "FeCl3溶液在过氧化氢分解反应中的催化作用。"
+      ],
+      "retrieval_text": "催化剂\n一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt112",
+          "label": "Concept",
+          "name": "二氧化锰的催化作用",
+          "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_bx2_rjb_cpt129",
+          "label": "Concept",
+          "name": "影响化学反应速率的因素",
+          "definition": "在相同条件下，不同反应速率不同，反应速率首先由反应物的组成、结构和性质决定，还受浓度、压强、温度、催化剂等因素的影响。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt112",
+          "label": "Concept",
+          "name": "二氧化锰的催化作用",
+          "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+        },
+        {
+          "id": "chemistry_bx2_rjb_cpt154",
+          "label": "Concept",
+          "name": "催化剂对化学反应速率的影响",
+          "definition": "在其它条件相同时，加入适当的催化剂可以显著改变化学反应速率，一般是加快反应速率，但不改变反应的方向和总反应结果。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt111",
+          "label": "Concept",
+          "name": "催化作用",
+          "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。"
+        },
+        {
+          "id": "chemistry_bx2_rjb_cpt128",
+          "label": "Concept",
+          "name": "化学反应速率",
+          "definition": "任何化学反应的快慢都表现为有关物质的量随着时间变化的多少，可以用单位时间、单位体积中反应物或生成物的物质的量变化来表示；若体积恒定，则通常用单位时间内反应物浓度的减小或生成物浓度的增大来表示。"
+        },
+        {
+          "id": "chemistry_9b_rjb_cpt265",
+          "label": "Concept",
+          "name": "酶",
+          "definition": "由细胞产生的一类对生物体内化学反应具有催化作用的有机化合物，其中绝大多数是蛋白质，被称为生物催化剂，是生物新陈代谢和各种生命活动得以进行的关键。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "chemistry_9a_rjb_exe17",
+          "label": "Exercise",
+          "name": "在过氧化氢分解制氧气的实验中，向过氧化氢溶液中加入少量二氧化锰，观察到带火星的木条能复燃，多次重复实验后，二氧化锰的质量和化学性质没有改变。\n根据上述信息回答：\n（1）二氧化锰在该反应中是否被消耗？\n（2）二氧化锰在该反应中起什么作用？这种物质在化学上叫什么？",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_bx2_rjb_exe16",
+          "label": "Exercise",
+          "name": "7. 工业制硫酸中的一步重要反应是 SO2 在 400~500℃ 下的催化氧化：\n2SO2 + O2 ⇌ 2SO3\n这是一个正反应放热的可逆反应。如果反应在密闭容器中进行，下列有关说法错误的是（ ）。\nA. 使用催化剂是为了增大反应速率, 提高生产效率  \nB. 在上述条件下, SO2 不可能 100% 地转化为 SO3   \nC. 提高反应时的温度, 可以实现 SO2 的完全转化  \nD. 通过调控反应条件, 可以提高该反应进行的程度",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_bx2_rjb_exe17",
+          "label": "Exercise",
+          "name": "1. 请根据已有知识和经验填写下表。\n影响化学反应速率的条件 | 如何影响 | 实例\n温度 | ______ | ______\n浓度 | ______ | ______\n固体的表面积 | ______ | ______\n催化剂 | ______ | ______",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_bx2_rjb_ch6_s2",
+          "label": "Section",
+          "name": "第二节 化学反应的速率与限度",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_bx2_rjb_ch6_s4",
+          "label": "Section",
+          "name": "实验活动7 化学反应速率的影响因素",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt110",
+    "concept_id": "chemistry_9a_rjb_cpt110",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt110",
+      "label": "Concept",
+      "name": "催化剂",
+      "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+      "aliases": [
+        "触媒",
+        "化学催化剂"
+      ],
+      "examples": [
+        "二氧化锰在过氧化氢分解反应中起催化剂作用",
+        "二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用",
+        "硫酸铜溶液对过氧化氢分解具有催化作用",
+        "酶在酿造工业和制药工业中的催化作用",
+        "催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。",
+        "MnO2在过氧化氢分解反应中的催化作用。",
+        "FeCl3溶液在过氧化氢分解反应中的催化作用。"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "催化剂"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中的‘奇特的石头’在磨面过程中显著加快了石磨的转动速度，提高了面粉产量，而石头自身的组成、性质和质量在反应前后不发生变化，并且只有在干燥条件下才有效，体现了催化剂的选择性。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "石头使石磨转动加快（显著改变反应速率），石头本身没有破损、重量不变（自身不发生变化），沾水后失效、晒干后恢复（选择性），这些事件链对应催化剂的核心机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事将磨面过程类比化学反应，石头类比催化剂，避免了直接使用‘催化剂’等术语；石头在反应前后质量和性质不变，体现了守恒关系；没有出现化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：磨坊里的神秘帮手\n\n从前，在一个宁静的山村里，有一座老磨坊。磨坊主老李每天都要把麦子磨成面粉。可是，麦子实在太硬了，石磨转得很慢，一天下来也磨不了多少袋面粉。老李愁眉不展，心想：要是有什么办法能让石磨转得快一些就好了。\n\n一天，一位云游的工匠路过，他看了看磨坊，对老李说：“我有一块奇特的石头，你把它放在磨盘旁边，石磨就会转得快很多。”老李半信半疑，但还是接过石头，放在了磨盘旁。果然，石磨的转动速度明显加快了，麦子很快就被磨成了细粉。老李高兴极了，连连道谢。工匠说：“这块石头就送给你了，但你要记住，它只是帮忙，并不会被磨碎。”\n\n老李每天用这块石头帮忙磨面，石磨总是转得飞快，面粉产量大增。他仔细观察，发现石头始终完好无损，重量也没有变化。几个月后，老李的侄子小张来帮忙，他好奇地问：“伯伯，这块石头为什么能让石磨转得快呢？”老李摇摇头：“我也不清楚，但它确实有用。”\n\n一天，小张不小心把石头掉进了水桶里，捞出来后，石头湿漉漉的。老李没在意，继续用它磨面。可奇怪的是，石磨的速度又变慢了，和以前一样慢。老李纳闷极了，他检查石头，发现它还是那块石头，没有破损，但就是不管用了。小张说：“会不会是沾了水的缘故？”老李把石头放在太阳下晒干，第二天再用，石磨又恢复了飞快转动。\n\n老李恍然大悟：原来这块石头只有在干燥时才能发挥神奇作用，一旦沾水就会失效，但只要恢复干燥，它又能重新帮忙。而且无论用了多少次，石头本身始终不变，既没有变小，也没有变重。\n\n从此，老李更加珍惜这块石头，每次用完都小心地放在干燥处。他明白了一个道理：有些东西看似普通，却能在关键时刻大大提升效率，而它们自身却从不改变。",
+  "rule_findings": {
+    "story_token_count": 596,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

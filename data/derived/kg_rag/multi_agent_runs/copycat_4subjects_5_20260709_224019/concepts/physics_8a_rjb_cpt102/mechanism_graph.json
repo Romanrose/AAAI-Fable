@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "保留变量之间的关系。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "避免把自然规律写成角色主观意志。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "is_a",
+      "source_edge_id": "normalized:edge:12420",
+      "source_name": "投影仪成像",
+      "target_name": "实像",
+      "relation_semantic_role": "category_membership"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "is_a",
+      "source_edge_id": "normalized:edge:12419",
+      "source_name": "照相机成像",
+      "target_name": "实像",
+      "relation_semantic_role": "category_membership"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:12420",
+    "normalized:edge:12419",
+    "normalized:edge:23049",
+    "normalized:edge:23048",
+    "normalized:edge:19711"
+  ]
+}

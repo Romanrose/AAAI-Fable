@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "双氧水在常温下缓慢分解，加入黑色粉末后分解加快",
+      "evidence": "双氧水总是安安静静地待着，偶尔才从瓶口冒出几个懒洋洋的小气泡。主人往里面倒了一小勺黑色粉末，双氧水原本平静的身体突然沸腾起来，无数气泡争先恐后地从瓶底涌出。",
+      "narrative_anchor": "双氧水总是安安静静地待着，偶尔才从瓶口冒出几个懒洋洋的小气泡。主人往里面倒了一小勺黑色粉末，双氧水原本平静的身体突然沸腾起来，无数气泡争先恐后地从瓶底涌出。"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "分解反应：一种物质变成两种不同的东西",
+      "evidence": "水感叹道：原来，从一种变成两种，这才是真正的变化。",
+      "narrative_anchor": "从一种变成两种"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "双氧水分解（m1）支持了从一种物质变成两种物质（m2）这一本质变化",
+      "evidence": "水感叹道：原来，从一种变成两种，这才是真正的变化。帮手只是加速，而不是改变方向。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "从一种变成两种，这才是真正的变化。帮手只是加速，而不是改变方向。"
+    }
+  ]
+}

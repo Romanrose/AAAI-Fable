@@ -1,0 +1,83 @@
+{
+  "seed": {
+    "id": "biology_7a_rjb_cpt101",
+    "resolved_node_id": "biology_7a_rjb_cpt101",
+    "name": "种子萌发",
+    "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_14133",
+      "source_id": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14134",
+      "source_id": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_10772",
+      "source_id": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_10776",
+      "source_id": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "score": 1.02
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+    "condition_summary": [
+      "种子萌发的环境条件",
+      "种子萌发的自身条件"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "种子萌发的环境条件",
+        "种子萌发的自身条件"
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "种子萌发的环境条件",
+        "种子萌发的自身条件"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 4,
+    "selected_edge_count": 4,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

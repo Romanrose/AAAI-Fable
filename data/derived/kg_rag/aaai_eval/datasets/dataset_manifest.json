@@ -1,0 +1,32 @@
+{
+  "schema_version": "aaai-eval-dataset/v1",
+  "source_seeds_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\m2na_v2\\pilot80\\seeds.jsonl",
+  "source_seeds_sha256": "643fd6b5685e9267fd91fa34c0104be2cfac66819eaa5930e04e073af8088db8",
+  "sampling_seed": "aaai-eval-v1",
+  "subjects": [
+    "biology",
+    "chemistry",
+    "math",
+    "physics"
+  ],
+  "all_count": 80,
+  "core_count": 80,
+  "human_count": 32,
+  "core_subject_counts": {
+    "biology": 20,
+    "chemistry": 20,
+    "math": 20,
+    "physics": 20
+  },
+  "human_subject_counts": {
+    "biology": 8,
+    "chemistry": 8,
+    "math": 8,
+    "physics": 8
+  },
+  "all_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\datasets\\all_concepts.jsonl",
+  "core_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\datasets\\core80.jsonl",
+  "human_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\datasets\\human32.jsonl",
+  "core_sha256": "e84c1a315be6486741e628e43bc68b9b0320f50dbc64deabaeaac30878f42026",
+  "human_sha256": "7d6de5943369bb617a8c87a75b55d03681184e7a57040a5e04e5f555f3e1bebe"
+}

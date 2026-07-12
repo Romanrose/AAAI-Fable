@@ -1,0 +1,122 @@
+{
+  "concept_id": "math_1a_rjb_cpt10",
+  "target_concept": "小于号含义",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 4,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "weighted_overall": 4.15,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过入口条件核对（前面的数量比后面的少）准确表达了小于号的核心机制，且保留了条件与顺序的规则一致性。",
+    "implicitness": "正文未出现‘小于号’、‘小于号含义’或任何别名、专业术语，完全通过故事元素隐含表达。",
+    "mapping_clarity": "角色、物品和事件链清晰对应机制图中的节点和边，但部分映射（如‘两份记录共同约束最后判断’）在故事中略显抽象，可进一步具体化。",
+    "readability": "故事语言流畅，情节连贯，但部分句子较长（如‘有人试着倒过来安排……’），可适当拆分以提升易读性。",
+    "pedagogical_value": "故事通过顺序颠倒导致失败的转折，有效传达了‘前面的数量比后面的数量少’这一核心条件，有助于理解小于号的规则。",
+    "novelty": "采用‘规则棋局’的设定，避免了常见的动物或生活场景模板，具有一定新颖性。"
+  },
+  "evidence": {
+    "faithfulness": "故事中记录员核对通行牌上的数字与前置条件牌，确认‘前面的数量比后面的少’才允许入口，准确映射了小于号的核心机制。",
+    "implicitness": "全文未出现‘小于号’、‘小于号含义’或任何数学术语，仅通过‘入口条件核对’、‘数字比对’等故事语言表达。",
+    "mapping_clarity": "记录员对应条件核对，调度员对应转化环节，验收员对应结果验收；事件链按‘先条件、再转化、后验收’顺序展开，与机制图边e1、e2一致。",
+    "readability": "故事有明确角色和冲突，但‘有人试着倒过来安排……’一句结构稍显复杂，可能影响流畅性。",
+    "pedagogical_value": "通过‘跳过中间承接导致失败’的转折，读者能直观理解顺序和条件的重要性，从而掌握小于号的含义。",
+    "novelty": "‘规则棋局’的设定在数学寓言中较少见，避免了‘小动物比大小’等常见模板。"
+  },
+  "revision_suggestions": [
+    "将‘有人试着倒过来安排，却发现只有先稳定规则棋局中的入口条件核对，再推动规则棋局中的第2道转化环节，后面的验收才可能接上先稳定规则棋局中的入口条件核对，再推动规则棋局中的第2道转化环节’拆分为更短的句子，提升可读性。",
+    "在‘两份记录共同约束最后判断’处增加具体数字示例（如‘3和5’），使数学结构更显性，增强教学价值。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 4,
+      "pedagogical_value": 4,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过入口条件核对（前面的数量比后面的少）准确表达了小于号的核心机制，且保留了条件与顺序的规则一致性。",
+      "implicitness": "正文未出现‘小于号’、‘小于号含义’或任何别名、专业术语，完全通过故事元素隐含表达。",
+      "mapping_clarity": "角色、物品和事件链清晰对应机制图中的节点和边，但部分映射（如‘两份记录共同约束最后判断’）在故事中略显抽象，可进一步具体化。",
+      "readability": "故事语言流畅，情节连贯，但部分句子较长（如‘有人试着倒过来安排……’），可适当拆分以提升易读性。",
+      "pedagogical_value": "故事通过顺序颠倒导致失败的转折，有效传达了‘前面的数量比后面的数量少’这一核心条件，有助于理解小于号的规则。",
+      "novelty": "采用‘规则棋局’的设定，避免了常见的动物或生活场景模板，具有一定新颖性。"
+    },
+    "evidence": {
+      "faithfulness": "故事中记录员核对通行牌上的数字与前置条件牌，确认‘前面的数量比后面的少’才允许入口，准确映射了小于号的核心机制。",
+      "implicitness": "全文未出现‘小于号’、‘小于号含义’或任何数学术语，仅通过‘入口条件核对’、‘数字比对’等故事语言表达。",
+      "mapping_clarity": "记录员对应条件核对，调度员对应转化环节，验收员对应结果验收；事件链按‘先条件、再转化、后验收’顺序展开，与机制图边e1、e2一致。",
+      "readability": "故事有明确角色和冲突，但‘有人试着倒过来安排……’一句结构稍显复杂，可能影响流畅性。",
+      "pedagogical_value": "通过‘跳过中间承接导致失败’的转折，读者能直观理解顺序和条件的重要性，从而掌握小于号的含义。",
+      "novelty": "‘规则棋局’的设定在数学寓言中较少见，避免了‘小动物比大小’等常见模板。"
+    },
+    "revision_suggestions": [
+      "将‘有人试着倒过来安排，却发现只有先稳定规则棋局中的入口条件核对，再推动规则棋局中的第2道转化环节，后面的验收才可能接上先稳定规则棋局中的入口条件核对，再推动规则棋局中的第2道转化环节’拆分为更短的句子，提升可读性。",
+      "在‘两份记录共同约束最后判断’处增加具体数字示例（如‘3和5’），使数学结构更显性，增强教学价值。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "math_1a_rjb_cpt10",
+    "target_concept": "小于号含义",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

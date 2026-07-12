@@ -1,0 +1,32 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "烹饪过程",
+  "domain_rationale": "生食材经过加热、调味等烹饪操作变成熟食，体现了物质在特定条件下发生本质变化的过程。",
+  "conflict": "生食材与物质的抽象性有差异，但变化的因果结构相同。",
+  "event_chain": [
+    "厨师准备好一块生面团",
+    "生面团被揉捏、发酵、烘烤",
+    "生面团变成松软的面包"
+  ],
+  "turning_point": "面团被放入烤箱",
+  "resolution_state": "面团转化为面包，性质改变",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "一块生面团",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "厨师的烹饪操作",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "生面团被厨师烹饪",
+      "direction_preserved": true
+    }
+  ]
+}

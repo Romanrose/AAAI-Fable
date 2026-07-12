@@ -1,0 +1,51 @@
+{
+  "concept_id": "physics_8a_rjb_cpt106",
+  "target_concept": "凸透镜成像规律",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 4,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "weighted_overall": 4.15,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "规则层按映射覆盖度给出保守估计；科学性仍建议使用 LLM judge 或人工复核。",
+    "implicitness": "检查故事正文和标题是否直接出现目标概念名、别名或强术语线索。",
+    "mapping_clarity": "依据 alignment_table / structure_plan 中概念角色覆盖情况估计映射清晰度。",
+    "readability": "依据正文长度和基本结构做轻量估计。",
+    "pedagogical_value": "依据核心映射覆盖度做轻量估计。",
+    "novelty": "依据常见模板短语和同批次相似度做轻量估计。"
+  },
+  "revision_suggestions": [],
+  "rule_findings": {
+    "story_token_count": 325,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": null,
+  "final_status": "accept",
+  "mode": "rules"
+}

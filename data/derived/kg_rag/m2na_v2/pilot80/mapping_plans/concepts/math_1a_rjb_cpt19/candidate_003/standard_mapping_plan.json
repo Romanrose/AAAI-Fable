@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt19",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫与果树",
+  "characters": [
+    "农夫",
+    "果树",
+    "果实",
+    "树枝"
+  ],
+  "objects": [
+    "果树",
+    "果实",
+    "树枝",
+    "篮子"
+  ],
+  "conflict": "农夫想要通过数果实、比较大小等方式认识果树上的果实数量，但果树上的果实数量会因采摘和生长而变化，农夫需要掌握如何通过合并和拆分果实来理解数量的变化。",
+  "event_chain": [
+    "农夫通过数果实、读数字、写数字、比较大小等方式认识果树上的果实数量（n1）。",
+    "农夫将两堆果实合并，得到总数6或7的加法算式（n2）。",
+    "农夫从一堆果实中去掉一部分，得到差为6或7的减法算式（n3）。",
+    "农夫将6或7个果实分成两个部分，了解所有不同的分法（n4）。"
+  ],
+  "turning_point": "农夫发现通过合并和拆分果实，可以更好地理解果实数量的变化规律。",
+  "resolution_state": "农夫掌握了通过数果实、合并、拆分等方式认识果实数量的方法，并能够灵活运用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫通过数果实、读数字、写数字、比较大小等方式认识果树上的果实数量",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫将两堆果实合并，得到总数6或7的加法算式",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫从一堆果实中去掉一部分，得到差为6或7的减法算式",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫将6或7个果实分成两个部分，了解所有不同的分法",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识果实数量后，开始进行合并操作",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫认识果实数量后，开始进行去掉操作",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫认识果实数量后，能够进行拆分操作",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数字6和7的认识'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文作为因果机制。",
+    "保持故事连贯，使用统一的农夫与果树领域。"
+  ],
+  "mapping_context_sha256": "8780a6362d746ae5b14848149d0f898409c58815dd993a2e7cc9f4eac6c8078a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "80bbe4aa88c5a69d5f52f4df7844d6a8095196f69278767db6a4b8b7857c76ab"
+  }
+}

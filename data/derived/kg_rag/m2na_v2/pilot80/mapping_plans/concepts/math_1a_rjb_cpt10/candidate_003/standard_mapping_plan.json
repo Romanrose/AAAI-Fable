@@ -1,0 +1,63 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "中国古代寓言故事",
+  "characters": [
+    "农夫",
+    "邻居"
+  ],
+  "objects": [
+    "一袋米",
+    "一袋面"
+  ],
+  "conflict": "农夫和邻居各自有一袋米和一袋面，但农夫认为自己的米比邻居的米多，而邻居认为自己的面比农夫的面多，两人争论不休。",
+  "event_chain": [
+    "农夫和邻居各自展示自己的米和面。",
+    "农夫说自己的米比邻居的米多，邻居说自己的面比农夫的面多。",
+    "两人请来智者评判。",
+    "智者让他们将米和面分别放在天平两端比较。",
+    "农夫和邻居发现米和面重量不同，无法直接比较。",
+    "智者指出，比较需要相同的单位，米和面不能直接比多少。"
+  ],
+  "turning_point": "智者指出米和面不能直接比较，需要先统一单位。",
+  "resolution_state": "农夫和邻居意识到，比较数量必须基于相同的参照物，否则无法判断多少。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫和邻居各自认为自己的米和面数量相同（等号含义的类比：两边数量相同）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫认为自己的米比邻居的米多，邻居认为自己的面比农夫的面多（小于号含义的类比：前面的数量比后面的少）",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫和邻居从认为数量相同（等号含义）转变为认为数量不同（小于号含义），智者引导他们理解比较需要相同基准。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未直接使用'小于号含义'等禁止术语。",
+    "确保'等号含义'和'小于号含义'的映射清晰，避免混淆。",
+    "注意故事中比较的基准问题，需突出'相同单位'才能比较多少。"
+  ],
+  "mapping_context_sha256": "8f7fb6fd774d6b0e0f1339084cb6e4d5acf17fc6752ca221af32d9633af4bb93",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7f1dac84c16f90b7a45fb19d1457d29f3bc4c7daf8b605543c63259ba27bb28a"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt22",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农夫分粮",
+  "characters": [
+    "农夫",
+    "大儿子",
+    "二儿子"
+  ],
+  "objects": [
+    "6斗米",
+    "7斗米",
+    "两个空缸"
+  ],
+  "conflict": "农夫需要将6斗米和7斗米分别分给两个儿子，但要求每个儿子必须得到整数斗米，且要了解所有不同的分法。",
+  "event_chain": [
+    "农夫认识6斗米和7斗米的总量，并会数、读、写、比较大小。",
+    "农夫用缸和斗来摆弄、画图，理解6斗米和7斗米的数量。",
+    "农夫将6斗米分成两个部分，并记录所有不同的分法。",
+    "农夫将7斗米分成两个部分，并记录所有不同的分法。",
+    "大儿子根据分法，将两部分米合并得到6斗米或7斗米的加法算式。",
+    "二儿子根据分法，从总量中去掉一部分得到差为6斗米或7斗米的减法算式。"
+  ],
+  "turning_point": "农夫发现只有通过系统地拆分6斗米和7斗米，才能得到所有不同的分法，从而让儿子们学会加法和减法。",
+  "resolution_state": "两个儿子都掌握了6斗米和7斗米的所有拆分方法，并能正确进行加法和减法运算。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫认识6斗米和7斗米的总量，并会数、读、写、比较大小",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫用缸和斗来摆弄、画图，理解6斗米和7斗米的数量",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫将6斗米和7斗米分别分成两个部分，并记录所有不同的分法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "大儿子根据分法，将两部分米合并得到6斗米或7斗米的加法算式",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "二儿子根据分法，从总量中去掉一部分得到差为6斗米或7斗米的减法算式",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识6斗米和7斗米的总量，并会数、读、写、比较大小，这使他能够进行拆分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫用缸和斗来摆弄、画图，理解6斗米和7斗米的数量，这使他能够进行拆分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫将6斗米和7斗米分别分成两个部分，并记录所有不同的分法，这使大儿子能够根据分法进行加法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "农夫将6斗米和7斗米分别分成两个部分，并记录所有不同的分法，这使二儿子能够根据分法进行减法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'分拆数6和7'等禁止术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "确保故事载体使用一致的农夫分粮场景，不引入无关隐喻。"
+  ],
+  "mapping_context_sha256": "a02f4725aead900495b6a480264624d2cdefafe80032478d3737c2db640bddca",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "be0d7a0924dc3dcad1a80789baf3981dd70db44dbdf17fbf6308ba7efd0de7f4"
+  }
+}

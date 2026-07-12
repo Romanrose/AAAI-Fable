@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "concept_id": "math_1a_rjb_cpt14",
+  "strategy": "llm_guided_copycat",
+  "candidate_id": "candidate_001",
+  "selected_source": "initial",
+  "revision_attempted": false,
+  "revision_improved": false,
+  "node_coverage": 0.8333,
+  "edge_coverage": 0.8333,
+  "direction_accuracy": 1.0,
+  "hard_leakage": false,
+  "length_valid": true,
+  "judge_status": "accept",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12\\stories\\math_1a_rjb_cpt14\\llm_guided_copycat\\candidate_001"
+}

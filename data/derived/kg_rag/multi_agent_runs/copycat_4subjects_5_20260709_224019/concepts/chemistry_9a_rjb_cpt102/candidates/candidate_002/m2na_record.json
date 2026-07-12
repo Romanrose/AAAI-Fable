@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt102",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "呼吸与氧气",
+    "aliases": [],
+    "forbidden_terms": [
+      "呼吸与氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:18224",
+        "source_name": "呼吸与氧气",
+        "target_name": "氧气的物理性质",
+        "relation_semantic_role": "association"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:18223",
+        "source_name": "呼吸与氧气",
+        "target_name": "缓慢氧化",
+        "relation_semantic_role": "association"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "记录员翻开分段记录册，里面是铸造工坊入口的核对记录：每一批原料必须经过特定状态检测才能进入下一道。调度员递来另一本册子，里面记载的是转化环节的配方要求。两人把两本册子摊在同一张桌上，发现它们共同约束最后判断——入口条件决定了转化环节能用的物料范围，而转化环节又决定了最终成品的性质。\n\n“你看，如果入口检测说这批矿料含杂量高，转化环节就必须调整温度和时间，否则成品会脆。”记录员指着两处记录说。调度员点头，在通行牌上写下备注。\n\n这时验收员走过来，说有人想提前跳过中间的承接流程，直接拿入口条件去套验收标准。记录员摇头：“方向不能颠倒，顺序也不能乱。入口条件核对只是第一步，转化环节必须按前一步留下的条件推进，最后才能用验收记录核对整条安排是否可靠。”\n\n调度员想起上次有人跳过转化环节直接验收，结果成品全不合格。他拿起通行牌，重新按顺序走了一遍：先确认入口条件成立，再按配方调整转化流程，最后请验收员核对结果。这一回，三本记录册上的数字终于互相印证。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件核对",
+        "narrative_anchor": "入口条件核对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "转化环节",
+        "narrative_anchor": "转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "验收记录",
+        "narrative_anchor": "验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "入口条件决定了转化环节能用的物料范围",
+        "evidence": "入口条件决定了转化环节能用的物料范围",
+        "narrative_anchor": "入口条件决定了转化环节能用的物料范围",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "转化环节又决定了最终成品的性质",
+        "evidence": "转化环节又决定了最终成品的性质",
+        "narrative_anchor": "转化环节又决定了最终成品的性质",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

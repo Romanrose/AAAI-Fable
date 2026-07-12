@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (种子萌发) is mapped to '第2道转化环节' but the story does not explicitly show that this step is the process enabled by the conditions; it is merely listed as a sequential step. Edge e1 (enables from n1 to n2) is represented by comparing records, which captures the constraint but not the causal enablement. A stronger realization would have the story explicitly show that the condition check (n1) directly allows the process (n2) to start, rather than just being a prerequisite for later steps."
+  },
+  "revision_instructions": [
+    "Strengthen the representation of edge e1: show that the condition check (入口条件核对) directly enables the process (第2道转化环节) to begin, not just that they are compared together.",
+    "Clarify that node n2 (第2道转化环节) is the central process that requires the conditions, not just another sequential step. Consider adding a line like '只有入口条件核对通过，第2道转化环节才能启动'.",
+    "Ensure that the three specific conditions (n3, n4, n5) are each mapped to distinct story elements (e.g., temperature, moisture, air checks) rather than all being mapped to the same '入口条件核对' rule, to better preserve the is_a relations."
+  ],
+  "final_status": "revise"
+}

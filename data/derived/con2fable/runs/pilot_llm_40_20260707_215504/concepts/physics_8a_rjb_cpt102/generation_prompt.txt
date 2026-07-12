@@ -1,0 +1,148 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "实像"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：投影仪成像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：照相机成像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：虚像",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12420"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12419"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_23049"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "摄影暗房与投影仪操作",
+    "setting": "在一间老式摄影暗房里，一位学徒正在学习如何用投影仪将底片上的影像投射到幕布上。暗房里有各种透镜、光屏和调节架。",
+    "conflict": "学徒发现，只有当底片（物体）放在透镜一侧的特定距离时，幕布上才会出现清晰的影像；如果距离不对，影像就模糊或消失。他需要找到那个精确的位置。",
+    "characters": [
+      {
+        "name": "学徒",
+        "role": "操作者，代表光线与透镜的相互作用过程",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "投影仪",
+        "role": "代表凸透镜成像的典型应用（投影仪成像）",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "照相机",
+        "role": "代表凸透镜成像的另一种典型应用（照相机成像）",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "虚像",
+        "role": "代表与实像相对的概念，在故事中作为对比出现",
+        "mapped_element": "m4"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "学徒通过调节透镜与底片的距离，使光线会聚在幕布上形成清晰影像的过程"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "投影仪的使用场景：底片在透镜一侧，幕布在另一侧，影像可被光屏承接"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "照相机的工作原理：物体在透镜一侧，胶片在另一侧，形成可记录的影像"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "学徒回忆起另一种成像方式——虚像，它无法被光屏承接，与当前实验形成对比"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "学徒将底片放在投影仪透镜前，幕布上出现模糊的光斑。他调整底片位置，发现只有当底片在透镜一侧的某个特定距离时，幕布上才出现清晰的倒立影像。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "学徒用投影仪将清晰的影像投射到幕布上，影像可以被光屏承接，且底片和幕布分居透镜两侧。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "学徒想到，照相机也是同样的原理：远处的景物通过透镜在胶片上形成清晰的影像，胶片和景物分居透镜两侧。",
+        "mapped_elements": [
+          "m1",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "学徒回忆起另一种成像——虚像，它无法被光屏承接，与当前实验中的成像方式不同。",
+        "mapped_elements": [
+          "m4"
+        ]
+      }
+    ],
+    "turning_point": "当学徒尝试将底片移近透镜时，幕布上的影像突然消失，他意识到必须保持底片在透镜另一侧的特定距离才能成像，这个距离决定了影像的清晰与否。",
+    "ending": "学徒成功掌握了调节方法，在幕布上得到了清晰的倒立影像。他明白了，只有光线实际会聚在一点，才能被光屏承接，形成可记录的影像。",
+    "implied_moral": "真正的成果需要精确的条件和实际汇聚，而非虚幻的投影。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

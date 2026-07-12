@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:17188",
+    "normalized:edge:12429",
+    "normalized:edge:23027"
+  ]
+}

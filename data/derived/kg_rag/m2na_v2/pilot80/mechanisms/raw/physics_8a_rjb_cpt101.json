@@ -1,0 +1,114 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt101",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "光心",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt99:definition",
+          "kg-node:physics_8a_rjb_cpt99:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "焦点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-node:physics_8a_rjb_cpt100:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "焦距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt101:definition",
+          "kg-node:physics_8a_rjb_cpt101:formula",
+          "kg-node:physics_8a_rjb_cpt101:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "凸透镜成像规律",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt106:definition",
+          "kg-node:physics_8a_rjb_cpt106:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17247"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19710"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17190"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "焦距"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "64f7c7f0b782fb570beea4dcda6a9fe232ca4ad02cf84e5321f82651318ccfbe",
+    "retrieval_sha256": "c8d484b1d4ce4ed831b74378111724102cf2567896b25fa7f9984b624d50b6d2",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "673ab5ac8e1857cc7004d2c29275b4445719f942ceb27234b89aec6c9cccaf04"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

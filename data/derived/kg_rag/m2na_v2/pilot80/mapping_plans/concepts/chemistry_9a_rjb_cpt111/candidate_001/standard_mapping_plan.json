@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代寓言：一位老农与他的神奇水井",
+  "characters": [
+    "老农",
+    "村民",
+    "干旱的田地"
+  ],
+  "objects": [
+    "神奇水井",
+    "水桶",
+    "水渠",
+    "庄稼"
+  ],
+  "conflict": "村庄遭遇干旱，田地干裂，庄稼枯萎，村民束手无策。",
+  "event_chain": [
+    "老农发现一口神奇水井，井水清澈且取之不尽。",
+    "老农用这口井的水灌溉田地，庄稼迅速恢复生机，生长速度远超以往。",
+    "村民发现老农的田地异常茂盛，纷纷询问原因。",
+    "老农分享水井的秘密，但强调水井本身的水量和性质从未改变，只是通过它引水能加速庄稼生长。",
+    "村民开始使用这口井，整个村庄的田地都获得丰收，解决了干旱危机。"
+  ],
+  "turning_point": "老农发现水井并开始用它灌溉，庄稼生长速度显著改变。",
+  "resolution_state": "村庄因神奇水井而获得丰收，水井始终如一，但它的使用改变了庄稼的生长速率。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "神奇水井",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "使用水井灌溉的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "庄稼生长速度显著加快",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "水井的水量和性质在灌溉前后保持不变",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "整个村庄的田地获得丰收",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "神奇水井与使用水井灌溉的过程相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "使用水井灌溉的过程导致庄稼生长速度显著加快",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "水井的水量和性质在灌溉前后保持不变这一条件约束了使用水井灌溉的过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "使用水井灌溉的过程使得整个村庄的田地获得丰收成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中没有出现'催化作用'或任何化学术语。",
+    "确保水井本身不改变，只改变生长速率，与催化剂性质不变一致。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将村民的询问或分享秘密作为因果机制，仅作为情节推进。"
+  ],
+  "mapping_context_sha256": "a04bc2bca2bbdbd2e66f7d35bbff79eb0d27cbc7c8b40630af337d6a82fc0a12",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "199abfe73a4b3f909266290ee1cfa43dbbf259e001818784967d64fb484b380c"
+  }
+}

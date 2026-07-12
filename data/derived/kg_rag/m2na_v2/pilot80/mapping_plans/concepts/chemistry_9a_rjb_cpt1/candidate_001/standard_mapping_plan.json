@@ -1,0 +1,61 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "种子的生长",
+  "characters": [
+    "种子"
+  ],
+  "objects": [
+    "土壤",
+    "水分",
+    "阳光"
+  ],
+  "conflict": "种子需要适宜的条件才能生长变化，但环境可能不提供这些条件。",
+  "event_chain": [
+    "种子存在于土壤中",
+    "种子吸收水分和阳光",
+    "种子开始发芽生长",
+    "种子发生形态变化，长成幼苗"
+  ],
+  "turning_point": "种子获得足够的水分和阳光，开始发芽。",
+  "resolution_state": "种子成功发芽并生长为幼苗，实现了变化。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "种子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子发芽生长",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "种子（n1）的存在使得种子能够发芽生长（n2）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事载体不直接使用或暗示'物质'等禁止术语。",
+    "确保种子作为实体，其变化过程作为过程，映射准确。",
+    "确保方向性：种子存在是变化的前提，而非相反。"
+  ],
+  "mapping_context_sha256": "b275ad89f32b881671a13b8ef021fc315d694955fc1ad53cadcc768d38a8e470",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b0adf63ef8450740ab0f06547a4ad5010f05df9fdb0be802ee27d33553920350"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过声音清晰度与距离的关系，准确类比了眼睛调节中近点的概念：存在一个最近有效距离，太近反而模糊。核心机制（距离与清晰度的非单调关系）与定义一致。",
+    "implicitness": "目标概念“近点”及其术语均未在故事中出现，核心机制完全通过事件链隐含表达，读者需通过类比推断。",
+    "mapping_clarity": "声音清晰度与距离的映射关系清晰：10米对应正常眼近点10厘米，太近模糊对应近点以内调节失效。但类比中距离单位（米 vs 厘米）可能造成轻微混淆。",
+    "readability": "故事语言流畅，情节连贯，角色行为自然，无冗余或晦涩表达，适合目标读者。",
+    "pedagogical_value": "故事有效传达了“存在最佳观察距离”这一核心概念，并通过试验和发现过程强化理解，但未涉及调节机制或明视距离等关联概念，教学深度有限。",
+    "novelty": "用声音清晰度类比视觉近点有一定新意，但“距离与清晰度非单调关系”的叙事框架较为常见。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事中增加一个角色解释声音模糊的原因（如回声干扰），以更贴近眼睛调节的生理机制。",
+    "建议在结尾处用一句话点明“每个感官都有它的最佳距离”，以强化概念迁移。",
+    "可加入一个对比场景，展示不同个体（如老人、儿童）的最佳距离不同，以体现近点的个体差异。"
+  ]
+}

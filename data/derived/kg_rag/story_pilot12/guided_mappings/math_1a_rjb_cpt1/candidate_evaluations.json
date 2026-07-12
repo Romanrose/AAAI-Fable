@@ -1,0 +1,173 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "农夫种菜",
+      "domain_rationale": "农夫种菜的过程包含准备、种植、收获等步骤，与数物体、比较数量、一一对应比较法有结构上的相似性。",
+      "conflict": "无直接冲突，但农夫种菜中“数种子”与“数物体”类似，但“比较菜苗数量”与“比较物体数量”可能不完全对应。",
+      "event_chain": [
+        "农夫在菜地里挖坑，将种子一粒一粒地放入坑中。",
+        "农夫观察菜苗长出后，比较哪块地的菜苗多、哪块少、是否一样多。",
+        "农夫将两块地的菜苗一一配对，以比较数量的多少。"
+      ],
+      "turning_point": "农夫发现A地菜苗比B地多，通过一一配对确认。",
+      "resolution_state": "农夫清楚每块地的菜苗数量，并知道哪块多哪块少。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "农夫将种子一粒一粒地放入坑中",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "农夫观察菜苗长出后，比较哪块地的菜苗多、哪块少、是否一样多",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "农夫将两块地的菜苗一一配对，以比较数量的多少",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "农夫在种完种子后，根据菜苗数量进行比较",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "农夫通过种种子掌握了菜苗数量，从而能进行一一配对比较",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "采蘑菇的小姑娘",
+      "domain_rationale": "采蘑菇的过程包含采摘、比较、配对等环节，与数物体、比较数量、一一对应比较法高度吻合。",
+      "conflict": "无冲突，采蘑菇本身就是一种物体计数和比较的活动。",
+      "event_chain": [
+        "小姑娘在森林里仔细地采摘蘑菇，每采一朵就数一朵。",
+        "她将两个篮子里的蘑菇数量进行比较，判断哪个篮子里的蘑菇多、哪个少、是否一样多。",
+        "她把两个篮子里的蘑菇一个个配对，看看哪个篮子多出几朵。"
+      ],
+      "turning_point": "小姑娘发现左边篮子比右边篮子多3朵蘑菇，通过配对确认。",
+      "resolution_state": "小姑娘清楚每个篮子的蘑菇数量，并知道差异。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "小姑娘每采一朵蘑菇就数一朵",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "小姑娘比较两个篮子里的蘑菇数量，判断多少或相同",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "小姑娘将两个篮子里的蘑菇一一配对",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "小姑娘数完蘑菇后，比较两个篮子的蘑菇数量",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "小姑娘通过数蘑菇知道了每篮的数量，从而能进行一一配对比较",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "小猴子分桃子",
+      "domain_rationale": "小猴子分桃子的故事涉及数桃子、比较桃子数量、一一配对，与目标机制结构一致。",
+      "conflict": "无冲突，故事自然包含计数和比较。",
+      "event_chain": [
+        "猴妈妈摘来一堆桃子，小猴子一个一个地数着桃子。",
+        "小猴子把桃子分给两个弟弟，然后比较两个弟弟手中的桃子哪个多、哪个少、是否一样多。",
+        "小猴子让两个弟弟把桃子一个个配对，看看谁多谁少。"
+      ],
+      "turning_point": "小猴子发现大弟比小弟多2个桃子，通过配对确认。",
+      "resolution_state": "小猴子知道每个弟弟有多少桃子，并知道谁多谁少。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "小猴子一个一个地数着桃子",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "小猴子比较两个弟弟手中的桃子哪个多、哪个少、是否一样多",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "小猴子让两个弟弟把桃子一个个配对",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "小猴子数完桃子后，比较两个弟弟的桃子数量",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "小猴子通过数桃子知道了总数，从而能进行一一配对比较",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  }
+]

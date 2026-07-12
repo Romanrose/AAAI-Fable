@@ -1,0 +1,137 @@
+{
+  "source_domain": "化学实验室",
+  "setting": "在一间化学实验室里，一位化学老师正在向学生展示几种不同的实验操作，以帮助他们理解物质变化的基本规律。",
+  "conflict": "学生们最初认为物质只能通过混合或简单变化来产生新物质，但老师需要让他们明白，有些物质在特定条件下会自行分裂成多种不同的物质，且总质量保持不变。",
+  "characters": [
+    {
+      "name": "王老师",
+      "role": "引导者，通过实验演示分类思想",
+      "mapped_element": "m2"
+    },
+    {
+      "name": "小明",
+      "role": "学生代表，最初困惑，后来领悟分类方法",
+      "mapped_element": "m3"
+    },
+    {
+      "name": "氯酸钾样品",
+      "role": "第一种实验物质，加热后产生氧气和氯化钾",
+      "mapped_element": "m4"
+    },
+    {
+      "name": "过氧化氢溶液",
+      "role": "第二种实验物质，加入催化剂后产生氧气和水",
+      "mapped_element": "m5"
+    },
+    {
+      "name": "高锰酸钾晶体",
+      "role": "第三种实验物质，受热后产生锰酸钾、二氧化锰和氧气",
+      "mapped_element": "m6"
+    },
+    {
+      "name": "氧气收集装置",
+      "role": "展示实验室制取氧气的方法，连接实验与生活应用",
+      "mapped_element": "m7"
+    },
+    {
+      "name": "水电解装置",
+      "role": "展示水的分解，进一步说明一种物质可生成多种物质",
+      "mapped_element": "m8"
+    }
+  ],
+  "mappings": [
+    {
+      "concept_element": "m1",
+      "narrative_carrier": "王老师提出的核心问题：一种物质在特定条件下能变成两种或更多种不同的物质"
+    },
+    {
+      "concept_element": "m2",
+      "narrative_carrier": "王老师引入化学学习中的分类思想，让学生先学会区分不同类型的变化"
+    },
+    {
+      "concept_element": "m3",
+      "narrative_carrier": "小明通过分类方法学习，开始理解物质变化可以按反应类型分组"
+    },
+    {
+      "concept_element": "m4",
+      "narrative_carrier": "加热氯酸钾制取氧气的实验演示"
+    },
+    {
+      "concept_element": "m5",
+      "narrative_carrier": "过氧化氢分解反应的实验演示"
+    },
+    {
+      "concept_element": "m6",
+      "narrative_carrier": "高锰酸钾受热分解反应的实验演示"
+    },
+    {
+      "concept_element": "m7",
+      "narrative_carrier": "实验室制取氧气的方法，作为应用实例"
+    },
+    {
+      "concept_element": "m8",
+      "narrative_carrier": "水的分解反应，进一步扩展理解"
+    }
+  ],
+  "plot_beats": [
+    {
+      "beat_id": "b1",
+      "event": "王老师提出一个问题：一种物质能否在特定条件下变成多种不同的物质？",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b2",
+      "event": "王老师先讲解化学学习中的分类思想，让学生明白需要先区分变化类型。",
+      "mapped_elements": [
+        "m2"
+      ]
+    },
+    {
+      "beat_id": "b3",
+      "event": "小明运用分类方法，将实验分为加热类和催化类，开始有思路。",
+      "mapped_elements": [
+        "m3"
+      ]
+    },
+    {
+      "beat_id": "b4",
+      "event": "王老师演示加热氯酸钾，白色固体在加热后产生气体和另一种固体。",
+      "mapped_elements": [
+        "m4"
+      ]
+    },
+    {
+      "beat_id": "b5",
+      "event": "王老师演示过氧化氢溶液加入催化剂，产生大量气泡，液体变成水。",
+      "mapped_elements": [
+        "m5"
+      ]
+    },
+    {
+      "beat_id": "b6",
+      "event": "王老师演示加热高锰酸钾，紫色晶体变为黑色固体并产生气体。",
+      "mapped_elements": [
+        "m6"
+      ]
+    },
+    {
+      "beat_id": "b7",
+      "event": "王老师展示氧气收集装置，说明这些实验都是实验室制取氧气的方法。",
+      "mapped_elements": [
+        "m7"
+      ]
+    },
+    {
+      "beat_id": "b8",
+      "event": "王老师用电解水装置演示，水通电后产生氢气和氧气，进一步验证规律。",
+      "mapped_elements": [
+        "m8"
+      ]
+    }
+  ],
+  "turning_point": "小明观察到三个实验中，每一种原始物质都变成了两种或更多种不同的物质，且总质量不变，他意识到这不是简单的混合，而是一种物质内部发生了根本性的变化。",
+  "ending": "小明总结道：原来一种物质在加热或催化等条件下，可以像分裂一样变成多种新物质，而且质量守恒，这就像化学世界里的‘一分为多’法则。",
+  "implied_moral": "看似单一的事物，在特定条件下可以分化出多样的结果，但整体并未消失，只是以不同形式存在。"
+}

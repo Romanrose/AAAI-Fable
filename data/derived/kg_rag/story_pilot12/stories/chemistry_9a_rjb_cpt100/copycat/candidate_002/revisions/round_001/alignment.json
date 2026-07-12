@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第四道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第五道转化环节",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "第六道转化环节",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "第七道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "入口条件核对",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第二道转化环节",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "入口条件核对",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "把两份相关记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "The story aligns with the mechanism graph by mapping each process node to a specific step in the foundry workflow (e.g., entry condition check, second to seventh transformation steps, and final acceptance record). Edges are partially supported by story evidence showing hierarchical relations (is_a) and dependency constraints (requires, produces, part_of), though some edge mappings rely on generic story phrases like 'comparing two records' rather than explicit directional evidence. The story confirms the turning point where skipping intermediate checks leads to errors, and the resolution where all steps are re-sequenced correctly."
+}

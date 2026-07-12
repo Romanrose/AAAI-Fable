@@ -1,0 +1,99 @@
+{
+  "id": "math_1a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "数物体（数一数）",
+    "aliases": [],
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：一一对应比较法",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "与相关概念保持关系：数物体（数一数） 与 比较数量（多、少、一样多）",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:16335"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:19305"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "小匠在修补坊里修补一幅破损的古地图。地图上原本完整的疆域，如今布满了一个个形状不规则的窟窿，像是被虫子啃过一般。桌旁堆着一叠修补用的纸片，大小不一，颜色也深浅各异。\n\n小匠拿起一张纸片，对着地图上的一个窟窿比了比，大小刚好。他把纸片小心翼翼地贴上去，压平边角。接着又拿起第二张，找到另一个窟窿，也贴了上去。每贴好一块，他就拿起标记笔，在旁边的空白记录纸上胡乱画一个点，表示这里完成了一块。\n\n贴了五六块后，小匠停下来歇口气。他低头看那张记录纸，上面稀稀落落全是墨点。可是，哪个点对应地图上的哪个位置，他完全想不起来了。他挠挠头，又数了数纸上的点，总共七个。可地图上还有几个窟窿没补呢？他也说不清。\n\n老匠师恰好路过，看了一眼小匠的记录纸，摇了摇头。“你光画点，却不知道每个点代表哪一块。这样修下去，就算全贴完了，你也不知道地图到底补没补全。”\n\n小匠愣住了。\n\n老匠师拿起一张纸片，指着地图上的一个窟窿说：“你要先让纸片和窟窿对上号，一块纸片只贴一个窟窿，不能多也不能少。然后，每拿起一张纸片，你就从一数起，第一个窟窿标上一，第二个标上二，依次写下来。”\n\n小匠恍然大悟。他重新开始，先拿起一张纸片，找到对应的窟窿贴好，然后在记录纸上写下“一”，并在旁边画个小圈标记位置。再拿起第二张，贴好，写下“二”。就这样，一张一张地贴，一个数一个数地记。\n\n所有纸片都贴完后，小匠看着记录纸上从“一”到“十二”的编号，每个编号都清清楚楚地对应着地图上的一个位置。他数了数最后一个数字——十二。地图上原本正好有十二个窟窿，现在全被补上了。\n\n小匠长长地舒了一口气。现在他不仅知道一共修补了多少处，还知道每一处修补的是哪里。地图终于完整了。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "小匠按照老匠师的指导，对每一张用于修补的纸片进行逐一计数，并记录下对应的编号，从而确定一共修补了多少个窟窿。",
+        "evidence": "从一数起，第一个窟窿标上一，第二个标上二，依次写下来",
+        "narrative_anchor": "从一数起，第一个窟窿标上一，第二个标上二，依次写下来",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "小匠在计数之前，需要先将每张纸片与地图上的窟窿进行一一对应地贴合，这是进行准确计数的基础。",
+        "evidence": "先让纸片和窟窿对上号，一块纸片只贴一个窟窿",
+        "narrative_anchor": "先让纸片和窟窿对上号，一块纸片只贴一个窟窿",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "通过逐一计数，小匠可以知道修补的纸片数量，进而与地图上原有的窟窿数量进行比较，判断是否所有窟窿都被修补了（一样多）。",
+        "evidence": "地图上原本正好有十二个窟窿，现在全被补上了",
+        "narrative_anchor": "地图上原本正好有十二个窟窿，现在全被补上了",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先一一对应，再逐一计数",
+        "evidence": "地图上原本完整的疆域，如今布满了一个个形状不规则的窟窿，像是被虫子啃过一般。",
+        "narrative_anchor": "地图上原本完整的疆域，如今布满了一个个形状不规则的窟窿，像是被虫子啃过一般。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "逐一计数后比较数量是否一致",
+        "evidence": "数了数最后一个数字——十二。地图上原本正好有十二个窟窿",
+        "narrative_anchor": "数了数最后一个数字——十二。地图上原本正好有十二个窟窿",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

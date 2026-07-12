@@ -1,0 +1,80 @@
+{
+  "query": "chemistry_9a_rjb_cpt10",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt10",
+    "label": "Concept",
+    "name": "沸点",
+    "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+    "aliases": [],
+    "examples": [
+      "水的沸点为100℃（在101 kPa下）",
+      "大气稀薄处水的沸点降低"
+    ],
+    "retrieval_text": "沸点\n物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt12",
+        "label": "Concept",
+        "name": "水的熔点和沸点",
+        "definition": "在大气压强为101 kPa条件下，水的熔点为0℃，沸点为100℃。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt13",
+        "label": "Concept",
+        "name": "铁的熔点和沸点",
+        "definition": "在大气压强为101 kPa条件下，铁的熔点为1535℃，沸点为2750℃。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt14",
+        "label": "Concept",
+        "name": "铝的熔点和沸点",
+        "definition": "在大气压强为101 kPa条件下，铝的熔点为660.37℃，沸点为2467℃。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt15",
+        "label": "Concept",
+        "name": "氧气的熔点和沸点",
+        "definition": "在大气压强为101 kPa条件下，氧气的熔点为-218.4℃，沸点为-182.9℃。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt11",
+        "label": "Concept",
+        "name": "大气压强",
+        "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt21",
+        "label": "Concept",
+        "name": "条件对物质性质的影响",
+        "definition": "当外界条件改变时，物质的性质也会随着变化，因此描述物质性质时往往要注明条件。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt11",
+        "label": "Concept",
+        "name": "大气压强",
+        "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "课题1 物质的变化和性质",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

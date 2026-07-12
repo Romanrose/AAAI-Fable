@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly preserves the 'relates_to' relation between n2 (transformation step) and n1 (entry condition check) by showing that the transformation result depends on the entry condition (e.g., channel width limit). This is observably better than a version where the transformation step is performed independently without referencing the entry condition, which would violate the relation. The mapping is strong because the dependency is explicitly stated and demonstrated through character actions."
+  },
+  "revision_instructions": [
+    "Reduce story length to within 450-750 Chinese characters (currently 898).",
+    "Increase node_coverage to at least 0.8 by ensuring all three mechanism nodes are explicitly and distinctly represented in the story (currently only 2 out of 3 nodes are covered)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

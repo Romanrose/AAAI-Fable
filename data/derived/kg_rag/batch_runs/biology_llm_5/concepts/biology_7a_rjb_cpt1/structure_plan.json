@@ -1,0 +1,75 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt1",
+  "seed": {
+    "id": "biology_7a_rjb_cpt1",
+    "label": "Concept",
+    "name": "生物",
+    "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+    "importance": "重要",
+    "aliases": [
+      "生命体"
+    ],
+    "examples": [
+      "小麦",
+      "海豚",
+      "鲸",
+      "人",
+      "含羞草",
+      "幼鳄",
+      "蘑菇",
+      "狗",
+      "珊瑚虫"
+    ],
+    "retrieval_text": "生物\nConcept\n具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。\n重要\n生命体\n小麦\n海豚\n鲸\n人\n含羞草\n幼鳄\n蘑菇\n狗\n珊瑚虫"
+  },
+  "source_domain": "garden workshop",
+  "entities": [
+    "a careful caretaker",
+    "a plot that depends on the right conditions",
+    "tools and routines that reveal whether growth is real"
+  ],
+  "event_chain": [
+    "The caretaker prepares the conditions that must already be in place.",
+    "The plot uses those conditions to produce visible growth.",
+    "Nearby processes either support or compete with that growth.",
+    "Observation and trials reveal whether the growth is genuine and sustained."
+  ],
+  "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+  "turning_point": "A visible change reveals which condition actually controls the outcome.",
+  "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+  "alignment_plan": [
+    {
+      "concept_role": "target concept",
+      "concept_items": [
+        "生物"
+      ],
+      "story_role": "central productive process"
+    },
+    {
+      "concept_role": "prerequisites",
+      "concept_items": [],
+      "story_role": "conditions or resources that must be prepared first"
+    },
+    {
+      "concept_role": "related concepts",
+      "concept_items": [],
+      "story_role": "neighboring processes that contextualize or contrast the main process"
+    },
+    {
+      "concept_role": "outcomes",
+      "concept_items": [],
+      "story_role": "visible consequences produced by the core process"
+    },
+    {
+      "concept_role": "experiments",
+      "concept_items": [],
+      "story_role": "tests that reveal whether the process truly happened"
+    },
+    {
+      "concept_role": "exercises",
+      "concept_items": [],
+      "story_role": "follow-up checks that reinforce the lesson"
+    }
+  ]
+}

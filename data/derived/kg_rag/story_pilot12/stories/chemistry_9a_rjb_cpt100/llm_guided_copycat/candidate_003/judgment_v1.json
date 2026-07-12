@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story masterfully embodies the slow oxidation process (n1) through the copper sword's gradual rusting, with explicit evidence of 'no heat or light,' making it the strongest mapping. Node n2 (oxidation reaction) is weakest because the story never explicitly names 'oxidation reaction' as a general category; it only shows specific instances (rusting and combustion). Edge e1 (slow oxidation is_a oxidation reaction) is weakest because the story does not explicitly state the hierarchical relationship; it relies on the reader to infer that both rusting and combustion are types of oxidation. This mapping is observably better than a direct lecture because it uses a concrete, narrative contrast to teach the same concept, making the mechanism more memorable."
+  },
+  "revision_instructions": [
+    "Consider adding a brief line where the narrator or a character explicitly states that both rusting and burning are forms of oxidation, to strengthen the is_a relation for e1 and e2.",
+    "The story could slightly increase implicitness by not directly stating 'oxygen' in the slow oxidation part, but the current level is acceptable for clarity."
+  ],
+  "final_status": "accept"
+}

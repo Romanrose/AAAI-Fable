@@ -1,0 +1,11 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 5.0,
+  "selected_candidate_id": "candidate_001",
+  "revision_applied": false,
+  "six_dim_mode": "llm"
+}

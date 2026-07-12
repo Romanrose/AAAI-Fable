@@ -1,0 +1,109 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt104",
+    "label": "Concept",
+    "name": "投影仪成像",
+    "properties": {
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "importance": "重要",
+      "retrieval_text": "投影仪成像\nConcept\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt102",
+      "label": "Concept",
+      "name": "实像",
+      "properties": {
+        "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+        "importance": "掌握",
+        "retrieval_text": "实像\nConcept\n光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。\n掌握"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt95",
+      "label": "Concept",
+      "name": "凸透镜",
+      "properties": {
+        "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。",
+        "importance": "掌握",
+        "aliases": [
+          "会聚透镜",
+          "convex lens"
+        ],
+        "examples": [
+          "照相机镜头",
+          "投影仪镜头",
+          "放大镜"
+        ],
+        "retrieval_text": "凸透镜\nConcept\n一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。\n掌握\n会聚透镜\nconvex lens\n照相机镜头\n投影仪镜头\n放大镜"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17244",
+      "source": "physics_8a_rjb_cpt95",
+      "source_name": "凸透镜",
+      "target": "physics_8a_rjb_cpt104",
+      "target_name": "投影仪成像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12420",
+      "source": "physics_8a_rjb_cpt104",
+      "source_name": "投影仪成像",
+      "target": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "投影仪成像",
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17244] 凸透镜 --prerequisites_for--> 投影仪成像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12420] 投影仪成像 --is_a--> 实像"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

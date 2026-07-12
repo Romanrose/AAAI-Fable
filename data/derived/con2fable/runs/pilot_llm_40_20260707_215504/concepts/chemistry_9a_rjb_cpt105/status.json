@@ -1,0 +1,11 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "concept_type": "process",
+  "generation_priority": "gold",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.8,
+  "revision_count": 1
+}

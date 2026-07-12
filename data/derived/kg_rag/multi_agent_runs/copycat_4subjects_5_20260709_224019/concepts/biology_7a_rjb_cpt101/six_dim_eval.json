@@ -1,0 +1,124 @@
+{
+  "concept_id": "biology_7a_rjb_cpt101",
+  "target_concept": "种子萌发",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "weighted_overall": 4.25,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确表达了种子萌发需要先满足环境条件（入口条件核对），再经历过程（中间流程），最后得到结果（验收记录）的核心机制，没有出现目的论或个体努力代替进化原因的错误。",
+    "implicitness": "全文未出现‘种子萌发’、‘胚根’、‘胚芽’等任何禁用术语或概念别名，完全通过港口检疫流程隐喻。",
+    "mapping_clarity": "入口条件核对对应环境条件，中间流程对应萌发过程，验收记录对应幼苗形成，因果链清晰；但‘环境条件’和‘自身条件’在故事中未明确区分，映射略有模糊。",
+    "readability": "故事语言自然流畅，情节连贯，人物对话和动作描写生动，适合初中生阅读。",
+    "pedagogical_value": "读者能理解‘条件→过程→结果’的顺序不可颠倒，但故事未体现种子利用贮藏营养这一关键细节，教学深度稍显不足。",
+    "novelty": "港口检疫站作为隐喻场景比较新颖，避免了常见的‘种子发芽’或‘植物生长’模板，但‘流程顺序’的冲突设计略显常见。"
+  },
+  "evidence": {
+    "faithfulness": "故事中调度员跳过入口条件核对导致后续流程无法衔接，验收员指出‘方向不能颠倒’，与种子萌发必须先满足环境条件再启动过程的机制一致。",
+    "implicitness": "全文无‘种子’、‘萌发’、‘发芽’等词，仅用‘入口条件核对’、‘中间流程’、‘验收记录’等检疫术语。",
+    "mapping_clarity": "入口条件核对→环境条件，中间流程→萌发过程，验收记录→幼苗形成，顺序因果明确；但未区分‘环境条件’和‘自身条件’两个前置条件。",
+    "readability": "故事有完整起承转合，对话自然，无生僻词汇，段落长度适中。",
+    "pedagogical_value": "故事强调了条件与过程的顺序关系，但未涉及种子吸水、利用贮藏营养等具体机制，教学价值局限于顺序逻辑。",
+    "novelty": "港口检疫站场景在寓言中较少见，但‘流程顺序不可颠倒’的冲突在管理类寓言中较常见。"
+  },
+  "revision_suggestions": [
+    "建议在中间流程中增加‘利用封存箱中的储备物资’等细节，以对应种子利用贮藏营养的机制。",
+    "可考虑在入口条件核对中区分‘环境条件’和‘自身条件’两个子步骤，使映射更精确。",
+    "避免使用‘环境条件’这一术语，可改为‘站台环境检查’等更隐喻的表达。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确表达了种子萌发需要先满足环境条件（入口条件核对），再经历过程（中间流程），最后得到结果（验收记录）的核心机制，没有出现目的论或个体努力代替进化原因的错误。",
+      "implicitness": "全文未出现‘种子萌发’、‘胚根’、‘胚芽’等任何禁用术语或概念别名，完全通过港口检疫流程隐喻。",
+      "mapping_clarity": "入口条件核对对应环境条件，中间流程对应萌发过程，验收记录对应幼苗形成，因果链清晰；但‘环境条件’和‘自身条件’在故事中未明确区分，映射略有模糊。",
+      "readability": "故事语言自然流畅，情节连贯，人物对话和动作描写生动，适合初中生阅读。",
+      "pedagogical_value": "读者能理解‘条件→过程→结果’的顺序不可颠倒，但故事未体现种子利用贮藏营养这一关键细节，教学深度稍显不足。",
+      "novelty": "港口检疫站作为隐喻场景比较新颖，避免了常见的‘种子发芽’或‘植物生长’模板，但‘流程顺序’的冲突设计略显常见。"
+    },
+    "evidence": {
+      "faithfulness": "故事中调度员跳过入口条件核对导致后续流程无法衔接，验收员指出‘方向不能颠倒’，与种子萌发必须先满足环境条件再启动过程的机制一致。",
+      "implicitness": "全文无‘种子’、‘萌发’、‘发芽’等词，仅用‘入口条件核对’、‘中间流程’、‘验收记录’等检疫术语。",
+      "mapping_clarity": "入口条件核对→环境条件，中间流程→萌发过程，验收记录→幼苗形成，顺序因果明确；但未区分‘环境条件’和‘自身条件’两个前置条件。",
+      "readability": "故事有完整起承转合，对话自然，无生僻词汇，段落长度适中。",
+      "pedagogical_value": "故事强调了条件与过程的顺序关系，但未涉及种子吸水、利用贮藏营养等具体机制，教学价值局限于顺序逻辑。",
+      "novelty": "港口检疫站场景在寓言中较少见，但‘流程顺序不可颠倒’的冲突在管理类寓言中较常见。"
+    },
+    "revision_suggestions": [
+      "建议在中间流程中增加‘利用封存箱中的储备物资’等细节，以对应种子利用贮藏营养的机制。",
+      "可考虑在入口条件核对中区分‘环境条件’和‘自身条件’两个子步骤，使映射更精确。",
+      "避免使用‘环境条件’这一术语，可改为‘站台环境检查’等更隐喻的表达。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "biology_7a_rjb_cpt101",
+    "target_concept": "种子萌发",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

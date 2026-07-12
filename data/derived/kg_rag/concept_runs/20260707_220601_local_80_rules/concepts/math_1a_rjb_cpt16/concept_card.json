@@ -1,0 +1,99 @@
+{
+  "concept_id": "math_1a_rjb_cpt16",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "圆柱",
+  "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+  "aliases": [
+    "圆柱体"
+  ],
+  "examples": [
+    "易拉罐",
+    "水杯",
+    "铅笔筒",
+    "储罐",
+    "柱子"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt18",
+        "label": "Concept",
+        "name": "按形状分类",
+        "definition": "根据物体或图形的外形特征进行分类的方法。"
+      },
+      {
+        "id": "math_bx2_rjb_cpt59",
+        "label": "Concept",
+        "name": "旋转体",
+        "definition": "一条平面曲线绕其所在平面内的一条定直线旋转所形成的曲面围成的几何体。"
+      },
+      {
+        "id": "math_6b_rjb_cpt15",
+        "label": "Concept",
+        "name": "圆锥",
+        "definition": "由一个圆形底面和一个侧面组成的立体图形，从顶点到底面圆心的距离为高。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe11",
+        "label": "Exercise",
+        "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch4",
+        "label": "Chapter",
+        "name": "认识图形（一）",
+        "definition": ""
+      },
+      {
+        "id": "math_6b_rjb_ch3",
+        "label": "Chapter",
+        "name": "圆柱与圆锥",
+        "definition": ""
+      },
+      {
+        "id": "math_bx2_rjb_ch8_s1",
+        "label": "Section",
+        "name": "第一节 基本立体图形",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。"
+  ],
+  "must_preserve_zh": [
+    "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "圆柱",
+    "圆柱体"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

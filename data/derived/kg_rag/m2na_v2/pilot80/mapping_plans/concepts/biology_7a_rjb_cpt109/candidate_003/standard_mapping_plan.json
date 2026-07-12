@@ -1,0 +1,98 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代一位铁匠铸造宝剑的故事",
+  "characters": [
+    "铁匠",
+    "学徒"
+  ],
+  "objects": [
+    "铁矿石",
+    "熔炉",
+    "铁锤",
+    "水槽",
+    "成品剑"
+  ],
+  "conflict": "铁匠需要判断一批铁矿石的纯度，以决定是否用于铸造优质宝剑，但学徒不知如何准确评估。",
+  "event_chain": [
+    "铁匠准备熔炉、铁锤、水槽等工具（对应n5条件）",
+    "铁匠将一定数量的铁矿石放入熔炉冶炼（对应n3过程）",
+    "铁匠每天观察熔炼出的铁块，记录能锻造出合格剑胚的数量（对应n3过程）",
+    "铁匠重复多次冶炼，取平均值（对应n3过程）",
+    "铁匠计算合格剑胚数占总矿石数的比例（对应n2规则）",
+    "铁匠根据比例判断矿石纯度，决定是否用于铸剑（对应n1定义）",
+    "铁匠将结果用于指导后续铸剑（对应n4结果）"
+  ],
+  "turning_point": "铁匠通过多次冶炼和计算，得出合格剑胚的比例，从而明确矿石纯度。",
+  "resolution_state": "铁匠掌握了矿石纯度，能够可靠地指导铸剑，避免浪费。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "矿石纯度（合格剑胚数占总矿石数的比例）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "合格剑胚数 / 总矿石数 × 100%",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "铁匠将矿石放入熔炉冶炼，每天观察并记录能锻造出合格剑胚的数量，重复多次",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铁匠根据计算出的纯度，决定是否用该批矿石铸剑",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "熔炉、铁锤、水槽、记录本等工具",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铁匠准备熔炉等工具，使得能够进行冶炼观察",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "冶炼观察过程产生了纯度计算结果",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "纯度计算结果验证了矿石纯度的定义",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "矿石纯度定义与计算公式相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保未使用'发芽率'等禁止术语",
+    "确保所有机制节点和边都已映射",
+    "确保边方向与原始机制一致",
+    "确保故事连贯，不出现无关隐喻"
+  ],
+  "mapping_context_sha256": "48dddd9f36a442734e10bd4ba8ffc416c9fbeb06a3c155b678e7d4ebb2835e58",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "14d3bc875b221b2285ff2f3c178d0a250ec1a6deb3ae1f75b956af640135052a"
+  }
+}

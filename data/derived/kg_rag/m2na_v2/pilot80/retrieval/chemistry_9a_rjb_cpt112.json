@@ -1,0 +1,171 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt112",
+    "label": "Concept",
+    "name": "二氧化锰的催化作用",
+    "properties": {
+      "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+      "importance": "掌握",
+      "examples": [
+        "在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃",
+        "在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+      ],
+      "retrieval_text": "二氧化锰的催化作用\nConcept\n二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。\n掌握\n在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃\n在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt110",
+      "label": "Concept",
+      "name": "催化剂",
+      "properties": {
+        "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+        "importance": "重要",
+        "aliases": [
+          "触媒",
+          "化学催化剂"
+        ],
+        "examples": [
+          "二氧化锰在过氧化氢分解反应中起催化剂作用",
+          "二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用",
+          "硫酸铜溶液对过氧化氢分解具有催化作用",
+          "酶在酿造工业和制药工业中的催化作用",
+          "催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。",
+          "MnO2在过氧化氢分解反应中的催化作用。",
+          "FeCl3溶液在过氧化氢分解反应中的催化作用。"
+        ],
+        "retrieval_text": "催化剂\nConcept\n一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。\n重要\n触媒\n化学催化剂\n二氧化锰在过氧化氢分解反应中起催化剂作用\n二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用\n硫酸铜溶液对过氧化氢分解具有催化作用\n酶在酿造工业和制药工业中的催化作用\n催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。\nMnO2在过氧化氢分解反应中的催化作用。\nFeCl3溶液在过氧化氢分解反应中的催化作用。"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_exp17",
+      "label": "Experiment",
+      "name": "过氧化氢分解实验中二氧化锰的作用",
+      "properties": {
+        "instrument": [
+          "试管",
+          "5 mL 5%过氧化氢溶液",
+          "二氧化锰固体",
+          "带火星的木条"
+        ],
+        "is_student": 1,
+        "process": "（1）在试管中加入5 mL 5%过氧化氢溶液，把带火星的木条伸入试管，观察现象。（2）向上述试管中加入少量二氧化锰，再把带火星的木条伸入试管观察现象。（3）待上述试管中没有现象发生时，重新加入过氧化氢溶液，并把带火星的木条伸入试管，观察现象。多次重复，并仔细观察反应前后的二氧化锰。",
+        "phenomena": "实验（1）中带火星的木条不能复燃，说明过氧化氢在常温下分解缓慢，放出的氧气很少；实验（2）中木条复燃，说明加入少量二氧化锰使过氧化氢分解加速，放出较多氧气；实验（3）重复多次后，二氧化锰质量和化学性质没有明显变化，似乎“永远用不完”。",
+        "conclusion": "二氧化锰能加速过氧化氢分解，而自身的质量和化学性质在反应前后没有变化，因此二氧化锰在该反应中起催化剂作用，体现了催化作用的特征。",
+        "retrieval_text": "过氧化氢分解实验中二氧化锰的作用\nExperiment"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_exp18",
+      "label": "Experiment",
+      "name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+      "properties": {
+        "instrument": [
+          "混有二氧化锰的氯酸钾固体",
+          "试管或耐热容器",
+          "加热装置",
+          "集气装置"
+        ],
+        "is_student": 0,
+        "process": "在实验室里，将混有二氧化锰的氯酸钾固体加热，使氯酸钾分解，生成氧气和氯化钾，二氧化锰在该反应中起催化剂作用。",
+        "phenomena": "加热后有气体产生，可收集到氧气，同时生成固体氯化钾；二氧化锰在反应前后质量和性质基本不变。",
+        "conclusion": "加热混有二氧化锰的氯酸钾固体可以制取氧气，二氧化锰在该反应中是催化剂。",
+        "retrieval_text": "加热混有二氧化锰的氯酸钾固体制取氧气\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15000",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:11283",
+      "source": "chemistry_9a_rjb_cpt112",
+      "source_name": "二氧化锰的催化作用",
+      "target": "chemistry_9a_rjb_cpt110",
+      "target_name": "催化剂",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22575",
+      "source": "chemistry_9a_rjb_exp17",
+      "source_name": "过氧化氢分解实验中二氧化锰的作用",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22577",
+      "source": "chemistry_9a_rjb_exp18",
+      "source_name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "二氧化锰的催化作用",
+      "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:15000] 催化剂 --prerequisites_for--> 二氧化锰的催化作用"
+    ],
+    "process_summary": [
+      "[normalized:edge:11283] 二氧化锰的催化作用 --is_a--> 催化剂",
+      "[normalized:edge:22575] 过氧化氢分解实验中二氧化锰的作用 --verifies--> 二氧化锰的催化作用",
+      "[normalized:edge:22577] 加热混有二氧化锰的氯酸钾固体制取氧气 --verifies--> 二氧化锰的催化作用"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 4,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 4,
+    "expanded_to_two_hop": false
+  }
+}

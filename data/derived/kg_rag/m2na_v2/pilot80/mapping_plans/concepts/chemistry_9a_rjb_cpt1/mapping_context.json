@@ -1,0 +1,114 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt1",
+    "subject": "chemistry",
+    "canonical_name": "物质",
+    "aliases": [],
+    "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+    "concept_type": "entity",
+    "forbidden_terms": [
+      "物质"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "物质：构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt1:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "物质的变化：物质在一定条件下发生的状态、形态或本质的改变，包括物理变化和化学变化。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt2:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14991"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "物质"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt1",
+      "name": "物质",
+      "label": "Concept",
+      "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt2",
+        "name": "物质的变化"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:14991",
+        "source_id": "chemistry_9a_rjb_cpt1",
+        "source_name": "物质",
+        "target_id": "chemistry_9a_rjb_cpt2",
+        "target_name": "物质的变化",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt2",
+        "neighbor_name": "物质的变化",
+        "score": 1.35,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "物质",
+      "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:14991] 物质 --prerequisites_for--> 物质的变化"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:14991"
+  ],
+  "provenance": {
+    "seed_sha256": "60c3fdb1899835c9b00651ae2b370d31ad57def5d1916dab00c409c923d27e7e",
+    "retrieval_sha256": "12400c3c87f1b6b5deea3852cdbf5c2daf0718cc7c280ff35ba2842224119790",
+    "mechanism_record_sha256": "fe9f539dea4f6579448dbcc844c1f6891481846678e4cc095b84bd833ebb5c6a"
+  }
+}

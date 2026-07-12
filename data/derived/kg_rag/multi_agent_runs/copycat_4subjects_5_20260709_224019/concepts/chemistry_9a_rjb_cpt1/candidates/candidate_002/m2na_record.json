@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "物质",
+    "aliases": [],
+    "forbidden_terms": [
+      "物质"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14991",
+        "source_name": "物质",
+        "target_name": "物质的变化",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "铸造工坊里，记录员翻开分段记录册的第一页，上面写着：“所有入库前的原始材料，必须先在入口处挂上通行牌。”调度员看了一眼，觉得这道手续太啰嗦，便说：“我们先把材料送进熔炉，等铸好了再回来补挂牌子，不是一样吗？”\n\n验收员摇头，指着记录册上的登记规则说：“规则上写得明白，挂牌是第一步，没有这一步，后面的流程不能开始。你想跳过，可记录册里每一页都有编号，中间缺了一页，整本册子就对不上了。”\n\n调度员不信，趁记录员不注意，悄悄把一捆没有挂牌的铜料送进了熔炉。熔炉烧得通红，铜料化成了铜水，浇进模具里，铸出了亮闪闪的铜锭。调度员得意地把铜锭搬到验收台上，说：“你看，不是也能做成吗？”\n\n验收员拿起分段记录册，翻到中间，发现缺了入口挂牌的记录。他又翻到封存箱里保存的旧册，对照一看，说：“这炉铜料的来源没登记，按规则，这批铜锭不能算合格品。你要么把整个流程倒回去重新走一遍，要么就承认这次尝试失败了。”\n\n调度员愣住了。他这才明白，铸造工坊里的入口条件核对——确认原始材料的来源和状态——是整条链的根基。没有那个根基，第二道转化环节就算烧得再旺，也接不上结果验收记录里的守恒关系。\n\n记录员把铜锭放回熔炉边，重新从挂牌开始，一步一步走完。当最后一批铜锭通过验收时，封存箱里的分段记录册终于每一页都能互相承接。调度员叹了口气，说：“原来顺序不能颠倒，缺了前置条件，后面的一切都是空的。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件核对",
+        "narrative_anchor": "入口条件核对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "第二道转化环节",
+        "narrative_anchor": "第二道转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先确认入口条件核对，再推动第2道转化环节",
+        "evidence": "”调度员看了一眼，觉得这道手续太啰嗦，便说：“我们先把材料送进熔炉，等铸好了再回",
+        "narrative_anchor": "”调度员看了一眼，觉得这道手续太啰嗦，便说：“我们先把材料送进熔炉，等铸好了再回",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

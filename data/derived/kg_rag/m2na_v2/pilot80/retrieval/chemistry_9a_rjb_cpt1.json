@@ -1,0 +1,91 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt1",
+    "label": "Concept",
+    "name": "物质",
+    "properties": {
+      "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+      "importance": "重要",
+      "examples": [
+        "水",
+        "钢铁制品",
+        "煤",
+        "木材",
+        "胆矾",
+        "石灰石",
+        "氧气",
+        "二氧化碳"
+      ],
+      "retrieval_text": "物质\nConcept\n构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。\n重要\n水\n钢铁制品\n煤\n木材\n胆矾\n石灰石\n氧气\n二氧化碳"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt2",
+      "label": "Concept",
+      "name": "物质的变化",
+      "properties": {
+        "definition": "物质在一定条件下发生的状态、形态或本质的改变，包括物理变化和化学变化。",
+        "importance": "重要",
+        "examples": [
+          "水变成水蒸气或冰",
+          "钢铁生锈",
+          "煤、木材燃烧",
+          "石蜡熔化和燃烧"
+        ],
+        "retrieval_text": "物质的变化\nConcept\n物质在一定条件下发生的状态、形态或本质的改变，包括物理变化和化学变化。\n重要\n水变成水蒸气或冰\n钢铁生锈\n煤、木材燃烧\n石蜡熔化和燃烧"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14991",
+      "source": "chemistry_9a_rjb_cpt1",
+      "source_name": "物质",
+      "target": "chemistry_9a_rjb_cpt2",
+      "target_name": "物质的变化",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "物质",
+      "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:14991] 物质 --prerequisites_for--> 物质的变化"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

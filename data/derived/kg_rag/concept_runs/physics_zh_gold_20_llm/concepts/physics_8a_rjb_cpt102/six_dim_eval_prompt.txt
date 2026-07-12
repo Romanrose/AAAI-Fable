@@ -1,0 +1,210 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "实像",
+  "concept_id": "physics_8a_rjb_cpt102",
+  "concept_definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt102",
+    "实像"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt102",
+      "label": "Concept",
+      "name": "实像",
+      "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "实像\n光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt103",
+          "label": "Concept",
+          "name": "照相机成像",
+          "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt104",
+          "label": "Concept",
+          "name": "投影仪成像",
+          "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt82",
+          "label": "Concept",
+          "name": "虚像",
+          "definition": "光线通过透镜后并未真正会聚，人眼倒推光线形成的像，不能被光屏承接，物体与像在透镜同侧。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "physics_8a_rjb_exp25",
+          "label": "Experiment",
+          "name": "自制模型照相机实验",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_exp26",
+          "label": "Experiment",
+          "name": "投影仪演示实验",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s2",
+          "label": "Section",
+          "name": "第二节 生活中的透镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt102",
+    "concept_id": "physics_8a_rjb_cpt102",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt102",
+      "label": "Concept",
+      "name": "实像",
+      "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "实像"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念（实像）",
+      "story_evidence": "白色木板上出现的倒立‘12’字迹，是光线穿过玻璃板后真正汇聚形成的，可以被木板承接。"
+    },
+    {
+      "concept_role": "核心机制（光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧）",
+      "story_evidence": "木牌（物体）和木板（光屏）分居玻璃板（凸透镜）两侧；木牌移到一定距离时，木板上出现清晰倒立字迹；木牌靠近时字迹消失；木牌越远字迹越小，越近字迹越大。"
+    },
+    {
+      "concept_role": "学科约束（保留变量之间的关系、避免主观意志、保留方向大小条件变化）",
+      "story_evidence": "字迹的清晰度、大小、倒立方向由木牌与玻璃板的距离决定，而非小杰的主观意愿；字迹始终倒立，大小随距离变化。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼里的秘密\n\n小镇中心有一座古老的钟楼，每到整点，钟声就会响起。小杰是钟楼的守护员，他的任务是每天检查钟楼里的齿轮和绳索，确保钟声准时。\n\n一天，小杰发现钟楼里多了一面巨大的透明玻璃板，立在钟楼中央。玻璃板旁边放着一块白色木板。老管理员告诉他：“这是新装的‘光镜’，你要用它来观察钟楼的秘密。”\n\n小杰好奇地站在玻璃板的一侧，把一块刻有“12”字样的木牌放在玻璃板另一侧。他透过玻璃板看过去，木牌上的“12”字迹清晰可见，但方向是反的，而且和木牌在同一侧。小杰想：“这没什么特别的，就是一面普通玻璃。”\n\n老管理员摇摇头：“你试试把木牌靠近玻璃板，再慢慢移远。”\n\n小杰照做。当木牌离玻璃板很近时，他看到的字迹模糊不清。但当木牌移到某个距离时，奇迹发生了——白色木板上出现了一个清晰的倒立“12”字迹！小杰伸手去摸，木板表面光滑，字迹却像印在上面一样真实。他试着移动木牌，木板上的字迹也跟着移动，但始终是倒立的。\n\n“这是怎么回事？”小杰问。\n\n老管理员说：“你看到的那个倒立字迹，是光线穿过玻璃板后真正汇聚在一起形成的。它虽然倒立，但可以被木板接住。记住，只有当木牌离玻璃板足够远时，这个倒立字迹才会出现；如果木牌太近，它就消失不见。”\n\n小杰恍然大悟。他继续实验，发现木牌和木板必须分居玻璃板两侧，而且木牌离玻璃板越远，木板上的字迹越小；越近，字迹越大，但始终是倒立的。\n\n从此，小杰不再被表面现象迷惑。他知道，有些东西虽然看起来和实物相反，却是真实存在的，只要找到合适的位置，就能清晰地看见它。",
+  "rule_findings": {
+    "story_token_count": 549,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

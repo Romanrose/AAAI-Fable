@@ -1,0 +1,81 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "印章阴干和吸收印油的过程",
+      "evidence": "印油正慢慢往石纹里钻",
+      "narrative_anchor": "印油正慢慢往石纹里钻",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "小章必须先理解刻好印章这个基础动作",
+      "evidence": "刻好了",
+      "narrative_anchor": "刻好了",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "印章吸收印油的过程类似于呼吸",
+      "evidence": "印油正慢慢往石纹里钻",
+      "narrative_anchor": "印油正慢慢往石纹里钻",
+      "confidence": 0.8
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "印章蘸印泥盖印与阴干吸收印油是同一类动作的不同速度表现",
+      "evidence": "印章往印泥盒里一按",
+      "narrative_anchor": "印章往印泥盒里一按",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "用火烤印章会破坏石质和印油",
+      "evidence": "用火烤它",
+      "narrative_anchor": "用火烤它",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "小章发现印章阴干后印油渗入石纹，理解了需要先刻好印章",
+      "evidence": "印油正慢慢往石纹里钻",
+      "narrative_anchor": "印油正慢慢往石纹里钻",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "小章理解了刻好印章后，印章吸收印油的过程类似于呼吸",
+      "evidence": "印油正慢慢往石纹里钻",
+      "narrative_anchor": "印油正慢慢往石纹里钻",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "印章吸收印油（缓慢氧化）与蘸印泥盖印（氧化反应）是同一类动作的不同速度表现",
+      "evidence": "印章往印泥盒里一按",
+      "narrative_anchor": "印章往印泥盒里一按",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "用火烤印章（燃烧）会破坏石质和印油，而阴干（缓慢氧化）才能得到清晰印迹",
+      "evidence": "用火烤它",
+      "narrative_anchor": "用火烤它",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

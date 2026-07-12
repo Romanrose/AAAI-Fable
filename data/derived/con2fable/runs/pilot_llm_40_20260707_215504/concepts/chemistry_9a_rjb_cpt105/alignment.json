@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "紫晶石受热分解为黑色粉末、亮紫晶与助燃之气",
+      "evidence": "紫晶石受热，分解为黑色粉末、亮紫晶与助燃之气",
+      "narrative_anchor": "紫晶石受热，分解为黑色粉末、亮紫晶与助燃之气"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "丹青子将这一发现与之前所知的“一物化三物”的分解法则相互印证",
+      "evidence": "一物化三物",
+      "narrative_anchor": "一物化三物"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "紫晶石受热分解的过程体现了分解反应的上下位关系",
+      "evidence": "紫晶石受热，分解为黑色粉末、亮紫晶与助燃之气",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "紫晶石受热，分解为黑色粉末、亮紫晶与助燃之气"
+    }
+  ]
+}

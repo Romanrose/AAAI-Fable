@@ -1,0 +1,129 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠制作铜镜",
+  "characters": [
+    "老铜匠",
+    "学徒"
+  ],
+  "objects": [
+    "铜镜坯",
+    "磨石",
+    "铜镜",
+    "望远镜",
+    "显微镜"
+  ],
+  "conflict": "学徒不明白为什么同一块铜镜坯，打磨的弧度不同，照出的影像大小、正倒、虚实会不同。",
+  "event_chain": [
+    "老铜匠告诉学徒，铜镜的焦距（即镜面的弯曲程度）是固定的，由打磨决定。",
+    "学徒将铜镜坯放在不同距离（物距）处观察，发现影像大小和正倒变化。",
+    "学徒测量影像到镜面的距离（像距），发现其随物距变化。",
+    "老铜匠总结出规律：物距、焦距、像距三者关系决定影像的虚实、大小、正倒。",
+    "学徒用此规律制作了物镜（用于望远镜的镜片）和目镜（用于显微镜的镜片）。",
+    "物镜和目镜都遵循同一成像规律。",
+    "利用物镜和目镜的组合，制成了望远镜（可看远物）。",
+    "利用物镜和目镜的组合，制成了显微镜（可看微物）。"
+  ],
+  "turning_point": "老铜匠揭示物距、焦距、像距三者关系决定成像的规律。",
+  "resolution_state": "学徒掌握了成像规律，成功制作出望远镜和显微镜。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜镜的焦距（由打磨弧度决定）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "铜镜坯到铜镜的距离（物距）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "影像到铜镜的距离（像距）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铜镜成像规律（物距、焦距、像距关系决定影像）",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "物镜（用于望远镜的镜片）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "目镜（用于显微镜的镜片）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "望远镜",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "显微镜",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "焦距是成像规律成立的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "物距是成像规律成立的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "像距是成像规律成立的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "物镜是成像规律的一种应用实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "目镜是成像规律的一种应用实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "成像规律使望远镜得以制成",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "成像规律使显微镜得以制成",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未出现任何禁止术语。",
+    "所有机制节点和边均已映射，方向保持。",
+    "未将课程桥接上下文（如实验）作为因果机制。",
+    "使用单一源域（铜镜制作），无无关隐喻。"
+  ],
+  "mapping_context_sha256": "3fc12b67fa9dbffe59094dc8672238cad508f735131197f54d147b63165d2160",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f7d4fead8d75edc6012406bcde0ff31bae4d953095213154f4226bca509bea9c"
+  }
+}

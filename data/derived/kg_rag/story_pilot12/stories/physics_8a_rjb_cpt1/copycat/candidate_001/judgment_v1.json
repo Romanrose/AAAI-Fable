@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 2,
+    "mapping_clarity": 3,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Edge e1 (is_a) requires that n2 (长度单位) be a superordinate category of n1 (长度). In the story, n2 is mapped to '第二环节的转化数字正好是前者的两倍', which is a specific numerical relation, not a categorical hierarchy. The story's analogy to '米' as a common rule is closer to a 'enables' or 'relates_to' relation, not 'is_a'. This weakens the mapping clarity and faithfulness for e1. In contrast, n1 is clearly mapped to '先核对入口条件', which directly corresponds to the mechanism node '长度' as a prerequisite condition."
+  },
+  "revision_instructions": [
+    "Remove the forbidden term '长度' from the story (found in the analogy '就像长度单位里的“米”'). Replace with a non-technical analogy, e.g., '就像水渠调度站里的基准水位'.",
+    "Revise the mapping for edge e1 (is_a) to reflect a categorical relationship. For example, have the story explicitly state that '入口条件核对' is a specific instance of the broader rule '所有环节的登记都得先看入口条件是否成立', rather than using a numerical transformation.",
+    "Ensure that the story's event chain for n2 and n3 (the two transformation steps) preserves the 'verifies' and 'enables' relations more precisely. Currently, the numerical doubling/halving is a sequential causal relation, not a verification or enabling relation."
+  ],
+  "final_status": "revise"
+}

@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt118",
+  "target_concept": "化学学习中的分类思想",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整映射了目标概念：主角从混乱到按标准分类，体现了分类思想的核心。学科约束（守恒、区分物理混合）也得到遵守。",
+    "implicitness": "目标概念名称和定义均未在故事正文中出现，完全通过情节隐含表达，符合要求。",
+    "mapping_clarity": "分类标准（店铺类型、时间顺序）和分类过程（账本分色、仓库类比）清晰对应概念机制，读者能自然理解。",
+    "readability": "语言流畅，情节连贯，比喻易懂（盐糖混合、仓库存放），适合目标读者。",
+    "pedagogical_value": "通过对比（混乱vs有序）、引导（林先生示范）、应用（新商人案例）层层递进，有效传递分类思想的价值和方法。",
+    "novelty": "账房记账的类比虽常见，但结合仓库性质对比（铁器vs瓷器）增加了深度，有一定新颖性。"
+  },
+  "revision_suggestions": [
+    "可考虑在结尾增加一个简短反思，强化分类思想在化学学习中的迁移。",
+    "标题可更隐晦，避免与化学直接关联。"
+  ],
+  "rule_findings": {
+    "story_token_count": 673,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整映射了目标概念：主角从混乱到按标准分类，体现了分类思想的核心。学科约束（守恒、区分物理混合）也得到遵守。",
+      "implicitness": "目标概念名称和定义均未在故事正文中出现，完全通过情节隐含表达，符合要求。",
+      "mapping_clarity": "分类标准（店铺类型、时间顺序）和分类过程（账本分色、仓库类比）清晰对应概念机制，读者能自然理解。",
+      "readability": "语言流畅，情节连贯，比喻易懂（盐糖混合、仓库存放），适合目标读者。",
+      "pedagogical_value": "通过对比（混乱vs有序）、引导（林先生示范）、应用（新商人案例）层层递进，有效传递分类思想的价值和方法。",
+      "novelty": "账房记账的类比虽常见，但结合仓库性质对比（铁器vs瓷器）增加了深度，有一定新颖性。"
+    },
+    "revision_suggestions": [
+      "可考虑在结尾增加一个简短反思，强化分类思想在化学学习中的迁移。",
+      "标题可更隐晦，避免与化学直接关联。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,5 @@
+﻿concept_id,target_concept,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,template_like
+biology_7a_rjb_cpt1,生物,3,5,4,4,3,4,3.7,revise,False,False,False
+biology_7a_rjb_cpt10,遗传和变异,3,5,4,4,3,4,3.7,revise,False,False,False
+chemistry_9a_rjb_cpt1,物质,3,5,4,4,3,4,3.7,revise,False,False,False
+chemistry_9a_rjb_cpt10,沸点,3,5,4,4,3,4,3.7,revise,False,False,False

@@ -1,0 +1,60 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt13",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个空碗的故事",
+  "characters": [
+    "小明",
+    "空碗"
+  ],
+  "objects": [
+    "空碗",
+    "米饭"
+  ],
+  "conflict": "小明想知道空碗里到底有没有米饭，但空碗里什么都没有。",
+  "event_chain": [
+    "小明有一个碗，碗里没有米饭。",
+    "小明问妈妈碗里有什么，妈妈说碗里是空的。",
+    "小明明白了空碗表示没有米饭。"
+  ],
+  "turning_point": "妈妈告诉小明空碗里没有米饭。",
+  "resolution_state": "小明理解了空碗代表没有米饭。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "空碗",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "没有米饭",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空碗表示没有米饭",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数字0的含义'或相关术语。",
+    "空碗与数字0的类比需明确表示'没有'的概念。",
+    "故事需保持连贯，避免引入无关元素。"
+  ],
+  "mapping_context_sha256": "4eac782ac1548f0012a15694a9cb043b6c83fc2b4c4ca1f237798d02310e1a41",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ca9ba41d30ab78393ba8586ee46c7962ba2b678921f9a8f779e6ba7e7a1649ac"
+  }
+}

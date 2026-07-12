@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：分解反应",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m3",
+      "text": "需要保留上下位关系：实验室制取氧气的方法",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_11281"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_11280"
+    }
+  ]
+}

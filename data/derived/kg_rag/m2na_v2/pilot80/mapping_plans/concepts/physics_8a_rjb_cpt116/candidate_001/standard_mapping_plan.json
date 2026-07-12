@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个关于农田灌溉的寓言",
+  "characters": [
+    "老农夫",
+    "小水渠"
+  ],
+  "objects": [
+    "主水渠",
+    "分水渠",
+    "水闸",
+    "田地"
+  ],
+  "conflict": "主水渠过于粗大或地势过高，导致水流无法顺畅到达远处的田地，庄稼因缺水而枯萎。",
+  "event_chain": [
+    "主水渠过于粗大或地势过高（n1）",
+    "导致远处田地得不到充足的水流（n2）",
+    "老农夫修建分水渠并调节水闸（n3）",
+    "分水渠的调节与水闸的开口大小有关（n4）"
+  ],
+  "turning_point": "老农夫决定修建分水渠并调节水闸，以改善水流分布。",
+  "resolution_state": "分水渠成功将水流引导至远处田地，庄稼得到灌溉，恢复生机。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "主水渠过于粗大或地势过高",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "远处田地得不到充足的水流",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农夫修建分水渠并调节水闸",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "分水渠的调节与水闸的开口大小有关",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "导致",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "改善",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "关联于",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'近视眼'、'矫正'、'凹透镜'等禁止术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如透镜焦度公式）作为因果机制。",
+    "保持单一连贯的源域（农田灌溉），不混用其他隐喻。"
+  ],
+  "mapping_context_sha256": "dc55808e887494b790752e23596aafc76ab2f0d5e1b6cdf4ac33e7f13135086c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "86a578f4c6e1f306306f560fe8e8ccc4896db553cab7541304c07c1b7274ee4e"
+  }
+}

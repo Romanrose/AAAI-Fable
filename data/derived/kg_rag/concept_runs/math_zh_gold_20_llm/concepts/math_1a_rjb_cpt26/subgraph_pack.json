@@ -1,0 +1,46 @@
+{
+  "query": "math_1a_rjb_cpt26",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt26",
+    "label": "Concept",
+    "name": "7的加减法",
+    "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "7的加减法\n掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt24",
+        "label": "Concept",
+        "name": "数字7的认识",
+        "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+      },
+      {
+        "id": "math_1a_rjb_cpt28",
+        "label": "Concept",
+        "name": "分与合（拆分与组合）",
+        "definition": "把一个数分成两个部分或由两个部分合成一个数，如“7可以分成1和6、2和5、3和4”。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5_s1",
+        "label": "Section",
+        "name": "6和7",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

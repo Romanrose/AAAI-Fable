@@ -1,0 +1,3 @@
+﻿group,records,direction_preservation,edge_mapping_coverage,node_mapping_coverage,valid_rate,approved_rate,plan_valid_rate
+copycat,240,1.0,1.0,1.0,0.0,0.0,1.0
+standard,240,1.0,0.9948,0.9958,0.0,0.0,0.9917

@@ -1,0 +1,104 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt103",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代农夫种麦",
+  "characters": [
+    "农夫",
+    "麦种"
+  ],
+  "objects": [
+    "春日的暖阳",
+    "寒冬的冰雪"
+  ],
+  "conflict": "麦种需要温暖的阳光才能发芽生长，但寒冬的冰雪却会冻僵它，阻止它发芽。",
+  "event_chain": [
+    "春日的暖阳照耀着田地",
+    "暖阳是麦种发芽所需的好条件",
+    "暖阳使麦种开始萌动生长",
+    "麦种最终破土而出",
+    "寒冬的冰雪降临",
+    "冰雪冻僵了麦种，抑制了它的萌发"
+  ],
+  "turning_point": "寒冬冰雪的到来使麦种从萌动转为被抑制。",
+  "resolution_state": "麦种在暖阳下成功发芽，但若遭遇冰雪则无法萌发。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "春日的暖阳",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "麦种发芽所需的好条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "麦种开始萌动生长",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "麦种破土而出",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "寒冬的冰雪",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "冻僵麦种，抑制萌发",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "暖阳是麦种发芽所需的好条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "暖阳使麦种开始萌动生长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "萌动生长最终使麦种破土而出",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "冰雪抑制了麦种的萌动生长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "冰雪导致麦种被冻僵，抑制萌发",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'适宜的温度'等禁止术语。",
+    "确保所有机制节点和边都被映射。",
+    "确保故事载体来自单一源域（古代农夫种麦），不混用其他隐喻。",
+    "确保不将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "d5bee00added8c20555821087cc054e4a316990ebe9e6379bdaeac3309e37691",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d6f3e34f1fcbbc91121f5dfa2b9e64aa06fcec642e1241f5302dc7494098471c"
+  }
+}

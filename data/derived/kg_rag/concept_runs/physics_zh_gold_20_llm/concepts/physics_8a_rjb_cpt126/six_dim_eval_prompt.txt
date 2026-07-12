@@ -1,0 +1,211 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "质量守恒",
+  "concept_id": "physics_8a_rjb_cpt126",
+  "concept_definition": "物体的质量不随形状、物态和位置改变而改变。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt126",
+    "质量守恒"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt126",
+      "label": "Concept",
+      "name": "质量守恒",
+      "definition": "物体的质量不随形状、物态和位置改变而改变。",
+      "aliases": [],
+      "examples": [
+        "冰熔化成水质量不变",
+        "铁块压成铁片质量不变"
+      ],
+      "retrieval_text": "质量守恒\n物体的质量不随形状、物态和位置改变而改变。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt124",
+          "label": "Concept",
+          "name": "质量",
+          "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "physics_8a_rjb_exp30",
+          "label": "Experiment",
+          "name": "形状变化前后物体质量的比较实验",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_exp31",
+          "label": "Experiment",
+          "name": "溶解前后质量比较实验",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "physics_8a_rjb_exe14",
+          "label": "Exercise",
+          "name": "一块质量为100 g的冰熔化成水后，质量（ ）。A.仍是100 g B.大于100 g C.小于100 g",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch6_s1",
+          "label": "Section",
+          "name": "第一节 质量",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt126",
+    "concept_id": "physics_8a_rjb_cpt126",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt126",
+      "label": "Concept",
+      "name": "质量守恒",
+      "definition": "物体的质量不随形状、物态和位置改变而改变。",
+      "aliases": [],
+      "examples": [
+        "冰熔化成水质量不变",
+        "铁块压成铁片质量不变"
+      ]
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：物体的质量不随形状、物态和位置改变而改变。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "质量守恒"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "物体的质量不随形状、物态和位置改变而改变。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "铁块经历生锈、锤打成铁片、浸入河水等变化，但重量始终不变，体现了物体的质量不随形状、物态和位置改变而改变的核心规则。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "铁块被水溅湿生锈、被锤打成铁片、被放入河中，这些事件分别对应物态、形状和位置的变化，但每次称重结果都相同，直接演示了质量守恒的机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事通过小周的观察和称重实验，保留了变量（形状、物态、位置）与结果（重量不变）之间的关系；铁块的变化是自然发生的，并非角色主观意志决定；事件按顺序展开，方向明确。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼的秘密\n\n小镇中心有一座古老的钟楼，每天清晨六点，钟声准时响起。负责敲钟的老陈有个习惯：每次敲钟前，他都会把一块拳头大的铁块放在钟楼入口的石台上，敲完钟再取走。\n\n新来的学徒小周觉得奇怪，问：“陈师傅，您为什么每次都要搬这块铁？”\n\n老陈笑了笑：“这是规矩，你慢慢就会明白。”\n\n有一天，老陈让小周去敲钟。小周走到石台前，发现铁块还在，便学着老陈的样子，把铁块搬到石台上。可当他去拿钟锤时，不小心碰倒了旁边的一桶水。水洒了一地，铁块也被溅湿了。\n\n小周赶紧擦干铁块，却发现铁块表面有些锈迹。他心想：铁生锈了，是不是变轻了？于是他把铁块放到天平上称了称，发现还是和原来一样重。\n\n又过了几天，老陈让小周把铁块拿到铁匠铺打成铁片。铁匠把铁块烧红，锤打成薄薄的铁片。小周拿着铁片回来，心想：形状变了，重量会不会变？他又称了称，结果还是一样重。\n\n小周越来越好奇。有一天，他趁老陈不在，偷偷把铁块拿到河边，想看看它会不会浮起来。铁块沉入水底，小周费了好大劲才捞上来。他再次称重，发现重量依然没变。\n\n这时，老陈回来了。他看见浑身湿透的小周，笑着说：“你终于明白了吧？这块铁，不管它是什么形状，是干是湿，是放在钟楼还是河里，它的分量从来不会改变。这就是钟楼的秘密——有些东西，表面看会变，但本质永远不变。”\n\n小周恍然大悟。从此，他每次敲钟前，都会认真地把铁块放在石台上，再也不会怀疑它的重量了。",
+  "rule_findings": {
+    "story_token_count": 503,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

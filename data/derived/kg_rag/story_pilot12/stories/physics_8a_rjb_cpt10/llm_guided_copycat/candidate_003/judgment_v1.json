@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story excellently demonstrates the relativity of motion/rest (n3) through the same exam paper receiving opposite judgments from different examiners. Node n2 (mechanical motion as mental/writing process) is mapped but less explicitly tied to the physical concept of position change over time. Edge e2 (reference object enables relativity) is implied but not directly stated as a causal enablement; the story shows the reference object (standard answer) being used for judgment, but the enabling relation is more implicit than explicit."
+  },
+  "revision_instructions": [
+    "To strengthen edge e2, consider adding a sentence explicitly stating that the standard answer (reference object) enables the judgment of the exam paper's quality (relativity). For example: '正是因为有这个标准答案作为参照，考官才能判断考卷的优劣。'",
+    "For node n2, you could add a brief phrase linking the writing process to the concept of mechanical motion, e.g., '考生的思维和书写过程，如同物体的位置随时间变化，是一种机械运动。'"
+  ],
+  "final_status": "accept"
+}

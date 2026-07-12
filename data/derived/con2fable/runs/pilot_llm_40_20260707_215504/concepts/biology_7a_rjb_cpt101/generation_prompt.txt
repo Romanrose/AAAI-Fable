@@ -1,0 +1,185 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "种子萌发"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：种子萌发的环境条件",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：种子萌发的自身条件",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要保留上下位关系：种子萌发的环境条件",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：种子萌发的自身条件",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14133"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14134"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10772"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10776"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "建筑工地",
+    "setting": "一座大型建筑工地上，堆放着许多袋水泥和沙石，旁边有一台搅拌机和几根钢筋。",
+    "conflict": "一袋新到的水泥（代表种子）需要合适的环境和自身条件才能变成坚固的混凝土，但工地上的工人（代表环境因素）和水泥自身的状态（代表自身条件）之间存在配合问题。",
+    "characters": [
+      {
+        "name": "水泥袋",
+        "role": "代表种子，需要经历吸水、混合、凝固的过程",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "水管",
+        "role": "代表环境条件，提供水分",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "搅拌机",
+        "role": "代表自身条件，确保水泥与沙石均匀混合",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "沙石堆",
+        "role": "代表环境条件中的支撑材料",
+        "mapped_element": "m4"
+      },
+      {
+        "name": "钢筋",
+        "role": "代表自身条件中的结构骨架",
+        "mapped_element": "m5"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "水泥袋从干燥粉末变成坚固混凝土的过程"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "水管按时供水，提供水分"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "搅拌机正常运转，使水泥与沙石混合"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "沙石堆提供骨料，增强混凝土强度"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "钢筋提供内部支撑，防止开裂"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "水泥袋被运到工地，等待使用",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "水管打开，向水泥袋喷水，水泥开始吸水变湿",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "搅拌机启动，将湿水泥与沙石混合均匀",
+        "mapped_elements": [
+          "m1",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "沙石堆被铲入搅拌机，提供骨料",
+        "mapped_elements": [
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "钢筋被放入模具中，作为骨架",
+        "mapped_elements": [
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b6",
+        "event": "混合好的混凝土倒入模具，逐渐凝固成坚固的柱子",
+        "mapped_elements": [
+          "m1"
+        ]
+      }
+    ],
+    "turning_point": "当水管突然停水时，水泥无法充分吸水，搅拌机也因缺水而空转，但工人及时修复了水管，水重新供应，水泥继续完成转化。",
+    "ending": "最终，水泥与沙石、钢筋结合，凝固成一根坚固的混凝土柱，支撑起整栋建筑。",
+    "implied_moral": "一个事物要完成转变，既需要外部条件的配合，也需要自身结构的完善，缺一不可。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

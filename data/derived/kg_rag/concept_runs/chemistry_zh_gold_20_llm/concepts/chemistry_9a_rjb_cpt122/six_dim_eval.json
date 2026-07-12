@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt122",
+  "target_concept": "氧气的实验室制取",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整映射了实验室制取氧气的核心步骤：加热紫色石头（高锰酸钾）产生气体、使用陶罐和竹管（气体发生装置）、排水法收集气体、先移导管再熄火（防止倒吸），与概念定义高度一致。",
+    "implicitness": "目标概念名称和所有禁止术语均未在故事正文中出现，完全通过隐喻（紫色石头、陶罐、竹管、倒扣瓶子）隐含表达，符合隐含性要求。",
+    "mapping_clarity": "每个关键步骤都有清晰的故事对应：加热对应加热装置，气泡对应氧气，排水法收集对应倒扣瓶子排水，先移导管再熄火对应防止倒吸，映射关系明确且易于识别。",
+    "readability": "故事语言流畅自然，情节连贯，用词通俗易懂，无生硬术语，适合目标读者阅读。",
+    "pedagogical_value": "故事通过阿明的错误和纠正，生动展示了制取氧气的正确操作顺序和注意事项（如防止倒吸），有助于学习者理解实验安全与原理。",
+    "novelty": "故事采用账房宝库的奇幻背景，将化学实验转化为寻宝过程，有一定新意，但整体结构仍属常见的故事化教学范式。"
+  },
+  "revision_suggestions": [
+    "可增加更多细节，如阿明检查陶罐是否漏气（对应装置气密性检查），以丰富教学价值。",
+    "可让阿明在失败后尝试不同方法（如用不同石头或不同加热方式），以增强新颖性和探索性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 627,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整映射了实验室制取氧气的核心步骤：加热紫色石头（高锰酸钾）产生气体、使用陶罐和竹管（气体发生装置）、排水法收集气体、先移导管再熄火（防止倒吸），与概念定义高度一致。",
+      "implicitness": "目标概念名称和所有禁止术语均未在故事正文中出现，完全通过隐喻（紫色石头、陶罐、竹管、倒扣瓶子）隐含表达，符合隐含性要求。",
+      "mapping_clarity": "每个关键步骤都有清晰的故事对应：加热对应加热装置，气泡对应氧气，排水法收集对应倒扣瓶子排水，先移导管再熄火对应防止倒吸，映射关系明确且易于识别。",
+      "readability": "故事语言流畅自然，情节连贯，用词通俗易懂，无生硬术语，适合目标读者阅读。",
+      "pedagogical_value": "故事通过阿明的错误和纠正，生动展示了制取氧气的正确操作顺序和注意事项（如防止倒吸），有助于学习者理解实验安全与原理。",
+      "novelty": "故事采用账房宝库的奇幻背景，将化学实验转化为寻宝过程，有一定新意，但整体结构仍属常见的故事化教学范式。"
+    },
+    "revision_suggestions": [
+      "可增加更多细节，如阿明检查陶罐是否漏气（对应装置气密性检查），以丰富教学价值。",
+      "可让阿明在失败后尝试不同方法（如用不同石头或不同加热方式），以增强新颖性和探索性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

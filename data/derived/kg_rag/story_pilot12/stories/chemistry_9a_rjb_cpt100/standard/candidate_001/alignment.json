@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "原来这棵树从未停止生长——它在看不见的地方，用最缓慢的方式，吸收阳光和水分",
+      "confidence": 0.95
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "老树的生长（包括所有生长过程）",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "通过根系与土壤中的微小生命交换着能量",
+      "confidence": 0.95
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "阳光和水分",
+      "confidence": 0.95
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "没有新芽或开花",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "原来这棵树从未停止生长——它在看不见的地方，用最缓慢的方式，吸收阳光和水分",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "通过根系与土壤中的微小生命交换着能量",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "吸收阳光和水分",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "阳光和水分",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "没有新芽或开花",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "The story aligns with the mechanism graph by mapping slow growth to slow oxidation (n1), overall growth to oxidation (n2), root-microbe interaction to respiration (n4), sunlight and water to oxygen (n5), and lack of visible change to no light/heat (n8). Edges e1, e3, e4, e6, and e9 are supported by direct story evidence; edges e2, e5, e7, e8, and e10 have no evidence because the story does not depict sudden flowering/fruiting (n3, n7) or the required conditions (n6)."
+}

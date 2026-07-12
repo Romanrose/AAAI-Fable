@@ -1,0 +1,125 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "数物体（数一数）"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：一一对应比较法",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：比较数量（多、少、一样多）",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16335"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19305"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "果园采摘与分拣",
+    "setting": "一个秋天的果园，果农们正在采摘成熟的苹果，准备按大小和数量分装到不同的筐里。",
+    "conflict": "果农老张需要准确知道每棵树的苹果数量，以便决定采摘顺序和分配筐数，但他发现不同人报的数总是不一致。",
+    "characters": [
+      {
+        "name": "老张",
+        "role": "果园主人，需要准确计数每棵树的苹果数量",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "小李",
+        "role": "年轻果农，负责用一一对应的方法核对苹果数量",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "王婶",
+        "role": "经验丰富的分拣员，负责比较不同筐的苹果数量",
+        "mapped_element": "m3"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老张逐个观察每棵树上的苹果，用手指着苹果一个一个地数，最后报出总数"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "小李把老张数过的苹果从树上摘下，每摘一个就在地上放一颗石子，用石子与苹果一一对应来验证数量"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "王婶把两筐苹果分别摆成一行，一个对一个地比较，判断哪筐多、哪筐少、还是同样多"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老张站在一棵苹果树下，用手指着树上的苹果，一个一个地数，最后说这棵树有53个苹果。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小李开始摘苹果，每摘一个就在地上放一颗石子，摘完后数石子，发现只有51颗，与老张的数对不上。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老张重新数一遍，发现原来有个苹果藏在叶子后面没看到，这次数出51个，与小李的石子数一致。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "王婶把两筐苹果分别排成两行，一个对一个地比较，发现第一筐比第二筐多出3个苹果。",
+        "mapped_elements": [
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "老张发现数错是因为没有逐一仔细观察每个苹果，而小李用石子一一对应的方法帮他验证并纠正了错误。",
+    "ending": "老张学会了先仔细观察每个苹果，再逐一计数，并用石子一一对应的方法反复核对，最后王婶用一一对应比较法确认了各筐数量，果园的采摘分装工作顺利进行。",
+    "implied_moral": "只有通过仔细观察并逐一核对，才能得到准确的结果，而用一一对应的方式可以验证和比较不同集合的数量。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

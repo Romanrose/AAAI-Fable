@@ -1,0 +1,93 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代农田灌溉与收成预测",
+  "characters": [
+    "老农",
+    "年轻农夫"
+  ],
+  "objects": [
+    "几块试验田",
+    "水渠",
+    "稻种",
+    "竹筒"
+  ],
+  "conflict": "年轻农夫想通过观察整片稻田的每株稻穗来预测收成，但老农指出这样做费时费力且不准确，需要更高效的方法。",
+  "event_chain": [
+    "老农让年轻农夫从整片稻田中随机选取几块试验田",
+    "老农指导年轻农夫在试验田中均匀播种稻种，并每天用竹筒从水渠取水浇灌",
+    "连续七天记录每块试验田的稻苗生长情况",
+    "将各试验田的收成数据平均，作为整片稻田收成的预测依据"
+  ],
+  "turning_point": "年轻农夫意识到仅靠几块试验田的数据就能可靠预测整片稻田的收成，无需观察每一株稻穗。",
+  "resolution_state": "年轻农夫学会了用少量试验田的收成平均值来指导全田的播种和灌溉计划。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "从整片稻田中随机选取几块试验田，用这些试验田的收成来反映整片稻田的收成",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "试验田需随机选取、数量适当，避免只选长势好的田块",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "几块试验田的稻种发芽率测定",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "在试验田中均匀播种稻种，每天用竹筒从水渠取水浇灌，连续七天记录发芽粒数",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "将各试验田的发芽率平均，作为整片稻田播种量的依据",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "enables",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "constrains",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "is_a",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "produces",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保试验田的选取过程体现随机性，避免主观偏好。",
+    "故事中未使用任何目标概念名称或禁止术语。",
+    "所有机制节点和边均已映射，方向保持一致。"
+  ],
+  "mapping_context_sha256": "94653de04d6af92d9308ff03f214309beee3e4338a3ad2cd068abcd61101551a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "37d6213b47b763d1f35aefe3bb3ca091b5e16aa756cd844964b5a1026f4d3760"
+  }
+}

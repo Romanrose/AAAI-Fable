@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：传粉",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10779"
+    }
+  ]
+}

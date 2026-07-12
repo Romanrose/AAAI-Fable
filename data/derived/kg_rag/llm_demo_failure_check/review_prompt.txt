@@ -1,0 +1,43 @@
+You are a strict reviewer for concept-grounded story generation.
+Evaluate whether the draft story preserves the intended concept structure.
+Focus on fidelity, coverage, coherence, and whether the story actually realizes the planned mapping.
+Reject stories that replace the target mechanism with a vague proxy such as generic growth or improvement.
+Check whether experiment and exercise are clearly distinct when both roles are expected.
+
+Target Concept: 光合作用
+Definition: 能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。
+Expected Alignment Roles:
+- target concept
+- prerequisites
+- related concepts
+- outcomes
+- experiments
+- exercises
+
+Draft Story:
+In the garden workshop, a careful caretaker named Mira prepared a sunlit plot, ensuring the soil was rich and the leaves of her young plants were deep green with chlorophyll. She knew that without light, no true growth could occur.
+
+Each morning, the plants stretched toward the sun, using its energy to transform water and air into starch, their stems thickening and leaves unfurling. Nearby, a compost pile breathed out warmth, a reminder that all living things consume and release. Weeds competed for the light, threatening to overshadow Mira’s crop.
+
+To test if the growth was genuine, Mira covered one plant with a dark cloth for three days. Its leaves paled and drooped, producing no new starch. When she uncovered it, the plant slowly greened again, proving that light was the hidden prerequisite.
+
+Later, as an exercise, Mira placed a jar of pondweed in water at different distances from a lamp. At 10 cm, bubbles streamed out; at 40 cm, they barely appeared. In darkness, none came. She understood: the process of capturing light energy was the only source of this visible life.
+
+**Alignment Table:**
+```json
+[
+  {"concept_role": "target concept", "story_evidence": "Plants using sunlight to transform water and air into starch, with bubbles from pondweed indicating oxygen production."},
+  {"concept_role": "prerequisites", "story_evidence": "Mira prepared sunlit plot, ensured chlorophyll in leaves; light proved necessary when covered plant failed to produce starch."},
+  {"concept_role": "related concepts", "story_evidence": "Compost pile's warmth (respiration), weeds competing for light (competition), and carbon-oxygen balance implied by oxygen bubbles."},
+  {"concept_role": "outcomes", "story_evidence": "Stems thickening, leaves unfurling, starch production, and bubbles from pondweed."},
+  {"concept_role": "experiments", "story_evidence": "Covering a plant with dark cloth for three days, then uncovering it to observe recovery."},
+  {"concept_role": "exercises", "story_evidence": "Mira's pondweed jar test at different distances from lamp, recording bubble counts, and predicting darkness result."}
+]
+```
+
+Return a compact review with these fields:
+- pass_fail
+- missing_roles
+- unsupported_story_parts
+- coherence_issues
+- suggested_revision

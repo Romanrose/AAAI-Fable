@@ -1,0 +1,131 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt104",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子萌发所需的适量水分条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "outcome",
+        "text": "种子萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "state",
+        "text": "水分不足不利于萌发",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "水分过多可能导致种子霉烂或缺氧",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10774"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "一定的水分"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "51a897d6e1c06dd9648029a5cf1be2f822773b9e3d597b19564475092e9b988c",
+    "retrieval_sha256": "ebff93b746e702a7418dd1a44562681e79d198b7356f2f20b8b8de7eb84db91c",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "00ba3957820099a2fcf72d34e8100a158017ea72fad3c7315b00487f06e152c2"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

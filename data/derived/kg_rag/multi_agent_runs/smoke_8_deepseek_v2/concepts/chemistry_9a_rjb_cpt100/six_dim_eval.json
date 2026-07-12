@@ -1,0 +1,122 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "target_concept": "缓慢氧化",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "weighted_overall": 5.0,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确表达了缓慢氧化的核心机制：霉斑蔓延和纸张发脆是缓慢、不易察觉的破坏过程，没有发光发热，但持续造成损害，完全符合定义。",
+    "implicitness": "故事正文未出现‘缓慢氧化’、‘氧化反应’、‘氧气’、‘燃烧’等任何禁用术语，全部通过‘潮湿和空气’、‘像火在暗中烧’等隐喻表达。",
+    "mapping_clarity": "每个机制节点和边都有明确的故事元素对应，如霉斑对应缓慢氧化过程，翻晒对应呼吸与氧气的关系，纸张发脆对应氧化反应，且因果链清晰。",
+    "readability": "故事语言自然流畅，情节连贯，从学徒的误解到醒悟，转折合理，适合中学生阅读，无生硬说教。",
+    "pedagogical_value": "读者能通过霉斑蔓延和翻晒工作的类比，理解缓慢氧化‘慢、不易察觉、持续破坏’的特点，以及它与燃烧（剧烈氧化）的关联，教学效果强。",
+    "novelty": "故事采用‘账房仓库’和‘翻晒账本’的独特场景，避免了常见的森林、动物、老人等模板，情节设计新颖。"
+  },
+  "evidence": {
+    "faithfulness": "霉斑缓慢蔓延、纸张发脆、无发热现象，对应缓慢氧化的定义；老账房先生解释‘潮湿和空气慢慢让纸张腐烂，就像火在暗中烧’，对应缓慢氧化与燃烧同属氧化反应但速度不同。",
+    "implicitness": "全文未出现‘缓慢氧化’、‘氧化反应’、‘氧气’、‘燃烧’等术语，仅用‘潮湿和空气’、‘像火在暗中烧’等日常语言。",
+    "mapping_clarity": "霉斑→缓慢氧化过程；翻晒→呼吸与氧气的关系；纸张发脆→氧化反应；老账房先生的警告→燃烧风险；学徒的偷懒→忽视缓慢氧化的后果。",
+    "readability": "故事约500字，情节简单，对话自然，从学徒的敷衍到醒悟，转折合理，无复杂句式。",
+    "pedagogical_value": "通过霉斑蔓延和翻晒工作的对比，读者能直观理解缓慢氧化的‘慢’和‘破坏性’，以及它与燃烧的关联，有助于形成正确概念。",
+    "novelty": "账房仓库和翻晒账本的场景在寓言中罕见，避免了常见的‘智者’、‘森林’、‘村庄危机’等模板。"
+  },
+  "revision_suggestions": [
+    "可在故事结尾增加一句‘学徒从此明白，有些破坏虽然看不见，但必须用持续的行动去对抗’，以强化教学点。",
+    "可考虑在翻晒过程中加入‘学徒发现翻晒后纸张更干燥’的细节，以更明确地体现‘通风减缓氧化’的机制。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确表达了缓慢氧化的核心机制：霉斑蔓延和纸张发脆是缓慢、不易察觉的破坏过程，没有发光发热，但持续造成损害，完全符合定义。",
+      "implicitness": "故事正文未出现‘缓慢氧化’、‘氧化反应’、‘氧气’、‘燃烧’等任何禁用术语，全部通过‘潮湿和空气’、‘像火在暗中烧’等隐喻表达。",
+      "mapping_clarity": "每个机制节点和边都有明确的故事元素对应，如霉斑对应缓慢氧化过程，翻晒对应呼吸与氧气的关系，纸张发脆对应氧化反应，且因果链清晰。",
+      "readability": "故事语言自然流畅，情节连贯，从学徒的误解到醒悟，转折合理，适合中学生阅读，无生硬说教。",
+      "pedagogical_value": "读者能通过霉斑蔓延和翻晒工作的类比，理解缓慢氧化‘慢、不易察觉、持续破坏’的特点，以及它与燃烧（剧烈氧化）的关联，教学效果强。",
+      "novelty": "故事采用‘账房仓库’和‘翻晒账本’的独特场景，避免了常见的森林、动物、老人等模板，情节设计新颖。"
+    },
+    "evidence": {
+      "faithfulness": "霉斑缓慢蔓延、纸张发脆、无发热现象，对应缓慢氧化的定义；老账房先生解释‘潮湿和空气慢慢让纸张腐烂，就像火在暗中烧’，对应缓慢氧化与燃烧同属氧化反应但速度不同。",
+      "implicitness": "全文未出现‘缓慢氧化’、‘氧化反应’、‘氧气’、‘燃烧’等术语，仅用‘潮湿和空气’、‘像火在暗中烧’等日常语言。",
+      "mapping_clarity": "霉斑→缓慢氧化过程；翻晒→呼吸与氧气的关系；纸张发脆→氧化反应；老账房先生的警告→燃烧风险；学徒的偷懒→忽视缓慢氧化的后果。",
+      "readability": "故事约500字，情节简单，对话自然，从学徒的敷衍到醒悟，转折合理，无复杂句式。",
+      "pedagogical_value": "通过霉斑蔓延和翻晒工作的对比，读者能直观理解缓慢氧化的‘慢’和‘破坏性’，以及它与燃烧的关联，有助于形成正确概念。",
+      "novelty": "账房仓库和翻晒账本的场景在寓言中罕见，避免了常见的‘智者’、‘森林’、‘村庄危机’等模板。"
+    },
+    "revision_suggestions": [
+      "可在故事结尾增加一句‘学徒从此明白，有些破坏虽然看不见，但必须用持续的行动去对抗’，以强化教学点。",
+      "可考虑在翻晒过程中加入‘学徒发现翻晒后纸张更干燥’的细节，以更明确地体现‘通风减缓氧化’的机制。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "chemistry_9a_rjb_cpt100",
+    "target_concept": "缓慢氧化",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

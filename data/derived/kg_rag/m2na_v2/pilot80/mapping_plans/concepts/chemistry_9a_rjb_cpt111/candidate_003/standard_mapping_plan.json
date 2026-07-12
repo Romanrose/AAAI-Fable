@@ -1,0 +1,93 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位经验丰富的园丁帮助植物生长的故事",
+  "characters": [
+    "园丁",
+    "植物",
+    "其他园丁"
+  ],
+  "objects": [
+    "园丁的工具",
+    "植物生长环境"
+  ],
+  "conflict": "植物生长缓慢，需要帮助但又不希望改变其自然特性",
+  "event_chain": [
+    "园丁观察植物生长缓慢",
+    "园丁使用工具和技巧帮助植物",
+    "植物生长速度改变",
+    "园丁的工具和技巧在帮助过程中自身不变",
+    "其他园丁借鉴园丁的方法"
+  ],
+  "turning_point": "园丁发现一种方法，既能加速植物生长，又不改变工具和技巧本身",
+  "resolution_state": "植物生长加快，园丁的方法被推广，工具和技巧保持原样",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "园丁的工具和技巧",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "园丁帮助植物生长的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "植物生长速度改变",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "园丁的工具和技巧在帮助过程中自身不变",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "其他园丁借鉴园丁的方法",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "园丁的工具和技巧与帮助过程相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "帮助过程导致植物生长速度改变",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "工具和技巧不变的条件约束帮助过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "帮助过程使其他园丁能够借鉴方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中工具和技巧不变的条件清晰，避免被误解为消耗品",
+    "避免使用'催化'、'催化剂'等术语",
+    "确保植物生长速度改变是正向的，但故事中未明确方向，需保持中性"
+  ],
+  "mapping_context_sha256": "a04bc2bca2bbdbd2e66f7d35bbff79eb0d27cbc7c8b40630af337d6a82fc0a12",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "bf59fda9354fe0d912a003c96adeb6d095142393a2bf3ff8368bf0180f35b3f9"
+  }
+}

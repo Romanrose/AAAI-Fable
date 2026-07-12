@@ -1,0 +1,87 @@
+{
+  "concept_id": "physics_8a_rjb_cpt104",
+  "target_concept": "投影仪成像",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整且准确地呈现了物体靠近凸透镜时在屏幕上形成放大、倒立实像的机制，阿明调整纸片与圆窗距离导致像的大小、清晰度和方向变化，完全符合概念定义。",
+    "implicitness": "概念名称和定义未直接出现，核心机制通过阿明的观察和实验隐含表达，仅用“中间厚、边缘薄的透明玻璃”暗示凸透镜，但圆窗的描述稍显直接，略降低隐含性。",
+    "mapping_clarity": "纸片（物体）、圆窗（凸透镜）、墙面（投影屏幕）与字影（实像）的映射非常清晰，距离变化导致像的大小和清晰度变化的过程被明确描述，读者能轻松对应物理机制。",
+    "readability": "故事语言流畅自然，情节简单易懂，阿明的探索过程生动有趣，无生僻词汇或复杂句式，适合目标读者。",
+    "pedagogical_value": "通过阿明的实验步骤（靠近、远离、寻找清晰位置）直观展示了投影仪成像的条件和规律，能有效帮助读者理解物体与透镜距离对像的影响，教学价值高。",
+    "novelty": "将投影仪成像原理融入钟楼圆窗的日常场景有一定创意，但“通过调整距离观察像的变化”是常见教学叙事模式，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可进一步弱化圆窗的物理描述，如改为“一块特别的玻璃”以增强隐含性。",
+    "可增加一个角色误解或错误尝试的情节，以强化冲突和转折。",
+    "结尾可加入阿明应用规律解决实际问题的细节，提升教学价值。"
+  ],
+  "rule_findings": {
+    "story_token_count": 572,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整且准确地呈现了物体靠近凸透镜时在屏幕上形成放大、倒立实像的机制，阿明调整纸片与圆窗距离导致像的大小、清晰度和方向变化，完全符合概念定义。",
+      "implicitness": "概念名称和定义未直接出现，核心机制通过阿明的观察和实验隐含表达，仅用“中间厚、边缘薄的透明玻璃”暗示凸透镜，但圆窗的描述稍显直接，略降低隐含性。",
+      "mapping_clarity": "纸片（物体）、圆窗（凸透镜）、墙面（投影屏幕）与字影（实像）的映射非常清晰，距离变化导致像的大小和清晰度变化的过程被明确描述，读者能轻松对应物理机制。",
+      "readability": "故事语言流畅自然，情节简单易懂，阿明的探索过程生动有趣，无生僻词汇或复杂句式，适合目标读者。",
+      "pedagogical_value": "通过阿明的实验步骤（靠近、远离、寻找清晰位置）直观展示了投影仪成像的条件和规律，能有效帮助读者理解物体与透镜距离对像的影响，教学价值高。",
+      "novelty": "将投影仪成像原理融入钟楼圆窗的日常场景有一定创意，但“通过调整距离观察像的变化”是常见教学叙事模式，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可进一步弱化圆窗的物理描述，如改为“一块特别的玻璃”以增强隐含性。",
+      "可增加一个角色误解或错误尝试的情节，以强化冲突和转折。",
+      "结尾可加入阿明应用规律解决实际问题的细节，提升教学价值。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

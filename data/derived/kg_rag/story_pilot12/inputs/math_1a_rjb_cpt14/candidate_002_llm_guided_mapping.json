@@ -1,0 +1,80 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "中国象棋的棋子与棋局",
+  "domain_rationale": "象棋棋子（如车、马、炮）各有不同走法，但都由棋盘格点支撑，类似长方体由面围成。帅（将）可类比正方体，是特殊棋子，而棋子分类（按兵种）与按形状分类对应。棋子的移动组合（拼搭）以及棋局形势评估（面积、公式）能覆盖所有节点。",
+  "conflict": "象棋是博弈游戏，长方体是几何体，但分类、组合和评估的抽象关系一致。",
+  "event_chain": [
+    "棋手识别出不同兵种的棋子（车、马、炮等）",
+    "棋手按兵种对棋子进行分类（如直线走法、曲线走法）",
+    "棋手理解帅（将）是特殊的棋子，具有特殊走法",
+    "棋手将多个棋子组合成攻防阵型",
+    "棋手评估己方棋子的控制区域（类似表面积）",
+    "棋手运用棋谱公式计算局势优劣（类似体积公式）"
+  ],
+  "turning_point": "棋手发现帅（将）虽然走法受限，但在残局中具有决定性作用，类似正方体在长方体中的特殊性。",
+  "resolution_state": "棋手掌握了棋子分类、组合策略和局势评估方法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "棋盘上的所有棋子（整体集合）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "帅（将）（走法特殊、最重要的棋子）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "按兵种分类（车、马、炮等）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "组合棋子形成攻防阵型",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "棋子控制区域（各棋子能到达的格子总和）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "棋谱公式（如根据子力价值评估优势）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "所有棋子的集合是分类的对象",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "帅（将）是所有棋子的一种特殊形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "所有棋子的集合与帅（将）相关联（帅是将领）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "所有棋子的集合使计算控制区域成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "所有棋子的集合使应用棋谱公式成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "所有棋子的集合使组合阵型成为可能",
+      "direction_preserved": true
+    }
+  ]
+}

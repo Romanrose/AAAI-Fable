@@ -1,0 +1,11 @@
+﻿concept_id,target_concept,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,template_like
+math_1a_rjb_cpt1,数物体（数一数）,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt10,小于号含义,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt11,加法的含义,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt12,减法的含义,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt14,长方体,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt15,正方体,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt16,圆柱,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt17,球体,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt18,按形状分类,4,5,4,4,4,4,4.15,accept,False,False,False
+math_1a_rjb_cpt19,数字6和7的认识,4,5,4,4,4,4,4.15,accept,False,False,False

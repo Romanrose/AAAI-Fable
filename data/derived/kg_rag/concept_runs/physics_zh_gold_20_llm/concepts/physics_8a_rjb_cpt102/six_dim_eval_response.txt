@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整且准确地映射了实像的定义：光线穿过玻璃板（凸透镜）后实际汇聚，在木板（光屏）上形成倒立、可承接的像，且物体与像分居透镜两侧。距离变化影响像的大小和清晰度，完全符合概念机制。",
+    "implicitness": "目标概念名称“实像”及其别名均未在故事正文中出现，核心机制通过事件链和角色观察隐含表达，读者需从情节中推断出物理规律。",
+    "mapping_clarity": "每个关键概念元素都有明确的故事对应：玻璃板→凸透镜，木板→光屏，木牌→物体，倒立字迹→实像，距离变化→物距影响像的大小和清晰度。映射关系清晰且一致。",
+    "readability": "故事语言流畅自然，情节简单易懂，角色对话和实验步骤符合儿童认知水平，无生硬术语或复杂句式。",
+    "pedagogical_value": "通过实验观察和角色顿悟，生动展示了实像的形成条件（物距足够远）、性质（倒立、可承接）和变化规律（大小随距离变化），能有效帮助学习者理解概念。",
+    "novelty": "以钟楼守护员探索秘密为背景，将光学实验融入日常场景，有一定创意，但整体结构仍属常见的“发现规律”型故事，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可增加一个对比场景，例如小杰尝试用木板在玻璃板同侧接像但失败，以强化实像与虚像的区别。",
+    "可补充一个具体数值或条件（如“当木牌距离玻璃板两臂长时”），使实验条件更精确。"
+  ]
+}

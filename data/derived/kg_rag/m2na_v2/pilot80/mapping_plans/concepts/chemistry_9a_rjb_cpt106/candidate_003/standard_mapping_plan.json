@@ -1,0 +1,129 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄里的磨坊",
+  "characters": [
+    "老磨坊主",
+    "小徒弟"
+  ],
+  "objects": [
+    "石磨",
+    "小麦",
+    "面粉",
+    "水车",
+    "河水",
+    "筛子",
+    "布袋"
+  ],
+  "conflict": "小徒弟想用新方法快速磨面，但老磨坊主坚持传统方法，认为新方法不可靠。",
+  "event_chain": [
+    "老磨坊主教小徒弟用石磨磨面，这是村庄里磨面的传统方法。",
+    "小徒弟发现水车可以带动石磨，认为这是更快的磨面方法。",
+    "老磨坊主指出，水车磨面需要稳定的水流，且磨出的面粉粗细不均。",
+    "小徒弟坚持尝试水车磨面，结果面粉中混有未磨碎的小麦。",
+    "老磨坊主用筛子筛出粗粒，重新用石磨研磨。",
+    "小徒弟认识到传统方法的可靠，最终学会了正确使用石磨。"
+  ],
+  "turning_point": "小徒弟尝试水车磨面失败，面粉质量差。",
+  "resolution_state": "小徒弟接受传统方法，掌握了石磨磨面的技艺。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "用石磨磨面",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "村庄里磨面的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用筛子筛面粉",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "磨面需要将小麦碾碎",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "面粉",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "用石臼捣麦子",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "用驴拉磨磨面",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "老磨坊主示范用石臼捣麦子",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "用石磨磨面是村庄里磨面的一种方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "村庄里磨面的方法需要用到筛子",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "磨面需要将小麦碾碎与村庄里磨面的方法相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "面粉与村庄里磨面的方法相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "用石臼捣麦子是村庄里磨面的一种方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "用驴拉磨磨面是村庄里磨面的一种方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "老磨坊主示范用石臼捣麦子验证了村庄里磨面的方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何化学术语或目标概念名称。",
+    "所有机制节点和边均已映射，且方向保持。",
+    "故事载体使用统一的磨坊领域，避免无关隐喻。",
+    "注意不要将课程桥接上下文（如实验步骤）作为因果机制映射。"
+  ],
+  "mapping_context_sha256": "1a4e35cbdd5ad6189ebc4ab2c4e187ab47563ce3bde168dd04f0822cc4b10b34",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3227938aae9495eaa7e3decf986dfe0171546aa917fbabf8a2854f141453e3d8"
+  }
+}

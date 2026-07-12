@@ -1,0 +1,73 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "烹饪",
+  "domain_rationale": "烹饪一道菜需要具备火候、调料、食材等条件，对应种子萌发需要温度、水分、空气。",
+  "conflict": "无",
+  "event_chain": [
+    "厨师准备烹饪一道红烧肉",
+    "厨房里必须有合适的火候、适量的酱油和水、以及足够的氧气（通风）",
+    "厨师通过试火、尝味、观察油烟来验证这些条件",
+    "条件满足后，红烧肉才能炖熟"
+  ],
+  "turning_point": "厨师调好火候、加好调料、确保通风",
+  "resolution_state": "红烧肉炖熟出锅",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "厨房的烹饪条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "红烧肉炖熟",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "合适的火候",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "适量的酱油和水",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "充足的氧气（通风）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "厨师试火、尝味、观察油烟",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "厨房的烹饪条件使红烧肉炖熟成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "合适的火候是厨房的烹饪条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "适量的酱油和水是厨房的烹饪条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "充足的氧气是厨房的烹饪条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "厨师试火、尝味、观察油烟验证了厨房的烹饪条件",
+      "direction_preserved": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 2,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": true
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Edge e1 (n2 is_a n1) is only weakly represented by '并列' (juxtaposition) which does not convey the hierarchical 'is_a' relation; a better realization would explicitly state that the second process is a subtype of the first, e.g., '第二道转化环节是入口条件核对的一种具体形式'."
+  },
+  "revision_instructions": [
+    "Increase edge_coverage to at least 0.8 by explicitly representing edges e1, e2, e3 with proper 'is_a' relations instead of mere juxtaposition or mention.",
+    "Reduce story length to within 450-750 Chinese characters; current length is 1065 characters.",
+    "Avoid template-like phrasing such as repeated '主角把两份相关记录放在一起比较' for multiple distinct edges; use varied expressions that preserve the specific relation type.",
+    "Ensure that edge e2 (n3 is_a n2) is clearly shown as a subtype relation, not just a sequential step."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

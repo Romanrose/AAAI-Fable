@@ -1,0 +1,120 @@
+{
+  "query": "biology_7a_rjb_cpt103",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt103",
+    "label": "Concept",
+    "name": "适宜的温度",
+    "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+    "aliases": [],
+    "examples": [
+      "小麦最适宜温度12~20℃",
+      "棉20~30℃",
+      "水稻25~35℃",
+      "玉米30~35℃",
+      "菜豆20~25℃"
+    ],
+    "retrieval_text": "适宜的温度\n能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt102",
+        "label": "Concept",
+        "name": "种子萌发的环境条件",
+        "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '适宜的温度', 'definition': '能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。', 'formula': '', 'importance': '重要'}, 'condition_summary': ['[normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件'], 'process_summary': [], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt103",
+      "label": "Concept",
+      "name": "适宜的温度",
+      "properties": {
+        "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+        "importance": "重要",
+        "examples": [
+          "小麦最适宜温度12~20℃",
+          "棉20~30℃",
+          "水稻25~35℃",
+          "玉米30~35℃",
+          "菜豆20~25℃"
+        ],
+        "unit": "℃",
+        "retrieval_text": "适宜的温度\nConcept\n能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。\n重要\n℃\n小麦最适宜温度12~20℃\n棉20~30℃\n水稻25~35℃\n玉米30~35℃\n菜豆20~25℃"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:10773",
+        "source": "biology_7a_rjb_cpt103",
+        "source_name": "适宜的温度",
+        "target": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "适宜的温度",
+        "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [
+        "[normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件"
+      ],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 249,
+      "summary_chars": 250,
+      "path_chars": 0,
+      "retrieval_context_chars": 499
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 249,
+    "summary_chars": 250,
+    "path_chars": 0,
+    "retrieval_context_chars": 499
+  }
+}

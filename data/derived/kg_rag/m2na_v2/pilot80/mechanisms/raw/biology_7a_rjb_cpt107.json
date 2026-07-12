@@ -1,0 +1,163 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt107",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子成熟后在一段时期内即使环境适宜也不能萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "outcome",
+        "text": "有助于植物躲过不利季节（如严冬）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "种子处于休眠",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "胚完整且有活性",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "种子未处于休眠",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "outcome",
+        "text": "种子不能萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt107:definition",
+          "kg-node:biology_7a_rjb_cpt107:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10777",
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n5",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n3",
+        "target": "n6",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt106:definition",
+          "kg-node:biology_7a_rjb_cpt106:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "种子休眠"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "9d640aab9368f29aaab3e01d6d0766e25b30e65b578dffab2ca7dd336b4d8f5d",
+    "retrieval_sha256": "2b16187aea88af28fc09e270f3faf0dd00f81f13d614fa765609c976668e7df3",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "4c31ac122863bfd22d63c293a3cb8dee459478dcb93934d7e328628c8f6b8bca"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

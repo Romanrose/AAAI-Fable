@@ -1,0 +1,47 @@
+{
+  "core_question": "雄蕊的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "花的雄性生殖结构，花药内含有花粉。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s2",
+      "text": "避免目的论解释。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "避免把个体努力写成进化原因。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "雄蕊",
+    "biology_7a_rjb_cpt112"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [],
+    "must_cover_path_ids": []
+  }
+}

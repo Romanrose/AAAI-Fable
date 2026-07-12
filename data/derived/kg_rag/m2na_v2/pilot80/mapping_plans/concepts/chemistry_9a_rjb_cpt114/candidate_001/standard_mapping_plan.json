@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄获取清泉的故事",
+  "characters": [
+    "村民",
+    "老井",
+    "新泉眼"
+  ],
+  "objects": [
+    "清泉",
+    "深井",
+    "竹管",
+    "石槽"
+  ],
+  "conflict": "村庄需要大量清泉供应，但老井水量有限，且取水方式单一，无法满足需求。",
+  "event_chain": [
+    "村民发现老井水量不足，决定寻找新的取水方法。",
+    "村民尝试两种方法：一是挖掘深井，利用低温深层水；二是铺设竹管，从远处山泉引水。",
+    "深井需要低温条件（深层地下水温低）和加压（水泵）才能出水。",
+    "竹管引水需要一定压力（地势差）才能流动，最终得到富氧清泉（山泉水富含氧气）。",
+    "两种方法都成功获得清泉，解决了村庄的用水问题。"
+  ],
+  "turning_point": "村民成功从深井和竹管两种途径获得清泉，满足了村庄需求。",
+  "resolution_state": "村庄有了稳定的清泉供应，两种方法并存，各司其职。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村庄获取清泉的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "挖掘深井取水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "竹管引山泉",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "清泉",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "挖掘深井取水是村庄获取清泉的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "竹管引山泉是村庄获取清泉的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "清泉是村庄获取清泉的方法所追求的目标",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'工业制取氧气的方法'等禁止术语。",
+    "确保所有必须保留的节点和边都已映射，且方向正确。",
+    "注意不要将课程桥上下文视为因果机制。",
+    "保持单一源域，避免多个不相关的隐喻。"
+  ],
+  "mapping_context_sha256": "1d3f8ceb2249b0a6d6f28ca0b6a473c1c7da52d69b1346a50214c8b1c753fc86",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4874339574ef0ebb5f59550bc9a40c8e2c9a0b2adebfc01264fe2596713d1f09"
+  }
+}

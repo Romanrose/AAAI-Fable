@@ -1,0 +1,107 @@
+{
+  "id": "biology_7a_rjb_cpt102",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "种子萌发的环境条件",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发的环境条件"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "避免目的论解释。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把个体努力写成进化原因。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14133",
+        "source_name": "种子萌发的环境条件",
+        "target_name": "种子萌发",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:10774",
+        "source_name": "一定的水分",
+        "target_name": "种子萌发的环境条件",
+        "relation_semantic_role": "category_membership"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "园圃值守所里，记录员、调度员和验收员各守一席。表面流程已经启动，但关键条件、顺序和结果还没有互相核对。\n\n记录员先走到入口处，那里挂着一排条件牌。他一张张核对：温度牌、水分牌、空气牌。调度员催他快些登记，记录员摇头：“缺少这一步，后面的登记不能开始。”他把水分牌上的露珠现象归入“一定的水分”这类更大的规则，而不是当成孤立事件；又把通风口吹来的风归入“充足的空气”这类更大的规则；再把地温计上的数字归入“适宜的温度”这类更大的规则。最后，他把这三者合起来，归入“种子萌发”这类更大的规则。\n\n调度员不耐烦了，跳过核对，直接推动第2道转化环节。结果记录册上全是乱码，前后无法承接。验收员翻开封存箱里的旧记录，发现只有先稳定入口条件核对，再推动第2道转化，验收才能接上。有人试着倒过来安排，却发现顺序颠倒后，条件牌上的数字全对不上。\n\n记录员用分段记录册比较、复查，证据对上后才允许通过。调度员不服气，趁夜提前跳过中间承接，直接去推转化环节。第二天，验收员打开记录册，发现水分记录和温度记录错位，空气记录根本没写。整条安排暴露了方向和顺序不能颠倒。\n\n三人重新坐下来。记录员先确认入口条件牌是否成立——温度、水分、空气都达标。随后，第2道转化环节按前一步留下的条件继续推进。最后，验收员用结果验收记录核对整条安排。所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件核对",
+        "narrative_anchor": "入口条件核对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "第2道转化环节",
+        "narrative_anchor": "第2道转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "先稳定入口条件核对，再推动第2道转化",
+        "narrative_anchor": "先稳定入口条件核对，再推动第2道转化",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "把水分牌上的露珠现象归入“一定的水分”这类更大的规则",
+        "evidence": "把水分牌上的露珠现象归入“一定的水分”这类更大的规则",
+        "narrative_anchor": "把水分牌上的露珠现象归入“一定的水分”这类更大的规则",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n1",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

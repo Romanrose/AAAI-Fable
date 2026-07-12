@@ -1,0 +1,19 @@
+In the garden workshop, a careful caretaker named Mira prepared a sunlit plot, ensuring the soil was rich and the seeds were spaced just right. She knew that without the hidden warmth of sunlight and the green within the leaves, nothing would truly grow.
+
+The plot used these conditions to sprout tender shoots, which stretched toward the light. Nearby, a compost pile breathed out warmth, supporting the growth, while weeds competed for space. Mira observed daily, watering and thinning, but she wondered if the growth was genuine.
+
+One evening, she placed a sprig of waterweed in a glass tube filled with water. She moved it closer to a lamp: bubbles rose quickly—60 per minute. Farther away, only 5. In darkness, no bubbles appeared. The visible change revealed the truth: light was the hidden key.
+
+Mira adjusted the plot, ensuring every leaf caught the sun. The system stabilized, and the garden flourished, producing food and oxygen. She understood that the enabling conditions—light and green—were the true drivers of growth.
+
+**Alignment Table:**
+```json
+[
+  {"concept_role": "target concept", "story_evidence": "The plot's growth process that captures light to produce food and oxygen."},
+  {"concept_role": "prerequisites", "story_evidence": "Sunlight, green leaves, proper spacing (合理密植), and prepared soil."},
+  {"concept_role": "related concepts", "story_evidence": "Compost pile's breathing (呼吸作用), oxygen bubbles, and carbon-oxygen balance."},
+  {"concept_role": "outcomes", "story_evidence": "Visible shoots, food, and oxygen from the flourishing garden."},
+  {"concept_role": "experiments", "story_evidence": "Mira's tube test with waterweed at different distances from the lamp."},
+  {"concept_role": "exercises", "story_evidence": "The recorded bubble counts and the darkness test that reinforced the lesson."}
+]
+```

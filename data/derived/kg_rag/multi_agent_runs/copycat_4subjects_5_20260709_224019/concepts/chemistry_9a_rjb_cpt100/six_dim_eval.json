@@ -1,0 +1,126 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "target_concept": "缓慢氧化",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 4,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "weighted_overall": 4.15,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过铁器在潮湿环境中缓慢生锈的过程，准确表现了缓慢氧化‘进行得很慢、不易察觉、无显著发光发热’的核心机制，且强调了‘仍属于氧化反应’这一本质。但故事未明确区分化学反应与物理混合，且对‘守恒关系’的体现较为模糊，因此扣1分。",
+    "implicitness": "全文未出现‘缓慢氧化’、‘氧化反应’、‘燃烧’等禁用术语，也未出现任何化学式或元素符号，完全通过‘铁器生锈’这一日常现象来隐喻，符合隐含性要求。",
+    "mapping_clarity": "故事中的‘前置条件牌’对应‘氧化反应’前提，‘第二道转化环节’对应‘区分化学反应与物理混合’，‘结果验收记录’对应‘守恒关系’，映射清晰。但‘两份相关记录共同约束’的映射稍显抽象，且‘呼吸与氧气’的关联未在故事中明确体现，因此扣1分。",
+    "readability": "故事语言流畅，情节连贯，角色行为合理，适合中学生阅读。但部分表述如‘第二道转化环节’略显生硬，且‘先稳定入口条件核对，再推动第二道转化环节’重复出现，稍影响阅读体验。",
+    "pedagogical_value": "故事通过铁器生锈的实例，生动展示了缓慢氧化的特点（慢、不易察觉、无发光发热），有助于学生理解概念。但未明确点出‘缓慢氧化属于氧化反应’这一关键点，教学价值略有不足。",
+    "novelty": "以‘账房仓库’为背景，用‘登记流程’隐喻化学反应条件，避免了常见的‘铁钉生锈’直接叙述，有一定新颖性。但‘铁器生锈’本身仍是常见类比，创新程度中等。"
+  },
+  "evidence": {
+    "faithfulness": "故事中‘铁器在潮湿环境里会慢慢起变化，虽然不发光发热，但重量和形态都会改变’直接对应缓慢氧化的核心特征。但未体现‘区分化学反应与物理混合’及‘守恒关系’的明确映射。",
+    "implicitness": "全文未出现‘缓慢氧化’、‘氧化反应’、‘燃烧’等术语，也未出现化学式。",
+    "mapping_clarity": "‘前置条件牌’对应氧化反应前提，‘第二道转化环节’对应区分反应类型，‘结果验收记录’对应守恒关系。但‘呼吸与氧气’的关联未在故事中体现。",
+    "readability": "故事有完整的情节线，角色对话自然，但‘先稳定入口条件核对，再推动第二道转化环节’重复出现，略显冗余。",
+    "pedagogical_value": "铁器生锈是缓慢氧化的典型例子，故事通过‘不发光发热’、‘慢慢变化’等描述，帮助学生理解概念。但未明确点出‘仍属于氧化反应’。",
+    "novelty": "以仓库登记流程为框架，将化学反应条件类比为管理规则，有一定创意。但‘铁器生锈’仍是常见类比。"
+  },
+  "revision_suggestions": [
+    "在故事中更明确地体现‘区分化学反应与物理混合’这一要点，例如通过角色讨论‘铁器生锈是化学变化，不是简单的物理混合’来强化。",
+    "增加对‘守恒关系’的体现，例如在验收环节强调‘铁和氧气反应后，总质量不变’或‘元素种类不变’。",
+    "减少‘先稳定入口条件核对，再推动第二道转化环节’这类重复表述，使语言更简洁自然。",
+    "可考虑在故事中隐含‘呼吸与氧气’的关联，例如通过‘仓库通风’或‘湿度’等元素间接体现。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 4,
+      "pedagogical_value": 4,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过铁器在潮湿环境中缓慢生锈的过程，准确表现了缓慢氧化‘进行得很慢、不易察觉、无显著发光发热’的核心机制，且强调了‘仍属于氧化反应’这一本质。但故事未明确区分化学反应与物理混合，且对‘守恒关系’的体现较为模糊，因此扣1分。",
+      "implicitness": "全文未出现‘缓慢氧化’、‘氧化反应’、‘燃烧’等禁用术语，也未出现任何化学式或元素符号，完全通过‘铁器生锈’这一日常现象来隐喻，符合隐含性要求。",
+      "mapping_clarity": "故事中的‘前置条件牌’对应‘氧化反应’前提，‘第二道转化环节’对应‘区分化学反应与物理混合’，‘结果验收记录’对应‘守恒关系’，映射清晰。但‘两份相关记录共同约束’的映射稍显抽象，且‘呼吸与氧气’的关联未在故事中明确体现，因此扣1分。",
+      "readability": "故事语言流畅，情节连贯，角色行为合理，适合中学生阅读。但部分表述如‘第二道转化环节’略显生硬，且‘先稳定入口条件核对，再推动第二道转化环节’重复出现，稍影响阅读体验。",
+      "pedagogical_value": "故事通过铁器生锈的实例，生动展示了缓慢氧化的特点（慢、不易察觉、无发光发热），有助于学生理解概念。但未明确点出‘缓慢氧化属于氧化反应’这一关键点，教学价值略有不足。",
+      "novelty": "以‘账房仓库’为背景，用‘登记流程’隐喻化学反应条件，避免了常见的‘铁钉生锈’直接叙述，有一定新颖性。但‘铁器生锈’本身仍是常见类比，创新程度中等。"
+    },
+    "evidence": {
+      "faithfulness": "故事中‘铁器在潮湿环境里会慢慢起变化，虽然不发光发热，但重量和形态都会改变’直接对应缓慢氧化的核心特征。但未体现‘区分化学反应与物理混合’及‘守恒关系’的明确映射。",
+      "implicitness": "全文未出现‘缓慢氧化’、‘氧化反应’、‘燃烧’等术语，也未出现化学式。",
+      "mapping_clarity": "‘前置条件牌’对应氧化反应前提，‘第二道转化环节’对应区分反应类型，‘结果验收记录’对应守恒关系。但‘呼吸与氧气’的关联未在故事中体现。",
+      "readability": "故事有完整的情节线，角色对话自然，但‘先稳定入口条件核对，再推动第二道转化环节’重复出现，略显冗余。",
+      "pedagogical_value": "铁器生锈是缓慢氧化的典型例子，故事通过‘不发光发热’、‘慢慢变化’等描述，帮助学生理解概念。但未明确点出‘仍属于氧化反应’。",
+      "novelty": "以仓库登记流程为框架，将化学反应条件类比为管理规则，有一定创意。但‘铁器生锈’仍是常见类比。"
+    },
+    "revision_suggestions": [
+      "在故事中更明确地体现‘区分化学反应与物理混合’这一要点，例如通过角色讨论‘铁器生锈是化学变化，不是简单的物理混合’来强化。",
+      "增加对‘守恒关系’的体现，例如在验收环节强调‘铁和氧气反应后，总质量不变’或‘元素种类不变’。",
+      "减少‘先稳定入口条件核对，再推动第二道转化环节’这类重复表述，使语言更简洁自然。",
+      "可考虑在故事中隐含‘呼吸与氧气’的关联，例如通过‘仓库通风’或‘湿度’等元素间接体现。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "chemistry_9a_rjb_cpt100",
+    "target_concept": "缓慢氧化",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

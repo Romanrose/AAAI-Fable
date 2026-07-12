@@ -1,0 +1,143 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "木工工艺",
+      "domain_rationale": "木材经过工匠的加工可以转变为各种木器，这与物质在特定条件下发生变化的机制相似。",
+      "conflict": "木材是天然材料，而物质概念更抽象，但变化过程的结构一致。",
+      "event_chain": [
+        "木匠取来一段原木",
+        "原木被锯、刨、凿、打磨",
+        "原木变成一张精美的木桌"
+      ],
+      "turning_point": "木匠开始动手加工",
+      "resolution_state": "原木转化为木桌，形态和用途改变",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "一段原木",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "木匠的加工过程",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "原木被木匠加工",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 2
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "烹饪过程",
+      "domain_rationale": "生食材经过加热、调味等烹饪操作变成熟食，体现了物质在特定条件下发生本质变化的过程。",
+      "conflict": "生食材与物质的抽象性有差异，但变化的因果结构相同。",
+      "event_chain": [
+        "厨师准备好一块生面团",
+        "生面团被揉捏、发酵、烘烤",
+        "生面团变成松软的面包"
+      ],
+      "turning_point": "面团被放入烤箱",
+      "resolution_state": "面团转化为面包，性质改变",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "一块生面团",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "厨师的烹饪操作",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "生面团被厨师烹饪",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 2
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "植物生长",
+      "domain_rationale": "种子在土壤、水分、阳光等条件下发芽、生长为植株，是物质在自然条件下发生形态和功能变化的过程。",
+      "conflict": "种子是生物体，与无生命的物质不同，但变化机制相似。",
+      "event_chain": [
+        "园丁播下一粒种子",
+        "种子吸收水分、养分，胚芽萌发",
+        "种子长成一株幼苗"
+      ],
+      "turning_point": "种子开始吸收水分",
+      "resolution_state": "种子转化为幼苗，形态和功能改变",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "一粒种子",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "种子的萌发过程",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "种子被萌发条件激活",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 2
+    }
+  }
+]

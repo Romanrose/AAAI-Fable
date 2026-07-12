@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (第2道转化环节) is mentioned but its role as a process (种子萌发) is not clearly distinguished from the conditions; edge e1 (enables) is only weakly implied by the story's '只有...才能' structure, lacking explicit relational reasoning. In contrast, node n1 is repeatedly and explicitly mapped via the '归入' action, making it the strongest."
+  },
+  "revision_instructions": [
+    "Increase node_coverage to at least 0.8 by explicitly mapping all six mechanism nodes with distinct story carriers and actions, not just mentioning them.",
+    "Ensure edge e1 (enables) is explicitly demonstrated as a causal relation between condition and process, not just a sequential dependency.",
+    "Reduce story length to within 450-750 Chinese characters (currently 756).",
+    "Avoid using the exact mapping plan phrases (e.g., '归入...这条共同规则') too repetitively; vary the language while preserving the relation type."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

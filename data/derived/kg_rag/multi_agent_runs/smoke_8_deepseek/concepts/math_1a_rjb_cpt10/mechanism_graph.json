@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "表示前面的数量比后面的数量少。",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:16377",
+    "normalized:edge:19331"
+  ]
+}

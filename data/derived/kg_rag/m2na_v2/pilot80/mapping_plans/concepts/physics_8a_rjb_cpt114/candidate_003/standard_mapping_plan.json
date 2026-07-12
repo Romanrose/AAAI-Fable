@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位老农在田边观察庄稼生长",
+  "characters": [
+    "老农",
+    "庄稼"
+  ],
+  "objects": [
+    "田地",
+    "水渠",
+    "阳光"
+  ],
+  "conflict": "庄稼在靠近水源的地方生长过快，但离水源稍远的地方却长势不佳，老农需要找到庄稼能健康生长的最近水源距离。",
+  "event_chain": [
+    "老农通过调整水渠的闸门，改变水流的大小和方向，使不同距离的庄稼都能得到适当灌溉。",
+    "老农发现，庄稼在距离水渠最近的地方（约10步）能勉强存活，但再近就会淹死。",
+    "老农观察到，庄稼在距离水渠约25步的地方生长最茂盛，且不需要频繁灌溉。"
+  ],
+  "turning_point": "老农意识到，庄稼有一个最近的安全距离，超过这个距离就会受损，而在这个距离之外还有一个最舒适的灌溉距离。",
+  "resolution_state": "老农记住了这个最近安全距离，并以此为依据调整灌溉策略，使庄稼整体长势良好。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农通过调整水渠闸门改变水流，使不同距离的庄稼得到灌溉",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "庄稼能存活的最远水源距离（约10步）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "庄稼生长最茂盛且不需频繁灌溉的距离（约25步）",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农调整灌溉的过程使得庄稼有了一个最近安全距离",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "庄稼的最近安全距离与最舒适灌溉距离相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'近点'、'眼睛'、'调节'等禁忌词。",
+    "避免将'明视距离'直接映射为'舒适距离'，但可保留其作为状态。",
+    "注意保持因果方向：过程导致条件，条件关联状态。"
+  ],
+  "mapping_context_sha256": "45b68ab01bca00d4b2a8f7aa91fac4df6ef15eeb1743a98ddda63ee8d4712e29",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "fcb2c3b0757b6e2f801b6b2e9b93452f1bb5910d4d159ce4781af92e5d4f1526"
+  }
+}

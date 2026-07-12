@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "target_concept": "缓慢氧化",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完全忠实于缓慢氧化的定义：稻谷与空气缓慢作用导致变质、重量减轻，无火焰、无明显热量，且不易察觉。",
+    "implicitness": "目标概念名称和别名均未在故事正文中出现，核心机制通过稻谷变质过程隐含表达，符合隐含性要求。",
+    "mapping_clarity": "故事中稻谷变质与缓慢氧化的映射清晰：稻谷与空气作用、过程缓慢、无发光发热、不易察觉，均直接对应概念机制。",
+    "readability": "故事语言流畅自然，情节简单易懂，适合目标读者，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过阿诚的困惑和师父的解释，有效传达了缓慢氧化的特征和实际影响，并隐含了减缓方法（通风干燥），教学价值高。",
+    "novelty": "使用粮仓账房作为类比场景有一定新意，但缓慢氧化与食物腐烂的关联较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑加入一个对比事件（如燃烧）来强化缓慢氧化与剧烈氧化的区别，提升教学深度。",
+    "在故事结尾可更明确地暗示缓慢氧化与呼吸、酿造等其他例子的联系，扩展知识迁移。"
+  ],
+  "rule_findings": {
+    "story_token_count": 617,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完全忠实于缓慢氧化的定义：稻谷与空气缓慢作用导致变质、重量减轻，无火焰、无明显热量，且不易察觉。",
+      "implicitness": "目标概念名称和别名均未在故事正文中出现，核心机制通过稻谷变质过程隐含表达，符合隐含性要求。",
+      "mapping_clarity": "故事中稻谷变质与缓慢氧化的映射清晰：稻谷与空气作用、过程缓慢、无发光发热、不易察觉，均直接对应概念机制。",
+      "readability": "故事语言流畅自然，情节简单易懂，适合目标读者，无冗余或晦涩表达。",
+      "pedagogical_value": "故事通过阿诚的困惑和师父的解释，有效传达了缓慢氧化的特征和实际影响，并隐含了减缓方法（通风干燥），教学价值高。",
+      "novelty": "使用粮仓账房作为类比场景有一定新意，但缓慢氧化与食物腐烂的关联较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可考虑加入一个对比事件（如燃烧）来强化缓慢氧化与剧烈氧化的区别，提升教学深度。",
+      "在故事结尾可更明确地暗示缓慢氧化与呼吸、酿造等其他例子的联系，扩展知识迁移。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

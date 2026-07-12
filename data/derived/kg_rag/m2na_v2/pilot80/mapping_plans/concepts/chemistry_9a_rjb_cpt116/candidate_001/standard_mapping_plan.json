@@ -1,0 +1,117 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代工匠用筛网分选谷物",
+  "characters": [
+    "老工匠",
+    "学徒"
+  ],
+  "objects": [
+    "混合谷物（含米粒和谷壳）",
+    "细密筛网",
+    "风力（鼓风）",
+    "精选米粒"
+  ],
+  "conflict": "学徒需要从混合谷物中快速得到纯净的米粒，但直接用手挑拣效率太低。",
+  "event_chain": [
+    "老工匠教给学徒一种用筛网分选谷物的方法",
+    "这种方法属于古代粮食加工技术",
+    "米粒是粮食加工的目标产物",
+    "另一种方法是扬谷法（利用风力吹走谷壳）",
+    "细密筛网是分选的关键工具",
+    "风力（鼓风）是辅助条件",
+    "通过筛网和风力，最终得到精选米粒"
+  ],
+  "turning_point": "学徒领悟到筛网能根据颗粒大小不同进行分离，结合风力可提高效率。",
+  "resolution_state": "学徒成功用筛网和风力制得大量精选米粒，并理解了多级分选的原理。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "用筛网分选谷物的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "古代粮食加工技术",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "米粒",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "扬谷法（利用风力吹走谷壳）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "细密筛网",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "风力（鼓风）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "精选米粒",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "用筛网分选谷物的方法 是 古代粮食加工技术 的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "米粒 与 古代粮食加工技术 相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "扬谷法 是 古代粮食加工技术 的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "细密筛网 使 用筛网分选谷物的方法 成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "风力（鼓风） 使 用筛网分选谷物的方法 成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "用筛网分选谷物的方法 产生 精选米粒",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保未使用任何目标概念名称、别名或禁止术语。",
+    "所有机制节点和边均已映射，方向保持。",
+    "课程桥接上下文未作为因果机制处理。",
+    "故事载体来自单一源域：古代粮食加工。"
+  ],
+  "mapping_context_sha256": "176a6f19774e004581b66a659675baf0ff4d36e6a9c3f31dd949d151e4739b2c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "73833ab8e492ca56dcf20dbd839108cf02f423b96c70d786ca475ac229f29e60"
+  }
+}

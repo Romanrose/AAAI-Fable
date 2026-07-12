@@ -1,0 +1,59 @@
+{
+  "core_question": "大气压强的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "大气压强 --prerequisites_for--> 沸点",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:14999"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "沸点 --relates_to--> 大气压强",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:18222"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:14999",
+    "normalized:edge:18222"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "大气压强",
+    "chemistry_9a_rjb_cpt11",
+    "气压",
+    "标准大气压强"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [
+      "normalized:edge:14999",
+      "normalized:edge:18222"
+    ],
+    "must_cover_path_ids": []
+  }
+}

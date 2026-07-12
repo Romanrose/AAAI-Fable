@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Concept2Fable_AAAI2027.aux
+The style file: aaai2027.bst
+Database file #1: concept2fable_references.bib
+You've used 10 entries,
+            2840 wiz_defined-function locations,
+            645 strings with 6783 characters,
+and the built_in function-call counts, 8683 in all, are:
+= -- 690
+> -- 503
+< -- 4
++ -- 185
+- -- 176
+* -- 631
+:= -- 1349
+add.period$ -- 40
+call.type$ -- 10
+change.case$ -- 102
+chr.to.int$ -- 11
+cite$ -- 10
+duplicate$ -- 564
+empty$ -- 546
+format.name$ -- 199
+if$ -- 1719
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 127
+newline$ -- 54
+num.names$ -- 40
+pop$ -- 274
+preamble$ -- 1
+purify$ -- 92
+quote$ -- 0
+skip$ -- 298
+stack$ -- 0
+substring$ -- 426
+swap$ -- 336
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 90
+warning$ -- 0
+while$ -- 64
+width$ -- 0
+write$ -- 136

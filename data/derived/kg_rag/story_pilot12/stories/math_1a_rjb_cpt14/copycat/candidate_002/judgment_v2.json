@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n1 (长方体) to '入口条件核对' and n2 (正方体) to '第二道转化环节', but the mechanism graph defines n2 as a special case of n1 (edge e2: is_a). The story does not preserve this hierarchical relation; instead, it treats them as sequential steps. Edge e1 (n1 is_a n3) is mapped to '归入更大的共同规则', which is vague and does not clearly convey the classification relation. This makes the mapping weaker than a realization that explicitly shows n2 being a subtype of n1."
+  },
+  "revision_instructions": [
+    "Revise edge e2 mapping: explicitly show that '第二道转化环节' (n2) is a special case of '入口条件核对' (n1), not just a sequential step.",
+    "Revise edge e1 mapping: clarify that '第三道转化环节' (n3) is a classification rule that applies to '入口条件核对' (n1), using a more precise story event.",
+    "Ensure all edge mappings (e3-e6) are distinct and not all described as '放在一起比较', as they represent different relations (relates_to, enables)."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

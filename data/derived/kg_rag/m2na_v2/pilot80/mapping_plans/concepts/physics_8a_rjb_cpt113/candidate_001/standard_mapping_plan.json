@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的水井系统",
+  "characters": [
+    "村民",
+    "井匠"
+  ],
+  "objects": [
+    "水井",
+    "井绳",
+    "木桶",
+    "井口",
+    "井底"
+  ],
+  "conflict": "村民发现从井中打水时，木桶能到达的最远位置（井口）和最近位置（井底）受到井绳长度和井深限制，但井匠认为正常水井的井绳应足够长，使木桶能到达无限远的井口。",
+  "event_chain": [
+    "井匠通过调节井绳长度，使木桶能到达不同深度的水面",
+    "井绳调节使木桶能到达井口（最远点）",
+    "井绳调节使木桶能到达井底（最近点）",
+    "正常水井的井绳长度使木桶能到达无限远的井口",
+    "正常水井的井深使木桶能到达约10米的井底"
+  ],
+  "turning_point": "村民意识到井绳调节是决定木桶到达范围的关键，而正常水井的井绳长度和井深是理想条件。",
+  "resolution_state": "村民理解了井绳调节机制，并接受了正常水井的井绳应足够长、井深适中的标准。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "井匠调节井绳长度",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "木桶能到达的井口（最远点）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "木桶能到达的井底（最近点）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "正常水井的井绳长度使木桶能到达无限远的井口",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "正常水井的井深使木桶能到达约10米的井底",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "井匠调节井绳长度使木桶能到达井口",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "井匠调节井绳长度使木桶能到达井底",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "正常水井的井绳长度限制木桶能到达的井口位置",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "正常水井的井深限制木桶能到达的井底位置",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'远点'或'近点'等禁止术语",
+    "确保所有机制节点和边都被映射，且方向正确",
+    "避免将课程桥上下文（如'眼睛调节'）作为因果机制引入故事",
+    "保持单一源域（水井系统）的一致性，不混合其他隐喻"
+  ],
+  "mapping_context_sha256": "05101a708320bbcddea6fd8e57291889b464b2061a6d7ab75b44fc08734e26cb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "18eebdf6bb509c279fe5c763e0819fcfec7125261f113863625ec1554b6b14bc"
+  }
+}

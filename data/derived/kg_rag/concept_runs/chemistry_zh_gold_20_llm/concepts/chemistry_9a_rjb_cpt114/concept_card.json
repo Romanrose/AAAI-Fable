@@ -1,0 +1,67 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt114",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "工业制取氧气的方法",
+  "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+  "aliases": [],
+  "examples": [
+    "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+    "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt66",
+        "label": "Concept",
+        "name": "氧气",
+        "definition": "一种重要的气体单质，空气中体积分数约为21%，可由高锰酸钾、过氧化氢溶液、氯酸钾等分解制取，是许多燃烧和化工过程必需的物质。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt115",
+        "label": "Concept",
+        "name": "液态空气的分馏制氧",
+        "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt116",
+        "label": "Concept",
+        "name": "膜分离制取富氧空气",
+        "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "工业制取氧气的方法"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "子代与亲代在特征上相同（遗传）但部分不同（变异）",
+      "evidence": "这田里的豌豆，就像刻了模子似的，年年都是老样子。",
+      "narrative_anchor": "年年都是老样子"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "豌豆的遗传和变异属于生物的共同特征",
+      "evidence": "老农人一辈子住在山脚下，守着祖上传下来的几亩豌豆田。",
+      "narrative_anchor": "祖上传下来的几亩豌豆田"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "遗传和变异现象支持了生物共同特征的理解",
+      "evidence": "这田里的豌豆，就像刻了模子似的，年年都是老样子。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "年年都是老样子"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt102",
+    "subject": "biology",
+    "canonical_name": "种子萌发的环境条件",
+    "aliases": [],
+    "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "种子萌发的环境条件"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "种子萌发的环境条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "种子萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt101:definition",
+          "kg-node:biology_7a_rjb_cpt101:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "适宜的温度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition",
+          "kg-node:biology_7a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "一定的水分",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt104:definition",
+          "kg-node:biology_7a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "充足的空气（氧气）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "evidence",
+        "text": "探究种子萌发的环境条件（四瓶对照实验）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp9:conclusion",
+          "kg-node:biology_7a_rjb_exp9:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14133"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10773"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10774"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10775"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22413"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "种子萌发的环境条件"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt102",
+      "name": "种子萌发的环境条件",
+      "label": "Concept",
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt101",
+        "name": "种子萌发"
+      },
+      {
+        "id": "biology_7a_rjb_cpt103",
+        "name": "适宜的温度"
+      },
+      {
+        "id": "biology_7a_rjb_cpt104",
+        "name": "一定的水分"
+      },
+      {
+        "id": "biology_7a_rjb_cpt105",
+        "name": "充足的空气（氧气）"
+      },
+      {
+        "id": "biology_7a_rjb_exp9",
+        "name": "探究种子萌发的环境条件（四瓶对照实验）"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:14133",
+        "source_id": "biology_7a_rjb_cpt102",
+        "source_name": "种子萌发的环境条件",
+        "target_id": "biology_7a_rjb_cpt101",
+        "target_name": "种子萌发",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt101",
+        "neighbor_name": "种子萌发",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10772",
+        "source_id": "biology_7a_rjb_cpt102",
+        "source_name": "种子萌发的环境条件",
+        "target_id": "biology_7a_rjb_cpt101",
+        "target_name": "种子萌发",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt101",
+        "neighbor_name": "种子萌发",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10773",
+        "source_id": "biology_7a_rjb_cpt103",
+        "source_name": "适宜的温度",
+        "target_id": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "biology_7a_rjb_cpt103",
+        "neighbor_name": "适宜的温度",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10774",
+        "source_id": "biology_7a_rjb_cpt104",
+        "source_name": "一定的水分",
+        "target_id": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "biology_7a_rjb_cpt104",
+        "neighbor_name": "一定的水分",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10775",
+        "source_id": "biology_7a_rjb_cpt105",
+        "source_name": "充足的空气（氧气）",
+        "target_id": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "biology_7a_rjb_cpt105",
+        "neighbor_name": "充足的空气（氧气）",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:22413",
+        "source_id": "biology_7a_rjb_exp9",
+        "source_name": "探究种子萌发的环境条件（四瓶对照实验）",
+        "target_id": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "biology_7a_rjb_exp9",
+        "neighbor_name": "探究种子萌发的环境条件（四瓶对照实验）",
+        "score": 0.95,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 6,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "种子萌发的环境条件",
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14133] 种子萌发的环境条件 --prerequisites_for--> 种子萌发"
+    ],
+    "process_summary": [
+      "[normalized:edge:10772] 种子萌发的环境条件 --is_a--> 种子萌发",
+      "[normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:10774] 一定的水分 --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:10775] 充足的空气（氧气） --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:22413] 探究种子萌发的环境条件（四瓶对照实验） --verifies--> 种子萌发的环境条件"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:14133",
+    "normalized:edge:10772",
+    "normalized:edge:10773",
+    "normalized:edge:10774",
+    "normalized:edge:10775",
+    "normalized:edge:22413"
+  ],
+  "provenance": {
+    "seed_sha256": "92b6c84c6a22a78c130aa21a9834212ace89e0d5c93649007da46ba6994b5a3b",
+    "retrieval_sha256": "062b880eca71af1496ddfad47a1be60ae46e79f14b8121920981f9680b53226a",
+    "mechanism_record_sha256": "e07426bdb5378fab2c53ba9a85d374f32363bacb88a99b8d3773627c86b1c7de"
+  }
+}

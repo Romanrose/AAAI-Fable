@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过山顶与山脚烧水时水剧烈汽化的温度不同，准确传达了沸点随大气压强改变这一核心概念，且未出现任何与定义冲突的表述。",
+    "implicitness": "全文未出现'沸点'一词，但通过'水翻滚的温度不同'、'剧烈汽化的温度随环境改变'等描述，完整隐含了概念，符合禁止术语要求。",
+    "mapping_clarity": "故事中师徒对话和温度计测量清晰映射了沸点与压强的关系，事件链从现象到解释再到应用，映射自然且易于理解。",
+    "readability": "语言流畅，情节连贯，对话生动，字数适中，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过观察、疑问、实验、解释和迁移应用，完整呈现了概念的学习过程，能有效帮助学生理解沸点受压强影响，并培养科学思维。",
+    "novelty": "以茶师烧水为情境，将沸点概念融入日常生活，虽非全新创意，但细节丰富、类比恰当，具有一定的新颖性。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事结尾增加一个简短的小实验提示，如'回家试试用高压锅烧水'，以强化概念迁移。",
+    "可进一步强调'剧烈汽化'与'温度'的关系，避免读者误以为翻滚程度直接代表温度高低。"
+  ]
+}

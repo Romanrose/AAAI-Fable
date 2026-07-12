@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly enumerates each condition (foundation, materials, ventilation) and their verification, closely mirroring the mechanism's condition-process structure. The mapping is observably better than a generic 'build bridge' story because it preserves the 'is_a' hierarchy (e.g., '稳固的地基是桥址的施工条件的一种') and the 'verifies' relation (engineer checks confirm conditions). The weakest point is edge e1: while the story shows conditions enabling construction, the causal link is implicit (conditions checked → construction starts) rather than explicitly stated as 'conditions enable building'. This is still acceptable but slightly less direct than other edges."
+  },
+  "revision_instructions": [
+    "Consider making the causal relation between conditions and construction more explicit, e.g., adding a sentence like '只有这些条件都满足了，桥梁才能建成' to strengthen edge e1."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "旧账本和新账本在潮湿仓库中缓慢受潮、发霉、字迹模糊的过程",
+      "evidence": "学徒每天天不亮就点起油灯，把一箱箱新账本搬进仓库，整整齐齐码在木架上。",
+      "narrative_anchor": "学徒每天天不亮就点起油灯，把一箱箱新账本搬进仓库，整整齐齐码在木架上。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

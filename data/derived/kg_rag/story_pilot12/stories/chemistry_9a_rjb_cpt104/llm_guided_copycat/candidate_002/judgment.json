@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n6",
+    "weakest_edge_id": "e5",
+    "distinguishing_reason": "The story explicitly and repeatedly anchors the core mechanism '清蒸鲈鱼方法' (n1) as the central example, with clear pedagogical dialogue and demonstration. In contrast, '红烧肉方法' (n6) and its edge e5 are only mentioned in passing as another instance of '烹饪方法的一种', without any elaboration or integration into the plot, making them weaker in narrative presence. This mapping is observably better than a hypothetical one where n6 is omitted entirely, because the mention still preserves the relation, but it is weaker than if n6 were given its own mini-demonstration."
+  },
+  "revision_instructions": [
+    "Consider giving '红烧肉方法' (n6) and '糖醋排骨方法' (n7) a brief mention in the resolution or a separate example to strengthen their narrative presence, though current coverage meets the gate."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

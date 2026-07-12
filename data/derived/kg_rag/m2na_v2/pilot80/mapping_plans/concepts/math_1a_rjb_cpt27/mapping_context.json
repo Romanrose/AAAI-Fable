@@ -1,0 +1,156 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt27",
+    "subject": "math",
+    "canonical_name": "数量的比较",
+    "aliases": [],
+    "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "数量的比较"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "数字6的认识：通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "数字7的认识：通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt24:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt27:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n3",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19310"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19311"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数量的比较"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt27",
+      "name": "数量的比较",
+      "label": "Concept",
+      "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt23",
+        "name": "数字6的认识"
+      },
+      {
+        "id": "math_1a_rjb_cpt24",
+        "name": "数字7的认识"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:19310",
+        "source_id": "math_1a_rjb_cpt27",
+        "source_name": "数量的比较",
+        "target_id": "math_1a_rjb_cpt23",
+        "target_name": "数字6的认识",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "math_1a_rjb_cpt23",
+        "neighbor_name": "数字6的认识",
+        "score": 0.9,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19311",
+        "source_id": "math_1a_rjb_cpt27",
+        "source_name": "数量的比较",
+        "target_id": "math_1a_rjb_cpt24",
+        "target_name": "数字7的认识",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "math_1a_rjb_cpt24",
+        "neighbor_name": "数字7的认识",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "数量的比较",
+      "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19310] 数量的比较 --relates_to--> 数字6的认识",
+      "[normalized:edge:19311] 数量的比较 --relates_to--> 数字7的认识"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:19310",
+    "normalized:edge:19311"
+  ],
+  "provenance": {
+    "seed_sha256": "b7764036dbfa3eb751edce2a78c04cd09fe072ea2df1d6f1547b9391c187f13d",
+    "retrieval_sha256": "932af923d423f4528373ae80da00901474778908a579e3657ee5233e9e03cc81",
+    "mechanism_record_sha256": "4c00649fec0758759c8f82738365f71e3c8fbf0b76bf0259c8cfbc549c396910"
+  }
+}

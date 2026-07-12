@@ -1,0 +1,17 @@
+In the garden workshop, a careful caretaker prepared a special plot with rich soil and steady water. He planted seeds from a single parent flower, expecting them to bloom identically. The plot used these conditions to produce visible growth—sprouts emerged, leaves unfurled, and buds formed.
+
+Nearby, wild bees visited the flowers, carrying pollen from other plants. Some sprouts grew tall with petals as red as the parent, while others showed streaks of yellow or curled leaves. The caretaker observed this and suspected something deeper. He performed an experiment: he isolated one red bloom and one streaked bloom, replanting their seeds in identical conditions. The red bloom’s offspring were all red; the streaked bloom’s offspring varied again.
+
+A visible change revealed the truth: the parent’s traits were inherited, but the bees’ pollen introduced variation. The system stabilized once the caretaker understood that both inheritance and variation depended on hidden conditions—the soil and water for growth, and the bees for change. The resulting effects became observable: some traits stayed constant, others shifted.
+
+**Alignment Table:**
+```json
+[
+  {"concept_role": "target concept (遗传和变异)", "story_evidence": "The caretaker observed that some offspring matched the parent (inheritance) while others had new traits (variation), caused by bee pollen."},
+  {"concept_role": "prerequisites", "story_evidence": "The caretaker prepared rich soil and steady water before planting."},
+  {"concept_role": "related concepts", "story_evidence": "Wild bees visiting flowers served as a neighboring process that introduced variation."},
+  {"concept_role": "outcomes", "story_evidence": "Visible growth—sprouts, leaves, buds, and flowers—showed the results of inheritance and variation."},
+  {"concept_role": "experiments", "story_evidence": "The caretaker isolated and replanted seeds from red and streaked blooms to test whether traits were inherited or varied."},
+  {"concept_role": "exercises", "story_evidence": "The exercise statement '一猪生九仔, 连母十个样' describes variation, not inheritance, so the answer should be ×."}
+]
+```

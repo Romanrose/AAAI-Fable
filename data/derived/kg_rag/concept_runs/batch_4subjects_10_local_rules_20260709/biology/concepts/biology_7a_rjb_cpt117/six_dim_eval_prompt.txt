@@ -1,0 +1,606 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "受精",
+  "concept_id": "biology_7a_rjb_cpt117",
+  "concept_definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt117",
+    "fertilization",
+    "受精"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt117",
+      "label": "Concept",
+      "name": "受精",
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "aliases": [
+        "fertilization"
+      ],
+      "examples": [],
+      "retrieval_text": "受精\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt114",
+          "label": "Concept",
+          "name": "传粉",
+          "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt118",
+          "label": "Concept",
+          "name": "果实和种子的形成",
+          "definition": "受精后子房继续发育成果实（子房壁成果皮），子房内胚珠发育成种子，胚珠内受精卵发育成胚。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt71",
+          "label": "Concept",
+          "name": "胚胎工程",
+          "definition": "对生殖细胞、受精卵或早期胚胎细胞进行多种显微操作和处理，然后将获得的胚胎移植到雌性动物体内生产后代，以满足人类的各种需求的技术体系。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt75",
+          "label": "Concept",
+          "name": "合子（受精卵）",
+          "definition": "受精过程中形成的、含有两个染色体组的细胞，即受精卵；受精过程结束后其发育开始。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt76",
+          "label": "Concept",
+          "name": "精子获能",
+          "definition": "刚排出的精子不能立即与卵子受精，必须在雌性动物生殖道发生相应生理变化后才获得受精能力的生理现象。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt77",
+          "label": "Concept",
+          "name": "卵子成熟到MⅡ期",
+          "definition": "卵子在输卵管内进一步成熟，到减数分裂第二次中期（MⅡ期）时，才具备与精子受精的能力。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        },
+        {
+          "id": "biology_xzxbx3_rjb_ch2_s3",
+          "label": "Section",
+          "name": "第三节 胚胎工程",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 6,
+      "candidate_edge_count": 6,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 1629,
+      "summary_chars": 513,
+      "path_chars": 0,
+      "retrieval_context_chars": 2142
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt117",
+    "concept_id": "biology_7a_rjb_cpt117",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt117",
+      "label": "Concept",
+      "name": "受精",
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "aliases": [
+        "fertilization"
+      ],
+      "examples": [],
+      "retrieval_text": "受精\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "biology_7a_rjb_cpt117",
+        "label": "Concept",
+        "name": "受精",
+        "properties": {
+          "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+          "importance": "掌握",
+          "aliases": [
+            "fertilization"
+          ],
+          "retrieval_text": "受精\nConcept\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。\n掌握\nfertilization"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:14139",
+          "source": "biology_7a_rjb_cpt114",
+          "source_name": "传粉",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14964",
+          "source": "biology_xzxbx3_rjb_cpt77",
+          "source_name": "卵子成熟到MⅡ期",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14142",
+          "source": "biology_7a_rjb_cpt117",
+          "source_name": "受精",
+          "target": "biology_xzxbx3_rjb_cpt75",
+          "target_name": "合子（受精卵）",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14140",
+          "source": "biology_7a_rjb_cpt117",
+          "source_name": "受精",
+          "target": "biology_7a_rjb_cpt118",
+          "target_name": "果实和种子的形成",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14141",
+          "source": "biology_7a_rjb_cpt117",
+          "source_name": "受精",
+          "target": "biology_xzxbx3_rjb_cpt71",
+          "target_name": "胚胎工程",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14962",
+          "source": "biology_xzxbx3_rjb_cpt76",
+          "source_name": "精子获能",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "受精",
+          "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+          "formula": "",
+          "importance": "掌握"
+        },
+        "condition_summary": [
+          "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精",
+          "[normalized:edge:14964] 卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+          "[normalized:edge:14142] 受精 --prerequisites_for--> 合子（受精卵）",
+          "[normalized:edge:14140] 受精 --prerequisites_for--> 果实和种子的形成",
+          "[normalized:edge:14141] 受精 --prerequisites_for--> 胚胎工程"
+        ],
+        "process_summary": [],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 6,
+        "candidate_edge_count": 6,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 1629,
+        "summary_chars": 513,
+        "path_chars": 0,
+        "retrieval_context_chars": 2142
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "受精的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "传粉 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14139"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14964"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "受精 --prerequisites_for--> 合子（受精卵）",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14142"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "受精 --prerequisites_for--> 果实和种子的形成",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14140"
+          ]
+        },
+        {
+          "step_id": "s5",
+          "text": "受精 --prerequisites_for--> 胚胎工程",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14141"
+          ]
+        },
+        {
+          "step_id": "s6",
+          "text": "精子获能 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14962"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s4",
+          "target_step_id": "s5",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s5",
+          "target_step_id": "s6",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:14139",
+        "normalized:edge:14964",
+        "normalized:edge:14142",
+        "normalized:edge:14140",
+        "normalized:edge:14141",
+        "normalized:edge:14962"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "受精",
+        "biology_7a_rjb_cpt117",
+        "fertilization"
+      ],
+      "coverage_targets": {
+        "required_step_count": 6,
+        "required_dependency_count": 5,
+        "must_cover_edge_ids": [
+          "normalized:edge:14139",
+          "normalized:edge:14964",
+          "normalized:edge:14142",
+          "normalized:edge:14140",
+          "normalized:edge:14141",
+          "normalized:edge:14962"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "biology_7a_rjb_cpt117",
+      "concept_id": "biology_7a_rjb_cpt117",
+      "story_language": "zh-CN",
+      "source_domain": "屋顶育苗棚",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程",
+        "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成"
+        },
+        {
+          "mechanism_step_id": "s5",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程"
+        },
+        {
+          "mechanism_step_id": "s6",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "受精"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "传粉 --prerequisites_for--> 受精",
+            "卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+            "受精 --prerequisites_for--> 合子（受精卵）",
+            "受精 --prerequisites_for--> 果实和种子的形成",
+            "受精 --prerequisites_for--> 胚胎工程",
+            "精子获能 --prerequisites_for--> 受精"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "避免目的论解释。",
+            "避免把个体努力写成进化原因。",
+            "保留生命系统的条件、过程和结果。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "屋顶育苗棚",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程",
+      "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "受精"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "传粉 --prerequisites_for--> 受精",
+          "卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+          "受精 --prerequisites_for--> 合子（受精卵）",
+          "受精 --prerequisites_for--> 果实和种子的形成",
+          "受精 --prerequisites_for--> 胚胎工程",
+          "精子获能 --prerequisites_for--> 受精"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成"
+      },
+      {
+        "mechanism_step_id": "s5",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程"
+      },
+      {
+        "mechanism_step_id": "s6",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "受精"
+      ]
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "条件、过程和结果被记录员按顺序检查。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：屋顶育苗棚里的隐藏规则\n\n屋顶育苗棚里有一位年轻的记录员，他总觉得眼前的变化只是巧合。\n一天，他把条件、行动和结果一一写在木牌上，发现只有当几个环节同时配合时，那个被观察的场所才会出现稳定变化。\n先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则\n先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则\n先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）\n后来，记录员不再只看表面的结果，而是先找条件，再看过程，最后检查结果是否能重复出现。他明白，真正重要的不是某个名字，而是名字背后那套能被辨认的关系。",
+  "rule_findings": {
+    "story_token_count": 236,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

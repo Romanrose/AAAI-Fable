@@ -1,0 +1,38 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story fails to map any mechanism node or edge with observable evidence; node_coverage and edge_coverage are 0.0, which is far below the 0.8 threshold. The story is a coherent narrative about a garden checkpoint but does not represent the biological process of seed germination or its enabling conditions. The mapping plan's structural carriers (e.g., '入口条件核对' for n2) are not realized in the story text; the story's '前置条件牌' is a generic checklist, not the specific external conditions for germination. Edge mappings are also absent; the story's '共同约束最后判断' is not depicted. This is worse than a story that explicitly shows temperature, water, and air as prerequisites for germination."
+  },
+  "revision_instructions": [
+    "Rewrite the story to explicitly include the three external conditions (适宜的温度、一定的水分、充足的空气) as prerequisites for the germination process (n2 → n1).",
+    "Include the internal seed conditions (胚完整有活性、非休眠) as another prerequisite (n3 → n1).",
+    "Ensure the story length is between 450 and 750 Chinese characters; current length is 810.",
+    "Remove any forbidden terms if present; none found, but maintain avoidance.",
+    "Increase node_coverage and edge_coverage to at least 0.8 by providing direct story evidence for each mechanism node and edge."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

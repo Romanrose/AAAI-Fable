@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt21",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个农夫分梨的故事",
+  "characters": [
+    "老农夫",
+    "大儿子",
+    "二儿子"
+  ],
+  "objects": [
+    "7个梨",
+    "篮子",
+    "图示"
+  ],
+  "conflict": "两个儿子需要从7个梨中分走一部分，但不知道如何分才能公平且符合要求。",
+  "event_chain": [
+    "老农夫拿出7个梨，告诉两个儿子需要分走一些梨，但剩下的梨数必须是6或7。",
+    "大儿子先尝试：他拿走1个梨，剩下6个，符合要求。",
+    "二儿子也尝试：他拿走2个梨，剩下5个，不符合要求。",
+    "老农夫引导他们观察图示，发现需要先知道7可以分成几和几。",
+    "大儿子和二儿子一起列出7的所有分拆：7=1+6, 7=2+5, 7=3+4等。",
+    "他们根据分拆结果，尝试不同的拿法，最终找到所有使剩下6或7的减法算式。"
+  ],
+  "turning_point": "老农夫引导儿子们先列出7的所有分拆方式，然后根据分拆来尝试减法。",
+  "resolution_state": "两个儿子学会了通过分拆数字来找到所有减法算式，成功解决了分梨问题。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "列出7的所有分拆方式（如7=1+6, 7=2+5等）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农夫出示图示，引导儿子们提出‘还剩几个梨’的问题",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "儿子们认识7个梨的数量，并会数数和比较大小",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "儿子们从7个梨中拿走一部分，得到剩下6或7个梨的算式",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "列出分拆方式后，才能正确进行减法操作",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "观察图示并提出问题后，才能进行减法操作",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "认识数字7是进行减法的基础",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘6和7的减法’等禁止术语。",
+    "注意‘分拆数6和7’映射为‘列出7的所有分拆方式’，避免直接使用原词。",
+    "图示映射为‘老农夫出示的图示’，避免出现‘数学问题’等原词。",
+    "所有映射保持机制图的方向，即条件先于过程。"
+  ],
+  "mapping_context_sha256": "c86090c029d45d6e2b89b200c18e96163700e92c9cd8784003f5ca62408ed111",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "cdb632d0f7749147f89c5061b0caa7e08b7fcac9845842ee99b7935dd8e930ee"
+  }
+}

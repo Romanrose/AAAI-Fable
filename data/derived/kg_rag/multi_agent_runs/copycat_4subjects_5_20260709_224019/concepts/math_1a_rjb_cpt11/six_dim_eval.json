@@ -1,0 +1,124 @@
+{
+  "concept_id": "math_1a_rjb_cpt11",
+  "target_concept": "加法的含义",
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 5,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 2,
+    "novelty": 4
+  },
+  "weighted_overall": 2.85,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事描述了流程顺序的重要性，但核心概念‘两个数量合并在一起’并未在故事中体现。故事强调的是步骤顺序，而非数量合并。",
+    "implicitness": "故事正文没有出现‘加法’、‘合并’等禁用术语，也没有出现概念名或别名，完全通过棋局流程隐喻。",
+    "mapping_clarity": "故事中的‘入口条件核对’、‘第二道转化环节’、‘结果验收记录’与机制图中的节点有对应，但核心机制‘两个数量合并’没有对应的故事事件，导致映射不完整。",
+    "readability": "故事语言流畅，情节连贯，角色和道具清晰，适合中文学习者阅读。",
+    "pedagogical_value": "故事强调了顺序和条件的重要性，但未能帮助读者理解‘加法’即‘两个数量合并’这一核心机制，教学价值有限。",
+    "novelty": "故事采用‘规则棋局’和‘记录员、调度员、验收员’的设定，避免了常见的动物寓言或生活场景模板，有一定新颖性。"
+  },
+  "evidence": {
+    "faithfulness": "故事中没有任何事件涉及‘两个数量合并’，所有事件均围绕流程顺序展开。",
+    "implicitness": "故事中未出现‘加法’、‘合并’、‘加法的含义’等任何禁用或相关术语。",
+    "mapping_clarity": "故事中的‘入口条件核对’对应机制图节点n1，‘第二道转化环节’对应n2，‘结果验收记录’对应n3，但n1的核心语义‘表示两个数量合并在一起’在故事中无对应事件。",
+    "readability": "故事段落清晰，对话自然，情节有起承转合，无生僻词汇或复杂句式。",
+    "pedagogical_value": "读者读完故事后可能理解‘流程顺序不可颠倒’，但无法理解‘加法是将两个数量合并’这一数学概念。",
+    "novelty": "故事使用了‘规则棋局’这一较少见的隐喻场景，角色分工明确，避免了‘小动物分水果’等常见模板。"
+  },
+  "revision_suggestions": [
+    "在故事中增加一个明确的事件，例如‘记录员将两堆通行牌合并到同一行记录中’，以体现‘两个数量合并在一起’的核心机制。",
+    "将‘入口条件核对’改为更直接体现‘两个数量’的环节，例如‘先确认两堆牌的数量’，然后‘调度员将两堆牌合并记录’。",
+    "确保故事中的‘合并’动作是故事因果链的关键部分，而不仅仅是流程顺序的附属。"
+  ],
+  "final_status": "reject",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 2,
+      "implicitness": 5,
+      "mapping_clarity": 2,
+      "readability": 4,
+      "pedagogical_value": 2,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": true,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事描述了流程顺序的重要性，但核心概念‘两个数量合并在一起’并未在故事中体现。故事强调的是步骤顺序，而非数量合并。",
+      "implicitness": "故事正文没有出现‘加法’、‘合并’等禁用术语，也没有出现概念名或别名，完全通过棋局流程隐喻。",
+      "mapping_clarity": "故事中的‘入口条件核对’、‘第二道转化环节’、‘结果验收记录’与机制图中的节点有对应，但核心机制‘两个数量合并’没有对应的故事事件，导致映射不完整。",
+      "readability": "故事语言流畅，情节连贯，角色和道具清晰，适合中文学习者阅读。",
+      "pedagogical_value": "故事强调了顺序和条件的重要性，但未能帮助读者理解‘加法’即‘两个数量合并’这一核心机制，教学价值有限。",
+      "novelty": "故事采用‘规则棋局’和‘记录员、调度员、验收员’的设定，避免了常见的动物寓言或生活场景模板，有一定新颖性。"
+    },
+    "evidence": {
+      "faithfulness": "故事中没有任何事件涉及‘两个数量合并’，所有事件均围绕流程顺序展开。",
+      "implicitness": "故事中未出现‘加法’、‘合并’、‘加法的含义’等任何禁用或相关术语。",
+      "mapping_clarity": "故事中的‘入口条件核对’对应机制图节点n1，‘第二道转化环节’对应n2，‘结果验收记录’对应n3，但n1的核心语义‘表示两个数量合并在一起’在故事中无对应事件。",
+      "readability": "故事段落清晰，对话自然，情节有起承转合，无生僻词汇或复杂句式。",
+      "pedagogical_value": "读者读完故事后可能理解‘流程顺序不可颠倒’，但无法理解‘加法是将两个数量合并’这一数学概念。",
+      "novelty": "故事使用了‘规则棋局’这一较少见的隐喻场景，角色分工明确，避免了‘小动物分水果’等常见模板。"
+    },
+    "revision_suggestions": [
+      "在故事中增加一个明确的事件，例如‘记录员将两堆通行牌合并到同一行记录中’，以体现‘两个数量合并在一起’的核心机制。",
+      "将‘入口条件核对’改为更直接体现‘两个数量’的环节，例如‘先确认两堆牌的数量’，然后‘调度员将两堆牌合并记录’。",
+      "确保故事中的‘合并’动作是故事因果链的关键部分，而不仅仅是流程顺序的附属。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "math_1a_rjb_cpt11",
+    "target_concept": "加法的含义",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

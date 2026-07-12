@@ -1,0 +1,48 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "古代工匠制秤",
+  "domain_rationale": "制秤过程中，秤杆上的星花（参照物）是衡量物体重量的标准，与参照物在物理学中作为判断运动的标准相似。",
+  "conflict": "秤杆星花是固定标准，而参照物可以是任意选择的，但映射中星花作为固定参考点，忽略了参照物的可选性。",
+  "event_chain": [
+    "工匠将重物挂在秤钩上",
+    "重物使秤杆发生倾斜（机械运动）",
+    "工匠移动秤砣寻找平衡",
+    "秤杆平衡时，秤砣所在位置的星花（参照物）指示重量"
+  ],
+  "turning_point": "秤砣位置与星花对齐，确定重量",
+  "resolution_state": "秤杆恢复水平，重量被准确读出",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "秤杆上的星花",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "秤杆倾斜与回正的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "不同星花对应不同重量，同一物体在不同星花下重量读数不同",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "秤杆倾斜过程（机械运动）与星花（参照物）的关系是：倾斜程度需通过星花来量化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "星花（参照物）使工匠能够判断重量（运动与静止的相对性）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "重量读数（运动与静止的相对性结果）反过来确认星花（参照物）的准确性",
+      "direction_preserved": true
+    }
+  ]
+}

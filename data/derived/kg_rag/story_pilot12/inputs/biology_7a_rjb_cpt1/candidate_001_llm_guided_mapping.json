@@ -1,0 +1,96 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "农业生产",
+  "domain_rationale": "农田生态系统满足所有生命特征，直接对应生物概念，且每个特征都有具体农事体现。",
+  "conflict": "无直接冲突，但需注意农田作物与生物概念一一对应。",
+  "event_chain": [
+    "农田需要施肥（需要营养）",
+    "农田作物进行光合作用释放氧气（能进行呼吸）",
+    "农田通过落叶和根系分泌废物（能排出废物）",
+    "农田作物从种子长成植株（能生长）",
+    "农田作物开花结果产生新种子（能繁殖）",
+    "农田作物品种代代相传但偶有变异（具有遗传和变异）",
+    "农田作物由细胞构成（由细胞构成）"
+  ],
+  "turning_point": "无转折点，为并列特征描述。",
+  "resolution_state": "农田是一个具有完整生命特征的生态系统。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农田",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "需要施肥",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "进行光合作用释放氧气",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "通过落叶和根系分泌废物",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "从种子长成植株",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "开花结果产生新种子",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "品种代代相传但偶有变异",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "由细胞构成",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农田需要施肥",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农田进行光合作用释放氧气",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农田通过落叶和根系分泌废物",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "农田从种子长成植株",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "农田开花结果产生新种子",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "农田品种代代相传但偶有变异",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "农田由细胞构成",
+      "direction_preserved": true
+    }
+  ]
+}

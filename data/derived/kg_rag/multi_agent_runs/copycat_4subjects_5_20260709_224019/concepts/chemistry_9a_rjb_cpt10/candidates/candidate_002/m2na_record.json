@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "沸点",
+    "aliases": [],
+    "forbidden_terms": [
+      "沸点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14999",
+        "source_name": "大气压强",
+        "target_name": "沸点",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:15075",
+        "source_name": "条件对物质性质的影响",
+        "target_name": "沸点",
+        "relation_semantic_role": "prerequisite"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "记录员翻开分段记录册，发现调度员已经把封存箱搬到了入口处。他皱了皱眉：“入口条件牌核对过了吗？没有那个，后面的登记不能开始。”\n\n调度员摆摆手：“先推进中间流程再说，回头补上就行。”\n\n验收员站在一旁，手里握着通行牌，没有说话。记录员坚持先把条件牌从封存箱里取出，逐一对照铸造工坊的原始材料清单。他发现其中一张条件牌上标注的温度数值与当前环境不符，立刻叫停。\n\n调度员只好停下来，让记录员把条件牌上的数值抄进分段记录册。随后，中间流程才按顺序启动。调度员指挥熔炉升温，记录员在册子上记下每一步转化的状态标签。\n\n验收员这时上前，把通行牌插进结果验收记录的卡槽。他翻看记录册，发现中间流程的状态标签和入口条件牌上的数值无法对应——有一处转化环节的记录被跳过了。调度员承认，他刚才想省事，提前封了一箱材料，没按顺序走完。\n\n三人只好退回起点。记录员重新核对条件牌，调度员按顺序推动转化，验收员最后用通行牌打开封存箱，检查结果记录。这一次，三段记录终于能互相承接，每一笔都落在正确的位置上。\n\n调度员擦擦汗：“原来顺序不能颠倒，每一步都得踩着前一步的脚印走。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件牌核对",
+        "evidence": "入口条件牌",
+        "narrative_anchor": "入口条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "中间流程",
+        "evidence": "中间流程",
+        "narrative_anchor": "中间流程",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动中间流程",
+        "evidence": "入口条件牌核对",
+        "narrative_anchor": "入口条件牌核对",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定中间流程，再推动结果验收记录",
+        "evidence": "中间流程",
+        "narrative_anchor": "中间流程",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的丰收庆典",
+  "characters": [
+    "老村长",
+    "村民甲",
+    "村民乙",
+    "村民丙"
+  ],
+  "objects": [
+    "庆典的筹备",
+    "庆典的成功举办",
+    "充足的粮食储备",
+    "充足的水源储备",
+    "充足的柴火储备",
+    "往年庆典的对照记录"
+  ],
+  "conflict": "村庄能否成功举办丰收庆典，取决于是否同时具备充足的粮食、水源和柴火储备。",
+  "event_chain": [
+    "老村长提出举办丰收庆典需要满足三个条件：充足的粮食储备、充足的水源储备、充足的柴火储备。",
+    "村民甲负责检查粮食储备是否充足。",
+    "村民乙负责检查水源储备是否充足。",
+    "村民丙负责检查柴火储备是否充足。",
+    "三个条件都满足后，庆典的筹备工作才能开始。",
+    "庆典的筹备完成后，庆典才能成功举办。",
+    "往年庆典的对照记录验证了这些条件的重要性。"
+  ],
+  "turning_point": "三个条件全部满足，庆典筹备得以启动。",
+  "resolution_state": "庆典成功举办，村庄欢庆丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "庆典的筹备",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "庆典的成功举办",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "充足的粮食储备",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "充足的水源储备",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "充足的柴火储备",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "往年庆典的对照记录",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "庆典的筹备 enables 庆典的成功举办",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "充足的粮食储备 is_a 庆典的筹备",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "充足的水源储备 is_a 庆典的筹备",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "充足的柴火储备 is_a 庆典的筹备",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "往年庆典的对照记录 verifies 庆典的筹备",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何与种子萌发相关的术语。",
+    "所有映射均基于一个连贯的村庄庆典故事，避免使用多个不相关的比喻。",
+    "边缘方向已严格保留，例如条件节点指向筹备节点，筹备节点指向成功举办节点。",
+    "未使用任何目标概念名称、别名或禁止术语。"
+  ],
+  "mapping_context_sha256": "573f207f2a855bfc4526da2f4c2ec6ec3899ad4d8bdc0b54387cdcfa9fbad025",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f13a242655d9233c42e2b442b467872b599b7d951ecda2dd477913583750ac33"
+  }
+}

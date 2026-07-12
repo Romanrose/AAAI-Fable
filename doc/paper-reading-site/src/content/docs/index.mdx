@@ -1,73 +1,127 @@
 ---
-title: 让知识活起来
-description: AI 如何将枯燥教材幻化为动人寓言。
+title: concept2fable
+description: 从课程知识到可验证教学寓言的端到端研究流程。
 template: splash
 ---
 
-# 让知识“活”起来：AI 如何将枯燥教材幻化为动人寓言？
+concept2fable 是一条面向教学寓言生成的可追溯流程：从课程知识中检索可引用的证据，显式建成机制图；让多个 Copycat 式映射候选竞争；再把胜出的映射计划写成寓言；最后从故事反向核对结构，并评估它是否真正适合教学。
 
-你是否还记得小时候听过的《农夫与蛇》或《龟兔赛跑》？寓言之所以能跨越时间，是因为它能把抽象道理压缩进角色、冲突和结局里，让读者在故事中理解结构。
+它的目标不是把一个概念换成几只动物，而是为每篇寓言保留一条可检查的证据链：**它解释什么、为什么这样映射、故事是否保留了机制、学生是否可能从中学到正确内容。**
 
-这个网站围绕一个研究构想展开：**Concept-to-Fable Synthesis**，即利用课程对齐知识图谱驱动，将小学全学科知识点系统性地转化为高质量、可解释、可评测的教学寓言故事数据集。
+```text
+课程概念 / 教学目标
+        ↓
+图检索与证据 → 机制图 → Copycat 式候选映射竞争 → 寓言叙事
+                                                      ↓
+                         反向结构对齐与教育质量评测 ←┘
+```
 
-这里的“论文阅读”不是泛读 25 篇文献，而是围绕一个具体问题追问：**如果我要把教材知识点稳定地变成寓言故事，每篇论文能帮我解决哪一环？它能直接借鉴什么？又有哪些地方不能照搬？**
+## 当前流程
 
-## 四个核心支柱
+### [01 · 图检索与证据](/pillars/retrieval-evidence/)
 
-- **知识图谱**：解决“讲什么”和“按什么顺序讲”的问题。课程对齐的概念、技能、章节、实验、习题和先修关系，为寓言生成提供可追溯的知识输入，避免模型只凭一个松散 prompt 编故事。
-- **结构映射**：解决“知识逻辑如何变成故事逻辑”的问题。它要求科学实体、概念关系、因果链和解释步骤，能够对应到寓言中的角色、冲突、行动和结局，从而让故事不是漂亮但跑偏的比喻。
-- **层次化生成**：解决“怎么稳定写出来”的问题。先把知识链规划成故事线或寓言骨架，再扩写成正文，并在生成过程中加入可控条件、多阶段检查和必要的重写。
-- **评测**：解决“怎么证明它真的有用”的问题。评测不仅看语言是否流畅，还要看知识是否准确、映射是否忠实、故事是否完整、阅读难度是否匹配年级，以及学生或教师是否真的能从中受益。
+**回答的问题：这个概念应当依据哪些课程事实来讲？**
 
-## 推荐阅读路径
+系统从目标概念出发，在课程知识图中做目标中心的自适应检索：优先保留直接相关的节点和边，只有在直连结构不足时才扩展少量两跳路径。每条候选证据都保留来源、关系和检索决策，避免后续叙事只依赖无来源的通用常识。
 
-这 25 篇论文可以按“先搭知识骨架，再做映射，再生成故事，最后评测”的顺序阅读。
+**输入**：概念种子、年级/学科信息、课程图谱。  
+**输出**：带证据来源的 `RetrievalPackage`。  
+**下一步的约束**：桥接关系只用于理解上下文，不能被误写成机制证据。
 
-### 1. 课程知识如何结构化
+完整阶段说明和全部适配文献见[图检索与证据](/pillars/retrieval-evidence/)，重点参考 [K12-KGraph](/papers/k12-kgraph/)、[Concept Extraction and Prerequisite Relation Learning](/papers/concept-extraction-prerequisite/) 与 [Amar](/papers/amar-kgqa/)。
 
-先读这一组，理解教材知识点、先修关系、课程顺序和教育资源如何被组织成可计算结构：
+### [02 · 机制图](/pillars/mechanism-graph/)
 
-1. [K12-KGraph](/papers/k12-kgraph/)：课程对齐知识图谱，是 Concept-to-Fable 最核心的 KG 参照。
-2. [Concept Extraction and Prerequisite Relation Learning](/papers/concept-extraction-prerequisite/)：从教育数据中抽取概念和先修关系。
-3. [MOOCCube](/papers/mooccube/)：大规模教育资源、概念和学习行为的数据组织方式。
-4. [Educational Material to Knowledge Graph Conversion](/papers/educational-material-to-kg/)：从教育材料转换到知识图谱的方法论。
-5. [Guiding Generative Storytelling with Knowledge Graphs](/papers/kg-guided-storytelling/)：连接 KG 与故事生成，说明图结构如何参与叙事控制。
+**回答的问题：知识背后必须保留的条件、过程、因果和结果是什么？**
 
-### 2. 知识逻辑如何映射成寓言逻辑
+检索到的证据不会直接被改写成故事。M2NA 先将其组织为 `MechanismGraph`：节点表示要保留的机制成分，带方向的边表示条件、作用、变化或因果关系。严格校验与人工审核发生在映射之前；只有已批准的机制图才能进入故事化阶段。
 
-再读这一组，理解类比、隐喻、故事级映射和自动标注如何支撑“知识点到寓言”的可解释转换：
+**输入**：`RetrievalPackage`。  
+**输出**：已验证、可审核的 `MechanismGraph`。  
+**守住的边界**：节点和边的身份不由下游生成器修改；未通过审核的机制不进入实验主流程。
 
-6. [STORYANALOGY](/papers/storyanalogy/)：故事级类比与 Structure-Mapping Theory，是结构映射的核心参照。
-7. [Analogy Generation by Prompting LLMs](/papers/analogy-generation-llms/)：用 LLM 生成类比及类比解释。
-8. [Metaphor Generation with Conceptual Mappings](/papers/metaphor-generation-conceptual-mappings/)：用概念映射控制隐喻生成。
-9. [A Survey on Automatic Generation of Figurative Language](/papers/figurative-language-generation-survey/)：修辞生成总览，用来区分寓言、隐喻、类比和其他 figurative language。
-10. [Can Language Models Serve as Analogy Annotators?](/papers/analogy-annotators/)：用 LLM 辅助检查故事级类比映射。
-11. [Unlocking Scientific Concepts](/papers/scientific-concept-analogies/)：科学概念类比在学生理解和课堂实践中的效果。
+这一层把“讲得像”与“讲得对”分开：故事可以有创造性，但不能自行发明或颠倒知识机制。完整输入、schema、审核门槛和适配文献见[机制图](/pillars/mechanism-graph/)。
 
-### 3. 寓言故事如何稳定生成
+### [03 · Copycat 式候选映射竞争](/pillars/copycat-mapping-competition/)
 
-然后读这一组，理解故事生成从开放式生成走向可控生成、规划生成和任务化生成的技术路线：
+**回答的问题：怎样把机制逻辑转换为故事逻辑，同时不丢失结构？**
 
-12. [Hierarchical Neural Story Generation](/papers/hierarchical-neural-story-generation/)：分层故事生成的早期代表。
-13. [Towards Controllable Story Generation](/papers/towards-controllable-story-generation/)：故事生成中的控制变量思想。
-14. [Plan-and-Write](/papers/plan-and-write/)：先规划 storyline，再扩写故事，是生成流程核心参考。
-15. [Controllable Neural Story Plot Generation via Reward Shaping](/papers/controllable-plot-reward-shaping/)：用 reward shaping 控制 plot 目标。
-16. [Automatic Story Generation Survey](/papers/automatic-story-generation-survey/)：自动故事生成方法总览。
-17. [Controllable Text Generation Survey](/papers/controllable-text-generation-survey/)：可控文本生成总览，用来选择控制策略。
-18. [A Survey on LLMs for Story Generation](/papers/llm-story-generation-survey/)：LLM 时代故事生成的 taxonomy 和挑战。
-19. [SS-GEN](/papers/ss-gen/)：特定用途故事生成框架，强调约束、流程和评测。
+当前主方法为 [LLM-Guided Copycat](/methodology/)。它把 LLM 用作语义候选提出者，而不是最终裁判：对同一已审核机制图，`semantic-scout/v1` 一次提出 **3 个**不同故事域的映射计划；每个计划须为全部机制节点给出故事载体、为全部机制边给出有方向的故事关系。
 
-### 4. 生成结果如何评测和形成数据集
+候选随后经历确定性门控和排序：节点/边全覆盖、标识符合法、边方向保持、禁用术语不泄漏；再结合覆盖度、载体与关系多样性、叙事骨架和模板风险评分。若检测到重复载体、重复关系或序数占位符，元监控器最多做一次不改变深层结构的受约束修订。
 
-最后读这一组，理解寓言数据、道德故事、教育故事和分级教学回答如何被标注、筛选和验证：
+**输入**：已批准的 `MechanismGraph` 与检索上下文。  
+**输出**：`Validated Mapping Plan`，以及全部候选、评分和修订轨迹。  
+**当前对比**：标准映射、确定性 Copycat 与 LLM-guided Copycat 各保留 3 个候选，便于比较。
 
-20. [Moral Stories](/papers/moral-stories/)：规范、意图、行动、后果的结构化故事数据。
-21. [STORAL](/papers/storal/)：中英文道德故事理解与生成任务。
-22. [TF1-EN-3M Synthetic Moral Fables](/papers/synthetic-moral-fables/)：大规模合成寓言数据集与筛选 pipeline。
-23. [LegalStories](/papers/legalstories/)：用故事帮助非专家理解复杂概念，并通过实验验证学习效果。
-24. [Classroom AI](/papers/classroom-ai/)：分年级教学回答和可读性适配。
-25. [Multimodal Math Story Generation](/papers/multimodal-math-story-generation/)：数学教育中的情境化/多模态故事生成参考。
+这一步是“从概念到寓言”的核心，不等同于完整 Copycat 复现；当前 MVP 尚无动态 slipnet、coderack 和非单调温度反馈。阶段全貌见[Copycat 式候选映射竞争](/pillars/copycat-mapping-competition/)，实现细节见[当前实验方法](/methodology/)。
 
-## 如何使用本站
+### [04 · 寓言叙事](/pillars/fable-narrative/)
 
-每篇论文页面都不是普通摘要，而是一张围绕 Concept-to-Fable 的定向阅读卡。你会看到：这篇论文支撑哪一部分、能借鉴什么、有哪些局限，以及如果用到“知识点转寓言”需要怎样改造。
+**回答的问题：如何将通过验证的映射计划写成可读、可控的寓言？**
+
+生成器只接收故事侧的映射字段和禁用术语，不直接改动机制图。它依据故事域、角色/物体、冲突、事件链、转折、解决状态，以及节点—载体和边—关系映射写出候选寓言；这使创作空间保留在叙事表达层，而不是机制事实层。
+
+**输入**：通过验证的 `Mapping Plan`。  
+**输出**：每个概念—策略—候选对应的寓言草稿及生成记录。  
+**过程控制**：计划先行；需要修订时，修订与再判定均留下独立产物，不覆盖原候选。
+
+这一阶段同时吸收“先规划、后写作”、可控生成、多智能体协作与传统寓言文体约束；完整方法边界和文献见[寓言叙事](/pillars/fable-narrative/)。
+
+### [05 · 反向结构对齐与教育质量评测](/pillars/reverse-alignment-evaluation/)
+
+**回答的问题：故事不仅好读，而且真的保留了机制并适合教学吗？**
+
+评测不从“文笔优不优美”出发，而是从完成的寓言反向追问机制图：故事是否覆盖必须保留的节点和边？因果或条件方向有没有被倒置？是否泄漏学术术语、落入模板化表达，或只写出一个貌似相关的情节？对齐器与判定器都可查看机制图，用保守证据检查故事侧的主张。
+
+教育质量则与结构保真并列：当前判定汇总知识忠实性、映射清晰度、可读性等信号，并结合规则检查、LLM 判定和人工复核。最终可比较三种映射策略的覆盖率、方向准确度、接受/修订/拒绝状态、泄漏风险与修订收益；关于学生学习效果的结论仍需要独立的课堂或用户研究，不能由自动指标代替。
+
+**输入**：寓言草稿、映射计划、机制图与同批候选。  
+**输出**：对齐证据、质量分数、硬性风险标记、修订建议和可汇总报告。  
+**通过标准**：故事的结构对应应当可回查，教学质量应当被显式报告，而不是凭直觉宣布成功。
+
+完整的结构回查、自动/人工评价边界和教育验证文献见[反向结构对齐与教育质量评测](/pillars/reverse-alignment-evaluation/)。
+
+## 失败不会被最终文本掩盖
+
+五个阶段不是一条只向前的流水线，而是带明确回退位置的闭环：
+
+| 失败位置 | 典型问题 | 回退动作 |
+|---|---|---|
+| 图检索与证据 | 直连证据不足、噪声过多、桥接边被误当证据 | 调整检索视角与门控，重新生成 RetrievalPackage。 |
+| 机制图 | 节点缺失、边方向错误、证据无法支持机制 | 返回机制构建与人工审核，不进入映射。 |
+| 候选映射 | 覆盖不全、方向改变、术语泄漏、候选模板化 | 淘汰候选或做一次受约束修订；全部失败则重新提出候选。 |
+| 寓言叙事 | 计划覆盖但正文漏写、情节引入新机制、文体不成立 | 返回正文修订；若表层无法修复，则回退到映射计划。 |
+| 反向评测 | 结构无法回查、年级不适配、偏见风险或理解题失败 | 记录失败类型，按原因回到检索、机制、映射或叙事阶段。 |
+
+因此，最终发布对象不是孤立的故事文本，而是“证据—机制—映射—故事—评价”的完整样本包。
+
+## 论文证据地图
+
+当前本地论文库共收录 **46 个 PDF 条目**，所有条目都已进入网站，并按摘要或无摘要材料的内容概述重新归入流程：
+
+- **[图检索与证据](/pillars/retrieval-evidence/)**：课程图、概念/先修抽取、多视角检索和证据门控。
+- **[机制图](/pillars/mechanism-graph/)**：事实图、事件/状态结构、因果方向和人工审核。
+- **[Copycat 式候选映射竞争](/pillars/copycat-mapping-competition/)**：结构映射、概念滑动、故事级类比、候选生成与筛选。
+- **[寓言叙事](/pillars/fable-narrative/)**：规划写作、可控生成、多智能体、读者模型和寓言文体。
+- **[反向结构对齐与教育质量评测](/pillars/reverse-alignment-evaluation/)**：结构回查、类比标注、故事理解、可读性、偏见与学习效果。
+
+这里的分类表达“对 concept2fable 最直接的用途”，不表示论文只能用于一个阶段；跨阶段作用会在各自阅读页中单独说明。
+
+## 运行闭环与可审计产物
+
+concept2fable 不把中间推理藏在最终文本后面。一次运行至少保留以下可以复查的对象：
+
+| 阶段 | 可审计产物 | 用途 |
+|---|---|---|
+| 图检索与证据 | 检索包、路径与证据引用 | 追溯“为什么选这些知识”。 |
+| 机制图 | 机制节点、机制边、校验与人工审核记录 | 固定故事不可改变的深层结构。 |
+| 候选竞争 | `mapping_context.json`、`candidate_evaluations.json`、`selected_mapping_plan.json`、`run_result.json` | 说明候选为何被接受、拒绝或修订。 |
+| 寓言叙事 | 每个概念/策略/候选的故事草稿与版本 | 支持并列比较，而非只保留胜者。 |
+| 反向评测 | 对齐证据、`six_dim_eval.json`、批量汇总报告与人工评审历史 | 解释故事是否保真、可教、可用。 |
+
+## 用本站做什么
+
+这里的论文页面是 concept2fable 每个阶段的**证据库**，不是脱离项目的文献清单。每页首先给出基于 PDF 摘要的初读；对 Copycat 书籍分卷等没有独立摘要的材料，则明确标注为内容概述。随后再说明它在流程中的位置、可复用的输入/中间表示/评测方法，以及它没有覆盖、需要本项目补上的边界。
+
+若要先理解最关键的技术决策，请从[当前实验方法：LLM-Guided Copycat 结构映射](/methodology/)进入；若要按阶段查阅依据，直接使用左侧五阶段导航。

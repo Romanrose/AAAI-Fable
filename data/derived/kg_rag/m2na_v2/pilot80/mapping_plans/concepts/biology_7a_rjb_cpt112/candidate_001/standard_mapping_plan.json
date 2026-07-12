@@ -1,0 +1,94 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一座古老的宫殿",
+  "characters": [
+    "宫殿的守护者",
+    "宫殿的工匠"
+  ],
+  "objects": [
+    "守护者的宝匣",
+    "宫殿",
+    "宝匣内的珍珠",
+    "珍珠的光泽"
+  ],
+  "conflict": "守护者担心宝匣内的珍珠失去光泽，但工匠认为珍珠的光泽源自宝匣的精心养护。",
+  "event_chain": [
+    "守护者拥有一个宝匣，宝匣是宫殿的一部分。",
+    "宝匣内藏有一颗珍珠，珍珠是宝匣的一部分。",
+    "珍珠的光泽是宝匣内珍珠的固有属性。",
+    "守护者负责保护宝匣，确保珍珠的光泽不灭。"
+  ],
+  "turning_point": "工匠指出，珍珠的光泽虽然属于珍珠，但需要宝匣的密封和养护才能持久。",
+  "resolution_state": "守护者更加精心地养护宝匣，珍珠的光泽得以长久保持。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "守护者的宝匣",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "宫殿",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "宝匣内的珍珠",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "珍珠的光泽",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "宝匣的珍贵属性",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "宝匣是宫殿的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "宝匣包含珍珠",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "珍珠的光泽属于珍珠",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "宝匣具有珍贵属性",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'雄蕊'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文视为因果机制。",
+    "保持单一连贯的源域（宫殿及其守护者）。"
+  ],
+  "mapping_context_sha256": "c4230465fb27a14ebc4738bf99dcc4a8997e1a5cdaef0aa5bcb2b76c3e15ddcb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b1969c15fb5bdb9a7c356dad872f64f7fb1a6bbb01a361c75177182355cc4e53"
+  }
+}

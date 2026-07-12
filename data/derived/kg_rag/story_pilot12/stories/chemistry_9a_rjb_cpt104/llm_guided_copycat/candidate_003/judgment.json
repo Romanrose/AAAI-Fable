@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 3,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e5",
+    "distinguishing_reason": "The story explicitly and repeatedly states that '陶艺拉坯是工艺方法的一种' (e1) and that '工艺方法需要先了解烧制技巧、陶土特性和成型原理' (e2, e3, e4). The evidence node n8 and edge e7 are clearly realized. However, edges e5 and e6 (木雕 and 刺绣 as is_a of 工艺方法) are only implicitly mentioned as '都是手艺的体现' without the explicit 'is_a' relation, and they are not integrated into the main argument as distinct instances. This makes e5 and e6 the weakest edges, as they rely on inference rather than direct statement. The mapping is observably better than a version that omits these edges entirely, but worse than one that explicitly states '木雕方法是工艺方法的一种' and '刺绣方法是工艺方法的一种'."
+  },
+  "revision_instructions": [
+    "Strengthen edges e5 and e6 by explicitly stating that '木雕方法是工艺方法的一种' and '刺绣方法是工艺方法的一种' in the story, rather than just grouping them as '手艺的体现'.",
+    "Consider adding a brief sentence to clarify that the '示范作品一号' specifically verifies the '陶艺拉坯方法' (n1) as a method of '工艺方法' (n2), to reinforce the verifies relation."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

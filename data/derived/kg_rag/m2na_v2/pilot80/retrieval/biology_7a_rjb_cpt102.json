@@ -1,0 +1,205 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt102",
+    "label": "Concept",
+    "name": "种子萌发的环境条件",
+    "properties": {
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "importance": "掌握",
+      "examples": [
+        "温度过低（如放入冰箱）不利于萌发",
+        "过于潮湿易使种子霉烂",
+        "松土可使土壤中有充足空气"
+      ],
+      "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "properties": {
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "importance": "掌握",
+        "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt103",
+      "label": "Concept",
+      "name": "适宜的温度",
+      "properties": {
+        "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+        "importance": "重要",
+        "examples": [
+          "小麦最适宜温度12~20℃",
+          "棉20~30℃",
+          "水稻25~35℃",
+          "玉米30~35℃",
+          "菜豆20~25℃"
+        ],
+        "unit": "℃",
+        "retrieval_text": "适宜的温度\nConcept\n能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。\n重要\n℃\n小麦最适宜温度12~20℃\n棉20~30℃\n水稻25~35℃\n玉米30~35℃\n菜豆20~25℃"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt104",
+      "label": "Concept",
+      "name": "一定的水分",
+      "properties": {
+        "definition": "种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。",
+        "importance": "重要",
+        "retrieval_text": "一定的水分\nConcept\n种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。\n重要"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt105",
+      "label": "Concept",
+      "name": "充足的空气（氧气）",
+      "properties": {
+        "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。",
+        "importance": "重要",
+        "aliases": [
+          "充足空气"
+        ],
+        "retrieval_text": "充足的空气（氧气）\nConcept\n种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。\n重要\n充足空气"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_exp9",
+      "label": "Experiment",
+      "name": "探究种子萌发的环境条件（四瓶对照实验）",
+      "properties": {
+        "instrument": "植物种子约40粒；可密封罐头瓶4个；餐巾纸/卫生纸8张；小勺；标签纸与胶水；冰箱；橱柜",
+        "is_student": 1,
+        "process": "4个瓶内各放2张纸。1号瓶放10粒种子不加水并密封；2号、3号瓶洒少量水使纸潮湿；4号瓶加较多水使种子浸没。2、3、4号瓶各放10粒种子并密封。1、2、4号放橱柜（室温），3号放冰箱（低温）。数天后观察萌发情况。",
+        "phenomena": "比较不同瓶中种子是否萌发以及萌发多少，判断温度、水分、空气等条件对萌发的影响。",
+        "conclusion": "适宜温度、一定水分、充足空气是种子萌发所需环境条件。",
+        "retrieval_text": "探究种子萌发的环境条件（四瓶对照实验）\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14133",
+      "source": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10772",
+      "source": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10773",
+      "source": "biology_7a_rjb_cpt103",
+      "source_name": "适宜的温度",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10774",
+      "source": "biology_7a_rjb_cpt104",
+      "source_name": "一定的水分",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10775",
+      "source": "biology_7a_rjb_cpt105",
+      "source_name": "充足的空气（氧气）",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22413",
+      "source": "biology_7a_rjb_exp9",
+      "source_name": "探究种子萌发的环境条件（四瓶对照实验）",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "种子萌发的环境条件",
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14133] 种子萌发的环境条件 --prerequisites_for--> 种子萌发"
+    ],
+    "process_summary": [
+      "[normalized:edge:10772] 种子萌发的环境条件 --is_a--> 种子萌发",
+      "[normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:10774] 一定的水分 --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:10775] 充足的空气（氧气） --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:22413] 探究种子萌发的环境条件（四瓶对照实验） --verifies--> 种子萌发的环境条件"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 6,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 6,
+    "candidate_edge_count": 6,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 6,
+    "expanded_to_two_hop": false
+  }
+}

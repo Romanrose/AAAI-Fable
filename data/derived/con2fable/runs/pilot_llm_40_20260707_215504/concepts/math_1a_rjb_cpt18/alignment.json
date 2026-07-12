@@ -1,0 +1,87 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "分类方法",
+      "evidence": "只要抓住外形特征，就不会弄错",
+      "narrative_anchor": "只要抓住外形特征，就不会弄错"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "观察与比较立体图形",
+      "evidence": "我得先看清楚它们的外形，才能知道该放哪里",
+      "narrative_anchor": "我得先看清楚它们的外形，才能知道该放哪里"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "圆柱",
+      "evidence": "一个上下一样粗、两头平平圆圆的货物滚了过来。小陈仔细一看，它的身体像一根柱子，两头都是圆形的。他认出这是圆柱形的货物",
+      "narrative_anchor": "圆柱形的货物"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "正方体",
+      "evidence": "一个所有面都是正方形的货物。小陈用手比了比，发现它的长、宽、高都一样，每个面都是方方正正的。他认出这是正方体的货物",
+      "narrative_anchor": "正方体的货物"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "球体",
+      "evidence": "一个圆溜溜的货物滚了过来。小陈用手推了推，发现它无论从哪个方向看都是圆形的，而且能到处滚动。他认出这是球体的货物",
+      "narrative_anchor": "球体的货物"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "长方体",
+      "evidence": "一个长宽高都不同的货物出现在传送带上。小陈仔细看了看，它有两面是长方形，另外四面也是长方形，但大小不一样。他认出这是长方体的货物",
+      "narrative_anchor": "长方体的货物"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先观察外形再分类",
+      "evidence": "我得先看清楚它们的外形，才能知道该放哪里",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "我得先看清楚它们的外形，才能知道该放哪里"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "观察到圆柱形货物后进行分类",
+      "evidence": "他认出这是圆柱形的货物，便把它抱起来，放到了标着“圆形桶”的货架上",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "他认出这是圆柱形的货物，便把它抱起来，放到了标着“圆形桶”的货架上"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "观察到正方体货物后进行分类",
+      "evidence": "他认出这是正方体的货物，便把它放到了“方形盒”的货架",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "他认出这是正方体的货物，便把它放到了“方形盒”的货架"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "观察到球体货物后进行分类",
+      "evidence": "他认出这是球体的货物，便轻轻一推，让它滚进了“圆球”货架",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "他认出这是球体的货物，便轻轻一推，让它滚进了“圆球”货架"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "观察到长方体货物后进行分类",
+      "evidence": "他认出这是长方体的货物，便把它放到了“长条箱”货架",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "他认出这是长方体的货物，便把它放到了“长条箱”货架"
+    }
+  ]
+}

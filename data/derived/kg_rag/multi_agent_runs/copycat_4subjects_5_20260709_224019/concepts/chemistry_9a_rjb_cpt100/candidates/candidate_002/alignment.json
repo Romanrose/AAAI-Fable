@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件牌",
+      "evidence": "入口条件牌",
+      "narrative_anchor": "入口条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "区分化学反应和物理混合",
+      "evidence": "不能把化学反应和物理混合混为一谈",
+      "narrative_anchor": "不能把化学反应和物理混合混为一谈",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先确认入口条件牌，再推动中间流程",
+      "evidence": "必须先稳定入口核对，再推动转化环节",
+      "narrative_anchor": "必须先稳定入口核对，再推动转化环节",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "两份记录共同约束后面的判断",
+      "evidence": "这两份东西共同约束后面的判断",
+      "narrative_anchor": "这两份东西共同约束后面的判断",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

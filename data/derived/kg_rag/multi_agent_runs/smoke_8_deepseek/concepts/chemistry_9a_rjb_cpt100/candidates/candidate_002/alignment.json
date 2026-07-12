@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "铁犁头在潮湿空气中缓慢生锈的过程，没有火花和高温，但确实发生了化学变化（铁与氧气、水反应生成铁锈）",
+      "evidence": "铁匠师傅把新打的铁犁头整齐码在工坊后院的阴凉处，既不生火也不抡锤。",
+      "narrative_anchor": "铁匠师傅把新打的铁犁头整齐码在工坊后院的阴凉处，既不生火也不抡锤。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

@@ -1,0 +1,148 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt110",
+    "label": "Concept",
+    "name": "催化剂",
+    "properties": {
+      "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+      "importance": "重要",
+      "aliases": [
+        "触媒",
+        "化学催化剂"
+      ],
+      "examples": [
+        "二氧化锰在过氧化氢分解反应中起催化剂作用",
+        "二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用",
+        "硫酸铜溶液对过氧化氢分解具有催化作用",
+        "酶在酿造工业和制药工业中的催化作用",
+        "催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。",
+        "MnO2在过氧化氢分解反应中的催化作用。",
+        "FeCl3溶液在过氧化氢分解反应中的催化作用。"
+      ],
+      "retrieval_text": "催化剂\nConcept\n一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。\n重要\n触媒\n化学催化剂\n二氧化锰在过氧化氢分解反应中起催化剂作用\n二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用\n硫酸铜溶液对过氧化氢分解具有催化作用\n酶在酿造工业和制药工业中的催化作用\n催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。\nMnO2在过氧化氢分解反应中的催化作用。\nFeCl3溶液在过氧化氢分解反应中的催化作用。"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15000",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:15262",
+      "source": "chemistry_9a_rjb_skl27",
+      "source_name": "通过前后对比分析催化剂作用",
+      "target": "chemistry_9a_rjb_cpt110",
+      "target_name": "催化剂",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11283",
+      "source": "chemistry_9a_rjb_cpt112",
+      "source_name": "二氧化锰的催化作用",
+      "target": "chemistry_9a_rjb_cpt110",
+      "target_name": "催化剂",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11282",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_bx2_rjb_cpt129",
+      "target_name": "影响化学反应速率的因素",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:11716",
+      "source": "chemistry_bx2_rjb_cpt154",
+      "source_name": "催化剂对化学反应速率的影响",
+      "target": "chemistry_9a_rjb_cpt110",
+      "target_name": "催化剂",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:18226",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_9a_rjb_cpt111",
+      "target_name": "催化作用",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    },
+    {
+      "source_edge_id": "normalized:edge:18227",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_bx2_rjb_cpt128",
+      "target_name": "化学反应速率",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    },
+    {
+      "source_edge_id": "normalized:edge:18522",
+      "source": "chemistry_9b_rjb_cpt265",
+      "source_name": "酶",
+      "target": "chemistry_9a_rjb_cpt110",
+      "target_name": "催化剂",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "催化剂",
+      "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:15000] 催化剂 --prerequisites_for--> 二氧化锰的催化作用",
+      "[normalized:edge:15262] 通过前后对比分析催化剂作用 --prerequisites_for--> 催化剂"
+    ],
+    "process_summary": [
+      "[normalized:edge:11283] 二氧化锰的催化作用 --is_a--> 催化剂",
+      "[normalized:edge:18226] 催化剂 --relates_to--> 催化作用",
+      "[normalized:edge:18227] 催化剂 --relates_to--> 化学反应速率",
+      "[normalized:edge:18522] 酶 --relates_to--> 催化剂"
+    ],
+    "effect_summary": [
+      "[normalized:edge:11282] 催化剂 --is_a--> 影响化学反应速率的因素",
+      "[normalized:edge:11716] 催化剂对化学反应速率的影响 --is_a--> 催化剂"
+    ]
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 8,
+    "candidate_edge_count": 8,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2093,
+    "summary_chars": 666,
+    "path_chars": 0,
+    "retrieval_context_chars": 2759
+  }
+}

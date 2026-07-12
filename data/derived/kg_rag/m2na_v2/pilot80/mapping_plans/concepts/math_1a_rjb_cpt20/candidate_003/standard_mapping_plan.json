@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt20",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "种树与收获果实",
+  "characters": [
+    "农夫",
+    "果树"
+  ],
+  "objects": [
+    "树苗",
+    "果实"
+  ],
+  "conflict": "农夫想要收获果实，但需要先认识树苗并掌握分拆果实的技巧，否则无法通过合并果实得到所需数量。",
+  "event_chain": [
+    "农夫认识树苗，包括观察、计数、比较大小。",
+    "农夫掌握将果实分拆成不同组合的方法。",
+    "农夫通过将果实合并，得到特定数量的果实。"
+  ],
+  "turning_point": "农夫成功将分拆的果实合并，得到所需数量的果实。",
+  "resolution_state": "农夫通过合并果实获得了所需数量的果实，实现了目标。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫认识树苗，包括观察、计数、比较大小",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫掌握将果实分拆成不同组合的方法",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫通过将果实合并，得到特定数量的果实",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识树苗后，能够进行果实合并",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫掌握分拆果实的方法，使得合并果实成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现数字6和7或加法等术语。",
+    "确保故事中不出现目标概念名称或别名。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "22ce94de277cb30f5390454acb2b188650daea5d63d1688f2dc68353c1459f34",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "858829b93070e6d133363576adf680422623a08cbc8b76276ad50c25347cf645"
+  }
+}

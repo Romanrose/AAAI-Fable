@@ -1,0 +1,124 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "高锰酸钾是一种暗紫色固体，受热时发生分解反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt105:definition",
+          "kg-node:chemistry_9a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "高锰酸钾受热分解反应，生成二氧化锰、锰酸钾并放出氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt105:definition",
+          "kg-node:chemistry_9a_rjb_cpt105:formula",
+          "kg-node:chemistry_9a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "二氧化锰、锰酸钾、氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt105:definition",
+          "kg-node:chemistry_9a_rjb_cpt105:formula",
+          "kg-node:chemistry_9a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "分解反应：一种物质在一定条件下生成两种或两种以上其他物质的化学反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "evidence",
+        "text": "实验2-5 加热高锰酸钾制取氧气：加热试管，用排水法收集氧气，带火星木条复燃",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp16:process",
+          "kg-node:chemistry_9a_rjb_exp16:phenomena",
+          "kg-node:chemistry_9a_rjb_exp16:conclusion",
+          "kg-node:chemistry_9a_rjb_exp16:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt105:definition",
+          "kg-node:chemistry_9a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt105:definition",
+          "kg-node:chemistry_9a_rjb_cpt105:formula",
+          "kg-node:chemistry_9a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11277",
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22573",
+          "kg-node:chemistry_9a_rjb_exp16:conclusion",
+          "kg-node:chemistry_9a_rjb_exp16:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  }
+}

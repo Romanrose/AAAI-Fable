@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过盆B（胚干瘪发黑）、盆C（胚被虫咬坏）、盆D（胚腐烂）与盆A（正常发芽）的对比，准确展示了种子萌发取决于胚是否完整、有活性且未休眠，完全符合概念定义。",
+    "implicitness": "目标概念名称“种子萌发的自身条件”未在故事正文中出现，核心机制通过观察和挖种子的情节自然隐含，没有直接说教。",
+    "mapping_clarity": "每个盆对应一种种子内部条件（胚完整、干瘪、被虫咬、腐烂），小徒弟的观察和师傅的解释清晰映射了概念机制，读者能明确理解。",
+    "readability": "故事语言简洁流畅，情节连贯，对话自然，适合目标年龄段阅读，无生硬术语。",
+    "pedagogical_value": "通过对比观察和动手检查，引导学生理解种子萌发的内部条件，结尾升华到“自身是否准备好”，教学效果强。",
+    "novelty": "故事采用园圃观察的常见场景，对比不同种子状态，虽有效但缺乏新颖的叙事角度或意外转折。"
+  },
+  "revision_suggestions": [
+    "可增加一个种子休眠的案例（如盆E一直不发芽但胚完好），以更全面覆盖概念。",
+    "可加入小徒弟预测错误的情节，增强认知冲突和转折的戏剧性。"
+  ]
+}

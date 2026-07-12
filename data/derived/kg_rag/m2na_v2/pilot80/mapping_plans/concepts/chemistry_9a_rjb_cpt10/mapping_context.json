@@ -1,0 +1,373 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt10",
+    "subject": "chemistry",
+    "canonical_name": "沸点",
+    "aliases": [],
+    "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+    "concept_type": "entity",
+    "forbidden_terms": [
+      "沸点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:definition",
+          "kg-node:chemistry_9a_rjb_cpt10:name",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "大气压强",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt11:definition",
+          "kg-node:chemistry_9a_rjb_cpt11:name",
+          "kg-node:chemistry_9a_rjb_cpt11:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "液体汽化最剧烈时的温度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:definition",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "条件对物质性质的影响",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt21:definition",
+          "kg-node:chemistry_9a_rjb_cpt21:name",
+          "kg-node:chemistry_9a_rjb_cpt21:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "evidence",
+        "text": "水的沸点为100℃（在101 kPa下）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:examples",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text",
+          "kg-node:chemistry_9a_rjb_cpt12:definition",
+          "kg-node:chemistry_9a_rjb_cpt12:examples",
+          "kg-node:chemistry_9a_rjb_cpt12:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "evidence",
+        "text": "大气稀薄处水的沸点降低",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:examples",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text",
+          "kg-node:chemistry_9a_rjb_cpt21:examples",
+          "kg-node:chemistry_9a_rjb_cpt21:retrieval_text"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "evidence",
+        "text": "铁的熔点和沸点、铝的熔点和沸点、氧气的熔点和沸点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt13:definition",
+          "kg-node:chemistry_9a_rjb_cpt13:examples",
+          "kg-node:chemistry_9a_rjb_cpt13:retrieval_text",
+          "kg-node:chemistry_9a_rjb_cpt14:definition",
+          "kg-node:chemistry_9a_rjb_cpt14:retrieval_text",
+          "kg-node:chemistry_9a_rjb_cpt15:definition",
+          "kg-node:chemistry_9a_rjb_cpt15:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14999",
+          "kg-node:chemistry_9a_rjb_cpt10:definition",
+          "kg-node:chemistry_9a_rjb_cpt11:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:definition",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15075",
+          "kg-node:chemistry_9a_rjb_cpt21:definition",
+          "kg-node:chemistry_9a_rjb_cpt21:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14992",
+          "kg-node:chemistry_9a_rjb_cpt10:examples",
+          "kg-node:chemistry_9a_rjb_cpt12:definition",
+          "kg-node:chemistry_9a_rjb_cpt12:examples"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n2",
+        "target": "n6",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt10:examples",
+          "kg-node:chemistry_9a_rjb_cpt10:retrieval_text",
+          "kg-node:chemistry_9a_rjb_cpt21:examples",
+          "kg-node:chemistry_9a_rjb_cpt21:retrieval_text"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n7",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14993",
+          "kg-edge:normalized:edge:14994",
+          "kg-edge:normalized:edge:14995",
+          "kg-node:chemistry_9a_rjb_cpt13:definition",
+          "kg-node:chemistry_9a_rjb_cpt14:definition",
+          "kg-node:chemistry_9a_rjb_cpt15:definition"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18222",
+          "kg-node:chemistry_9a_rjb_cpt10:definition",
+          "kg-node:chemistry_9a_rjb_cpt11:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "沸点"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt10",
+      "name": "沸点",
+      "label": "Concept",
+      "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt12",
+        "name": "水的熔点和沸点"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt13",
+        "name": "铁的熔点和沸点"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt14",
+        "name": "铝的熔点和沸点"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt15",
+        "name": "氧气的熔点和沸点"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt11",
+        "name": "大气压强"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt21",
+        "name": "条件对物质性质的影响"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:14992",
+        "source_id": "chemistry_9a_rjb_cpt10",
+        "source_name": "沸点",
+        "target_id": "chemistry_9a_rjb_cpt12",
+        "target_name": "水的熔点和沸点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt12",
+        "neighbor_name": "水的熔点和沸点",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:14993",
+        "source_id": "chemistry_9a_rjb_cpt10",
+        "source_name": "沸点",
+        "target_id": "chemistry_9a_rjb_cpt13",
+        "target_name": "铁的熔点和沸点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt13",
+        "neighbor_name": "铁的熔点和沸点",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:14994",
+        "source_id": "chemistry_9a_rjb_cpt10",
+        "source_name": "沸点",
+        "target_id": "chemistry_9a_rjb_cpt14",
+        "target_name": "铝的熔点和沸点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt14",
+        "neighbor_name": "铝的熔点和沸点",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:14995",
+        "source_id": "chemistry_9a_rjb_cpt10",
+        "source_name": "沸点",
+        "target_id": "chemistry_9a_rjb_cpt15",
+        "target_name": "氧气的熔点和沸点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt15",
+        "neighbor_name": "氧气的熔点和沸点",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:14999",
+        "source_id": "chemistry_9a_rjb_cpt11",
+        "source_name": "大气压强",
+        "target_id": "chemistry_9a_rjb_cpt10",
+        "target_name": "沸点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "chemistry_9a_rjb_cpt11",
+        "neighbor_name": "大气压强",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:15075",
+        "source_id": "chemistry_9a_rjb_cpt21",
+        "source_name": "条件对物质性质的影响",
+        "target_id": "chemistry_9a_rjb_cpt10",
+        "target_name": "沸点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "chemistry_9a_rjb_cpt21",
+        "neighbor_name": "条件对物质性质的影响",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:18222",
+        "source_id": "chemistry_9a_rjb_cpt10",
+        "source_name": "沸点",
+        "target_id": "chemistry_9a_rjb_cpt11",
+        "target_name": "大气压强",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt11",
+        "neighbor_name": "大气压强",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 7,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "沸点",
+      "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14992] 沸点 --prerequisites_for--> 水的熔点和沸点",
+      "[normalized:edge:14993] 沸点 --prerequisites_for--> 铁的熔点和沸点",
+      "[normalized:edge:14994] 沸点 --prerequisites_for--> 铝的熔点和沸点",
+      "[normalized:edge:14995] 沸点 --prerequisites_for--> 氧气的熔点和沸点",
+      "[normalized:edge:14999] 大气压强 --prerequisites_for--> 沸点"
+    ],
+    "process_summary": [
+      "[normalized:edge:18222] 沸点 --relates_to--> 大气压强"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:14992",
+    "normalized:edge:14993",
+    "normalized:edge:14994",
+    "normalized:edge:14995",
+    "normalized:edge:14999",
+    "normalized:edge:15075",
+    "normalized:edge:18222"
+  ],
+  "provenance": {
+    "seed_sha256": "b7895dc8cb00f85820f44a7b1c23a1ebd9d3154eb298e5d2593f0423ee6f5e9d",
+    "retrieval_sha256": "b1a4573b1c61425f629ba8b899c40fb9e6f41600da2c310cbd48cb0a07e46122",
+    "mechanism_record_sha256": "ddc3f52a28bd6be9c106590ca17e36ec3e8918af562d705b77217e3d69fde17e"
+  }
+}

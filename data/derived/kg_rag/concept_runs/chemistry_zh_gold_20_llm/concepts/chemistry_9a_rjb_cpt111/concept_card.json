@@ -1,0 +1,58 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt111",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "催化作用",
+  "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt113",
+        "label": "Concept",
+        "name": "催化剂的工业应用",
+        "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt110",
+        "label": "Concept",
+        "name": "催化剂",
+        "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "催化作用"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

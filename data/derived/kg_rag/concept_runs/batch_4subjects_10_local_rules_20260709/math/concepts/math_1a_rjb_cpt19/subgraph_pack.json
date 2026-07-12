@@ -1,0 +1,150 @@
+{
+  "query": "math_1a_rjb_cpt19",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt19",
+    "label": "Concept",
+    "name": "数字6和7的认识",
+    "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+    "aliases": [],
+    "examples": [
+      "摆6个、摆7个；比较5<6、6>5；第7个的位置"
+    ],
+    "retrieval_text": "数字6和7的认识\n能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt22",
+        "label": "Concept",
+        "name": "分拆数6和7",
+        "definition": "把6或7分成两个部分，了解所有不同的分法。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt20",
+        "label": "Concept",
+        "name": "6和7的加法",
+        "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+      },
+      {
+        "id": "math_1a_rjb_cpt21",
+        "label": "Concept",
+        "name": "6和7的减法",
+        "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5",
+        "label": "Chapter",
+        "name": "6~10的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7\n- [normalized:edge:19309] 数字6和7的认识 --relates_to--> 6和7的减法\n- [normalized:edge:19308] 数字6和7的认识 --relates_to--> 6和7的加法"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '数字6和7的认识', 'definition': '能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。', 'formula': '', 'importance': '重要'}, 'condition_summary': ['[normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7'], 'process_summary': ['[normalized:edge:19309] 数字6和7的认识 --relates_to--> 6和7的减法', '[normalized:edge:19308] 数字6和7的认识 --relates_to--> 6和7的加法'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt19",
+      "label": "Concept",
+      "name": "数字6和7的认识",
+      "properties": {
+        "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+        "importance": "重要",
+        "examples": [
+          "摆6个、摆7个；比较5<6、6>5；第7个的位置"
+        ],
+        "pages": "图示页 6~10",
+        "retrieval_text": "数字6和7的认识\nConcept\n能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。\n重要\n图示页 6~10\n摆6个、摆7个；比较5<6、6>5；第7个的位置"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16341",
+        "source": "math_1a_rjb_cpt19",
+        "source_name": "数字6和7的认识",
+        "target": "math_1a_rjb_cpt22",
+        "target_name": "分拆数6和7",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:19309",
+        "source": "math_1a_rjb_cpt19",
+        "source_name": "数字6和7的认识",
+        "target": "math_1a_rjb_cpt21",
+        "target_name": "6和7的减法",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      },
+      {
+        "source_edge_id": "normalized:edge:19308",
+        "source": "math_1a_rjb_cpt19",
+        "source_name": "数字6和7的认识",
+        "target": "math_1a_rjb_cpt20",
+        "target_name": "6和7的加法",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "数字6和7的认识",
+        "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [
+        "[normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7"
+      ],
+      "process_summary": [
+        "[normalized:edge:19309] 数字6和7的认识 --relates_to--> 6和7的减法",
+        "[normalized:edge:19308] 数字6和7的认识 --relates_to--> 6和7的加法"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 774,
+      "summary_chars": 378,
+      "path_chars": 0,
+      "retrieval_context_chars": 1152
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 774,
+    "summary_chars": 378,
+    "path_chars": 0,
+    "retrieval_context_chars": 1152
+  }
+}

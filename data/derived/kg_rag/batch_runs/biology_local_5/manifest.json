@@ -1,0 +1,12 @@
+{
+  "mode": "local",
+  "label": "Concept",
+  "subject": "biology",
+  "limit": 5,
+  "offset": 0,
+  "sleep_seconds": 0.0,
+  "retry": 1,
+  "resume": false,
+  "concept_count": 5,
+  "normalized_graph_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\k12_kgraph_normalized.json"
+}

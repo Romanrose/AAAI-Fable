@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "法庭证据室里，记录员老周搬出三个封存箱，调度员小陈站在一旁等着验收员签字。",
+      "narrative_anchor": "法庭证据室里，记录员老周搬出三个封存箱，调度员小陈站在一旁等着验收员签字。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+      "narrative_anchor": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "老周没有急着去开箱。",
+      "narrative_anchor": "老周没有急着去开箱。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定条件核对，再推动第二道转化",
+      "evidence": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+      "narrative_anchor": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "两份记录放在一起比较，共同约束最后判断",
+      "evidence": "老周没有急着去开箱。",
+      "narrative_anchor": "老周没有急着去开箱。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

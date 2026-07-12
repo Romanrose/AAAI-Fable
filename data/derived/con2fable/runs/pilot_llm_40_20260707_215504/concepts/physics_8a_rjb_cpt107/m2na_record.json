@@ -1,0 +1,100 @@
+{
+  "id": "physics_8a_rjb_cpt107",
+  "method": "con2fable",
+  "concept": {
+    "name": "物距",
+    "aliases": [],
+    "forbidden_terms": [
+      "物距"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物体到凸透镜的距离，用u表示。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：凸透镜成像规律",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：像距",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17193"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19712"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "建筑工地上，塔吊高耸入云。新手操作员小李第一次独立操作塔吊，他兴奋地推动操纵杆，吊臂迅速伸向远处堆放钢筋的区域。吊钩快速下降，抓起一捆钢筋后，小李没有多想，直接开始起吊。\n\n钢筋刚离开地面，吊钩就开始剧烈晃动，整捆钢筋在空中摇摆不定，像一条被激怒的巨蟒。下面的工人纷纷躲避，大声呼喊：“稳住！稳住！”小李手忙脚乱地调整吊臂，但晃动反而越来越厉害，钢筋差点撞上旁边的脚手架。\n\n“停！”老张的声音从对讲机里传来。他快步走到控制室，看着满头大汗的小李说：“你刚才把吊臂伸得太远了，吊钩离吊臂的支点太远，就像用一根长竹竿挑重物，当然不稳。”\n\n小李困惑地问：“可是那个位置正好对着钢筋堆啊。”\n\n老张摇摇头：“位置对不等于距离对。吊臂和吊钩之间的距离，决定了吊运的稳定性和效率。距离太远，吊钩就会像钟摆一样晃个不停；距离太近，又够不到目标。你要学会根据这个距离来调整策略。”\n\n老张指着远处的钢筋堆说：“先把吊臂收回来一些，让吊钩靠近支点，再慢慢伸出去对准目标。”小李按照老张的指导操作，吊臂缓缓收回，吊钩的摆动幅度明显减小。当吊钩再次抓住钢筋时，起吊过程平稳得像在平地上搬运。\n\n钢筋稳稳地升到高空，精准地落在指定位置。下面的工人竖起大拇指，小李长长地舒了一口气。\n\n后来，每次操作塔吊，小李都会先观察吊臂与吊钩之间的距离，再决定如何起吊。他明白了一个道理：决定成败的关键，往往就在那看似简单的距离之中。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "吊臂与吊钩之间的距离",
+        "evidence": "吊臂和吊钩之间的距离",
+        "narrative_anchor": "吊臂和吊钩之间的距离"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "吊运的稳定性和效率",
+        "evidence": "决定了吊运的稳定性和效率",
+        "narrative_anchor": "决定了吊运的稳定性和效率"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "吊钩与支点的距离（像距类比）",
+        "evidence": "让吊钩靠近支点",
+        "narrative_anchor": "让吊钩靠近支点"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "距离决定稳定性",
+        "evidence": "距离太远，吊钩就会像钟摆一样晃个不停；距离太近，又够不到目标。你要学会根据这个距离来调整策略。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "距离太远，吊钩就会像钟摆一样晃个不停；距离太近，又够不到目标。你要学会根据这个距离来调整策略。"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "稳定性调整后影响像距（吊钩位置）",
+        "evidence": "先把吊臂收回来一些，让吊钩靠近支点，再慢慢伸出去对准目标。",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "先把吊臂收回来一些，让吊钩靠近支点，再慢慢伸出去对准目标。"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

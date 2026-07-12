@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确传达了绿叶在光下制造淀粉（遇碘变蓝）的核心机制，并提及淀粉可转化为糖、蛋白质、脂肪等其他有机物，完全符合概念定义。",
+    "implicitness": "目标概念名称未在故事正文中出现，但通过碘液变蓝、果实变甜等情节间接暗示，隐含性良好。",
+    "mapping_clarity": "对比实验（阳光/暗处叶片）和碘液检验清晰映射了光合作用产物的检测方法，果实甜度变化进一步映射产物转化，映射关系明确。",
+    "readability": "语言流畅自然，情节连贯，对话生动，适合目标读者理解，可读性高。",
+    "pedagogical_value": "通过故事中的观察、实验和解释，有效传递了光合作用产物的概念及其检验方法，并纠正了过度施肥的错误认知，教学价值高。",
+    "novelty": "故事框架（园圃、师徒）较为常见，但通过对比实验和果实甜度变化来展示产物转化，有一定新颖性。"
+  },
+  "revision_suggestions": [
+    "可进一步强化淀粉转化为蛋白质、脂肪的情节，例如通过植物生长结果来体现。",
+    "可增加一个角色（如另一位学徒）提出错误假设，以增强冲突和转折。"
+  ]
+}

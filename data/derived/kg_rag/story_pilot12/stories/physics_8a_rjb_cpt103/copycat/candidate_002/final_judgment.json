@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "Node n2 (实像) is mapped to '第2道转化环节' but the story does not explicitly convey the 'is_a' relation (e2) that n3 (照相机成像) is a type of n2. The story mentions '属于滑道试验场中的第2道转化环节这类更大的共同规则', which implies categorization but lacks the precise 'is_a' semantic. This is weaker than e1 which clearly states a conditional dependency."
+  },
+  "revision_instructions": [
+    "Strengthen edge e2: explicitly show that the phenomenon (照相机成像) is a specific instance of the broader category (实像), e.g., '这个现象正是第2道转化环节所描述的那类规则的一个具体例子'.",
+    "Improve node n2 mapping: ensure the story's '第2道转化环节' is consistently used to represent the category '实像', not just a step in the sequence.",
+    "Consider adding a brief explanation of why the category matters for understanding the sequence, to enhance pedagogical value."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

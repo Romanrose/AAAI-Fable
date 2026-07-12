@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠制作铜镜",
+  "characters": [
+    "铸镜师",
+    "铜镜"
+  ],
+  "objects": [
+    "镜心",
+    "聚光点",
+    "镜距",
+    "铜镜成像"
+  ],
+  "conflict": "铸镜师发现铜镜成像模糊，需要调整镜心到聚光点的距离才能清晰成像。",
+  "event_chain": [
+    "铸镜师确定镜心的位置",
+    "铸镜师找到聚光点",
+    "铸镜师测量镜心到聚光点的距离作为镜距",
+    "铸镜师根据镜距调整铜镜的曲率，使成像清晰"
+  ],
+  "turning_point": "铸镜师意识到镜距是决定成像清晰度的关键。",
+  "resolution_state": "铸镜师成功调整镜距，铜镜成像清晰。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "镜心",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "聚光点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "镜距",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铜镜成像",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "镜心是测量镜距的起点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "聚光点与镜距相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "镜距是铜镜成像的前提",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'焦距'等禁止术语",
+    "确保所有机制节点和边都被映射",
+    "确保故事载体来自同一源域（铜镜制作）",
+    "确保方向性正确"
+  ],
+  "mapping_context_sha256": "99da872bda3d10e9d03199597f76a80f47ada8efe18b32ddb88e5d3172a3dcbd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f3a66c8ef53ab29ae7530bbb3a101ba14f77eef4b464333311e3a4b7bd81c983"
+  }
+}

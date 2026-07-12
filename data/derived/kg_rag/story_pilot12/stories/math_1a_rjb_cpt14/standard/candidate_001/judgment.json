@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly distinguishes the relation 'special brick is a kind of standard brick' (e2, e3) by explicitly stating '特殊砖块是标准砖块里的一种', which is a direct and observable mapping. In contrast, edge e1 (standard brick is a kind of shape classification) is only implicitly shown through the action of placing bricks into categorized grids, without an explicit statement that 'standard brick belongs to shape classification'. This makes e1 slightly weaker in direct evidence compared to e2/e3, though still adequately supported."
+  },
+  "revision_instructions": [
+    "Consider making the classification process (n3) more explicit by having the master say '标准砖块属于按形状分类' to strengthen edge e1's direct evidence."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

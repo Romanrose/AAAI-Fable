@@ -1,0 +1,74 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt103",
+    "label": "Concept",
+    "name": "照相机成像",
+    "properties": {
+      "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+      "importance": "重要",
+      "retrieval_text": "照相机成像\nConcept\n物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17243",
+      "source": "physics_8a_rjb_cpt95",
+      "source_name": "凸透镜",
+      "target": "physics_8a_rjb_cpt103",
+      "target_name": "照相机成像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17251",
+      "source": "physics_8a_rjb_skl18",
+      "source_name": "调节像距以成清晰像",
+      "target": "physics_8a_rjb_cpt103",
+      "target_name": "照相机成像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12419",
+      "source": "physics_8a_rjb_cpt103",
+      "source_name": "照相机成像",
+      "target": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "照相机成像",
+      "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17243] 凸透镜 --prerequisites_for--> 照相机成像",
+      "[normalized:edge:17251] 调节像距以成清晰像 --prerequisites_for--> 照相机成像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12419] 照相机成像 --is_a--> 实像"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 785,
+    "summary_chars": 364,
+    "path_chars": 0,
+    "retrieval_context_chars": 1149
+  }
+}

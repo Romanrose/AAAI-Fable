@@ -1,0 +1,100 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "中国古代建筑中的砖瓦与房屋",
+  "characters": [
+    "一块青砖",
+    "一位老匠人"
+  ],
+  "objects": [
+    "青砖",
+    "砖墙",
+    "房屋",
+    "瓦片"
+  ],
+  "conflict": "青砖认为自己只是众多砖块中的一块，微不足道，无法理解自己如何能支撑起整个房屋；而老匠人则指出，正是每一块砖的紧密协作才构成了坚固的墙体，进而形成房屋。",
+  "event_chain": [
+    "青砖被烧制出来，成为众多砖块之一。",
+    "老匠人将青砖与其它砖块砌在一起，形成砖墙。",
+    "砖墙成为房屋的承重结构，支撑起屋顶和瓦片。",
+    "房屋建成后，为人们遮风挡雨，成为生活的基本场所。",
+    "老匠人向青砖解释：每一块砖都是房屋的基础单位，没有砖就没有墙，没有墙就没有房屋。",
+    "青砖领悟到自己的价值，并认识到砖墙是由砖块组成的更高级结构。",
+    "老匠人进一步说明：砖块是建筑活动的基本单位，房屋的生长、稳固、抵御风雨都离不开砖块。",
+    "青砖意识到砖块是基本的建筑系统，砖块之间相互作用、相互配合构成有生命的建筑整体。",
+    "老匠人提及：有一种特殊的材料——稻草，它不参与砌墙，但常被用来做临时屋顶，与砖块不同。"
+  ],
+  "turning_point": "老匠人向青砖揭示砖块与房屋的关系，青砖从自认渺小到理解自身作为基础单位的重要性。",
+  "resolution_state": "青砖明白了自己作为建筑基本单位的角色，并认识到砖墙（组织）是由砖块（细胞）联合而成，房屋的生命活动离不开每一块砖。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "青砖",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "砖墙",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "青砖是建筑活动的基本单位：房屋的生长、稳固、抵御风雨等都需要到砖块层面去解释，建筑活动离不开砖块。",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "青砖是基本的建筑系统：砖块是由多种材料（土、水、火）相互作用、相互配合构成的有生命的系统，并且在各层次建筑系统中处于最基本层次。",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "稻草是一种特殊的建筑材料；老匠人指出稻草不参与砌墙，是“除稻草以外，建筑都由砖块构成”的例外。",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "青砖（n1）被砌在一起形成砖墙（n2）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "青砖（n1）使砖块成为建筑活动的基本单位（n3）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "青砖（n1）使砖块成为基本的建筑系统（n4）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "青砖（n1）与稻草（n5）相关联，稻草是例外材料",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'细胞'、'cell'等禁止术语。",
+    "确保故事载体统一在'中国古代建筑'领域内，不引入无关隐喻。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如'细胞是生命活动的基本单位'）作为因果机制，而是作为状态映射。",
+    "注意n5（病毒）的映射载体'稻草'应体现其特殊性和例外性。"
+  ],
+  "mapping_context_sha256": "8025dc50821f0197346d67457f7df8b72ca782316ad17bdc6781499e15df1a70",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ce5790cb4949163d464651d9ee14b8a79e780697c31d8c613a555703f439608b"
+  }
+}

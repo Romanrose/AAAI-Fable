@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n1 (参照物) to 北极星 with strong explicit evidence and consistent use throughout. n2 (机械运动) is mapped to '船只的航行过程', but the story only mentions '一艘大船在茫茫大海上航行' once at the beginning, lacking detailed process description. Edge e1 (n2->n1) is weakly realized because the story does not explicitly show how the sailing process (机械运动) relates to 北极星 as a reference; the relation is implied but not directly stated, making it weaker than e2 and e3 which have clearer causal or enabling links."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping of n2 (机械运动) by adding more explicit descriptions of the ship's motion (e.g., changes in position over time) and its dependence on 北极星 as a reference.",
+    "For edge e1, add a sentence that directly connects the ship's sailing to the use of 北极星 for orientation, e.g., 'The ship's course is constantly checked against the North Star.'",
+    "Consider reducing the use of the forbidden term '参照物' in the story to avoid hard leakage; replace with more natural phrasing like 'reference point' or 'standard'."
+  ],
+  "final_status": "revise"
+}

@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "嫩度",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "纹理等级",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "用嫩度计测量嫩度",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "用嫩度计，必须规定插多深、用多大力、从哪个方向",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "纹理等级就是嫩度的一种量化单位",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "用嫩度计测量嫩度",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "没有嫩度计，你说这肉嫩，我说这肉老，吵到天黑也没结果。有了它，七级就是七级",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are directly aligned to explicit story evidence. Node n1 maps to '嫩度', n2 to '纹理等级', n3 to '用嫩度计测量嫩度', n4 to the rule about using the tenderness meter. Edge e1 (is_a) is supported by '纹理等级就是嫩度的一种量化单位', e2 (verifies) by the process of measuring, and e3 (enables) by the story's logic that tenderness necessitates the measurement method. No missing elements."
+}

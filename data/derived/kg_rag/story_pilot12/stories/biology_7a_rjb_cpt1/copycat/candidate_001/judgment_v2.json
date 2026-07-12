@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n7",
+    "weakest_edge_id": "e6",
+    "distinguishing_reason": "Node n7 (具有遗传和变异) and its corresponding edge e6 (n1->n7) have no direct evidence in the story, making them the weakest link. In contrast, node n1 (生物) is well-represented by '入口条件核对' and its edges are mostly supported. The story's turning point (skipping steps) effectively illustrates the necessity of preserving order and completeness, which aligns with the mechanism's relational structure, but the missing n7/e6 prevents full coverage."
+  },
+  "revision_instructions": [
+    "Add explicit mention of '遗传和变异' (heredity and variation) in the story, e.g., by having the master note that the final piece must match the master pattern in both form and subtle variations, or by discussing how the clay's inherited properties affect the outcome.",
+    "Ensure that edge e6 (n1->n7) is represented by a corresponding story relation, such as linking the entry condition check to the final verification that accounts for inherited traits.",
+    "Consider replacing one of the repeated '主角把两份相关记录放在一起比较' edge mappings with a more specific relation that captures the 'requires' semantics for n7, to avoid template-like repetition."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

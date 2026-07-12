@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 的故事以灌溉渠闸门开度不统一为隐喻，自然覆盖了“测量标准不统一导致问题”的核心机制，且未泄露任何目标概念。故事语言流畅、贴近生活，避免了模板化表达。其指标显示无概念泄露、节点和边覆盖完整、对齐精度高，且确定性指标推荐该候选。",
+    "risk_notes": [
+      "故事中未明确展示测量工具或标准化的具体过程，可能对机制边的覆盖不够显性。",
+      "若目标概念涉及更抽象的测量理论，该故事可能需补充更明确的映射。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

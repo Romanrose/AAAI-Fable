@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第2道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员把入口条件核对的结果和调度员手里的转化记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "记录员把入口条件核对的结果和调度员手里的转化记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "记录员把入口条件核对的结果和调度员手里的转化记录放在一起比较",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All three mechanism nodes are directly mapped to story carriers via exact substrings. Edges e1, e2, and e3 are all supported by the same story sentence describing the comparison of the two records, which aligns with the relates_to and enables relations. Direction is preserved as the story shows the comparison leading to the final judgment."
+}

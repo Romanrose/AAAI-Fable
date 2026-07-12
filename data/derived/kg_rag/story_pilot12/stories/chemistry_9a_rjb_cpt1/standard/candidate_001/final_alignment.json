@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "一粒种子深埋在泥土里",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "种子变了，它不再是当初那粒蜷缩的种子，而是成了一株挺立在阳光下的幼苗",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "种子渴望舒展，可身边既没有湿润的水汽，也没有温暖的触感。它只能静静地等待，心里却明白，光靠等待是长不出新芽的。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 (物质) is mapped to the seed's initial existence; node n2 (物质的变化) is mapped to the seed's transformation into a seedling. Edge e1 (enables) is supported by the story showing that the seed's existence is necessary for its change, and direction is preserved."
+}

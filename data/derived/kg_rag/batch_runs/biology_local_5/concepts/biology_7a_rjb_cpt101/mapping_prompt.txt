@@ -1,0 +1,24 @@
+You are a structure-mapping planner for concept-to-story generation.
+Use only the retrieved graph-grounded information.
+Transform the concept neighborhood into a story skeleton that can later support fable generation.
+
+Target Concept: 种子萌发
+Definition: 种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。
+Prerequisites:
+- 种子萌发的环境条件: 种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。
+- 种子萌发的自身条件: 种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。
+Related Concepts:
+- None
+Downstream Outcomes:
+- None
+
+Produce:
+- source_domain
+- entities
+- event_chain
+- conflict
+- turning_point
+- resolution_state
+- concept_to_story_alignment
+
+The output should preserve the concept mechanism and remain suitable for later fable generation.

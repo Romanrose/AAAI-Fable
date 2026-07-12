@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员坚持先做入口条件核对。他走到证据室门口，检查通行牌上的编号是否与封存箱上的标签一致。确认无误后，他在分段记录册第一页写下“条件已核”。调度员这才开始登记，每登记一件，就用通行牌在封存箱上划一道痕，表示过程在走。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中，入口条件核对（n1）先于结果验收记录（n2）执行，且前者是后者的前提，符合enables关系。"
+}

@@ -1,0 +1,53 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "地图制作",
+  "domain_rationale": "地图上的距离需要比例尺和测量工具来确定，类似长度需要单位和测量工具。",
+  "conflict": "地图距离是抽象表示，而长度是物理实在，但两者都依赖标准化单位与工具进行准确测量。",
+  "event_chain": [
+    "制图师想要知道两座城市之间的实际距离",
+    "距离需要距离单位（如公里）来量化",
+    "制图师用比例尺和直尺在图上测量距离",
+    "使用比例尺和直尺的方法（如对齐、读数）确保测量准确"
+  ],
+  "turning_point": "制图师用比例尺换算图上距离得到实际公里数，从而确认距离。",
+  "resolution_state": "两地实际距离通过比例尺和标准化方法被准确求得，制图师将其标注在地图图例上。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "两城市间的实际距离",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "距离单位（公里）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用比例尺和直尺测量图上距离",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "使用比例尺和直尺的方法",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "距离单位（公里）是实际距离的一种量化表示",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "用比例尺和直尺测量的过程验证了实际距离",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "实际距离使得使用比例尺和直尺的方法成为必要",
+      "direction_preserved": true
+    }
+  ]
+}

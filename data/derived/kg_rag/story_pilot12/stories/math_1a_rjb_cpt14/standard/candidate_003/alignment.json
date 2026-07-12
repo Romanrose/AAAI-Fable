@@ -1,0 +1,75 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "六面木箱由六块长方形木板拼成，相对的两块木板形状完全相同，相对的十二条木棱长度也一一相等。八个角钉把木板牢牢固定",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "正方木盒，它也是六块木板拼成的，不过每块木板都是完全相同的正方形",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "按木工分类法，这种六面木箱算是一种常见的形状",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "我们再用六面木箱做基础，学学怎么拼搭木结构。你可以把这些木块组合起来，也可以拆分开，形成新的结构",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "学学怎么算木箱的表面积。你数数，它一共有六块木板，把这六块木板的面积加起来，就是木箱的表面积",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "学木箱的容积公式。木箱能装多少东西，就用长乘宽再乘高来计算",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "按木工分类法，这种六面木箱算是一种常见的形状",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "这个正方木盒确实是六面木箱的一种特殊情况",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "虽然正方木盒和六面木箱有关联",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "我们先以这只六面木箱为基础，学学怎么算木箱的表面积",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "我们学木箱的容积公式。木箱能装多少东西，就用长乘宽再乘高来计算",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "我们再用六面木箱做基础，学学怎么拼搭木结构",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All 6 mechanism nodes and 6 edges are fully aligned with exact story evidence. Node mappings follow the frozen plan: n1→六面木箱, n2→正方木盒, n3→木工分类法, n4→拼搭木结构, n5→木箱表面积, n6→木箱容积公式. Edge directions are preserved: e1 (is_a) from n1 to n3, e2 (is_a) from n2 to n1, e3 (relates_to) bidirectional, e4/e5/e6 (enables) from n1 to n5/n6/n4. No missing elements."
+}

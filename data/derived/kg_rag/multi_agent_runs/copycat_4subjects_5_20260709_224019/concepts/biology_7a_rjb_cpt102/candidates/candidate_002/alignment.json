@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "入口条件核对",
+      "narrative_anchor": "入口条件核对",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "第2道转化环节",
+      "narrative_anchor": "第2道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+      "evidence": "先稳定入口条件核对，再推动第2道转化",
+      "narrative_anchor": "先稳定入口条件核对，再推动第2道转化",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "把水分牌上的露珠现象归入“一定的水分”这类更大的规则",
+      "evidence": "把水分牌上的露珠现象归入“一定的水分”这类更大的规则",
+      "narrative_anchor": "把水分牌上的露珠现象归入“一定的水分”这类更大的规则",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n1",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

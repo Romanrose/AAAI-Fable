@@ -1,0 +1,198 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "加热氯酸钾制取氧气",
+  "concept_id": "chemistry_9a_rjb_cpt108",
+  "concept_definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt108",
+    "加热氯酸钾制取氧气"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt108",
+      "label": "Concept",
+      "name": "加热氯酸钾制取氧气",
+      "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "加热氯酸钾制取氧气\n在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt103",
+          "label": "Concept",
+          "name": "实验室制取氧气的方法",
+          "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp18",
+          "label": "Experiment",
+          "name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt108",
+    "concept_id": "chemistry_9a_rjb_cpt108",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt108",
+      "label": "Concept",
+      "name": "加热氯酸钾制取氧气",
+      "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "加热氯酸钾制取氧气"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "白色粉末（氯酸钾）与黑色粉末（二氧化锰）混合加热产生气体（氧气），使蜡烛复燃。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "黑色粉末帮助白色粉末更快分解出气体，但自身不变；白色粉末分解为气体和残渣，质量守恒。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "区分了物理混合（粉末混合）与化学反应（加热分解）；强调了反应前后物质种类变化和质量守恒；未使用化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个古老的城邦里，有一位年轻的账房学徒叫阿明。他负责管理城邦的仓库，每天都要清点货物。仓库里堆满了各种物品，其中最让他头疼的是一种白色的粉末和一种黑色的粉末。白色粉末是珍贵的盐，黑色粉末是普通的炭灰。老账房先生告诉他，这两种粉末单独放着都没什么用，但只要把它们混合在一起，再放在火上烤，就会产生一种神奇的气体，能让快要熄灭的蜡烛重新燃烧起来。\n\n阿明很好奇，他决定自己试一试。他取了一些白色粉末，又加了一点黑色粉末，搅拌均匀后放在一个小陶罐里，然后架在炭火上加热。不一会儿，陶罐里冒出了气泡，他用一根细竹管把气体引出来，吹向一支快要熄灭的蜡烛。蜡烛果然重新燃起了明亮的火焰！阿明高兴极了，他以为黑色粉末是产生气体的关键。\n\n第二天，阿明又做了一次实验。这次他只用了白色粉末，没有加黑色粉末，直接加热。结果陶罐里也冒出了气泡，但气体很少，蜡烛只是微微闪了一下就灭了。阿明很困惑：为什么昨天加了黑色粉末就能产生那么多气体，今天没有加就不行呢？他仔细观察，发现昨天用过的陶罐底部还残留着一些黑色粉末，而今天用的陶罐是全新的。他恍然大悟：原来黑色粉末并没有变成气体，它只是帮助白色粉末更快地分解出气体。黑色粉末在反应前后几乎没有变化，还是原来的样子。\n\n阿明把这个发现告诉了老账房先生。先生微笑着点点头说：“你观察得很仔细。记住，有些东西看似参与了变化，其实只是在一旁帮忙，自己并没有改变。真正的变化，是白色粉末变成了两种不同的东西：一种是能让蜡烛复燃的气体，另一种是留在罐底的白色残渣。你把它们加起来，重量和原来的白色粉末一样，只是形态不同了。”\n\n阿明从此明白了：在看似简单的混合与加热中，隐藏着物质转化的秘密。他更加用心地观察每一个细节，后来成了城邦里最出色的账房先生。",
+  "rule_findings": {
+    "story_token_count": 670,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

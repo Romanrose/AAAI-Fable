@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "小于号含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "小于号含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "表示前面的数量比后面的数量少。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:16377",
+        "source_name": "等号含义",
+        "target_name": "小于号含义",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:19331",
+        "source_name": "等号含义",
+        "target_name": "小于号含义",
+        "relation_semantic_role": "association"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "法庭证据室里，记录员老陈站在入口处，手里捏着一块写着“入场条件”的通行牌。调度员小周急着要把新一批物证送进封存箱，伸手就要推门。\n\n“等等，”老陈拦住他，“先确认条件牌上的数字——前面的数量比后面的数量少，这个条件成立，才能开始登记。”\n\n小周皱眉：“条件牌上的数字我早就看过了，少一个数而已，何必耽误时间？”\n\n老陈摇头：“没有这一步核对，后面的登记根本不能开始。这是顺序，不能乱。”\n\n小周只好停下，把通行牌举到灯下仔细对照。确认无误后，老陈才在分段记录册上写下第一笔。接着，他把这份记录与另一份封存箱的接收记录放在一起比较。验收员老赵凑过来看，发现两份记录共同约束着最后判断——入口条件核对的结果必须与封存箱的编号顺序一致，否则验收时就会矛盾。\n\n小周试着跳过中间承接，直接让物证进箱，想把登记补在后面。结果封存箱的编号乱了，通行牌上的条件与箱内物证对不上，验收员老赵拿着记录册皱紧了眉头：“前后对不上，怎么验收？”\n\n众人这才明白，必须先稳定入口条件核对，再推动第2道转化环节——把通行牌上的条件转成封存箱的登记格式，前后两步必须能在记录中互相承接。老陈重新核对条件牌，小周按顺序登记，老赵最后用结果验收记录核对整条安排。\n\n所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。封存箱的编号、通行牌上的数字、分段记录册上的每一笔，全部严丝合缝。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "条件牌上的数字——前面的数量比后面的数量少",
+        "narrative_anchor": "条件牌上的数字——前面的数量比后面的数量少",
+        "confidence": 1.0
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "把通行牌上的条件转成封存箱的登记格式",
+        "narrative_anchor": "把通行牌上的条件转成封存箱的登记格式",
+        "confidence": 1.0
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "用结果验收记录核对整条安排",
+        "narrative_anchor": "用结果验收记录核对整条安排",
+        "confidence": 1.0
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "必须先稳定入口条件核对，再推动第2道转化环节",
+        "narrative_anchor": "必须先稳定入口条件核对，再推动第2道转化环节",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 1.0
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "两份记录共同约束最后判断",
+        "evidence": "两份记录共同约束着最后判断",
+        "narrative_anchor": "两份记录共同约束着最后判断",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了精子（精细胞）与卵子（卵细胞）结合形成合子的过程，包括花粉管生长（受精前准备）和双受精（受精阶段），完全符合概念定义。",
+    "implicitness": "故事全程未使用'受精'或'fertilization'等禁止词汇，而是用'结合'、'融合'等自然语言替代，完美隐含目标概念。",
+    "mapping_clarity": "故事中精细胞与卵细胞结合对应核心机制，花粉管生长对应准备阶段，双受精对应受精阶段，映射清晰且完整。",
+    "readability": "语言流畅自然，对话生动，情节连贯，适合初中生理解，无冗余或晦涩表达。",
+    "pedagogical_value": "通过观察和对话逐步揭示概念，强调条件（花粉、花粉管、卵细胞准备）和结果（果实种子形成），教学价值高。",
+    "novelty": "以园圃工坊为背景，通过师徒对话展开，虽双受精常见但场景新颖，略有新意。"
+  },
+  "revision_suggestions": [
+    "可增加一个对比案例（如花粉管未到达的情况）以强化条件性理解。",
+    "结尾可稍加总结性语句，帮助学习者巩固概念。"
+  ]
+}

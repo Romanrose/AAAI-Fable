@@ -3,7 +3,11 @@
     "title": "Hierarchical Neural Story Generation",
     "year": "2018",
     "venue": "ACL",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "StoryGen-01-HierarchicalNeuralStoryGeneration-ACL-2018.pdf",
     "url": "https://aclanthology.org/P18-1082/",
     "contribution": "提出分层故事生成思路，把故事创作拆成高层规划和低层文本生成。",
@@ -22,7 +26,11 @@
     "title": "Towards Controllable Story Generation",
     "year": "2018",
     "venue": "Workshop on Storytelling",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "StoryGen-02-ControllableStoryGeneration-Workshop-2018.pdf",
     "url": "https://aclanthology.org/W18-1505/",
     "contribution": "探索用事件、角色或主题控制故事生成。",
@@ -41,7 +49,11 @@
     "title": "Plan-and-Write: Towards Better Automatic Storytelling",
     "year": "2019",
     "venue": "AAAI",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "Method-01-PlanAndWrite-AAAI-2019.pdf",
     "url": "https://ojs.aaai.org/index.php/AAAI/article/view/4726",
     "contribution": "提出先生成 storyline 再扩写故事的两阶段框架。",
@@ -60,7 +72,11 @@
     "title": "Controllable Neural Story Plot Generation via Reward Shaping",
     "year": "2019",
     "venue": "IJCAI",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "StoryGen-03-ControllablePlotRewardShaping-IJCAI-2019.pdf",
     "url": "https://www.ijcai.org/proceedings/2019/829",
     "contribution": "通过奖励塑形控制故事情节发展。",
@@ -79,7 +95,11 @@
     "title": "Concept Extraction and Prerequisite Relation Learning from Educational Data",
     "year": "2019",
     "venue": "AAAI",
-    "pillar": "知识图谱",
+    "phase": "图检索与证据",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "知识图谱",
     "pdf": "Method-05-ConceptExtractionPrerequisite-AAAI-2019.pdf",
     "url": "https://ojs.aaai.org/index.php/AAAI/article/view/5033",
     "contribution": "研究从教育数据中抽取概念并学习前置依赖关系。",
@@ -98,7 +118,11 @@
     "title": "MOOCCube: A Large-scale Data Repository for NLP Applications in MOOCs",
     "year": "2020",
     "venue": "ACL",
-    "pillar": "知识图谱",
+    "phase": "图检索与证据",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "知识图谱",
     "pdf": "KG-01-MOOCCube-ACL-2020.pdf",
     "url": "https://aclanthology.org/2020.acl-main.285/",
     "contribution": "构建面向 MOOC 场景的大规模教育数据仓库。",
@@ -117,7 +141,12 @@
     "title": "Automatic Story Generation: A Survey of Approaches",
     "year": "2021",
     "venue": "ACM Computing Surveys",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "机制图",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "StoryGen-04-AutomaticStoryGenerationSurvey-ACMCSUR-2021.pdf",
     "url": "https://dl.acm.org/doi/10.1145/3453156",
     "contribution": "系统综述自动故事生成方法。",
@@ -136,7 +165,11 @@
     "title": "Metaphor Generation with Conceptual Mappings",
     "year": "2021",
     "venue": "ACL-IJCNLP",
-    "pillar": "结构映射",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "结构映射",
     "pdf": "Method-02-MetaphorConceptualMappings-ACL-2021.pdf",
     "url": "https://aclanthology.org/2021.acl-long.524/",
     "contribution": "研究基于概念映射生成隐喻表达。",
@@ -155,7 +188,12 @@
     "title": "Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences",
     "year": "2021",
     "venue": "EMNLP",
-    "pillar": "评测",
+    "phase": "机制图",
+    "secondaryPhases": [
+      "寓言叙事",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Evaluation-01-MoralStories-EMNLP-2021.pdf",
     "url": "https://aclanthology.org/2021.emnlp-main.54/",
     "contribution": "构建道德故事数据集，强调规范、意图、行动和结果。",
@@ -174,7 +212,11 @@
     "title": "A Survey of Controllable Text Generation using Transformer-based Pre-trained Language Models",
     "year": "2022",
     "venue": "arXiv",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "StoryGen-05-ControllableTextGenerationSurvey-arXiv-2022.pdf",
     "url": "https://arxiv.org/abs/2201.05337",
     "contribution": "综述 Transformer 时代的可控文本生成方法。",
@@ -193,7 +235,11 @@
     "title": "Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT",
     "year": "2022",
     "venue": "INLG",
-    "pillar": "结构映射",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
     "pdf": "Method-03-AnalogyGenerationLLMs-INLG-2022.pdf",
     "url": "https://aclanthology.org/2022.inlg-main.25/",
     "contribution": "研究用 LLM prompt 生成类比。",
@@ -212,7 +258,12 @@
     "title": "A Corpus for Understanding and Generating Moral Stories",
     "year": "2022",
     "venue": "NAACL",
-    "pillar": "评测",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "机制图",
+      "寓言叙事"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Evaluation-02-STORAL-NAACL-2022.pdf",
     "url": "https://aclanthology.org/2022.naacl-main.374/",
     "contribution": "提供理解和生成道德故事的语料资源。",
@@ -231,7 +282,11 @@
     "title": "STORYANALOGY: Deriving Story-level Analogies from Large Language Models",
     "year": "2023",
     "venue": "EMNLP",
-    "pillar": "结构映射",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
     "pdf": "Core-05-STORYANALOGY-EMNLP-2023.pdf",
     "url": "https://aclanthology.org/2023.emnlp-main.706/",
     "contribution": "研究从 LLM 中获得故事级类比。",
@@ -250,7 +305,11 @@
     "title": "Educational Material to Knowledge Graph Conversion",
     "year": "2024",
     "venue": "KaLLM Workshop",
-    "pillar": "知识图谱",
+    "phase": "图检索与证据",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "知识图谱",
     "pdf": "Method-04-EducationalMaterial2KG-KaLLM-2024.pdf",
     "url": "https://aclanthology.org/2024.kallm-1.9/",
     "contribution": "研究将教育材料转换为知识图谱。",
@@ -269,7 +328,11 @@
     "title": "Leveraging Large Language Models for Learning Complex Legal Concepts through Storytelling",
     "year": "2024",
     "venue": "ACL",
-    "pillar": "评测",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Core-01-LegalStories-ACL-2024.pdf",
     "url": "https://aclanthology.org/2024.acl-long.388/",
     "contribution": "用 LLM 通过故事帮助学习复杂法律概念。",
@@ -288,7 +351,12 @@
     "title": "A Survey on Automatic Generation of Figurative Language",
     "year": "2024",
     "venue": "ACM Computing Surveys",
-    "pillar": "结构映射",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "寓言叙事",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
     "pdf": "Figurative-01-FigurativeLanguageGenerationSurvey-ACMCSUR-2024.pdf",
     "url": "https://dl.acm.org/",
     "contribution": "综述比喻、隐喻等修辞语言自动生成。",
@@ -307,7 +375,11 @@
     "title": "SS-GEN: A Social Story Generation Framework with Large Language Models",
     "year": "2025",
     "venue": "AAAI",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "Core-02-SSGEN-AAAI-2025.pdf",
     "url": "https://ojs.aaai.org/",
     "contribution": "提出面向 social story 的 LLM 生成框架。",
@@ -326,7 +398,11 @@
     "title": "Unlocking Scientific Concepts: How Effective Are LLM-Generated Analogies for Student Understanding and Classroom Practice?",
     "year": "2025",
     "venue": "CHI",
-    "pillar": "评测",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "Copycat 式候选映射竞争"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Evaluation-04-ScientificConceptAnalogies-CHI-2025.pdf",
     "url": "https://dl.acm.org/",
     "contribution": "研究 LLM 生成科学概念类比对学生理解和课堂实践的作用。",
@@ -345,26 +421,35 @@
     "title": "Multimodal Story Generation Using Generative AI for Contextualised Mathematics Education",
     "year": "2025",
     "venue": "AIED",
-    "pillar": "评测",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Education-01-MultimodalMathStoryGeneration-AIED-2025.pdf",
     "url": "https://link.springer.com/",
-    "contribution": "研究生成式 AI 在数学教育中的情境化故事生成。",
-    "relation": "它说明故事化知识解释可以服务具体学科教学。",
-    "reading": "重点看数学概念如何被情境化，以及多模态元素如何支持理解。",
-    "borrow": "可借鉴数学教育场景中的故事任务设计和学生适配思路。",
-    "limitation": "数学故事不一定是寓言，也不覆盖全学科 KG。",
-    "transform": "需要把情境化故事扩展为寓言结构，并加入跨学科知识图谱输入。",
+    "contribution": "论文提出面向儿童数学问题的个性化多模态故事系统：Teacher、Planner、Writer 三个智能体依次求解、规划和写作，并结合图像生成与互动学习。",
+    "relation": "它提供了“知识求解—故事规划—正文实现—迁移练习”的具体教育故事生成参照。",
+    "reading": "重点看 PDF 第 452–457 页的 REACT/启发式学习依据、三智能体框架、60 个数学问题实验和七维评价。",
+    "borrow": "借鉴 Teacher/Planner/Writer 分工、逐步揭示答案、故事内应用题与跨情境迁移题。",
+    "limitation": "当前结果主要来自 Gemini 与 GPT-4o 的自动评判；同理心和参与度改善有限，惊喜度仍低，儿童与教师用户研究尚属未来工作。",
+    "transform": "将数学求解计划替换为已审核 MechanismGraph 与 Mapping Plan，并用反向结构对齐和真实学习评测补足自动评分。",
     "evidence": [
-      "PDF 文本显示该 AIED 文件像 proceedings 合集，抽取结果混入多篇论文，需要人工复核具体目标论文页码。",
-      "可确认其中相关内容关注 STEM 教育、学生参与、GenAI、故事化或多模态解释。",
-      "因此当前页面只把它作为“数学教育情境化故事生成”的弱证据参考，后续应定位目标论文起止页再精修。"
+      "目标论文位于所收录 AIED 2025 论文集的印刷页 452–457；系统以 REACT 情境学习和启发式学习为教育依据。",
+      "故事文本由 Teacher、Planner、Writer 三个智能体分别负责逐步求解、情节规划和正文生成，并配合多模态与互动学习模块。",
+      "作者在 60 个数学问题上用 Gemini 和 GPT-4o 评判七个维度；多智能体方案提高准确性、相关性、连贯性和复杂度，但同理心/参与度提升有限，惊喜度仍低。"
     ]
   },
   "kg-guided-storytelling": {
     "title": "Guiding Generative Storytelling with Knowledge Graphs",
     "year": "2025",
     "venue": "arXiv",
-    "pillar": "知识图谱",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "图检索与证据",
+      "机制图"
+    ],
+    "legacyTheme": "知识图谱",
     "pdf": "Core-04-KGGuidedStorytelling-arXiv-2025.pdf",
     "url": "https://arxiv.org/abs/2505.24803",
     "contribution": "研究用知识图谱指导生成式故事创作。",
@@ -383,7 +468,11 @@
     "title": "Can Language Models Serve as Analogy Annotators?",
     "year": "2025",
     "venue": "Findings of ACL",
-    "pillar": "结构映射",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
     "pdf": "Evaluation-03-AnalogyAnnotators-ACLFindings-2025.pdf",
     "url": "https://aclanthology.org/",
     "contribution": "评估语言模型能否作为类比标注者。",
@@ -402,7 +491,11 @@
     "title": "A Survey on LLMs for Story Generation",
     "year": "2025",
     "venue": "Findings of EMNLP",
-    "pillar": "层次化生成",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
     "pdf": "StoryGen-06-LLMStoryGenerationSurvey-EMNLPFindings-2025.pdf",
     "url": "https://aclanthology.org/",
     "contribution": "综述 LLM 时代故事生成方法和挑战。",
@@ -421,7 +514,11 @@
     "title": "TF1-EN-3M: Three Million Synthetic Moral Fables from Open Language Models",
     "year": "2025",
     "venue": "arXiv",
-    "pillar": "评测",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Fable-01-SyntheticMoralFables-arXiv-2025.pdf",
     "url": "https://arxiv.org/abs/2504.20605",
     "contribution": "构建大规模合成道德寓言数据。",
@@ -440,11 +537,16 @@
     "title": "K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs",
     "year": "2026",
     "venue": "arXiv",
-    "pillar": "知识图谱",
+    "phase": "图检索与证据",
+    "secondaryPhases": [
+      "机制图",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "知识图谱",
     "pdf": "Core-03-K12KGraph-arXiv-2026.pdf",
     "url": "https://arxiv.org/abs/2605.09635",
     "contribution": "构建课程对齐的 K-12 知识图谱，用于教育 LLM 训练和评测。",
-    "relation": "这是 Concept-to-Fable 的核心支柱：为寓言生成提供课程认知和知识结构。",
+    "relation": "它主要支撑第一阶段的课程图检索与证据组织，并为第二阶段机制图提供课程认知结构。",
     "reading": "重点看 concept、skill、prerequisite 和 curriculum alignment 的定义。",
     "borrow": "可直接作为小学全学科知识图谱构建和任务输入设计的参照。",
     "limitation": "KG 本身不解决故事化、寓言化和语言生成质量。",
@@ -459,7 +561,11 @@
     "title": "Classroom AI: Large Language Models as Grade-Specific Teachers",
     "year": "2026",
     "venue": "npj Artificial Intelligence",
-    "pillar": "评测",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "评测",
     "pdf": "Evaluation-05-ClassroomAI-npjAI-2026.pdf",
     "url": "https://www.nature.com/npjai/",
     "contribution": "研究 LLM 作为分年级教师时的表现与适配。",
@@ -473,5 +579,407 @@
       "论文整合七个 readability metrics，并构建 grade-specific content generation 数据集。",
       "Evaluation 覆盖多个数据集和 208 名 human participants，报告年级对齐相较 prompt 方法提升 35.64 个百分点且保持准确性。"
     ]
+  },
+  "teaching-through-analogies": {
+    "title": "Teaching Through Analogies: A Modular Pipeline for Educational Analogy Generation",
+    "year": "2026",
+    "venue": "BEA",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Education-02-TeachingThroughAnalogies-BEA-2026.pdf",
+    "url": "",
+    "contribution": "摘要提出由源域发现、子概念生成、解释生成和评价组成的模块化教育类比流程，并用结构映射理论分析阶段间影响。",
+    "relation": "它直接支持把机制图拆成可对齐的子概念，再寻找寓言源域并生成映射解释。",
+    "reading": "重点看 sub-concept grounding、开放/封闭源域检索和 LLM-as-a-judge 与人工排序的一致性。",
+    "borrow": "借鉴分阶段类比生成和子概念配对，把当前节点/边映射进一步组织为可评价的教育解释。",
+    "limitation": "论文生成教育类比而非完整寓言，且开放式源域生成仍明显弱于人类。",
+    "transform": "在其四阶段之后增加寓言文体规划、故事生成和反向结构对齐。",
+    "evidence": []
+  },
+  "enhanced-story-comprehension": {
+    "title": "Enhanced Story Comprehension for Large Language Models through Dynamic Document-Based Knowledge Graphs",
+    "year": "2022",
+    "venue": "AAAI",
+    "phase": "机制图",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "评测",
+    "pdf": "Evaluation-06-EnhancedStoryComprehension-AAAI-2022.pdf",
+    "url": "",
+    "contribution": "摘要用从故事动态抽取的知识图增强长篇故事问答和补全，并提出长文问答任务与更稳定的故事补全评价。",
+    "relation": "它为完成寓言后的反向理解提供参照：先从故事重建事实图，再与原机制图比较。",
+    "reading": "重点看动态文档知识图如何构造信息密集提示，以及故事问答和补全的评价设置。",
+    "borrow": "借鉴故事侧动态图作为反向对齐中间表示，减少只靠整体文本打分的不可解释性。",
+    "limitation": "论文关注长篇理解与上下文窗口，不直接检查教学机制是否保持。",
+    "transform": "把动态故事图的实体/关系与 MechanismGraph 的节点/边做显式对齐。",
+    "evidence": []
+  },
+  "morables": {
+    "title": "MORABLES: Moral Reasoning in LLMs with Fables",
+    "year": "2025",
+    "venue": "EMNLP",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "评测",
+    "pdf": "Fable-02-MORABLES-EMNLP-2025.pdf",
+    "url": "",
+    "contribution": "摘要构建经人工核验的寓言与短篇故事道德推理基准，用多选题、强干扰项和对抗变体测试深层寓意推断。",
+    "relation": "它说明模型即使能回答阅读理解题，也可能依赖表面模式而不真正理解寓意。",
+    "reading": "重点看 moral inference、多选干扰项、对抗改写和模型自相矛盾分析。",
+    "borrow": "借鉴“寓言—理解题—对抗题”设计，为生成寓言配套概念理解测试。",
+    "limitation": "道德推理不等于学科机制理解，且基准主要评价理解模型而非生成质量。",
+    "transform": "把 moral choice 替换为机制判断、因果方向和迁移问题。",
+    "evidence": []
+  },
+  "narrative-analogy-dimensions": {
+    "title": "Dimensions of Analogy in Narratives",
+    "year": "2022",
+    "venue": "IJCAI Workshop",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "机制图",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Fable-03-NarrativesDimensionsAnalogy-IJCAIWorkshop-2022.pdf",
+    "url": "",
+    "contribution": "摘要提出叙事类比的六个维度，标注寓言语料并设计四类递增难度的类比推理任务。",
+    "relation": "它为候选映射竞争提供比单一相似度更细的结构评价维度。",
+    "reading": "重点看六维类比定义、寓言标注方案和语言模型/神经符号方法的有限表现。",
+    "borrow": "借鉴多维标注表检查角色、事件、因果和高阶关系是否共同保持。",
+    "limitation": "论文侧重叙事理解与类比评价，没有生成教育寓言的端到端流程。",
+    "transform": "把六维类比标签接入候选评分和反向对齐报告。",
+    "evidence": []
+  },
+  "biased-tales": {
+    "title": "Biased Tales: Cultural and Gender Stereotypes in LLM-Generated Children Stories",
+    "year": "2025",
+    "venue": "EMNLP",
+    "phase": "反向结构对齐与教育质量评测",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "评测",
+    "pdf": "Fable-04-BiasedTales-EMNLP-2025.pdf",
+    "url": "",
+    "contribution": "摘要分析 LLM 儿童故事中由性别与文化身份触发的角色属性和主题偏差，并报告显著的外貌与文化刻板差异。",
+    "relation": "它补足教育质量中的公平性和儿童叙事安全，不应只评价流畅度与结构覆盖。",
+    "reading": "重点看受控提示、角色属性分析和不同文化/性别条件下的差异指标。",
+    "borrow": "增加角色能动性、职业/外貌分配、文化刻板印象和群体差异审计。",
+    "limitation": "研究对象是个性化睡前故事，并不直接处理学科知识忠实性。",
+    "transform": "在不改变机制映射的前提下，对故事载体和语言实现增加偏见检查。",
+    "evidence": []
+  },
+  "fable-literary-genre": {
+    "title": "La Fable En Tant Qu’un Genre Littéraire Et L’analyse De Fable",
+    "year": "2013",
+    "venue": "Turkish Studies",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "寓言文体",
+    "pdf": "Fable-05-FableLiteraryGenre-TurkishStudies-2013.pdf",
+    "url": "",
+    "contribution": "摘要将寓言界定为兼具教诲与娱乐功能的文学体裁，强调动物、拟人化行动、行为后果和儿童教育价值。",
+    "relation": "它帮助明确输出为什么是寓言，而不只是带知识点的普通故事。",
+    "reading": "重点看寓言定义、动物角色的功能、行为—结果—教训结构及儿童文学定位。",
+    "borrow": "把短叙事、拟人化、行动后果和明确但不过度说教的寓意转化为文体约束。",
+    "limitation": "文章以传统道德寓言为中心，没有讨论科学机制或自动生成。",
+    "transform": "保留传统文体功能，同时将道德教训扩展为可回查的知识寓意。",
+    "evidence": []
+  },
+  "arnold-lobel-fable-features": {
+    "title": "Arnold Lobel’s Fables and Traditional Fable Features",
+    "year": "1993",
+    "venue": "Children’s Folklore Review",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "寓言文体",
+    "pdf": "Fable-06-ArnoldLobelTraditionalFableFeatures-CFR-1993.pdf",
+    "url": "",
+    "contribution": "文章比较 Arnold Lobel 的文学寓言与传统寓言特征，讨论寓言作为民间叙事与文学创作之间的互文关系。",
+    "relation": "它提醒文体规则不能被简化为“动物会说话”，还涉及短小形式、类型变体、传统母题和重述关系。",
+    "reading": "重点看 fable set、传统母题、文学改写和民间/书面体裁边界。",
+    "borrow": "借鉴文体特征清单，区分必要结构、常见传统和可创新的表层实现。",
+    "limitation": "文章是文体个案研究，不提供计算模型或教育效果实验。",
+    "transform": "把定性文体特征转成生成提示与人工评审表，而不把其误作硬科学规则。",
+    "evidence": []
+  },
+  "structural-similarity-figurative-language": {
+    "title": "Structural Similarity in Figurative Language: A Preliminary Cognitive Analysis",
+    "year": "2023",
+    "venue": "Lingua",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "寓言叙事"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Fable-07-StructuralSimilarityFigurativeLanguage-Lingua-2023.pdf",
+    "url": "",
+    "contribution": "摘要区分实体结构与情境/事件结构相似性，并说明高层结构相似如何形成寓言、parable 与 allegory-like narrative。",
+    "relation": "它为“知识机制—寓言情节”提供认知语言学解释：关键是关系结构而非表面对象相似。",
+    "reading": "重点看不同抽象层级的结构相似、转喻参与和寓言式叙事例子。",
+    "borrow": "借鉴高层结构相似层级，解释为什么某个故事域能承载目标机制。",
+    "limitation": "文章是初步认知分析，没有自动候选生成或量化评价。",
+    "transform": "把结构相似类型编码进候选理由和反向对齐标签。",
+    "evidence": []
+  },
+  "amar-kgqa": {
+    "title": "Harnessing Large Language Models for Knowledge Graph Question Answering via Adaptive Multi-Aspect Retrieval-Augmentation",
+    "year": "2025",
+    "venue": "AAAI",
+    "phase": "图检索与证据",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "知识图谱",
+    "pdf": "KG-02-Amar-KGQuestionAnswering-AAAI-2025.pdf",
+    "url": "",
+    "contribution": "摘要提出 Amar：联合检索实体、关系和子图，以自对齐减少多视角噪声，并用相关性门控选择真正有助于回答的知识。",
+    "relation": "它直接启发图检索阶段不要把所有邻居无差别塞入上下文，而应对实体、关系和路径进行对齐与门控。",
+    "reading": "重点看 multi-aspect retrieval、self-alignment、relevance gating 及其对 WebQSP/CWQ 的改善。",
+    "borrow": "借鉴多视角检索与软门控，为 RetrievalPackage 增加证据相关性和噪声抑制。",
+    "limitation": "论文解决通用 KGQA，不处理课程证据、机制抽取或寓言生成。",
+    "transform": "把问题相关性改成教学概念相关性，并保留课程来源和机制证据资格。",
+    "evidence": []
+  },
+  "story-of-thought": {
+    "title": "Story of Thought: Narrative Reasoning with Analogy and Metaphor",
+    "year": "2025",
+    "venue": "ACL",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "Copycat 式候选映射竞争"
+    ],
+    "legacyTheme": "层次化生成",
+    "pdf": "Method-06-StoryOfThought-AnalogyAngle-ACL-2025.pdf",
+    "url": "",
+    "contribution": "摘要提出 Story of Thought，通过围绕问题构造带隐喻和类比的叙事来提升物理、化学和生物推理表现。",
+    "relation": "它支持把叙事视为组织因果信息的推理中间层，而不只是最终展示格式。",
+    "reading": "重点看叙事推理提示、类比/隐喻标注和在科学任务上的增益。",
+    "borrow": "借鉴“先构造解释叙事再求解”的思路，但将其置于已验证机制图之后。",
+    "limitation": "任务目标是提高问题求解准确率，不要求生成寓言或保持显式映射。",
+    "transform": "让叙事生成受 Mapping Plan 约束，并用反向对齐验证类比没有改写机制。",
+    "evidence": []
+  },
+  "copycat-mental-fluidity-part1": {
+    "title": "The Copycat Project: Mental Fluidity, Part I",
+    "year": "1995",
+    "venue": "Book excerpt",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Method-07-CopycatProject-MentalFluidity-1995-Part1.pdf",
+    "url": "",
+    "contribution": "该材料是 Copycat 理论书籍的分卷节选，没有独立论文摘要；内容围绕角色优先的对应、概念光晕、概念滑动与多种相互竞争的类比压力。",
+    "relation": "它是当前 Copycat-inspired 候选竞争与角色映射思想的理论来源。",
+    "reading": "结合中文转换稿阅读 Seek-Whence/Copycat 类比谜题、对象一致性与结构角色冲突。",
+    "borrow": "借鉴“角色比对象字面身份更重要”和情境诱导概念滑动的原则。",
+    "limitation": "书籍讨论微领域认知架构，不能直接当作当前 LLM 方法的实验结果。",
+    "transform": "将理论原则转成可验证的机制节点/边映射，并明确 MVP 与完整 Copycat 的差距。",
+    "evidence": []
+  },
+  "copycat-mental-fluidity-part2": {
+    "title": "The Copycat Project: Mental Fluidity, Part II",
+    "year": "1995",
+    "venue": "Book excerpt",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Method-07-CopycatProject-MentalFluidity-1995-Part2.pdf",
+    "url": "",
+    "contribution": "该分卷没有独立摘要，延续 Copycat 对 Slipnet、Workspace、Coderack、温度和并行微代理互动的系统说明。",
+    "relation": "它为候选竞争、结构压力与元监控的架构解释提供背景。",
+    "reading": "重点看概念网络、局部结构构建、代码元竞争和温度如何调节探索。",
+    "borrow": "借鉴多候选并行竞争、上下文敏感评分和不确定性反馈。",
+    "limitation": "当前项目并未实现完整 coderack、动态 slipnet 或非单调温度循环。",
+    "transform": "只把已经落地的结构门控称为 Copycat-inspired，不夸大为完整复现。",
+    "evidence": []
+  },
+  "copycat-mental-fluidity-part3": {
+    "title": "The Copycat Project: Mental Fluidity, Part III",
+    "year": "1995",
+    "venue": "Book excerpt",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Method-07-CopycatProject-MentalFluidity-1995-Part3.pdf",
+    "url": "",
+    "contribution": "该分卷没有独立摘要，集中展示 Copycat 运行、类比选择的涌现过程及不同压力下的答案分布。",
+    "relation": "它提示候选映射实验不仅应报告单个胜者，还应保存候选分布与选择轨迹。",
+    "reading": "重点看具体运行案例、答案频率、温度变化和错误/意外类比。",
+    "borrow": "借鉴候选级审计、失败案例分析和策略间分布比较。",
+    "limitation": "字母串微领域的统计行为不能直接外推到开放域中文寓言。",
+    "transform": "用多概念、多策略和人工评审验证候选竞争是否带来实际质量收益。",
+    "evidence": []
+  },
+  "conceptual-slippage-copycat": {
+    "title": "Conceptual Slippage and Analogy-Making: A Report on the Copycat Project",
+    "year": "1988",
+    "venue": "Technical report",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "机制图"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Method-08-ConceptualSlippage-Copycat-1988.pdf",
+    "url": "",
+    "contribution": "文章说明知觉与重叠、联想和情境敏感的概念系统如何产生概念滑动，并用 Copycat 字母串运行展示灵活类比。",
+    "relation": "它为允许故事载体变化、同时保持关系角色提供最直接的理论依据。",
+    "reading": "重点看 conceptual slippage、微领域问题和知觉机制与概念系统的互动。",
+    "borrow": "借鉴受限概念滑动：表层角色可变，必须保留的机制身份和方向不可变。",
+    "limitation": "微领域的灵活性来自完整认知架构，不能用一次 LLM 提示等同替代。",
+    "transform": "将滑动范围写成显式允许/禁止约束，并保存每次映射决策。",
+    "evidence": []
+  },
+  "copycat-reimplementation": {
+    "title": "A Reimplementation of the Copycat Project",
+    "year": "2018",
+    "venue": "arXiv",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [],
+    "legacyTheme": "结构映射",
+    "pdf": "Method-09-CopycatReimplementation-arXiv-2018.pdf",
+    "url": "",
+    "contribution": "摘要报告用 DrRacket 重新解释和实现 Copycat，并讨论 Workspace、Coderack、Slipnet 等认知架构组件的实现收益与局限。",
+    "relation": "它适合作为完整 Copycat 对照实现的工程参考。",
+    "reading": "重点看函数抽象、命名/初始化、结构引用和三大组件如何对应原架构。",
+    "borrow": "借鉴可复现的模块边界，为确定性 Copycat 对照路线建立清楚接口。",
+    "limitation": "论文是工作中预印本，且实现质量与开放域适用性需要独立验证。",
+    "transform": "只用于对照和架构检查，不把其字母串结果当作寓言映射效果证据。",
+    "evidence": []
+  },
+  "abstraction-analogy-ai": {
+    "title": "Abstraction and Analogy-Making in Artificial Intelligence",
+    "year": "2021",
+    "venue": "arXiv",
+    "phase": "Copycat 式候选映射竞争",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "结构映射",
+    "pdf": "Method-10-AbstractionAnalogyAI-arXiv-2021.pdf",
+    "url": "",
+    "contribution": "摘要综述符号方法、深度学习和概率程序归纳在概念抽象与类比上的优势和局限，并提出挑战任务与评价方向。",
+    "relation": "它帮助定位 concept2fable 的结构映射贡献：需要可量化、可迁移且不只依赖表面相似。",
+    "reading": "重点看不同范式的比较，以及对人类式抽象/类比评测的建议。",
+    "borrow": "借鉴跨域泛化、系统性与可解释性作为映射方法的高级评价目标。",
+    "limitation": "综述指出现有系统距离人类类比仍远，不能据此宣称 LLM 已解决抽象。",
+    "transform": "把主张限制在当前机制图和寓言域，并设计超出模板复用的挑战集。",
+    "evidence": []
+  },
+  "storybox": {
+    "title": "StoryBox: Collaborative Multi-Agent Simulation for Hybrid Bottom-Up Long-Form Story Generation",
+    "year": "2026",
+    "venue": "AAAI",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
+    "pdf": "StoryGen-07-StoryBox-AAAI-2026.pdf",
+    "url": "",
+    "contribution": "摘要提出混合自底向上的多智能体故事生成：角色在动态沙盒中互动产生涌现事件，再以顶层场景维持长篇方向。",
+    "relation": "它为从固定寓言骨架到更自然角色互动提供生成端对照。",
+    "reading": "重点看动态环境、角色行为、涌现事件和超过一万词的连贯性评价。",
+    "borrow": "借鉴受边界约束的角色互动来丰富情节，但不让涌现事件改变机制图。",
+    "limitation": "长篇开放故事目标与短篇教学寓言不同，涌现性也可能破坏知识忠实。",
+    "transform": "把沙盒限制在 Mapping Plan 的事件状态和方向约束内，仅用于表层叙事多样化。",
+    "evidence": []
+  },
+  "story-generation-reader-models": {
+    "title": "Guiding Neural Story Generation with Reader Models",
+    "year": "2021",
+    "venue": "arXiv",
+    "phase": "机制图",
+    "secondaryPhases": [
+      "寓言叙事",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
+    "pdf": "StoryGen-09-GuidingStoryGeneration-ReaderModels-arXiv-2021.pdf",
+    "url": "",
+    "contribution": "摘要提出 StoRM：用知识图表示读者对故事世界的概念、实体和关系信念，指导故事保持连贯并达到目标世界状态。",
+    "relation": "它连接了生成控制与读者理解，可用于显式建模学生读到每一步后应形成的概念状态。",
+    "reading": "重点看 reader model KG、目标世界状态、情节合理性和 staying-on-topic 评价。",
+    "borrow": "借鉴读者状态作为叙事规划约束和教育理解检查的中间变量。",
+    "limitation": "模型面向一般神经故事生成，并不保证课程知识或寓言文体。",
+    "transform": "把目标世界状态改成学习目标与机制理解状态，并接受人工/学生验证。",
+    "evidence": []
+  },
+  "commonsense-kg-axioms": {
+    "title": "Generating Stories with Commonsense Knowledge Graphs and Axioms",
+    "year": "2021",
+    "venue": "CSKB",
+    "phase": "机制图",
+    "secondaryPhases": [
+      "图检索与证据",
+      "寓言叙事"
+    ],
+    "legacyTheme": "知识图谱",
+    "pdf": "StoryGen-10-CommonsenseKGAxioms-CSKB-2021.pdf",
+    "url": "",
+    "contribution": "摘要把常识公理与常识知识图结合，生成带常识解释的大规模故事，并用众包评价合理性与趣味性。",
+    "relation": "它说明故事机制除了课程证据，还需要区分可补充的常识背景与不可改动的目标机制。",
+    "reading": "重点看故事类型—公理对齐、知识图查询、大规模生成和解释性探测任务。",
+    "borrow": "借鉴“机制证据层/常识补全层”分层，避免常识替代课程事实。",
+    "limitation": "常识图可能含噪声和文化偏差，且故事公理不等同于学科机制。",
+    "transform": "对常识只授予叙事辅助资格，不允许其作为机制边证据。",
+    "evidence": []
+  },
+  "long-story-kg-literary-theory": {
+    "title": "Long Story Generation via Knowledge Graph and Literary Theory",
+    "year": "2025",
+    "venue": "arXiv",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "机制图",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
+    "pdf": "StoryGen-11-LongStoryGeneration-KGLiteraryTheory-arXiv-2025.pdf",
+    "url": "",
+    "contribution": "摘要用多智能体、长短期记忆、文学叙事障碍框架和故事知识图缓解长篇生成的主题漂移与情节乏味。",
+    "relation": "它为叙事阶段的记忆、障碍设计和写作—读者修订回路提供参考。",
+    "reading": "重点看长短期记忆、主题障碍、故事知识图和多智能体反馈。",
+    "borrow": "借鉴受机制约束的障碍/转折生成与独立修订记录。",
+    "limitation": "面向数千词长篇故事，质量目标与短篇教学寓言不同。",
+    "transform": "缩短到寓言尺度，只保留能增强因果可见性而不制造新机制的叙事障碍。",
+    "evidence": []
+  },
+  "creagentive": {
+    "title": "CreAgentive: An Agent Workflow Driven Multi-Category Creative Generation Engine",
+    "year": "2025",
+    "venue": "arXiv",
+    "phase": "寓言叙事",
+    "secondaryPhases": [
+      "机制图",
+      "反向结构对齐与教育质量评测"
+    ],
+    "legacyTheme": "层次化生成",
+    "pdf": "StoryGen-12-CreAgentive-arXiv-2025.pdf",
+    "url": "",
+    "contribution": "摘要提出以知识图 Story Prototype 分离故事逻辑与文体实现，并用初始化、生成、写作三阶段多智能体工作流支持长篇多体裁创作。",
+    "relation": "它与本项目“先固定结构、再实现文体”的分层思想高度一致。",
+    "reading": "重点看 Story Prototype 三元组、长短期目标、多智能体对话和文体写作分离。",
+    "borrow": "借鉴结构原型与表层实现解耦，但用 Mapping Plan 取代开放式故事原型。",
+    "limitation": "论文强调长篇与多类型创作，没有教育知识保真和儿童评测。",
+    "transform": "把其生成架构接入已验证映射之后，并以反向对齐和教育质量作为通过门槛。",
+    "evidence": []
   }
 }

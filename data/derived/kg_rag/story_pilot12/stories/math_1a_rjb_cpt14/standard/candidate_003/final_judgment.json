@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n1 (长方体) to '六面木箱' with a detailed description that exactly matches the mechanism definition (6 rectangular faces, opposite faces identical, 12 edges equal in pairs, 8 vertices). This is the strongest because it is the foundation for all other mappings. n2 (正方体) is mapped to '正方木盒' and correctly identified as a special case of n1, but the story could have more explicitly stated that it is a type of cuboid with all edges equal. Edge e1 (n1 is_a n3) is the weakest because the story only mentions '按木工分类法，六面木箱属于其中的一种形状' without elaborating on the classification method itself, making the relation slightly less explicit than other edges."
+  },
+  "revision_instructions": [
+    "No revision needed. All nodes and edges are fully and accurately mapped, with correct direction and no leakage. The story length is within the required range (746 characters)."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

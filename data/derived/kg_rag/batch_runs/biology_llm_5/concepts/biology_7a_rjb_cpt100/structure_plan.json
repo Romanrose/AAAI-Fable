@@ -1,0 +1,63 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt100",
+  "seed": {
+    "id": "biology_7a_rjb_cpt100",
+    "label": "Concept",
+    "name": "苔藓植物是监测空气污染的指示植物",
+    "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+    "importance": "了解",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "苔藓植物是监测空气污染的指示植物\nConcept\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\n了解"
+  },
+  "source_domain": "garden workshop",
+  "entities": [
+    "a careful caretaker",
+    "a plot that depends on the right conditions",
+    "tools and routines that reveal whether growth is real"
+  ],
+  "event_chain": [
+    "The caretaker prepares the conditions that must already be in place.",
+    "The plot uses those conditions to produce visible growth.",
+    "Nearby processes either support or compete with that growth.",
+    "Observation and trials reveal whether the growth is genuine and sustained."
+  ],
+  "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+  "turning_point": "A visible change reveals which condition actually controls the outcome.",
+  "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+  "alignment_plan": [
+    {
+      "concept_role": "target concept",
+      "concept_items": [
+        "苔藓植物是监测空气污染的指示植物"
+      ],
+      "story_role": "central productive process"
+    },
+    {
+      "concept_role": "prerequisites",
+      "concept_items": [],
+      "story_role": "conditions or resources that must be prepared first"
+    },
+    {
+      "concept_role": "related concepts",
+      "concept_items": [],
+      "story_role": "neighboring processes that contextualize or contrast the main process"
+    },
+    {
+      "concept_role": "outcomes",
+      "concept_items": [],
+      "story_role": "visible consequences produced by the core process"
+    },
+    {
+      "concept_role": "experiments",
+      "concept_items": [],
+      "story_role": "tests that reveal whether the process truly happened"
+    },
+    {
+      "concept_role": "exercises",
+      "concept_items": [],
+      "story_role": "follow-up checks that reinforce the lesson"
+    }
+  ]
+}

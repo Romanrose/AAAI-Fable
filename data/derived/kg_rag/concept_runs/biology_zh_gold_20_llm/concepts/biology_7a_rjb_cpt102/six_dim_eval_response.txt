@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过四组对比实验准确展示了种子萌发需要适宜的温度、一定的水分和充足的空气，与概念定义完全一致，无任何矛盾。",
+    "implicitness": "故事未直接提及目标概念名称或任何禁止术语，完全通过情节和对话隐含传达三个条件，符合隐含性要求。",
+    "mapping_clarity": "每个条件都通过具体的木箱设置和结果清晰映射：第一箱（温暖、适量水、透气）发芽，第二箱（水多缺氧）发霉，第三箱（低温）不萌发，第四箱（缺水）不萌发，映射明确且完整。",
+    "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段，对话生动，可读性高。",
+    "pedagogical_value": "故事通过对比实验和师父的引导，有效帮助学生理解三个条件缺一不可，结尾的类比（做面包）增强了教学效果，教学价值高。",
+    "novelty": "故事采用常见的园圃工坊和对比实验框架，虽无显著新颖创意，但结构合理，符合教育故事要求。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个条件部分满足但结果不同的案例（如温度稍低但仍有发芽），以增强深度。",
+    "结尾的类比可更贴近种子萌发本身，避免偏离主题。"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt10",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt10:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "生物的共同特征：一组典型生命表现，包括生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异等",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt2:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10771"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "遗传和变异"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "5b92f79e0e9b759a4cb4ae444eda1446d3646136d1f5b98d8791f7086320889d",
+    "retrieval_sha256": "541c82ebfc532a608dedd894f7160e22a1207cc2c30b5bf5bf3875cd9c0afe88",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "734efff17ff4bc0e4671f5caf716c7115463b8fa3df8b8c20461178656edaa32"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

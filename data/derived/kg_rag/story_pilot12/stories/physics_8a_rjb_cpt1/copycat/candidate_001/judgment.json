@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly maps n1 (入口条件核对) as the foundational step, and e1 (is_a relation) is explicitly realized through the analogy of '米' as a common rule, which is a strong implicit mapping. However, n2 (第二道转化环节) is only weakly realized as a numerical transformation (两倍), lacking the explicit '长度单位' concept; e1's direction is preserved but the 'is_a' relation could be more directly tied to the story's '共同规则' analogy."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping for n2 by explicitly linking the second transformation step to the concept of '长度单位' (e.g., using a unit conversion analogy like '米与分米的关系').",
+    "For e1, consider making the 'is_a' relation more explicit by stating that the entry condition check is a specific instance of the general rule, rather than just an analogy."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "hard_leakage"
+    ]
+  }
+}

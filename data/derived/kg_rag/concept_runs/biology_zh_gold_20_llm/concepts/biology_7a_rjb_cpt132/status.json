@@ -1,0 +1,12 @@
+{
+  "concept_id": "biology_7a_rjb_cpt132",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "concept_type": "process",
+  "generation_priority": "gold",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.65,
+  "retry_count": 2,
+  "chinese_char_ratio": 0.8523
+}

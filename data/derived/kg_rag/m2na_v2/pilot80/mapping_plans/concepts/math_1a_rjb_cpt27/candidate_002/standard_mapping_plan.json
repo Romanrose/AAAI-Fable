@@ -1,0 +1,74 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt27",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "两个果园的果实数量比较",
+  "characters": [
+    "果农老张",
+    "果农老李"
+  ],
+  "objects": [
+    "苹果园A",
+    "苹果园B",
+    "果实数量"
+  ],
+  "conflict": "果农老张和老李都想证明自己的果园果实更多，但需要公平比较。",
+  "event_chain": [
+    "果农老张和老李分别管理苹果园A和苹果园B。",
+    "他们各自数了自家果园的果实数量。",
+    "老张的果园A有6筐苹果，老李的果园B有7筐苹果。",
+    "他们用天平称量每筐苹果的重量，发现每筐重量相同，因此筐数直接代表数量。",
+    "他们决定比较筐数：6筐和7筐。",
+    "通过比较，发现7筐多于6筐，所以果园B的果实更多。"
+  ],
+  "turning_point": "他们决定用筐数作为比较标准，并发现7筐多于6筐。",
+  "resolution_state": "果园B的果实数量多于果园A，老李的果园获胜。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "苹果园A有6筐苹果",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "苹果园B有7筐苹果",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "比较筐数：6筐和7筐，得出7筐多于6筐",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "比较筐数的过程涉及果园A的6筐苹果",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "比较筐数的过程涉及果园B的7筐苹果",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数量的比较'或类似术语。",
+    "确保比较过程明确由两个实体（6筐和7筐）参与，且方向从比较过程指向实体。",
+    "避免使用数字6和7以外的数字，以免混淆。"
+  ],
+  "mapping_context_sha256": "c860fa62cf8bcb3e56c868bb1d59eaf3ddc22e992849da228effeb77f67098bd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "242ea6b15c2bcc5205b5da51f6fd99fd5d046e4e16cb4e582d62338b661ee9c0"
+  }
+}

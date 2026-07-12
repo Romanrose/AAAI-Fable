@@ -1,0 +1,102 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一座古老的庭院中，有一棵百年枣树，树上的枣核是孕育新树的种子，而枣核外层的硬壳则是保护种子的结构。",
+  "characters": [
+    "枣核（种子）",
+    "硬壳（保护层）"
+  ],
+  "objects": [
+    "枣树",
+    "枣核",
+    "硬壳"
+  ],
+  "conflict": "枣核想要破壳而出长成新树，但硬壳既保护它又限制它，枣核需要找到合适的方式突破硬壳。",
+  "event_chain": [
+    "枣树开花结果，形成枣核。",
+    "枣核被硬壳包裹，硬壳保护枣核。",
+    "枣核在硬壳内逐渐成熟。",
+    "枣核需要突破硬壳才能生根发芽。"
+  ],
+  "turning_point": "一场春雨后，硬壳在湿润的土壤中逐渐软化，枣核终于顶破硬壳，露出嫩芽。",
+  "resolution_state": "枣核成功破壳，长成新树苗，硬壳则化为养分滋养新树。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "枣核",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "枣核是枣树的种子，是孕育新树的结构",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "硬壳",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "枣核内部的胚芽",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "硬壳的顶端（发芽孔）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "硬壳软化，枣核突破发芽孔",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "枣核是枣树的种子，是孕育新树的结构",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "枣核被硬壳包裹",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "硬壳内包含胚芽",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "枣核的顶端有发芽孔",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "发芽孔在条件适宜时允许胚芽突破",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'雌蕊'等禁止术语。",
+    "注意硬壳与子房的类比：硬壳保护枣核，子房保护胚珠，但硬壳是单一结构，而子房是雌蕊的一部分，需确保映射一致。",
+    "枣核破壳的过程需对应柱头接受花粉后胚珠受精的过程，但此处简化为枣核成熟后自然破壳，避免引入授粉等无关机制。"
+  ],
+  "mapping_context_sha256": "32eb2b52bb092ccd1b13546f876ec44be086b80c3a6c8fdff1847c677db05331",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d791cd22c8371d889f53a9ae7ca305837e31fe2be451bdf94fbfe7c6e3954928"
+  }
+}

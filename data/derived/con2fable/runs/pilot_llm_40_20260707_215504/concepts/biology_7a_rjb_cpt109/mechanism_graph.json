@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    }
+  ],
+  "edges": []
+}

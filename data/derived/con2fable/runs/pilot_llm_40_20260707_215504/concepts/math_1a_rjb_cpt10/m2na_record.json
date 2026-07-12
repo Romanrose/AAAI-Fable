@@ -1,0 +1,100 @@
+{
+  "id": "math_1a_rjb_cpt10",
+  "method": "con2fable",
+  "concept": {
+    "name": "小于号含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "小于号含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "表示前面的数量比后面的数量少。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：等号含义",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：等号含义",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16377"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19331"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "在天平工坊里，学徒小明正忙着校准一批新送来的天平。他拿起两个砝码，分别放在天平的两端。左边的托盘轻轻翘起，右边的托盘缓缓下沉。\n\n“奇怪，这个砝码总是比那个轻。”小明自言自语，又反复试了几次，结果都一样。他挠了挠头，心想：到底是左边太轻，还是右边太重呢？\n\n老工匠走过来，看见小明愁眉苦脸的样子，问道：“你在发什么呆？”\n\n“师傅，这两个砝码，左边总是比右边轻，可我拿不准哪个才是对的。”小明指着天平说。\n\n老工匠微微一笑，没有直接回答，而是从工具箱里取出一个刻着标记的砝码，放在天平中央。“你先看看，这两个砝码原本是不是一样重？”\n\n小明一愣，连忙把左右两个砝码都取下来，放在天平两端。这一次，天平稳稳地平衡了。“原来它们是一样重的！”他惊讶地叫起来。\n\n“既然一样重，那为什么刚才左边会翘起来？”老工匠问。\n\n小明想了想，恍然大悟：“是因为我放的位置不对！左边的砝码没有放正，卡在了托盘边缘，所以显得轻。”\n\n老工匠点点头，又拿出那个带标记的砝码说：“这是标准砝码，用它来比较，就能知道哪个是真正的轻。”\n\n小明接过标准砝码，先把它放在左边，右边放上可疑的砝码，天平平衡了。他又把标准砝码放在右边，左边放上另一个可疑砝码，天平也平衡了。可当他用标准砝码分别替换左右砝码时，发现右边那个砝码与标准等重，而左边那个砝码却比标准轻了一点点。\n\n“原来左边这个砝码真的轻了！”小明兴奋地说。\n\n老工匠满意地笑了：“记住，要判断谁多谁少，必须先有一个相等的基准。没有这个基准，你永远分不清是左边轻，还是右边重。”\n\n小明把那个轻的砝码取下来，换上一个新的标准砝码，天平终于稳稳地平衡了。从此，他每次校准天平，都会先确认等量关系，再比较轻重。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "左边那个砝码却比标准轻了一点点",
+        "evidence": "左边那个砝码却比标准轻了一点点",
+        "narrative_anchor": "左边那个砝码却比标准轻了一点点"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "必须先有一个相等的基准",
+        "evidence": "必须先有一个相等的基准",
+        "narrative_anchor": "必须先有一个相等的基准"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "先确认等量关系，再比较轻重",
+        "evidence": "先确认等量关系，再比较轻重",
+        "narrative_anchor": "先确认等量关系，再比较轻重"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先有相等的基准，才能判断谁少",
+        "evidence": "要判断谁多谁少，必须先有一个相等的基准",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "要判断谁多谁少，必须先有一个相等的基准"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "等号含义是相关概念，用于确认等量关系后再比较",
+        "evidence": "先确认等量关系，再比较轻重",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "先确认等量关系，再比较轻重"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "math",
+    "story_language": "zh-CN",
+    "concept_type": "relation",
+    "generation_priority": "gold"
+  }
+}

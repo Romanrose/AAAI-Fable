@@ -1,0 +1,114 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt10",
+    "subject": "biology",
+    "canonical_name": "遗传和变异",
+    "aliases": [],
+    "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "遗传和变异"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt10:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "生物的共同特征：一组典型生命表现，包括生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异等",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt2:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10771"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "遗传和变异"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt10",
+      "name": "遗传和变异",
+      "label": "Concept",
+      "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt2",
+        "name": "生物的共同特征"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:10771",
+        "source_id": "biology_7a_rjb_cpt10",
+        "source_name": "遗传和变异",
+        "target_id": "biology_7a_rjb_cpt2",
+        "target_name": "生物的共同特征",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt2",
+        "neighbor_name": "生物的共同特征",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "遗传和变异",
+      "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:10771] 遗传和变异 --is_a--> 生物的共同特征"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:10771"
+  ],
+  "provenance": {
+    "seed_sha256": "5b92f79e0e9b759a4cb4ae444eda1446d3646136d1f5b98d8791f7086320889d",
+    "retrieval_sha256": "541c82ebfc532a608dedd894f7160e22a1207cc2c30b5bf5bf3875cd9c0afe88",
+    "mechanism_record_sha256": "c6ba2387cae401816e785494f5b362a9741684d75b6c20f1a58f4b2692b4eb3d"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "工程",
+  "domain_rationale": "建造一座桥梁需要地质、材料、施工等条件，对应种子萌发需要温度、水分、空气。",
+  "conflict": "无",
+  "event_chain": [
+    "工程师团队计划建造一座桥梁",
+    "桥址必须有稳固的地基、合适的建材和充足的施工空间（氧气）",
+    "工程师通过勘探、材料测试、现场检查来验证这些条件",
+    "条件满足后，桥梁才能建成"
+  ],
+  "turning_point": "工程师完成地质勘探、材料检测、施工安全评估",
+  "resolution_state": "桥梁成功建成通车",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "桥址的施工条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "桥梁建成",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "稳固的地基",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "合适的建材（如水泥、钢筋）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "充足的施工空间（氧气/通风）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "工程师勘探、材料测试、现场检查",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "桥址的施工条件使桥梁建成成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "稳固的地基是桥址的施工条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "合适的建材是桥址的施工条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "充足的施工空间是桥址的施工条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "工程师勘探、材料测试、现场检查验证了桥址的施工条件",
+      "direction_preserved": true
+    }
+  ]
+}

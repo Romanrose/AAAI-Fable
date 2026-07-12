@@ -1,0 +1,62 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt104",
+    "label": "Concept",
+    "name": "投影仪成像",
+    "properties": {
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "importance": "重要",
+      "retrieval_text": "投影仪成像\nConcept\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17244",
+      "source": "physics_8a_rjb_cpt95",
+      "source_name": "凸透镜",
+      "target": "physics_8a_rjb_cpt104",
+      "target_name": "投影仪成像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:12420",
+      "source": "physics_8a_rjb_cpt104",
+      "source_name": "投影仪成像",
+      "target": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "投影仪成像",
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17244] 凸透镜 --prerequisites_for--> 投影仪成像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12420] 投影仪成像 --is_a--> 实像"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 511,
+    "summary_chars": 294,
+    "path_chars": 0,
+    "retrieval_context_chars": 805
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "小猴子数了数自己面前的苹果，一、二、三，正好三个。小兔子也数了数自己这边的，也是一、二、三，也是三个。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "我们把苹果都放进这个大篮子里吧，然后我们一起抬着走",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "小兔子灵机一动，指着地上的大篮子说：“猴哥哥，我们把苹果都放进这个大篮子里吧，然后我们一起抬着走，这样一次就能把所有的苹果都运回家，不用来回跑了。”",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中，小猴子和小兔子分别数出自己面前的3个苹果（n1），随后小兔子提议合并苹果到篮子里一起搬运（n2），且合并动作是在数清数量之后提出的，方向正确，证据充分。"
+}

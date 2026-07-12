@@ -1,0 +1,72 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "种子吸水利用贮藏营养，胚根胚芽发育成幼苗的过程",
+      "evidence": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。几天后，模具拆开，一根又粗又直的混凝土柱子立了起来。",
+      "narrative_anchor": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。几天后，模具拆开，一根又粗又直的混凝土柱子立了起来。"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "环境条件：水",
+      "evidence": "水管打开阀门，清水哗哗地喷在水泥上。",
+      "narrative_anchor": "水管打开阀门，清水哗哗地喷在水泥上。"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "自身条件：水泥自身吸足水",
+      "evidence": "水泥终于吸足了水",
+      "narrative_anchor": "水泥终于吸足了水"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "环境条件的具体表现：水、沙石、钢筋的配合",
+      "evidence": "既要有水、有沙石、有钢筋",
+      "narrative_anchor": "既要有水、有沙石、有钢筋"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "自身条件的具体表现：水泥吸足水、混合均匀",
+      "evidence": "还得自己吸足水、混合均匀",
+      "narrative_anchor": "还得自己吸足水、混合均匀"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "水泥吸水后开始变化，为后续混合做准备",
+      "evidence": "水泥渐渐湿润了，它觉得身体在发生变化。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "水泥渐渐湿润了，它觉得身体在发生变化。"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "吸水后水泥自身条件满足，继续混合",
+      "evidence": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "水泥终于吸足了水，和沙石、钢筋一起被倒进模具里。"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "环境条件的具体配合（水、沙石、钢筋）",
+      "evidence": "既要有水、有沙石、有钢筋",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "既要有水、有沙石、有钢筋"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "自身条件的具体要求（吸足水、混合均匀）",
+      "evidence": "还得自己吸足水、混合均匀",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "还得自己吸足水、混合均匀"
+    }
+  ]
+}

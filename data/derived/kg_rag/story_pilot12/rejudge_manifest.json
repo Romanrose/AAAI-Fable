@@ -1,0 +1,45 @@
+{
+  "story_count": 108,
+  "failure_count": 0,
+  "judge": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "analysis": {
+    "by_strategy": {
+      "standard": {
+        "count": 36,
+        "mean_node_coverage": 0.6968,
+        "mean_edge_coverage": 0.7,
+        "mean_direction_accuracy": 1.0,
+        "accept_count": 17,
+        "revise_count": 7,
+        "reject_count": 12,
+        "leakage_count": 0
+      },
+      "copycat": {
+        "count": 36,
+        "mean_node_coverage": 0.7998,
+        "mean_edge_coverage": 0.7542,
+        "mean_direction_accuracy": 1.0,
+        "accept_count": 12,
+        "revise_count": 11,
+        "reject_count": 13,
+        "leakage_count": 2
+      },
+      "llm_guided_copycat": {
+        "count": 36,
+        "mean_node_coverage": 0.7812,
+        "mean_edge_coverage": 0.7659,
+        "mean_direction_accuracy": 1.0,
+        "accept_count": 22,
+        "revise_count": 4,
+        "reject_count": 10,
+        "leakage_count": 1
+      }
+    }
+  }
+}

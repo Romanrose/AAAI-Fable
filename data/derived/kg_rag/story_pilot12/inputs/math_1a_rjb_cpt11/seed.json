@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "math_1a_rjb_cpt11",
+  "subject": "math",
+  "canonical_name": "加法的含义",
+  "aliases": [],
+  "definition": "表示两个数量合并在一起。",
+  "concept_type": "relation",
+  "forbidden_terms": [
+    "加法的含义"
+  ]
+}

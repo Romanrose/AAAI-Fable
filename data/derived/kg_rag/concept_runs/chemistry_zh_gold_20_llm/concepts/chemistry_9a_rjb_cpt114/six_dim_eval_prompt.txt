@@ -1,0 +1,204 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "工业制取氧气的方法",
+  "concept_id": "chemistry_9a_rjb_cpt114",
+  "concept_definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt114",
+    "工业制取氧气的方法"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt114",
+      "label": "Concept",
+      "name": "工业制取氧气的方法",
+      "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+      "aliases": [],
+      "examples": [
+        "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+        "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+      ],
+      "retrieval_text": "工业制取氧气的方法\n为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt66",
+          "label": "Concept",
+          "name": "氧气",
+          "definition": "一种重要的气体单质，空气中体积分数约为21%，可由高锰酸钾、过氧化氢溶液、氯酸钾等分解制取，是许多燃烧和化工过程必需的物质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt115",
+          "label": "Concept",
+          "name": "液态空气的分馏制氧",
+          "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt116",
+          "label": "Concept",
+          "name": "膜分离制取富氧空气",
+          "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt114",
+    "concept_id": "chemistry_9a_rjb_cpt114",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt114",
+      "label": "Concept",
+      "name": "工业制取氧气的方法",
+      "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+      "aliases": [],
+      "examples": [
+        "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+        "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "工业制取氧气的方法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过两个工坊的工艺，描述了从空气中分离出特定气体的方法，对应工业制取氧气的方法。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "第一个工坊通过降温液化空气，再升温利用沸点差异分离气体；第二个工坊通过薄膜让不同气体透过速度不同，实现分离。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中强调‘不是凭空变出来的’‘不需要复杂的化学变化’，区分了物理分离与化学反应；没有出现化学式或元素符号；分离前后空气总量不变，只是成分分开。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个繁华的城邦里，有一座巨大的账房，里面堆满了各种账册和文书。账房的主人是一位老账房先生，他有一个年轻的学徒叫阿明。\n\n阿明每天的工作就是整理账册，把不同类别的文书分门别类。他发现，账房里有一间密室，里面存放着一种特殊的“气”——这种气能让火苗更旺，让人呼吸更顺畅。老账房先生告诉他，这种气是从外面运来的，但阿明很好奇，它是怎么得到的呢？\n\n一天，老账房先生带阿明来到城外的工坊。工坊里有一座高大的塔楼，塔楼底部有一个巨大的容器。老账房先生说：“你看，我们先把空气收集起来，然后把它变得很冷很冷，就像冬天的冰一样。空气会变成液体，就像水一样。”\n\n阿明看到工人们把空气压进容器，然后降温。果然，空气慢慢变成了淡蓝色的液体。接着，他们慢慢加热这个液体。阿明注意到，液体开始冒泡，先跑出来的是一些小气泡，后来跑出来的气泡更大、更慢。工人们把先跑出来的气体收集到一边，把后跑出来的气体收集到另一边。\n\n老账房先生解释说：“空气里其实混着好几种气，它们的‘脾气’不同——有的在很冷的时候就会变成液体，有的要更冷才行；有的在稍微热一点的时候就会跑出来，有的要更热才跑。我们就是利用这个差别，把它们分开。”\n\n阿明恍然大悟：“原来不是凭空变出来的，而是从空气里‘挑’出来的！”\n\n后来，老账房先生又带他去了另一个工坊。那里有一排排像布一样的薄膜。工人们把空气压过这些薄膜，薄膜就像筛子一样，让一种气跑得快，另一种气跑得慢。经过好几层薄膜，最后得到的气体里，那种有用的气就变多了。\n\n阿明终于明白了：要得到那种气，不需要复杂的化学变化，只需要利用物理方法，把空气里的成分分开就行。他回到账房，把这件事记在了心里。",
+  "rule_findings": {
+    "story_token_count": 613,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

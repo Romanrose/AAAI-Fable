@@ -1,0 +1,35 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt113",
+    "label": "Concept",
+    "name": "雌蕊",
+    "properties": {
+      "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+      "importance": "了解",
+      "retrieval_text": "雌蕊\nConcept\n花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。\n了解"
+    }
+  },
+  "raw_edges": [],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "雌蕊",
+      "definition": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 0,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2,
+    "summary_chars": 188,
+    "path_chars": 0,
+    "retrieval_context_chars": 190
+  }
+}

@@ -1,0 +1,20 @@
+In the garden workshop, a careful caretaker named Mira prepared a sunlit plot, ensuring the soil was rich and the leaves of her young plants were green with chlorophyll. She knew that without light, no true growth could occur.
+
+Each morning, the plants stretched toward the sun, using its energy to turn water and air into starch—their visible food. Nearby, a compost pile breathed out warmth, a reminder that all living things consume and release, but only the green leaves could capture light and build anew.
+
+One day, Mira placed a glass jar over a sprig of pondweed. Bubbles rose steadily in sunlight. But when she moved the jar to shade, the bubbles slowed. In darkness, they stopped entirely. The hidden prerequisite—light—was the key.
+
+To test further, she set a tube of algae at different distances from a lamp. At 10 cm, sixty bubbles per minute; at 40 cm, only five. The closer the light, the more vigorous the work.
+
+Mira smiled. The plot’s growth was genuine, sustained only by the captured light. She understood now: the process was not vague improvement, but a precise, light-driven transformation.
+
+```json
+[
+  {"concept_role": "target concept", "story_evidence": "The plants use sunlight to turn water and air into starch, capturing light energy to produce organic matter."},
+  {"concept_role": "prerequisites", "story_evidence": "Mira ensures the plot has sunlight, green leaves with chlorophyll, and rich soil; the pondweed experiment shows light is indispensable."},
+  {"concept_role": "related concepts", "story_evidence": "The compost pile's respiration contrasts with photosynthesis; the bubbles demonstrate oxygen release and carbon-oxygen balance."},
+  {"concept_role": "outcomes", "story_evidence": "Visible starch production in plants and bubbles from pondweed show the tangible results of photosynthesis."},
+  {"concept_role": "experiments", "story_evidence": "Mira moves the pondweed jar to shade and darkness, observing bubble cessation, revealing light's control."},
+  {"concept_role": "exercises", "story_evidence": "The tube of algae at varying distances from a lamp produces bubble counts (60 at 10cm, 5 at 40cm), reinforcing the light-distance relationship."}
+]
+```

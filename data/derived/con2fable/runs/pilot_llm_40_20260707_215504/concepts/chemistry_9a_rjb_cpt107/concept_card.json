@@ -1,0 +1,60 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "过氧化氢分解反应",
+  "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+  "aliases": [],
+  "examples": [
+    "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt109",
+        "label": "Concept",
+        "name": "分解反应",
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "chemistry_9a_rjb_exp17",
+        "label": "Experiment",
+        "name": "过氧化氢分解实验中二氧化锰的作用",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "过氧化氢分解反应"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

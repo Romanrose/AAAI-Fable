@@ -1,0 +1,57 @@
+{
+  "core_question": "呼吸与氧气的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "呼吸与氧气 --relates_to--> 氧气的物理性质",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:18224"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "呼吸与氧气 --relates_to--> 缓慢氧化",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:18223"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:18224",
+    "normalized:edge:18223"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "呼吸与氧气",
+    "chemistry_9a_rjb_cpt102"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [
+      "normalized:edge:18224",
+      "normalized:edge:18223"
+    ],
+    "must_cover_path_ids": []
+  }
+}

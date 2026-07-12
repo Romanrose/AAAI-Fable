@@ -1,0 +1,29 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "The story maps all mechanism nodes to sequential 'transformation steps' (e.g., n2→第二道转化环节, n3→第三道转化环节, etc.), but the mechanism graph distinguishes different types: n2 (氧化反应) is a general process, n3 (燃烧) is a specific subtype with conditions and outcomes, n5 (氧气) is an entity, n6 (条件) is a condition, n7 (结果) is an outcome. The story collapses these into a uniform linear sequence, losing the is_a hierarchy, part_of relations, and the distinction between entity, condition, and outcome. For example, n5 (氧气) is mapped to '第五道环节' as a process step, but in the mechanism it is an entity that participates in multiple processes. This flattening makes the mapping weaker than a realization that preserves the type distinctions (e.g., using different story carriers for entities, conditions, and outcomes)."
+  },
+  "revision_instructions": [
+    "Revise the story to preserve the is_a hierarchy: n2 (氧化反应) should be a broader category that includes n1 (缓慢氧化) and n3 (燃烧). Currently, the story treats all nodes as sequential steps, losing the subsumption relation.",
+    "Revise the mapping of n5 (氧气) from a process step to an entity that is part of multiple processes (e.g., a resource or ingredient that appears in multiple steps).",
+    "Revise the mapping of n6 (条件) and n7 (结果) to distinct story carriers (e.g., a condition check and an outcome verification) rather than merging them into the same sequential step.",
+    "Ensure that edge e7 (requires) is not mapped to '两份相关记录放在一起比较' but to a story event that shows the condition being required for the process (e.g., checking the condition before proceeding).",
+    "Ensure that edge e8 (produces) and e9 (produces) are mapped to distinct outcomes (e.g., a visible result for combustion and an invisible result for slow oxidation) rather than the same generic comparison."
+  ],
+  "final_status": "revise"
+}

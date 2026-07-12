@@ -1,0 +1,57 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "种子萌发的自身条件",
+      "evidence": "一匹马能否踏上驿道、成功送信，完全取决于它自身的体格、马蹄和装备是否完好，以及是否醒来。枯草、跛足和瞌睡，无论外部条件如何，都无法改变它们内在的缺陷。",
+      "narrative_anchor": "取决于它自身的体格、马蹄和装备是否完好，以及是否醒来"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "种子休眠",
+      "evidence": "瞌睡躺在干草上，呼呼大睡，鼾声如雷。长官推了推它，它翻个身继续睡；长官大声喊它，它耳朵动一动，眼睛却始终不睁开。",
+      "narrative_anchor": "瞌睡"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "种子萌发",
+      "evidence": "铁蹄长嘶一声，冲出马厩，踏上了通往远方的驿道。它四蹄翻飞，在驿道上奔驰，越过山丘，穿过树林，一路不停。",
+      "narrative_anchor": "铁蹄"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "种子萌发",
+      "evidence": "铁蹄长嘶一声，冲出马厩，踏上了通往远方的驿道。它四蹄翻飞，在驿道上奔驰，越过山丘，穿过树林，一路不停。",
+      "narrative_anchor": "铁蹄"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从自身条件不足到休眠状态",
+      "evidence": "枯草、跛足和瞌睡，无论外部条件如何，都无法改变它们内在的缺陷。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "枯草、跛足和瞌睡"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从休眠到萌发",
+      "evidence": "铁蹄长嘶一声，冲出马厩，踏上了通往远方的驿道。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "铁蹄"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从萌发到成功送信",
+      "evidence": "几天后，铁蹄顺利到达了远方城池，将信件准确送达。",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "铁蹄"
+    }
+  ]
+}

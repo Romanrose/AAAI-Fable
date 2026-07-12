@@ -1,0 +1,11 @@
+{
+  "mode": "local",
+  "label": "Concept",
+  "limit": 2,
+  "offset": 0,
+  "sleep_seconds": 0.0,
+  "retry": 1,
+  "resume": false,
+  "concept_count": 2,
+  "normalized_graph_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\k12_kgraph_normalized.json"
+}

@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "保留变量之间的关系。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "避免把自然规律写成角色主观意志。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:17188",
+      "source_name": "长度",
+      "target_name": "使用刻度尺的方法",
+      "relation_semantic_role": "prerequisite"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "is_a",
+      "source_edge_id": "normalized:edge:12429",
+      "source_name": "长度单位（米及其倍数、子倍数）",
+      "target_name": "长度",
+      "relation_semantic_role": "category_membership"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:17188",
+    "normalized:edge:12429",
+    "normalized:edge:23027"
+  ]
+}

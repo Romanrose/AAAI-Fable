@@ -1,0 +1,115 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt115",
+    "subject": "biology",
+    "canonical_name": "自花传粉",
+    "aliases": [],
+    "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "自花传粉"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "花粉从花药散放而落到雌蕊柱头上的过程",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt114:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "一朵花的花粉落到同一朵花柱头上的传粉现象",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt115:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10778"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "自花传粉"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt115",
+      "name": "自花传粉",
+      "label": "Concept",
+      "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt114",
+        "name": "传粉"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:10778",
+        "source_id": "biology_7a_rjb_cpt115",
+        "source_name": "自花传粉",
+        "target_id": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt114",
+        "neighbor_name": "传粉",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "自花传粉",
+      "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:10778"
+  ],
+  "provenance": {
+    "seed_sha256": "c6b61a1b5eca2fcf36ae1e45fe24cc85454298e7ec981a2839b580dcb1d38614",
+    "retrieval_sha256": "2ec633b6b48279eaf1cb174eb7e4a8cd22075bebb6ee4b8724e938fd9946df23",
+    "mechanism_record_sha256": "1dba2cd2d720cb1f55d6bffe67f6ef5b937d8c6fe5403fbac1df12d880ea80f3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "concept_id": "physics_8a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "selected_source": "initial",
+  "revision_attempted": true,
+  "revision_improved": false,
+  "node_coverage": 0.5,
+  "edge_coverage": 0.3333,
+  "direction_accuracy": 1.0,
+  "hard_leakage": false,
+  "length_valid": true,
+  "judge_status": "reject",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12\\stories\\physics_8a_rjb_cpt1\\standard\\candidate_001"
+}

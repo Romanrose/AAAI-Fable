@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "一段上好的榆木",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "锯、刨、凿、打磨",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "锯锋切入原木的瞬间",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "The mechanism nodes and edge are fully aligned with explicit story evidence. Node n1 (物质) is carried by '一段上好的榆木', node n2 (物质的变化) by the processing actions '锯、刨、凿、打磨', and edge e1 (enables) is evidenced by the moment '锯锋切入原木的瞬间' which shows the start of transformation enabled by the material."
+}

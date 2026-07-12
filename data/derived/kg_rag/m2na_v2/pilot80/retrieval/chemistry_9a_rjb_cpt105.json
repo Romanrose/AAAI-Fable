@@ -1,0 +1,120 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt105",
+    "label": "Concept",
+    "name": "高锰酸钾受热分解反应",
+    "properties": {
+      "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "importance": "掌握",
+      "formula": "高锰酸钾  →  锰酸钾 + 二氧化锰 + 氧气",
+      "retrieval_text": "高锰酸钾受热分解反应\nConcept\n高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。\n掌握\n高锰酸钾  →  锰酸钾 + 二氧化锰 + 氧气"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt109",
+      "label": "Concept",
+      "name": "分解反应",
+      "properties": {
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+        "importance": "重要",
+        "formula": "AB → A + B",
+        "examples": [
+          "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+          "过氧化氢分解生成水和氧气",
+          "氯酸钾分解生成氯化钾和氧气",
+          "水在电解时分解生成氢气和氧气，是分解反应。",
+          "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+        ],
+        "retrieval_text": "分解反应\nConcept\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。\n重要\nAB → A + B\n高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气\n过氧化氢分解生成水和氧气\n氯酸钾分解生成氯化钾和氧气\n水在电解时分解生成氢气和氧气，是分解反应。\n讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_exp16",
+      "label": "Experiment",
+      "name": "实验2-5 加热高锰酸钾制取氧气",
+      "properties": {
+        "instrument": [
+          "试管",
+          "高锰酸钾固体",
+          "棉花",
+          "带有导管的塞子",
+          "酒精灯或加热装置",
+          "集气瓶",
+          "水槽",
+          "带火星的木条"
+        ],
+        "is_student": 1,
+        "process": "把少量高锰酸钾装入试管中，并在试管口放一团棉花，用带有导管的塞子塞紧试管。加热试管，用排水法收集一瓶氧气。然后把带有火星的木条伸入集气瓶中，观察现象。",
+        "phenomena": "加热时试管中有气体产生，排水法可收集到气体；把带火星的木条伸入集气瓶中，木条复燃，说明生成的气体支持燃烧，是氧气。",
+        "conclusion": "高锰酸钾受热分解生成氧气，可作为实验室制取氧气的方法。",
+        "retrieval_text": "实验2-5 加热高锰酸钾制取氧气\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:11277",
+      "source": "chemistry_9a_rjb_cpt105",
+      "source_name": "高锰酸钾受热分解反应",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22573",
+      "source": "chemistry_9a_rjb_exp16",
+      "source_name": "实验2-5 加热高锰酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt105",
+      "target_name": "高锰酸钾受热分解反应",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "高锰酸钾受热分解反应",
+      "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "formula": "高锰酸钾  →  锰酸钾 + 二氧化锰 + 氧气",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11277] 高锰酸钾受热分解反应 --is_a--> 分解反应",
+      "[normalized:edge:22573] 实验2-5 加热高锰酸钾制取氧气 --verifies--> 高锰酸钾受热分解反应"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

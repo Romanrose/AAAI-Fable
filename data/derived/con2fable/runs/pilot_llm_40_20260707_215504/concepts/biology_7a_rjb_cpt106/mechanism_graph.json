@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：种子休眠",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m3",
+      "text": "需要保留上下位关系：种子萌发",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m4",
+      "text": "与相关概念保持可解释关系：种子萌发",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14134"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10777"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10776"
+    }
+  ]
+}

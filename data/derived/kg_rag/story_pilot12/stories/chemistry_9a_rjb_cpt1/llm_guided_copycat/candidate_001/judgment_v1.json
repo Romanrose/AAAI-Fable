@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly maps n1 (物质) to '一段上好的榆木' and n2 (物质的变化) to the detailed processing actions (锯、刨、凿、打磨). The edge e1 (enables) is clearly shown by the moment '锯锋切入原木的瞬间', which initiates the transformation. This mapping is observably better than a generic 'wood becomes table' story because it preserves the enabling relation: the material (原木) enables the process (加工), not merely that both exist. The weakest aspect is that the story could more explicitly tie the abstract concept of '物质的变化' to the specific physical/chemical changes, but it is still strong."
+  },
+  "revision_instructions": [
+    "Consider adding a brief line that explicitly connects the processing steps to the concept of 'change' (e.g., '木匠的每一次锯、刨、凿、打磨，都是物质的变化'), to strengthen the mapping for n2."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农种桃树的故事",
+  "characters": [
+    "老农",
+    "桃树苗",
+    "桃核"
+  ],
+  "objects": [
+    "桃核",
+    "桃树苗",
+    "土壤",
+    "水分",
+    "阳光"
+  ],
+  "conflict": "桃核内部完好，但处于休眠状态，无法发芽；而另一颗桃核胚已坏，即使条件再好也不能长成树苗。",
+  "event_chain": [
+    "老农有两颗桃核：一颗胚完整但处于休眠，一颗胚被虫蛀坏。",
+    "老农将两颗桃核都种在肥沃土壤中，并浇水施肥。",
+    "胚完整的桃核因休眠未萌发，胚坏的桃核始终无动静。",
+    "老农意识到桃核内部条件决定能否发芽。",
+    "老农通过打破休眠（如低温处理）使第一颗桃核萌发，长成桃树苗。"
+  ],
+  "turning_point": "老农发现胚完整的桃核经过适当处理可以萌发，而胚坏的桃核永远无法萌发。",
+  "resolution_state": "胚完整且解除休眠的桃核成功长成桃树苗，胚坏的桃核腐烂在土中。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "桃核内部条件（胚完整且有活性、未处于休眠）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "桃核萌发长成桃树苗的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "桃核休眠（即使环境适宜也不萌发）",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "桃核内部条件（胚完整有活性且未休眠）使桃核能够萌发长成树苗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "桃核休眠是一种桃核内部条件（属于胚完整有活性的对立面）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子萌发的自身条件'等禁止术语。",
+    "注意区分休眠与胚坏的不同机制，避免混淆。",
+    "故事中老农的角色仅作为观察者，不引入额外因果机制。"
+  ],
+  "mapping_context_sha256": "4b02b345cf1fd000354c00d97d9700f97e67da27449c9cc7ff0949244ead70a4",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d5f5dd1b4094165494d0245845ba1ccbf9c67537a206e2010dc58e736d237c5b"
+  }
+}

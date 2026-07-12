@@ -1,0 +1,76 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt116",
+    "label": "Concept",
+    "name": "近视眼及矫正",
+    "properties": {
+      "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+      "importance": "重要",
+      "retrieval_text": "近视眼及矫正\nConcept\n由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt118",
+      "label": "Concept",
+      "name": "透镜焦度",
+      "properties": {
+        "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+        "formula": "Φ = 1 / f",
+        "importance": "掌握",
+        "retrieval_text": "透镜焦度\nConcept\n透镜焦距的倒数，用Φ表示，反映透镜折光本领。\n掌握\nΦ = 1 / f"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:19716",
+      "source": "physics_8a_rjb_cpt116",
+      "source_name": "近视眼及矫正",
+      "target": "physics_8a_rjb_cpt118",
+      "target_name": "透镜焦度",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "近视眼及矫正",
+      "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19716] 近视眼及矫正 --relates_to--> 透镜焦度"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": false,
+    "direct_structure_reasons": [
+      "multistep_concept_has_fewer_than_two_direct_edges"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

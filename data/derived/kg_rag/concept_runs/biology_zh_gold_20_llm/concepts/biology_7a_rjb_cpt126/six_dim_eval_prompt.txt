@@ -1,0 +1,222 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "气孔",
+  "concept_id": "biology_7a_rjb_cpt126",
+  "concept_definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt126",
+    "气孔"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt126",
+      "label": "Concept",
+      "name": "气孔",
+      "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。",
+      "aliases": [],
+      "examples": [
+        "太阳升起时气孔慢慢张开，夜幕降临时大多数气孔缩小或闭合"
+      ],
+      "retrieval_text": "气孔\n分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt124",
+          "label": "Concept",
+          "name": "蒸腾作用",
+          "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt127",
+          "label": "Concept",
+          "name": "保卫细胞",
+          "definition": "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt124",
+          "label": "Concept",
+          "name": "蒸腾作用",
+          "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp13",
+          "label": "Experiment",
+          "name": "观察叶片的结构（徒手切片与下表皮装片）",
+          "definition": ""
+        },
+        {
+          "id": "biology_7a_rjb_exp14",
+          "label": "Experiment",
+          "name": "热水浸叶观察气孔分布（气泡比较）",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe20",
+          "label": "Exercise",
+          "name": "判断：植物可以通过控制保卫细胞的形状和大小来控制气体和水分的进出。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s3",
+          "label": "Section",
+          "name": "第三章 绿色植物与生物圈的水循环",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt126",
+    "concept_id": "biology_7a_rjb_cpt126",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt126",
+      "label": "Concept",
+      "name": "气孔",
+      "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。",
+      "aliases": [],
+      "examples": [
+        "太阳升起时气孔慢慢张开，夜幕降临时大多数气孔缩小或闭合"
+      ]
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "气孔"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中描述的叶片上的‘窗口’由两个半月形的‘小门卫’控制，能根据环境变化张开或闭合，对应气孔的结构和功能。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事通过小蜗牛的观察，展示了‘窗口’在白天打开、夜晚关闭，以及不同植物调节规律不同的过程，对应气孔作为蒸腾作用和气体交换门户的机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事没有使用目的论解释（如‘为了减少水分流失’），而是描述‘窗口’根据环境条件（阳光、干旱）自动调节的过程和结果，符合保留生命系统条件、过程和结果的要求。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃的秘密\n\n老园丁在园圃里种了一排小树苗。他每天清晨都会提着水壶，仔细地给每棵树浇水。小树苗们一天天长高，叶子也渐渐茂盛起来。\n\n园圃里住着一只小蜗牛，它最喜欢趴在叶片上，看水珠在阳光下闪闪发光。一天，小蜗牛发现了一个奇怪的现象：明明老园丁刚浇过水，可没过多久，叶片上的水珠就不见了。它想：“水都去哪儿了呢？”\n\n小蜗牛决定仔细观察。它发现，每当太阳升起，叶片上就会有一些小小的“窗口”慢慢打开，像是叶片在呼吸。到了中午，这些“窗口”开得最大，水汽就从那里悄悄溜走。傍晚时分，“窗口”又慢慢合上，仿佛叶片要休息了。\n\n小蜗牛把这个发现告诉了老园丁。老园丁笑着说：“你观察得很仔细。这些‘窗口’是由两个半月形的‘小门卫’控制的。它们能根据环境变化，决定‘窗口’开多大、开多久。白天阳光充足时，‘窗口’打开，让叶片呼吸；夜晚或干旱时，‘窗口’关闭，减少水分流失。”\n\n小蜗牛恍然大悟：“原来叶片不是被动地失去水分，而是有一套精密的调节系统啊！”它继续观察，发现不同的植物，这些“窗口”的开启规律也不一样。有的植物在炎热的中午会暂时关闭“窗口”，有的则在清晨和傍晚开得最大。\n\n从此，小蜗牛每天都会记录不同植物的“窗口”变化。它明白了，生命的智慧就藏在那些看似微小的细节里。每一个叶片，都在用自己的方式，与阳光、空气和水进行着无声的对话。",
+  "rule_findings": {
+    "story_token_count": 474,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

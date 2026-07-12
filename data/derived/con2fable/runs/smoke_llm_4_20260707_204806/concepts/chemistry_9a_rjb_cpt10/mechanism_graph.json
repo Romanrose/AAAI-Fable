@@ -1,0 +1,110 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：大气压强",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m3",
+      "text": "需要考虑前置条件或输入：条件对物质性质的影响",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m4",
+      "text": "与相关概念保持可解释关系：氧气的熔点和沸点",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m5",
+      "text": "与相关概念保持可解释关系：水的熔点和沸点",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m6",
+      "text": "与相关概念保持可解释关系：铁的熔点和沸点",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m7",
+      "text": "与相关概念保持可解释关系：铝的熔点和沸点",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m8",
+      "text": "与相关概念保持可解释关系：大气压强",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14999"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_15075"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14995"
+    },
+    {
+      "id": "e4",
+      "source": "m4",
+      "target": "m5",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14992"
+    },
+    {
+      "id": "e5",
+      "source": "m5",
+      "target": "m6",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14993"
+    },
+    {
+      "id": "e6",
+      "source": "m6",
+      "target": "m7",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14994"
+    },
+    {
+      "id": "e7",
+      "source": "m7",
+      "target": "m8",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_18222"
+    }
+  ]
+}

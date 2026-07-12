@@ -1,8 +1,10 @@
-# M2NA 核心论文包与阶段性调研
+# Concept2Fable（M2NA）核心论文包与阶段性调研
+
+> 本目录名称保留 `M2NA` 是历史原因；当前项目和论文方法名称统一为 **Concept2Fable（M2NA）**。本文档是研究调研材料，不是当前实验运行说明；可运行入口见仓库根 README 与 `kg_rag/` 下各模块 README。
 
 整理日期：2026-06-18
 
-本目录收录 8 篇与 **Mechanism-to-Narrative Analogy Generation (M2NA)** 直接相关的论文。选择标准不是泛泛涉及“故事”或“类比”，而是至少覆盖以下一项：
+本目录收录 8 篇与 **Concept2Fable（M2NA，Mechanism-to-Narrative Analogy）** 直接相关的论文。选择标准不是泛泛涉及“故事”或“类比”，而是至少覆盖以下一项：
 
 - 叙事级结构类比；
 - 复杂类比数据构建；

@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选一通过检疫员对玉米粒的虫蛀检测与发芽实验，自然覆盖了种子结构（胚根、胚芽）和发芽条件（温度、湿度、空气）等机制节点，以及虫蛀影响发芽的机制边。故事完整、逻辑清晰，无概念泄露，且中文叙述流畅自然，避免了模板化表达。",
+    "risk_notes": [
+      "故事中“胚根”“胚芽”等术语可能略微接近目标概念，但属于常见生物学词汇，未直接泄露核心机制。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

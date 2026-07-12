@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：支持燃烧",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_15246"
+    }
+  ]
+}

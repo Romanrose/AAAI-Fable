@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly enacts n1 (heating iron ore to molten iron) as a concrete process, but n2 (the general method of ancient sword forging) is only implied through the narrative rather than explicitly stated as a category. Edge e1 (n1 is_a n2) is weakly realized because the story does not explicitly state that the specific process is a type of the general method; it relies on the reader to infer the hierarchical relation from context. This is observably weaker than a direct statement like 'This is one way to forge a sword.'"
+  },
+  "revision_instructions": [
+    "Explicitly state that the process of heating iron ore to molten iron is a specific method of ancient sword forging (e.g., 'This is one way to forge a sword').",
+    "Make the general method (n2) more explicit in the story, perhaps by having the master say 'The ancient method of forging a sword requires several steps.'",
+    "Ensure that the relation 'requires' between n2 and n3 is clearly shown as a necessary step, not just a sequential event.",
+    "Consider adding a line that directly maps the evidence node n8 to the verification of the method, e.g., 'The master's demonstration proved the ancient method.'"
+  ],
+  "final_status": "revise"
+}

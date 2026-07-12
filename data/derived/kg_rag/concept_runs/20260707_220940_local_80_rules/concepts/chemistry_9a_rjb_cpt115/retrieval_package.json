@@ -1,0 +1,65 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt115",
+    "label": "Concept",
+    "name": "液态空气的分馏制氧",
+    "properties": {
+      "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+      "importance": "了解",
+      "examples": [
+        "液态氮的沸点是−196℃，比液态氧的沸点−183℃低，因此氮气首先从液态空气中分离出来"
+      ],
+      "retrieval_text": "液态空气的分馏制氧\nConcept\n在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。\n了解\n液态氮的沸点是−196℃，比液态氧的沸点−183℃低，因此氮气首先从液态空气中分离出来"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15004",
+      "source": "chemistry_9a_rjb_cpt121",
+      "source_name": "气体沸点差异的利用",
+      "target": "chemistry_9a_rjb_cpt115",
+      "target_name": "液态空气的分馏制氧",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:11284",
+      "source": "chemistry_9a_rjb_cpt115",
+      "source_name": "液态空气的分馏制氧",
+      "target": "chemistry_9a_rjb_cpt114",
+      "target_name": "工业制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "液态空气的分馏制氧",
+      "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:15004] 气体沸点差异的利用 --prerequisites_for--> 液态空气的分馏制氧"
+    ],
+    "process_summary": [
+      "[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 541,
+    "summary_chars": 352,
+    "path_chars": 0,
+    "retrieval_context_chars": 893
+  }
+}

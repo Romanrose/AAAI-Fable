@@ -7,7 +7,9 @@ type PaperContext = {
 	title: string;
 	year: string;
 	venue: string;
-	pillar: string;
+	phase: string;
+	secondaryPhases: string[];
+	legacyTheme: string;
 	url: string;
 	contribution: string;
 	relation: string;
@@ -60,7 +62,9 @@ export const POST: APIRoute = async ({ request }) => {
 	const context = [
 		`论文：${paper.title}`,
 		`年份/来源：${paper.year} · ${paper.venue}`,
-		`所属支柱：${paper.pillar}`,
+		`五阶段主要位置：${paper.phase}`,
+		`同时支撑：${paper.secondaryPhases.join('、') || '无'}`,
+		`旧文献主题（仅用于追溯）：${paper.legacyTheme}`,
 		`原文链接：${paper.url}`,
 		`论文贡献：${paper.contribution}`,
 		`与 Concept-to-Fable 的关系：${paper.relation}`,
@@ -83,7 +87,7 @@ export const POST: APIRoute = async ({ request }) => {
 				{
 					role: 'system',
 					content:
-						'你是一个严谨的论文阅读助手，服务于 Concept-to-Fable Synthesis 研究。回答必须基于给定论文上下文，不要编造论文中没有的实验、数字或结论。若依据不足，请明确说明需要进一步查 PDF 页码。回答使用中文，结构清晰，给出具体建议。',
+						'你是一个严谨的论文阅读助手，服务于 concept2fable 的五阶段流程：图检索与证据、机制图、Copycat 式候选映射竞争、寓言叙事、反向结构对齐与教育质量评测。回答必须基于给定论文上下文，说明论文主要支撑哪个阶段、怎样适配、不能证明什么；不要编造论文中没有的实验、数字或结论。若依据不足，请明确说明需要进一步查 PDF 页码。回答使用中文，结构清晰，给出具体建议。',
 				},
 				{
 					role: 'user',

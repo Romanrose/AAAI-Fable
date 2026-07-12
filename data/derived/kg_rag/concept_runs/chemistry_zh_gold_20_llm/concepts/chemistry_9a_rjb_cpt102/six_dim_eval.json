@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt102",
+  "target_concept": "呼吸与氧气",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过油灯燃烧和人的呼吸同时消耗密室中看不见的物质，准确映射了呼吸消耗氧气的核心机制；开窗后不适消失，对应补充氧气缓解缺氧症状，完全符合概念定义。",
+    "implicitness": "故事未直接提及“氧气”“呼吸”等术语，而是用“看不见的东西”“养料”等隐喻，将概念完全隐含在情节中，符合隐含性要求。",
+    "mapping_clarity": "油灯燃烧对应缓慢氧化，人的不适对应缺氧，开窗对应补充氧气，映射关系清晰且一致，读者能自然理解核心机制。",
+    "readability": "语言流畅，情节简单易懂，角色和场景设定贴近生活，适合目标读者阅读。",
+    "pedagogical_value": "故事通过观察和实验揭示规则，引导学生理解呼吸与氧气的依赖关系，并隐含“收支平衡”的类比，教学价值高。",
+    "novelty": "虽然故事结构完整，但“密室缺氧”的设定较为常见，创新性一般。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个对比场景，例如在开阔地带油灯和人的状态均正常，以强化氧气充足与不足的对比。",
+    "可在结尾处稍作延伸，暗示高原反应等实际应用，但需保持隐含性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 547,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过油灯燃烧和人的呼吸同时消耗密室中看不见的物质，准确映射了呼吸消耗氧气的核心机制；开窗后不适消失，对应补充氧气缓解缺氧症状，完全符合概念定义。",
+      "implicitness": "故事未直接提及“氧气”“呼吸”等术语，而是用“看不见的东西”“养料”等隐喻，将概念完全隐含在情节中，符合隐含性要求。",
+      "mapping_clarity": "油灯燃烧对应缓慢氧化，人的不适对应缺氧，开窗对应补充氧气，映射关系清晰且一致，读者能自然理解核心机制。",
+      "readability": "语言流畅，情节简单易懂，角色和场景设定贴近生活，适合目标读者阅读。",
+      "pedagogical_value": "故事通过观察和实验揭示规则，引导学生理解呼吸与氧气的依赖关系，并隐含“收支平衡”的类比，教学价值高。",
+      "novelty": "虽然故事结构完整，但“密室缺氧”的设定较为常见，创新性一般。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个对比场景，例如在开阔地带油灯和人的状态均正常，以强化氧气充足与不足的对比。",
+      "可在结尾处稍作延伸，暗示高原反应等实际应用，但需保持隐含性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代工匠的技艺传承与创新",
+  "characters": [
+    "老工匠",
+    "年轻学徒",
+    "作坊主"
+  ],
+  "objects": [
+    "秘制配方",
+    "普通原料",
+    "成品器物"
+  ],
+  "conflict": "作坊主认为许多关键工艺必须依靠老工匠的秘制配方才能高效完成，但年轻学徒觉得没有配方也能慢慢摸索出结果。",
+  "event_chain": [
+    "老工匠掌握秘制配方（催化作用），能大幅提升成品质量和效率。",
+    "老工匠将配方用于作坊生产（催化剂的工业应用），使作坊能快速产出优质器物。",
+    "作坊主发现，生产高端器物、修复破损珍品、批量制作礼器都必须依赖老工匠的配方才能有效进行（化工生产中许多过程必须依靠催化剂才能有效进行）。",
+    "年轻学徒记录下老工匠使用配方的具体场合：制作贡品时加入配方、修复古器时使用配方、为贵族批量制作器具时也离不开配方（生产化肥、农药、多种化工原料都要使用催化剂；石油炼制过程中用高效催化剂生产汽油、煤油等；汽车尾气处理中用催化剂促进有害气体的转化；酿造工业和制药工业中用酶作催化剂）。"
+  ],
+  "turning_point": "年轻学徒认识到，没有秘制配方，作坊根本无法按时完成那些高要求的订单，从而理解配方不可或缺。",
+  "resolution_state": "作坊主和学徒一致认同，老工匠的秘制配方是作坊高效生产的关键，必须妥善传承和应用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老工匠的秘制配方",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老工匠将配方用于作坊生产",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "作坊主发现许多关键工艺必须依靠配方才能有效进行",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "年轻学徒记录下老工匠使用配方的具体场合：制作贡品、修复古器、批量制作礼器",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老工匠的秘制配方使得将配方用于作坊生产成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "将配方用于作坊生产导致作坊主发现许多关键工艺必须依靠配方才能有效进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "年轻学徒记录的具体使用场合验证了将配方用于作坊生产的必要性",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'催化剂'、'工业应用'等术语。",
+    "确保'秘制配方'对应'催化作用'，而非'催化剂'本身。",
+    "确保'作坊主发现'对应'必须依靠催化剂才能有效进行'，而非其他。",
+    "确保'年轻学徒记录'对应'证据'节点，且不遗漏任何例子。"
+  ],
+  "mapping_context_sha256": "1625bbf52f153c8545e598a3d72c43ae369a6a183643024021e52116c47d774b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1b60c4f9d240356830794825986f262157119fbe346d94da2f34f7c738c3dc88"
+  }
+}

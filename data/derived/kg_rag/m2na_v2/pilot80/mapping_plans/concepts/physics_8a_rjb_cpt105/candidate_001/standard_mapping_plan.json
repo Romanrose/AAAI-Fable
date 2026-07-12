@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农种葫芦的故事",
+  "characters": [
+    "老农",
+    "葫芦种子"
+  ],
+  "objects": [
+    "肥沃的土壤",
+    "葫芦藤",
+    "小葫芦"
+  ],
+  "conflict": "老农希望葫芦能长成又大又圆的果实，但葫芦种子必须先在合适的土壤中发芽，才能长出藤蔓，最终结出果实。",
+  "event_chain": [
+    "老农将葫芦种子种在肥沃的土壤中",
+    "种子在土壤中发芽，长出葫芦藤",
+    "葫芦藤上结出一个小葫芦",
+    "小葫芦逐渐长大，成为又大又圆的葫芦"
+  ],
+  "turning_point": "葫芦种子在土壤中发芽，长出藤蔓",
+  "resolution_state": "葫芦藤上结出了又大又圆的葫芦果实",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "葫芦种子种在肥沃的土壤中",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "葫芦藤",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "又大又圆的葫芦",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "葫芦果实",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "种子在土壤中发芽，长出葫芦藤",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "葫芦藤结出又大又圆的葫芦",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "又大又圆的葫芦是一种葫芦果实",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'放大镜成像'及其同义词",
+    "确保每个机制节点和边都被映射，且方向正确",
+    "避免使用目标概念名称或别名",
+    "保持故事连贯，不引入无关隐喻"
+  ],
+  "mapping_context_sha256": "9cbf7ca7f4abad49e0098fbedb8604db6538a1d3041d812df8ecf865c3ee5c16",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "6c95259c8cc8a7984822da5893a2c7b101c108dfb82d7a93d9f88685da300d22"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "烧出一件好陶器，要靠三个东西：火候要合适，陶坯不能太干也不能太湿，窑里的气要能流动。这三样，一个都不能少。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "一只完美的陶器稳稳立在其中",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "火候要合适",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "陶坯不能太干也不能太湿",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "窑里的气要能流动",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "取出四只一模一样的陶坯，一字排开。第一只，火候适中、陶坯半干、通风口半开；第二只，火候过高、陶坯过干、通风口堵死；第三只，火候过低、陶坯过湿、通风口只留一条缝；第四只，火候适中、陶坯半干、通风口半开。老窑匠让徒弟同时烧这四只陶坯。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "烧出一件好陶器，要靠三个东西：火候要合适，陶坯不能太干也不能太湿，窑里的气要能流动。这三样，一个都不能少。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "火候要合适",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "陶坯不能太干也不能太湿",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "窑里的气要能流动",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "取出四只一模一样的陶坯，一字排开。第一只，火候适中、陶坯半干、通风口半开；第二只，火候过高、陶坯过干、通风口堵死；第三只，火候过低、陶坯过湿、通风口只留一条缝；第四只，火候适中、陶坯半干、通风口半开。老窑匠让徒弟同时烧这四只陶坯。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。故事通过老窑匠的教导、徒弟的失败尝试以及对比实验，完整映射了种子萌发条件及其验证过程，无缺失项。"
+}

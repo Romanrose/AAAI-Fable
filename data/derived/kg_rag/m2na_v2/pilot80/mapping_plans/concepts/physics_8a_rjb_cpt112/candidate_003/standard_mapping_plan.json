@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄的灌溉系统",
+  "characters": [
+    "老农",
+    "村民"
+  ],
+  "objects": [
+    "水渠",
+    "水闸",
+    "水库",
+    "远处的田地",
+    "近处的菜园"
+  ],
+  "conflict": "老农需要同时灌溉远处和近处的田地，但水渠的流量有限，必须调节水闸才能让水到达不同距离的田地。",
+  "event_chain": [
+    "水渠和水闸共同构成灌溉系统，水从水库流出，通过水渠和水闸流向田地。",
+    "老农通过调节水闸的开合程度，改变水渠中水流的方向和流量。",
+    "当水闸调节到某个位置时，水能够流到远处的田地。",
+    "当水闸调节到另一个位置时，水能够流到近处的菜园。"
+  ],
+  "turning_point": "老农发现，只有精确调节水闸，才能让水同时或分别灌溉远处和近处的田地。",
+  "resolution_state": "老农掌握了调节水闸的技巧，能够根据需要灌溉不同距离的田地。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农调节水闸",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水渠和水闸共同构成灌溉系统",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "远处的田地",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "近处的菜园",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水渠和水闸共同构成灌溉系统，老农通过调节水闸来改变水流",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农调节水闸使得水能够流到远处的田地",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老农调节水闸使得水能够流到近处的菜园",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'眼睛'、'调节'等禁止术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "确保故事载体来自同一个源域（灌溉系统），不使用多个无关隐喻。"
+  ],
+  "mapping_context_sha256": "b90f78bed0fce7c118a015c4f5541069afb28344e8c547e7f3f2760f1db8df39",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ef9a0939232c36fdf4805fb2ae23451ecaf5859b8563d960bde5bd8db1ac5521"
+  }
+}

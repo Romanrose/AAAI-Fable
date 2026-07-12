@@ -1,0 +1,139 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄的水井系统",
+  "characters": [
+    "井水",
+    "井口的大气压",
+    "标准大气压",
+    "水的沸点",
+    "水的熔点和沸点",
+    "铁的熔点和沸点",
+    "铝的熔点和沸点",
+    "氧气的熔点和沸点",
+    "外界条件"
+  ],
+  "objects": [
+    "水井",
+    "井水",
+    "井口",
+    "标准大气压值",
+    "炉灶",
+    "铁锅",
+    "铝锅",
+    "氧气瓶"
+  ],
+  "conflict": "井水想要沸腾，但井口的大气压不稳定，有时高有时低，导致水的沸点变化，影响其他物质的熔沸点。",
+  "event_chain": [
+    "井口的大气压（n1）是井水上方空气的压力。",
+    "标准大气压（n2）是井口大气压的一种特定状态，即101 kPa。",
+    "井口的大气压（n1）影响水的沸点（n3），气压高时沸点升高，气压低时沸点降低。",
+    "水的沸点（n3）决定了水的熔点和沸点（n4）的具体数值。",
+    "水的沸点（n3）也决定了铁的熔点和沸点（n5）的具体数值。",
+    "水的沸点（n3）也决定了铝的熔点和沸点（n6）的具体数值。",
+    "水的沸点（n3）也决定了氧气的熔点和沸点（n7）的具体数值。",
+    "外界条件（n8）约束着水的沸点（n3），例如温度、压力等条件变化会影响沸点。"
+  ],
+  "turning_point": "井口的大气压从标准状态变化，导致水的沸点改变，进而影响所有物质的熔沸点。",
+  "resolution_state": "井水最终在变化的气压下达到新的沸点，并且其他物质的熔沸点也随之调整。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "井口的大气压",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "标准大气压",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "水的沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "水的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "铁的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "铝的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "氧气的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "外界条件",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "井口的大气压是标准大气压的一种具体表现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "井口的大气压影响水的沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "水的沸点决定了水的熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "水的沸点决定了铁的熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "水的沸点决定了铝的熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "水的沸点决定了氧气的熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "外界条件约束水的沸点",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用任何禁止术语，如大气压强、气压、标准大气压强。",
+    "所有节点和边均已映射，方向保持。",
+    "故事载体使用水井系统，保持单一源域。",
+    "避免将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "743017e0063ce0e1b71101c89a92c9c8767fa2c9c7bf90fa3db6a4ea9b437116",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3526af17b03795be58a61c35fe51f0c455b561330fdfa0d63044c56514e52749"
+  }
+}

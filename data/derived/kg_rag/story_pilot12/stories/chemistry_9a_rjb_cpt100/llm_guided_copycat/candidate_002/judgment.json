@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n6",
+    "weakest_edge_id": "e7",
+    "distinguishing_reason": "Node n6 (condition) and edge e7 (requires) are not explicitly stated in the story; the story only describes the reaction without enumerating the three conditions. This makes the mapping weaker compared to other nodes/edges that have direct story evidence."
+  },
+  "revision_instructions": [
+    "Explicitly mention the three conditions (酒精蒸汽、充足空气、达到燃点) in the story to strengthen the mapping for node n6 and edge e7.",
+    "Ensure that the condition for combustion is clearly stated, e.g., '当酒精蒸汽遇到明火且空气充足时，达到燃点，便剧烈燃烧'."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

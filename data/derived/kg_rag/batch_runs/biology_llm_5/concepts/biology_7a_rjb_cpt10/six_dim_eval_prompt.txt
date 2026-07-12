@@ -1,0 +1,239 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "遗传和变异",
+  "concept_id": "biology_7a_rjb_cpt10",
+  "concept_definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt10",
+    "遗传和变异"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt10",
+      "label": "Concept",
+      "name": "遗传和变异",
+      "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+      "importance": "掌握",
+      "aliases": [],
+      "examples": [
+        "狗的一家体现亲子相似与差异",
+        "同一株碧桃上的花存在差异"
+      ],
+      "retrieval_text": "遗传和变异\nConcept\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\n掌握\n狗的一家体现亲子相似与差异\n同一株碧桃上的花存在差异"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe3",
+          "label": "Exercise",
+          "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。\nExercise"
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_cpt2",
+          "label": "Concept",
+          "name": "生物的共同特征",
+          "definition": "用于区分生物与非生物的一组典型生命表现，包括：生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异（以及除病毒外由细胞构成等）。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [
+            "含羞草受碰触叶片合拢（刺激反应）",
+            "鲸浮出水面换气（呼吸）",
+            "人出汗与排尿（排出废物）"
+          ],
+          "retrieval_text": "生物的共同特征\nConcept\n用于区分生物与非生物的一组典型生命表现，包括：生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异（以及除病毒外由细胞构成等）。\n掌握\n含羞草受碰触叶片合拢（刺激反应）\n鲸浮出水面换气（呼吸）\n人出汗与排尿（排出废物）"
+        },
+        {
+          "id": "biology_7a_rjb_ch1_s1",
+          "label": "Section",
+          "name": "第一章 认识生物",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "第一章 认识生物\nSection"
+        }
+      ]
+    },
+    "meta": {
+      "node_count": 4,
+      "edge_count": 3
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt10",
+    "seed": {
+      "id": "biology_7a_rjb_cpt10",
+      "label": "Concept",
+      "name": "遗传和变异",
+      "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+      "importance": "掌握",
+      "aliases": [],
+      "examples": [
+        "狗的一家体现亲子相似与差异",
+        "同一株碧桃上的花存在差异"
+      ],
+      "retrieval_text": "遗传和变异\nConcept\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\n掌握\n狗的一家体现亲子相似与差异\n同一株碧桃上的花存在差异"
+    },
+    "source_domain": "garden workshop",
+    "entities": [
+      "a careful caretaker",
+      "a plot that depends on the right conditions",
+      "tools and routines that reveal whether growth is real"
+    ],
+    "event_chain": [
+      "The caretaker prepares the conditions that must already be in place.",
+      "The plot uses those conditions to produce visible growth.",
+      "Nearby processes either support or compete with that growth.",
+      "Observation and trials reveal whether the growth is genuine and sustained."
+    ],
+    "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+    "turning_point": "A visible change reveals which condition actually controls the outcome.",
+    "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+    "alignment_plan": [
+      {
+        "concept_role": "target concept",
+        "concept_items": [
+          "遗传和变异"
+        ],
+        "story_role": "central productive process"
+      },
+      {
+        "concept_role": "prerequisites",
+        "concept_items": [],
+        "story_role": "conditions or resources that must be prepared first"
+      },
+      {
+        "concept_role": "related concepts",
+        "concept_items": [],
+        "story_role": "neighboring processes that contextualize or contrast the main process"
+      },
+      {
+        "concept_role": "outcomes",
+        "concept_items": [],
+        "story_role": "visible consequences produced by the core process"
+      },
+      {
+        "concept_role": "experiments",
+        "concept_items": [],
+        "story_role": "tests that reveal whether the process truly happened"
+      },
+      {
+        "concept_role": "exercises",
+        "concept_items": [
+          "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。"
+        ],
+        "story_role": "follow-up checks that reinforce the lesson"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "target concept (遗传和变异)",
+      "story_evidence": "The caretaker observed that some offspring matched the parent (inheritance) while others had new traits (variation), caused by bee pollen."
+    },
+    {
+      "concept_role": "prerequisites",
+      "story_evidence": "The caretaker prepared rich soil and steady water before planting."
+    },
+    {
+      "concept_role": "related concepts",
+      "story_evidence": "Wild bees visiting flowers served as a neighboring process that introduced variation."
+    },
+    {
+      "concept_role": "outcomes",
+      "story_evidence": "Visible growth—sprouts, leaves, buds, and flowers—showed the results of inheritance and variation."
+    },
+    {
+      "concept_role": "experiments",
+      "story_evidence": "The caretaker isolated and replanted seeds from red and streaked blooms to test whether traits were inherited or varied."
+    },
+    {
+      "concept_role": "exercises",
+      "story_evidence": "The exercise statement '一猪生九仔, 连母十个样' describes variation, not inheritance, so the answer should be ×."
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "In the garden workshop, a careful caretaker prepared a special plot with rich soil and steady water. He planted seeds from a single parent flower, expecting them to bloom identically. The plot used these conditions to produce visible growth—sprouts emerged, leaves unfurled, and buds formed.\n\nNearby, wild bees visited the flowers, carrying pollen from other plants. Some sprouts grew tall with petals as red as the parent, while others showed streaks of yellow or curled leaves. The caretaker observed this and suspected something deeper. He performed an experiment: he isolated one red bloom and one streaked bloom, replanting their seeds in identical conditions. The red bloom’s offspring were all red; the streaked bloom’s offspring varied again.\n\nA visible change revealed the truth: the parent’s traits were inherited, but the bees’ pollen introduced variation. The system stabilized once the caretaker understood that both inheritance and variation depended on hidden conditions—the soil and water for growth, and the bees for change. The resulting effects became observable: some traits stayed constant, others shifted.\n\n**Alignment Table:**",
+  "rule_findings": {
+    "story_token_count": 177,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept (遗传和变异)",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [
+      "target concept"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0771
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

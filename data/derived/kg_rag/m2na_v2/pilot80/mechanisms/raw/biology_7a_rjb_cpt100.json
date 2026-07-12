@@ -1,0 +1,116 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt100",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "许多苔藓植物叶只有一层细胞",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt100:definition",
+          "kg-node:biology_7a_rjb_cpt100:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt100:definition",
+          "kg-node:biology_7a_rjb_cpt100:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "苔藓植物",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt82:definition",
+          "kg-node:biology_7a_rjb_cpt82:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "可用作监测空气污染程度的指示植物",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt100:definition",
+          "kg-node:biology_7a_rjb_cpt100:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt100:definition",
+          "kg-node:biology_7a_rjb_cpt100:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt100:definition",
+          "kg-node:biology_7a_rjb_cpt100:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n4",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt100:definition",
+          "kg-node:biology_7a_rjb_cpt100:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "苔藓植物是监测空气污染的指示植物"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "290d3108441cc49bf07ef7af44f7dc3ce68fcef19af3be8fc3c4fc0f17a60a23",
+    "retrieval_sha256": "fea72a99ee5e4806b792f1203375e0d47d42b603e4c59319c5e0a3a5a469a307",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "28d130be6cef1b5a7ff94297b50111e685ffdcc6b06b748d6b43fd5defdc1de9"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个古代手工作坊中，工匠们用泥土制作陶器",
+  "characters": [
+    "陶土坯（代表细胞）",
+    "陶器（代表组织）",
+    "陶土坯的生命力（代表细胞是生命活动的基本单位）",
+    "陶土坯的成型系统（代表细胞是基本的生命系统）",
+    "外来碎片（代表病毒）"
+  ],
+  "objects": [
+    "陶土坯",
+    "陶器",
+    "生命力",
+    "成型系统",
+    "外来碎片"
+  ],
+  "conflict": "陶土坯是制作陶器的基本单位，但外来碎片混入后，破坏了陶土坯的成型系统，威胁到陶器的制作",
+  "event_chain": [
+    "陶土坯被工匠揉捏成型",
+    "陶土坯通过组合形成陶器",
+    "陶土坯的生命力支撑其成型过程",
+    "陶土坯的成型系统协调各组分",
+    "外来碎片与陶土坯相互作用，影响陶器质量"
+  ],
+  "turning_point": "工匠识别并剔除外来碎片，恢复陶土坯的正常成型",
+  "resolution_state": "陶土坯继续作为基本单位，成功制成陶器，成型系统恢复稳定",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "陶土坯",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "陶器",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "陶土坯的生命力",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "陶土坯的成型系统",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "外来碎片",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "陶土坯组合形成陶器",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "陶土坯的生命力支撑其成型",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "陶土坯的成型系统协调各组分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "外来碎片与陶土坯相互作用",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保陶土坯不直接映射为细胞，避免使用禁止术语",
+    "确保外来碎片不直接映射为病毒，避免使用禁止术语",
+    "确保陶器不直接映射为组织，避免使用禁止术语",
+    "确保生命力与成型系统不直接映射为生物学概念",
+    "确保所有边缘方向与机制图一致"
+  ],
+  "mapping_context_sha256": "8025dc50821f0197346d67457f7df8b72ca782316ad17bdc6781499e15df1a70",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "59e9c1434293f900bd80ecfc51de66678f806ba657a68903734615e97ba8fca2"
+  }
+}

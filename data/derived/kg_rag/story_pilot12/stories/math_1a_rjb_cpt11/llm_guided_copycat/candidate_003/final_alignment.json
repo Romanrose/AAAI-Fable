@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "他认识每一块的形状和颜色，也能数出它们一共有多少块。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "他把两块积木叠放在一起。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他认识每一块的形状和颜色，也能数出它们一共有多少块。",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中明确描述了孩子认识并数出积木（n1）以及将两块积木叠放合并（n2），且n1的认知能力为n2的合并操作提供了基础，方向一致。"
+}

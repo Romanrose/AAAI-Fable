@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story excels at mapping slow oxidation (n1) to the tree's invisible growth, with clear evidence and no leakage. However, it completely omits the 'sudden flowering/fruiting' mapping for n3 and n7, and thus all edges involving n3 (e2, e5, e7, e8, e10) have zero evidence. This makes the mapping of the 'is_a' hierarchy (e1, e2) incomplete: the story shows slow growth is a type of growth, but fails to show that sudden change is also a type of growth, weakening the pedagogical contrast between slow and fast oxidation. A better realization would include a brief mention of a neighboring tree that suddenly blooms, to preserve the full relation set."
+  },
+  "revision_instructions": [
+    "Add a short episode where a neighboring tree suddenly flowers or fruits (mapping n3 and n7) to provide contrast with the old tree's slow growth.",
+    "Include the condition (n6) for that sudden event, e.g., 'after a warm rain, the young tree burst into bloom' to map e7.",
+    "Explicitly state that the sudden flowering is also a form of growth (e2) and that it relates to slow growth (e10), e.g., 'Unlike the young tree's sudden bloom, the old tree's growth was invisible.'",
+    "Ensure all edges (e2, e5, e7, e8, e10) have at least one sentence of evidence in the story."
+  ],
+  "final_status": "revise"
+}

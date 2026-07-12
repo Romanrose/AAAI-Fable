@@ -1,0 +1,133 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt101",
+    "label": "Concept",
+    "name": "种子萌发",
+    "properties": {
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "importance": "掌握",
+      "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt102",
+      "label": "Concept",
+      "name": "种子萌发的环境条件",
+      "properties": {
+        "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+        "importance": "掌握",
+        "examples": [
+          "温度过低（如放入冰箱）不利于萌发",
+          "过于潮湿易使种子霉烂",
+          "松土可使土壤中有充足空气"
+        ],
+        "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt106",
+      "label": "Concept",
+      "name": "种子萌发的自身条件",
+      "properties": {
+        "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+        "importance": "掌握",
+        "retrieval_text": "种子萌发的自身条件\nConcept\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。\n掌握"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14133",
+      "source": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:14134",
+      "source": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10772",
+      "source": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10776",
+      "source": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "种子萌发",
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14133] 种子萌发的环境条件 --prerequisites_for--> 种子萌发",
+      "[normalized:edge:14134] 种子萌发的自身条件 --prerequisites_for--> 种子萌发"
+    ],
+    "process_summary": [
+      "[normalized:edge:10772] 种子萌发的环境条件 --is_a--> 种子萌发",
+      "[normalized:edge:10776] 种子萌发的自身条件 --is_a--> 种子萌发"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 4,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 4,
+    "expanded_to_two_hop": false
+  }
+}

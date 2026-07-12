@@ -1,0 +1,85 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "井底之蛙",
+  "characters": [
+    "青蛙",
+    "小鸟"
+  ],
+  "objects": [
+    "井",
+    "井口",
+    "天空"
+  ],
+  "conflict": "青蛙认为天只有井口那么大，小鸟认为天无边无际。",
+  "event_chain": [
+    "青蛙生活在井底，从未离开过井。",
+    "小鸟飞到井边，告诉青蛙天空很大。",
+    "青蛙不相信，坚持认为天只有井口那么大。",
+    "小鸟建议青蛙跳出井口看看。",
+    "青蛙尝试跳出井口，但井壁太滑，无法成功。",
+    "青蛙只能待在井底，想象天空的样子。"
+  ],
+  "turning_point": "小鸟建议青蛙跳出井口，但青蛙无法实现。",
+  "resolution_state": "青蛙仍然在井底，但通过小鸟的描述，心中形成了对广阔天空的想象（虚像）。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "青蛙生活在井底，从未离开过井（条件：物体位于焦点以内）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "井（凸透镜）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "青蛙心中形成的对广阔天空的想象（放大、正立的虚像）",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "青蛙心中的想象（虚像）",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "青蛙生活在井底（条件）使得井（实体）成为其视野的局限（requires）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "井（实体）通过限制视野，产生了青蛙心中对天空的想象（produces）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "青蛙心中对天空的想象（outcome）是一种心中的想象（state）（is_a）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不出现'放大镜成像'等禁止术语。",
+    "井作为凸透镜的载体，其聚焦作用需隐含在故事中，避免直接解释光学原理。",
+    "青蛙的想象对应虚像，需强调其不可触摸、存在于心中的特性。",
+    "井底之蛙的寓言本身不包含'跳出井口'的实际行动，但这里利用'无法跳出'来映射'物体在焦点以内'的条件。"
+  ],
+  "mapping_context_sha256": "9cbf7ca7f4abad49e0098fbedb8604db6538a1d3041d812df8ecf865c3ee5c16",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "92b722cc9fa6d15dbe1236ce055f5ffbd4b1d214c9ba3f9bf09a3fe1980ed35c"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly narrates the process of dough rising (n1) with vivid detail, and the external conditions (n2) are clearly stated through dialogue and events (warmth, moisture, air). However, the enabling relation (e1) between external conditions and the process is shown implicitly through the cause-effect of moving the dough to a warm place and it rising, rather than being explicitly stated as a conditional dependency. This implicit handling is pedagogically effective but slightly less explicit than the direct statement of n2 itself. In contrast, the internal condition (n3) and its enabling relation (e2) are explicitly stated in the moral at the end, making them more directly mapped."
+  },
+  "revision_instructions": [
+    "No revision needed. The story faithfully maps all mechanism nodes and edges with high confidence, maintains direction, and avoids contradictions. The implicit handling of e1 is appropriate for a fable and does not weaken the mapping."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,124 @@
+{
+  "concept_id": "math_1a_rjb_cpt12",
+  "target_concept": "减法的含义",
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 5,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 2,
+    "novelty": 4
+  },
+  "weighted_overall": 2.85,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事描述了流程顺序和条件核对，但核心概念‘从一个数量中去掉一部分’并未在事件中体现。故事讲的是登记、转化、验收的流程，而非从一个集合中移除元素。",
+    "implicitness": "正文未出现‘减法’、‘减法的含义’或任何相关术语，完全通过故事场景隐含表达。",
+    "mapping_clarity": "机制图中的节点和边在故事中有对应，但核心机制‘去掉一部分’没有映射到任何故事事件。故事中的‘转化’和‘验收’与减法无关。",
+    "readability": "故事语言流畅，情节连贯，角色和动作清晰，适合中文学习者阅读。",
+    "pedagogical_value": "故事未能帮助理解‘从一个数量中去掉一部分’这一核心机制，读者学到的可能是流程顺序而非减法含义。",
+    "novelty": "规则棋局和流程核对的设定有一定新意，避免了常见的分水果、动物离开等模板。"
+  },
+  "evidence": {
+    "faithfulness": "故事中没有任何事件涉及‘去掉一部分’或‘减少数量’，所有事件都是关于核对条件、转化和验收流程。",
+    "implicitness": "全文未出现‘减法’、‘减’、‘去掉’等词，也没有任何数学术语。",
+    "mapping_clarity": "故事中的‘入口条件核对’、‘转化环节’、‘验收记录’分别对应机制图的三个节点，但‘转化’和‘验收’的具体操作未体现减法含义。",
+    "readability": "故事有明确的开头、冲突、转折和结局，句子通顺，逻辑连贯。",
+    "pedagogical_value": "读者无法从故事中推断出‘减法’的概念，只能学到流程顺序的重要性。",
+    "novelty": "使用‘规则棋局’和‘记录员、调度员、验收员’等角色，不同于常见的动物或生活场景。"
+  },
+  "revision_suggestions": [
+    "将故事核心事件改为从一个集合中移除物品，例如：记录员从封存箱中取出一定数量的通行牌，然后调度员拿走一部分，验收员清点剩余数量。",
+    "确保‘去掉一部分’的动作在故事中明确出现，并作为因果链的关键环节。",
+    "保留流程顺序的隐喻，但需将减法操作嵌入其中，例如：先确认总数，再执行移除，最后记录剩余。"
+  ],
+  "final_status": "reject",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 2,
+      "implicitness": 5,
+      "mapping_clarity": 2,
+      "readability": 4,
+      "pedagogical_value": 2,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": true,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事描述了流程顺序和条件核对，但核心概念‘从一个数量中去掉一部分’并未在事件中体现。故事讲的是登记、转化、验收的流程，而非从一个集合中移除元素。",
+      "implicitness": "正文未出现‘减法’、‘减法的含义’或任何相关术语，完全通过故事场景隐含表达。",
+      "mapping_clarity": "机制图中的节点和边在故事中有对应，但核心机制‘去掉一部分’没有映射到任何故事事件。故事中的‘转化’和‘验收’与减法无关。",
+      "readability": "故事语言流畅，情节连贯，角色和动作清晰，适合中文学习者阅读。",
+      "pedagogical_value": "故事未能帮助理解‘从一个数量中去掉一部分’这一核心机制，读者学到的可能是流程顺序而非减法含义。",
+      "novelty": "规则棋局和流程核对的设定有一定新意，避免了常见的分水果、动物离开等模板。"
+    },
+    "evidence": {
+      "faithfulness": "故事中没有任何事件涉及‘去掉一部分’或‘减少数量’，所有事件都是关于核对条件、转化和验收流程。",
+      "implicitness": "全文未出现‘减法’、‘减’、‘去掉’等词，也没有任何数学术语。",
+      "mapping_clarity": "故事中的‘入口条件核对’、‘转化环节’、‘验收记录’分别对应机制图的三个节点，但‘转化’和‘验收’的具体操作未体现减法含义。",
+      "readability": "故事有明确的开头、冲突、转折和结局，句子通顺，逻辑连贯。",
+      "pedagogical_value": "读者无法从故事中推断出‘减法’的概念，只能学到流程顺序的重要性。",
+      "novelty": "使用‘规则棋局’和‘记录员、调度员、验收员’等角色，不同于常见的动物或生活场景。"
+    },
+    "revision_suggestions": [
+      "将故事核心事件改为从一个集合中移除物品，例如：记录员从封存箱中取出一定数量的通行牌，然后调度员拿走一部分，验收员清点剩余数量。",
+      "确保‘去掉一部分’的动作在故事中明确出现，并作为因果链的关键环节。",
+      "保留流程顺序的隐喻，但需将减法操作嵌入其中，例如：先确认总数，再执行移除，最后记录剩余。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "math_1a_rjb_cpt12",
+    "target_concept": "减法的含义",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt21",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "农夫与果树的寓言",
+  "characters": [
+    "农夫",
+    "果树",
+    "果实"
+  ],
+  "objects": [
+    "果树",
+    "果实",
+    "篮子"
+  ],
+  "conflict": "农夫想要收获恰好6或7个果实，但不知道如何从已有的果实中减去一部分得到所需数量。",
+  "event_chain": [
+    "农夫观察果树，认识果树上有6或7个果实（对应n3：数字6和7的认识）。",
+    "农夫将果实分成两堆，了解所有不同的分法（对应n1：分拆数6和7）。",
+    "农夫根据果树的图示，提出‘还剩多少果实’的问题（对应n2：通过观察图示提出数学问题）。",
+    "农夫从一堆果实中去掉一部分，得到差为6或7的果实数量（对应n4：6和7的减法）。"
+  ],
+  "turning_point": "农夫通过分拆果实和提出数学问题，成功从已有果实中去掉一部分得到所需数量。",
+  "resolution_state": "农夫获得了恰好6或7个果实，完成了减法过程。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫将果实分成两堆，了解所有不同的分法",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫根据果树的图示，提出‘还剩多少果实’的问题",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫观察果树，认识果树上有6或7个果实",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫从一堆果实中去掉一部分，得到差为6或7的果实数量",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫将果实分成两堆（n1）使农夫能够从一堆中去掉一部分得到所需数量（n4）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫根据图示提出数学问题（n2）使农夫能够从一堆中去掉一部分得到所需数量（n4）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫认识果实数量（n3）与农夫从一堆中去掉一部分得到所需数量（n4）相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘6和7的减法’等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文视为因果机制。"
+  ],
+  "mapping_context_sha256": "c86090c029d45d6e2b89b200c18e96163700e92c9cd8784003f5ca62408ed111",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "a43061017b13a930bac3660a287d66406442249081760367c5b7292db854af9a"
+  }
+}

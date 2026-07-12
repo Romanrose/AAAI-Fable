@@ -1,0 +1,148 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt100",
+    "label": "Concept",
+    "name": "苔藓植物是监测空气污染的指示植物",
+    "properties": {
+      "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+      "importance": "了解",
+      "retrieval_text": "苔藓植物是监测空气污染的指示植物\nConcept\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\n了解"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_ch3_s1",
+      "label": "Section",
+      "name": "第一章 生物圈中有哪些绿色植物",
+      "properties": {
+        "retrieval_text": "第一章 生物圈中有哪些绿色植物\nSection"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt82",
+      "label": "Concept",
+      "name": "苔藓植物",
+      "properties": {
+        "definition": "大多生活在陆地潮湿环境；一般矮小，通常具有类似茎和叶的分化，但茎中没有导管、叶中没有叶脉，根非常简单，称为假根。",
+        "importance": "掌握",
+        "examples": [
+          "墙藓",
+          "葫芦藓",
+          "树干上的苔藓"
+        ],
+        "retrieval_text": "苔藓植物\nConcept\n大多生活在陆地潮湿环境；一般矮小，通常具有类似茎和叶的分化，但茎中没有导管、叶中没有叶脉，根非常简单，称为假根。\n掌握\n墙藓\n葫芦藓\n树干上的苔藓"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:2",
+      "source": "biology_7a_rjb_cpt100",
+      "source_name": "苔藓植物是监测空气污染的指示植物",
+      "target": "biology_7a_rjb_ch3_s1",
+      "target_name": "第一章 生物圈中有哪些绿色植物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 1,
+      "retrieval_role": "curriculum_bridge",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:193",
+      "source": "biology_7a_rjb_cpt82",
+      "source_name": "苔藓植物",
+      "target": "biology_7a_rjb_ch3_s1",
+      "target_name": "第一章 生物圈中有哪些绿色植物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.2,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    }
+  ],
+  "selected_paths": [
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt100",
+        "biology_7a_rjb_ch3_s1",
+        "biology_7a_rjb_cpt82"
+      ],
+      "node_names": [
+        "苔藓植物是监测空气污染的指示植物",
+        "第一章 生物圈中有哪些绿色植物",
+        "苔藓植物"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:2",
+          "source": "biology_7a_rjb_cpt100",
+          "source_name": "苔藓植物是监测空气污染的指示植物",
+          "target": "biology_7a_rjb_ch3_s1",
+          "target_name": "第一章 生物圈中有哪些绿色植物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:193",
+          "source": "biology_7a_rjb_cpt82",
+          "source_name": "苔藓植物",
+          "target": "biology_7a_rjb_ch3_s1",
+          "target_name": "第一章 生物圈中有哪些绿色植物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.2,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.5333,
+      "lexical_anchor": "苔藓植物"
+    }
+  ],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "苔藓植物是监测空气污染的指示植物",
+      "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": [
+      "[normalized:edge:2] 苔藓植物是监测空气污染的指示植物 --appears_in--> 第一章 生物圈中有哪些绿色植物",
+      "[normalized:edge:193] 苔藓植物 --appears_in--> 第一章 生物圈中有哪些绿色植物",
+      "苔藓植物是监测空气污染的指示植物 --课程章节--> 苔藓植物（定义显式提及：苔藓植物）"
+    ]
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 0,
+    "direct_structure_sufficient": false,
+    "direct_structure_reasons": [
+      "no_core_direct_edges"
+    ],
+    "expanded_to_two_hop": true,
+    "expansion_reason": "no_core_direct_edges",
+    "expansion_mode": "curriculum_lexical_bridge"
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 1,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 0,
+    "expanded_to_two_hop": true
+  }
+}

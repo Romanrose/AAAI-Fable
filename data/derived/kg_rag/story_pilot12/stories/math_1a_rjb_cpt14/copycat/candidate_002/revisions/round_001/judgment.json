@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "Node n1 (入口条件核对) is clearly and consistently referenced throughout the story, with explicit actions and consequences. Node n2 (第二道转化环节) is mentioned but its specific role as a 'special case' of n1 (is_a relation) is only stated once and not demonstrated through story events. Edge e4 (n1 enables n5) and e5 (n1 enables n6) and e6 (n1 enables n4) have no story evidence; the story only shows sequential dependency (n1→n2→n3→n4→n5→n6), not the enables relation from n1 to n4, n5, n6. This makes the mapping weaker than a story that explicitly shows how n1's properties enable later steps."
+  },
+  "revision_instructions": [
+    "Add explicit story evidence for edges e4, e5, e6: show how the result of 入口条件核对 (n1) directly enables or is a prerequisite for 第四道转化环节 (n4), 第五道转化环节 (n5), and 结果验收记录 (n6). For example, the 通行牌 status from n1 could be required for n4, n5, n6.",
+    "Clarify the is_a relation between n2 and n1 (edge e2): the story states '第二道转化环节其实是入口条件核对的一种特殊情况' but does not show how this relation affects the plot. Consider adding a moment where the character realizes that the rules for n2 are a subset of n1's rules.",
+    "Ensure edge_coverage meets the 0.8 threshold: currently 0.5, which is below the automatic gate. Add evidence for at least two more edges to reach 0.8."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

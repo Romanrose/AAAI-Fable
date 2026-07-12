@@ -1,0 +1,57 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "花粉从花药散放而落到雌蕊柱头上的过程",
+      "evidence": "将花粉从花药中卷起，洒向空中。那些细小的颗粒随风飘荡，有的落在泥土里，有的落在叶片上，只有少数幸运的，能落到另一朵花的柱头上。",
+      "narrative_anchor": "将花粉从花药中卷起，洒向空中"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "异花传粉",
+      "evidence": "将远处一朵油菜花的花粉带到了油菜花乙的柱头上",
+      "narrative_anchor": "将远处一朵油菜花的花粉带到了油菜花乙的柱头上"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "自花传粉",
+      "evidence": "油菜花甲的花粉没有随风飘走，而是轻轻落在了自己的柱头上",
+      "narrative_anchor": "轻轻落在了自己的柱头上"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "受精",
+      "evidence": "那花粉轻轻落下，与柱头紧紧贴合。油菜花乙感到一阵温暖，它的花瓣缓缓合拢，开始孕育新的生命。",
+      "narrative_anchor": "开始孕育新的生命"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从花粉散放到异花传粉",
+      "evidence": "将花粉从花药中卷起，洒向空中。那些细小的颗粒随风飘荡，……只有少数幸运的，能落到另一朵花的柱头上。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "能落到另一朵花的柱头上"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从异花传粉到自花传粉（对比关系）",
+      "evidence": "油菜花甲的花粉没有随风飘走，而是轻轻落在了自己的柱头上",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "轻轻落在了自己的柱头上"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从自花传粉到受精（对比结果）",
+      "evidence": "油菜花甲的种子虽然饱满，但数量很少；而油菜花乙的种子却密密麻麻",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "油菜花甲的种子虽然饱满，但数量很少"
+    }
+  ]
+}

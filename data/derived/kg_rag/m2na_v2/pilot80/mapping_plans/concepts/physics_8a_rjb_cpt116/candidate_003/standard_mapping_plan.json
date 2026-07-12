@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个关于木匠与弯曲木梁的故事",
+  "characters": [
+    "老木匠",
+    "学徒"
+  ],
+  "objects": [
+    "木梁",
+    "木楔子"
+  ],
+  "conflict": "木梁因材质过硬或弯曲过度，导致榫头无法准确插入卯眼，影响房屋建造。",
+  "event_chain": [
+    "老木匠发现木梁因材质过硬或弯曲过度（n1），导致榫头无法准确插入卯眼，即木梁端部偏离预定位置（n2）。",
+    "学徒尝试用锤子直接敲打矫正，但效果不佳。",
+    "老木匠使用一个中间厚、边缘薄的木楔子（凹透镜的类比），垫在木梁弯曲处下方，轻轻敲击，使木梁逐渐恢复平直（n3）。",
+    "木梁矫正后，榫头准确插入卯眼，房屋结构稳固。",
+    "老木匠告诉学徒，木楔子的厚度与矫正效果有关，即木楔子的厚度（透镜焦度）决定了矫正的力度（n4）。"
+  ],
+  "turning_point": "老木匠使用木楔子矫正木梁，使榫头得以准确插入。",
+  "resolution_state": "木梁恢复平直，榫头准确插入卯眼，房屋建造顺利进行。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "木梁材质过硬或弯曲过度",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "榫头无法准确插入卯眼（木梁端部偏离预定位置）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "使用木楔子垫在弯曲处并敲击矫正",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "木楔子的厚度",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "导致",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "矫正",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "决定矫正力度",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保木楔子（凹透镜）的形状描述准确：中间厚、边缘薄，以类比凹透镜。",
+    "避免直接提及“近视眼”、“凹透镜”、“焦度”等术语。",
+    "故事中木楔子的厚度与矫正效果的关系需明确，以对应透镜焦度与矫正的关系。",
+    "注意故事连贯性，所有事件围绕木匠矫正木梁展开，不引入无关元素。"
+  ],
+  "mapping_context_sha256": "dc55808e887494b790752e23596aafc76ab2f0d5e1b6cdf4ac33e7f13135086c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "bd8d810281d55bd2a55fb21c6ac8fe1196c18044684e05c792aa51aa501a06fa"
+  }
+}

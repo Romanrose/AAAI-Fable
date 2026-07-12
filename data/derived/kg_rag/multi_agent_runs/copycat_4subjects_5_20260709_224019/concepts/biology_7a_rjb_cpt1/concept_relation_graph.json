@@ -1,0 +1,12 @@
+{
+  "target_concept": {
+    "id": "biology_7a_rjb_cpt1",
+    "name": "生物",
+    "label": "Concept",
+    "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。"
+  },
+  "neighbors": [],
+  "relations": [],
+  "raw_edge_count": 0,
+  "source": "dual_level_graphrag"
+}

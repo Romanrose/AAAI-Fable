@@ -1,0 +1,95 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "烹饪技艺",
+  "domain_rationale": "烹饪过程中，具体的烹饪方法（如清蒸鲈鱼）是一般烹饪方法的一个实例，并且烹饪方法依赖于食材（鱼）和烹饪原理（蒸煮），同时有菜谱验证方法。",
+  "conflict": "不同菜肴（清蒸鲈鱼、红烧肉、糖醋排骨）都是烹饪方法的实例，且都依赖食材和烹饪基础，菜谱验证了清蒸鲈鱼的做法。",
+  "event_chain": [
+    "厨师采用清蒸鲈鱼方法",
+    "清蒸鲈鱼方法是烹饪方法的一种",
+    "烹饪方法需要先了解装盘技巧",
+    "烹饪方法需要先了解鱼的新鲜度",
+    "烹饪方法需要先了解蒸煮原理",
+    "菜谱一号验证了清蒸鲈鱼方法的可行性"
+  ],
+  "turning_point": "厨师按菜谱成功做出清蒸鲈鱼，验证了方法的有效性。",
+  "resolution_state": "菜谱的成功实践证明了清蒸鲈鱼方法，并为其他菜肴提供参考。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "清蒸鲈鱼方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "烹饪方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "装盘技巧",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "鱼",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "蒸煮原理",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "红烧肉方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "糖醋排骨方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "菜谱一号",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "清蒸鲈鱼方法是烹饪方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "烹饪方法需要先了解装盘技巧",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "鱼是烹饪方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "蒸煮原理是烹饪方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "红烧肉方法是烹饪方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "糖醋排骨方法是烹饪方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "菜谱一号验证了烹饪方法的可行性",
+      "direction_preserved": true
+    }
+  ]
+}

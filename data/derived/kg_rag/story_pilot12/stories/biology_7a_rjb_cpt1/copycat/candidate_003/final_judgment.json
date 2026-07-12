@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully covered with exact evidence and correct direction. The story uses a concrete workshop process to implicitly represent the abstract biological concept of 'life characteristics' without mentioning any forbidden terms. The mapping is clear and consistent. The only minor weakness is that the edge mappings all use the same generic phrase '主角把两份相关记录放在一起比较，发现它们共同约束最后判断', which lacks variety but still correctly preserves the 'requires' relation. This is better than a story that merely lists the characteristics or uses direct biological terms."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

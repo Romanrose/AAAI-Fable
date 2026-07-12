@@ -1,0 +1,173 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "分解反应：一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:formula"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "高锰酸钾受热分解反应：高锰酸钾受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt105:definition",
+          "kg-node:chemistry_9a_rjb_cpt105:formula"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "过氧化氢分解反应：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_cpt107:formula"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "加热氯酸钾制取氧气：在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "process",
+        "text": "水的分解反应：水在电流等作用下分解生成氢气和氧气。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt251:definition",
+          "kg-node:chemistry_9a_rjb_cpt251:formula"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "化合反应：由两种或两种以上物质起反应，生成一种新物质的化学反应。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt96:definition",
+          "kg-node:chemistry_9a_rjb_cpt96:formula"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "rule",
+        "text": "化学学习中的分类思想：根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt118:definition",
+          "kg-node:chemistry_9a_rjb_cpt118:examples"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "rule",
+        "text": "用分类方法学习化学：根据物质或反应的共同特征进行分类，通过对类的掌握来提高学习效率。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_skl28:description"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11277"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11279"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11281"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14998"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n6",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18225"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n7",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15003"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n8",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15263"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7"
+    ]
+  }
+}
+```

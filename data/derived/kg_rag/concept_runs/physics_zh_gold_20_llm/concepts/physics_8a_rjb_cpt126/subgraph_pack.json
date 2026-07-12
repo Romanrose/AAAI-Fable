@@ -1,0 +1,63 @@
+{
+  "query": "physics_8a_rjb_cpt126",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt126",
+    "label": "Concept",
+    "name": "质量守恒",
+    "definition": "物体的质量不随形状、物态和位置改变而改变。",
+    "aliases": [],
+    "examples": [
+      "冰熔化成水质量不变",
+      "铁块压成铁片质量不变"
+    ],
+    "retrieval_text": "质量守恒\n物体的质量不随形状、物态和位置改变而改变。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt124",
+        "label": "Concept",
+        "name": "质量",
+        "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp30",
+        "label": "Experiment",
+        "name": "形状变化前后物体质量的比较实验",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_exp31",
+        "label": "Experiment",
+        "name": "溶解前后质量比较实验",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "physics_8a_rjb_exe14",
+        "label": "Exercise",
+        "name": "一块质量为100 g的冰熔化成水后，质量（ ）。A.仍是100 g B.大于100 g C.小于100 g",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch6_s1",
+        "label": "Section",
+        "name": "第一节 质量",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "math_1a_rjb_cpt19",
+  "method": "con2fable",
+  "format_validity": 1.0,
+  "validation_errors": [],
+  "exact_concept_leakage": 0.0,
+  "soft_term_leakage": 0.0,
+  "exact_leakage_hits": [],
+  "soft_leakage_hits": [],
+  "node_coverage": 0.75,
+  "weighted_node_coverage": 0.6610169491525424,
+  "edge_coverage": 0.0,
+  "weighted_edge_coverage": 0.0,
+  "alignment_precision": 0.42857142857142855,
+  "alignment_hallucination_rate": 0.5714285714285714,
+  "relation_direction_accuracy": null,
+  "template_hit_rate": 0.0,
+  "template_hits": [],
+  "narrative_char_count": 703,
+  "valid_node_alignment_count": 3,
+  "valid_edge_alignment_count": 0
+}

@@ -1,0 +1,261 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "chemistry_9a_rjb_cpt103",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "实验室制取氧气的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt103:definition",
+          "kg-node:chemistry_9a_rjb_cpt103:examples",
+          "kg-node:chemistry_9a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "加热高锰酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt104:definition",
+          "kg-node:chemistry_9a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "分解过氧化氢制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt106:definition",
+          "kg-node:chemistry_9a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "加热氯酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt66:definition",
+          "kg-node:chemistry_9a_rjb_cpt66:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "分解反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:retrieval_text"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "process",
+        "text": "氧气的收集方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt119:definition",
+          "kg-node:chemistry_9a_rjb_cpt119:retrieval_text"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "evidence",
+        "text": "实验2-5 加热高锰酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp16:process",
+          "kg-node:chemistry_9a_rjb_exp16:phenomena",
+          "kg-node:chemistry_9a_rjb_exp16:conclusion",
+          "kg-node:chemistry_9a_rjb_exp16:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11276"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11278"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11280"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n6",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14997"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15223"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n7",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14996"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n8",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22572"
+        ]
+      },
+      {
+        "id": "e8",
+        "source": "n2",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:examples"
+        ]
+      },
+      {
+        "id": "e9",
+        "source": "n3",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:examples"
+        ]
+      },
+      {
+        "id": "e10",
+        "source": "n4",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:examples"
+        ]
+      },
+      {
+        "id": "e11",
+        "source": "n2",
+        "target": "n5",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt104:definition",
+          "kg-node:chemistry_9a_rjb_exp16:conclusion"
+        ]
+      },
+      {
+        "id": "e12",
+        "source": "n3",
+        "target": "n5",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt106:definition",
+          "kg-node:chemistry_9a_rjb_cpt106:formula"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "实验室制取氧气的方法"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7",
+      "e8",
+      "e9",
+      "e10",
+      "e11",
+      "e12"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "6374b5386e5f0c8ff9a605789b9ca460e1d9e5166deb2e590c4aa3a0d497c08b",
+    "retrieval_sha256": "cac1451f27df76887dd9d747a4fdbabf54b436ea5356eebf54b66c32b152927a",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "01206df8a78b48dfeca0a59186a2523413402db5ec54357382724629d94bbf1a"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

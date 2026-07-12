@@ -1,0 +1,14 @@
+{
+  "output_path": "data\\derived\\kg_rag\\concept_selection\\smoke_concepts.jsonl",
+  "concept_count": 8,
+  "subjects": {
+    "biology": 2,
+    "chemistry": 2,
+    "math": 2,
+    "physics": 2
+  },
+  "priorities": {
+    "gold": 6,
+    "silver": 2
+  }
+}

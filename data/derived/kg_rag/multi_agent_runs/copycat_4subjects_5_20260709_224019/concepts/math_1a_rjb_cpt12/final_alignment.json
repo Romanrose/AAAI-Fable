@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "先核对入口条件牌",
+      "narrative_anchor": "先核对入口条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "推动第二道转化环节",
+      "narrative_anchor": "推动第二道转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "最后验收员核对整条安排",
+      "narrative_anchor": "最后验收员核对整条安排",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动转化",
+      "evidence": "先稳定入口条件核对，再推动转化",
+      "narrative_anchor": "先稳定入口条件核对，再推动转化",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先推动转化，再验收记录",
+      "evidence": "再推动转化，最后才能验收",
+      "narrative_anchor": "再推动转化，最后才能验收",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

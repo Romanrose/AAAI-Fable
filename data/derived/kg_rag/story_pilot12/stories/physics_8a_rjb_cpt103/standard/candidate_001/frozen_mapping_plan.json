@@ -1,0 +1,87 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "一位老农种葫芦的故事",
+  "characters": [
+    "老农",
+    "葫芦藤"
+  ],
+  "objects": [
+    "葫芦藤",
+    "小葫芦",
+    "大葫芦"
+  ],
+  "conflict": "老农希望葫芦长得又大又好，但葫芦藤上结的葫芦太小，不符合他的期望。",
+  "event_chain": [
+    "老农精心照料葫芦藤，葫芦藤生长旺盛。",
+    "葫芦藤上结出许多小葫芦。",
+    "老农发现小葫芦太小，决定让它们远离藤蔓的主干（即剪掉一些枝叶，让养分集中）。",
+    "小葫芦逐渐长大，变成大葫芦。",
+    "老农继续调整藤蔓的支撑和养分分配，使大葫芦长得更饱满。"
+  ],
+  "turning_point": "老农决定让葫芦远离主干（剪枝），使养分集中到少数葫芦上。",
+  "resolution_state": "老农最终收获了几个又大又好的葫芦。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "葫芦藤",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大葫芦",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "葫芦生长过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "小葫芦远离主干（剪枝）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "又大又好的葫芦",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老农调整藤蔓支撑和养分分配",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "葫芦藤使葫芦生长过程成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "葫芦生长过程产生大葫芦",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "小葫芦远离主干使葫芦生长过程得以发生",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "葫芦生长过程产生又大又好的葫芦",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "老农调整藤蔓支撑和养分分配使葫芦生长过程得以持续",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'照相机成像'或其任何同义词。",
+    "注意'小葫芦远离主干'对应'物体远离凸透镜'，但需避免使用'远离'一词的物理含义，仅保留空间距离变化。",
+    "'老农调整藤蔓支撑和养分分配'对应'调节像距以成清晰像'，需确保不出现'像距'或'清晰像'等术语。"
+  ]
+}

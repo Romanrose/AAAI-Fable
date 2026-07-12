@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：光心",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m3",
+      "text": "与相关概念保持可解释关系：凸透镜成像规律",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m4",
+      "text": "与相关概念保持可解释关系：焦点",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17247"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17190"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_19710"
+    }
+  ]
+}

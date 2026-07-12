@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地映射了种子萌发的定义：圆粒（种子）在适宜条件（水、空气、温度）下吸水并利用贮藏营养（外壳变瘪），胚根和胚芽发育（先扎根后长芽），最终长成幼苗。没有遗漏或歪曲核心机制。",
+    "implicitness": "故事完全避免了直接使用目标概念名称“种子萌发”及其别名，通过“圆粒”“小苗”“根”“芽”等日常词汇和事件链隐含地表达了概念，符合隐含性要求。",
+    "mapping_clarity": "故事中每个关键事件都清晰对应种子萌发的要素：浇水对应吸水，外壳变瘪对应利用贮藏营养，先扎根后长芽对应胚根胚芽发育，老园丁的总结直接点明条件与内在储备的关系，映射明确且自然。",
+    "readability": "故事语言流畅、情节简单易懂，对话和观察细节生动，适合目标年龄段（初中生）阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过阿明的观察和疑问，逐步揭示种子萌发的条件和过程，结尾老园丁的总结强化了“条件+内在储备”的核心概念，能有效促进理解，教学价值高。",
+    "novelty": "故事采用了园圃观察的常见场景，但通过师徒对话和逐步发现的方式呈现，有一定新意，但整体结构在寓言类故事中较为典型，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个对比情节，例如一颗圆粒因缺水或温度不适未能萌发，以更突出环境条件的必要性。",
+    "可稍微丰富圆粒内部储备的描述，如提及胚乳或子叶，以增强科学准确性。"
+  ]
+}

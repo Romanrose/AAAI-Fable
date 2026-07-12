@@ -1,0 +1,179 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "焦距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt101:definition",
+          "kg-edge:normalized:edge:17190"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "物距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition",
+          "kg-edge:normalized:edge:17193"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "像距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt108:definition",
+          "kg-edge:normalized:edge:17194"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "凸透镜成像规律",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt106:definition",
+          "kg-node:physics_8a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "物镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt121:definition",
+          "kg-edge:normalized:edge:12423"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "目镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt122:definition",
+          "kg-edge:normalized:edge:12424"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "entity",
+        "text": "显微镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt119:definition",
+          "kg-edge:normalized:edge:17191"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "entity",
+        "text": "望远镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt120:definition",
+          "kg-edge:normalized:edge:17192"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17190"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17193"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17194"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12423"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12424"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n4",
+        "target": "n7",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17191"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n4",
+        "target": "n8",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17192"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7"
+    ]
+  }
+}

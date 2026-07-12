@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "evidence": "第二道转化环节",
+      "narrative_anchor": "第二道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "避免目的论解释。",
+      "evidence": "调度员试着倒过来安排",
+      "narrative_anchor": "调度员试着倒过来安排",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "避免把个体努力写成进化原因。",
+      "evidence": "调度员把这次教训记在册子边缘",
+      "narrative_anchor": "调度员把这次教训记在册子边缘",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "主角先确认园圃值守所里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "evidence": "条件牌没对上，后面的登记没法开始",
+      "narrative_anchor": "条件牌没对上，后面的登记没法开始",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先稳定园圃值守所中的第2道转化环节，再推动园圃值守所中的结果验收记录",
+      "evidence": "必须先稳定入口条件核对，才能推动第二道转化环节；第二道转化环节稳定了，才能推动结果验收记录",
+      "narrative_anchor": "必须先稳定入口条件核对，才能推动第二道转化环节；第二道转化环节稳定了，才能推动结果验收记录",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

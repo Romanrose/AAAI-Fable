@@ -1,0 +1,68 @@
+{
+  "id": "biology_7a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "遗传和变异",
+    "aliases": [],
+    "forbidden_terms": [
+      "遗传和变异"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "属于或连接到上位结构：生物的共同特征",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10771"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "园圃值守所里，记录员、调度员和验收员各守其位。表面流程已经启动，但关键条件、顺序和结果还没互相核对。\n\n记录员翻开分段记录册，第一页写着：先稳定入口条件核对，再推动结果验收记录。他提起笔，在“入口条件核对”一栏下，细细记下每一株幼苗的叶片形状、枝干长短。调度员站在一旁，皱眉道：“这样太慢，不如先安排验收，回头再补入口条件。”他拿过通行牌，擅自调换了顺序。\n\n验收员打开封存箱，却愣住了——箱里的结果验收记录一片空白，没有入口条件做基准，他根本不知道该核对什么。调度员这才发现，只有先完成入口条件核对，验收记录才能接上。他试着倒过来安排，结果验收员摇头说：“前面的记录没定，后面的验收就是空话。”\n\n记录员坚持先确认入口条件核对是否成立。他仔细比对每一株幼苗和上一季的记录，发现大多数特征相同，但总有一部分不一样。调度员和验收员围过来，看着分段记录册上的数据，终于明白——方向不能颠倒。\n\n最后，众人用结果验收记录核对整条安排。封存箱里的记录与入口条件一一对应，所有环节按条件、过程和结果重新衔接，记录终于能够互相印证。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "园圃值守所里，记录员、调度员和验收员各守其位。",
+        "narrative_anchor": "园圃值守所里，记录员、调度员和验收员各守其位。",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "结果验收记录",
+        "evidence": "最后，众人用结果验收记录核对整条安排",
+        "narrative_anchor": "最后，众人用结果验收记录核对整条安排",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先完成入口条件核对，验收记录才能接上",
+        "evidence": "调度员这才发现，只有先完成入口条件核对，验收记录才能接上",
+        "narrative_anchor": "调度员这才发现，只有先完成入口条件核对，验收记录才能接上",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

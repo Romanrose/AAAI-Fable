@@ -1,0 +1,94 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "主光轴是通过透镜两个球面球心的直线",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt98:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-node:physics_8a_rjb_exp23:phenomena",
+          "kg-node:physics_8a_rjb_exp23:conclusion"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "焦点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-node:physics_8a_rjb_cpt100:name"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "焦距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt101:definition",
+          "kg-node:physics_8a_rjb_cpt101:name"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17246"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt100:definition",
+          "kg-edge:normalized:edge:23045"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19710"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  }
+}
+```

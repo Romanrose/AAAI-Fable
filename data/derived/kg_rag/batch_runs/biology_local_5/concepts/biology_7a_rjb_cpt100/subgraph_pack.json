@@ -1,0 +1,47 @@
+{
+  "query": "biology_7a_rjb_cpt100",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt100",
+    "label": "Concept",
+    "name": "苔藓植物是监测空气污染的指示植物",
+    "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+    "importance": "了解",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "苔藓植物是监测空气污染的指示植物\nConcept\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\n了解"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s1",
+        "label": "Section",
+        "name": "第一章 生物圈中有哪些绿色植物",
+        "definition": null,
+        "importance": null,
+        "aliases": [],
+        "examples": [],
+        "retrieval_text": "第一章 生物圈中有哪些绿色植物\nSection"
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Target Concept",
+      "text": "Name: 苔藓植物是监测空气污染的指示植物\nLabel: Concept\nDefinition: 许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\nImportance: 了解"
+    },
+    {
+      "title": "Hierarchy",
+      "text": "第一章 生物圈中有哪些绿色植物"
+    }
+  ],
+  "meta": {
+    "node_count": 2,
+    "edge_count": 1
+  }
+}

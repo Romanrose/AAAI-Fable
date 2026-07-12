@@ -1,0 +1,74 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农在田边观察蚂蚁搬运食物",
+  "characters": [
+    "老农",
+    "蚂蚁群"
+  ],
+  "objects": [
+    "蚁巢",
+    "食物颗粒",
+    "田埂"
+  ],
+  "conflict": "蚂蚁群需要将食物颗粒搬运回巢，但田埂边缘的蚁道狭窄，食物颗粒过大无法通过，蚂蚁必须调整搬运方式才能通过最窄处。",
+  "event_chain": [
+    "蚂蚁群发现远处有食物颗粒，开始集体搬运。",
+    "蚂蚁群通过调整队形和用力方向，改变食物颗粒的朝向，使其能通过狭窄蚁道。",
+    "蚂蚁群成功将食物颗粒搬运至蚁巢入口附近，但发现入口处有更窄的瓶颈。",
+    "蚂蚁群在瓶颈处再次调整，最终将食物颗粒挤过最窄处，进入蚁巢内部。",
+    "蚂蚁群将食物颗粒存放在蚁巢内距离入口约25步的储藏室，此处搬运最省力且不易疲劳。"
+  ],
+  "turning_point": "蚂蚁群在蚁道最窄处通过调整搬运方式成功通过，但发现蚁巢入口更窄，需要再次调整。",
+  "resolution_state": "蚂蚁群通过两次调整，最终将食物颗粒存放在距离入口25步的储藏室，实现了高效且省力的搬运。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "蚂蚁群通过调整队形和用力方向，改变食物颗粒的朝向，使其能通过狭窄蚁道",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "蚁巢入口处最窄的瓶颈，蚂蚁群必须通过调整才能将食物颗粒挤过",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "距离蚁巢入口25步的储藏室，蚂蚁群在此存放食物颗粒，搬运最省力且不易疲劳",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "蚂蚁群调整搬运方式（n1）使得能够通过最窄瓶颈（n2）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "最窄瓶颈（n2）与最佳储藏室（n3）之间存在关联，即通过瓶颈后，食物颗粒被搬运至储藏室",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中未使用'近点'、'眼睛'、'调节'、'明视距离'等禁忌词。",
+    "确保'蚂蚁调整搬运方式'对应'眼睛调节'，'最窄瓶颈'对应'近点'，'25步储藏室'对应'明视距离'，映射清晰。",
+    "确保事件链中'调整搬运方式'是'通过最窄瓶颈'的前提，且'最窄瓶颈'与'25步储藏室'存在关联，方向正确。",
+    "避免将田埂或蚁巢外的环境作为因果机制，仅聚焦蚂蚁搬运的内部过程。"
+  ],
+  "mapping_context_sha256": "45b68ab01bca00d4b2a8f7aa91fac4df6ef15eeb1743a98ddda63ee8d4712e29",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3e1273a21be11f70de99714514acb7fba003b450faca055119b0d9480aa23e98"
+  }
+}

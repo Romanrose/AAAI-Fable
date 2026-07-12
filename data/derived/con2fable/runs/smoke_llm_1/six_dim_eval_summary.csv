@@ -1,0 +1,2 @@
+﻿concept_id,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,unmapped_core_mechanism,template_like
+biology_7a_rjb_cpt10,5,5,5,5,5,4,4.9,accept,False,False,False,False

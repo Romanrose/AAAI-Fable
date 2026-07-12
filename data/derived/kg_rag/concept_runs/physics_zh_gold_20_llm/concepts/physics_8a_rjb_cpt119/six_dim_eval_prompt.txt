@@ -1,0 +1,206 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "显微镜",
+  "concept_id": "physics_8a_rjb_cpt119",
+  "concept_definition": "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt119",
+    "显微镜"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt119",
+      "label": "Concept",
+      "name": "显微镜",
+      "definition": "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。",
+      "aliases": [],
+      "examples": [
+        "观",
+        "察",
+        "植",
+        "物",
+        "细",
+        "胞"
+      ],
+      "retrieval_text": "显微镜\n由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt106",
+          "label": "Concept",
+          "name": "凸透镜成像规律",
+          "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "physics_8a_rjb_exp29",
+          "label": "Experiment",
+          "name": "自制显微镜实验",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s5",
+          "label": "Section",
+          "name": "第五节 显微镜和望远镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt119",
+    "concept_id": "physics_8a_rjb_cpt119",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt119",
+      "label": "Concept",
+      "name": "显微镜",
+      "definition": "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。",
+      "aliases": [],
+      "examples": [
+        "观",
+        "察",
+        "植",
+        "物",
+        "细",
+        "胞"
+      ]
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "显微镜"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中阿明通过两次放大（大凸片和小凸片）观察微小齿轮裂痕，隐含了显微镜由物镜和目镜两次放大的机制。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明先用大凸片（物镜）将远处小齿轮放大成倒立实像，再用小凸片（目镜）放大该像，最终看清微小细节，对应显微镜的两次放大作用。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了物距、像距、放大倍数等变量关系（如大凸片成倒立像），且放大过程由工具物理性质决定，非角色主观意志，符合学科约束。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼里的秘密\n\n小镇中心有一座古老的钟楼，每到整点，钟声就会响起。可是最近，钟声总是出错——有时提前，有时延迟，甚至有时不响。负责维护钟楼的阿明决心找出原因。\n\n钟楼内部结构复杂，齿轮、弹簧、摆锤层层叠叠。阿明站在钟楼底层，抬头望去，只能看到巨大的摆锤来回摆动，却看不清上层的齿轮是否咬合。他爬上第一层平台，发现这里有一个小窗口，透过它能看到中层齿轮的转动，但边缘有些模糊，只能看出大概。阿明心想：“这样看，好像一切正常，但为什么钟声不准呢？”\n\n他继续往上爬，来到第二层平台。这里有一个更精巧的装置：一面打磨光滑的水晶片，能将远处的小齿轮放大一些。阿明透过它，看到中层齿轮上有一道细微的裂痕，但裂痕太小，依然看不真切。他皱起眉头：“这裂痕会不会就是问题所在？可它这么小，怎么确认呢？”\n\n阿明没有放弃。他想起钟楼顶层还藏着一套祖传的观察工具：两块特制的水晶片，一块大而凸，一块小而凸。他将大凸片对准远处的小齿轮，光线经过折射，小齿轮的影像变得更大、更清晰，但仍是倒立的。阿明并不慌张，他再用小凸片靠近眼睛，对准那个倒立的影像——奇迹发生了！原本模糊的裂痕变得像手指般粗细，连边缘的毛刺都一清二楚。阿明惊呼：“原来裂痕已经贯穿了齿轮的齿根，难怪钟声不准！”\n\n他立刻更换了齿轮，钟声恢复了准确。从此，阿明明白了一个道理：有些真相，单凭肉眼或一次观察是看不见的，需要一步步放大、再放大，才能发现隐藏在微小之处的关键。",
+  "rule_findings": {
+    "story_token_count": 524,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

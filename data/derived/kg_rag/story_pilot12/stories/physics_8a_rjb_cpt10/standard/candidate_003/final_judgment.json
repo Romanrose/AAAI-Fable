@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (机械运动) is only weakly implied by '船行至江心' without explicit mention of position change over time; edge e1 (relates_to between n2 and n1) is not clearly shown in the story—the carving act is not explicitly linked to the boat's motion as a reference frame. In contrast, node n3 (相对性) is well illustrated by the character's mistaken judgment."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping of node n2 (机械运动) by explicitly describing the boat's continuous movement and its effect on the mark's position relative to the sword.",
+    "Clarify edge e1 (relates_to) by showing that the mark's location changes because the boat moves, making the mark a moving reference.",
+    "Ensure edge e2 (enables) is more explicit: the mark enables the judgment only because it is tied to the moving boat, not just because it is a mark.",
+    "Improve node n1 (参照物) mapping by explicitly stating that the mark serves as a reference point for the sword's location, even though it is flawed."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

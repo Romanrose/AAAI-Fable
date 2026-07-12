@@ -1,0 +1,116 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt14",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个关于“标准砖块”与“特殊砖块”的寓言故事",
+  "characters": [
+    "老工匠（智慧长者）",
+    "标准砖块（代表长方体）",
+    "特殊砖块（代表正方体）",
+    "学徒（学习者）"
+  ],
+  "objects": [
+    "标准砖块：有6个长方形面，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+    "特殊砖块：由6个完全相同的正方形面组成，所有棱长度相等，是长宽高都相等的标准砖块。",
+    "砖块分类法：按外形特征（面、棱、顶点）对砖块进行归类的方法。",
+    "砖块搭建：用砖块组合、拆分，形成新的建筑结构。",
+    "砖块表面积：砖块6个面的面积之和。",
+    "砖块体积公式：砖块体积=长×宽×高（V=a·b·h）。"
+  ],
+  "conflict": "学徒分不清标准砖块和特殊砖块的区别，不知道它们之间的关系，也无法正确使用砖块进行搭建和计算。",
+  "event_chain": [
+    "老工匠向学徒展示标准砖块，并讲解其特点：6个长方形面，相对的面相同，相对的棱等长，有6面、12棱、8顶点。",
+    "学徒观察到特殊砖块，发现它也是6个面、12条棱、8个顶点，但所有面都是正方形，所有棱长度相等。",
+    "老工匠指出特殊砖块是一种特殊的标准砖块（长宽高相等），两者是包含关系。",
+    "学徒将标准砖块和特殊砖块都归入砖块分类法（按形状分类）中。",
+    "学徒用标准砖块进行砖块搭建，组合成新的结构。",
+    "学徒学习计算标准砖块的表面积（6个面的面积之和）。",
+    "学徒学习标准砖块的体积公式（V=a·b·h）。"
+  ],
+  "turning_point": "老工匠指出特殊砖块是标准砖块的一种特殊情况，学徒理解了它们之间的包含关系。",
+  "resolution_state": "学徒掌握了标准砖块和特殊砖块的关系，能正确分类、搭建和计算表面积、体积。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "标准砖块",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "特殊砖块",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "砖块分类法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "砖块搭建",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "砖块表面积",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "砖块体积公式",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准砖块属于砖块分类法（按形状分类）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "特殊砖块是一种标准砖块",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "标准砖块与特殊砖块相关联（特殊砖块是标准砖块的特例）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "标准砖块使得计算砖块表面积成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "标准砖块使得使用砖块体积公式成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "标准砖块使得砖块搭建成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现“长方体”一词，已用“标准砖块”替代。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保不将课程桥接上下文（如“按形状分类”的定义）作为因果机制。",
+    "确保故事使用单一连贯的源域（砖块建筑），而非多个无关隐喻。"
+  ],
+  "mapping_context_sha256": "5919e49a641a5940f2a87bf87b716c7975bbdd476c5596978e76bb8e3b7b5eb5",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1585875ba3b7f3b7a871885506c5ff7d8010b75402fcfd95249a93a6f7a0f61e"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "气体发生装置",
+  "concept_id": "chemistry_9a_rjb_cpt124",
+  "concept_definition": "为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt124",
+    "气体发生装置"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt124",
+      "label": "Concept",
+      "name": "气体发生装置",
+      "definition": "为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。",
+      "aliases": [],
+      "examples": [
+        "图2-17中加热高锰酸钾的试管及其与导管、橡胶塞构成的部分。",
+        "装有大理石与稀盐酸的锥形瓶（配滴液漏斗和导气管）组成的发生装置。",
+        "加热高锰酸钾时使用的试管或带侧支管的硬质试管装置。"
+      ],
+      "retrieval_text": "气体发生装置\n为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt122",
+          "label": "Concept",
+          "name": "氧气的实验室制取",
+          "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt327",
+          "label": "Concept",
+          "name": "实验室制取气体的一般思路和方法",
+          "definition": "在实验室制取气体时，从选择化学反应原理、选择合适装置、到验证所得气体的系统方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt324",
+          "label": "Concept",
+          "name": "二氧化碳的实验室制法",
+          "definition": "在实验室里，用稀盐酸与大理石或石灰石（主要成分为碳酸钙）反应制取二氧化碳气体的化学方法。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s4",
+          "label": "Section",
+          "name": "实验活动1 氧气的实验室制取与性质",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_9a_rjb_ch6_s2",
+          "label": "Section",
+          "name": "课题2 二氧化碳制取的研究",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt124",
+    "concept_id": "chemistry_9a_rjb_cpt124",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt124",
+      "label": "Concept",
+      "name": "气体发生装置",
+      "definition": "为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。",
+      "aliases": [],
+      "examples": [
+        "图2-17中加热高锰酸钾的试管及其与导管、橡胶塞构成的部分。",
+        "装有大理石与稀盐酸的锥形瓶（配滴液漏斗和导气管）组成的发生装置。",
+        "加热高锰酸钾时使用的试管或带侧支管的硬质试管装置。"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "气体发生装置"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "阿明使用的圆肚陶瓶、带孔软木塞、弯曲竹管和小炉子组成的整套器具，用于承装反应物并通过加热产生气体，对应气体发生装置的定义。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事中阿明通过对比实验发现，敞口陶罐无法有效收集气体，而密封的器具能引导气体进入水盆，完整收集气泡，体现了气体发生装置通过密封和导管实现气体收集的核心机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中白色粉末和黑色粉末混合加热产生气泡，是化学反应（生成新物质），而非物理混合；气泡的产生和收集过程隐含了反应前后物质的变化和守恒；全文未出现化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：密室的秘密\n\n从前，在一个小小的城邦里，有一位名叫阿明的少年，他负责管理城邦的账房。账房深处有一间密室，里面存放着城邦最珍贵的宝物——一种能产生神奇气泡的“灵泉水”。要得到灵泉水，必须用一套特殊的器具：一个圆肚的陶瓶，一个带孔的软木塞，一根弯曲的竹管，以及一个用来加热的小炉子。\n\n阿明每天的工作，就是把一种白色粉末和一种黑色粉末混合后放入陶瓶，塞紧软木塞，再将竹管的一端插入软木塞的孔中，另一端伸入一个空的水盆。然后，他点燃小炉子，小心地加热陶瓶。不一会儿，水盆里就会冒出许多气泡，这些气泡就是灵泉水。阿明把灵泉水收集起来，供城邦的医生治病救人。\n\n有一天，城邦来了一位自称“智者”的商人。他看了阿明的操作后，哈哈大笑：“你这太麻烦了！我有个更简单的办法。”他拿出一个敞口的陶罐，把白色粉末和黑色粉末倒进去，又加了一些水，然后用一根直直的竹管伸进去搅拌。他说：“你看，这样也能产生气泡！”果然，陶罐里冒出了不少气泡。商人得意地说：“我的方法又快又省事，你的那套器具根本没用。”\n\n阿明有些疑惑，但他没有立刻否定。他决定做一个对比实验。他先按照商人的方法，用敞口陶罐混合粉末和水，收集到的气泡很少，而且很快就停止了。接着，他重新用自己那套器具：圆肚陶瓶、带孔软木塞、弯曲竹管，加热后，气泡源源不断地产生，持续了很久。\n\n阿明仔细思考，终于明白了其中的道理。商人的敞口陶罐虽然也能产生气泡，但气泡大部分都散失到空气中，只有很少一部分被收集到。而他那套器具，圆肚陶瓶能容纳反应物并集中加热，软木塞能密封瓶口防止气体泄漏，弯曲的竹管则能引导气体进入水盆，让气泡被完整地收集起来。每一个部件都不可或缺，共同构成了一个能高效产生和收集气体的整体。\n\n阿明把发现告诉了城邦的长老。长老们称赞他：“你没有被表面的现象迷惑，而是通过观察和思考，找到了真正的规律。这套器具，就是城邦的智慧结晶啊！”从此，阿明更加用心地管理账房，而那套器具的秘密，也在城邦中流传开来。",
+  "rule_findings": {
+    "story_token_count": 719,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "智者"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt25",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "掌握数字6的认识，包括数物体、读写数字，理解6表示的数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition",
+          "kg-node:math_1a_rjb_cpt23:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "掌握分与合（拆分与组合），如把一个数分成两个部分或由两个部分合成一个数",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt28:definition",
+          "kg-node:math_1a_rjb_cpt28:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt25:definition",
+          "kg-node:math_1a_rjb_cpt25:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16344"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16346"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "6的加减法"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "d9d96b64a2a36f1c8c27baa5b206ab1d253ed0401e53d23751103e6727e09c14",
+    "retrieval_sha256": "885c10d82cc648225fb8c14f00218b23a1b4a076e418fdd5636fe462788db282",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "dfe58b362f66846fa4970369ee643c5bc6db9d56ea5945a4a4966aac8cba84ac"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "条件牌",
+      "narrative_anchor": "条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "转化环节",
+      "narrative_anchor": "转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+      "narrative_anchor": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先确认入口条件，再推动转化环节",
+      "evidence": "调度员递来一张通行牌，说：“按流程，你先核对入口条件牌，再开始登记。",
+      "narrative_anchor": "调度员递来一张通行牌，说：“按流程，你先核对入口条件牌，再开始登记。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先推动转化环节，再验收结果",
+      "evidence": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+      "narrative_anchor": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

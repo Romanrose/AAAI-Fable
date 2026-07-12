@@ -1,0 +1,22 @@
+# Fdb version 4
+["xdvipdfmx"] 0 "AnonymousSubmission2027.xdv" "AnonymousSubmission2027.pdf" "AnonymousSubmission2027" 0 -1
+  "AnonymousSubmission2027.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "AnonymousSubmission2027.pdf"
+  (rewritten before read)
+["xelatex"] 1783432930.79862 "d:/Project/AAAI/AAAI-Fable/AuthorKit27/AnonymousSubmission2027.tex" "AnonymousSubmission2027.xdv" "AnonymousSubmission2027" 1783432931.56467 2
+  "AnonymousSubmission2027.aux" 1783432922 32 3985256e7290058c681f74d7a3565a19 "xelatex"
+  "AnonymousSubmission2027.tex" 1783432852 21437 7440a852570b288b0f3ec939318dbd92 ""
+  "aaai2027.sty" 1779114063 16915 1b1c792e2acfbbd8b672259e267b95d8 ""
+  "d:/Project/AAAI/AAAI-Fable/AuthorKit27/AnonymousSubmission2027.tex" 1783432852 21437 7440a852570b288b0f3ec939318dbd92 ""
+  "e:/Program/Texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1783417640 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
+  "e:/Program/Texlive/texmf-dist/tex/latex/base/article.cls" 1783417870 20144 e6010938fb17dfbae90a243ad7cf351d ""
+  "e:/Program/Texlive/texmf-dist/tex/latex/base/size10.clo" 1783417870 8448 f7d8bfe7b7a3986fbf9022b21b7800cc ""
+  "e:/Program/Texlive/texmf-dist/web2c/texmf.cnf" 1783415929 43815 bcd8835056a2dfac260166a1c9541261 ""
+  "e:/Program/Texlive/texmf-var/web2c/xetex/xelatex.fmt" 1783420390 5961665 3977af2924c3a6ee721e710598fe4a94 ""
+  "e:/Program/Texlive/texmf.cnf" 1783420281 887 eee80848f850ca2a02905f785c665b3e ""
+  (generated)
+  "AnonymousSubmission2027.aux"
+  "AnonymousSubmission2027.log"
+  "AnonymousSubmission2027.xdv"
+  (rewritten before read)

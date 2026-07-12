@@ -1,0 +1,123 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt110",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "从检测对象总体中抽取少量个体作为样本进行检测，并用样本结果反映总体情况",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "抽样需避免主观影响、样本量适当并尽量随机",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "测定种子的发芽率（培养皿样本检测）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:name"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "培养皿内铺滤纸/纱布并加水保持湿润，均匀摆放一定数量（示例100粒）种子；每天观察一次记录萌发粒数，连续约7天；重复测定多次并取平均",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:process"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "outcome",
+        "text": "按发芽率公式计算并用平均值作为测定结果，为播种提供依据",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14138"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n1",
+        "relation": "constrains",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:process"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_exp10:conclusion"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "抽样检测"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "24efcf4af426d58fb7e42e9f2152c32769f9600dc77a4ea1530207656d63fff6",
+    "retrieval_sha256": "06ae23e1783a45b3cd9bb5fd1b267f3863a20b826be98eaaeff1554da15398e7",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "db9e9f07e48a7afd9f9dbde67f627a45026dc6ae097027710caabfd162fa22ed"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "淘金者分离金砂",
+  "characters": [
+    "淘金者"
+  ],
+  "objects": [
+    "河沙与金砂的混合物",
+    "水",
+    "金砂"
+  ],
+  "conflict": "淘金者需要从河沙中分离出金砂，但两者混合在一起难以直接获取。",
+  "event_chain": [
+    "淘金者将河沙与金砂的混合物放入水中并搅拌，使泥沙悬浮。",
+    "由于金砂和沙子的密度不同，金砂沉底，沙子随水流走。",
+    "淘金者利用密度差异，通过水流冲洗使沙子被冲走。",
+    "最终淘金者获得沉在底部的金砂。"
+  ],
+  "turning_point": "淘金者利用密度差异，通过水流冲洗使沙子被冲走。",
+  "resolution_state": "淘金者成功获得金砂。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "淘金者将河沙与金砂的混合物放入水中并搅拌，使泥沙悬浮",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "金砂和沙子的密度不同",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "淘金者利用密度差异，通过水流冲洗使沙子被冲走",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "淘金者获得沉在底部的金砂",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "淘金者分离金砂的方法",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "从河沙中获取金砂的方法",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "使泥沙悬浮这一条件使得淘金者能够利用密度差异进行冲洗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "密度差异这一条件使得淘金者能够利用水流冲洗分离",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "利用密度差异冲洗导致获得金砂",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "淘金者分离金砂的方法是从河沙中获取金砂的方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "密度差异这一条件使得淘金者分离金砂的方法得以实现",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'液态空气'、'分馏'、'制氧'等目标概念术语。",
+    "确保故事中不出现'氮气'、'氧气'、'沸点'等目标领域术语。",
+    "确保故事中不出现'工业制氧'等目标领域术语。",
+    "确保故事中不出现'低温加压'等目标领域术语。",
+    "确保故事中不出现'升温'等目标领域术语。"
+  ],
+  "mapping_context_sha256": "d423cf49f24edc59e0303fecccb6c63d78f86f7afcd187503fbcbe2d9de10410",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "68f978ce7aac85a49dd90de3154ea21272f3482e1752b53144d3a844f8b07300"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "concept_id": "math_1a_rjb_cpt26",
+  "target_concept": "7的加减法",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": true,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过花圃浇花的连续事件，准确展示了5+2=7、3+4=7、6+1=7、7-2=5等所有得数是7或从7中减去的加减法，完全符合概念定义。",
+    "implicitness": "故事未直接使用'7的加减法'术语，但结尾处皮皮说'学会了所有关于7的加减法'，属于轻微泄漏，扣1分。",
+    "mapping_clarity": "每种颜色花的数量与加减法操作一一对应，事件链清晰，皮皮的观察和思考直接映射到数学关系，映射非常清晰。",
+    "readability": "语言生动，情节连贯，适合低龄儿童理解，无复杂词汇或句式。",
+    "pedagogical_value": "通过重复观察和推理，逐步揭示所有7的加减组合，并鼓励主动思考（如皮皮自问7-3等于多少），教学价值高。",
+    "novelty": "花圃浇花的场景有一定新意，但整体结构（观察-发现规律）较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "删除结尾处'7的加减法'直接表述，改为'学会了所有花儿的秘密'或类似隐含说法。",
+    "可增加一个皮皮自己尝试组合其他颜色花朵的环节，强化主动探索。"
+  ],
+  "rule_findings": {
+    "story_token_count": 461,
+    "leaked_terms": [
+      "7的加减法"
+    ],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": true,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过花圃浇花的连续事件，准确展示了5+2=7、3+4=7、6+1=7、7-2=5等所有得数是7或从7中减去的加减法，完全符合概念定义。",
+      "implicitness": "故事未直接使用'7的加减法'术语，但结尾处皮皮说'学会了所有关于7的加减法'，属于轻微泄漏，扣1分。",
+      "mapping_clarity": "每种颜色花的数量与加减法操作一一对应，事件链清晰，皮皮的观察和思考直接映射到数学关系，映射非常清晰。",
+      "readability": "语言生动，情节连贯，适合低龄儿童理解，无复杂词汇或句式。",
+      "pedagogical_value": "通过重复观察和推理，逐步揭示所有7的加减组合，并鼓励主动思考（如皮皮自问7-3等于多少），教学价值高。",
+      "novelty": "花圃浇花的场景有一定新意，但整体结构（观察-发现规律）较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "删除结尾处'7的加减法'直接表述，改为'学会了所有花儿的秘密'或类似隐含说法。",
+      "可增加一个皮皮自己尝试组合其他颜色花朵的环节，强化主动探索。"
+    ]
+  },
+  "final_status": "reject",
+  "mode": "llm"
+}

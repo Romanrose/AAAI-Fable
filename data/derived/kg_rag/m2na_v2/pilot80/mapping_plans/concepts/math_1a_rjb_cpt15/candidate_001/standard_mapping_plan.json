@@ -1,0 +1,102 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt15",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "中国古代建筑中的斗拱结构",
+  "characters": [
+    "鲁班（古代工匠）",
+    "其他工匠"
+  ],
+  "objects": [
+    "标准斗拱（由完全相同的斗和拱交错叠加而成，所有构件尺寸统一）",
+    "普通斗拱（由不同尺寸的斗和拱组成，相对面一致，但整体不对称）",
+    "建筑分类法（按结构形式分类）",
+    "搭建木塔（用斗拱组合成复杂建筑）",
+    "斗拱承重公式（斗拱承重=单个斗承重×层数）"
+  ],
+  "conflict": "工匠们需要理解标准斗拱与普通斗拱的关系，以及如何通过分类和搭建来应用标准斗拱的特性。",
+  "event_chain": [
+    "鲁班展示标准斗拱，说明它由完全相同的斗和拱组成，所有构件尺寸相等。",
+    "鲁班指出标准斗拱是一种特殊的普通斗拱，因为普通斗拱的斗和拱尺寸可以不同，但标准斗拱是其中所有构件都相等的一种。",
+    "工匠们将标准斗拱归入建筑分类法中的“斗拱”类别。",
+    "普通斗拱与标准斗拱相互关联，因为普通斗拱可以包含标准斗拱作为特例。",
+    "标准斗拱的特性使得它能够用于搭建复杂的木塔结构。",
+    "标准斗拱的均匀性使得工匠能够使用斗拱承重公式计算其承重能力。"
+  ],
+  "turning_point": "鲁班指出标准斗拱是普通斗拱的一种特殊形式，从而统一了分类和搭建方法。",
+  "resolution_state": "工匠们掌握了标准斗拱的特性及其与普通斗拱的关系，能够正确分类并用于搭建和计算。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "标准斗拱",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "普通斗拱",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "建筑分类法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "搭建木塔",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "斗拱承重公式",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准斗拱是一种普通斗拱",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "标准斗拱属于建筑分类法中的斗拱类别",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "普通斗拱与标准斗拱相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "标准斗拱的特性使得它能够用于搭建木塔",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "标准斗拱的均匀性使得能够使用承重公式",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现“正方体”、“立方体”等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文作为因果机制。",
+    "确保使用单一连贯的源域（斗拱结构），不混用其他隐喻。"
+  ],
+  "mapping_context_sha256": "72a1ea28fa8fb23d6922116bc07ad10bdbf910780ded8b52596a77178676af58",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1446e73e473cbc4189c0ef6910a091954476da1a84ffd82803439c84151cb2ff"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt105",
+    "label": "Concept",
+    "name": "放大镜成像",
+    "properties": {
+      "definition": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+      "importance": "掌握",
+      "retrieval_text": "放大镜成像\nConcept\n物体位于焦点以内时，凸透镜形成放大、正立的虚像。\n掌握"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17245",
+      "source": "physics_8a_rjb_cpt95",
+      "source_name": "凸透镜",
+      "target": "physics_8a_rjb_cpt105",
+      "target_name": "放大镜成像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:12421",
+      "source": "physics_8a_rjb_cpt105",
+      "source_name": "放大镜成像",
+      "target": "physics_8a_rjb_cpt82",
+      "target_name": "虚像",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "放大镜成像",
+      "definition": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17245] 凸透镜 --prerequisites_for--> 放大镜成像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12421] 放大镜成像 --is_a--> 虚像"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 510,
+    "summary_chars": 290,
+    "path_chars": 0,
+    "retrieval_context_chars": 800
+  }
+}

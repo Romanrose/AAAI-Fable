@@ -1,0 +1,59 @@
+{
+  "seed": {
+    "id": "physics_8a_rjb_cpt107",
+    "resolved_node_id": "physics_8a_rjb_cpt107",
+    "name": "物距",
+    "definition": "物体到凸透镜的距离，用u表示。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_17193",
+      "source_id": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_19712",
+      "source_id": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target_id": "physics_8a_rjb_cpt108",
+      "target_name": "像距",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "物体到凸透镜的距离，用u表示。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "凸透镜成像规律",
+        "像距"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 2,
+    "selected_edge_count": 2,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

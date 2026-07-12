@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "小匠按照老匠师的指导，对每一张用于修补的纸片进行逐一计数，并记录下对应的编号，从而确定一共修补了多少个窟窿。",
+      "evidence": "从一数起，第一个窟窿标上一，第二个标上二，依次写下来",
+      "narrative_anchor": "从一数起，第一个窟窿标上一，第二个标上二，依次写下来",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "小匠在计数之前，需要先将每张纸片与地图上的窟窿进行一一对应地贴合，这是进行准确计数的基础。",
+      "evidence": "先让纸片和窟窿对上号，一块纸片只贴一个窟窿",
+      "narrative_anchor": "先让纸片和窟窿对上号，一块纸片只贴一个窟窿",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "通过逐一计数，小匠可以知道修补的纸片数量，进而与地图上原有的窟窿数量进行比较，判断是否所有窟窿都被修补了（一样多）。",
+      "evidence": "地图上原本正好有十二个窟窿，现在全被补上了",
+      "narrative_anchor": "地图上原本正好有十二个窟窿，现在全被补上了",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先一一对应，再逐一计数",
+      "evidence": "地图上原本完整的疆域，如今布满了一个个形状不规则的窟窿，像是被虫子啃过一般。",
+      "narrative_anchor": "地图上原本完整的疆域，如今布满了一个个形状不规则的窟窿，像是被虫子啃过一般。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "逐一计数后比较数量是否一致",
+      "evidence": "数了数最后一个数字——十二。地图上原本正好有十二个窟窿",
+      "narrative_anchor": "数了数最后一个数字——十二。地图上原本正好有十二个窟窿",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt13",
+    "label": "Concept",
+    "name": "数字0的含义",
+    "properties": {
+      "definition": "表示没有数量。",
+      "importance": "掌握",
+      "retrieval_text": "数字0的含义\nConcept\n表示没有数量。\n掌握"
+    }
+  },
+  "raw_edges": [],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "数字0的含义",
+      "definition": "表示没有数量。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 0,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2,
+    "summary_chars": 172,
+    "path_chars": 0,
+    "retrieval_context_chars": 174
+  }
+}

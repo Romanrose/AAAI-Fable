@@ -1,0 +1,89 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄获取清洁水源的两种方法",
+  "characters": [
+    "村民",
+    "长老"
+  ],
+  "objects": [
+    "深井",
+    "过滤池",
+    "低温冰窖",
+    "压力泵",
+    "膜滤网",
+    "清水",
+    "富氧水"
+  ],
+  "conflict": "村庄需要大量清洁水源，但深井和过滤池两种方法各有条件限制，村民需要选择合适的方法。",
+  "event_chain": [
+    "村民发现村庄需要大量清水。",
+    "长老提出两种取水方法：深井取水和过滤池取水。",
+    "深井取水需要低温冰窖冷却空气使水蒸气凝结，以及压力泵加压抽取。",
+    "过滤池取水需要一定压力推动水流通过膜滤网。",
+    "深井取水最终产出清水。",
+    "过滤池取水最终产出富氧水（含更多氧气的水）。"
+  ],
+  "turning_point": "村民认识到两种方法都是获取清水的方式，但需要根据条件选择。",
+  "resolution_state": "村庄根据季节和资源条件，灵活使用深井或过滤池获取清洁水源。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村庄获取清洁水源的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "深井取水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "过滤池取水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "清水",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "深井取水是村庄获取清洁水源的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "过滤池取水是村庄获取清洁水源的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "清水是村庄获取清洁水源的方法所需的目标",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'工业制取氧气的方法'等禁止术语。",
+    "确保深井取水和过滤池取水都作为获取清水的方法，而非独立故事。",
+    "避免将'低温冰窖'、'压力泵'等条件与目标概念直接关联。",
+    "确保'富氧水'不暗示氧气概念，仅作为过滤池的产物。"
+  ],
+  "mapping_context_sha256": "1d3f8ceb2249b0a6d6f28ca0b6a473c1c7da52d69b1346a50214c8b1c753fc86",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1bf3601bd742b4012f66f6d7ebf243e995c77b3f0885c5df9f03a040b49329fe"
+  }
+}

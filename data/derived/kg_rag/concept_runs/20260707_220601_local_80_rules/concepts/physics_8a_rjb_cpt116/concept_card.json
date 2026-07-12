@@ -1,0 +1,59 @@
+{
+  "concept_id": "physics_8a_rjb_cpt116",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "近视眼及矫正",
+  "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt118",
+        "label": "Concept",
+        "name": "透镜焦度",
+        "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。"
+  ],
+  "must_preserve_zh": [
+    "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "近视眼及矫正"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

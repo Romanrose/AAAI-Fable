@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠制作玉璧",
+  "characters": [
+    "玉匠",
+    "学徒"
+  ],
+  "objects": [
+    "玉料",
+    "玉璧中心孔",
+    "玉璧外缘",
+    "玉璧厚度"
+  ],
+  "conflict": "学徒不知如何确定玉璧中心孔的位置，导致玉璧外缘与中心孔的距离不匀，玉璧偏薄处易碎。",
+  "event_chain": [
+    "玉匠教徒弟：玉璧中心孔是玉璧的‘心’，外缘是玉璧的‘边’，心到边的距离决定了玉璧的匀称与坚固。",
+    "学徒先找到玉璧中心孔的位置（光心）。",
+    "学徒再确定玉璧外缘上最远的一点（焦点）。",
+    "学徒测量中心孔到外缘最远点的距离（焦距）。",
+    "学徒根据这个距离来雕琢整个玉璧的厚度与弧度（凸透镜成像规律）。"
+  ],
+  "turning_point": "学徒明白了中心孔到外缘最远点的距离是决定玉璧整体形状的关键，从而掌握了雕琢方法。",
+  "resolution_state": "学徒成功雕琢出匀称坚固的玉璧。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "玉璧中心孔",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "玉璧外缘最远点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "中心孔到外缘最远点的距离",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "雕琢玉璧的匀称与坚固规律",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "玉璧中心孔是测量该距离的起点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "玉璧外缘最远点与该距离相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "该距离是雕琢匀称坚固玉璧的前提",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用‘焦距’等禁止术语。",
+    "确保‘玉璧中心孔’对应‘光心’，‘玉璧外缘最远点’对应‘焦点’，‘中心孔到外缘最远点的距离’对应‘焦距’。",
+    "确保‘雕琢玉璧的匀称与坚固规律’对应‘凸透镜成像规律’，且不直接使用原概念名。",
+    "确保所有机制节点和边都被映射，方向正确。",
+    "避免将‘学徒学习过程’作为因果机制，仅保留玉璧制作中的因果关系。"
+  ],
+  "mapping_context_sha256": "99da872bda3d10e9d03199597f76a80f47ada8efe18b32ddb88e5d3172a3dcbd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "50ce7b4163805df89cf97ec3687263935fd33f0f48729169db3d3cb641b09df8"
+  }
+}

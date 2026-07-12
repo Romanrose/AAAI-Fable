@@ -1,0 +1,73 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt2",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "果园里的果树",
+  "characters": [
+    "果农",
+    "两棵果树（苹果树和梨树）"
+  ],
+  "objects": [
+    "苹果",
+    "梨",
+    "篮子",
+    "配对卡片"
+  ],
+  "conflict": "果农想知道哪棵果树结的果子更多，但两棵树上的果子数量不同，无法直接看出谁多谁少。",
+  "event_chain": [
+    "果农先分别数了苹果树上的苹果和梨树上的梨，得到各自的数量。",
+    "果农将苹果和梨一一配对，发现苹果有剩余，梨先配完。",
+    "果农根据配对结果判断苹果比梨多。"
+  ],
+  "turning_point": "果农使用一一配对的方法，将苹果和梨逐个对应，发现苹果有剩余。",
+  "resolution_state": "果农得出结论：苹果树结的果子比梨树多。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "果农分别数苹果树上的苹果和梨树上的梨，得到各自的数量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "果农将苹果和梨一一配对，发现苹果有剩余，梨先配完",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "果农根据配对结果判断苹果比梨多",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "数果子（n1）是判断谁多谁少（n3）的前提步骤",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "一一配对（n2）是一种判断谁多谁少（n3）的具体方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现目标概念名称或其别名、禁止术语。",
+    "确保所有机制节点和边都被映射，且边方向正确。",
+    "确保故事使用单一连贯的源域（果园），不引入无关比喻。",
+    "确保不将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "447cc7e089522b02cfde713bf7a9b99dfc685ed2d3193bd0587811a0f926bb3c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b56ba65524e215705dd52f677394b85f5ea2b5d0f0972ad07b86321aaa29a590"
+  }
+}

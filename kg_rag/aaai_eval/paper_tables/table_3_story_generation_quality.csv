@@ -1,0 +1,4 @@
+﻿method_id,method,concepts,candidates,success_rate,accept_rate,node_coverage,edge_coverage,direction_accuracy,exact_evidence_precision,system_exact_match_rate,leakage_count,length_violation_count,revision_improved_count
+mapping.standard,Standard Mapping,12,36,1.0,0.6111,0.875,0.8652,1.0,0.8688,0.5,0,3,14
+mapping.deterministic_copycat,Deterministic Copycat,12,36,1.0,0.5,0.8426,0.9444,1.0,0.8869,0.4722,0,14,15
+mapping.llm_guided_copycat,LLM-guided Copycat,12,36,1.0,0.7222,0.8484,0.8841,1.0,0.8672,0.4444,2,0,10

@@ -1,0 +1,78 @@
+{
+  "source_domain": "农业",
+  "setting": "一片春末的油菜田，金黄色的花朵在微风中摇曳，蜜蜂和蝴蝶在花间穿梭。",
+  "conflict": "花粉需要从一朵花的花药到达另一朵花的柱头，但花朵之间距离不等，且依赖外部媒介。",
+  "characters": [
+    {
+      "name": "风",
+      "role": "传递者",
+      "mapped_element": "m1"
+    },
+    {
+      "name": "蜜蜂",
+      "role": "主动传递者",
+      "mapped_element": "m2"
+    },
+    {
+      "name": "油菜花甲",
+      "role": "自花传递者",
+      "mapped_element": "m3"
+    },
+    {
+      "name": "油菜花乙",
+      "role": "接受者",
+      "mapped_element": "m4"
+    }
+  ],
+  "mappings": [
+    {
+      "concept_element": "m1",
+      "narrative_carrier": "风将花粉从花药吹起，散落在空中"
+    },
+    {
+      "concept_element": "m2",
+      "narrative_carrier": "蜜蜂从一朵花飞到另一朵花，携带花粉"
+    },
+    {
+      "concept_element": "m3",
+      "narrative_carrier": "油菜花甲的花粉直接落在自己的柱头上"
+    },
+    {
+      "concept_element": "m4",
+      "narrative_carrier": "油菜花乙的柱头接收到花粉"
+    }
+  ],
+  "plot_beats": [
+    {
+      "beat_id": "b1",
+      "event": "风起，花粉从花药中散出，飘向空中",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b2",
+      "event": "蜜蜂在花丛间穿梭，将花粉从一朵花带到另一朵花",
+      "mapped_elements": [
+        "m2"
+      ]
+    },
+    {
+      "beat_id": "b3",
+      "event": "油菜花甲的花粉落在自己的柱头上",
+      "mapped_elements": [
+        "m3"
+      ]
+    },
+    {
+      "beat_id": "b4",
+      "event": "油菜花乙的柱头接收到来自蜜蜂或风带来的花粉",
+      "mapped_elements": [
+        "m4"
+      ]
+    }
+  ],
+  "turning_point": "风突然停歇，蜜蜂也离去，但油菜花甲的花粉依然落在自己的柱头上，完成了传递。",
+  "ending": "油菜花乙的柱头成功接收到花粉，花朵逐渐结出种子。",
+  "implied_moral": "生命的延续需要借助外力或自身机制，但最终都依赖于精准的接触与接纳。"
+}

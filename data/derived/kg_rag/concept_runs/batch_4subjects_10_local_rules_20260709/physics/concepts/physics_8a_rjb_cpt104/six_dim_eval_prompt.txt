@@ -1,0 +1,431 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "投影仪成像",
+  "concept_id": "physics_8a_rjb_cpt104",
+  "concept_definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt104",
+    "投影仪成像"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt104",
+      "label": "Concept",
+      "name": "投影仪成像",
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "投影仪成像\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt95",
+          "label": "Concept",
+          "name": "凸透镜",
+          "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt102",
+          "label": "Concept",
+          "name": "实像",
+          "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s2",
+          "label": "Section",
+          "name": "第二节 生活中的透镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 511,
+      "summary_chars": 294,
+      "path_chars": 0,
+      "retrieval_context_chars": 805
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt104",
+    "concept_id": "physics_8a_rjb_cpt104",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt104",
+      "label": "Concept",
+      "name": "投影仪成像",
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "投影仪成像\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "physics_8a_rjb_cpt104",
+        "label": "Concept",
+        "name": "投影仪成像",
+        "properties": {
+          "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+          "importance": "重要",
+          "retrieval_text": "投影仪成像\nConcept\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。\n重要"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:17244",
+          "source": "physics_8a_rjb_cpt95",
+          "source_name": "凸透镜",
+          "target": "physics_8a_rjb_cpt104",
+          "target_name": "投影仪成像",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:12420",
+          "source": "physics_8a_rjb_cpt104",
+          "source_name": "投影仪成像",
+          "target": "physics_8a_rjb_cpt102",
+          "target_name": "实像",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "投影仪成像",
+          "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+          "formula": "",
+          "importance": "重要"
+        },
+        "condition_summary": [
+          "[normalized:edge:17244] 凸透镜 --prerequisites_for--> 投影仪成像"
+        ],
+        "process_summary": [
+          "[normalized:edge:12420] 投影仪成像 --is_a--> 实像"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 2,
+        "candidate_edge_count": 2,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 511,
+        "summary_chars": 294,
+        "path_chars": 0,
+        "retrieval_context_chars": 805
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "投影仪成像的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "凸透镜 --prerequisites_for--> 投影仪成像",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:17244"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "投影仪成像 --is_a--> 实像",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:12420"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:17244",
+        "normalized:edge:12420"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "投影仪成像",
+        "physics_8a_rjb_cpt104"
+      ],
+      "coverage_targets": {
+        "required_step_count": 3,
+        "required_dependency_count": 2,
+        "must_cover_edge_ids": [
+          "normalized:edge:17244",
+          "normalized:edge:12420"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "physics_8a_rjb_cpt104",
+      "concept_id": "physics_8a_rjb_cpt104",
+      "story_language": "zh-CN",
+      "source_domain": "轨道调度台",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：凸透镜 --prerequisites_for--> 这条隐藏规则",
+        "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 实像",
+        "让中间的行动承接前后变化：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：凸透镜 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 实像"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "投影仪成像"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "凸透镜 --prerequisites_for--> 投影仪成像",
+            "投影仪成像 --is_a--> 实像",
+            "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "保留变量之间的关系。",
+            "避免把自然规律写成角色主观意志。",
+            "保留方向、大小、条件变化。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "轨道调度台",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：凸透镜 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 实像",
+      "让中间的行动承接前后变化：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "投影仪成像"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "凸透镜 --prerequisites_for--> 投影仪成像",
+          "投影仪成像 --is_a--> 实像",
+          "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：凸透镜 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 实像"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "投影仪成像"
+      ]
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "条件、过程和结果被记录员按顺序检查。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：轨道调度台里的隐藏规则\n\n轨道调度台里有一位年轻的记录员，他总觉得眼前的变化只是巧合。\n一天，他把条件、行动和结果一一写在木牌上，发现只有当几个环节同时配合时，那个被观察的场所才会出现稳定变化。\n先确认一个起点条件是否具备：凸透镜 --prerequisites_for--> 这条隐藏规则\n让中间的行动承接前后变化：这条隐藏规则 --is_a--> 实像\n让中间的行动承接前后变化：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。\n后来，记录员不再只看表面的结果，而是先找条件，再看过程，最后检查结果是否能重复出现。他明白，真正重要的不是某个名字，而是名字背后那套能被辨认的关系。",
+  "rule_findings": {
+    "story_token_count": 238,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

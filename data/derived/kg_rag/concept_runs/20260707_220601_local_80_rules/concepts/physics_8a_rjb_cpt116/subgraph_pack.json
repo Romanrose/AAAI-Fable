@@ -1,0 +1,106 @@
+{
+  "query": "physics_8a_rjb_cpt116",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt116",
+    "label": "Concept",
+    "name": "近视眼及矫正",
+    "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "近视眼及矫正\n由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt118",
+        "label": "Concept",
+        "name": "透镜焦度",
+        "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:19716] 近视眼及矫正 --relates_to--> 透镜焦度"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '近视眼及矫正', 'definition': '由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。', 'formula': '', 'importance': '重要'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:19716] 近视眼及矫正 --relates_to--> 透镜焦度'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "physics_8a_rjb_cpt116",
+      "label": "Concept",
+      "name": "近视眼及矫正",
+      "properties": {
+        "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+        "importance": "重要",
+        "retrieval_text": "近视眼及矫正\nConcept\n由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。\n重要"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:19716",
+        "source": "physics_8a_rjb_cpt116",
+        "source_name": "近视眼及矫正",
+        "target": "physics_8a_rjb_cpt118",
+        "target_name": "透镜焦度",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "近视眼及矫正",
+        "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:19716] 近视眼及矫正 --relates_to--> 透镜焦度"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 257,
+      "summary_chars": 249,
+      "path_chars": 0,
+      "retrieval_context_chars": 506
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 257,
+    "summary_chars": 249,
+    "path_chars": 0,
+    "retrieval_context_chars": 506
+  }
+}

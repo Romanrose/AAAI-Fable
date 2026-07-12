@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (物质) is explicitly mentioned as '种子作为一粒物质', but the story does not generalize to the abstract concept of matter; it remains specific to seeds. Node n2 (物质的变化) is only referenced as '种子的萌发过程', which is a specific instance of change, not the general process. Edge e1 (enables) is correctly preserved in direction and relation, but the story's evidence is a single sentence rather than an integrated causal chain. The mapping is weaker than a story that explicitly connects the seed's absorption of water to the abstract concept of matter undergoing change."
+  },
+  "revision_instructions": [
+    "Increase node_coverage to at least 0.8 by explicitly mentioning the abstract concept of '物质' (matter) and '物质的变化' (change of matter) in the story, not just as labels but as integrated narrative elements.",
+    "Remove the forbidden term '物质' from the story or replace it with a non-leaking equivalent to avoid hard leakage.",
+    "Ensure the story length is between 450 and 750 Chinese characters (current 591 is valid, but leakage issue must be fixed).",
+    "Rewrite the story so that the enabling relation (种子吸收水分使得萌发过程启动) is shown as a causal mechanism, not just stated in one sentence."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "hard_leakage"
+    ]
+  }
+}

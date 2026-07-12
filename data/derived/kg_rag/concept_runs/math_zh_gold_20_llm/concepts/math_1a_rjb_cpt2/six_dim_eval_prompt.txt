@@ -1,0 +1,206 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "比较数量（多、少、一样多）",
+  "concept_id": "math_1a_rjb_cpt2",
+  "concept_definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt2",
+    "比较数量（多、少、一样多）"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt2",
+      "label": "Concept",
+      "name": "比较数量（多、少、一样多）",
+      "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+      "aliases": [],
+      "examples": [
+        "比较两组小棒的数量",
+        "判断哪个图形数量更多"
+      ],
+      "retrieval_text": "比较数量（多、少、一样多）\n根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt3",
+          "label": "Concept",
+          "name": "一一对应比较法",
+          "definition": "通过将两组物体一一配对来比较数量的多少。"
+        },
+        {
+          "id": "math_1a_rjb_cpt1",
+          "label": "Concept",
+          "name": "数物体（数一数）",
+          "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "math_1a_rjb_exe1",
+          "label": "Exercise",
+          "name": "看图，比较两组小棒的数量，在较多的一组后画“√”。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch1",
+          "label": "Chapter",
+          "name": "准备课",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt2",
+    "concept_id": "math_1a_rjb_cpt2",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt2",
+      "label": "Concept",
+      "name": "比较数量（多、少、一样多）",
+      "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+      "aliases": [],
+      "examples": [
+        "比较两组小棒的数量",
+        "判断哪个图形数量更多"
+      ]
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "比较数量（多、少、一样多）"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中通过比较红花与黄花、紫花与粉花、蓝花与白花的数量，隐含了比较数量多少和一样多的概念，但未直接使用‘多、少、一样多’等禁止词汇。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "通过白白数花、皮皮和灰灰观察比较的过程，展示了根据物体数量进行比较判断的机制，如‘红花比黄花多’、‘它们一样多’等表述。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保持了数学结构（数量比较的规则一致性），没有将概念道德化，而是通过花园场景自然呈现比较过程。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：花园里的秘密\n\n小兔白白在森林里开了一片花园，种满了五颜六色的花朵。每天清晨，她都会提着水壶给花儿浇水。\n\n这天，小猴皮皮路过花园，看见白白正蹲在地上数着什么。皮皮好奇地问：“白白，你在做什么呀？”\n\n白白抬起头说：“我在数我的花呢。你看，左边这一排有5朵红花，右边这一排有3朵黄花。”\n\n皮皮看了看，说：“红花比黄花多呢！”\n\n白白点点头，又指了指旁边的两排花：“你看这边，第一排有4朵紫花，第二排也有4朵粉花。”\n\n皮皮数了数，说：“它们一样多！”\n\n白白笑了：“对呀，这就是花园里的秘密。每一排花都有自己的数量，我们可以把它们放在一起看，谁多谁少，或者是不是一样多。”\n\n这时，小兔灰灰也跑来了，他气喘吁吁地说：“白白，我刚刚在森林那边看到一片野花，有6朵蓝花和6朵白花，它们一样多！”\n\n白白说：“没错，你数得很对。”\n\n皮皮想了想，说：“那如果我们把花园里的花重新排列一下，数量会变吗？”\n\n白白摇摇头：“不会的。不管怎么排，花的数量还是那么多。比如这5朵红花，不管排成一排还是围成一圈，都还是5朵。”\n\n灰灰恍然大悟：“原来数量是不会变的，我们只需要认真比较就能知道谁多谁少。”\n\n白白高兴地说：“对呀，这就是花园教给我们的道理。只要仔细观察，就能发现每样东西的数量秘密。”\n\n从那以后，三个小伙伴经常一起在花园里数花、比花，他们发现，只要认真比较，就能知道哪边多、哪边少，或者是不是一样多。花园里的秘密，让他们学会了用眼睛发现数量的奥秘。",
+  "rule_findings": {
+    "story_token_count": 504,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

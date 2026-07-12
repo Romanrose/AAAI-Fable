@@ -1,0 +1,136 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt110",
+    "subject": "physics",
+    "canonical_name": "像的正倒与大小",
+    "aliases": [],
+    "definition": "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。",
+    "concept_type": "law",
+    "forbidden_terms": [
+      "像的正倒与大小"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "物距与焦距的关系",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "outcome",
+        "text": "像的正倒与大小（正立或倒立，放大或缩小）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "实像与虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt109:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt110:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19713"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "像的正倒与大小"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt110",
+      "name": "像的正倒与大小",
+      "label": "Concept",
+      "definition": "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt109",
+        "name": "实像与虚像"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:19713",
+        "source_id": "physics_8a_rjb_cpt109",
+        "source_name": "实像与虚像",
+        "target_id": "physics_8a_rjb_cpt110",
+        "target_name": "像的正倒与大小",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt109",
+        "neighbor_name": "实像与虚像",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "像的正倒与大小",
+      "definition": "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19713] 实像与虚像 --relates_to--> 像的正倒与大小"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:19713"
+  ],
+  "provenance": {
+    "seed_sha256": "3e025ff18952b703e70693e7cf3167fe86214536009560e127281055af291e7a",
+    "retrieval_sha256": "a3cca5f85069dbc6ee6a2a47246940665155773f34e42a4022a34ccb20b645a2",
+    "mechanism_record_sha256": "5a1dd5e83a62080c05cd364f49fe73118ebef4ef6d3e428d680b795b5f9fb57c"
+  }
+}

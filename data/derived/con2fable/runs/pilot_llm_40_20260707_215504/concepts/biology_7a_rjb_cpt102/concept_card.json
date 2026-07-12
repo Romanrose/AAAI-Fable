@@ -1,0 +1,87 @@
+{
+  "concept_id": "biology_7a_rjb_cpt102",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "canonical_name": "种子萌发的环境条件",
+  "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+  "aliases": [],
+  "examples": [
+    "温度过低（如放入冰箱）不利于萌发",
+    "过于潮湿易使种子霉烂",
+    "松土可使土壤中有充足空气"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "definition",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt101",
+        "label": "Concept",
+        "name": "种子萌发",
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt101",
+        "label": "Concept",
+        "name": "种子萌发",
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt103",
+        "label": "Concept",
+        "name": "适宜的温度",
+        "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt104",
+        "label": "Concept",
+        "name": "一定的水分",
+        "definition": "种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt105",
+        "label": "Concept",
+        "name": "充足的空气（氧气）",
+        "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp9",
+        "label": "Experiment",
+        "name": "探究种子萌发的环境条件（四瓶对照实验）",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "种子萌发的环境条件"
+  ],
+  "subject_constraints_zh": [
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。",
+    "保留生命系统的条件、过程和结果。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

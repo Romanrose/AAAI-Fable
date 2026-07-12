@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "confidence": 0.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "direction_preserved": true,
+      "confidence": 0.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges have been aligned with the provided story evidence as per the frozen mapping plan. No missing nodes or edges."
+}

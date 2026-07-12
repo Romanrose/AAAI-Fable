@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n3 (运动与静止的相对性) is mapped to the explicit conclusion '标准不同，结论自然不同', which directly mirrors the mechanism's core idea. Node n2 (机械运动) is mapped to the first buyer's judging process, but the story does not depict a 'position change over time'—it only shows a static size comparison, weakening the mapping. Edge e1 (机械运动 relates_to 参照物) is supported only by the first buyer's action, but the relation 'relates_to' is not explicitly demonstrated; the story merely mentions both elements without showing their causal or relational link."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping of node n2 by showing a dynamic process (e.g., the buyer moves the瓜 or observes it over time) to better represent '机械运动' as position change.",
+    "Clarify edge e1 by explicitly linking the judging process (n2) to the standard (n1), e.g., '第一位买家根据个头大小判断，这个标准就是他的参照物'.",
+    "Ensure that the story does not rely on static comparisons alone; introduce a temporal or positional change to align with the mechanism's definition of mechanical motion."
+  ],
+  "final_status": "revise"
+}

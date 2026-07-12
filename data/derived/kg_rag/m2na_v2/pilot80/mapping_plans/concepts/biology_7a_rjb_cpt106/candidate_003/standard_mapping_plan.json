@@ -1,0 +1,72 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一匹战马能否出征作战",
+  "characters": [
+    "战马",
+    "骑手"
+  ],
+  "objects": [
+    "战马的身体状况",
+    "出征作战",
+    "战马的休整期"
+  ],
+  "conflict": "战马因身体有伤或处于休整期而无法出征，骑手需要判断其是否具备出征条件。",
+  "event_chain": [
+    "战马的身体状况（无伤、体力充沛、未处于休整期）是出征作战的前提条件。",
+    "具备条件的战马在骑手指令下出征，利用自身训练和体力完成作战任务。",
+    "战马的休整期是一种特殊状态：即使骑手下令，战马也无法立即出征。"
+  ],
+  "turning_point": "骑手检查战马，发现其处于休整期或有伤，从而取消出征计划。",
+  "resolution_state": "战马休整期结束或伤愈后，重新具备出征条件，骑手再次下令出征。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "战马的身体状况（无伤、体力充沛、未处于休整期）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "出征作战",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "战马的休整期",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "战马的身体状况（无伤、体力充沛、未处于休整期）是出征作战的前提条件，即具备条件则能出征，不具备则不能。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "战马的休整期是一种特殊的身体状况，即处于休整期的战马不具备出征条件。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子'、'萌发'、'胚'、'休眠'等生物学原词。",
+    "确保'战马的身体状况'对应n1（条件），'出征作战'对应n2（过程），'休整期'对应n3（状态），且方向正确。",
+    "确保e1方向为条件→过程，e2方向为状态→条件，均被保留。",
+    "避免将骑手的指令或决策（如'骑手检查'）视为因果机制，仅作为故事叙述的桥梁。"
+  ],
+  "mapping_context_sha256": "4b02b345cf1fd000354c00d97d9700f97e67da27449c9cc7ff0949244ead70a4",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3ca2f2db1647b5858e28c9fe7f517ffccd899fc27e19f0433d1b8283eb03c035"
+  }
+}

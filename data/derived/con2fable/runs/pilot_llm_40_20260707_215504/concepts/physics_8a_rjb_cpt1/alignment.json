@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "描述物体空间延伸程度的物理量，需要通过测量工具获得",
+      "evidence": "木料的长短，不是靠你觉得，而是要看它在这把尺子上占了多少个寸、多少个分",
+      "narrative_anchor": "木料的长短"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "长度单位（寸、分）",
+      "evidence": "上面刻着一道道细细的线，旁边还标着“寸”和“分”的字样",
+      "narrative_anchor": "寸和分"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "使用刻度尺的方法",
+      "evidence": "先把木料的一头，对准尺子上这个“零”的位置，然后看另一头——它停在了哪个数字上",
+      "narrative_anchor": "对准零刻度，看另一头数字"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "长度概念引出长度单位",
+      "evidence": "木料的长短，不是靠你觉得，而是要看它在这把尺子上占了多少个寸、多少个分",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "木料的长短……占了多少个寸、多少个分"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "长度单位引出使用刻度尺的方法",
+      "evidence": "先把木料的一头，对准尺子上这个“零”的位置，然后看另一头——它停在了哪个数字上",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "对准零刻度，看另一头数字"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt104",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "种稻",
+  "characters": [
+    "老农"
+  ],
+  "objects": [
+    "稻田",
+    "秧苗",
+    "水渠",
+    "雨水",
+    "干旱",
+    "洪涝"
+  ],
+  "conflict": "老农种稻，秧苗需要适量的水才能生长，但水太少会干旱，水太多会淹死秧苗。",
+  "event_chain": [
+    "老农在稻田里插下秧苗。",
+    "秧苗需要适量的水才能生长。",
+    "水太少，秧苗因干旱而枯萎。",
+    "水太多，秧苗因洪涝而烂根。",
+    "只有适量的水，秧苗才能茁壮成长。"
+  ],
+  "turning_point": "老农发现秧苗要么干旱要么洪涝，意识到必须控制水量。",
+  "resolution_state": "老农通过水渠调节水量，使秧苗获得适量水分，最终秧苗茁壮成长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "适量的水",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "秧苗生长所需的外界条件（包括适量的水、适宜的温度、充足的空气）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "秧苗茁壮成长",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "干旱（水太少）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "洪涝（水太多）",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "适量的水是秧苗生长所需外界条件的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "秧苗生长所需的外界条件使秧苗茁壮成长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "干旱约束了秧苗茁壮成长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "洪涝约束了秧苗茁壮成长",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未直接提及温度、空气等条件，但通过'外界条件'笼统涵盖，符合映射要求。",
+    "未使用'种子'、'萌发'等生物学词汇，避免目标概念名称。",
+    "所有机制节点和边均已映射，方向保留。"
+  ],
+  "mapping_context_sha256": "e9a9938a86f91a9e44059f6d017e5175ab15d1f91790dbf98c0f96f1655f93dd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "c218f4dad8ed074bc83cc2879135791f9cadbc42ffc6cb29bb778a968f68384c"
+  }
+}

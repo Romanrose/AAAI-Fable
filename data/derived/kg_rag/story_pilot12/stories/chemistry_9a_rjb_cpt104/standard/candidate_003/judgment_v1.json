@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "Node n5 (加热分离) is mapped to '加热分离' but the story does not explicitly frame it as a distinct process separate from the general heating step; edge e4 (加热分离 requires 榨取香油的方法) is stated in the mapping plan but not clearly demonstrated in the story narrative, as the story treats heating as part of the method rather than a prerequisite."
+  },
+  "revision_instructions": [
+    "Make the '加热分离' process more distinct in the story, e.g., by having the old farmer explicitly note that heating causes separation, or by adding a step where he observes the separation as a key sub-process.",
+    "Strengthen the evidence for edge e4 by showing that the heating-separation step is a necessary part of the overall method, not just a detail within it.",
+    "Consider adding a brief mention that the old farmer's experiments (n8) specifically tested different heating times to improve separation, to better align with the 'verifies' relation (e7)."
+  ],
+  "final_status": "accept"
+}

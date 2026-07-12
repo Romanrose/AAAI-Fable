@@ -1,0 +1,258 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt116",
+    "subject": "chemistry",
+    "canonical_name": "膜分离制取富氧空气",
+    "aliases": [],
+    "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "膜分离制取富氧空气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "膜分离制取富氧空气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition",
+          "kg-node:chemistry_9a_rjb_cpt116:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "工业制取氧气的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt114:definition",
+          "kg-node:chemistry_9a_rjb_cpt114:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt66:definition",
+          "kg-node:chemistry_9a_rjb_cpt66:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "液态空气的分馏制氧",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt115:definition",
+          "kg-node:chemistry_9a_rjb_cpt115:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "具有富集氧气功能的薄膜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "condition",
+        "text": "一定压力",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "state",
+        "text": "富氧空气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition",
+          "kg-node:chemistry_9a_rjb_cpt116:examples"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11285"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15224"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11284"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n7",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt116:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "膜分离制取富氧空气"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt116",
+      "name": "膜分离制取富氧空气",
+      "label": "Concept",
+      "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt114",
+        "name": "工业制取氧气的方法"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:11285",
+        "source_id": "chemistry_9a_rjb_cpt116",
+        "source_name": "膜分离制取富氧空气",
+        "target_id": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt114",
+        "neighbor_name": "工业制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:15224",
+        "source_id": "chemistry_9a_rjb_cpt66",
+        "source_name": "氧气",
+        "target_id": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt114",
+        "neighbor_name": "工业制取氧气的方法",
+        "score": 1.15,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:11284",
+        "source_id": "chemistry_9a_rjb_cpt115",
+        "source_name": "液态空气的分馏制氧",
+        "target_id": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt114",
+        "neighbor_name": "工业制取氧气的方法",
+        "score": 1.0,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "膜分离制取富氧空气",
+      "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:15224] 氧气 --prerequisites_for--> 工业制取氧气的方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:11285] 膜分离制取富氧空气 --is_a--> 工业制取氧气的方法",
+      "[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:11285",
+    "normalized:edge:15224",
+    "normalized:edge:11284"
+  ],
+  "provenance": {
+    "seed_sha256": "fb1ace2ecf48f9a678da85d63dbd0a6f2c113548236c9cae6e36b5b11be7a48b",
+    "retrieval_sha256": "679c836a2250959632ca4b4b92887638301c7fc0423b341769f5564336cba5d0",
+    "mechanism_record_sha256": "7f44ded3d73ac0a40be144afff3837c898aa47bb45c71814441616c2ad3a890d"
+  }
+}

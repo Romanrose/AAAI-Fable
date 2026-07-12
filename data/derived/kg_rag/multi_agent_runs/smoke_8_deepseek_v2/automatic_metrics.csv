@@ -1,0 +1,9 @@
+﻿concept_id,subject,generation_status,evaluation_status,selected_candidate_id,weighted_overall,six_dim_mode,format_validity,exact_concept_leakage,soft_term_leakage,weighted_node_coverage,weighted_edge_coverage,alignment_precision,alignment_hallucination_rate,relation_direction_accuracy,template_hit_rate,narrative_char_count
+biology_7a_rjb_cpt10,biology,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,666
+biology_7a_rjb_cpt101,biology,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,568
+chemistry_9a_rjb_cpt10,chemistry,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,591
+chemistry_9a_rjb_cpt100,chemistry,success,accept,candidate_001,5.0,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,517
+math_1a_rjb_cpt1,math,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,540
+math_1a_rjb_cpt10,math,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,536
+physics_8a_rjb_cpt1,physics,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,519
+physics_8a_rjb_cpt10,physics,success,accept,candidate_001,4.9,llm,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,462

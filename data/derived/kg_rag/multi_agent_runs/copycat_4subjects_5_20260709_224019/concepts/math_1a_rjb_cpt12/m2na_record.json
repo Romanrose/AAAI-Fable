@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt12",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "减法的含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "减法的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "表示从一个数量中去掉一部分。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:16376",
+        "source_name": "数字1到5的认识",
+        "target_name": "减法的含义",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "记录员翻开手里的分段记录册，准备登记一批新入场的通行牌。调度员站在一旁，提醒道：“先核对入口条件牌，少了这一步，后面的登记没法启动。”\n\n记录员觉得有理，便从封存箱里取出条件牌，一一对照。牌面上写着明确的规则：只有满足前置条件，通行牌才能进入下一环节。他仔细确认后，在册子上做了标记。\n\n调度员接过册子，推动第二道转化环节。他按照前一步留下的条件，把通行牌的数量和去向重新分配，每一步都严格遵循规则。验收员在旁边看着，没有出声。\n\n有人提议跳过中间承接，直接让验收员记录结果。调度员摇头：“顺序不能乱。先稳定入口条件核对，再推动转化，最后才能验收。”可那人坚持试了一次。\n\n结果通行牌的数量对不上，记录册里的数字和实际不符。验收员皱着眉头说：“没有中间的承接，后面的记录根本接不上。”\n\n记录员只好重新来。他先核对条件牌，调度员再按规则转化，最后验收员核对整条安排。这一次，所有环节衔接顺畅，记录册上的数字和通行牌一一对应，众人终于得到了可靠的结果。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "先核对入口条件牌",
+        "narrative_anchor": "先核对入口条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "推动第二道转化环节",
+        "narrative_anchor": "推动第二道转化环节",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "最后验收员核对整条安排",
+        "narrative_anchor": "最后验收员核对整条安排",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动转化",
+        "evidence": "先稳定入口条件核对，再推动转化",
+        "narrative_anchor": "先稳定入口条件核对，再推动转化",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先推动转化，再验收记录",
+        "evidence": "再推动转化，最后才能验收",
+        "narrative_anchor": "再推动转化，最后才能验收",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

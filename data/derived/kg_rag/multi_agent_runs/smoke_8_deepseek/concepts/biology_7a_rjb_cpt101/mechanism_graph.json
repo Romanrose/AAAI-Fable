@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:14133",
+    "normalized:edge:14134",
+    "normalized:edge:10772",
+    "normalized:edge:10776"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "发酵",
+  "domain_rationale": "面团发酵需要适宜温度、湿度和酵母（环境条件）以及面粉本身的品质（自身条件），与种子萌发的结构高度相似。",
+  "conflict": "无直接冲突，但需注意发酵中酵母作为外部添加物与种子萌发中自身胚的区别。",
+  "event_chain": [
+    "将面粉、水、酵母混合",
+    "揉成面团",
+    "放置在温暖湿润处",
+    "面团膨胀",
+    "发酵完成"
+  ],
+  "turning_point": "酵母产气使面团膨胀",
+  "resolution_state": "面团体积增大，内部呈蜂窝状，适合进一步加工",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "面团发酵的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "发酵所需的外界条件：适宜的温度、湿度、充足的空气",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "面粉本身是否新鲜、无变质、筋度合适",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "使能：外界条件使发酵过程得以发生",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "使能：面粉自身品质使发酵过程得以成功",
+      "direction_preserved": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "seed_count": 80,
+  "retrieval_count": 80,
+  "max_edges": 20,
+  "max_paths": 8,
+  "index_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\m2na_v2\\pilot80\\retrieval_index.jsonl",
+  "adaptive_two_hop_count": 10
+}

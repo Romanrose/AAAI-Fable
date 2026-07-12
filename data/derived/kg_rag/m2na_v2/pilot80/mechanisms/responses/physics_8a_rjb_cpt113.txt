@@ -1,0 +1,110 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "眼睛调节：通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "远点：眼睛依靠调节能看清的最远点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "近点：眼睛依靠调节能看清的最近点",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "condition",
+        "text": "正常眼远点在无限远",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "condition",
+        "text": "正常眼近点约为10 cm",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17198"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17199"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  }
+}
+```

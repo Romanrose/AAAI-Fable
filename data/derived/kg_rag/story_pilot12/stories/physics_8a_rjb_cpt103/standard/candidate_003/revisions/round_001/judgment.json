@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story clearly maps '凸透镜' to '铜镜模具' and '照相机成像' to '浇铸铜镜的过程', with explicit cause-effect language. However, edge e2 ('照相机成像' is_a '实像') is only weakly realized: the story says '浇铸铜镜的过程产生铜镜', which is a 'produces' relation, not an 'is_a' relation. This mismatch weakens the mapping. The story's strength lies in its vivid, step-by-step demonstration of the condition-outcome chain (e3, e4) and the adjustment process (e5)."
+  },
+  "revision_instructions": [
+    "Strengthen edge e2: explicitly state that the cast copper mirror (铜镜) is a real image (实像) produced by the casting process, e.g., '浇铸出的铜镜就是实像'.",
+    "Ensure edge e1 is more explicitly stated: the story implies the mold enables the process, but a direct statement like '铜镜模具使得浇铸铜镜的过程成为可能' would improve clarity.",
+    "Consider adding a sentence that directly links the cast mirror to the concept of a real image, to satisfy the 'is_a' relation."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

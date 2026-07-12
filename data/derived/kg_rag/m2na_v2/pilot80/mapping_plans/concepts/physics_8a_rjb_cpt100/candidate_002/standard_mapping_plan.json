@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠制弓",
+  "characters": [
+    "老弓匠",
+    "学徒"
+  ],
+  "objects": [
+    "弓臂",
+    "弓弦",
+    "箭矢",
+    "靶心"
+  ],
+  "conflict": "学徒射箭总偏斜，无法命中靶心",
+  "event_chain": [
+    "老弓匠制作弓臂时，先确定弓臂的对称中线（弓臂中心线）",
+    "学徒拉满弓弦，箭矢沿弓臂中心线方向射出",
+    "箭矢最终汇聚到靶心",
+    "从靶心到弓臂的距离称为射距"
+  ],
+  "turning_point": "老弓匠指出学徒未对准弓臂中心线，导致箭矢偏离",
+  "resolution_state": "学徒调整后，箭矢沿中心线射出并命中靶心",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "弓臂的对称中线（弓臂中心线）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "学徒拉满弓弦，箭矢沿弓臂中心线方向射出",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "靶心",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "射距",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "弓臂中心线是箭矢沿直线射出的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "箭矢沿中心线射出后汇聚到靶心",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "靶心与弓臂之间的距离定义为射距",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保'弓臂中心线'不暗示'主光轴'或'焦点'等目标概念",
+    "避免使用'聚焦''会聚'等与光学相关的词汇",
+    "确保'靶心'仅作为汇聚点，不映射为'焦点'名称"
+  ],
+  "mapping_context_sha256": "24ad493b685cd9798e6f4b3d9bf7448a72b9c91c8bb641ad55b70a408b022968",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "c29c59b1eae3f6ed14276405bdfec48dff2503886d791c6000fa34ba03183636"
+  }
+}

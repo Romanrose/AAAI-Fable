@@ -1,0 +1,181 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "细胞",
+    "cell"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：组织",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：细胞是基本的生命系统",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：细胞是生命活动的基本单位",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：病毒",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14135"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14137"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14136"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17836"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "建筑工地",
+    "setting": "一座正在建设中的大型图书馆，工地上有各种建筑材料、施工团队和工程车辆。",
+    "conflict": "图书馆的各个部分（地基、墙体、屋顶）各自为政，互不配合，导致整体工程停滞不前，无法形成统一的建筑结构。",
+    "characters": [
+      {
+        "name": "砖块",
+        "role": "建筑的基本单元，具有独立形状，但需要与其他砖块结合才能发挥作用。",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "水泥",
+        "role": "连接砖块的介质，使砖块形成墙体。",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "墙体",
+        "role": "由砖块和水泥构成的局部结构，支撑屋顶。",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "屋顶",
+        "role": "覆盖墙体，为图书馆提供遮蔽，是整体功能的一部分。",
+        "mapped_element": "m4"
+      },
+      {
+        "name": "脚手架",
+        "role": "临时辅助结构，帮助工人施工，但本身不构成建筑主体。",
+        "mapped_element": "m5"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "砖块（独立但需协作的基本单元）"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "水泥（连接单元形成局部结构）"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "墙体（由单元构成的局部系统）"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "屋顶（局部系统构成的整体功能）"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "脚手架（相关但非主体的辅助物）"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "砖块们各自躺在工地上，认为自己独立就能完成建筑任务，拒绝与其他砖块接触。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "水泥主动将砖块们粘合在一起，形成了一面面墙体。砖块们发现，只有通过水泥的连接，它们才能站立起来。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "墙体们开始互相支撑，形成了图书馆的骨架，并准备承接屋顶。它们意识到，单独的墙体无法遮风挡雨。",
+        "mapped_elements": [
+          "m2",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "屋顶被吊装到墙体之上，图书馆终于有了完整的空间。砖块、水泥、墙体共同构成了一个能存放书籍的整体。",
+        "mapped_elements": [
+          "m3",
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "脚手架在图书馆建成后被拆除，它虽然帮助了施工，但并非建筑本身的一部分。",
+        "mapped_elements": [
+          "m4",
+          "m5"
+        ]
+      }
+    ],
+    "turning_point": "当一面墙体因为缺少水泥而倒塌时，砖块们终于明白，没有协作，它们只是一堆散乱的石头，无法成为建筑的一部分。",
+    "ending": "图书馆顺利建成，每一块砖、每一滴水泥都找到了自己的位置，共同构成了一个能容纳知识的整体。脚手架则被回收，准备去帮助下一个工地。",
+    "implied_moral": "独立的基本单元只有通过有序的连接和协作，才能构成具有完整功能的整体；而辅助物虽重要，但并非主体本身。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

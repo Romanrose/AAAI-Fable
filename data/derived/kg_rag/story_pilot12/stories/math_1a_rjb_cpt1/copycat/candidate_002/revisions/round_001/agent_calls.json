@@ -1,0 +1,17 @@
+{
+  "reviser": {
+    "status": "success",
+    "version": "frozen-mapping-reviser/v2",
+    "prompt_sha256": "dd3be26a0757f2e038772050eaf4ab60509f5bfe96b3d49e5dcdecb096183644"
+  },
+  "aligner": {
+    "status": "success",
+    "version": "evidence-aligner/v1",
+    "prompt_sha256": "483004c0a936812fd7b079a92df8c3f026fafd3fdc96da848f89522865b90e56"
+  },
+  "judge": {
+    "status": "success",
+    "version": "mapping-aware-judge/v2",
+    "prompt_sha256": "501b8b5c46be6570bb6e427cd7a7da0d10c1a76c439ed914dff080061cd61aeb"
+  }
+}

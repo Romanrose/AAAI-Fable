@@ -1,0 +1,145 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt108",
+    "label": "Concept",
+    "name": "加热氯酸钾制取氧气",
+    "properties": {
+      "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+      "importance": "掌握",
+      "formula": "氯酸钾  ⟶(加热, 二氧化锰)  氯化钾 + 氧气",
+      "retrieval_text": "加热氯酸钾制取氧气\nConcept\n在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。\n掌握\n氯酸钾  ⟶(加热, 二氧化锰)  氯化钾 + 氧气"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt103",
+      "label": "Concept",
+      "name": "实验室制取氧气的方法",
+      "properties": {
+        "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+        "importance": "重要",
+        "examples": [
+          "加热高锰酸钾制取氧气",
+          "在二氧化锰催化下分解过氧化氢制取氧气",
+          "加热混有二氧化锰的氯酸钾固体制取氧气"
+        ],
+        "retrieval_text": "实验室制取氧气的方法\nConcept\n在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。\n重要\n加热高锰酸钾制取氧气\n在二氧化锰催化下分解过氧化氢制取氧气\n加热混有二氧化锰的氯酸钾固体制取氧气"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt109",
+      "label": "Concept",
+      "name": "分解反应",
+      "properties": {
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+        "importance": "重要",
+        "formula": "AB → A + B",
+        "examples": [
+          "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+          "过氧化氢分解生成水和氧气",
+          "氯酸钾分解生成氯化钾和氧气",
+          "水在电解时分解生成氢气和氧气，是分解反应。",
+          "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+        ],
+        "retrieval_text": "分解反应\nConcept\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。\n重要\nAB → A + B\n高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气\n过氧化氢分解生成水和氧气\n氯酸钾分解生成氯化钾和氧气\n水在电解时分解生成氢气和氧气，是分解反应。\n讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_exp18",
+      "label": "Experiment",
+      "name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+      "properties": {
+        "instrument": [
+          "混有二氧化锰的氯酸钾固体",
+          "试管或耐热容器",
+          "加热装置",
+          "集气装置"
+        ],
+        "is_student": 0,
+        "process": "在实验室里，将混有二氧化锰的氯酸钾固体加热，使氯酸钾分解，生成氧气和氯化钾，二氧化锰在该反应中起催化剂作用。",
+        "phenomena": "加热后有气体产生，可收集到氧气，同时生成固体氯化钾；二氧化锰在反应前后质量和性质基本不变。",
+        "conclusion": "加热混有二氧化锰的氯酸钾固体可以制取氧气，二氧化锰在该反应中是催化剂。",
+        "retrieval_text": "加热混有二氧化锰的氯酸钾固体制取氧气\nExperiment"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:11280",
+      "source": "chemistry_9a_rjb_cpt108",
+      "source_name": "加热氯酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:11281",
+      "source": "chemistry_9a_rjb_cpt108",
+      "source_name": "加热氯酸钾制取氧气",
+      "target": "chemistry_9a_rjb_cpt109",
+      "target_name": "分解反应",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:22576",
+      "source": "chemistry_9a_rjb_exp18",
+      "source_name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+      "target": "chemistry_9a_rjb_cpt108",
+      "target_name": "加热氯酸钾制取氧气",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "加热氯酸钾制取氧气",
+      "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+      "formula": "氯酸钾  ⟶(加热, 二氧化锰)  氯化钾 + 氧气",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11280] 加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:11281] 加热氯酸钾制取氧气 --is_a--> 分解反应",
+      "[normalized:edge:22576] 加热混有二氧化锰的氯酸钾固体制取氧气 --verifies--> 加热氯酸钾制取氧气"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 3,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 3,
+    "expanded_to_two_hop": false
+  }
+}

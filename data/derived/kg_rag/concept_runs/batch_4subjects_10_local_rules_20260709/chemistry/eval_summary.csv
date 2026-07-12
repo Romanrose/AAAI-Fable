@@ -1,0 +1,11 @@
+﻿concept_id,target_concept,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,template_like
+chemistry_9a_rjb_cpt10,沸点,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt100,缓慢氧化,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt101,氧气的检验方法,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt102,呼吸与氧气,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt103,实验室制取氧气的方法,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt105,高锰酸钾受热分解反应,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt107,过氧化氢分解反应,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt108,加热氯酸钾制取氧气,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt109,分解反应,4,5,4,4,4,4,4.15,accept,False,False,False
+chemistry_9a_rjb_cpt11,大气压强,4,5,4,4,4,4,4.15,accept,False,False,False

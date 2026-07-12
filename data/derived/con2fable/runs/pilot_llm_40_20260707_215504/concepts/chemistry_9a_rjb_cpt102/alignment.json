@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "人体呼吸消耗氧气，吸氧缓解高原反应",
+      "evidence": "李队医快步走过来，扶住他，“你这是高原反应，这里的空气太稀薄了，你身体里的能量不够用了。”",
+      "narrative_anchor": "空气太稀薄了，你身体里的能量不够用了"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "氧气瓶中的气体平时压缩在瓶里，一打开就释放出来",
+      "evidence": "这氧气瓶里的气体，平时压缩在瓶里，一打开就释放出来",
+      "narrative_anchor": "平时压缩在瓶里，一打开就释放出来"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "缓慢呼吸，氧气一点点被用掉",
+      "evidence": "老张慢慢呼吸，那气体就一点点被用掉，不多不少，刚刚好。要是吸得太快，反而浪费了。",
+      "narrative_anchor": "老张慢慢呼吸，那气体就一点点被用掉"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "氧气瓶释放气体（物理性质）支持呼吸消耗氧气（缓慢氧化）",
+      "evidence": "这氧气瓶里的气体，平时压缩在瓶里，一打开就释放出来，正好能补充老张身体里缺少的东西。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m1",
+      "direction_preserved": false,
+      "narrative_anchor": "一打开就释放出来，正好能补充老张身体里缺少的东西"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "氧气物理性质（压缩释放）支持缓慢氧化（慢慢呼吸消耗氧气）",
+      "evidence": "老张慢慢呼吸，那气体就一点点被用掉，不多不少，刚刚好。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "老张慢慢呼吸，那气体就一点点被用掉"
+    }
+  ]
+}

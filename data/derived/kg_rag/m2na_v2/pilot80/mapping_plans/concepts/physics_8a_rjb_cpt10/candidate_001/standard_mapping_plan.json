@@ -1,0 +1,79 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个关于河流与船只的寓言",
+  "characters": [
+    "老渔夫",
+    "小渔夫"
+  ],
+  "objects": [
+    "河流",
+    "渔船",
+    "岸边的柳树",
+    "河中的礁石"
+  ],
+  "conflict": "小渔夫认为渔船在河中静止不动，而老渔夫指出渔船相对于岸边的柳树是运动的，两人对渔船是否运动产生分歧。",
+  "event_chain": [
+    "小渔夫和老渔夫在河上捕鱼，渔船随波逐流。",
+    "小渔夫看着河中的礁石，认为渔船没有移动。",
+    "老渔夫指着岸边的柳树，指出渔船正在远离柳树。",
+    "小渔夫意识到，选择不同的参照物（礁石或柳树），对渔船运动状态的判断不同。"
+  ],
+  "turning_point": "老渔夫指出，判断渔船是否运动，需要先选定一个固定的参照物（如岸边的柳树），否则无法确定。",
+  "resolution_state": "小渔夫明白了，运动与静止是相对的，取决于所选的标准参照物。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "岸边的柳树（作为判断渔船运动的标准参照物）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "渔船相对于岸边的柳树位置不断变化（机械运动）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小渔夫认识到，选择不同的参照物（礁石或柳树），渔船的运动状态判断不同（运动与静止的相对性）",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "渔船的位置变化（机械运动）与岸边的柳树（参照物）相关，因为需要参照物来定义运动",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "岸边的柳树（参照物）使得小渔夫能够认识到运动与静止的相对性（即不同参照物导致不同判断）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "运动与静止的相对性（小渔夫的认知）反过来强化了参照物（柳树）的重要性",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'参照物'一词，已用'岸边的柳树'替代。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "注意不要将课程桥接上下文（如教学步骤）误当作因果机制。",
+    "故事中未使用任何目标概念名称或别名。"
+  ],
+  "mapping_context_sha256": "1da7366c47ebe2c0a6ee8ba729b802e15600b53b489b67f694086ddfea110d56",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "8cc9646e4dd000dcabe71e14f7765d1039476a3757cba96837adc92cc94ffb4b"
+  }
+}

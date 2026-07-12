@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "chemistry_9a_rjb_cpt104",
+  "subject": "chemistry",
+  "canonical_name": "加热高锰酸钾制取氧气",
+  "aliases": [],
+  "definition": "在试管中装入少量高锰酸钾并加热，使其受热分解生成二氧化锰、锰酸钾和氧气的实验室制氧方法。",
+  "concept_type": "process",
+  "forbidden_terms": [
+    "加热高锰酸钾制取氧气"
+  ]
+}

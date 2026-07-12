@@ -1,0 +1,55 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "避免目的论解释。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "避免把个体努力写成进化原因。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:14133",
+      "source_name": "种子萌发的环境条件",
+      "target_name": "种子萌发",
+      "relation_semantic_role": "prerequisite"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:14134",
+      "source_name": "种子萌发的自身条件",
+      "target_name": "种子萌发",
+      "relation_semantic_role": "prerequisite"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:14133",
+    "normalized:edge:14134",
+    "normalized:edge:10772",
+    "normalized:edge:10776"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "古代工匠锻造宝剑",
+  "characters": [
+    "铸剑师",
+    "徒弟"
+  ],
+  "objects": [
+    "铁矿石",
+    "熔炉",
+    "铁水",
+    "模具",
+    "剑坯",
+    "锻锤",
+    "淬火池",
+    "宝剑"
+  ],
+  "conflict": "徒弟急于求成，想跳过基础锻造步骤直接得到锋利宝剑，但铸剑师坚持按古法循序渐进。",
+  "event_chain": [
+    "铸剑师将铁矿石放入熔炉加热，使其熔化成铁水",
+    "铁水倒入模具冷却，形成剑坯",
+    "剑坯在锻锤下反复锻打，去除杂质",
+    "剑坯加热后放入淬火池急冷，增加硬度",
+    "最终得到一把锋利的宝剑"
+  ],
+  "turning_point": "徒弟尝试用未充分锻打的剑坯直接淬火，结果剑身开裂，铸剑师借此教导必须遵循完整工序。",
+  "resolution_state": "徒弟领悟到锻造宝剑必须经过熔炼、铸坯、锻打、淬火等完整流程，最终成功铸造出宝剑。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铸剑师用铁矿石锻造宝剑",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "古代工匠锻造宝剑的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "淬火池冷却剑坯",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "宝剑",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "熔炼铁矿石成铁水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "用铁水直接浇铸剑坯",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "反复锻打铁矿石成剑坯",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "铸剑师演示锻造宝剑的完整过程",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铸剑师用铁矿石锻造宝剑是古代工匠锻造宝剑的一种具体方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "古代工匠锻造宝剑的方法需要淬火池冷却剑坯这一步骤",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "宝剑的获得需要古代工匠锻造宝剑的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "熔炼铁矿石成铁水是古代工匠锻造宝剑方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "用铁水直接浇铸剑坯是古代工匠锻造宝剑的一种方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "反复锻打铁矿石成剑坯是古代工匠锻造宝剑的一种方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "铸剑师演示锻造宝剑的完整过程验证了古代工匠锻造宝剑的方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'加热高锰酸钾'等化学术语",
+    "注意'淬火'等术语可能被误认为化学概念，但属于锻造领域，可接受",
+    "确保所有机制节点和边都被映射，尤其是必须保留的n1和e1"
+  ]
+}

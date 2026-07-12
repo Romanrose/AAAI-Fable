@@ -1,0 +1,58 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt13",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个空碗的故事",
+  "characters": [
+    "小和尚"
+  ],
+  "objects": [
+    "空碗"
+  ],
+  "conflict": "小和尚以为碗里没有东西就是无用，但师父告诉他空碗也有其意义。",
+  "event_chain": [
+    "小和尚有一个碗。",
+    "碗里没有盛任何食物或水。",
+    "小和尚认为这个碗没有用。"
+  ],
+  "turning_point": "师父指出空碗可以盛装新的事物，代表一种潜在的状态。",
+  "resolution_state": "小和尚明白了空碗代表‘没有内容’但并非无用，它是一种‘空’的状态。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "空碗",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "没有内容",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空碗是‘没有内容’的载体",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘数字0’或‘数字0的含义’等禁止术语。",
+    "空碗的‘没有内容’状态需明确对应‘没有数量’，避免歧义。",
+    "故事需保持单一连贯的源域，不引入其他无关比喻。"
+  ],
+  "mapping_context_sha256": "4eac782ac1548f0012a15694a9cb043b6c83fc2b4c4ca1f237798d02310e1a41",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "e8fafd145ae1778708cfc377a8fddd8f15f5a84a746dd80c3f183ea77884cd81"
+  }
+}

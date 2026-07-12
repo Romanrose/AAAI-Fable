@@ -1,0 +1,30 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "园圃值守所里，记录员、调度员和验收员各守其位。",
+      "narrative_anchor": "园圃值守所里，记录员、调度员和验收员各守其位。",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "结果验收记录",
+      "evidence": "最后，众人用结果验收记录核对整条安排",
+      "narrative_anchor": "最后，众人用结果验收记录核对整条安排",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先完成入口条件核对，验收记录才能接上",
+      "evidence": "调度员这才发现，只有先完成入口条件核对，验收记录才能接上",
+      "narrative_anchor": "调度员这才发现，只有先完成入口条件核对，验收记录才能接上",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt22",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农分种子",
+  "characters": [
+    "老农",
+    "小徒弟"
+  ],
+  "objects": [
+    "7粒种子",
+    "两个小布袋",
+    "种子袋"
+  ],
+  "conflict": "小徒弟需要将7粒种子分到两个布袋中，但不知道所有不同的分法，导致无法完成后续的播种任务。",
+  "event_chain": [
+    "小徒弟已经认识种子（能数出7粒种子，会读会写数字7，知道7比6大）。",
+    "小徒弟通过摆弄种子、画图来理解数量。",
+    "老农让小徒弟把7粒种子分成两份，分别放入两个布袋，并找出所有不同的分法。",
+    "小徒弟掌握了所有分法后，能够通过合并两个布袋的种子得到7粒种子（加法）。",
+    "小徒弟掌握了所有分法后，能够从一个布袋中取出若干粒种子，得到剩下种子数为7的减法算式。"
+  ],
+  "turning_point": "小徒弟通过反复摆弄和画图，发现了所有将7粒种子分成两份的不同方式。",
+  "resolution_state": "小徒弟能够熟练地将7粒种子分成两份，并利用这些分法进行加法和减法运算。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小徒弟已经认识种子（能数出7粒种子，会读会写数字7，知道7比6大）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小徒弟通过摆弄种子、画图来理解数量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农让小徒弟把7粒种子分成两份，分别放入两个布袋，并找出所有不同的分法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "小徒弟掌握了所有分法后，能够通过合并两个布袋的种子得到7粒种子（加法）",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "小徒弟掌握了所有分法后，能够从一个布袋中取出若干粒种子，得到剩下种子数为7的减法算式",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小徒弟已经认识种子，这使他能够理解老农关于分种子的任务",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小徒弟通过摆弄和画图，这使他能够发现所有不同的分法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "小徒弟掌握了所有分法后，这使他能够通过合并得到加法算式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "小徒弟掌握了所有分法后，这使他能够通过取出得到减法算式",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'分拆数6和7'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保不将课程桥接上下文（如'数字6和7的认识'的具体内容）作为因果机制。",
+    "确保故事载体使用一致的源域（老农分种子），而非多个无关隐喻。"
+  ],
+  "mapping_context_sha256": "a02f4725aead900495b6a480264624d2cdefafe80032478d3737c2db640bddca",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5eff6149237d782e40cf96e749614b0e0a61148d6a7d4e13716afa9114b43cd4"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体",
+      "evidence": "六块完全相同的正方形砖块……所有棱边都一样长的立体结构……六个面都是完全一样的正方形，每一根棱的长度都分毫不差",
+      "narrative_anchor": "所有棱边都一样长的立体结构"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "按形状分类",
+      "evidence": "没法归类",
+      "narrative_anchor": "没法归类"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "长方体",
+      "evidence": "这个结构其实就是长方体家族里一个特殊的成员",
+      "narrative_anchor": "长方体家族里一个特殊的成员"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "正方体体积公式",
+      "evidence": "可以用计算长方体体积的方法来算它的体积……推导出了公式",
+      "narrative_anchor": "推导出了公式"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "拼搭立体图形",
+      "evidence": "搬来几个同样的结构，试着把它们组合在一起……可以严丝合缝地拼成更大的立体图形",
+      "narrative_anchor": "严丝合缝地拼成更大的立体图形"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "长方体",
+      "evidence": "这个结构其实就是长方体家族里一个特殊的成员",
+      "narrative_anchor": "长方体家族里一个特殊的成员"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从定义到分类需求",
+      "evidence": "小砖拼出结构后，老李说没法归类",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "没法归类"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从分类需求到长方体类别",
+      "evidence": "王工说它是长方体家族里一个特殊的成员",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "长方体家族里一个特殊的成员"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从长方体类别到体积公式",
+      "evidence": "可以用计算长方体体积的方法来算它的体积",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "可以用计算长方体体积的方法来算它的体积"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "从体积公式到拼搭图形",
+      "evidence": "推导出了公式……搬来几个同样的结构，试着把它们组合在一起",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "推导出了公式"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "从拼搭图形到长方体关系",
+      "evidence": "可以严丝合缝地拼成更大的立体图形……这个结构其实就是长方体家族里一个特殊的成员",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "长方体家族里一个特殊的成员"
+    }
+  ]
+}

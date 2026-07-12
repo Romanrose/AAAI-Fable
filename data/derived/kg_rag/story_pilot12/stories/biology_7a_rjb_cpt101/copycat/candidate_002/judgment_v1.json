@@ -1,0 +1,29 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story fails to map any mechanism node or edge to its corresponding story element. Node n1 (seed germination process) is assigned to '入口条件核对' but the story describes condition checking, not the process itself. Node n2 (external conditions) is mapped to '第2道转化环节' but the story's second step is inserting a token, not a condition. Edge e1 (enables relation from external conditions to process) is mapped to a comparison of records, which does not convey the enabling relation. The mapping is entirely misaligned; a better realization would directly map n1 to the actual growth/development sequence, n2 to the condition-checking step, and e1 to a clear cause-effect where condition checking enables the process."
+  },
+  "revision_instructions": [
+    "Rewrite the story so that node n1 (seed germination process) is represented by a clear sequence of growth or development, not by condition checking.",
+    "Map node n2 (external conditions) to the condition-checking step (e.g., checking soil, drainage, armband) and show that these conditions enable the process.",
+    "Map node n3 (internal conditions) to a separate step that verifies seed viability or internal readiness, not to the final verification.",
+    "For edge e1, show a direct enabling relation: after conditions are met, the process can begin. For edge e2, show that internal conditions also enable the process, possibly as a separate prerequisite.",
+    "Ensure that the story does not use any forbidden terms (e.g., '种子', '萌发', '条件') and that the mapping is structurally clear."
+  ],
+  "final_status": "reject"
+}

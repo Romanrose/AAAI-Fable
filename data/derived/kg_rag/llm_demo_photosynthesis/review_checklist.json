@@ -1,0 +1,10 @@
+{
+  "pass_fail": false,
+  "missing_roles": [
+    "target concept",
+    "prerequisites",
+    "exercises"
+  ],
+  "draft_length": 256,
+  "seed_concept": "光合作用"
+}

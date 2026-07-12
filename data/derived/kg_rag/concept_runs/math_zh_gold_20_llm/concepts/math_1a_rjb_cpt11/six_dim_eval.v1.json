@@ -1,0 +1,87 @@
+{
+  "concept_id": "math_1a_rjb_cpt11",
+  "target_concept": "加法的含义",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 2
+  },
+  "weighted_overall": 4.7,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过多次合并事件（松果、蘑菇、小鸟、鱼）准确体现了'两个数量合并在一起'的加法含义，没有偏离或矛盾。",
+    "implicitness": "故事完全未提及'加法'或'加法的含义'等术语，而是通过角色合并物品的动作和结果自然隐含概念。",
+    "mapping_clarity": "每个合并事件都清晰对应'两个数量合并'的机制，且角色明确总结规律，映射非常直接易懂。",
+    "readability": "语言简单流畅，情节连贯，适合一年级学生理解，无复杂词汇或句式。",
+    "pedagogical_value": "通过多个重复但不同的例子强化概念，并引导角色总结规律，教学效果强。",
+    "novelty": "故事场景（森林动物收集食物）较为常见，缺乏独特创意或意外转折。"
+  },
+  "revision_suggestions": [
+    "考虑引入更独特的场景或角色，例如使用外星人或机械装置来增加新颖性。",
+    "可加入一个小的认知冲突或错误尝试，让主角先误解合并规则，再通过观察纠正。"
+  ],
+  "rule_findings": {
+    "story_token_count": 426,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 2
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过多次合并事件（松果、蘑菇、小鸟、鱼）准确体现了'两个数量合并在一起'的加法含义，没有偏离或矛盾。",
+      "implicitness": "故事完全未提及'加法'或'加法的含义'等术语，而是通过角色合并物品的动作和结果自然隐含概念。",
+      "mapping_clarity": "每个合并事件都清晰对应'两个数量合并'的机制，且角色明确总结规律，映射非常直接易懂。",
+      "readability": "语言简单流畅，情节连贯，适合一年级学生理解，无复杂词汇或句式。",
+      "pedagogical_value": "通过多个重复但不同的例子强化概念，并引导角色总结规律，教学效果强。",
+      "novelty": "故事场景（森林动物收集食物）较为常见，缺乏独特创意或意外转折。"
+    },
+    "revision_suggestions": [
+      "考虑引入更独特的场景或角色，例如使用外星人或机械装置来增加新颖性。",
+      "可加入一个小的认知冲突或错误尝试，让主角先误解合并规则，再通过观察纠正。"
+    ]
+  },
+  "final_status": "revise",
+  "mode": "llm"
+}

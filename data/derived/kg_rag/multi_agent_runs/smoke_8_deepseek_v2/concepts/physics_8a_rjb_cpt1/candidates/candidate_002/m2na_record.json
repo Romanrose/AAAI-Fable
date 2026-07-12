@@ -1,0 +1,130 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：使用刻度尺的方法",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "属于或连接到上位结构：长度单位（米及其倍数、子倍数）",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "可以通过相关证据或实验验证：用刻度尺测量长度",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:17188"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:12429"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:23027"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "测试工程师站在滑道试验场中央，面前是两条几乎一模一样的滑道。他绕着它们走了几圈，眯着眼试图比较它们的延伸情况，可无论怎么看，都分不清哪条更长。他挠了挠头，心想：光凭眼睛看，根本说不准。\n\n质检员推着一辆小车过来，车上放着几块标准砝码块和一卷刻度标记。他拍了拍工程师的肩膀：“光看没用，得用工具。”工程师接过刻度标记，先在一条滑道的起点和终点处贴上记号，又用标准砝码块沿着记号边缘比对，发现砝码块恰好能卡在记号之间。他如法炮制，在另一条滑道上贴好记号，再用同样的砝码块去比对——这次，砝码块的一端露在了记号外面。\n\n工程师蹲下身，仔细看了看记号上的刻度。刻度标记上印着整齐的厘米和分米单位，这些单位与标准砝码块的那条隐秘规则完全对应。他数了数两条滑道上记号之间的格数，恍然大悟：原来，两条滑道的延伸程度相差了整整两个刻度格。他站起身，对质检员说：“没有这些刻度和砝码块，我根本没法说清楚它们的区别。”\n\n质检员点点头，把砝码块收回小车：“所以，要描述滑道的空间延伸程度，就得靠标准化的工具。刻度标记和砝码块就是我们的尺子。”两人相视一笑，工程师在记录本上写下了测量的结果。从此，他再也不敢单凭肉眼判断滑道的长短了。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "滑道的空间延伸程度（即滑道的长短），需要通过刻度标记和标准砝码块来测量和描述。",
+        "evidence": "要描述滑道的空间延伸程度，就得靠标准化的工具。刻度标记和砝码块就是我们的尺子。",
+        "narrative_anchor": "要描述滑道的空间延伸程度，就得靠标准化的工具。刻度标记和砝码块就是我们的尺子。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "测试工程师必须先学会如何正确使用刻度标记（在滑道上做记号）以及如何用标准砝码块进行比对。",
+        "evidence": "工程师接过刻度标记，先在一条滑道的起点和终点处贴上记号，又用标准砝码块沿着记号边缘比对",
+        "narrative_anchor": "工程师接过刻度标记，先在一条滑道的起点和终点处贴上记号，又用标准砝码块沿着记号边缘比对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "刻度标记上的单位（如厘米、分米）与标准砝码块的长度单位一致，共同构成了描述滑道延伸程度的标准化体系。",
+        "evidence": "刻度标记上印着整齐的厘米和分米单位，这些单位与标准砝码块的那条隐秘规则完全对应。",
+        "narrative_anchor": "刻度标记上印着整齐的厘米和分米单位，这些单位与标准砝码块的那条隐秘规则完全对应。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "测试工程师通过实际在滑道上做记号、用标准砝码块比对，验证了滑道延伸程度的差异。",
+        "evidence": "他数了数两条滑道上记号之间的格数，恍然大悟：原来，两条滑道的延伸程度相差了整整两个刻度格。",
+        "narrative_anchor": "他数了数两条滑道上记号之间的格数，恍然大悟：原来，两条滑道的延伸程度相差了整整两个刻度格。",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "测试工程师认识到需要工具来测量滑道延伸程度，进而学习使用刻度标记和砝码块的方法。",
+        "evidence": "要描述滑道的空间延伸程度，就得靠标准化的工具。刻度标记和砝码块就是我们的尺子。",
+        "narrative_anchor": "要描述滑道的空间延伸程度，就得靠标准化的工具。刻度标记和砝码块就是我们的尺子。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "使用刻度标记的方法（做记号、比对）引出了刻度单位与标准砝码块单位的一致性。",
+        "evidence": "刻度标记上印着整齐的厘米和分米单位，这些单位与标准砝码块的那条隐秘规则完全对应。",
+        "narrative_anchor": "刻度标记上印着整齐的厘米和分米单位，这些单位与标准砝码块的那条隐秘规则完全对应。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "标准化单位体系（n3）支持了实际测量验证（n4），即通过刻度格数差异验证延伸程度。",
+        "evidence": "他数了数两条滑道上记号之间的格数，恍然大悟：原来，两条滑道的延伸程度相差了整整两个刻度格。",
+        "narrative_anchor": "他数了数两条滑道上记号之间的格数，恍然大悟：原来，两条滑道的延伸程度相差了整整两个刻度格。",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

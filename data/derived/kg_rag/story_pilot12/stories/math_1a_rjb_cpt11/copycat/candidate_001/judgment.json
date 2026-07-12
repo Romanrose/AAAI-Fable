@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly distinguishes the condition (n1: entry condition check) from the process (n2: result verification record) and preserves the enables relation (e1) by explicitly stating that the condition must precede the process and that both together constrain the final judgment. This is observably better than a story that merely mentions both nodes without showing the directional dependency or that conflates them into a single step."
+  },
+  "revision_instructions": [],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "source_domain": "建筑工地上的砖块堆砌",
+  "setting": "一个繁忙的建筑工地，工人们正在用标准砖块搭建各种形状的墙体。",
+  "conflict": "一位新来的学徒发现，用六块完全相同的正方形砖块，可以拼出一个特殊的立体结构，但工头坚持认为这种结构不属于任何已知的墙体类型，学徒需要证明它的合理性和实用性。",
+  "characters": [
+    {
+      "name": "小砖",
+      "role": "充满好奇心的学徒，喜欢尝试新的堆砌方式",
+      "mapped_element": "m1"
+    },
+    {
+      "name": "老李",
+      "role": "经验丰富的工头，按传统分类方式管理工地",
+      "mapped_element": "m2"
+    },
+    {
+      "name": "王工",
+      "role": "结构工程师，负责计算和验证各种形状的稳定性",
+      "mapped_element": "m3"
+    },
+    {
+      "name": "张师傅",
+      "role": "负责拼搭复杂立体图形的资深技工",
+      "mapped_element": "m5"
+    }
+  ],
+  "mappings": [
+    {
+      "concept_element": "m1",
+      "narrative_carrier": "小砖用六块完全相同的正方形砖块拼出的立体结构"
+    },
+    {
+      "concept_element": "m2",
+      "narrative_carrier": "老李坚持按形状分类，认为这种结构不属于标准分类"
+    },
+    {
+      "concept_element": "m3",
+      "narrative_carrier": "王工用长方体公式验证这个立体结构"
+    },
+    {
+      "concept_element": "m4",
+      "narrative_carrier": "王工推导出这个立体结构的体积公式"
+    },
+    {
+      "concept_element": "m5",
+      "narrative_carrier": "张师傅用这个结构拼搭更复杂的立体图形"
+    },
+    {
+      "concept_element": "m6",
+      "narrative_carrier": "最终证明这个立体结构是长方体的一种特殊形式"
+    }
+  ],
+  "plot_beats": [
+    {
+      "beat_id": "b1",
+      "event": "小砖在工地角落用六块完全相同的正方形砖块，拼出了一个所有棱都等长的立体结构。",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b2",
+      "event": "老李看到后，认为这个结构不符合工地现有的形状分类标准，拒绝承认它的合法性。",
+      "mapped_elements": [
+        "m2"
+      ]
+    },
+    {
+      "beat_id": "b3",
+      "event": "王工被请来评估，他测量后发现这个结构的长、宽、高都相等，决定用长方体公式来验证它的性质。",
+      "mapped_elements": [
+        "m3"
+      ]
+    },
+    {
+      "beat_id": "b4",
+      "event": "王工成功推导出这个立体结构的体积公式，证明它可以用数学方法精确计算。",
+      "mapped_elements": [
+        "m4"
+      ]
+    },
+    {
+      "beat_id": "b5",
+      "event": "张师傅尝试用多个这样的结构进行拼搭，发现它们可以完美组合成更复杂的立体图形。",
+      "mapped_elements": [
+        "m5"
+      ]
+    },
+    {
+      "beat_id": "b6",
+      "event": "经过验证，大家一致认为这个结构是长方体家族中长宽高都相等的一个特殊成员。",
+      "mapped_elements": [
+        "m6"
+      ]
+    }
+  ],
+  "turning_point": "王工用长方体公式成功计算出这个立体结构的体积，证明它并非无规律可循，而是有严格的数学基础。",
+  "ending": "这个特殊的立体结构被正式纳入工地的标准构件库，小砖也因此获得了创新奖。",
+  "implied_moral": "看似特殊的形状，往往只是普遍规律中的一个特例，只要找到正确的分类和验证方法，就能发现它的价值。"
+}

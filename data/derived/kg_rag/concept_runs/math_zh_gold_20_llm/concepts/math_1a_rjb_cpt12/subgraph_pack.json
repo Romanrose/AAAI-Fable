@@ -1,0 +1,47 @@
+{
+  "query": "math_1a_rjb_cpt12",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt12",
+    "label": "Concept",
+    "name": "减法的含义",
+    "definition": "表示从一个数量中去掉一部分。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "减法的含义\n表示从一个数量中去掉一部分。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt7",
+        "label": "Concept",
+        "name": "数字1到5的认识",
+        "definition": "认识并能数出1到5的数量，理解数字与数量的一一对应。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe9",
+        "label": "Exercise",
+        "name": "图中有5只鸟飞走1只，还剩几只？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch3",
+        "label": "Chapter",
+        "name": "5以内数的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

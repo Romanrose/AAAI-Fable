@@ -1,0 +1,200 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "按形状分类"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "根据物体或图形的外形特征进行分类的方法。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：观察与比较立体图形",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：圆柱",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "需要保留上下位关系：正方体",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：球体",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m6",
+        "text": "需要保留上下位关系：长方体",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16390"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12135"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12134"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12137"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12132"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "仓库货物整理",
+    "setting": "在一个繁忙的物流仓库里，新到了一批形状各异的货物，需要被分门别类地存放到不同的货架上。",
+    "conflict": "仓库管理员小陈需要快速将一堆混合在一起的圆柱形、正方体、球体和长方体货物分开，以便高效上架，但他发现有些货物形状相似，容易混淆。",
+    "characters": [
+      {
+        "name": "小陈",
+        "role": "仓库管理员，负责分类和整理货物",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "传送带",
+        "role": "源源不断送来混合货物的设备，代表需要被观察和比较的输入",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "圆柱形货物",
+        "role": "一种需要被识别并单独存放的货物",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "正方体货物",
+        "role": "一种需要被识别并单独存放的货物",
+        "mapped_element": "m4"
+      },
+      {
+        "name": "球体货物",
+        "role": "一种需要被识别并单独存放的货物",
+        "mapped_element": "m5"
+      },
+      {
+        "name": "长方体货物",
+        "role": "一种需要被识别并单独存放的货物",
+        "mapped_element": "m6"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "小陈根据货物外形特征进行分类的决策过程"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "传送带源源不断送来混合货物，小陈需要仔细观察和比较每个货物的外形"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "小陈识别出圆柱形货物，并将其放入标有‘圆形桶’的货架"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "小陈识别出正方体货物，并将其放入标有‘方形盒’的货架"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "小陈识别出球体货物，并将其放入标有‘圆球’的货架"
+      },
+      {
+        "concept_element": "m6",
+        "narrative_carrier": "小陈识别出长方体货物，并将其放入标有‘长条箱’的货架"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "小陈启动传送带，开始观察源源不断送来的混合货物。他意识到，必须根据每个货物最明显的外部轮廓来区分它们，才能高效工作。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小陈首先注意到一个上下一样粗、两头是圆形的货物，他认出这是圆柱形，于是把它挑出来，放到‘圆形桶’货架。",
+        "mapped_elements": [
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "接着，小陈看到一个所有面都是正方形的货物，他认出这是正方体，便把它放到‘方形盒’货架。",
+        "mapped_elements": [
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "然后，小陈发现一个无论从哪个方向看都是圆形的货物，他认出这是球体，便把它滚到‘圆球’货架。",
+        "mapped_elements": [
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "最后，小陈处理一个长宽高都不同的货物，他认出这是长方体，便把它放到‘长条箱’货架。",
+        "mapped_elements": [
+          "m6"
+        ]
+      }
+    ],
+    "turning_point": "小陈发现，只要先仔细观察货物最外圈的轮廓和面的形状，就能快速判断它属于哪一类，而不会被相似的尺寸或颜色迷惑。",
+    "ending": "小陈成功将所有混合货物按照外形特征分门别类地放到了对应的货架上，仓库变得井井有条，后续的出货效率大大提高。",
+    "implied_moral": "面对复杂多样的对象时，抓住其最显著的外部特征进行比较和区分，是高效组织和管理的关键。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 is strongest because the story provides a detailed, step-by-step enactment of the entrance condition check (checking door log, temperature/humidity log, seal report) with explicit reference to the '通行牌' as the carrier. Node n2 is weakest because the story does not show a distinct second transformation step; instead, it merges the alignment of records (edge e1) with the progression to n2, making the boundary between n2 and the enabling edge e2 blurry. Edge e1 is weakest because the story's evidence for 'relates_to' (two records jointly constraining judgment) is present but the relation is not explicitly distinguished from the enabling relation e2; both edges share the same story event, reducing discriminability."
+  },
+  "revision_instructions": [
+    "Strengthen the distinctiveness of node n2 by showing a concrete action that transforms the aligned records into a new state (e.g., updating a ledger or generating a combined report) rather than just '推进第二道转化环节'.",
+    "Differentiate edge e1 (relates_to) from edge e2 (enables) by assigning separate story events: e.g., use the comparison of records for e1, and a separate step where the compared result triggers the next process for e2.",
+    "Ensure that the story's event chain explicitly maps each mechanism edge to a unique story relation, avoiding reuse of the same sentence for two different edges."
+  ],
+  "final_status": "accept"
+}

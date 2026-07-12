@@ -1,0 +1,139 @@
+{
+  "query": "math_1a_rjb_cpt24",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt24",
+    "label": "Concept",
+    "name": "数字7的认识",
+    "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "数字7的认识\n通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt26",
+        "label": "Concept",
+        "name": "7的加减法",
+        "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt27",
+        "label": "Concept",
+        "name": "数量的比较",
+        "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5_s1",
+        "label": "Section",
+        "name": "6和7",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:16345] 数字7的认识 --prerequisites_for--> 7的加减法\n- [normalized:edge:16383] 数数方法 --prerequisites_for--> 数字7的认识\n- [normalized:edge:19311] 数量的比较 --relates_to--> 数字7的认识"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '数字7的认识', 'definition': '通过数物体、读写数字等方式认识数字7，理解7表示的数量。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:16345] 数字7的认识 --prerequisites_for--> 7的加减法', '[normalized:edge:16383] 数数方法 --prerequisites_for--> 数字7的认识'], 'process_summary': ['[normalized:edge:19311] 数量的比较 --relates_to--> 数字7的认识'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt24",
+      "label": "Concept",
+      "name": "数字7的认识",
+      "properties": {
+        "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+        "importance": "掌握",
+        "pages": "教材第5章相关页面",
+        "retrieval_text": "数字7的认识\nConcept\n通过数物体、读写数字等方式认识数字7，理解7表示的数量。\n掌握\n教材第5章相关页面"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16345",
+        "source": "math_1a_rjb_cpt24",
+        "source_name": "数字7的认识",
+        "target": "math_1a_rjb_cpt26",
+        "target_name": "7的加减法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16383",
+        "source": "math_1a_rjb_skl12",
+        "source_name": "数数方法",
+        "target": "math_1a_rjb_cpt24",
+        "target_name": "数字7的认识",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:19311",
+        "source": "math_1a_rjb_cpt27",
+        "source_name": "数量的比较",
+        "target": "math_1a_rjb_cpt24",
+        "target_name": "数字7的认识",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "数字7的认识",
+        "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:16345] 数字7的认识 --prerequisites_for--> 7的加减法",
+        "[normalized:edge:16383] 数数方法 --prerequisites_for--> 数字7的认识"
+      ],
+      "process_summary": [
+        "[normalized:edge:19311] 数量的比较 --relates_to--> 数字7的认识"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 778,
+      "summary_chars": 370,
+      "path_chars": 0,
+      "retrieval_context_chars": 1148
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 778,
+    "summary_chars": 370,
+    "path_chars": 0,
+    "retrieval_context_chars": 1148
+  }
+}

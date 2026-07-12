@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "区分化学反应和物理混合。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "保留守恒关系和反应前后变化。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:15246",
+      "source_name": "支持燃烧",
+      "target_name": "氧气的检验方法",
+      "relation_semantic_role": "prerequisite"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "verifies",
+      "source_edge_id": "normalized:edge:22566",
+      "source_name": "实验2-2 带火星木条在氧气中的复燃",
+      "target_name": "氧气的检验方法",
+      "relation_semantic_role": "evidence_verification"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:15246",
+    "normalized:edge:22566"
+  ]
+}

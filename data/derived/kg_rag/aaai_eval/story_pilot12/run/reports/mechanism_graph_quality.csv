@@ -1,0 +1,5 @@
+﻿group,records,path_count,retrieval_edge_count,validation_error_count,valid_rate,approved_rate
+biology,20,0.7,2.35,0.0,1.0,1.0
+chemistry,20,1.05,4.25,0.0,1.0,1.0
+math,20,0.0,2.6,0.0,1.0,1.0
+physics,20,0.05,2.75,0.0,1.0,1.0

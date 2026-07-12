@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "先核对入口条件",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二环节的转化数字正好是前者的两倍",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三环节的结果又恰好是第二环节的半数",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "老陈用验收记录册一核",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "站里所有环节的登记，都得先看入口条件是否成立——这是一个共同的规则，就像长度单位里的“米”，无论是量渠宽还是渠深，都得先定好这个基准。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他翻出分段记录册，把三个环节的登记时间、签字人和通行牌编号一一列出来，又找小刘和老陈一起复查。三个人把记录册摊在桌上，逐行比对，发现只要入口条件没核对，后面的数字就像断了线的珠子，怎么也串不起来。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "老周把这件事看在眼里，没有把它当成小刘一个人的马虎，而是想到：站里所有环节的登记，都得先看入口条件是否成立——这是一个共同的规则",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。"
+}

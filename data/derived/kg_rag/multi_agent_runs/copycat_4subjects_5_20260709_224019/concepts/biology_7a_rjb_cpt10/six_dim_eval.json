@@ -1,0 +1,124 @@
+{
+  "concept_id": "biology_7a_rjb_cpt10",
+  "target_concept": "遗传和变异",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "weighted_overall": 4.25,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确表达了子代与亲代在相同特征和不同特征上的关系，母版对应亲代，新件对应子代，保留了轮廓、纹样骨架（遗传）和釉色、纹理差异（变异），没有出现目的论或个体努力导致变化的错误。",
+    "implicitness": "全文未出现'遗传和变异'、'遗传'、'变异'等禁用术语，也没有教材式定义，完全通过瓷器制作过程隐喻表达。",
+    "mapping_clarity": "母版→亲代、新件→子代、轮廓纹样→相同特征、釉色纹理差异→不同特征，映射清晰；但'入口条件核对'、'第2道转化环节'等表述在故事中略显抽象，与核心机制的对应关系不够直观。",
+    "readability": "故事语言流畅自然，情节连贯，人物对话和动作描写生动，适合中学生阅读，没有生硬术语。",
+    "pedagogical_value": "读者能通过母版与新件的对比理解遗传和变异的核心概念，但故事更侧重于流程顺序（先稳定转化再验收），对'遗传和变异是同时存在的现象'这一核心机制的教学支撑稍弱。",
+    "novelty": "瓷器作坊的设定有一定新意，避免了常见的动物家族或植物类比，但'老匠人-学徒-验收员'的人物配置和'流程核对'的情节略显模板化。"
+  },
+  "evidence": {
+    "faithfulness": "故事中母版（亲代）的特征在新件（子代）中保留（轮廓、纹样骨架），同时存在差异（釉色、纹理疏密），符合遗传和变异的定义。没有目的论解释，也没有把个体努力写成进化原因。",
+    "implicitness": "全文未出现'遗传'、'变异'、'遗传和变异'等词，概念完全通过瓷器制作过程隐含表达。",
+    "mapping_clarity": "母版→亲代，新件→子代，轮廓纹样→相同特征，釉色纹理差异→不同特征，映射明确。但'入口条件核对'、'第2道转化环节'等抽象表述与核心机制的对应关系不够直接。",
+    "readability": "故事语言平实，情节有起承转合（年轻匠人尝试倒序失败），对话自然，易于理解。",
+    "pedagogical_value": "读者能理解子代与亲代既有相同又有不同的现象，但故事重点偏向流程顺序，对'遗传和变异是同时存在的'这一核心机制的教学效果有限。",
+    "novelty": "瓷器作坊的设定比常见的动物家族类比更新颖，但'老匠人-学徒'和'流程核对'的情节结构较为常见。"
+  },
+  "revision_suggestions": [
+    "建议在故事中更突出'相同特征和不同特征同时存在'这一核心机制，例如让学徒同时发现新件既有母版的轮廓，又有自己的釉色差异，而不是先强调流程顺序。",
+    "可以简化'入口条件核对'、'第2道转化环节'等抽象表述，直接用更具体的动作（如'比对特征'、'记录差异'）来映射机制节点。",
+    "增加一些细节描写，让母版与新件的相同点和不同点更具体、更生动，以增强教学价值。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确表达了子代与亲代在相同特征和不同特征上的关系，母版对应亲代，新件对应子代，保留了轮廓、纹样骨架（遗传）和釉色、纹理差异（变异），没有出现目的论或个体努力导致变化的错误。",
+      "implicitness": "全文未出现'遗传和变异'、'遗传'、'变异'等禁用术语，也没有教材式定义，完全通过瓷器制作过程隐喻表达。",
+      "mapping_clarity": "母版→亲代、新件→子代、轮廓纹样→相同特征、釉色纹理差异→不同特征，映射清晰；但'入口条件核对'、'第2道转化环节'等表述在故事中略显抽象，与核心机制的对应关系不够直观。",
+      "readability": "故事语言流畅自然，情节连贯，人物对话和动作描写生动，适合中学生阅读，没有生硬术语。",
+      "pedagogical_value": "读者能通过母版与新件的对比理解遗传和变异的核心概念，但故事更侧重于流程顺序（先稳定转化再验收），对'遗传和变异是同时存在的现象'这一核心机制的教学支撑稍弱。",
+      "novelty": "瓷器作坊的设定有一定新意，避免了常见的动物家族或植物类比，但'老匠人-学徒-验收员'的人物配置和'流程核对'的情节略显模板化。"
+    },
+    "evidence": {
+      "faithfulness": "故事中母版（亲代）的特征在新件（子代）中保留（轮廓、纹样骨架），同时存在差异（釉色、纹理疏密），符合遗传和变异的定义。没有目的论解释，也没有把个体努力写成进化原因。",
+      "implicitness": "全文未出现'遗传'、'变异'、'遗传和变异'等词，概念完全通过瓷器制作过程隐含表达。",
+      "mapping_clarity": "母版→亲代，新件→子代，轮廓纹样→相同特征，釉色纹理差异→不同特征，映射明确。但'入口条件核对'、'第2道转化环节'等抽象表述与核心机制的对应关系不够直接。",
+      "readability": "故事语言平实，情节有起承转合（年轻匠人尝试倒序失败），对话自然，易于理解。",
+      "pedagogical_value": "读者能理解子代与亲代既有相同又有不同的现象，但故事重点偏向流程顺序，对'遗传和变异是同时存在的'这一核心机制的教学效果有限。",
+      "novelty": "瓷器作坊的设定比常见的动物家族类比更新颖，但'老匠人-学徒'和'流程核对'的情节结构较为常见。"
+    },
+    "revision_suggestions": [
+      "建议在故事中更突出'相同特征和不同特征同时存在'这一核心机制，例如让学徒同时发现新件既有母版的轮廓，又有自己的釉色差异，而不是先强调流程顺序。",
+      "可以简化'入口条件核对'、'第2道转化环节'等抽象表述，直接用更具体的动作（如'比对特征'、'记录差异'）来映射机制节点。",
+      "增加一些细节描写，让母版与新件的相同点和不同点更具体、更生动，以增强教学价值。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "biology_7a_rjb_cpt10",
+    "target_concept": "遗传和变异",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

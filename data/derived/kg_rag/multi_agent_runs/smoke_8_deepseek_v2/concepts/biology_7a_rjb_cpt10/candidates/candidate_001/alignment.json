@@ -1,0 +1,30 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "多数水果与标准样本一致，少数出现斑点或畸形",
+      "evidence": "货轮靠港时，老徐带着新来的小陈登船抽样。",
+      "narrative_anchor": "货轮靠港时，老徐带着新来的小陈登船抽样。",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "检疫工作属于生物检验领域，需同时考虑遗传和变异",
+      "evidence": "船舱里堆满了一箱箱水果，小陈打开检疫记录本，对照上一批的数据逐项检查。",
+      "narrative_anchor": "船舱里堆满了一箱箱水果，小陈打开检疫记录本，对照上一批的数据逐项检查。",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从多数水果与标准样本一致（遗传）到检疫工作需考虑个体差异（变异）",
+      "evidence": "船舱里堆满了一箱箱水果，小陈打开检疫记录本，对照上一批的数据逐项检查。",
+      "narrative_anchor": "船舱里堆满了一箱箱水果，小陈打开检疫记录本，对照上一批的数据逐项检查。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ]
+}

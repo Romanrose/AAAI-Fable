@@ -1,0 +1,83 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt105",
+    "label": "Concept",
+    "name": "充足的空气（氧气）",
+    "properties": {
+      "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。",
+      "importance": "重要",
+      "aliases": [
+        "充足空气"
+      ],
+      "retrieval_text": "充足的空气（氧气）\nConcept\n种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。\n重要\n充足空气"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt102",
+      "label": "Concept",
+      "name": "种子萌发的环境条件",
+      "properties": {
+        "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+        "importance": "掌握",
+        "examples": [
+          "温度过低（如放入冰箱）不利于萌发",
+          "过于潮湿易使种子霉烂",
+          "松土可使土壤中有充足空气"
+        ],
+        "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:10775",
+      "source": "biology_7a_rjb_cpt105",
+      "source_name": "充足的空气（氧气）",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "充足的空气（氧气）",
+      "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:10775] 充足的空气（氧气） --is_a--> 种子萌发的环境条件"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

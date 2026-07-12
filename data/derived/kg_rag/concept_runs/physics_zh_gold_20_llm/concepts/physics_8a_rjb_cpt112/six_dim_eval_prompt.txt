@@ -1,0 +1,198 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "眼睛调节",
+  "concept_id": "physics_8a_rjb_cpt112",
+  "concept_definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt112",
+    "眼睛调节"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt112",
+      "label": "Concept",
+      "name": "眼睛调节",
+      "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "眼睛调节\n通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt113",
+          "label": "Concept",
+          "name": "远点",
+          "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt114",
+          "label": "Concept",
+          "name": "近点",
+          "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt111",
+          "label": "Concept",
+          "name": "眼睛成像原理",
+          "definition": "晶状体和角膜共同作用相当于凸透镜，把来自物体的光会聚在视网膜上形成像。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s4",
+          "label": "Section",
+          "name": "第四节 眼睛和眼镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt112",
+    "concept_id": "physics_8a_rjb_cpt112",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt112",
+      "label": "Concept",
+      "name": "眼睛调节",
+      "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "眼睛调节"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "阿明通过观察远近物体清晰度的变化，发现眼睛能自动调整以适应不同距离，隐含了眼睛调节的概念。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明在不同楼层观察近处和远处物体时，清晰度交替变化，暗示晶状体形状改变使不同距离物体成像在视网膜上。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中阿明的观察结果取决于距离变化（近处清晰、远处模糊），保留了变量之间的关系；调整过程是自然发生的，非主观意志；方向（近→远）和条件（不同楼层）变化明确。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼里的秘密\n\n小城中心有一座古老的钟楼，每天正午和午夜，钟声都会准时响起。负责守护钟楼的是一位叫阿明的年轻人。他的工作很简单：每天检查钟楼里的齿轮和绳索，确保钟声按时敲响。\n\n阿明发现了一个奇怪的现象：每当他在钟楼底层观察远处山上的信号塔时，塔顶的旗帜总是清晰可见；可当他抬头看钟楼顶层的铜钟时，铜钟上的花纹却变得模糊。他揉了揉眼睛，再仔细看，铜钟的花纹又清晰了，但远处的信号塔却变得朦胧。\n\n“难道是我的眼睛出了问题？”阿明自言自语。他决定做个实验。他先在钟楼底层看近处的钟表刻度盘，刻度清晰；再看远处的山，山影模糊。然后他爬上顶层，看近处的铜钟花纹，花纹清晰；再看远处的田野，田野模糊。无论他在哪一层，近处的东西总是清晰，远处的东西总是模糊。\n\n阿明困惑不已。他想起老师说过，眼睛里有块像透镜一样的晶状体，能改变形状。看近处时，晶状体变凸；看远处时，晶状体变扁。这样，光线才能正好聚焦在视网膜上。阿明恍然大悟：原来不是眼睛出了问题，而是眼睛在自动调整，让不同距离的物体都能看清。\n\n从此，阿明不再担心。他知道，只要眼睛健康，就能通过这种自然的调整，看清远近不同的景物。钟楼的秘密解开了，阿明的工作也做得更好了。",
+  "rule_findings": {
+    "story_token_count": 445,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

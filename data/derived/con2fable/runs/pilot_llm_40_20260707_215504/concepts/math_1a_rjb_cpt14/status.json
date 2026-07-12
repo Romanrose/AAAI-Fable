@@ -1,0 +1,11 @@
+{
+  "concept_id": "math_1a_rjb_cpt14",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "concept_type": "relation",
+  "generation_priority": "gold",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.25,
+  "revision_count": 1
+}

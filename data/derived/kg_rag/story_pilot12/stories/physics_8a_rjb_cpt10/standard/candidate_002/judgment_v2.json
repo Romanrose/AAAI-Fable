@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (process: mechanical motion) is mapped to '瓜被买家评判的过程（个头变化或声音变化）', but the story only describes a static judgment (size comparison, sound check) without any actual position change over time. This weakens the mapping because the core concept of mechanical motion (position change) is absent. Edge e1 (relates_to between n2 and n1) is thus also weakened because the process does not genuinely relate to the standard in a dynamic way. In contrast, node n1 (reference standard) is clearly embodied by the two different judging criteria, and node n3 (relativity) is well illustrated by the conclusion."
+  },
+  "revision_instructions": [
+    "To strengthen node n2, introduce a dynamic element: e.g., the first buyer moves the melon from one spot to another on the scale, or the melon's position changes relative to the stall, to represent mechanical motion. Alternatively, if the mapping plan intended a different process, adjust the story to match the mechanism definition.",
+    "Ensure edge e1 is supported by a clear relation between the process (position change) and the standard (e.g., the buyer uses the scale as a reference to judge the melon's movement).",
+    "Consider adding a brief explanation that the melon's position change is relative to the scale (reference object), to explicitly connect to the mechanism."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt20",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "农夫与果树",
+  "characters": [
+    "农夫",
+    "果树"
+  ],
+  "objects": [
+    "果树上的果实",
+    "果树的枝干",
+    "果树的根系"
+  ],
+  "conflict": "农夫想要收获果实，但果树需要先认识自己的枝干和根系，并学会如何将养分分配到不同的枝干上，才能结出果实。",
+  "event_chain": [
+    "农夫有一棵果树，他首先需要认识果树的枝干和根系（对应n1：认识数字6和7）。",
+    "农夫需要掌握如何将养分分拆到不同的枝干上，确保每个枝干都能得到合适的养分（对应n2：掌握分拆数6和7的所有不同分法）。",
+    "农夫通过将不同枝干上的养分合并，最终让果树结出果实（对应n3：通过将数量合并，理解得到6或7的加法算式）。"
+  ],
+  "turning_point": "农夫意识到，只有先了解果树的枝干和根系，并学会分拆养分，才能通过合并养分让果树结果。",
+  "resolution_state": "农夫成功通过合并不同枝干的养分，让果树结出了果实。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫认识果树的枝干和根系",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫掌握将养分分拆到不同枝干的方法",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫通过合并不同枝干的养分让果树结果",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识果树的枝干和根系（n1）与农夫通过合并养分让果树结果（n3）相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫掌握分拆养分的方法（n2）使得农夫能够通过合并养分让果树结果（n3）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'6和7的加法'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事连贯，使用单一的农夫与果树领域。"
+  ],
+  "mapping_context_sha256": "22ce94de277cb30f5390454acb2b188650daea5d63d1688f2dc68353c1459f34",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "aa0e9c36787f574fe5b0ff2284707d5b2fbb03d76baa92581acc471aaabd307b"
+  }
+}

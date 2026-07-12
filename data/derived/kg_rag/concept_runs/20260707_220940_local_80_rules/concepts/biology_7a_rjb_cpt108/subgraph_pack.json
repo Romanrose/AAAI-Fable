@@ -1,0 +1,85 @@
+{
+  "query": "biology_7a_rjb_cpt108",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt108",
+    "label": "Concept",
+    "name": "种子萌发的过程",
+    "definition": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "种子萌发的过程\n种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": ""
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '种子萌发的过程', 'definition': '种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。', 'formula': '', 'importance': '掌握'}, 'condition_summary': [], 'process_summary': [], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt108",
+      "label": "Concept",
+      "name": "种子萌发的过程",
+      "properties": {
+        "definition": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+        "importance": "掌握",
+        "retrieval_text": "种子萌发的过程\nConcept\n种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。\n掌握"
+      }
+    },
+    "raw_edges": [],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "种子萌发的过程",
+        "definition": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 0,
+      "candidate_edge_count": 0,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 2,
+      "summary_chars": 226,
+      "path_chars": 0,
+      "retrieval_context_chars": 228
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 0,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2,
+    "summary_chars": 226,
+    "path_chars": 0,
+    "retrieval_context_chars": 228
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt101",
+  "seed": {
+    "id": "biology_7a_rjb_cpt101",
+    "label": "Concept",
+    "name": "种子萌发",
+    "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+    "importance": "掌握",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+  },
+  "source_domain": "garden workshop",
+  "entities": [
+    "a careful caretaker",
+    "a plot that depends on the right conditions",
+    "tools and routines that reveal whether growth is real"
+  ],
+  "event_chain": [
+    "The caretaker prepares the conditions that must already be in place.",
+    "The plot uses those conditions to produce visible growth.",
+    "Nearby processes either support or compete with that growth.",
+    "Observation and trials reveal whether the growth is genuine and sustained."
+  ],
+  "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+  "turning_point": "A visible change reveals which condition actually controls the outcome.",
+  "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+  "alignment_plan": [
+    {
+      "concept_role": "target concept",
+      "concept_items": [
+        "种子萌发"
+      ],
+      "story_role": "central productive process"
+    },
+    {
+      "concept_role": "prerequisites",
+      "concept_items": [
+        "种子萌发的环境条件",
+        "种子萌发的自身条件"
+      ],
+      "story_role": "conditions or resources that must be prepared first"
+    },
+    {
+      "concept_role": "related concepts",
+      "concept_items": [],
+      "story_role": "neighboring processes that contextualize or contrast the main process"
+    },
+    {
+      "concept_role": "outcomes",
+      "concept_items": [],
+      "story_role": "visible consequences produced by the core process"
+    },
+    {
+      "concept_role": "experiments",
+      "concept_items": [],
+      "story_role": "tests that reveal whether the process truly happened"
+    },
+    {
+      "concept_role": "exercises",
+      "concept_items": [],
+      "story_role": "follow-up checks that reinforce the lesson"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "source_domain": "铸造工坊",
+  "characters": [
+    "记录员",
+    "调度员",
+    "验收员"
+  ],
+  "objects": [
+    "分段记录册",
+    "封存箱",
+    "通行牌"
+  ],
+  "conflict": "铸造工坊里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。",
+  "event_chain": [
+    "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+    "因此，先稳定铸造工坊中的入口条件核对，再推动铸造工坊中的第2道转化环节，前后两步必须能在记录中互相承接。",
+    "因此，先稳定铸造工坊中的第2道转化环节，再推动铸造工坊中的结果验收记录，前后两步必须能在记录中互相承接。",
+    "有人试着倒过来安排，却发现只有先稳定铸造工坊中的入口条件核对，再推动铸造工坊中的第2道转化环节，后面的验收才可能接上先稳定铸造工坊中的第2道转化环节，再推动铸造工坊中的结果验收记录。",
+    "主角先在铸造工坊中确认铸造工坊中的入口条件核对是否成立。",
+    "随后，铸造工坊中的第2道转化环节按前一步留下的条件继续推进。",
+    "最后，众人用铸造工坊中的结果验收记录核对整条安排是否得到可靠结果。"
+  ],
+  "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。",
+  "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。",
+  "mapping_plan": [
+    {
+      "concept_role_id": "reactants",
+      "role_label": "反应物",
+      "role_type": "input",
+      "story_role": "铸造工坊中的入库前的原始材料"
+    },
+    {
+      "concept_role_id": "condition",
+      "role_label": "条件",
+      "role_type": "condition",
+      "story_role": "铸造工坊中的入场前必须核对的条件牌"
+    },
+    {
+      "concept_role_id": "change",
+      "role_label": "变化",
+      "role_type": "process",
+      "story_role": "铸造工坊中的按顺序推进的中间流程"
+    },
+    {
+      "concept_role_id": "conservation",
+      "role_label": "守恒",
+      "role_type": "constraint",
+      "story_role": "铸造工坊中的不能被破坏的登记规则"
+    },
+    {
+      "concept_role_id": "state",
+      "role_label": "状态",
+      "role_type": "state",
+      "story_role": "铸造工坊中的被记录下来的状态标签"
+    },
+    {
+      "source_edge_id": "normalized:edge:14999",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "大气压强",
+      "target_name": "沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:15075",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "条件对物质性质的影响",
+      "target_name": "沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14995",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "氧气的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14992",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "水的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14993",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "铁的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14994",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "铝的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:18222",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "沸点",
+      "target_name": "大气压强"
+    },
+    {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "story_role": "铸造工坊中的入口条件核对"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "区分化学反应和物理混合。",
+      "story_role": "铸造工坊中的第2道转化环节"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "保留守恒关系和反应前后变化。",
+      "story_role": "铸造工坊中的结果验收记录"
+    },
+    {
+      "mechanism_edge_id": "e1",
+      "kg_relation": "prerequisites_for",
+      "story_relation": "先稳定铸造工坊中的入口条件核对，再推动铸造工坊中的第2道转化环节",
+      "source_edge_id": "normalized:edge:14999"
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "kg_relation": "prerequisites_for",
+      "story_relation": "先稳定铸造工坊中的第2道转化环节，再推动铸造工坊中的结果验收记录",
+      "source_edge_id": "normalized:edge:15075"
+    }
+  ],
+  "concept_role_mappings": [
+    {
+      "concept_role_id": "reactants",
+      "role_label": "反应物",
+      "role_type": "input",
+      "story_role": "铸造工坊中的入库前的原始材料"
+    },
+    {
+      "concept_role_id": "condition",
+      "role_label": "条件",
+      "role_type": "condition",
+      "story_role": "铸造工坊中的入场前必须核对的条件牌"
+    },
+    {
+      "concept_role_id": "change",
+      "role_label": "变化",
+      "role_type": "process",
+      "story_role": "铸造工坊中的按顺序推进的中间流程"
+    },
+    {
+      "concept_role_id": "conservation",
+      "role_label": "守恒",
+      "role_type": "constraint",
+      "story_role": "铸造工坊中的不能被破坏的登记规则"
+    },
+    {
+      "concept_role_id": "state",
+      "role_label": "状态",
+      "role_type": "state",
+      "story_role": "铸造工坊中的被记录下来的状态标签"
+    }
+  ],
+  "concept_relation_mappings": [
+    {
+      "source_edge_id": "normalized:edge:14999",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "大气压强",
+      "target_name": "沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:15075",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "条件对物质性质的影响",
+      "target_name": "沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14995",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "氧气的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14992",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "水的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14993",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "铁的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:14994",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认铸造工坊里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "沸点",
+      "target_name": "铝的熔点和沸点"
+    },
+    {
+      "source_edge_id": "normalized:edge:18222",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "沸点",
+      "target_name": "大气压强"
+    }
+  ],
+  "risk_notes": [
+    "正文不能出现目标概念名、别名或禁用术语。",
+    "事件必须保留 GraphRAG 概念关系的类型语义，不要把 is_a、verifies、relates_to 全部写成顺序因果。"
+  ]
+}

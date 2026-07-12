@@ -1,0 +1,85 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt11",
+  "concept_id": "biology_7a_rjb_cpt11",
+  "story_language": "zh-CN",
+  "source_domain": "屋顶育苗棚",
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "event_chain": [
+    "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 组织",
+    "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则是基本的生命系统",
+    "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则是生命活动的基本单位",
+    "让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 病毒"
+  ],
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 组织"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则是基本的生命系统"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则是生命活动的基本单位"
+    },
+    {
+      "mechanism_step_id": "s4",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 病毒"
+    }
+  ],
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "细胞"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "细胞 --prerequisites_for--> 组织",
+        "细胞 --prerequisites_for--> 细胞是基本的生命系统",
+        "细胞 --prerequisites_for--> 细胞是生命活动的基本单位",
+        "细胞 --relates_to--> 病毒"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "避免目的论解释。",
+        "避免把个体努力写成进化原因。",
+        "保留生命系统的条件、过程和结果。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

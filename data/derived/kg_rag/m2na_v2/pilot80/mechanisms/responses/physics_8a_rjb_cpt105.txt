@@ -1,0 +1,94 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "物体位于焦点以内",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt95:definition",
+          "kg-edge:normalized:edge:17245"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "outcome",
+        "text": "放大、正立的虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-node:physics_8a_rjb_cpt82:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "state",
+        "text": "虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt82:definition",
+          "kg-edge:normalized:edge:12421"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-edge:normalized:edge:17245"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-node:physics_8a_rjb_cpt95:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-node:physics_8a_rjb_cpt82:definition",
+          "kg-edge:normalized:edge:12421"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "target_concept": {
+    "id": "math_1a_rjb_cpt13",
+    "name": "数字0的含义",
+    "label": "Concept",
+    "definition": "表示没有数量。"
+  },
+  "neighbors": [],
+  "relations": [],
+  "raw_edge_count": 0,
+  "source": "dual_level_graphrag"
+}

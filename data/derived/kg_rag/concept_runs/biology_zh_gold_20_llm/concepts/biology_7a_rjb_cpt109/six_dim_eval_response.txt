@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完全忠实于概念定义：通过100粒种子样本的发芽数（62粒）推算出整批种子的发芽比例，并据此指导播种量，准确体现了发芽率作为种子质量评价和播种指导工具的核心含义。",
+    "implicitness": "故事全程未出现‘发芽率’一词，而是用‘数出100粒’、‘记录发芽数’、‘六成能成活’等情节自然隐含概念，符合禁止术语的要求。",
+    "mapping_clarity": "故事中阿明的小试验（湿布包裹100粒种子、每日记录发芽数）清晰映射了‘供检测的种子中能够萌发的比例’这一机制；阿福的解释和后续播种决策则映射了‘评价种子质量并指导播种’的应用。",
+    "readability": "语言流畅自然，情节简单易懂，对话生动，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过师徒对话和动手实验，完整展示了发芽率的测定方法、计算逻辑和实际应用（调整播种量、挑选优质种子），教学价值高。",
+    "novelty": "故事以园圃试验为背景，虽未使用常见比喻，但整体情节较为常规，缺乏出人意料的视角或创意转折。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个意外转折，例如种子因储存条件不同导致发芽率差异，增强新颖性。",
+    "可加入不同批次种子发芽率的对比，进一步强化‘指导播种’的决策过程。"
+  ]
+}

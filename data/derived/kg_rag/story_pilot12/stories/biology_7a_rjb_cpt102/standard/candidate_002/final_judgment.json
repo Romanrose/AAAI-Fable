@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n6",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story excels in mapping the evidence node (n6) with a detailed, explicit four-pot comparison experiment that mirrors the original biology experiment. The process node (n2) is only briefly mentioned at the end ('一只完美的陶器稳稳立在其中'), which is sufficient but less elaborated than other nodes. Edge e1 (condition enables process) is implicitly conveyed through the entire narrative arc but could be more explicitly stated as a causal link."
+  },
+  "revision_instructions": [
+    "No revisions needed; all requirements are met."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

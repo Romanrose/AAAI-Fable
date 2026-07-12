@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "城市交通系统",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "需要燃油和电力",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "排放尾气和散热",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "排出废机油和旧轮胎",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "旧线路在延长，新线路在诞生",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "一条新的地铁线路正在建设中",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "时刻表在传承中不断优化，路线在调整中更加合理",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "城市交通系统由无数个单元构成：每一个公交站、每一辆出租车、每一段铁轨、每一盏信号灯",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "它需要燃油和电力才能奔跑",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "发动机轰鸣，排气管吐出白色的水汽，散热器呼出滚烫的空气——这就是它的呼吸",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "排出废机油和旧轮胎",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "旧线路在延长，新线路在诞生",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "一条新的地铁线路正在建设中",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "时刻表在传承中不断优化，路线在调整中更加合理",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "城市交通系统由无数个单元构成：每一个公交站、每一辆出租车、每一段铁轨、每一盏信号灯",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接或间接的对应证据，方向一致，无缺失。"
+}

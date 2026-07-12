@@ -1,0 +1,194 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt116",
+    "subject": "biology",
+    "canonical_name": "异花传粉",
+    "aliases": [],
+    "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+    "concept_type": "process",
+    "forbidden_terms": [
+      "异花传粉"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "异花传粉：花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "传粉：花粉从花药散放而落到雌蕊柱头上的过程。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt114:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "自花传粉：一朵花的花粉落到同一朵花柱头上的传粉现象。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "受精：精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt117:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10779"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10778"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14139"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "异花传粉"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt116",
+      "name": "异花传粉",
+      "label": "Concept",
+      "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt114",
+        "name": "传粉"
+      },
+      {
+        "id": "biology_7a_rjb_cpt117",
+        "name": "受精"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:10779",
+        "source_id": "biology_7a_rjb_cpt116",
+        "source_name": "异花传粉",
+        "target_id": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt114",
+        "neighbor_name": "传粉",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:14139",
+        "source_id": "biology_7a_rjb_cpt114",
+        "source_name": "传粉",
+        "target_id": "biology_7a_rjb_cpt117",
+        "target_name": "受精",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "biology_7a_rjb_cpt117",
+        "neighbor_name": "受精",
+        "score": 1.15,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:10778",
+        "source_id": "biology_7a_rjb_cpt115",
+        "source_name": "自花传粉",
+        "target_id": "biology_7a_rjb_cpt114",
+        "target_name": "传粉",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "undirected",
+        "neighbor_id": "biology_7a_rjb_cpt114",
+        "neighbor_name": "传粉",
+        "score": 1.0,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "异花传粉",
+      "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精"
+    ],
+    "process_summary": [
+      "[normalized:edge:10779] 异花传粉 --is_a--> 传粉",
+      "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:10779",
+    "normalized:edge:14139",
+    "normalized:edge:10778"
+  ],
+  "provenance": {
+    "seed_sha256": "293bac7be21fe63bee97ebe8fb5227aa10dfbfe95c6af908357b0acb2a0c94dc",
+    "retrieval_sha256": "46f6d824f06b02d86275e86ca4e492d75309568538f61071ea1123feef3aba45",
+    "mechanism_record_sha256": "844d35cb97156e2c17c85bf9c222c95de102e35e4480d521cbc2e8da60ce4514"
+  }
+}

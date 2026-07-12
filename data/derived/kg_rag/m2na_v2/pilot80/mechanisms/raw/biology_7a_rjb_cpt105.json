@@ -1,0 +1,111 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt105",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "充足的空气（氧气）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "种子萌发的环境条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "种子萌发需要有空气以保证呼吸等生命活动",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "种子萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt102:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10775"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt102:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "充足的空气（氧气）",
+      "充足空气"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "bdbb61f392c7b8c166590d058d06ed37bb7f8ed41f6d6253c45de2788fefd88b",
+    "retrieval_sha256": "be9f97d1ffb9123b7104097dd6bcd932fa2e98dd22389275cc9c0353504958e3",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "040f1c608b2c3be2e12de4bb696833fdefe0d74e38e42bf9ac3798f87d2f7774"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

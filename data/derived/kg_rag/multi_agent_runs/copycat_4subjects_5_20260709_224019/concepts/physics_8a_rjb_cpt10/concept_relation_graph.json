@@ -1,0 +1,64 @@
+{
+  "target_concept": {
+    "id": "physics_8a_rjb_cpt10",
+    "name": "参照物",
+    "label": "Concept",
+    "definition": "判断物体运动或静止时所选取的标准物体。"
+  },
+  "neighbors": [
+    {
+      "id": "physics_8a_rjb_cpt9",
+      "name": "运动与静止的相对性"
+    },
+    {
+      "id": "physics_8a_rjb_cpt8",
+      "name": "机械运动"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:17189",
+      "source_id": "physics_8a_rjb_cpt10",
+      "source_name": "参照物",
+      "target_id": "physics_8a_rjb_cpt9",
+      "target_name": "运动与静止的相对性",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "outgoing",
+      "neighbor_id": "physics_8a_rjb_cpt9",
+      "neighbor_name": "运动与静止的相对性",
+      "score": 1.35,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:19745",
+      "source_id": "physics_8a_rjb_cpt8",
+      "source_name": "机械运动",
+      "target_id": "physics_8a_rjb_cpt10",
+      "target_name": "参照物",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_cpt8",
+      "neighbor_name": "机械运动",
+      "score": 0.9,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:19747",
+      "source_id": "physics_8a_rjb_cpt9",
+      "source_name": "运动与静止的相对性",
+      "target_id": "physics_8a_rjb_cpt10",
+      "target_name": "参照物",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_cpt9",
+      "neighbor_name": "运动与静止的相对性",
+      "score": 0.9,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 3,
+  "source": "dual_level_graphrag"
+}

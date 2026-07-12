@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫种瓜的故事",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "瓜苗",
+    "瓜藤",
+    "瓜田",
+    "瓜"
+  ],
+  "conflict": "农夫想知道瓜苗与瓜藤的距离如何影响瓜的生长和成熟，但缺乏经验。",
+  "event_chain": [
+    "农夫在瓜田里种下瓜苗",
+    "瓜苗生长，瓜藤延伸",
+    "农夫测量瓜苗到瓜藤的距离",
+    "农夫根据距离调整浇水施肥",
+    "瓜藤结出瓜",
+    "农夫收获瓜"
+  ],
+  "turning_point": "农夫发现瓜苗到瓜藤的距离决定了瓜的大小和甜度，从而掌握了种瓜的规律。",
+  "resolution_state": "农夫成功种出好瓜，并总结出种瓜经验。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "瓜苗到瓜藤的距离",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "瓜苗到瓜藤的距离",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "瓜到瓜藤的距离",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "种瓜经验",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "瓜苗到瓜藤的距离就是瓜苗到瓜藤的距离",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "瓜苗到瓜藤的距离与瓜到瓜藤的距离相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "瓜苗到瓜藤的距离使农夫能总结种瓜经验",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中'瓜苗到瓜藤的距离'与'物距'的映射可能不够直观，但避免了使用'物距'等禁忌词。",
+    "确保'瓜苗到瓜藤的距离'作为条件节点n1被保留，且e1方向正确。",
+    "注意'瓜到瓜藤的距离'对应'像距'，但故事中未直接出现'像距'一词。"
+  ],
+  "mapping_context_sha256": "fa097a8c4eed533b813ccfbd9697c0118ba2b3174970a01d288af42ad30adb53",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5b9fd48eeec7d2c9e273d35250290828e32ceb336967ca4f4617602087e7d59b"
+  }
+}

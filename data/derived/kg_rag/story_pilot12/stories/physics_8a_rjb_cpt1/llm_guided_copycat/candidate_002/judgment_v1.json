@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Edge e1 (is_a) is only weakly realized: the story says '公里是王国的法定度量' but does not explicitly state that '公里' is a quantification of '实际距离' (n1). The mapping plan requires '距离单位（公里）是实际距离的一种量化表示', yet the story merely mentions both concepts without linking them as a subclass or quantification relation. This makes e1 the weakest edge. In contrast, n3 (measurement process) is vividly and accurately depicted with step-by-step actions, making it the strongest node."
+  },
+  "revision_instructions": [
+    "Strengthen edge e1: explicitly state that '公里' is the unit used to quantify the actual distance between the two cities, e.g., '实际距离需要用公里这样的单位来量化'.",
+    "Ensure that the story explicitly mentions the 'is_a' relation between n2 and n1, not just co-occurrence."
+  ],
+  "final_status": "revise"
+}

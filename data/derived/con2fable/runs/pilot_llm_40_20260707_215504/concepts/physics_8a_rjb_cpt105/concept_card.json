@@ -1,0 +1,58 @@
+{
+  "concept_id": "physics_8a_rjb_cpt105",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "放大镜成像",
+  "definition": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt95",
+        "label": "Concept",
+        "name": "凸透镜",
+        "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt82",
+        "label": "Concept",
+        "name": "虚像",
+        "definition": "光线通过透镜后并未真正会聚，人眼倒推光线形成的像，不能被光屏承接，物体与像在透镜同侧。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s2",
+        "label": "Section",
+        "name": "第二节 生活中的透镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "放大镜成像"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

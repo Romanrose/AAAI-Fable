@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n4",
+    "weakest_edge_id": "e3",
+    "distinguishing_reason": "The story maps n4 (condition: 物体远离凸透镜) to '第四道转化环节' but the story's '第四道转化环节' is treated as a sequential step rather than a specific condition that enables the process. The edge e3 (n4 enables n3) is weakly realized because the story does not show how the condition (物体远离凸透镜) specifically enables the process (照相机成像); instead, it merely mentions '第四道转化环节的数据' without establishing the enabling relation. In contrast, n1 (凸透镜) is strongly mapped to '入口条件核对' which is clearly shown as a prerequisite that enables subsequent steps, matching the 'enables' relation of e1."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping for node n4: explicitly show that '第四道转化环节' represents a specific condition (e.g., '物体远离凸透镜') that must be met before the process can proceed, not just a sequential step.",
+    "Clarify edge e3: add a sentence or action that demonstrates how the condition (第四道转化环节) enables the process (第三道转化环节), e.g., '老陈确认第四道转化环节的条件满足后，才允许第三道转化环节开始计算转化系数.'",
+    "Improve edge e4: the story currently only mentions '第五道转化环节' without showing the 'produces' relation from the process to the outcome. Add explicit evidence that the process produces the outcome, e.g., '第三道转化环节完成后，产生了第五道转化环节所需的缩小倒立实像数据.'",
+    "Ensure all edge mappings have distinct story evidence rather than reusing the same phrase '主角把两份相关记录放在一起比较' for multiple edges, which weakens mapping clarity."
+  ],
+  "final_status": "revise"
+}

@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "花粉从花药散放而落到雌蕊柱头上的过程。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：异花传粉",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m3",
+      "text": "需要保留上下位关系：自花传粉",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m4",
+      "text": "与相关概念保持可解释关系：受精",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14139"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10779"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10778"
+    }
+  ]
+}

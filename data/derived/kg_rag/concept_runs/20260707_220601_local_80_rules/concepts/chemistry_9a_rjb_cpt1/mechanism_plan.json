@@ -1,0 +1,64 @@
+{
+  "core_question": "物质的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "物质 --prerequisites_for--> 物质的变化",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:14991"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "区分化学反应和物理混合。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s4",
+      "text": "保留守恒关系和反应前后变化。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:14991"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "物质",
+    "chemistry_9a_rjb_cpt1"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:14991"
+    ],
+    "must_cover_path_ids": []
+  }
+}

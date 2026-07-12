@@ -1,0 +1,116 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt104",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt95:definition",
+          "kg-node:physics_8a_rjb_cpt95:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "物体靠近凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt104:definition",
+          "kg-node:physics_8a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "透镜在投影屏幕上形成放大、倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt104:definition",
+          "kg-node:physics_8a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt102:definition",
+          "kg-node:physics_8a_rjb_cpt102:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17244"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt104:definition",
+          "kg-node:physics_8a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12420",
+          "kg-node:physics_8a_rjb_cpt104:definition",
+          "kg-node:physics_8a_rjb_cpt104:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "投影仪成像"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "5bcb449b0bf698bfeab10b27b6ec7d72324ac4c21adf8b5e036c08925eff4b69",
+    "retrieval_sha256": "e8d169eac9db393eb49d4570338be6bdda4354c9d1e492949c1fa7316100ee9d",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "a09674bb0afbe9e0633b8c0d541dfd083d093f67f540099168317177e080398d"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

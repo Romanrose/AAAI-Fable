@@ -1,0 +1,23 @@
+You are a structure-mapping planner for concept-to-story generation.
+Use only the retrieved graph-grounded information.
+Transform the concept neighborhood into a story skeleton that can later support fable generation.
+
+Target Concept: 生物
+Definition: 具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。
+Prerequisites:
+- None
+Related Concepts:
+- None
+Downstream Outcomes:
+- None
+
+Produce:
+- source_domain
+- entities
+- event_chain
+- conflict
+- turning_point
+- resolution_state
+- concept_to_story_alignment
+
+The output should preserve the concept mechanism and remain suitable for later fable generation.

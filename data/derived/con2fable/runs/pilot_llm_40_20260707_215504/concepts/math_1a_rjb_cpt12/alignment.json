@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "从5个苹果里拿出3个，篮子里还剩2个",
+      "evidence": "我从5个苹果里拿出3个，篮子里还剩2个",
+      "narrative_anchor": "我从5个苹果里拿出3个，篮子里还剩2个"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "数出5个苹果和3个苹果",
+      "evidence": "篮子里原来有5个苹果",
+      "narrative_anchor": "篮子里原来有5个苹果"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "在知道篮子里有5个苹果的基础上，拿出3个，得到剩余2个",
+      "evidence": "我从5个苹果里拿出3个，篮子里还剩2个",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "我从5个苹果里拿出3个，篮子里还剩2个"
+    }
+  ]
+}

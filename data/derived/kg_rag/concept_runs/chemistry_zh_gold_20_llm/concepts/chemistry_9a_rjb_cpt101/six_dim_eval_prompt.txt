@@ -1,0 +1,199 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "氧气的检验方法",
+  "concept_id": "chemistry_9a_rjb_cpt101",
+  "concept_definition": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt101",
+    "氧气的检验方法"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt101",
+      "label": "Concept",
+      "name": "氧气的检验方法",
+      "definition": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "氧气的检验方法\n验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt89",
+          "label": "Concept",
+          "name": "支持燃烧",
+          "definition": "某种气体能使可燃物继续或更加剧烈地燃烧或复燃的性质，氧气具有能支持燃烧的特性。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp13",
+          "label": "Experiment",
+          "name": "实验2-2 带火星木条在氧气中的复燃",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "chemistry_9a_rjb_exe12",
+          "label": "Exercise",
+          "name": "验证一瓶无色气体是氧气的简单方法是什么？说明理由。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s2",
+          "label": "Section",
+          "name": "课题2 氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt101",
+    "concept_id": "chemistry_9a_rjb_cpt101",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt101",
+      "label": "Concept",
+      "name": "氧气的检验方法",
+      "definition": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "氧气的检验方法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "小石通过带火星的木条测试两瓶无色气体，发现其中一瓶能让木条复燃，从而分辨出能助燃的气体。这隐含了验证氧气的方法：用带火星的木条伸入气体中，若木条复燃，则该气体为氧气。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事中，小石用带火星的木条测试气体，木条在第二瓶气体中复燃，揭示了该气体能支持燃烧的特性。这对应了氧气检验方法的核心机制：氧气能使带火星的木条复燃。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事避免了直接提及化学式或元素符号，如‘氧气’或‘O2’，而是用‘能助燃的气体’代替。同时，强调了木条复燃是化学反应（燃烧）的结果，而非物理混合，符合区分化学反应和物理混合的约束。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房的秘密\n\n从前，在一个繁华的城邦里，有一位年轻的账房学徒，名叫小石。他负责管理城邦的粮仓，每天都要检查粮仓里的空气是否适合储存粮食。老账房先生告诉他：“粮仓里有一种无色无味的气体，它能让粮食保持新鲜，但也会让火苗烧得更旺。你要学会分辨它。”\n\n一天，小石发现粮仓里有两瓶无色气体，标签都模糊了。他记得老账房先生说过，其中一瓶是那种能助燃的气体，另一瓶则是普通空气。小石想：“我该怎么区分它们呢？”\n\n他找来一根干燥的木条，点燃后吹灭，只留下一点火星。他小心翼翼地将木条伸入第一瓶气体中，木条只是微微闪了一下，便熄灭了。小石摇摇头，又用同样的方法测试第二瓶气体。这次，木条上的火星突然变得明亮，重新燃起了火焰，发出温暖的光芒。\n\n小石恍然大悟：“原来，能让火星重新燃烧的气体，就是那种能助燃的气体！”他高兴地跑去告诉老账房先生。先生微笑着点头：“你学会了分辨的方法。记住，关键不是看气体本身，而是看它如何影响火苗。”\n\n从此，小石每次检查粮仓，都会用这根带火星的木条来验证气体。他明白了：真正的智慧，在于观察事物之间的相互作用，而不是只看表面。",
+  "rule_findings": {
+    "story_token_count": 409,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

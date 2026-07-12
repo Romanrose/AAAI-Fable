@@ -1,0 +1,49 @@
+{
+  "seed": {
+    "id": "biology_7a_rjb_cpt116",
+    "resolved_node_id": "biology_7a_rjb_cpt116",
+    "name": "异花传粉",
+    "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_10779",
+      "source_id": "biology_7a_rjb_cpt116",
+      "source_name": "异花传粉",
+      "target_id": "biology_7a_rjb_cpt114",
+      "target_name": "传粉",
+      "relation": "is_a",
+      "score": 1.02
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "传粉"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 1,
+    "selected_edge_count": 1,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

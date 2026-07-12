@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt124",
+  "target_concept": "质量",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过大锤和小锤的对比，准确体现了‘物体所含物质多少的量度，质量大的物体运动状态不容易改变’这一核心机制，没有歪曲或遗漏关键关系。",
+    "implicitness": "目标概念‘质量’及其别名从未在故事正文中出现，完全通过铜锤的大小、含铜量多少以及运动状态改变的难易程度来暗示，隐含性极佳。",
+    "mapping_clarity": "大锤对应质量大的物体，小锤对应质量小的物体，用同样力气拉动时摆动速度的差异清晰映射了质量与运动状态改变难易的关系，映射明确且一致。",
+    "readability": "故事语言流畅自然，情节简单易懂，角色和场景贴近生活，适合目标读者理解，可读性很高。",
+    "pedagogical_value": "故事通过观察、实验和请教老师傅的过程，引导学生理解质量概念，并隐含了控制变量和对比实验的思想，教学价值突出。",
+    "novelty": "将质量概念融入钟楼铜锤的日常维护场景有一定新意，但整体情节较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个情节，如小乐尝试改变铜锤的形状或位置，观察运动状态是否改变，以更全面地体现质量守恒。",
+    "可稍微强化‘加速度与质量的反比关系’的暗示，例如通过不同力度拉动的定量描述。"
+  ],
+  "rule_findings": {
+    "story_token_count": 530,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过大锤和小锤的对比，准确体现了‘物体所含物质多少的量度，质量大的物体运动状态不容易改变’这一核心机制，没有歪曲或遗漏关键关系。",
+      "implicitness": "目标概念‘质量’及其别名从未在故事正文中出现，完全通过铜锤的大小、含铜量多少以及运动状态改变的难易程度来暗示，隐含性极佳。",
+      "mapping_clarity": "大锤对应质量大的物体，小锤对应质量小的物体，用同样力气拉动时摆动速度的差异清晰映射了质量与运动状态改变难易的关系，映射明确且一致。",
+      "readability": "故事语言流畅自然，情节简单易懂，角色和场景贴近生活，适合目标读者理解，可读性很高。",
+      "pedagogical_value": "故事通过观察、实验和请教老师傅的过程，引导学生理解质量概念，并隐含了控制变量和对比实验的思想，教学价值突出。",
+      "novelty": "将质量概念融入钟楼铜锤的日常维护场景有一定新意，但整体情节较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个情节，如小乐尝试改变铜锤的形状或位置，观察运动状态是否改变，以更全面地体现质量守恒。",
+      "可稍微强化‘加速度与质量的反比关系’的暗示，例如通过不同力度拉动的定量描述。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

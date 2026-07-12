@@ -1,0 +1,222 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt116",
+    "label": "Concept",
+    "name": "异花传粉",
+    "properties": {
+      "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+      "importance": "掌握",
+      "examples": [
+        "玉米传粉主要依靠风",
+        "鼠尾草、油菜可依靠昆虫",
+        "人工异花传粉用于杂交实验"
+      ],
+      "retrieval_text": "异花传粉\nConcept\n花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。\n掌握\n玉米传粉主要依靠风\n鼠尾草、油菜可依靠昆虫\n人工异花传粉用于杂交实验"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt114",
+      "label": "Concept",
+      "name": "传粉",
+      "properties": {
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+        "importance": "掌握",
+        "retrieval_text": "传粉\nConcept\n花粉从花药散放而落到雌蕊柱头上的过程。\n掌握"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt115",
+      "label": "Concept",
+      "name": "自花传粉",
+      "properties": {
+        "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。",
+        "importance": "了解",
+        "examples": [
+          "小麦、水稻、豌豆可自花传粉"
+        ],
+        "retrieval_text": "自花传粉\nConcept\n一朵花的花粉落到同一朵花柱头上的传粉现象。\n了解\n小麦、水稻、豌豆可自花传粉"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt117",
+      "label": "Concept",
+      "name": "受精",
+      "properties": {
+        "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+        "importance": "掌握",
+        "aliases": [
+          "fertilization"
+        ],
+        "retrieval_text": "受精\nConcept\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。\n掌握\nfertilization"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:10779",
+      "source": "biology_7a_rjb_cpt116",
+      "source_name": "异花传粉",
+      "target": "biology_7a_rjb_cpt114",
+      "target_name": "传粉",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:14139",
+      "source": "biology_7a_rjb_cpt114",
+      "source_name": "传粉",
+      "target": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.15,
+      "hop": 2,
+      "retrieval_role": "semantic_second_hop",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10778",
+      "source": "biology_7a_rjb_cpt115",
+      "source_name": "自花传粉",
+      "target": "biology_7a_rjb_cpt114",
+      "target_name": "传粉",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.0,
+      "hop": 2,
+      "retrieval_role": "semantic_second_hop",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [
+    {
+      "path_kind": "semantic_relation_path",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt116",
+        "biology_7a_rjb_cpt114",
+        "biology_7a_rjb_cpt117"
+      ],
+      "node_names": [
+        "异花传粉",
+        "传粉",
+        "受精"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:10779",
+          "source": "biology_7a_rjb_cpt116",
+          "source_name": "异花传粉",
+          "target": "biology_7a_rjb_cpt114",
+          "target_name": "传粉",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "score": 1.2,
+          "hop": 1,
+          "retrieval_role": "core_direct",
+          "evidence_eligible": true
+        },
+        {
+          "source_edge_id": "normalized:edge:14139",
+          "source": "biology_7a_rjb_cpt114",
+          "source_name": "传粉",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "score": 1.15,
+          "hop": 2,
+          "retrieval_role": "semantic_second_hop",
+          "evidence_eligible": true
+        }
+      ],
+      "score": 1.9475
+    },
+    {
+      "path_kind": "semantic_relation_path",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt116",
+        "biology_7a_rjb_cpt114",
+        "biology_7a_rjb_cpt115"
+      ],
+      "node_names": [
+        "异花传粉",
+        "传粉",
+        "自花传粉"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:10779",
+          "source": "biology_7a_rjb_cpt116",
+          "source_name": "异花传粉",
+          "target": "biology_7a_rjb_cpt114",
+          "target_name": "传粉",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "score": 1.2,
+          "hop": 1,
+          "retrieval_role": "core_direct",
+          "evidence_eligible": true
+        },
+        {
+          "source_edge_id": "normalized:edge:10778",
+          "source": "biology_7a_rjb_cpt115",
+          "source_name": "自花传粉",
+          "target": "biology_7a_rjb_cpt114",
+          "target_name": "传粉",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "score": 1.0,
+          "hop": 2,
+          "retrieval_role": "semantic_second_hop",
+          "evidence_eligible": true
+        }
+      ],
+      "score": 1.85
+    }
+  ],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "异花传粉",
+      "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精"
+    ],
+    "process_summary": [
+      "[normalized:edge:10779] 异花传粉 --is_a--> 传粉",
+      "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": false,
+    "direct_structure_reasons": [
+      "multistep_concept_has_fewer_than_two_direct_edges"
+    ],
+    "expanded_to_two_hop": true,
+    "expansion_reason": "direct_structure_insufficient",
+    "expansion_mode": "semantic_relation_paths"
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 2,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": true
+  }
+}

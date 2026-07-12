@@ -1,0 +1,192 @@
+{
+  "id": "chemistry_9a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "沸点",
+    "aliases": [],
+    "forbidden_terms": [
+      "沸点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：大气压强",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "需要先满足或理解：条件对物质性质的影响",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "需要先满足或理解：氧气的熔点和沸点",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n5",
+        "text": "需要先满足或理解：水的熔点和沸点",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n6",
+        "text": "需要先满足或理解：铁的熔点和沸点",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14999"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:15075"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14995"
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14992"
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n6",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14993"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老铁匠让小锤守在熔铁炉旁，手里拿着温度计。“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。等它们完全化成水，记下温度计上的数。”\n\n小锤点点头。他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。铁块慢慢变红、变软，最后淌成一滩亮晃晃的铁水。小锤低头一看温度计——一千五百多度。他赶紧记下。\n\n接着是铜块。同样的炉火，铜块却比铁块早一步化开，温度计才一千一百度。小锤挠挠头，心想这铜块怎么这么不经烧。最后是铝块，才六百多度就化成了银亮的液体，还咕嘟咕嘟冒泡，比铁和铜都闹腾。\n\n“师父，这三种金属，化成水的温度差这么多！”小锤喊道。\n\n老铁匠笑笑，没说话，只指了指风箱。\n\n小锤懂了，他用力把风箱拉得更猛，炉火顿时白亮起来。他又放了一块铁进去，这次铁块化得更快，但温度计上的读数却比刚才低了几十度。小锤愣住了。他又试了一次，把风箱拉得小些，炉火暗下去，铁块迟迟不化，温度计读数反而升高了。\n\n“不对啊，”小锤自言自语，“同样的铁，怎么炉火越大，它化开的温度反而越低？这铁块是不是在跟我耍脾气？”\n\n他跑去问师父。老铁匠指着炉子说：“你先别管铁，看看风箱对炉火做了什么。再想想，炉火大小变了，炉子里那些看不见的东西——比如助燃的气、冷却的水——它们的脾气变没变？”\n\n小锤蹲在炉边观察。他看见风箱一拉，炉膛里的氧气呼地烧得更旺，那氧气的状态似乎随着炉火大小在变。他又看了看炉旁水桶里的水，炉火大时，水冒热气更快；炉火小时，水半天不开。原来水也好，氧也罢，它们的状态都跟着炉火大小在变。\n\n小锤一拍脑门：“我明白了！铁块化开的那个门槛温度，不是死数，是跟着炉火大小在变的。炉火大，门槛就低；炉火小，门槛就高。这是铁块自己的性子，但炉火大小能改它的表现！”\n\n老铁匠这才点头：“记住了，每种金属都有这么个门槛，炉火变了，门槛就变。往后铸造，先看火，再看铁。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "核心谜题：每种金属在特定炉火大小（压强）下，变成液态的‘门槛温度’是它自己的固有性质，且会随炉火大小改变。",
+        "evidence": "老铁匠让小锤守在熔铁炉旁，手里拿着温度计。",
+        "narrative_anchor": "老铁匠让小锤守在熔铁炉旁，手里拿着温度计。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "关键变量：风箱拉动的力度，代表了炉内压强（大气压强）的变化。",
+        "evidence": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+        "narrative_anchor": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "核心认知转变：小锤意识到外部条件（炉火大小/压强）会改变金属的‘脾气’（性质）。",
+        "evidence": "等它们完全化成水，记下温度计上的数。",
+        "narrative_anchor": "等它们完全化成水，记下温度计上的数。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "辅助观察：小锤观察氧气（助燃气体）在炉火中的状态变化，作为理解条件影响的例证。",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n5",
+        "narrative_element": "辅助观察：小锤观察水（冷却剂）在炉火旁的沸腾情况，作为理解条件影响的例证。",
+        "evidence": "小锤点点头。",
+        "narrative_anchor": "小锤点点头。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n6",
+        "narrative_element": "核心实验对象：铁块在炉火中的状态变化，是故事中最重要的观察对象。",
+        "evidence": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+        "narrative_anchor": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从核心谜题到大气压强变量：小锤理解门槛温度随炉火大小变化，而炉火大小由风箱（压强）控制。",
+        "evidence": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+        "narrative_anchor": "“今天你什么都不用干，就盯着这三块东西——铁、铜、铝。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "从大气压强变量到条件对物质性质的影响：小锤通过拉风箱改变炉火大小，观察到外部条件改变金属性质。",
+        "evidence": "等它们完全化成水，记下温度计上的数。",
+        "narrative_anchor": "等它们完全化成水，记下温度计上的数。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "从条件对物质性质的影响到氧气的熔点和沸点：小锤观察氧气状态随炉火大小变化，作为条件影响的例证。",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "从氧气的熔点和沸点到水的熔点和沸点：小锤观察水沸腾情况随炉火大小变化，作为条件影响的另一个例证。",
+        "evidence": "小锤点点头。",
+        "narrative_anchor": "小锤点点头。",
+        "narrative_source_concept_node_id": "n4",
+        "narrative_target_concept_node_id": "n5",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "从水的熔点和沸点到铁的熔点和沸点：小锤通过观察铁块熔化过程，理解铁的熔点是核心实验对象。",
+        "evidence": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+        "narrative_anchor": "他先把铁块放进炉膛，拉了几下风箱，炉火呼地蹿高。",
+        "narrative_source_concept_node_id": "n5",
+        "narrative_target_concept_node_id": "n6",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

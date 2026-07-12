@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The mapping of n1 (standard榫卯构件) is strongest because it is explicitly described with all six faces, twelve edges, and eight vertices, directly mirroring the mechanism definition. n2 (special正方体构件) is weakest because its story description only mentions '每个面都是正方形，十二条棱也一般长' but does not explicitly state it is a special case of the standard构件 with equal length, width, and height, though the relation is implied. Edge e1 (n1→n3, is_a) is weakest because the story only says '放入木工分类架中' and '属于按形状分类的第一格', which shows placement but does not explicitly state that the standard构件 is an instance of the classification process; the relation is more about belonging to a category than a strict is_a relation. This mapping is observably better than a hypothetical one where the special构件 is introduced before the standard, as the story correctly preserves the prerequisite order (standard first, special as derivative)."
+  },
+  "revision_instructions": [
+    "No revisions needed. All mechanism nodes and edges are faithfully mapped, directions preserved, forbidden terms avoided, and the story flows naturally with clear pedagogical progression."
+  ],
+  "final_status": "accept"
+}

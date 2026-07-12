@@ -1,0 +1,12 @@
+{
+  "sample_count": 1,
+  "means": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9
+}

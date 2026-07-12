@@ -1,0 +1,75 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt23",
+    "label": "Concept",
+    "name": "数字6的认识",
+    "properties": {
+      "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+      "importance": "掌握",
+      "pages": "教材第5章相关页面",
+      "retrieval_text": "数字6的认识\nConcept\n通过数物体、读写数字等方式认识数字6，理解6表示的数量。\n掌握\n教材第5章相关页面"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16344",
+      "source": "math_1a_rjb_cpt23",
+      "source_name": "数字6的认识",
+      "target": "math_1a_rjb_cpt25",
+      "target_name": "6的加减法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:16382",
+      "source": "math_1a_rjb_skl12",
+      "source_name": "数数方法",
+      "target": "math_1a_rjb_cpt23",
+      "target_name": "数字6的认识",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:19310",
+      "source": "math_1a_rjb_cpt27",
+      "source_name": "数量的比较",
+      "target": "math_1a_rjb_cpt23",
+      "target_name": "数字6的认识",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "数字6的认识",
+      "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:16344] 数字6的认识 --prerequisites_for--> 6的加减法",
+      "[normalized:edge:16382] 数数方法 --prerequisites_for--> 数字6的认识"
+    ],
+    "process_summary": [
+      "[normalized:edge:19310] 数量的比较 --relates_to--> 数字6的认识"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 778,
+    "summary_chars": 370,
+    "path_chars": 0,
+    "retrieval_context_chars": 1148
+  }
+}

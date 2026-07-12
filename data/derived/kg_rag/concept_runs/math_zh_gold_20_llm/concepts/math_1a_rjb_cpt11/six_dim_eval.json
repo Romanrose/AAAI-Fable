@@ -1,0 +1,85 @@
+{
+  "concept_id": "math_1a_rjb_cpt11",
+  "target_concept": "加法的含义",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过多个合并事件（星石、蘑菇、果子、鱼）准确体现了'两个数量合并在一起'的定义，每次合并结果正确，无任何矛盾。",
+    "implicitness": "故事完全未提及'加法的含义'或任何相关术语，仅通过情节自然隐含概念，符合隐含性要求。",
+    "mapping_clarity": "每个事件都明确展示了两个数量合并后总数等于各自数量之和，映射清晰且一致，读者能轻松识别合并规则。",
+    "readability": "语言简洁流畅，情节连贯，适合目标年龄段理解，无复杂句式或抽象表述。",
+    "pedagogical_value": "通过多个具体实例反复强化合并概念，并引导主角应用规律解决新问题，教学价值高。",
+    "novelty": "故事采用奇幻元素（星石发光融合）增加趣味性，但整体结构较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个反例或混淆情境，如合并后数量不变或减少，以强化概念边界。",
+    "可加入一个需要学生自己动手合并的互动环节，提升参与感。"
+  ],
+  "rule_findings": {
+    "story_token_count": 421,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过多个合并事件（星石、蘑菇、果子、鱼）准确体现了'两个数量合并在一起'的定义，每次合并结果正确，无任何矛盾。",
+      "implicitness": "故事完全未提及'加法的含义'或任何相关术语，仅通过情节自然隐含概念，符合隐含性要求。",
+      "mapping_clarity": "每个事件都明确展示了两个数量合并后总数等于各自数量之和，映射清晰且一致，读者能轻松识别合并规则。",
+      "readability": "语言简洁流畅，情节连贯，适合目标年龄段理解，无复杂句式或抽象表述。",
+      "pedagogical_value": "通过多个具体实例反复强化合并概念，并引导主角应用规律解决新问题，教学价值高。",
+      "novelty": "故事采用奇幻元素（星石发光融合）增加趣味性，但整体结构较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个反例或混淆情境，如合并后数量不变或减少，以强化概念边界。",
+      "可加入一个需要学生自己动手合并的互动环节，提升参与感。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

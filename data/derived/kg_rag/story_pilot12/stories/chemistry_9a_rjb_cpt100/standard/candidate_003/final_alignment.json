@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "树干内部，一个缓慢而隐秘的过程开始了——木质纤维逐渐变得松软，颜色由浅黄转为暗褐，一层层腐朽像无声的潮水，从中心向外蔓延。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "树根正从土壤中贪婪地吸取水分和养分",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "树叶在阳光下尽情舒展，光合作用让叶片肥厚油亮",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "老树也越发挺直了腰杆。它觉得自己的生命正处在最辉煌的时刻。",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "阳光",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "阳光充足，水分丰沛，土壤肥沃",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "树叶茂盛生长",
+      "confidence": 0.7
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "它没有声响，没有气味，甚至连老树自己都感觉不到。只是树干的内部越来越空，越来越脆，像一只被蛀空的陶罐，外表光鲜，内里却只剩薄薄一层壳。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "树干内部，一个缓慢而隐秘的过程开始了——木质纤维逐渐变得松软，颜色由浅黄转为暗褐，一层层腐朽像无声的潮水，从中心向外蔓延。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "树叶在阳光下尽情舒展，光合作用让叶片肥厚油亮",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "老树也越发挺直了腰杆。它觉得自己的生命正处在最辉煌的时刻。",
+      "direction_preserved": true,
+      "confidence": 0.7
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "阳光",
+      "direction_preserved": true,
+      "confidence": 0.6
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "树叶在阳光下尽情舒展，光合作用让叶片肥厚油亮",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "阳光充足，水分丰沛，土壤肥沃",
+      "direction_preserved": true,
+      "confidence": 0.7
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "阳光充足，水分丰沛，土壤肥沃",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "树叶茂盛生长",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "它没有声响，没有气味，甚至连老树自己都感觉不到。只是树干的内部越来越空，越来越脆，像一只被蛀空的陶罐，外表光鲜，内里却只剩薄薄一层壳。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "那些水分顺着脉络向上输送，一部分滋养了树叶的繁华，另一部分却悄悄渗入了树干的深处。",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All 8 mechanism nodes and 10 mechanism edges have been aligned to the story. Node n4 (老树的生长过程) is partially supported by the story's description of the tree's thriving appearance. Edge e4 (阳光是树根吸收过程的一部分) has lower confidence because the story does not explicitly state that sunlight is part of root absorption, though it is implied by the overall context. Edge e2 (树叶的光合作用是树根吸收过程的一种形式) is aligned with moderate confidence as the story does not directly equate photosynthesis to root absorption but shows them as separate processes. Edge e3 (老树的生长过程是腐朽过程的一种形式) is aligned with lower confidence because the story presents growth and decay as concurrent but not as a subtype relation. Edge e6 (阳光是老树生长过程的一部分) is supported by the story's mention of sunlight and growth conditions. Edge e8 (树叶光合作用产生树叶茂盛生长) is supported by the story's description of photosynthesis leading to lush leaves. Edge e10 (腐朽过程与树叶光合作用相关) is supported by the story's description of water being used for both leaf growth and internal decay."
+}

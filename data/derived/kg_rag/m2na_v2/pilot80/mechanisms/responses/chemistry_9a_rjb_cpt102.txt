@@ -1,0 +1,145 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition",
+          "kg-node:chemistry_9a_rjb_cpt100:definition",
+          "kg-node:chemistry_9a_rjb_cpt100:examples"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "环境中氧气含量偏低",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "吸氧可以给人体呼吸提供适量的氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "缓解高原反应等症状",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition",
+          "kg-node:chemistry_9a_rjb_cpt16:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "state",
+        "text": "氧气的物理性质：密度比空气略大，不易溶于水",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt16:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n5",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt102:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt16:definition"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n6",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18224"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ]
+  }
+}
+```

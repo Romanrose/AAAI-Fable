@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "原来这棵树从未停止生长——它在看不见的地方，用最缓慢的方式，吸收阳光和水分，通过根系与土壤中的微小生命交换着能量。它没有开花，没有结果，没有剧烈的变化，但它的每一个细胞都在安静地呼吸，在默默积蓄力量。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "原来这棵树从未停止生长——它在看不见的地方，用最缓慢的方式，吸收阳光和水分，通过根系与土壤中的微小生命交换着能量。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "那棵长在向阳坡上的树，每年春天都会开出满树繁花，秋天结出累累果实。那棵树拥有充足的阳光、水分和适宜的温度，所以它的变化如此明显。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "老树的根系深扎地下，与土壤中的微生物紧紧纠缠在一起。那些微生物分解着落叶，释放出养分，又被根系一点点吸收。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "阳光和水分",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "充足的阳光、水分和适宜的温度",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "开出满树繁花，秋天结出累累果实",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "没有新芽或开花",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "原来这棵树从未停止生长——它在看不见的地方，用最缓慢的方式，吸收阳光和水分，通过根系与土壤中的微小生命交换着能量。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "那棵长在向阳坡上的树，每年春天都会开出满树繁花，秋天结出累累果实。那棵树拥有充足的阳光、水分和适宜的温度，所以它的变化如此明显。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "老树的根系深扎地下，与土壤中的微生物紧紧纠缠在一起。那些微生物分解着落叶，释放出养分，又被根系一点点吸收。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "吸收阳光和水分",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "那棵树拥有充足的阳光、水分和适宜的温度",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "吸收阳光和水分",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "那棵树拥有充足的阳光、水分和适宜的温度，所以它的变化如此明显。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "开出满树繁花，秋天结出累累果实",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "没有新芽或开花",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "原来这棵树从未停止生长——它在看不见的地方，用最缓慢的方式，吸收阳光和水分，通过根系与土壤中的微小生命交换着能量。它没有开花，没有结果，没有剧烈的变化，但它的每一个细胞都在安静地呼吸，在默默积蓄力量。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均已在故事中找到对应的直接证据，且方向正确。故事通过老树的缓慢生长、根系与微生物互动、以及对比另一棵树的剧烈变化，完整映射了缓慢氧化、氧化反应、燃烧、呼吸与氧气等概念及其关系。"
+}

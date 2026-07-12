@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 2,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story correctly maps n1 (入口条件核对) and n3 (结果验收记录) with clear story carriers and explicit actions. However, n2 (第2道转化环节) is only mentioned as a generic step without a distinct process or transformation, weakening its mapping. Edge e1 (n2 relates_to n1) is the weakest because the story uses the same sentence for all three edges, failing to differentiate the specific relation between mechanical motion and reference object from the other relations. A better realization would assign unique story events to each edge, e.g., showing that the transformation step (n2) depends on the reference condition (n1) before proceeding."
+  },
+  "revision_instructions": [
+    "Assign a unique story event to edge e1 (n2 relates_to n1) that explicitly shows the transformation step (第2道转化环节) depending on the reference condition (入口条件核对), e.g., '调度员根据记录员核对后的入口条件，启动第2道转化环节的闸门调节程序.'",
+    "Assign a unique story event to edge e2 (n1 enables n3) that shows the reference condition enabling the final verification, e.g., '记录员将核对后的入口条件交给验收员，作为结果验收记录的依据.'",
+    "Assign a unique story event to edge e3 (n3 relates_to n1) that shows the final verification referencing back to the initial condition, e.g., '验收员在结果验收记录中注明，最终结果与入口条件一致.'",
+    "Strengthen the mapping of n2 by giving it a concrete process or transformation in the story, such as a specific action like '调节闸门开度' or '调整水位', rather than just a generic step."
+  ],
+  "final_status": "revise"
+}

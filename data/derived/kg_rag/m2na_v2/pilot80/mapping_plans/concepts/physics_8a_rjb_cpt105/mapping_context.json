@@ -1,0 +1,185 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt105",
+    "subject": "physics",
+    "canonical_name": "放大镜成像",
+    "aliases": [],
+    "definition": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "放大镜成像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "物体位于焦点以内",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt95:definition",
+          "kg-edge:normalized:edge:17245"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "outcome",
+        "text": "放大、正立的虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-node:physics_8a_rjb_cpt82:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "state",
+        "text": "虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt82:definition",
+          "kg-edge:normalized:edge:12421"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-edge:normalized:edge:17245"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-node:physics_8a_rjb_cpt95:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt105:definition",
+          "kg-node:physics_8a_rjb_cpt82:definition",
+          "kg-edge:normalized:edge:12421"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "放大镜成像"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt105",
+      "name": "放大镜成像",
+      "label": "Concept",
+      "definition": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt95",
+        "name": "凸透镜"
+      },
+      {
+        "id": "physics_8a_rjb_cpt82",
+        "name": "虚像"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17245",
+        "source_id": "physics_8a_rjb_cpt95",
+        "source_name": "凸透镜",
+        "target_id": "physics_8a_rjb_cpt105",
+        "target_name": "放大镜成像",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt95",
+        "neighbor_name": "凸透镜",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12421",
+        "source_id": "physics_8a_rjb_cpt105",
+        "source_name": "放大镜成像",
+        "target_id": "physics_8a_rjb_cpt82",
+        "target_name": "虚像",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt82",
+        "neighbor_name": "虚像",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "放大镜成像",
+      "definition": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17245] 凸透镜 --prerequisites_for--> 放大镜成像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12421] 放大镜成像 --is_a--> 虚像"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17245",
+    "normalized:edge:12421"
+  ],
+  "provenance": {
+    "seed_sha256": "04e93f036989a20c71876cadf339ab5cf98855113c61553a5727a516afbec8ee",
+    "retrieval_sha256": "c2b10951243ca7bc72dc2b00a41ccbfed30ddf7f5f71ba8d4dd06387c8c9b66c",
+    "mechanism_record_sha256": "24a56fe76375ad6f8587e5032e53c15d8bee65dc9f4eb0696b3801fe1d44e4fc"
+  }
+}

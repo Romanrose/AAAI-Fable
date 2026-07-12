@@ -1,0 +1,53 @@
+标题：不会说话的线索
+
+每到日落，折纸修复台的仓门都会留下一串奇怪迹象，小工匠把它们收进石牌里逐一对照。
+一天，他没有立刻下结论，而是把所见的前后变化分段写在石牌上。他先查看前面几道门槛是否都已到位。旁边的几件事看似相近，他却在{marker}上用不同符号区分。
+石牌上的细银线被移到另一行后，他看出同一条隐线仍然通向：先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6的加减法。
+当旁人只看见表面迹象时，小工匠指着细银线说，先别跳过这一段：先确认一个起点条件是否具备：数数方法 --prerequisites_for--> 这条隐藏规则。
+小工匠在石牌角上画下细银线，因为这条线索指向：让中间的行动承接前后变化：数量的比较 --relates_to--> 这条隐藏规则。
+他特意延后一个小步骤，并把前后两次结果放在一起比对。后来的痕迹与他的记录对上了，原来变化并非随意而来。新来的人请教时，小工匠只把石牌推过去，让对方按顺序自己查看。
+
+```json
+[
+  {
+    "concept_role": "target concept",
+    "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+    "concept_items": [
+      "数字6的认识"
+    ]
+  },
+  {
+    "concept_role": "core mechanism",
+    "story_evidence": "前后变化被小工匠按顺序记录、改动和复查。"
+  },
+  {
+    "concept_role": "prerequisites",
+    "concept_items": [
+      "6的加减法"
+    ],
+    "story_evidence": "他先查看前面几道门槛是否都已到位。"
+  },
+  {
+    "concept_role": "related concepts",
+    "concept_items": [
+      "数量的比较"
+    ],
+    "story_evidence": "旁边的几件事看似相近，他却在{marker}上用不同符号区分。"
+  },
+  {
+    "concept_role": "outcomes",
+    "concept_items": [],
+    "story_evidence": "后来的痕迹与他的记录对上了，原来变化并非随意而来。"
+  },
+  {
+    "concept_role": "experiments",
+    "concept_items": [],
+    "story_evidence": "他特意延后一个小步骤，并把前后两次结果放在一起比对。"
+  },
+  {
+    "concept_role": "exercises",
+    "concept_items": [],
+    "story_evidence": "故事结尾保留了可复查、可迁移的判断任务。"
+  }
+]
+```

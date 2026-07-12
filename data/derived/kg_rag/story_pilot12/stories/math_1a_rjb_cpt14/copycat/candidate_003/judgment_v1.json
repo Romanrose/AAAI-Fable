@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 2,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story successfully maps all six mechanism nodes to distinct story carriers (e.g., '入口条件核对' for n1, '第二道转化' for n2, etc.) and preserves the sequential process implied by the edges. However, the edge mappings are weak: only e1 ('is_a' from n1 to n3) has explicit story evidence ('记录员把这个具体现象归入“地图修补坊中的第三道转化环节”这类更大的共同规则'), while e2 ('is_a' from n2 to n1), e3 ('relates_to' between n1 and n2), e4 ('enables' from n1 to n5), e5 ('enables' from n1 to n6), and e6 ('enables' from n1 to n4) lack any direct story evidence. The story treats all edges as sequential steps rather than preserving the specific relation types (is_a, relates_to, enables). This makes the mapping weaker than a realization that would explicitly show, for example, that '第二道转化环节' is a kind of '入口条件核对' (is_a) or that '入口条件核对' enables '结果验收记录' (enables)."
+  },
+  "revision_instructions": [
+    "Add explicit story evidence for edge e2: show that '第二道转化环节' is a kind of '入口条件核对' (is_a relation).",
+    "Add explicit story evidence for edge e3: show that '入口条件核对' and '第二道转化环节' relate to each other (relates_to relation).",
+    "Add explicit story evidence for edges e4, e5, e6: show that '入口条件核对' enables '第五道转化', '结果验收记录', and '第四道转化' respectively (enables relations).",
+    "Ensure that the story distinguishes between 'is_a', 'relates_to', and 'enables' relations rather than treating all edges as sequential steps."
+  ],
+  "final_status": "revise"
+}

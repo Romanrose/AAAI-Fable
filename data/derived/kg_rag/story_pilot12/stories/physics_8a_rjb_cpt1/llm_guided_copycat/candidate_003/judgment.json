@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly states '脉象类型，便是气血情况的一面镜子', which directly preserves the 'is_a' relation between n2 and n1. However, node_coverage is only 0.25, indicating that the story does not explicitly mention '长度' or '长度单位' as separate entities, but rather maps them to '气血情况' and '脉象类型' respectively. This is acceptable because the mapping plan explicitly renames the nodes. The edge coverage is 1.0 and direction_accuracy is 1.0, so the structure is fully preserved. The story is fluent and pedagogically rich, making it a strong candidate."
+  },
+  "revision_instructions": [],
+  "final_status": "reject",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

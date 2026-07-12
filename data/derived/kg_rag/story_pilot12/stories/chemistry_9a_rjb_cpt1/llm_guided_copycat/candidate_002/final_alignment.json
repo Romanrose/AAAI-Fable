@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "一块生面团",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "厨师的烹饪操作",
+      "confidence": 0.8
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "生面团被厨师烹饪",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "The mechanism graph nodes and edge are aligned to the story via the frozen mapping plan. Node n1 (物质) is mapped to '一块生面团', node n2 (物质的变化) to '厨师的烹饪操作', and edge e1 (enables) is supported by the story relation '生面团被厨师烹饪' with direction preserved."
+}

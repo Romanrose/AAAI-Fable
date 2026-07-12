@@ -1,0 +1,6 @@
+{
+  "stage": "llm_request",
+  "message": "Network error while calling https://api.deepseek.com/v1/chat/completions: [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。",
+  "base_url": "https://api.deepseek.com/v1",
+  "model": "deepseek-chat"
+}

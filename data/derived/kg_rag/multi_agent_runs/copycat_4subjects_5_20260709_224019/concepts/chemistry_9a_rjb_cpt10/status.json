@@ -1,0 +1,15 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "strategy": "copycat",
+  "generation_status": "success",
+  "evaluation_status": "revise",
+  "weighted_overall": 3.5,
+  "six_dim_mode": "llm",
+  "selected_candidate_id": "candidate_001",
+  "selection_mode": "copycat_temperature",
+  "selected_score": 1.811,
+  "selected_temperature": 20.3,
+  "revision_applied": false
+}

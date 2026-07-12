@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "concept_id": "chemistry_9a_rjb_cpt1",
+  "strategy": "llm_guided_copycat",
+  "candidate_id": "candidate_001",
+  "selected_source": "revision_001",
+  "revision_attempted": true,
+  "revision_improved": true,
+  "node_coverage": 0.5,
+  "edge_coverage": 1.0,
+  "direction_accuracy": 1.0,
+  "hard_leakage": false,
+  "length_valid": true,
+  "judge_status": "revise",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12\\stories\\chemistry_9a_rjb_cpt1\\llm_guided_copycat\\candidate_001"
+}

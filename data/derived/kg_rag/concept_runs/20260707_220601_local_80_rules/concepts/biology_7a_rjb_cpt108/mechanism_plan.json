@@ -1,0 +1,47 @@
+{
+  "core_question": "种子萌发的过程的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "种子萌发时先吸收水分，随后子叶或胚乳中的营养物质转运给胚根、胚芽、胚轴；胚根突破种皮形成根，胚轴伸长，胚芽发育成茎和叶。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s2",
+      "text": "避免目的论解释。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "避免把个体努力写成进化原因。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "种子萌发的过程",
+    "biology_7a_rjb_cpt108"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [],
+    "must_cover_path_ids": []
+  }
+}

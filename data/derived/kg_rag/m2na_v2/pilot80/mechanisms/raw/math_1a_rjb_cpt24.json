@@ -1,0 +1,109 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt24",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "按顺序逐个计数理解数量，如从左往右数第7个。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl12:description"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "数字7的认识：通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt24:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "7的加减法：掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt26:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "数量的比较：用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt27:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16383"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16345"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19311"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数字7的认识"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "5ee925ab74ac59958bd936e4b6c332c445e3ee2ab8b47b7ec8b36fcc19cf722d",
+    "retrieval_sha256": "f3119e422c3bd8f4461a72ca89e0446cc482e8ffe0d871319b93c3060d895654",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "9aeacc0440f23e4a1f20a195042b4c597e49b4ba824a28cac691ac446fdc907f"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

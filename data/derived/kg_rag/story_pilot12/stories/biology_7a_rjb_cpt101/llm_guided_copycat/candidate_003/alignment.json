@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "面团终于慢慢鼓起来了，掀开湿布一看，里面布满了细密的气孔，像蜂巢一般。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "面团需要温暖，就像人需要太阳。他又问，为什么要盖湿布。陈伯说，太干了面团会结皮，太湿了又会发酸，要刚刚好才行。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "面粉若是发霉的，再好的手艺也救不回来",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "面团需要温暖，就像人需要太阳。他又问，为什么要盖湿布。陈伯说，太干了面团会结皮，太湿了又会发酸，要刚刚好才行。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "面粉若是发霉的，再好的手艺也救不回来",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。"
+}

@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story excellently preserves the core relation of relativity (n3) through the contrasting judgments of two examiners, making the abstract concept tangible. Node n2 (mechanical motion as mental/writing process) is slightly weaker because the story focuses more on the outcome (the exam paper) than on the continuous process of motion. Edge e2 (reference object enables relativity) is implicitly shown but not explicitly stated as a causal enablement; the story shows the reference object being used, but the enabling relation could be more directly articulated."
+  },
+  "revision_instructions": [
+    "To strengthen node n2, add a sentence describing the continuous mental and physical motion of the candidate during writing, e.g., '张生运笔如飞，思绪不停流转，笔尖在纸上划出无数轨迹。'",
+    "To strengthen edge e2, explicitly state that the standard answer (reference object) is the reason why the judgment (relativity) can occur, e.g., '正因为有了这份标准答案，赵大人才得以评判考卷的优劣。'"
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

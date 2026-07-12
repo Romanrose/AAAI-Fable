@@ -1,0 +1,116 @@
+{
+  "pipeline_version": "llm-guided-copycat-mvp/v1",
+  "created_at_utc": "2026-07-10T10:31:32.522963+00:00",
+  "concept_id": "physics_8a_rjb_cpt103",
+  "mapping_context_sha256": "7ffe39998f0ac7bfc878eadbad46beaf4885ac134d244bd8508dc09fc1970336",
+  "candidate_count": 3,
+  "selected_candidate_id": "candidate_001",
+  "selected_mapping": {
+    "candidate_id": "candidate_001",
+    "source_domain": "古代治水工程",
+    "domain_rationale": "治水工程中，堤坝（凸透镜）和泄洪闸门（调节像距）共同作用，在洪水（物体远离）时形成缩小的水流（缩小、倒立的实像），映射照相机成像机制。",
+    "conflict": "堤坝并非透明，但治水过程与光学成像的结构相似。",
+    "event_chain": [
+      "堤坝稳固河岸",
+      "洪水远离堤坝",
+      "泄洪闸门调节水流通道",
+      "形成缩小的水流"
+    ],
+    "turning_point": "泄洪闸门开启调节",
+    "resolution_state": "形成缩小的水流，缓解洪水压力",
+    "node_mappings": [
+      {
+        "mechanism_node_id": "n1",
+        "story_carrier": "堤坝",
+        "mapping_type": "entity"
+      },
+      {
+        "mechanism_node_id": "n2",
+        "story_carrier": "缩小的水流",
+        "mapping_type": "entity"
+      },
+      {
+        "mechanism_node_id": "n3",
+        "story_carrier": "治水过程",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n4",
+        "story_carrier": "洪水远离堤坝",
+        "mapping_type": "condition"
+      },
+      {
+        "mechanism_node_id": "n5",
+        "story_carrier": "缩小的水流",
+        "mapping_type": "outcome"
+      },
+      {
+        "mechanism_node_id": "n6",
+        "story_carrier": "泄洪闸门调节",
+        "mapping_type": "process"
+      }
+    ],
+    "edge_mappings": [
+      {
+        "mechanism_edge_id": "e1",
+        "story_relation": "堤坝使治水过程成为可能",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e2",
+        "story_relation": "治水过程产生缩小的水流",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e3",
+        "story_relation": "洪水远离堤坝促进了治水过程",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e4",
+        "story_relation": "治水过程形成缩小的水流",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e5",
+        "story_relation": "泄洪闸门调节促进了治水过程",
+        "direction_preserved": true
+      }
+    ]
+  },
+  "selected_evaluation": {
+    "score": 0.9767,
+    "temperature": 2.33,
+    "node_coverage": 1.0,
+    "edge_coverage": 1.0,
+    "carrier_diversity": 0.8333,
+    "relation_diversity": 1.0,
+    "leakage_free": 1.0,
+    "narrative_complete": 1.0,
+    "template_issues": [],
+    "validation_errors": [],
+    "mechanism_node_count": 6
+  },
+  "scout_trace": {
+    "status": "success",
+    "prompt_version": "semantic-scout/v1",
+    "prompt_sha256": "e692373cffa683f25876d2202af2437d827497c2f2421a485a09f199d8ceddbb",
+    "model": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    }
+  },
+  "refiner_trace": {
+    "status": "not_needed"
+  },
+  "model": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  }
+}

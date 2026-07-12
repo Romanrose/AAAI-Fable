@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly shows the child recognizing and counting blocks (n1) and then combining them (n2), with the enabling relation (e1) clearly demonstrated through the child's reasoning and actions. The mapping is strong because the story not only mentions both nodes but also preserves the causal direction: the ability to recognize/count enables the combination. The weakest aspect is that the edge evidence could be more explicitly tied to the counting ability enabling the combination, though it is still well-supported."
+  },
+  "revision_instructions": [
+    "No revision needed; the story faithfully maps the mechanism with clear evidence for all nodes and edges."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地描述了望远镜由物镜（长竹管+凸透镜）成实像、目镜（短竹管+更凸镜片）放大实像的核心机制，并体现了物距、像距、像的大小和方向变化，完全符合概念定义。",
+    "implicitness": "故事未直接出现'望远镜'一词，但通过'长竹管'和'短竹管'的比喻以及'先成清晰影子再放大'的描述，隐含地传达了望远镜的工作原理，仅结尾处'这个装置'稍显接近但未泄露概念名称。",
+    "mapping_clarity": "故事中长竹管对应物镜、短竹管对应目镜，物镜成倒立缩小实像、目镜放大成正立像的映射非常清晰，调整距离获得清晰图像也明确对应了条件变化。",
+    "readability": "语言流畅自然，情节连贯，从发现问题到制作装置再到解决谜团，叙述生动易懂，适合目标读者。",
+    "pedagogical_value": "故事通过阿明的探索过程逐步揭示望远镜的原理，并强调'两个步骤配合'的关键，能有效帮助学习者理解物镜和目镜的分工与协作，教学价值高。",
+    "novelty": "将望远镜原理融入钟楼风向标谜团的故事设定有一定新意，但整体结构（主角探索、制作装置、解决谜团）较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事中更明确地暗示'物镜成实像'和'目镜放大实像'的先后顺序，例如强调'先看到倒影，再放大倒影'。",
+    "结尾处'这个装置'可替换为更中性的描述，如'这套竹管'，以进一步降低软泄露风险。"
+  ]
+}

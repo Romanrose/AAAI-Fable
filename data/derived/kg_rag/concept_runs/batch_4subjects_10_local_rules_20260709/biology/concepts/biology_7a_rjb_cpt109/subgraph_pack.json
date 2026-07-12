@@ -1,0 +1,115 @@
+{
+  "query": "biology_7a_rjb_cpt109",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt109",
+    "label": "Concept",
+    "name": "发芽率",
+    "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "发芽率\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp10",
+        "label": "Experiment",
+        "name": "测定种子的发芽率（培养皿样本检测）",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe16",
+        "label": "Exercise",
+        "name": "种子发芽率的计算公式是什么？若供检测的种子数为100粒，其中发芽的种子数为92粒，则该批种子的发芽率是多少？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:22391] 测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '发芽率', 'definition': '供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。', 'formula': '发芽率 = 发芽的种子数 / 供检测的种子数 × 100%', 'importance': '掌握'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:22391] 测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt109",
+      "label": "Concept",
+      "name": "发芽率",
+      "properties": {
+        "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+        "importance": "掌握",
+        "formula": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+        "unit": "%",
+        "retrieval_text": "发芽率\nConcept\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。\n掌握\n%\n发芽率 = 发芽的种子数 / 供检测的种子数 × 100%"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:22391",
+        "source": "biology_7a_rjb_exp10",
+        "source_name": "测定种子的发芽率（培养皿样本检测）",
+        "target": "biology_7a_rjb_cpt109",
+        "target_name": "发芽率",
+        "relation": "verifies",
+        "relation_description": "verifies",
+        "evidence": "",
+        "score": 0.95
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "发芽率",
+        "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+        "formula": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:22391] 测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 263,
+      "summary_chars": 281,
+      "path_chars": 0,
+      "retrieval_context_chars": 544
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 263,
+    "summary_chars": 281,
+    "path_chars": 0,
+    "retrieval_context_chars": 544
+  }
+}

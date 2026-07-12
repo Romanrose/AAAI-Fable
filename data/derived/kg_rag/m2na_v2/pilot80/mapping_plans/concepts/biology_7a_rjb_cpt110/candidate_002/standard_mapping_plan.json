@@ -1,0 +1,91 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农通过品尝少量米粒来判断整缸米的质量",
+  "characters": [
+    "老农",
+    "米缸"
+  ],
+  "objects": [
+    "米缸",
+    "少量米粒"
+  ],
+  "conflict": "老农无法直接检查整缸米是否霉变，需要一种可靠的方法来推断整体情况。",
+  "event_chain": [
+    "老农从米缸中随机取出少量米粒",
+    "老农仔细品尝这些米粒的味道",
+    "老农根据品尝结果推断整缸米的质量"
+  ],
+  "turning_point": "老农意识到必须避免只取表面的米粒，而是从不同位置随机取样，且样本量要足够。",
+  "resolution_state": "老农通过随机、适量的取样品尝，成功判断出整缸米的质量，避免了浪费或误判。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农从米缸中随机取出少量米粒并品尝，用品尝结果推断整缸米的质量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农需避免只取表面米粒，要随机从不同位置取样，且样本量适当（如取20粒）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农品尝少量米粒（样本检测）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农从米缸不同位置随机抓取20粒米，每粒仔细品尝，记录霉变粒数，重复三次取平均",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "老农计算霉变比例，用平均值作为整缸米的质量判断依据，决定是否晾晒或丢弃",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农从米缸中随机取出少量米粒并品尝（n1）使得老农品尝少量米粒（n3）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农需避免主观影响、样本量适当并尽量随机（n2）约束了老农从米缸中随机取出少量米粒并品尝（n1）的方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老农品尝少量米粒（n3）是一种老农从米缸不同位置随机抓取20粒米并品尝（n4）的具体实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "老农从米缸不同位置随机抓取20粒米并品尝（n4）产生了老农计算霉变比例并判断整缸米质量（n5）的结果",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'抽样检测'等禁止术语",
+    "确保每个机制节点和边都被映射，且方向正确",
+    "避免将课程桥接上下文（如种子发芽实验）作为因果机制",
+    "保持源域一致性，不混用多个隐喻"
+  ],
+  "mapping_context_sha256": "94653de04d6af92d9308ff03f214309beee3e4338a3ad2cd068abcd61101551a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "aa4775c95cdf5724bf1d6e2efdd1e6a0561b5360e4328a7281ae4761758f4e11"
+  }
+}

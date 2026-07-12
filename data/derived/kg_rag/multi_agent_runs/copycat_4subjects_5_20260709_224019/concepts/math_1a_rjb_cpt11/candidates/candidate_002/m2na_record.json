@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt11",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "加法的含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "加法的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "表示两个数量合并在一起。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:16375",
+        "source_name": "数字1到5的认识",
+        "target_name": "加法的含义",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "法庭证据室里，记录员站在封存箱前，手里拿着分段记录册。调度员递来一张通行牌，说：“按流程，你先核对入口条件牌，再开始登记。”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。他点点头，把条件牌挂在箱旁。\n\n验收员走过来，指着第二道转化环节：“你先核对条件，再推动这个环节，然后我才能验收结果。”记录员记下顺序，开始操作。他先确认入口条件：两件物品确实都在箱内。随后，他推动转化环节，把物品合并登记到同一页。验收员接过记录册，核对结果，满意地签了字。\n\n可第二天，调度员急着结案，跳过条件核对，直接让记录员推动转化环节。记录员照做了，但验收员一看记录册，发现物品数量对不上——缺少条件牌上的“同时在场”记录，合并登记无法成立。验收员摇头：“顺序乱了，结果不可靠。”调度员只好退回，让记录员重新从条件牌开始。\n\n记录员先挂回条件牌，确认两件物品在场，再推动转化环节，最后验收员核对结果。这次，记录册上的数字互相印证，封存箱顺利关闭。调度员叹道：“原来每一步都不能跳，条件、过程、结果，缺一不可。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "条件牌",
+        "narrative_anchor": "条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "转化环节",
+        "narrative_anchor": "转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+        "narrative_anchor": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先确认入口条件，再推动转化环节",
+        "evidence": "调度员递来一张通行牌，说：“按流程，你先核对入口条件牌，再开始登记。",
+        "narrative_anchor": "调度员递来一张通行牌，说：“按流程，你先核对入口条件牌，再开始登记。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先推动转化环节，再验收结果",
+        "evidence": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+        "narrative_anchor": "”记录员看了一眼条件牌——上面写着“两件物品必须同时在场”。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

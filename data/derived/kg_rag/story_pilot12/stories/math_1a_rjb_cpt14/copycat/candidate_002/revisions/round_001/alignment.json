@@ -1,0 +1,75 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第四道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第五道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "得先把它归入更大的共同规则里",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第二道转化环节其实是入口条件核对的一种特殊情况",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "入口条件核对的结果和第二道转化环节的记录放在一起比较，它们共同约束最后的判断",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.5
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.5
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.5
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "对齐完成。节点n1-n6均能在故事中找到对应证据。边e1、e2、e3有直接故事证据支持其关系和方向；e4、e5、e6在故事中缺乏明确证据，仅根据映射计划保留方向，置信度较低。"
+}

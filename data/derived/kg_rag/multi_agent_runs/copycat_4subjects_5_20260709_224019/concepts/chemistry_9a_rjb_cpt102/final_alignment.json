@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "账房仓库中的入口条件核对",
+      "evidence": "先查入口条件",
+      "narrative_anchor": "先查入口条件",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "账房仓库中的第2道转化环节",
+      "evidence": "按顺序核对每一次的进出记录",
+      "narrative_anchor": "按顺序核对每一次的进出记录",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "账房仓库中的结果验收记录",
+      "evidence": "最后验收结果",
+      "narrative_anchor": "最后验收结果",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "evidence": "这两份册子必须相互对照",
+      "narrative_anchor": "这两份册子必须相互对照",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "evidence": "按顺序核对每一次的进出记录",
+      "narrative_anchor": "按顺序核对每一次的进出记录",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

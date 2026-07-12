@@ -1,0 +1,31 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "拼图",
+  "domain_rationale": "拼图需要先识别并数出拼图块的数量与形状，然后将两块拼图合并在一起形成完整图案，符合先认知数量再合并的结构。",
+  "conflict": "拼图合并是空间上的拼接，而加法是数值合并，但机制都是先独立认知再组合。",
+  "event_chain": [
+    "小孩认识并能数出两块拼图块",
+    "小孩将两块拼图块合并在一起拼成完整图案"
+  ],
+  "turning_point": "小孩将两块拼图块拼合",
+  "resolution_state": "两块拼图合并成完整图案",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小孩认识并能数出两块拼图块",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小孩将两块拼图块合并在一起拼成完整图案",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小孩识别和数出拼图块的能力使他能进行拼合操作",
+      "direction_preserved": true
+    }
+  ]
+}

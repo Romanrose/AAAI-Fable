@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt103",
+  "target_concept": "实验室制取氧气的方法",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确映射了三种实验室制氧方法：紫色晶体加热分解（高锰酸钾）、无色液体加黑色粉末不加热即产气（过氧化氢催化分解）、白色粉末加黑色粉末加热产气（氯酸钾催化分解），完全符合概念定义。",
+    "implicitness": "故事未直接提及'实验室制取氧气'或任何化学术语，完全通过比喻（账房秘方、气体、晶体、粉末等）隐含表达，符合隐含性要求。",
+    "mapping_clarity": "三种秘方与三种制氧方法的对应关系清晰：紫色晶体→高锰酸钾、无色液体→过氧化氢、白色粉末→氯酸钾，黑色粉末→二氧化锰催化剂，加热条件、产物变化均明确映射。",
+    "readability": "故事语言流畅，情节连贯，比喻自然，无生硬术语，适合目标读者理解，可读性高。",
+    "pedagogical_value": "故事通过对比三种方法，突出了原料、条件、催化剂作用的差异，有助于学生理解制氧方法的多样性和核心原理，教学价值高。",
+    "novelty": "将化学制氧方法比喻为账房秘方，视角新颖，但整体结构在类似教育故事中较常见，新颖性略逊于其他维度。"
+  },
+  "revision_suggestions": [
+    "可增加一个情节，让阿明根据需求选择不同方法（如急需时用第二种，长期储存用第一种），进一步强化教学价值。",
+    "可略微丰富第三种方法的细节，例如明确白色粉末变成另一种白色物质，以更精确对应氯酸钾生成氯化钾。"
+  ],
+  "rule_findings": {
+    "story_token_count": 617,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确映射了三种实验室制氧方法：紫色晶体加热分解（高锰酸钾）、无色液体加黑色粉末不加热即产气（过氧化氢催化分解）、白色粉末加黑色粉末加热产气（氯酸钾催化分解），完全符合概念定义。",
+      "implicitness": "故事未直接提及'实验室制取氧气'或任何化学术语，完全通过比喻（账房秘方、气体、晶体、粉末等）隐含表达，符合隐含性要求。",
+      "mapping_clarity": "三种秘方与三种制氧方法的对应关系清晰：紫色晶体→高锰酸钾、无色液体→过氧化氢、白色粉末→氯酸钾，黑色粉末→二氧化锰催化剂，加热条件、产物变化均明确映射。",
+      "readability": "故事语言流畅，情节连贯，比喻自然，无生硬术语，适合目标读者理解，可读性高。",
+      "pedagogical_value": "故事通过对比三种方法，突出了原料、条件、催化剂作用的差异，有助于学生理解制氧方法的多样性和核心原理，教学价值高。",
+      "novelty": "将化学制氧方法比喻为账房秘方，视角新颖，但整体结构在类似教育故事中较常见，新颖性略逊于其他维度。"
+    },
+    "revision_suggestions": [
+      "可增加一个情节，让阿明根据需求选择不同方法（如急需时用第二种，长期储存用第一种），进一步强化教学价值。",
+      "可略微丰富第三种方法的细节，例如明确白色粉末变成另一种白色物质，以更精确对应氯酸钾生成氯化钾。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

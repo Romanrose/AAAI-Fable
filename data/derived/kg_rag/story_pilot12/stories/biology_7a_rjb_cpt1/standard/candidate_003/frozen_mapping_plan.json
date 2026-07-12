@@ -1,0 +1,112 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "一棵大树的生长与繁衍",
+  "characters": [
+    "大树",
+    "园丁"
+  ],
+  "objects": [
+    "土壤",
+    "阳光",
+    "落叶",
+    "种子",
+    "年轮"
+  ],
+  "conflict": "一棵大树想要证明自己是真正的生命之树，但园丁指出它必须满足一系列生命特征才能被认可。",
+  "event_chain": [
+    "大树从土壤中吸收水分和矿物质（需要营养）。",
+    "大树通过叶片进行光合作用，释放氧气（能进行呼吸）。",
+    "大树通过落叶排出代谢废物（能排出废物）。",
+    "大树每年春季长出新枝，树干增粗（能生长）。",
+    "大树开花结果，种子散落四周（能繁殖）。",
+    "大树的后代种子长成新树，但形态略有不同（具有遗传和变异）。",
+    "大树由根、茎、叶等细胞构成（由细胞构成）。"
+  ],
+  "turning_point": "园丁观察到大树完成了所有生命特征，承认它是一棵真正的生命之树。",
+  "resolution_state": "大树被确认为具有完整生命特征的实体，园丁继续照料它。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "大树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "从土壤中吸收水分和矿物质",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "通过叶片进行光合作用释放氧气",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "通过落叶排出代谢废物",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "每年春季长新枝、树干增粗",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "开花结果，种子散落四周",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "后代种子长成新树但形态略有不同",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "由根、茎、叶等细胞构成",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大树需要从土壤中吸收水分和矿物质",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "大树需要通过叶片进行光合作用释放氧气",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "大树需要通过落叶排出代谢废物",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "大树需要每年春季长新枝、树干增粗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "大树需要开花结果，种子散落四周",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "大树需要后代种子长成新树但形态略有不同",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "大树需要由根、茎、叶等细胞构成",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'生物'、'生命体'等禁止术语。",
+    "所有机制节点和边均已映射，方向保持。",
+    "未使用课程上下文作为因果机制。",
+    "故事载体均来自单一源域（大树生长），未混用其他隐喻。"
+  ]
+}

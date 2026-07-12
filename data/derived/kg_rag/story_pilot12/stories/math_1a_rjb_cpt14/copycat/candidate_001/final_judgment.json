@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully covered with exact evidence and correct direction. Node n1 (入口条件核对) is the strongest because it is the starting point and appears in multiple edges. Node n2 (第2道转化环节) is slightly weaker because its story evidence is brief but still clear. Edge e1 (n1->n3, is_a) is the weakest because the story's '按形状分类' reference is a bit abstract, but it still correctly maps the relation."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

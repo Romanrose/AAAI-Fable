@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "书记员小陈通过清点并对比清单A（5件）和清单B（8件）的物证数量，得出清单A的数量比清单B的数量少的结论，并记录在案。",
+      "evidence": "清单A的物证数量比清单B的少",
+      "narrative_anchor": "清单A的物证数量比清单B的少",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

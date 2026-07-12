@@ -1,0 +1,127 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的磨坊故事",
+  "characters": [
+    "老磨坊主",
+    "小徒弟"
+  ],
+  "objects": [
+    "石磨",
+    "麦粒",
+    "面粉",
+    "水车",
+    "水流",
+    "筛子"
+  ],
+  "conflict": "小徒弟想用新方法磨面，但老磨坊主坚持用传统水车驱动石磨，认为新方法不可靠。",
+  "event_chain": [
+    "老磨坊主教小徒弟用石磨磨麦粒，石磨由水车驱动。",
+    "小徒弟发现麦粒在石磨中碾碎成面粉，面粉需要过筛才能收集。",
+    "小徒弟尝试用新方法：将麦粒直接放入石磨，不加水流，但石磨转不动。",
+    "老磨坊主指出，磨面必须遵循分解反应原理：麦粒被碾碎成面粉，如同过氧化氢分解。",
+    "小徒弟改进方法：先加少量水润湿麦粒，再启动石磨，成功磨出面粉。",
+    "面粉过筛后收集，小徒弟明白了磨面需要水车（催化剂）和石磨（反应器）配合。"
+  ],
+  "turning_point": "小徒弟意识到，没有水车（催化剂）驱动，石磨无法有效碾碎麦粒，磨面过程会失败。",
+  "resolution_state": "小徒弟掌握了磨面的正确方法，并理解了水车（催化剂）在磨面过程中的关键作用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小徒弟用石磨磨麦粒的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老磨坊主传授的磨面方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用筛子收集面粉的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "麦粒被碾碎成面粉的分解原理",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "面粉",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老磨坊主用传统水车磨面的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "小徒弟尝试用新方法磨面的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "小徒弟成功磨出面粉的实践经历",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小徒弟用石磨磨麦粒的过程是磨面方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "磨面方法需要筛子收集面粉",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "麦粒分解原理与磨面方法相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "面粉与磨面方法相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "传统水车磨面方法是磨面方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "新方法磨面是磨面方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "小徒弟的成功实践验证了磨面方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'分解过氧化氢制取氧气'等化学术语。",
+    "注意'水车'对应催化剂（二氧化锰），但故事中未直接提及催化剂概念，避免映射过于显性。",
+    "所有节点和边均已映射，且方向与机制图一致。"
+  ],
+  "mapping_context_sha256": "1a4e35cbdd5ad6189ebc4ab2c4e187ab47563ce3bde168dd04f0822cc4b10b34",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "01ebfb2cde85af5f8758addcea0bbb36ce2eea623510f402819a15f7e08cb462"
+  }
+}

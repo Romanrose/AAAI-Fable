@@ -1,0 +1,282 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "种子萌发的环境条件",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "concept_definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt102",
+    "种子萌发的环境条件"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt102",
+      "label": "Concept",
+      "name": "种子萌发的环境条件",
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "importance": "掌握",
+      "aliases": [],
+      "examples": [
+        "温度过低（如放入冰箱）不利于萌发",
+        "过于潮湿易使种子霉烂",
+        "松土可使土壤中有充足空气"
+      ],
+      "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt101",
+          "label": "Concept",
+          "name": "种子萌发",
+          "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp9",
+          "label": "Experiment",
+          "name": "探究种子萌发的环境条件（四瓶对照实验）",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "探究种子萌发的环境条件（四瓶对照实验）\nExperiment"
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_cpt101",
+          "label": "Concept",
+          "name": "种子萌发",
+          "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+        },
+        {
+          "id": "biology_7a_rjb_cpt103",
+          "label": "Concept",
+          "name": "适宜的温度",
+          "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+          "importance": "重要",
+          "aliases": [],
+          "examples": [
+            "小麦最适宜温度12~20℃",
+            "棉20~30℃",
+            "水稻25~35℃",
+            "玉米30~35℃",
+            "菜豆20~25℃"
+          ],
+          "retrieval_text": "适宜的温度\nConcept\n能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。\n重要\n℃\n小麦最适宜温度12~20℃\n棉20~30℃\n水稻25~35℃\n玉米30~35℃\n菜豆20~25℃"
+        },
+        {
+          "id": "biology_7a_rjb_cpt104",
+          "label": "Concept",
+          "name": "一定的水分",
+          "definition": "种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。",
+          "importance": "重要",
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "一定的水分\nConcept\n种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。\n重要"
+        },
+        {
+          "id": "biology_7a_rjb_cpt105",
+          "label": "Concept",
+          "name": "充足的空气（氧气）",
+          "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。",
+          "importance": "重要",
+          "aliases": [
+            "充足空气"
+          ],
+          "examples": [],
+          "retrieval_text": "充足的空气（氧气）\nConcept\n种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。\n重要\n充足空气"
+        },
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "第二章 被子植物的一生\nSection"
+        }
+      ]
+    },
+    "meta": {
+      "node_count": 7,
+      "edge_count": 7
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt102",
+    "seed": {
+      "id": "biology_7a_rjb_cpt102",
+      "label": "Concept",
+      "name": "种子萌发的环境条件",
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "importance": "掌握",
+      "aliases": [],
+      "examples": [
+        "温度过低（如放入冰箱）不利于萌发",
+        "过于潮湿易使种子霉烂",
+        "松土可使土壤中有充足空气"
+      ],
+      "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+    },
+    "source_domain": "garden workshop",
+    "entities": [
+      "a careful caretaker",
+      "a plot that depends on the right conditions",
+      "tools and routines that reveal whether growth is real"
+    ],
+    "event_chain": [
+      "The caretaker prepares the conditions that must already be in place.",
+      "The plot uses those conditions to produce visible growth.",
+      "Nearby processes either support or compete with that growth.",
+      "Observation and trials reveal whether the growth is genuine and sustained."
+    ],
+    "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+    "turning_point": "A concrete test or observation reveals which condition actually controls the outcome.",
+    "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+    "alignment_plan": [
+      {
+        "concept_role": "target concept",
+        "concept_items": [
+          "种子萌发的环境条件"
+        ],
+        "story_role": "central productive process"
+      },
+      {
+        "concept_role": "prerequisites",
+        "concept_items": [
+          "种子萌发"
+        ],
+        "story_role": "conditions or resources that must be prepared first"
+      },
+      {
+        "concept_role": "related concepts",
+        "concept_items": [],
+        "story_role": "neighboring processes that contextualize or contrast the main process"
+      },
+      {
+        "concept_role": "outcomes",
+        "concept_items": [],
+        "story_role": "visible consequences produced by the core process"
+      },
+      {
+        "concept_role": "experiments",
+        "concept_items": [
+          "探究种子萌发的环境条件（四瓶对照实验）"
+        ],
+        "story_role": "tests that reveal whether the process truly happened"
+      },
+      {
+        "concept_role": "exercises",
+        "concept_items": [],
+        "story_role": "follow-up checks that reinforce the lesson"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "种子萌发的环境条件",
+      "story_evidence": "Mira prepared three plots with different combinations of warmth, water, and air to test seed germination."
+    },
+    {
+      "concept_role": "种子萌发",
+      "story_evidence": "Only the third plot with all three conditions produced green shoots; seeds from other plots sprouted when moved to proper conditions."
+    },
+    {
+      "concept_role": "探究种子萌发的环境条件（四瓶对照实验）",
+      "story_evidence": "Mira used four plots as a controlled experiment: dry, sealed without air, warm with water and air, and cold with water."
+    },
+    {
+      "concept_role": "exercises",
+      "story_evidence": "Mira’s apprentices checked each plot’s conditions daily to confirm that growth required all three factors together."
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "In a sunlit garden workshop, a careful caretaker named Mira prepared three plots. She knew seeds needed warmth, moisture, and air to sprout. For the first plot, she kept the soil dry. For the second, she soaked it but sealed it in a jar with no air. For the third, she gave it water, warmth, and loose soil. The fourth plot she left cold and damp.\n\nDays passed. Only the third plot showed green shoots. The others remained bare. Mira’s neighbor, a gardener who watered every plot equally, scoffed. “Your method is too fussy,” he said. Mira replied, “Let’s test it.” She took seeds from the dry plot and placed them in warm, moist, airy soil. They sprouted within a week. She took seeds from the sealed jar and planted them in open, warm soil—they also grew. But seeds from the cold plot, even with water and air, stayed dormant until moved to warmth.\n\nMira gathered her apprentices. “The seeds need all three conditions together,” she said. “Missing one stops the whole process.” They then checked each plot’s conditions daily, confirming that growth only followed when warmth, water, and air were present.",
+  "rule_findings": {
+    "story_token_count": 196,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "种子萌发的环境条件",
+      "种子萌发",
+      "探究种子萌发的环境条件（四瓶对照实验）",
+      "exercises"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.1199
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

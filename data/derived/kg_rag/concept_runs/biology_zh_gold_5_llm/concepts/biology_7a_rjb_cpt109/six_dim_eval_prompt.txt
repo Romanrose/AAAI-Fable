@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "发芽率",
+  "concept_id": "biology_7a_rjb_cpt109",
+  "concept_definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt109",
+    "发芽率"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt109",
+      "label": "Concept",
+      "name": "发芽率",
+      "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "发芽率\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp10",
+          "label": "Experiment",
+          "name": "测定种子的发芽率（培养皿样本检测）",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe16",
+          "label": "Exercise",
+          "name": "种子发芽率的计算公式是什么？若供检测的种子数为100粒，其中发芽的种子数为92粒，则该批种子的发芽率是多少？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt109",
+    "concept_id": "biology_7a_rjb_cpt109",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt109",
+      "label": "Concept",
+      "name": "发芽率",
+      "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "发芽率"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念（发芽率）",
+      "story_evidence": "故事中阿福取出100粒种子进行发芽试验，最终有92粒发芽，8粒未发芽，隐含表达了‘供检测的种子中能够萌发的比例’这一概念，且未直接使用‘发芽率’一词。"
+    },
+    {
+      "concept_role": "核心机制（供检测的种子中能够萌发的比例，用来评价种子质量并指导播种）",
+      "story_evidence": "阿福通过试验发现92粒发芽，8粒未发芽，并据此判断种子质量，指导播种时避免浪费土地和养分，完整呈现了‘评价种子质量并指导播种’的机制。"
+    },
+    {
+      "concept_role": "学科约束（避免目的论解释、避免个体努力写成进化原因、保留生命系统的条件、过程和结果）",
+      "story_evidence": "故事中种子发芽是自然过程，未赋予种子‘努力’或‘目的’；阿福通过湿润棉花、喷水等条件维持环境，记录发芽过程，最终得到结果，符合生命系统的条件、过程和结果。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃里的秘密\n\n老园丁阿福有一片菜园，每年春天都要播种。今年，他买回一袋新种子，准备种下。\n\n小徒弟阿明好奇地问：“师傅，这些种子都能长出苗来吗？”\n\n阿福笑了笑，没有直接回答，而是说：“我们来做个试验吧。”\n\n他取出一个浅盘，铺上湿润的棉花，然后数出一百粒种子，均匀地放在棉花上。阿明每天给棉花喷水，保持湿润。过了几天，种子开始有了变化：有的裂开了皮，伸出白色的小芽；有的却一直没动静。\n\n阿明每天记录：第一天，有三十粒冒出了芽；第二天，又多了二十粒；第三天，再多了十五粒……到了第七天，盘子里一共长出了九十二棵小芽，剩下的八粒种子始终没有变化。\n\n阿福指着盘子说：“你看，这一百粒种子，只有九十二粒能发芽。如果我把它们全部种到地里，那八粒不会发芽的种子就会浪费土地和养分。”\n\n阿明恍然大悟：“原来不是所有种子都能发芽啊！那以后播种前，是不是都要先这样测一测？”\n\n阿福点点头：“对。这样我们就能知道这批种子的质量好不好，该播多少粒才能保证地里长出足够的苗。”\n\n后来，阿明学会了这个方法。每次播种前，他都会先取一小批种子做发芽试验，再根据结果调整播种量。园圃里的菜苗总是整整齐齐，很少有空缺。\n\n阿福看着满园绿油油的菜苗，欣慰地说：“做事情要讲方法，种地也一样。懂得观察和计算，才能让每一寸土地都发挥最大的作用。”",
+  "rule_findings": {
+    "story_token_count": 469,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

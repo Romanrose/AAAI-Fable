@@ -1,0 +1,10 @@
+{
+  "node_coverage": 1.0,
+  "edge_coverage": 0.7143,
+  "direction_accuracy": 1.0,
+  "exact_evidence_precision": 0.8667,
+  "forbidden_terms_found": [],
+  "hard_leakage": false,
+  "story_chars": 613,
+  "length_valid": true
+}

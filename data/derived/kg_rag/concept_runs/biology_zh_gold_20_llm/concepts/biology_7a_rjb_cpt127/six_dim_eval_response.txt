@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地传达了保卫细胞通过吸水膨胀、失水收缩改变形状，从而控制气孔开合的核心机制，且未出现任何与概念定义相悖的内容。",
+    "implicitness": "故事完全未直接使用'保卫细胞'或'气孔'等术语，而是通过'小卫士''窗口'等隐喻巧妙隐含，符合隐含性要求。",
+    "mapping_clarity": "故事中'一对半月形的门卫'明确对应保卫细胞，'吸足水分膨胀弯曲推开窗口'和'失水收缩变直关上窗口'清晰映射了形状变化控制气孔开合的机制，映射关系一目了然。",
+    "readability": "语言简洁流畅，情节自然连贯，对话生动，适合目标年龄段理解，可读性极佳。",
+    "pedagogical_value": "故事通过观察和对话逐步揭示机制，并明确纠正了目的论解释（'不是有意识的选择'），教学价值高，有助于学生正确理解概念。",
+    "novelty": "虽然故事结构完整、隐喻恰当，但'门卫'控制'窗口'的类比在科普中较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事中增加一个实验或观察环节，如阿明用显微镜观察叶片，以增强探究感和教学深度。",
+    "可尝试使用更独特的隐喻（如'水闸'或'调节阀'）替代'门卫'，以提升新颖性。"
+  ]
+}

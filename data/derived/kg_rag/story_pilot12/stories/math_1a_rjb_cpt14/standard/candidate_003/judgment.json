@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (六面木箱) is the most thoroughly described entity, with explicit details matching the mechanism definition. Node n2 (正方木盒) is weaker because its definition lacks the explicit statement that it is a special case of n1 with all edges equal, though the relation is stated. Edge e1 (n1 is_a n3) is the weakest because the story only mentions '按木工分类法，这种六面木箱算是一种常见的形状' which implies classification but does not explicitly state that n1 is an instance of n3; a stronger realization would say '六面木箱属于木工分类法中的一种形状'."
+  },
+  "revision_instructions": [
+    "Increase node_coverage to at least 0.8 by adding more explicit details for node n2 (正方木盒) and node n3 (木工分类法) in the story. For n2, explicitly state that all its edges are equal and it is a special case of n1. For n3, explicitly state that 六面木箱 is a shape under 木工分类法.",
+    "Strengthen edge e1 by making the classification relation more explicit, e.g., '六面木箱属于木工分类法中的一种形状'.",
+    "Ensure the story length stays within 450-750 characters (currently 737, which is acceptable but close to the upper limit; consider minor trimming if adding content)."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

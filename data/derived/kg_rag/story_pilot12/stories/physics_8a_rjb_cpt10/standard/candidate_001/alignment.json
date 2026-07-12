@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "岸边的柳树",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "渔船每时每刻都在离开它，那就是船在动",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "船既在动，又不在动，全看拿什么来比较",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "渔船每时每刻都在离开它，那就是船在动",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "船既在动，又不在动，全看拿什么来比较",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "船既在动，又不在动，全看拿什么来比较",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All three mechanism nodes and three edges are aligned to exact story substrings. Node n1 (参照物) is carried by '岸边的柳树'; n2 (机械运动) by the description of the boat moving away from the willow; n3 (运动与静止的相对性) by the final realization. Edge e1 (relates_to from n2 to n1) is evidenced by the same motion description referencing the willow; e2 (enables from n1 to n3) by the realization that the willow as reference leads to relativity; e3 (relates_to from n3 to n1) by the same realization reinforcing the reference. All directions are preserved."
+}

@@ -1,0 +1,42 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "小猴子分桃子",
+  "domain_rationale": "小猴子分桃子的故事涉及数桃子、比较桃子数量、一一配对，与目标机制结构一致。",
+  "conflict": "无冲突，故事自然包含计数和比较。",
+  "event_chain": [
+    "猴妈妈摘来一堆桃子，小猴子一个一个地数着桃子。",
+    "小猴子把桃子分给两个弟弟，然后比较两个弟弟手中的桃子哪个多、哪个少、是否一样多。",
+    "小猴子让两个弟弟把桃子一个个配对，看看谁多谁少。"
+  ],
+  "turning_point": "小猴子发现大弟比小弟多2个桃子，通过配对确认。",
+  "resolution_state": "小猴子知道每个弟弟有多少桃子，并知道谁多谁少。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小猴子一个一个地数着桃子",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小猴子比较两个弟弟手中的桃子哪个多、哪个少、是否一样多",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小猴子让两个弟弟把桃子一个个配对",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "小猴子数完桃子后，比较两个弟弟的桃子数量",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小猴子通过数桃子知道了总数，从而能进行一一配对比较",
+      "direction_preserved": true
+    }
+  ]
+}

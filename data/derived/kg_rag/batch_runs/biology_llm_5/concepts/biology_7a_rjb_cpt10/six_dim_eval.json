@@ -1,0 +1,84 @@
+{
+  "concept_id": "biology_7a_rjb_cpt10",
+  "target_concept": "遗传和变异",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "The story accurately depicts inheritance (offspring matching parent) and variation (streaked petals, curled leaves) caused by bee pollen, fully aligning with the concept definition.",
+    "implicitness": "The target concept is never explicitly named; it is conveyed entirely through the caretaker's observations and experiments.",
+    "mapping_clarity": "Each story element clearly maps to a concept role: caretaker's preparation maps to prerequisites, bee pollen to related concepts, growth to outcomes, isolation experiment to experiments, and the exercise to follow-up checks.",
+    "readability": "The narrative is simple, coherent, and uses accessible language suitable for the target audience.",
+    "pedagogical_value": "The story effectively teaches both inheritance and variation through a concrete example and an experiment, reinforcing the concept and correcting a common misconception via the exercise.",
+    "novelty": "The garden workshop setting with bees as a variation agent is moderately novel, though the general idea of plants and bees is common."
+  },
+  "revision_suggestions": [
+    "Consider adding a more explicit contrast between inheritance and variation in the caretaker's internal thoughts to strengthen the lesson.",
+    "The exercise could be integrated more naturally into the story, e.g., as a question the caretaker asks himself."
+  ],
+  "rule_findings": {
+    "story_token_count": 177,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept (遗传和变异)",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [
+      "target concept"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0771
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "The story accurately depicts inheritance (offspring matching parent) and variation (streaked petals, curled leaves) caused by bee pollen, fully aligning with the concept definition.",
+      "implicitness": "The target concept is never explicitly named; it is conveyed entirely through the caretaker's observations and experiments.",
+      "mapping_clarity": "Each story element clearly maps to a concept role: caretaker's preparation maps to prerequisites, bee pollen to related concepts, growth to outcomes, isolation experiment to experiments, and the exercise to follow-up checks.",
+      "readability": "The narrative is simple, coherent, and uses accessible language suitable for the target audience.",
+      "pedagogical_value": "The story effectively teaches both inheritance and variation through a concrete example and an experiment, reinforcing the concept and correcting a common misconception via the exercise.",
+      "novelty": "The garden workshop setting with bees as a variation agent is moderately novel, though the general idea of plants and bees is common."
+    },
+    "revision_suggestions": [
+      "Consider adding a more explicit contrast between inheritance and variation in the caretaker's internal thoughts to strengthen the lesson.",
+      "The exercise could be integrated more naturally into the story, e.g., as a question the caretaker asks himself."
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

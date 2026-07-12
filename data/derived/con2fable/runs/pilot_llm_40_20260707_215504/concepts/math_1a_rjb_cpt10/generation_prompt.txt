@@ -1,0 +1,116 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "小于号含义"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "表示前面的数量比后面的数量少。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：等号含义",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：等号含义",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16377"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19331"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "天平称量",
+    "setting": "一座古老的天平工坊里，工匠们用不同重量的砝码来校准天平，确保左右平衡。",
+    "conflict": "学徒小明发现一个砝码总是比另一个轻，但无法确定哪个才是标准重量。",
+    "characters": [
+      {
+        "name": "小明",
+        "role": "学徒，负责观察和比较砝码重量",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "老工匠",
+        "role": "师傅，掌握等号含义的知识",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "标准砝码",
+        "role": "作为参照的基准砝码",
+        "mapped_element": "m3"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "小明发现左边砝码比右边砝码轻"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "老工匠教小明先确认两个砝码是否等重"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "小明用标准砝码与可疑砝码比较，发现其中一个较轻"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "小明把两个砝码放在天平两端，发现左边总是翘起，右边下沉。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老工匠提醒小明，要先确认两个砝码是否原本等重，否则无法判断哪边轻。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "小明用标准砝码分别替换左右砝码，发现右边砝码与标准等重，左边砝码较轻。",
+        "mapped_elements": [
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "小明意识到，只有先确立等量关系，才能准确判断哪个数量更少。",
+    "ending": "小明向老工匠报告：左边砝码比右边砝码轻，并正确校准了天平。",
+    "implied_moral": "判断谁多谁少，必须先有一个相等的基准作为参照。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

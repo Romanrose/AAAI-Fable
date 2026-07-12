@@ -1,0 +1,87 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "按顺序逐个计数理解数量，如从左往右数第7个。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl12:description"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "数字7的认识：通过数物体、读写数字等方式认识数字7，理解7表示的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt24:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "7的加减法：掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt26:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "数量的比较：用符号“>”“<”比较两个数量的大小，如5<6、6>5。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt27:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16383"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16345"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19311"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  }
+}

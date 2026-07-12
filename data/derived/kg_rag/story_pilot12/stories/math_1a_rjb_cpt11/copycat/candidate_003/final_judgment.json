@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "故事中n1（入口条件核对）通过记录员主动检查前置条件牌和编号完整性，清晰展示了‘认识数量并一一对应’的机制；n2（结果验收记录）虽被提及，但未具体展示‘表示两个数量合并在一起’的过程，仅描述为核对裂缝对齐，映射稍弱；e1（enables关系）通过记录员先核对条件、验收员后验收的顺序明确保留，方向正确，但n2的机制细节不足，导致整体映射不如n1完整。"
+  },
+  "revision_instructions": [
+    "在结果验收记录环节，增加一个具体场景：验收员将两张修补好的地图碎片合并，数出碎片上的标记数量（如1到5），并确认合并后的总数等于两个碎片标记数之和，以明确体现‘表示两个数量合并在一起’的机制。"
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

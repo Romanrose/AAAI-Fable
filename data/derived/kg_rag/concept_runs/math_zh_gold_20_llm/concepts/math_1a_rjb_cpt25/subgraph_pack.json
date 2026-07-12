@@ -1,0 +1,59 @@
+{
+  "query": "math_1a_rjb_cpt25",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt25",
+    "label": "Concept",
+    "name": "6的加减法",
+    "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "6的加减法\n掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt23",
+        "label": "Concept",
+        "name": "数字6的认识",
+        "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。"
+      },
+      {
+        "id": "math_1a_rjb_cpt28",
+        "label": "Concept",
+        "name": "分与合（拆分与组合）",
+        "definition": "把一个数分成两个部分或由两个部分合成一个数，如“7可以分成1和6、2和5、3和4”。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe40",
+        "label": "Exercise",
+        "name": "",
+        "definition": ""
+      },
+      {
+        "id": "math_1a_rjb_exe43",
+        "label": "Exercise",
+        "name": "",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5_s1",
+        "label": "Section",
+        "name": "6和7",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story explicitly names '城市交通系统' as the entity (n1) and maps all seven processes with clear narrative events. Node n3 ('能进行呼吸') is mapped to '排放尾气和散热', which is a reasonable analogy but not a perfect one-to-one correspondence; the story's description of '发动机轰鸣，排气管吐出白色的水汽，散热器呼出滚烫的空气' is vivid but slightly indirect. Edge e2 (n1→n3) is preserved in direction but the mapping relies on the reader accepting '排放尾气和散热' as equivalent to '呼吸'. This is observably better than a story that merely mentions '呼吸' without connecting it to the entity, but weaker than a direct statement like '城市交通系统通过排放尾气和散热进行呼吸'."
+  },
+  "revision_instructions": [
+    "Consider making the mapping for n3 more explicit by directly stating that '排放尾气和散热' is the system's way of '呼吸'.",
+    "Ensure that the story's description of '排出废物' (n4) explicitly includes the concept of '废物' as a byproduct of the system's operation, not just maintenance."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

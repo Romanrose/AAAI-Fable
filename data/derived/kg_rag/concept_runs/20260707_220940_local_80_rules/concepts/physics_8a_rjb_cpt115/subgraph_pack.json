@@ -1,0 +1,106 @@
+{
+  "query": "physics_8a_rjb_cpt115",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt115",
+    "label": "Concept",
+    "name": "明视距离",
+    "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "明视距离\n正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt114",
+        "label": "Concept",
+        "name": "近点",
+        "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:19715] 近点 --relates_to--> 明视距离"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '明视距离', 'definition': '正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。', 'formula': '', 'importance': '掌握'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:19715] 近点 --relates_to--> 明视距离'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "physics_8a_rjb_cpt115",
+      "label": "Concept",
+      "name": "明视距离",
+      "properties": {
+        "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。",
+        "importance": "掌握",
+        "retrieval_text": "明视距离\nConcept\n正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。\n掌握"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:19715",
+        "source": "physics_8a_rjb_cpt114",
+        "source_name": "近点",
+        "target": "physics_8a_rjb_cpt115",
+        "target_name": "明视距离",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "明视距离",
+        "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:19715] 近点 --relates_to--> 明视距离"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 253,
+      "summary_chars": 239,
+      "path_chars": 0,
+      "retrieval_context_chars": 492
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 253,
+    "summary_chars": 239,
+    "path_chars": 0,
+    "retrieval_context_chars": 492
+  }
+}

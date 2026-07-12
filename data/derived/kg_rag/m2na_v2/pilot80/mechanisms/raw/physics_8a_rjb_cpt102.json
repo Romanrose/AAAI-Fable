@@ -1,0 +1,157 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt102",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt102:definition",
+          "kg-node:physics_8a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt82:definition",
+          "kg-node:physics_8a_rjb_cpt82:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "照相机成像：物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition",
+          "kg-node:physics_8a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "投影仪成像：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt104:definition",
+          "kg-node:physics_8a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "evidence",
+        "text": "自制模型照相机实验：凸透镜可成倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp25:conclusion",
+          "kg-node:physics_8a_rjb_exp25:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "evidence",
+        "text": "投影仪演示实验：投影仪利用凸透镜形成放大倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp26:conclusion",
+          "kg-node:physics_8a_rjb_exp26:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12419"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n4",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12420"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n5",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23048"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n6",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23049"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19711"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "实像"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "baf2a0f1ad845714bea4981eec71e182178d63b9d9bd1d67b6ca98084a1c521f",
+    "retrieval_sha256": "12d73d3f7e934f1a013f6d4b8f27179817ab458a1a9e852e29815f2338a0812b",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "506ef5622b9a1213c503e30dfc1e90b14c203c7bda5fa86ee71acdaf76473d5c"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

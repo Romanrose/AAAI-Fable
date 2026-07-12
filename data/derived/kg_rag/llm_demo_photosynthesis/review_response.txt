@@ -1,0 +1,17 @@
+**pass_fail**: FAIL
+
+**missing_roles**: None (all six roles are present)
+
+**unsupported_story_parts**:  
+- The "exercises" role is claimed based on recorded bubble counts and the darkness test, but these are part of the experiment itself, not a separate exercise or practice activity. The story does not include any explicit exercise (e.g., a question, calculation, or application task) that reinforces learning.
+
+**coherence_issues**:  
+- The story conflates "photosynthesis" with general "growth" (e.g., "the plot used these conditions to sprout tender shoots"). Photosynthesis is a specific biochemical pathway, not a synonym for plant growth. The mapping should explicitly show that light energy is captured and converted into chemical energy, not just that "light helps growth."  
+- The compost pile's "breathing" (respiration) is mentioned as a related concept, but its relationship to photosynthesis (e.g., carbon-oxygen cycle) is not explained, making it appear tangential rather than integrated.  
+- The experiment (waterweed bubbles) is correctly described as a demonstration of light's effect on oxygen production, but the story does not explicitly link the bubble rate to the rate of photosynthesis, weakening the conceptual fidelity.
+
+**suggested_revision**:  
+- Replace vague "growth" language with explicit references to photosynthesis: e.g., "the green leaves captured sunlight to convert water and carbon dioxide into food and oxygen."  
+- Clarify the compost pile's role: "The compost pile released carbon dioxide through respiration, which the leaves used for photosynthesis."  
+- Add a separate exercise: e.g., "Mira asked her students to calculate how many bubbles would appear at 20 cm if the rate doubled—reinforcing the inverse-square law of light intensity."  
+- Ensure the target concept is named directly (e.g., "photosynthesis") at least once in the story to avoid ambiguity.

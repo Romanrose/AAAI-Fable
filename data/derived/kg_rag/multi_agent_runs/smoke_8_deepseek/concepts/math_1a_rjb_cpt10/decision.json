@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 在各项指标上均表现完美，无概念泄露、节点和边覆盖完整、对齐精度高，且故事自然流畅，没有模板化痕迹。其围棋对弈场景生动地体现了数量比较与认知冲突，符合中文叙事习惯。candidate_002 和 candidate_003 虽然指标同样优秀，但 candidate_001 在叙事自然度和可读性上略胜一筹，且确定性指标推荐其为当前最优。",
+    "risk_notes": [
+      "故事中“棋子数量相同”的设定可能被部分读者联想到数学中的等量关系，但未直接泄露目标概念，风险可控。",
+      "边缘覆盖计数为0，但加权边缘覆盖为1.0，说明对齐方式可能未显式记录为边，需确认评估逻辑是否一致。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

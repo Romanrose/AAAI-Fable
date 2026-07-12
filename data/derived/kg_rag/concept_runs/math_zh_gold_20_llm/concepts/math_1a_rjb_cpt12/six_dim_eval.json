@@ -1,0 +1,87 @@
+{
+  "concept_id": "math_1a_rjb_cpt12",
+  "target_concept": "减法的含义",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.75,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地体现了减法的定义，即从一个数量中去掉一部分后求剩余。所有取宝石的操作都严格对应减法算式，没有偏离或错误。",
+    "implicitness": "故事未直接提及“减法”或“减法的含义”，而是通过小明取走宝石后数量减少的过程自然隐含。但结尾处老者的话语稍显直白，略微降低了隐含性。",
+    "mapping_clarity": "每个取宝石事件都清晰映射了减法结构：原数量、取走数量、剩余数量。读者能明确理解剩余等于原数减去取走数，映射非常清晰。",
+    "readability": "语言流畅，情节连贯，场景有趣，适合目标年龄段。故事长度适中，无复杂词汇，易于理解。",
+    "pedagogical_value": "通过多次尝试和失败，逐步揭示减法规则，并最终让主角掌握。教学层次分明，能有效帮助学习者理解减法含义。",
+    "novelty": "以天平殿和宝石取放为背景，将减法规则融入平衡机制，有一定新意。但“取走物品求剩余”的框架较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可进一步减少结尾处老者对规则的直接解释，让读者通过事件自行总结。",
+    "可增加更多不同数量的减法实例（如从3中取走2），以强化概念。",
+    "可考虑在故事中隐含“减法与加法的互逆关系”，提升深度。"
+  ],
+  "rule_findings": {
+    "story_token_count": 624,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整准确地体现了减法的定义，即从一个数量中去掉一部分后求剩余。所有取宝石的操作都严格对应减法算式，没有偏离或错误。",
+      "implicitness": "故事未直接提及“减法”或“减法的含义”，而是通过小明取走宝石后数量减少的过程自然隐含。但结尾处老者的话语稍显直白，略微降低了隐含性。",
+      "mapping_clarity": "每个取宝石事件都清晰映射了减法结构：原数量、取走数量、剩余数量。读者能明确理解剩余等于原数减去取走数，映射非常清晰。",
+      "readability": "语言流畅，情节连贯，场景有趣，适合目标年龄段。故事长度适中，无复杂词汇，易于理解。",
+      "pedagogical_value": "通过多次尝试和失败，逐步揭示减法规则，并最终让主角掌握。教学层次分明，能有效帮助学习者理解减法含义。",
+      "novelty": "以天平殿和宝石取放为背景，将减法规则融入平衡机制，有一定新意。但“取走物品求剩余”的框架较为常见，新颖性中等偏上。"
+    },
+    "revision_suggestions": [
+      "可进一步减少结尾处老者对规则的直接解释，让读者通过事件自行总结。",
+      "可增加更多不同数量的减法实例（如从3中取走2），以强化概念。",
+      "可考虑在故事中隐含“减法与加法的互逆关系”，提升深度。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

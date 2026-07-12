@@ -1,0 +1,142 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代铸剑",
+  "characters": [
+    "铸剑师",
+    "学徒"
+  ],
+  "objects": [
+    "铁矿石",
+    "炭火",
+    "铁块",
+    "催化剂（神秘粉末）",
+    "剑坯",
+    "剑刃",
+    "剑身"
+  ],
+  "conflict": "铁矿石难以直接炼成好剑，需要合适的条件才能分解出精铁。",
+  "event_chain": [
+    "铸剑师将铁矿石和神秘粉末混合，放入炭火中加热。",
+    "在炭火持续加热下，铁矿石分解为剑坯和杂质。",
+    "神秘粉末在反应前后质量和性质不变，始终催化分解过程。",
+    "剑坯经过锤炼成为剑刃，杂质被去除成为剑身的一部分。",
+    "整个分解过程是一种‘一物生二物’的炼剑法。"
+  ],
+  "turning_point": "加入神秘粉末后，铁矿石在炭火中顺利分解。",
+  "resolution_state": "成功炼出剑刃和剑身，神秘粉末完好如初。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "混有神秘粉末的铁矿石",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "炭火加热",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "铁矿石分解为剑坯和杂质",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "神秘粉末",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "神秘粉末在炼剑前后质量和性质不变",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "剑刃",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "剑身",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "一物生二物的炼剑法",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "混有神秘粉末的铁矿石使铁矿石分解",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "炭火加热使铁矿石分解",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "神秘粉末使铁矿石分解",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "神秘粉末与自身性质不变相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "铁矿石分解产生剑刃",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "铁矿石分解产生剑身",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "铁矿石分解属于一物生二物的炼剑法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "铁矿石分解需要混有神秘粉末的铁矿石",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "铁矿石分解需要炭火加热",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "铁矿石分解需要神秘粉末",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事载体不出现'加热氯酸钾制取氧气'等禁止术语。",
+    "注意催化剂（神秘粉末）在故事中保持性质不变，避免被误解为消耗品。",
+    "避免将'实验室制取氧气的方法'等邻居概念引入故事。"
+  ],
+  "mapping_context_sha256": "188b46a6e6a8f047a6521da68eef8b5eb187b4aa40cb2506e9ac5180899d40cb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "e804722694016de273d5af2cd3186e87300aa9b18990772bdbe25bfd6f39e100"
+  }
+}

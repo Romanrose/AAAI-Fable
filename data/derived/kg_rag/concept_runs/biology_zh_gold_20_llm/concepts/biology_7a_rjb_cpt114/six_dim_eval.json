@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt114",
+  "target_concept": "传粉",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整且准确地呈现了传粉的定义：花粉从花药散放到雌蕊柱头的过程。通过蜜蜂携带黄色粉末从细花蕊（花药）转移到粗花蕊（柱头）的细节，完全符合概念定义。",
+    "implicitness": "故事全程未出现‘传粉’一词或任何禁止术语，而是用‘黄色粉末’、‘细花蕊’、‘粗花蕊’等自然语言隐喻，完美隐藏了目标概念。",
+    "mapping_clarity": "映射非常清晰：黄色粉末对应花粉，细花蕊对应花药，粗花蕊对应柱头，蜜蜂作为传粉媒介，花托膨大结出果实对应传粉后的结果。读者能自然理解这一过程。",
+    "readability": "语言流畅，情节简单易懂，适合目标读者。故事有悬念（桃树不结果）、观察过程（阿明的发现）和结论（粉末转移的必要性），可读性高。",
+    "pedagogical_value": "故事不仅传达了传粉的概念，还隐含了异花传粉（蜜蜂作为媒介）和传粉与结果的关系，教学价值高。结尾‘生命运转的规律’升华了主题。",
+    "novelty": "虽然故事结构合理，但‘蜜蜂传粉’和‘观察发现’的叙事模式较为常见，新颖性一般。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个意外事件（如风雨导致蜜蜂不来），进一步强化传粉条件性的理解。",
+    "可加入自花传粉的对比案例，丰富概念层次。"
+  ],
+  "rule_findings": {
+    "story_token_count": 559,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整且准确地呈现了传粉的定义：花粉从花药散放到雌蕊柱头的过程。通过蜜蜂携带黄色粉末从细花蕊（花药）转移到粗花蕊（柱头）的细节，完全符合概念定义。",
+      "implicitness": "故事全程未出现‘传粉’一词或任何禁止术语，而是用‘黄色粉末’、‘细花蕊’、‘粗花蕊’等自然语言隐喻，完美隐藏了目标概念。",
+      "mapping_clarity": "映射非常清晰：黄色粉末对应花粉，细花蕊对应花药，粗花蕊对应柱头，蜜蜂作为传粉媒介，花托膨大结出果实对应传粉后的结果。读者能自然理解这一过程。",
+      "readability": "语言流畅，情节简单易懂，适合目标读者。故事有悬念（桃树不结果）、观察过程（阿明的发现）和结论（粉末转移的必要性），可读性高。",
+      "pedagogical_value": "故事不仅传达了传粉的概念，还隐含了异花传粉（蜜蜂作为媒介）和传粉与结果的关系，教学价值高。结尾‘生命运转的规律’升华了主题。",
+      "novelty": "虽然故事结构合理，但‘蜜蜂传粉’和‘观察发现’的叙事模式较为常见，新颖性一般。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个意外事件（如风雨导致蜜蜂不来），进一步强化传粉条件性的理解。",
+      "可加入自花传粉的对比案例，丰富概念层次。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

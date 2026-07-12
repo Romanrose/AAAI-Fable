@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 is most explicitly realized as '先确认入口条件核对是否成立', directly matching the mechanism of counting/verifying conditions. Node n2 is realized as '按前一步留下的条件推进第2道转化环节', which is clear but less directly tied to the comparison process of n2. Edge e1 (n1→n2, relates_to) is shown by the sequential dependency but the relation type 'relates_to' is not explicitly distinguished from a simple temporal order; a more explicit 'relates_to' marker (e.g., '这两步是关联的，不能分开') would strengthen it."
+  },
+  "revision_instructions": [
+    "For edge e1, consider adding a line that explicitly states the two steps are related (e.g., '记录员发现，入口条件核对的结果直接关系到第2道转化环节能否正确进行'), to better preserve the 'relates_to' relation type beyond mere sequence.",
+    "For edge e2, the story currently uses the same evidence as e1; consider adding a separate moment where the pairing/comparison (n3) is explicitly enabled by the counting (n1), e.g., '只有先确认了入口条件，才能用结果验收记录进行配对比较'."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

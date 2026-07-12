@@ -1,0 +1,87 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt124",
+  "target_concept": "气体发生装置",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整映射了气体发生装置的定义：圆肚陶瓶（试管）、带孔软木塞（单孔橡胶塞）、弯曲竹管（玻璃导管）和小炉子（加热）组成，用于承装反应物并通过加热产生气体，无任何概念矛盾。",
+    "implicitness": "目标概念名称“气体发生装置”及其别名均未在故事正文中出现，核心机制通过对比实验自然隐含，读者需通过事件推断装置各部件的作用。",
+    "mapping_clarity": "故事中阿明的器具与概念定义中的试管、橡胶塞、导管一一对应，对比实验清晰展示了密封和导管引导气体的关键机制，映射明确且易于理解。",
+    "readability": "故事语言流畅，情节简单易懂，使用比喻（如“灵泉水”）和对比手法，适合目标读者，无生僻词汇或复杂句式。",
+    "pedagogical_value": "通过对比实验和主角的思考过程，有效传达了气体发生装置的核心机制（密封、导管引导、加热），并隐含了科学探究方法（观察、对比、总结），教学价值高。",
+    "novelty": "将化学装置映射为城邦账房密室中的器具，设定有一定新意，但“智者”角色和对比实验结构较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可进一步强化“智者”方法的失败细节，如气泡散失的具体描述，以更突出密封的重要性。",
+    "可增加一个后续情节，如阿明用该装置成功制取另一种气体，以扩展概念应用。"
+  ],
+  "rule_findings": {
+    "story_token_count": 719,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "智者"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整映射了气体发生装置的定义：圆肚陶瓶（试管）、带孔软木塞（单孔橡胶塞）、弯曲竹管（玻璃导管）和小炉子（加热）组成，用于承装反应物并通过加热产生气体，无任何概念矛盾。",
+      "implicitness": "目标概念名称“气体发生装置”及其别名均未在故事正文中出现，核心机制通过对比实验自然隐含，读者需通过事件推断装置各部件的作用。",
+      "mapping_clarity": "故事中阿明的器具与概念定义中的试管、橡胶塞、导管一一对应，对比实验清晰展示了密封和导管引导气体的关键机制，映射明确且易于理解。",
+      "readability": "故事语言流畅，情节简单易懂，使用比喻（如“灵泉水”）和对比手法，适合目标读者，无生僻词汇或复杂句式。",
+      "pedagogical_value": "通过对比实验和主角的思考过程，有效传达了气体发生装置的核心机制（密封、导管引导、加热），并隐含了科学探究方法（观察、对比、总结），教学价值高。",
+      "novelty": "将化学装置映射为城邦账房密室中的器具，设定有一定新意，但“智者”角色和对比实验结构较为常见，新颖性中等偏上。"
+    },
+    "revision_suggestions": [
+      "可进一步强化“智者”方法的失败细节，如气泡散失的具体描述，以更突出密封的重要性。",
+      "可增加一个后续情节，如阿明用该装置成功制取另一种气体，以扩展概念应用。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

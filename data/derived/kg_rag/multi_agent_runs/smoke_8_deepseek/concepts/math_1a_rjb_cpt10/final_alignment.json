@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "裁判通过清点棋子数量，确认了黑棋的数量（3）比白棋的数量（4）少，并在记分牌上将黑棋数量记录在左侧（前面），白棋数量记录在右侧（后面），以此状态来判定和表达数量关系。",
+      "evidence": "棋盘两端，黑白棋子静静铺开。",
+      "narrative_anchor": "棋盘两端，黑白棋子静静铺开。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

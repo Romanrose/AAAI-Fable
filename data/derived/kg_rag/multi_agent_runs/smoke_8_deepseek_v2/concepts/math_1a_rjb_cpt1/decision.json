@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001在故事中通过棋手数棋子、裁判之前做过一一对应比较等情节，自然覆盖了数数、一一对应比较等机制节点和边，未泄露任何目标概念，中文叙述流畅且不模板化。其指标与候选002、003同样优秀，但故事长度适中，且更贴近日常对弈场景，可读性略胜一筹。",
+    "risk_notes": [
+      "无显著风险"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

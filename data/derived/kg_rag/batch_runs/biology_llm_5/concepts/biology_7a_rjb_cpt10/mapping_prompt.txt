@@ -1,0 +1,23 @@
+You are a structure-mapping planner for concept-to-story generation.
+Use only the retrieved graph-grounded information.
+Transform the concept neighborhood into a story skeleton that can later support fable generation.
+
+Target Concept: 遗传和变异
+Definition: 子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。
+Prerequisites:
+- None
+Related Concepts:
+- None
+Downstream Outcomes:
+- None
+
+Produce:
+- source_domain
+- entities
+- event_chain
+- conflict
+- turning_point
+- resolution_state
+- concept_to_story_alignment
+
+The output should preserve the concept mechanism and remain suitable for later fable generation.

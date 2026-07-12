@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt10",
+  "target_concept": "参照物",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完全符合参照物的定义，通过小智以不同基准观察同一公交车得出不同结论，准确传达了判断运动需要选取标准物体的核心机制。",
+    "implicitness": "故事未直接提及‘参照物’一词，而是通过‘标准物体’、‘基准’等替代词和情节自然隐含概念，符合隐含性要求。",
+    "mapping_clarity": "故事中每个观察事件都清晰映射了参照物的作用：钟楼、卡车、自行车作为不同基准导致不同运动判断，映射关系明确且易于理解。",
+    "readability": "语言流畅，情节连贯，场景贴近生活，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "通过观察员小智的亲身实验和领悟，逐步揭示参照物的概念，并强调记录时需明确基准，教学价值高。",
+    "novelty": "以交通站观察员为背景有一定新意，但整体情节（不同基准导致不同结论）在参照物教学中较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个需要学生判断的课后小问题，如‘如果小智以行驶的自行车为基准，公交车是运动还是静止？’以强化教学互动。",
+    "可考虑在故事结尾加入一个更意外的场景，如小智以自己为基准观察自己，以提升新颖性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 587,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完全符合参照物的定义，通过小智以不同基准观察同一公交车得出不同结论，准确传达了判断运动需要选取标准物体的核心机制。",
+      "implicitness": "故事未直接提及‘参照物’一词，而是通过‘标准物体’、‘基准’等替代词和情节自然隐含概念，符合隐含性要求。",
+      "mapping_clarity": "故事中每个观察事件都清晰映射了参照物的作用：钟楼、卡车、自行车作为不同基准导致不同运动判断，映射关系明确且易于理解。",
+      "readability": "语言流畅，情节连贯，场景贴近生活，适合目标年龄段阅读，无冗余或晦涩表达。",
+      "pedagogical_value": "通过观察员小智的亲身实验和领悟，逐步揭示参照物的概念，并强调记录时需明确基准，教学价值高。",
+      "novelty": "以交通站观察员为背景有一定新意，但整体情节（不同基准导致不同结论）在参照物教学中较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个需要学生判断的课后小问题，如‘如果小智以行驶的自行车为基准，公交车是运动还是静止？’以强化教学互动。",
+      "可考虑在故事结尾加入一个更意外的场景，如小智以自己为基准观察自己，以提升新颖性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

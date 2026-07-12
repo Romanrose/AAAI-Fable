@@ -1,0 +1,201 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "种子萌发的环境条件"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：一定的水分",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：充足的空气（氧气）",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "需要保留上下位关系：种子萌发",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：适宜的温度",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：种子萌发",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14133"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10774"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10775"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10772"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10773"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "陶艺工坊",
+    "setting": "在一个以制作陶器闻名的古镇里，有一间老陶匠的工坊。工坊里堆满了不同种类的黏土和半成品，老陶匠正准备开始新一天的创作。",
+    "conflict": "一块上好的黏土被放置在工坊角落，它渴望被塑造成精美的器皿，但工坊里的环境似乎总是不对劲——有时太冷，有时太干，有时又密不透风，导致它始终无法被顺利塑形。",
+    "characters": [
+      {
+        "name": "黏土团",
+        "role": "渴望被塑形的原料，代表需要被激活的种子",
+        "mapped_element": "m4"
+      },
+      {
+        "name": "老陶匠",
+        "role": "创造者，负责提供和调整环境条件",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "温水盆",
+        "role": "提供湿润环境，代表一定的水分",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "通风窗",
+        "role": "保持空气流通，代表充足的空气",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "炭火炉",
+        "role": "维持工坊温度，代表适宜的温度",
+        "mapped_element": "m5"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老陶匠的统筹安排和观察"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "温水盆提供的湿润"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "通风窗带来的新鲜空气"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "黏土团被塑形的过程"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "炭火炉散发的温暖"
+      },
+      {
+        "concept_element": "m6",
+        "narrative_carrier": "黏土团最终变成精美陶器的结果"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老陶匠决定用那块黏土制作一个花瓶，他先检查了工坊的环境。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老陶匠往温水盆里添水，确保黏土能吸收足够的水分变得柔软可塑。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老陶匠推开通风窗，让新鲜空气进入工坊，防止黏土在密闭环境中发霉变质。",
+        "mapped_elements": [
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "老陶匠点燃炭火炉，使工坊温度适宜，黏土不会因过冷而变硬开裂。",
+        "mapped_elements": [
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "在水分、空气和温度都恰到好处时，老陶匠开始揉捏黏土，黏土逐渐被塑造成一个优雅的花瓶形状。",
+        "mapped_elements": [
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b6",
+        "event": "花瓶成型后被小心地放在架子上晾干，等待下一步的烧制，它终于实现了作为器皿的使命。",
+        "mapped_elements": [
+          "m6"
+        ]
+      }
+    ],
+    "turning_point": "当老陶匠发现黏土始终无法塑形时，他没有放弃，而是逐一检查并调整了工坊里的水分、空气和温度，直到三者都达到最佳状态。",
+    "ending": "在温暖、湿润且空气流通的环境中，黏土被成功塑造成一个精美的花瓶，静静地立在工坊里，等待着被赋予更永恒的生命。",
+    "implied_moral": "任何生命的萌发或事物的转变，都需要外部条件同时满足，缺一不可，而非仅靠内在的渴望。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

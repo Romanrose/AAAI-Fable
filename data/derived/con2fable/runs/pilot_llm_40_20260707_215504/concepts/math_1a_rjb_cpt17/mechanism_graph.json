@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "表面上所有点到中心的距离都相等的立体图形。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：按形状分类",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_12137"
+    }
+  ]
+}

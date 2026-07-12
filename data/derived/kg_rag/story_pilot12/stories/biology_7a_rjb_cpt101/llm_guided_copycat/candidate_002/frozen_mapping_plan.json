@@ -1,0 +1,44 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "孵化",
+  "domain_rationale": "鸡蛋孵化需要适宜温度和湿度（环境条件）以及受精且健康的胚胎（自身条件），与种子萌发的双条件结构一致。",
+  "conflict": "无本质冲突，但需注意孵化中湿度条件与种子萌发中水分条件的类比差异。",
+  "event_chain": [
+    "母鸡选择并孵化受精蛋",
+    "保持恒定的体温和巢内湿度",
+    "定期翻动蛋体",
+    "胚胎发育",
+    "雏鸡破壳而出"
+  ],
+  "turning_point": "胚胎开始发育并形成器官",
+  "resolution_state": "雏鸡成功出壳，成为独立个体",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "鸡蛋孵化成雏鸡的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "孵化所需的外界条件：母鸡体温、巢内湿度、翻动频率",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "鸡蛋本身是否受精、胚胎是否健康、蛋壳是否完整",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "使能：外界条件使孵化过程得以启动和维持",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "使能：鸡蛋自身品质使孵化过程得以成功完成",
+      "direction_preserved": true
+    }
+  ]
+}

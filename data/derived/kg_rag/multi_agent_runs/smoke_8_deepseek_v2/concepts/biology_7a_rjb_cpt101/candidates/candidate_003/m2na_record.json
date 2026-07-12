@@ -1,0 +1,161 @@
+{
+  "id": "biology_7a_rjb_cpt101",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "种子萌发",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：种子萌发的环境条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "需要先满足或理解：种子萌发的自身条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "属于或连接到上位结构：种子萌发的环境条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n5",
+        "text": "属于或连接到上位结构：种子萌发的自身条件",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14133"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14134"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10772"
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10776"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "服装间角落里，小陈打开一个落满灰尘的箱子，里面躺着一套旧戏服。戏服上布满灰白色的霉斑，好几处接缝已经开线，像一张张干裂的嘴唇。他伸手摸了摸，布料硬邦邦的，有些地方甚至被虫蛀出了小洞。小陈皱起眉头——今晚的演出需要它，可眼下的状况实在糟糕。\n\n他仔细检查了戏服的每一处，发现虽然霉斑遍布，但布料的主体还算完整，没有被完全腐蚀；开线的位置也还能找到残留的线头，有重新连接的可能。小陈松了口气，至少这件戏服还有救。\n\n他立刻去找舞台监督老周，想借熨斗和针线包。老周却摆摆手：“熨斗早坏了，一直没修。针线包倒是有，可里面的线颜色跟这件戏服不搭，缝上去会很难看。”小陈心里一沉，没有合适的工具和材料，光靠手根本没法修复。\n\n他想起道具组组长或许有办法，便跑去求助。组长翻了翻记录本说：“仓库里有一台旧熨斗，还能用。还有一卷线，颜色虽然不完全一样，但凑近了看差不多。你自己去取吧。”\n\n小陈快步跑到仓库，翻出那台旧熨斗和那卷线。他回到服装间，插上熨斗，把戏服铺平，先小心地熨烫掉霉斑处的潮气，再用新线一针一针地把开线的地方缝好。最后，他把戏服挂上衣架，抖了抖，衣服恢复了应有的挺括。\n\n演出前，老周路过服装间，看到那套焕然一新的戏服，点了点头。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "戏服在适宜条件（工具、材料）下，利用自身残留的布料和缝线，经过修复，最终成为可用的演出服装。",
+        "evidence": "服装间角落里，小陈打开一个落满灰尘的箱子，里面躺着一套旧戏服。",
+        "narrative_anchor": "服装间角落里，小陈打开一个落满灰尘的箱子，里面躺着一套旧戏服。",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "戏服需要适宜的环境条件才能被修复，即清洁、干燥、有工具（对应熨斗、针线包等外部条件）。",
+        "evidence": "戏服上布满灰白色的霉斑，好几处接缝已经开线，像一张张干裂的嘴唇。",
+        "narrative_anchor": "戏服上布满灰白色的霉斑，好几处接缝已经开线，像一张张干裂的嘴唇。",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "戏服本身需要具备可修复的质地，即布料未完全腐朽、缝线有可连接的基础（对应戏服虽旧但仍有可修复的部分）。",
+        "evidence": "他伸手摸了摸，布料硬邦邦的，有些地方甚至被虫蛀出了小洞。",
+        "narrative_anchor": "他伸手摸了摸，布料硬邦邦的，有些地方甚至被虫蛀出了小洞。",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "修复所需的外部条件不充分（熨斗坏、线不匹配），需要从其他来源获取。",
+        "evidence": "小陈皱起眉头——今晚的演出需要它，可眼下的状况实在糟糕。",
+        "narrative_anchor": "小陈皱起眉头——今晚的演出需要它，可眼下的状况实在糟糕。",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n5",
+        "narrative_element": "修复所需的内部条件需要小陈主动获取和匹配（从仓库取旧熨斗和相近颜色的线）。",
+        "evidence": "他仔细检查了戏服的每一处，发现虽然霉斑遍布，但布料的主体还算完整，没有被完全腐蚀",
+        "narrative_anchor": "他仔细检查了戏服的每一处，发现虽然霉斑遍布，但布料的主体还算完整，没有被完全腐蚀",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从戏服修复成功回溯到需要外部条件",
+        "evidence": "戏服上布满灰白色的霉斑，好几处接缝已经开线，像一张张干裂的嘴唇。",
+        "narrative_anchor": "戏服上布满灰白色的霉斑，好几处接缝已经开线，像一张张干裂的嘴唇。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "外部条件不足促使检查自身条件",
+        "evidence": "他伸手摸了摸，布料硬邦邦的，有些地方甚至被虫蛀出了小洞。",
+        "narrative_anchor": "他伸手摸了摸，布料硬邦邦的，有些地方甚至被虫蛀出了小洞。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "自身条件具备后转向外部条件不足的解决",
+        "evidence": "小陈皱起眉头——今晚的演出需要它，可眼下的状况实在糟糕。",
+        "narrative_anchor": "小陈皱起眉头——今晚的演出需要它，可眼下的状况实在糟糕。",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "外部条件不足导致寻求内部条件的补充",
+        "evidence": "他仔细检查了戏服的每一处，发现虽然霉斑遍布，但布料的主体还算完整，没有被完全腐蚀",
+        "narrative_anchor": "他仔细检查了戏服的每一处，发现虽然霉斑遍布，但布料的主体还算完整，没有被完全腐蚀",
+        "narrative_source_concept_node_id": "n4",
+        "narrative_target_concept_node_id": "n5",
+        "direction_preserved": true,
+        "confidence": 0.8
+      }
+    ]
+  }
+}

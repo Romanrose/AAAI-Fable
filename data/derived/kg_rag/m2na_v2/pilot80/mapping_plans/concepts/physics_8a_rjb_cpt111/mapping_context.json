@@ -1,0 +1,199 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt111",
+    "subject": "physics",
+    "canonical_name": "眼睛成像原理",
+    "aliases": [],
+    "definition": "晶状体和角膜共同作用相当于凸透镜，把来自物体的光会聚在视网膜上形成像。",
+    "concept_type": "law",
+    "forbidden_terms": [
+      "眼睛成像原理"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "晶状体和角膜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "凸透镜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "把来自物体的光会聚在视网膜上形成像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "视网膜",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "睫状体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "改变晶状体形状，使不同距离物体成像在视网膜上",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19714"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "眼睛成像原理"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt111",
+      "name": "眼睛成像原理",
+      "label": "Concept",
+      "definition": "晶状体和角膜共同作用相当于凸透镜，把来自物体的光会聚在视网膜上形成像。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt112",
+        "name": "眼睛调节"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:19714",
+        "source_id": "physics_8a_rjb_cpt111",
+        "source_name": "眼睛成像原理",
+        "target_id": "physics_8a_rjb_cpt112",
+        "target_name": "眼睛调节",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt112",
+        "neighbor_name": "眼睛调节",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "眼睛成像原理",
+      "definition": "晶状体和角膜共同作用相当于凸透镜，把来自物体的光会聚在视网膜上形成像。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19714] 眼睛成像原理 --relates_to--> 眼睛调节"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:19714"
+  ],
+  "provenance": {
+    "seed_sha256": "55e507a7370bfd32cadc71146d3c6f5ca67bf3628c145e851f07d8f5cb1786a9",
+    "retrieval_sha256": "9e11004b7e003f396dc025c1f5dab2bf1f0947472d8868d9ee0957cf508d1338",
+    "mechanism_record_sha256": "6949842eba235b1f8fd8b055de678a2c36a272ca06fbca83e88e4cfa1cfc8a16"
+  }
+}

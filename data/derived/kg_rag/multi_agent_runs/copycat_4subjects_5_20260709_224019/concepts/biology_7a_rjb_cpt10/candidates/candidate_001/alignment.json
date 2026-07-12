@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "老匠人先确认瓷器作坊的入口条件",
+      "narrative_anchor": "老匠人先确认瓷器作坊的入口条件",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "老匠人推动第2道转化环节",
+      "narrative_anchor": "老匠人推动第2道转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "老匠人让学徒用结果验收记录核对整条安排",
+      "narrative_anchor": "老匠人让学徒用结果验收记录核对整条安排",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "归入同一类制作规则",
+      "evidence": "老匠人把那些同出一件母版、又各有细节差别的新件归入同一类制作规则",
+      "narrative_anchor": "老匠人把那些同出一件母版、又各有细节差别的新件归入同一类制作规则",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+      "evidence": "只有先稳定第2道转化环节，再推动结果验收记录",
+      "narrative_anchor": "只有先稳定第2道转化环节，再推动结果验收记录",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

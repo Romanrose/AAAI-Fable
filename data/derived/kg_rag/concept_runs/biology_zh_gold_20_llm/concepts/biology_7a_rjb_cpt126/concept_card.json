@@ -1,0 +1,86 @@
+{
+  "concept_id": "biology_7a_rjb_cpt126",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "canonical_name": "气孔",
+  "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。",
+  "aliases": [],
+  "examples": [
+    "太阳升起时气孔慢慢张开，夜幕降临时大多数气孔缩小或闭合"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt124",
+        "label": "Concept",
+        "name": "蒸腾作用",
+        "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt127",
+        "label": "Concept",
+        "name": "保卫细胞",
+        "definition": "构成气孔的一对半月形细胞，其形状和大小能够调节，从而使气孔张开或闭合，控制气体进入与水分散失。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt124",
+        "label": "Concept",
+        "name": "蒸腾作用",
+        "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp13",
+        "label": "Experiment",
+        "name": "观察叶片的结构（徒手切片与下表皮装片）",
+        "definition": ""
+      },
+      {
+        "id": "biology_7a_rjb_exp14",
+        "label": "Experiment",
+        "name": "热水浸叶观察气孔分布（气泡比较）",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe20",
+        "label": "Exercise",
+        "name": "判断：植物可以通过控制保卫细胞的形状和大小来控制气体和水分的进出。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s3",
+        "label": "Section",
+        "name": "第三章 绿色植物与生物圈的水循环",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "气孔"
+  ],
+  "subject_constraints_zh": [
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。",
+    "保留生命系统的条件、过程和结果。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n1 (参照物) to 北极星 with high fidelity, explicitly stating its role as a fixed reference for navigation. n2 (机械运动) is mapped to 船只的航行过程, but the story focuses more on the ship's position and direction changes rather than the continuous position change over time, making the mapping slightly less explicit. Edge e1 (机械运动 relates_to 参照物) is well-preserved as the ship's navigation relies on Polaris, but the relation could be more directly stated as 'mechanical motion requires a reference object' rather than just 'needs Polaris for direction'."
+  },
+  "revision_instructions": [
+    "Consider explicitly stating that the ship's motion (机械运动) is a continuous change of position over time, and that Polaris serves as the reference object to judge that motion.",
+    "To strengthen the mapping of n2, add a sentence like: '大船在海面上不断移动位置，这就是机械运动，而北极星就是判断这种运动的参照物。'"
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

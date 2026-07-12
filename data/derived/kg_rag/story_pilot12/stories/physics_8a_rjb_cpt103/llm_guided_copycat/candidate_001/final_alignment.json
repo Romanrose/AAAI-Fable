@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "堤坝",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "缩小的水流",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "治水工程",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "洪水离堤坝越来越远",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "缩小的水流",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "泄洪闸门的开启",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "这堤坝牢牢锁住河道，使水流有了固定的方向，治水工程才有了根基。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "洪水离堤坝越来越远",
+      "direction_preserved": true,
+      "confidence": 0.6
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "形成了一股股缩小的水流",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "泄洪闸门的开启，并非简单地放水，而是精细地调节",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均能在故事中找到对应证据，但e2（治水过程是缩小的水流）在故事中未明确表述为‘是’的关系，而是通过‘形成’隐含，故置信度较低；e3中‘洪水远离堤坝’作为条件促进治水过程，故事中虽有提及但因果关系不够直接，置信度中等。"
+}

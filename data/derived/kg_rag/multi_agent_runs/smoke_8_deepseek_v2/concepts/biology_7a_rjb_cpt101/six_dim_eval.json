@@ -1,0 +1,122 @@
+{
+  "concept_id": "biology_7a_rjb_cpt101",
+  "target_concept": "种子萌发",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "寓言完整准确地再现了种子萌发的核心机制：需要适宜的环境条件（温度、水分、空气）和完整的自身条件（胚的活性）。故事通过对比试验，清晰地展示了两个条件缺一不可，完全符合概念定义。",
+    "implicitness": "故事正文中完全没有出现'种子萌发'这一禁用术语，而是用'发芽试验''长出胚根胚芽''发芽'等自然语言替代，符合隐含性要求。",
+    "mapping_clarity": "故事中的每个关键元素都精准映射到机制图节点：培养箱对应环境条件，虫蛀玉米粒对应自身条件不满足，发芽结果对应萌发过程。映射关系清晰且一一对应。",
+    "readability": "故事语言流畅自然，情节连贯，对话生动，场景具体（港口检疫站），易于理解，适合初中生阅读。",
+    "pedagogical_value": "故事通过对比试验和角色对话，生动地揭示了种子萌发需要同时满足环境条件和自身条件这一核心知识点，教学效果显著，有助于学生理解概念机制。",
+    "novelty": "故事采用了港口检疫站这一新颖场景，避免了常见的'农夫种地'或'智者说教'模板，但整体情节（对比试验、导师讲解）仍有一定常见性，因此扣1分。"
+  },
+  "evidence": {
+    "faithfulness": "故事中，外观完好的玉米粒在培养箱中长出胚根和胚芽，对应萌发过程；虫蛀玉米粒因胚被破坏而无法萌发，对应自身条件不满足。老郑的解释明确点出两个条件缺一不可。",
+    "implicitness": "全文未出现'种子萌发'一词，使用了'发芽''长出胚根和胚芽'等替代表述。",
+    "mapping_clarity": "培养箱（环境条件）→ 虫蛀玉米粒（自身条件不满足）→ 发芽结果（萌发过程），映射关系清晰。老郑的总结直接对应机制图中的条件关系。",
+    "readability": "故事从登船抽样、发现虫蛀、分组试验、结果揭晓到导师讲解，情节推进自然，语言平实易懂。",
+    "pedagogical_value": "通过对比试验的结果，读者能直观理解'环境条件再好，自身条件不行也没用'这一核心知识点，教学目的明确。",
+    "novelty": "港口检疫站作为故事背景，比常见的田园或实验室场景更具新意，但'对比试验+导师讲解'的结构较为常见。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一些细节，如描述虫蛀玉米粒内部的具体状态（如'胚已发黑坏死'），以增强科学准确性。",
+    "结尾处小陈的感悟可以更精炼，避免重复前文内容。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "寓言完整准确地再现了种子萌发的核心机制：需要适宜的环境条件（温度、水分、空气）和完整的自身条件（胚的活性）。故事通过对比试验，清晰地展示了两个条件缺一不可，完全符合概念定义。",
+      "implicitness": "故事正文中完全没有出现'种子萌发'这一禁用术语，而是用'发芽试验''长出胚根胚芽''发芽'等自然语言替代，符合隐含性要求。",
+      "mapping_clarity": "故事中的每个关键元素都精准映射到机制图节点：培养箱对应环境条件，虫蛀玉米粒对应自身条件不满足，发芽结果对应萌发过程。映射关系清晰且一一对应。",
+      "readability": "故事语言流畅自然，情节连贯，对话生动，场景具体（港口检疫站），易于理解，适合初中生阅读。",
+      "pedagogical_value": "故事通过对比试验和角色对话，生动地揭示了种子萌发需要同时满足环境条件和自身条件这一核心知识点，教学效果显著，有助于学生理解概念机制。",
+      "novelty": "故事采用了港口检疫站这一新颖场景，避免了常见的'农夫种地'或'智者说教'模板，但整体情节（对比试验、导师讲解）仍有一定常见性，因此扣1分。"
+    },
+    "evidence": {
+      "faithfulness": "故事中，外观完好的玉米粒在培养箱中长出胚根和胚芽，对应萌发过程；虫蛀玉米粒因胚被破坏而无法萌发，对应自身条件不满足。老郑的解释明确点出两个条件缺一不可。",
+      "implicitness": "全文未出现'种子萌发'一词，使用了'发芽''长出胚根和胚芽'等替代表述。",
+      "mapping_clarity": "培养箱（环境条件）→ 虫蛀玉米粒（自身条件不满足）→ 发芽结果（萌发过程），映射关系清晰。老郑的总结直接对应机制图中的条件关系。",
+      "readability": "故事从登船抽样、发现虫蛀、分组试验、结果揭晓到导师讲解，情节推进自然，语言平实易懂。",
+      "pedagogical_value": "通过对比试验的结果，读者能直观理解'环境条件再好，自身条件不行也没用'这一核心知识点，教学目的明确。",
+      "novelty": "港口检疫站作为故事背景，比常见的田园或实验室场景更具新意，但'对比试验+导师讲解'的结构较为常见。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一些细节，如描述虫蛀玉米粒内部的具体状态（如'胚已发黑坏死'），以增强科学准确性。",
+      "结尾处小陈的感悟可以更精炼，避免重复前文内容。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "biology_7a_rjb_cpt101",
+    "target_concept": "种子萌发",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

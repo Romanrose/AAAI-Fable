@@ -1,0 +1,104 @@
+{
+  "target_concept": {
+    "id": "physics_8a_rjb_cpt102",
+    "name": "实像",
+    "label": "Concept",
+    "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+  },
+  "neighbors": [
+    {
+      "id": "physics_8a_rjb_cpt104",
+      "name": "投影仪成像"
+    },
+    {
+      "id": "physics_8a_rjb_cpt103",
+      "name": "照相机成像"
+    },
+    {
+      "id": "physics_8a_rjb_exp26",
+      "name": "投影仪演示实验"
+    },
+    {
+      "id": "physics_8a_rjb_exp25",
+      "name": "自制模型照相机实验"
+    },
+    {
+      "id": "physics_8a_rjb_cpt82",
+      "name": "虚像"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:12420",
+      "source_id": "physics_8a_rjb_cpt104",
+      "source_name": "投影仪成像",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_cpt104",
+      "neighbor_name": "投影仪成像",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:12419",
+      "source_id": "physics_8a_rjb_cpt103",
+      "source_name": "照相机成像",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_cpt103",
+      "neighbor_name": "照相机成像",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:23049",
+      "source_id": "physics_8a_rjb_exp26",
+      "source_name": "投影仪演示实验",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_exp26",
+      "neighbor_name": "投影仪演示实验",
+      "score": 0.95,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:23048",
+      "source_id": "physics_8a_rjb_exp25",
+      "source_name": "自制模型照相机实验",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_exp25",
+      "neighbor_name": "自制模型照相机实验",
+      "score": 0.95,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:19711",
+      "source_id": "physics_8a_rjb_cpt102",
+      "source_name": "实像",
+      "target_id": "physics_8a_rjb_cpt82",
+      "target_name": "虚像",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "outgoing",
+      "neighbor_id": "physics_8a_rjb_cpt82",
+      "neighbor_name": "虚像",
+      "score": 0.9,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 5,
+  "source": "dual_level_graphrag"
+}

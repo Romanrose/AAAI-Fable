@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "参照物",
+    "aliases": [],
+    "forbidden_terms": [
+      "参照物"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "判断物体运动或静止时所选取的标准物体。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:17189",
+        "source_name": "参照物",
+        "target_name": "运动与静止的相对性",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:19745",
+        "source_name": "机械运动",
+        "target_name": "参照物",
+        "relation_semantic_role": "association"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "滑道试验场里，记录员小陈拿着分段记录册，站在入口处的铁架旁。调度员老周递给他一块通行牌，上面写着“滑道入口条件核对”。小陈没有立刻接，而是先走到墙边，看那块写着“前置条件牌”的木板。上面挂着一块小铁牌，刻着“需确认固定站台是否静止”。他伸手拨动铁牌，确认它没有晃动，这才接过通行牌。\n\n老周催他：“快填记录册，后面等着验收呢。”小陈翻开册子，第一栏是“入口条件核对”，他写下“站台固定，无偏移”。接着是第二栏“转化环节”，他写了一半，忽然停笔。他发现，如果只填第二栏而不先确认第一栏，那么后面验收员看记录时，根本不知道滑道上的小车是从哪个静止点开始算的。\n\n小陈把第一栏和第二栏的记录并排摊开，对照着看。第一栏写的是“站台固定”，第二栏写的是“小车滑行距离”。他意识到，这两栏共同决定了最后判断：小车是动了还是没动。如果站台不固定，那么小车滑行的距离就没有意义。\n\n有人试着倒过来安排——先填第二栏，再补第一栏。结果验收员老张一看就摇头：“顺序颠倒了。没有先确认入口条件，后面的转化环节接不上。”小陈只好把记录撕掉重填。\n\n最后，小陈先确认入口条件牌，再填入转化环节的数值，然后合上册子交给验收员。老张翻开最终验收记录，核对三栏：入口条件、转化环节、结果。他点点头：“这样记录才能互相印证，不会出错。”众人这才松了口气，知道整条安排终于可靠了。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "确认固定站台是否静止",
+        "narrative_anchor": "确认固定站台是否静止",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "转化环节",
+        "evidence": "小车滑行距离",
+        "narrative_anchor": "小车滑行距离",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "记录才能互相印证",
+        "narrative_anchor": "记录才能互相印证",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先确认入口条件，再填入转化环节",
+        "evidence": "先确认入口条件牌，再填入转化环节的数值",
+        "narrative_anchor": "先确认入口条件牌，再填入转化环节的数值",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "两份记录共同约束最后判断",
+        "evidence": "第一栏和第二栏的记录并排摊开",
+        "narrative_anchor": "第一栏和第二栏的记录并排摊开",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

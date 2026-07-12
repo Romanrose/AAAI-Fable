@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "数字6的认识",
+  "concept_id": "math_1a_rjb_cpt23",
+  "concept_definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt23",
+    "数字6的认识"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt23",
+      "label": "Concept",
+      "name": "数字6的认识",
+      "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "数字6的认识\n通过数物体、读写数字等方式认识数字6，理解6表示的数量。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt25",
+          "label": "Concept",
+          "name": "6的加减法",
+          "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt27",
+          "label": "Concept",
+          "name": "数量的比较",
+          "definition": "用符号“>”“<”比较两个数量的大小，如5<6、6>5。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "6和7",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt23",
+    "concept_id": "math_1a_rjb_cpt23",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt23",
+      "label": "Concept",
+      "name": "数字6的认识",
+      "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：通过数物体、读写数字等方式认识数字6，理解6表示的数量。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "数字6的认识"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "通过数物体、读写数字等方式认识数字6，理解6表示的数量。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过六块石板（其中第六块空白石板对应6个圆点）和鸟窝数量（6个鸟窝、6只喜鹊）来体现数字6的认识，理解6表示的数量。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明通过观察石板旁的圆点数量（1到6个点），按顺序踩踏，最终发现第六块空白石板代表6个点，从而安全过桥。这体现了通过数物体（圆点）认识数字6的过程。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了形式定义条件（圆点数量与石板对应）和规则一致性（按顺序踩踏）；数学结构体现在数量递增和6作为最大数量；没有将数字6道德化，而是作为客观规律呈现。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：六块石板的秘密\n\n在遥远的规则谜城里，有一座古老的石板桥。桥面上嵌着六块青石板，每块石板上都刻着不同的图案：一片树叶、两条小鱼、三朵云、四颗星星、五粒石子，还有一块空白的石板。守桥的老爷爷说：“只有找到正确的顺序，才能安全过桥。”\n\n小主人公阿明每天都要过桥去上学。第一天，他踩上第一块石板——树叶图案，石板纹丝不动。他又踩上第二块——小鱼图案，石板轻轻晃了一下。阿明继续踩第三块、第四块、第五块，石板都只是微微颤动。当他踩上第六块空白石板时，整座桥突然发出“咔嚓”一声，阿明吓得赶紧跳回岸边。\n\n“奇怪，为什么前五块都没事，第六块却出问题？”阿明蹲在桥头仔细观察。他发现每块石板旁边都刻着一个小圆点：树叶旁有1个点，小鱼旁有2个点，云朵旁有3个点，星星旁有4个点，石子旁有5个点，而空白石板旁有6个点。\n\n阿明恍然大悟：“原来这些圆点就是石板的编号！”他重新尝试：先踩树叶（1个点），石板稳稳不动；再踩小鱼（2个点），石板轻轻下沉；接着踩云朵（3个点）、星星（4个点）、石子（5个点），每块石板都按顺序下沉了一点点。最后，他小心翼翼地踩上空白石板（6个点），整座桥平稳地下降，正好与对岸齐平。\n\n阿明顺利过了桥。他回头数了数：1片树叶、2条小鱼、3朵云、4颗星星、5粒石子，还有那块代表6的空白石板。原来，桥的秘密就是按圆点数量从少到多依次踩踏，而第六块石板虽然空白，却代表着最大的数量——6。\n\n从此，阿明每天都能安全过桥。他还发现，桥头那棵老槐树上正好有6个鸟窝，每天早晨都有6只喜鹊飞来唱歌。他明白了：6不仅是一个数字，更代表着一种完整的数量。",
+  "rule_findings": {
+    "story_token_count": 568,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

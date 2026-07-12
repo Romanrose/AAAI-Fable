@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "入口条件核对",
+      "narrative_anchor": "入口条件核对",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "转化环节",
+      "narrative_anchor": "转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "验收记录",
+      "narrative_anchor": "验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+      "evidence": "入口条件没定，转化环节的数据就不知道往哪个方向写",
+      "narrative_anchor": "入口条件没定，转化环节的数据就不知道往哪个方向写",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+      "evidence": "把第一行数值抄进转化环节的公式里，得出正确的系数，再填入验收记录",
+      "narrative_anchor": "把第一行数值抄进转化环节的公式里，得出正确的系数，再填入验收记录",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story beautifully captures slow oxidation (n1) and respiration (n4) through the tree's hidden growth and root-microbe interaction, but completely omits the 'sudden flowering/fruiting' (n3) and its associated conditions (n6) and outcomes (n7). This makes the contrast between slow and fast oxidation invisible, weakening the pedagogical value of the mechanism graph. The mapping plan explicitly includes n3 as a contrast, but the story does not realize it."
+  },
+  "revision_instructions": [
+    "Add a brief episode where the tree suddenly produces a flower or fruit (n3) under ideal conditions (n6: sufficient sunlight, water, temperature) to illustrate the contrast with slow oxidation. This will also activate edges e2, e5, e7, e8, and e10.",
+    "Ensure the story length remains within 450-750 Chinese characters (currently 667, so minor addition is possible).",
+    "Do not use the term '缓慢氧化' or any chemical jargon; keep the metaphor consistent with the tree domain."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "长度"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：长度单位（米及其倍数、子倍数）",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：使用刻度尺的方法",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17188"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12429"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "木匠铺",
+    "setting": "在一间老木匠铺里，老师傅带着学徒制作各种木器。铺子里堆满了木料、工具和半成品，墙上挂着各式各样的尺子。",
+    "conflict": "学徒总是凭感觉下料，结果做出来的家具要么太长要么太短，浪费了许多好木料。老师傅决定教他如何准确测量木料的尺寸。",
+    "characters": [
+      {
+        "name": "老陈",
+        "role": "经验丰富的木匠师傅，传授测量方法",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "小木",
+        "role": "急躁的学徒，需要学会正确使用工具",
+        "mapped_element": "m1"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "小木对木料长短的模糊感觉"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "老陈讲解尺子上不同刻度的含义（寸、分、厘）"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "老陈示范如何将尺子对齐木料两端并读数"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "小木凭眼力锯下一段木料，结果比图纸短了一截，无法使用。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老陈拿出一把木工尺，指着上面的刻度告诉小木：尺子上的每一小格代表一分，每一大格代表一寸，要做出准确尺寸的物件，必须学会看这些刻度。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老陈示范：将尺子的零刻度对齐木料一端，眼睛平视另一端对应的刻度，读出数字。然后让小木自己动手测量一根木料。",
+        "mapped_elements": [
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "小木第一次用尺子量好木料并锯下，发现锯出的长度与图纸完全一致，不再浪费材料。",
+    "ending": "从此小木每次下料前都先用尺子仔细测量，做出来的家具严丝合缝，老师傅夸他终于懂得了规矩。",
+    "implied_moral": "要准确描述事物的长短，不能只凭感觉，必须借助有刻度的工具来比较和确定。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

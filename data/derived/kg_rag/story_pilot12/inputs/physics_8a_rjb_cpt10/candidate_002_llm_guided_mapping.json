@@ -1,0 +1,48 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "古代航海观星",
+  "domain_rationale": "航海时，北极星（参照物）是判断船只位置和方向的标准，与参照物作为运动判断标准一致。",
+  "conflict": "北极星是固定天体，而参照物可以是任何物体，映射中北极星的固定性限制了参照物的可变性。",
+  "event_chain": [
+    "船只在大海中航行（机械运动）",
+    "水手观察北极星的位置",
+    "水手根据北极星判断船只的航向和纬度",
+    "在不同海域，同一北极星位置下船只的方位判断不同（运动与静止的相对性）"
+  ],
+  "turning_point": "北极星位置与海平面的夹角确定方位",
+  "resolution_state": "船只航向与纬度被准确确定",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "北极星",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "船只的航行过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "同一北极星下，不同海域的船只方位判断不同",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "船只航行（机械运动）与北极星（参照物）的关系是：航行中需要北极星来定向",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "北极星（参照物）使水手能够判断船只方位（运动与静止的相对性）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "方位判断结果（运动与静止的相对性）反过来验证北极星（参照物）的可靠性",
+      "direction_preserved": true
+    }
+  ]
+}

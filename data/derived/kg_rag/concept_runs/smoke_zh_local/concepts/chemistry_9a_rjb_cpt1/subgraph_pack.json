@@ -1,0 +1,49 @@
+{
+  "query": "chemistry_9a_rjb_cpt1",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt1",
+    "label": "Concept",
+    "name": "物质",
+    "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+    "aliases": [],
+    "examples": [
+      "水",
+      "钢铁制品",
+      "煤",
+      "木材",
+      "胆矾",
+      "石灰石",
+      "氧气",
+      "二氧化碳"
+    ],
+    "retrieval_text": "物质\n构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt2",
+        "label": "Concept",
+        "name": "物质的变化",
+        "definition": "物质在一定条件下发生的状态、形态或本质的改变，包括物理变化和化学变化。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "课题1 物质的变化和性质",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

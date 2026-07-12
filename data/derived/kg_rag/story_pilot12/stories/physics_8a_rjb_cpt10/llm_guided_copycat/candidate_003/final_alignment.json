@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "他心中有一份标准答案",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "考生张生寒窗十载，下笔如飞，洋洋洒洒写满八页",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "同一份卷子，赵大人说我离经叛道，钱大人说我经世致用。原来考官心中的标准不同，我的学问便或优或劣",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "赵大人拿起张生的考卷，逐字对照心中范文",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他心中有一份标准答案，那是他苦读半生、揣摩上意凝成的范文",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "那赵大人后来奉命编修《科考范例》，竟将张生的“屯田养兵”之论收入其中，成了新的标准答案",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接或间接的对应证据，映射合理。"
+}

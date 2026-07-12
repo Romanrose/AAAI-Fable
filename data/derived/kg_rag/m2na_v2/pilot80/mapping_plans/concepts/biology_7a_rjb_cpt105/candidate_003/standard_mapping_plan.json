@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代农夫种稻",
+  "characters": [
+    "农夫",
+    "稻种"
+  ],
+  "objects": [
+    "田地",
+    "水渠",
+    "稻种",
+    "空气"
+  ],
+  "conflict": "稻种被埋入过深的泥土中，无法接触到足够的空气，导致无法发芽",
+  "event_chain": [
+    "农夫将稻种埋入深土中",
+    "稻种因缺乏空气而无法进行呼吸",
+    "稻种迟迟不发芽",
+    "农夫发现稻种腐烂"
+  ],
+  "turning_point": "农夫意识到稻种需要浅埋以接触空气",
+  "resolution_state": "农夫重新浅埋稻种，稻种获得空气后顺利发芽",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "空气",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "稻种发芽的环境条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "稻种需要空气进行呼吸",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "稻种发芽",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空气是稻种发芽的环境条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "空气使稻种能够进行呼吸",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "稻种呼吸后产生发芽",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'充足的空气'、'氧气'等禁止术语",
+    "注意'种子萌发'等目标概念名称不可直接使用，已用'稻种发芽'替代",
+    "确保所有机制节点和边都被映射，且方向正确"
+  ],
+  "mapping_context_sha256": "fe2d2cae2e87194bb4e2262c532e5d8355b32ca13867b80b268f2391673c62a6",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3e8ba877f8a7bea1be03fd1c7b6429ea64ae8df3986c2ec66d4426f42004faaa"
+  }
+}

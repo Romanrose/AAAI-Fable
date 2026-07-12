@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：一定的水分",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m3",
+      "text": "需要保留上下位关系：充足的空气（氧气）",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m4",
+      "text": "需要保留上下位关系：种子萌发",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m5",
+      "text": "需要保留上下位关系：适宜的温度",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m6",
+      "text": "与相关概念保持可解释关系：种子萌发",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_14133"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10774"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10775"
+    },
+    {
+      "id": "e4",
+      "source": "m4",
+      "target": "m5",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10772"
+    },
+    {
+      "id": "e5",
+      "source": "m5",
+      "target": "m6",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_10773"
+    }
+  ]
+}

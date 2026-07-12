@@ -1,0 +1,68 @@
+{
+  "id": "biology_7a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "遗传和变异",
+    "aliases": [],
+    "forbidden_terms": [
+      "遗传和变异"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "属于或连接到上位结构：生物的共同特征",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10771"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "剧场后台，年轻道具师正对着灯光仔细端详两把新做的椅子。它们是同一批木料，同一份图纸，他亲手裁切、打磨、组装起来的。第一把椅子稳稳当当，每一处线条都精准地贴合图纸上的数字。可是第二把椅子，椅背的弧度似乎比图纸上多了一点点——不是歪，也不是坏，就是多了一道流畅的曲线，像被风无意间吹了一下。\n\n他心里开始打鼓。舞台监督最讲究统一性，这把不一样的椅子会不会被当成次品？他犹豫着要不要拆了重做。\n\n老道具师走过来，弯下腰，用手掌在椅背的弧面上来回摩挲。他笑了：“这木头有自己的脾气。同一棵树锯出来的板材，纹理走向不同，受潮干燥的速度也不一样。你做的时候顺着木性走了，它就多了这道弯。”\n\n“可图纸是一样的啊。”年轻道具师说。\n\n“图纸是死的，手是活的。”老道具师拍拍他的肩，“你看，它们都坐得住人，都扛得住台上的灯光，都叫椅子。这把多了道弯，正是它自己的记号。”\n\n这时舞台监督来了。他绕着两把椅子各转了一圈，没说话，直接让道具师把它们搬上舞台，一左一右放在沙发两侧。演出开始后，两把椅子稳稳托着演员。观众们注意到左边那把椅背的弧线格外柔和，像母亲的手肘，右边那把则笔直有力。没有人觉得哪一把是错的。\n\n年轻道具师站在侧幕，忽然明白了：一模一样的东西从来不存在，但相同的东西里总藏着各自的样貌，这才是它们活着的证明。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "两把椅子都来自同一批木料和同一份图纸（相同特征），但第二把椅子在椅背弧度上出现了细微差异（变异），两者并存。",
+        "evidence": "剧场后台，年轻道具师正对着灯光仔细端详两把新做的椅子。",
+        "narrative_anchor": "剧场后台，年轻道具师正对着灯光仔细端详两把新做的椅子。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "两把椅子都属于“剧场道具”这个上位类别，它们共同构成了道具师的日常工作内容，如同遗传和变异是生物的共同特征。",
+        "evidence": "都叫椅子",
+        "narrative_anchor": "都叫椅子",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "两把椅子都叫椅子（上位概念），而它们之间的相同与差异并存现象（n1）属于这个上位类别。",
+        "evidence": "都叫椅子",
+        "narrative_anchor": "都叫椅子",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "target_concept": {
+    "id": "math_1a_rjb_cpt10",
+    "name": "小于号含义",
+    "label": "Concept",
+    "definition": "表示前面的数量比后面的数量少。"
+  },
+  "neighbors": [
+    {
+      "id": "math_1a_rjb_cpt8",
+      "name": "等号含义"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:16377",
+      "source_id": "math_1a_rjb_cpt8",
+      "source_name": "等号含义",
+      "target_id": "math_1a_rjb_cpt10",
+      "target_name": "小于号含义",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming",
+      "neighbor_id": "math_1a_rjb_cpt8",
+      "neighbor_name": "等号含义",
+      "score": 1.35,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:19331",
+      "source_id": "math_1a_rjb_cpt8",
+      "source_name": "等号含义",
+      "target_id": "math_1a_rjb_cpt10",
+      "target_name": "小于号含义",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "incoming",
+      "neighbor_id": "math_1a_rjb_cpt8",
+      "neighbor_name": "等号含义",
+      "score": 0.9,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 2,
+  "source": "dual_level_graphrag"
+}

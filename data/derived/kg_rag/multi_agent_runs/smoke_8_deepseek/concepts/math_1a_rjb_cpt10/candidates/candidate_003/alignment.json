@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "阿纸通过固定左边残图为‘前面’、右边残图为‘后面’，发现前面边缘的长度小于后面边缘的长度，从而完成拼接。",
+      "evidence": "地图修补坊里，小墨递给学徒阿纸两张残图：“把它们拼成完整的地图。",
+      "narrative_anchor": "地图修补坊里，小墨递给学徒阿纸两张残图：“把它们拼成完整的地图。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

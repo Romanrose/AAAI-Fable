@@ -1,0 +1,92 @@
+{
+  "seed": {
+    "id": "math_1a_rjb_cpt18",
+    "resolved_node_id": "math_1a_rjb_cpt18",
+    "name": "按形状分类",
+    "definition": "根据物体或图形的外形特征进行分类的方法。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_16390",
+      "source_id": "math_1a_rjb_skl8",
+      "source_name": "观察与比较立体图形",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "prerequisites_for",
+      "score": 1.12
+    },
+    {
+      "source_edge_id": "edge_12135",
+      "source_id": "math_1a_rjb_cpt16",
+      "source_name": "圆柱",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12134",
+      "source_id": "math_1a_rjb_cpt15",
+      "source_name": "正方体",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12137",
+      "source_id": "math_1a_rjb_cpt17",
+      "source_name": "球体",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12132",
+      "source_id": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "根据物体或图形的外形特征进行分类的方法。",
+    "condition_summary": [
+      "观察与比较立体图形"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "观察与比较立体图形"
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "圆柱",
+        "正方体",
+        "球体",
+        "长方体"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 5,
+    "selected_edge_count": 5,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

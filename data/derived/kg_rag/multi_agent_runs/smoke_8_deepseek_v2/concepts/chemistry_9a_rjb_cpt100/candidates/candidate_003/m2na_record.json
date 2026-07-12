@@ -1,0 +1,161 @@
+{
+  "id": "chemistry_9a_rjb_cpt100",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "缓慢氧化",
+    "aliases": [],
+    "forbidden_terms": [
+      "缓慢氧化"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：氧化反应",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "与相关概念保持关系：呼吸与氧气 与 缓慢氧化",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "与相关概念保持关系：氧化反应 与 缓慢氧化",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n5",
+        "text": "与相关概念保持关系：燃烧 与 缓慢氧化",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:15248"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:18223"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:18426"
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:18429"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老刻师将一方新刻好的青田石印章递给学徒小章：“放到库房木架上，阴干三日，再蘸印泥。”\n\n小章捧着印章，看那石质温润，雕工精细，心里却犯嘀咕：刻好了不就该用吗？趁老刻师去寻卷宗，他悄悄溜进库房，将印章往印泥盒里一按，又急急盖在公文上。\n\n印迹模糊得厉害，颜色浅浅的，像水渍一般。库房管事路过，拿起印章端详片刻，摇头说：“新刻的章，石纹里全是刀痕，印泥浮在表面，没渗进去。你得让印章和印泥‘交朋友’，急不得。”\n\n小章只好把印章放回木架。第一天，印章表面还是干干的，印泥像一层薄霜。第二天，他凑近细看，发现印油正慢慢往石纹里钻，颜色比先前深了些。第三天早上，印章通体润泽，印油已均匀渗入每一道刻痕。\n\n他取来公文，轻轻蘸了印泥，盖下去——印迹殷红饱满，纹路清晰，连最细的笔画都分毫不差。\n\n老刻师回来，看着那清晰的印迹，点头道：“有些功夫不在刀下，而在等待里。你若是用火烤它，石质裂了，印油焦了，反倒毁了。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "印章阴干和吸收印油的过程",
+        "evidence": "印油正慢慢往石纹里钻",
+        "narrative_anchor": "印油正慢慢往石纹里钻",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "小章必须先理解刻好印章这个基础动作",
+        "evidence": "刻好了",
+        "narrative_anchor": "刻好了",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "印章吸收印油的过程类似于呼吸",
+        "evidence": "印油正慢慢往石纹里钻",
+        "narrative_anchor": "印油正慢慢往石纹里钻",
+        "confidence": 0.8
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "印章蘸印泥盖印与阴干吸收印油是同一类动作的不同速度表现",
+        "evidence": "印章往印泥盒里一按",
+        "narrative_anchor": "印章往印泥盒里一按",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n5",
+        "narrative_element": "用火烤印章会破坏石质和印油",
+        "evidence": "用火烤它",
+        "narrative_anchor": "用火烤它",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "小章发现印章阴干后印油渗入石纹，理解了需要先刻好印章",
+        "evidence": "印油正慢慢往石纹里钻",
+        "narrative_anchor": "印油正慢慢往石纹里钻",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "小章理解了刻好印章后，印章吸收印油的过程类似于呼吸",
+        "evidence": "印油正慢慢往石纹里钻",
+        "narrative_anchor": "印油正慢慢往石纹里钻",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "印章吸收印油（缓慢氧化）与蘸印泥盖印（氧化反应）是同一类动作的不同速度表现",
+        "evidence": "印章往印泥盒里一按",
+        "narrative_anchor": "印章往印泥盒里一按",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "用火烤印章（燃烧）会破坏石质和印油，而阴干（缓慢氧化）才能得到清晰印迹",
+        "evidence": "用火烤它",
+        "narrative_anchor": "用火烤它",
+        "narrative_source_concept_node_id": "n4",
+        "narrative_target_concept_node_id": "n5",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

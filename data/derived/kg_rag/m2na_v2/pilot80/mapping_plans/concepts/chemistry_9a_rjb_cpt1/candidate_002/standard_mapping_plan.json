@@ -1,0 +1,58 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位农夫与他的田地",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "田地"
+  ],
+  "conflict": "田地需要耕作才能生长庄稼，但农夫若不行动，田地便荒芜。",
+  "event_chain": [
+    "农夫拥有田地",
+    "田地需要耕作才能生长庄稼",
+    "农夫决定耕作田地",
+    "田地经过耕作后长出庄稼"
+  ],
+  "turning_point": "农夫决定耕作田地",
+  "resolution_state": "田地经过耕作后长出庄稼，农夫获得收成",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "田地",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "耕作田地",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "田地是耕作田地的前提条件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'物质'一词",
+    "确保'田地'与'耕作田地'的因果关系明确，且方向与机制一致"
+  ],
+  "mapping_context_sha256": "b275ad89f32b881671a13b8ef021fc315d694955fc1ad53cadcc768d38a8e470",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3521b78ca795f3a828bc5406d10298f456280e07c916f08fd39631da011b8729"
+  }
+}

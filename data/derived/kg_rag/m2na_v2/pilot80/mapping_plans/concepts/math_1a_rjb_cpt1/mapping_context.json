@@ -1,0 +1,154 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt1",
+    "subject": "math",
+    "canonical_name": "数物体（数一数）",
+    "aliases": [],
+    "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt1:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt2:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "通过将两组物体一一配对来比较数量的多少。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt3:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19305"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16335"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt1",
+      "name": "数物体（数一数）",
+      "label": "Concept",
+      "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt3",
+        "name": "一一对应比较法"
+      },
+      {
+        "id": "math_1a_rjb_cpt2",
+        "name": "比较数量（多、少、一样多）"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:16335",
+        "source_id": "math_1a_rjb_cpt1",
+        "source_name": "数物体（数一数）",
+        "target_id": "math_1a_rjb_cpt3",
+        "target_name": "一一对应比较法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "math_1a_rjb_cpt3",
+        "neighbor_name": "一一对应比较法",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19305",
+        "source_id": "math_1a_rjb_cpt1",
+        "source_name": "数物体（数一数）",
+        "target_id": "math_1a_rjb_cpt2",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "math_1a_rjb_cpt2",
+        "neighbor_name": "比较数量（多、少、一样多）",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "数物体（数一数）",
+      "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:16335] 数物体（数一数） --prerequisites_for--> 一一对应比较法"
+    ],
+    "process_summary": [
+      "[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:16335",
+    "normalized:edge:19305"
+  ],
+  "provenance": {
+    "seed_sha256": "218ed1856ac3b3f29b721ee2901a75033a4bed9e5a1737f12b925fa54132b164",
+    "retrieval_sha256": "49ec32a881bc1f8a891453ab31972764f7987141ea0af0f4c1241ddedc2593b9",
+    "mechanism_record_sha256": "acdf7a4276df4791e91fd8c574afca9999aeaea6ca80202246ed9a17b0383cd2"
+  }
+}

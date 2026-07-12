@@ -1,0 +1,485 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "传粉",
+  "concept_id": "biology_7a_rjb_cpt114",
+  "concept_definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt114",
+    "传粉"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt114",
+      "label": "Concept",
+      "name": "传粉",
+      "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "传粉\n花粉从花药散放而落到雌蕊柱头上的过程。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt117",
+          "label": "Concept",
+          "name": "受精",
+          "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt115",
+          "label": "Concept",
+          "name": "自花传粉",
+          "definition": "一朵花的花粉落到同一朵花柱头上的传粉现象。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt116",
+          "label": "Concept",
+          "name": "异花传粉",
+          "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe17",
+          "label": "Exercise",
+          "name": "花粉从花药散放而落到雌蕊柱头上的过程叫做什么？异花传粉通常需要哪些媒介？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 748,
+      "summary_chars": 322,
+      "path_chars": 0,
+      "retrieval_context_chars": 1070
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt114",
+    "concept_id": "biology_7a_rjb_cpt114",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt114",
+      "label": "Concept",
+      "name": "传粉",
+      "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "传粉\n花粉从花药散放而落到雌蕊柱头上的过程。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "biology_7a_rjb_cpt114",
+        "label": "Concept",
+        "name": "传粉",
+        "properties": {
+          "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+          "importance": "掌握",
+          "retrieval_text": "传粉\nConcept\n花粉从花药散放而落到雌蕊柱头上的过程。\n掌握"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:14139",
+          "source": "biology_7a_rjb_cpt114",
+          "source_name": "传粉",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:10779",
+          "source": "biology_7a_rjb_cpt116",
+          "source_name": "异花传粉",
+          "target": "biology_7a_rjb_cpt114",
+          "target_name": "传粉",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:10778",
+          "source": "biology_7a_rjb_cpt115",
+          "source_name": "自花传粉",
+          "target": "biology_7a_rjb_cpt114",
+          "target_name": "传粉",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "传粉",
+          "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+          "formula": "",
+          "importance": "掌握"
+        },
+        "condition_summary": [
+          "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精"
+        ],
+        "process_summary": [
+          "[normalized:edge:10779] 异花传粉 --is_a--> 传粉",
+          "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 3,
+        "candidate_edge_count": 3,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 748,
+        "summary_chars": 322,
+        "path_chars": 0,
+        "retrieval_context_chars": 1070
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "传粉的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "传粉 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14139"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "异花传粉 --is_a--> 传粉",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:10779"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "自花传粉 --is_a--> 传粉",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:10778"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "花粉从花药散放而落到雌蕊柱头上的过程。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:14139",
+        "normalized:edge:10779",
+        "normalized:edge:10778"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "传粉",
+        "biology_7a_rjb_cpt114"
+      ],
+      "coverage_targets": {
+        "required_step_count": 4,
+        "required_dependency_count": 3,
+        "must_cover_edge_ids": [
+          "normalized:edge:14139",
+          "normalized:edge:10779",
+          "normalized:edge:10778"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "biology_7a_rjb_cpt114",
+      "concept_id": "biology_7a_rjb_cpt114",
+      "story_language": "zh-CN",
+      "source_domain": "屋顶育苗棚",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 受精",
+        "让中间的行动承接前后变化：异花这条隐藏规则 --is_a--> 这条隐藏规则",
+        "让中间的行动承接前后变化：自花这条隐藏规则 --is_a--> 这条隐藏规则",
+        "让中间的行动承接前后变化：花粉从花药散放而落到雌蕊柱头上的过程。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 受精"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：异花这条隐藏规则 --is_a--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：自花这条隐藏规则 --is_a--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：花粉从花药散放而落到雌蕊柱头上的过程。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "传粉"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "传粉 --prerequisites_for--> 受精",
+            "异花传粉 --is_a--> 传粉",
+            "自花传粉 --is_a--> 传粉",
+            "花粉从花药散放而落到雌蕊柱头上的过程。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "避免目的论解释。",
+            "避免把个体努力写成进化原因。",
+            "保留生命系统的条件、过程和结果。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "屋顶育苗棚",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 受精",
+      "让中间的行动承接前后变化：异花这条隐藏规则 --is_a--> 这条隐藏规则",
+      "让中间的行动承接前后变化：自花这条隐藏规则 --is_a--> 这条隐藏规则",
+      "让中间的行动承接前后变化：花粉从花药散放而落到雌蕊柱头上的过程。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "传粉"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "传粉 --prerequisites_for--> 受精",
+          "异花传粉 --is_a--> 传粉",
+          "自花传粉 --is_a--> 传粉",
+          "花粉从花药散放而落到雌蕊柱头上的过程。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 受精"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：异花这条隐藏规则 --is_a--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：自花这条隐藏规则 --is_a--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：花粉从花药散放而落到雌蕊柱头上的过程。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "传粉"
+      ]
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "条件、过程和结果被记录员按顺序检查。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：屋顶育苗棚里的隐藏规则\n\n屋顶育苗棚里有一位年轻的记录员，他总觉得眼前的变化只是巧合。\n一天，他把条件、行动和结果一一写在木牌上，发现只有当几个环节同时配合时，那个被观察的场所才会出现稳定变化。\n先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 受精\n让中间的行动承接前后变化：异花这条隐藏规则 --is_a--> 这条隐藏规则\n让中间的行动承接前后变化：自花这条隐藏规则 --is_a--> 这条隐藏规则\n后来，记录员不再只看表面的结果，而是先找条件，再看过程，最后检查结果是否能重复出现。他明白，真正重要的不是某个名字，而是名字背后那套能被辨认的关系。",
+  "rule_findings": {
+    "story_token_count": 234,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

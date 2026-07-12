@@ -1,0 +1,132 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个大家庭中的分家事件",
+  "characters": [
+    "父亲（代表原家庭）",
+    "长子（代表分家后的一个子家庭）",
+    "次子（代表分家后的另一个子家庭）",
+    "三子（代表分家后的又一个子家庭）",
+    "四子（代表分家后的再一个子家庭）"
+  ],
+  "objects": [
+    "家产（代表原家庭的共同财产）",
+    "分家契约（代表分家的规则）",
+    "家族族谱（代表分类思想）",
+    "邻居家族（代表化合反应，即合并家族）"
+  ],
+  "conflict": "父亲年迈，需要将家产分给四个儿子，但每个儿子都希望得到更多，且分家方式需要公平合理，同时要避免家族分裂后力量削弱。",
+  "event_chain": [
+    "父亲召集四个儿子，宣布分家决定（对应分解反应的条件）。",
+    "长子分得一部分家产，成立自己的家庭（对应高锰酸钾受热分解反应）。",
+    "次子分得一部分家产，成立自己的家庭（对应过氧化氢分解反应）。",
+    "三子分得一部分家产，成立自己的家庭（对应加热氯酸钾制取氧气）。",
+    "四子分得一部分家产，成立自己的家庭（对应水的分解反应）。",
+    "每个儿子分得的家产都来自原家庭，原家庭不复存在（对应分解反应：一种物质生成多种物质）。",
+    "邻居家族看到分家后，提出合并建议（对应化合反应与分解反应的关系）。",
+    "父亲用族谱中的分类思想指导分家，确保公平（对应分类思想使分解反应得以理解）。",
+    "儿子们学习族谱的分类方法，以便未来管理各自家庭（对应用分类方法学习化学）。"
+  ],
+  "turning_point": "父亲拿出族谱，按照家族分类传统进行分家，避免了争吵。",
+  "resolution_state": "四个儿子各自成立家庭，原家庭分解为多个独立家庭，但家族族谱依然维系着他们之间的关联。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "分家事件（原家庭分解为多个子家庭）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "长子分家（长子分得家产成立新家庭）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "次子分家（次子分得家产成立新家庭）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "三子分家（三子分得家产成立新家庭）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "四子分家（四子分得家产成立新家庭）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "邻居家族合并（邻居家族合并成一个大家庭）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "家族族谱中的分类传统（根据血缘和辈分分类）",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "儿子们学习族谱分类方法（以便管理各自家庭）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "长子分家是分家事件的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "次子分家是分家事件的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "三子分家是分家事件的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "四子分家是分家事件的一个实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "分家事件与邻居家族合并事件相关联（相反过程）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "家族族谱的分类传统使得分家事件得以公平进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "儿子们学习族谱分类方法有助于理解分家事件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未使用任何目标概念名称或禁止术语。",
+    "所有机制节点和边均已映射，且方向保持。",
+    "分类思想（族谱）作为规则，未被视为因果机制。",
+    "故事载体为单一源域：家庭分家。"
+  ],
+  "mapping_context_sha256": "b7516c887838c74d1b39d9a86349266c460fda066268d338a96069df1322c0df",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b980f016a0d5b8839f522508191befd808247e6ef67fa44ab505018186e9a1e5"
+  }
+}

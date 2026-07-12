@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整呈现了发芽率的定义：100粒种子中92粒发芽，8粒未发芽，并用于评价种子质量和指导播种，完全符合概念定义。",
+    "implicitness": "故事全程未出现'发芽率'一词，而是通过阿福的试验过程和阿明的观察自然隐含概念，符合禁止术语要求。",
+    "mapping_clarity": "故事中阿福的试验（100粒种子、记录发芽数、计算比例）与核心机制一一对应，阿明领悟到播种前需测试，映射清晰。",
+    "readability": "语言简洁流畅，情节连贯，对话自然，适合目标年龄段理解，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过具体试验和师徒对话，生动展示了发芽率的测定方法和应用价值，能有效引导学生理解概念并迁移到实际播种场景。",
+    "novelty": "故事框架为常见的师徒教学型寓言，情节设计较为常规，缺乏意外转折或独特视角，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个意外因素（如部分种子因储存不当而发芽率低），增强冲突和转折。",
+    "可让阿明先错误判断种子质量，再通过试验纠正，提升认知冲突。"
+  ]
+}

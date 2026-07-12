@@ -1,0 +1,105 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农种桃树的故事",
+  "characters": [
+    "老农",
+    "邻居"
+  ],
+  "objects": [
+    "桃树",
+    "嫁接的桃树苗",
+    "桃子",
+    "镜子"
+  ],
+  "conflict": "邻居质疑老农的桃树结出的桃子是假的，因为桃子看起来像是挂在镜子里一样不真实。",
+  "event_chain": [
+    "老农种下一棵桃树，并精心照料。",
+    "桃树开花后，老农用嫁接的桃树苗进行嫁接。",
+    "嫁接后，桃树结出了又大又甜的桃子。",
+    "邻居看到后，认为这些桃子是虚幻的，就像镜子里的影像一样。",
+    "老农让邻居亲手摘下桃子品尝，证明桃子是真实存在的。",
+    "邻居承认桃子是真实的，并理解了嫁接技术的作用。"
+  ],
+  "turning_point": "老农让邻居亲手摘下桃子品尝，证明桃子是真实存在的。",
+  "resolution_state": "邻居承认桃子是真实的，并理解了嫁接技术的作用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "嫁接后结出的真实桃子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "邻居认为的镜子里的虚幻桃子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农用嫁接的桃树苗进行嫁接的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农用另一种嫁接方法（如芽接）进行嫁接的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "老农让邻居亲手摘下桃子品尝的验证行为",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老农让邻居亲手摘下另一种嫁接方法结出的桃子品尝的验证行为",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "嫁接过程（n3）是产生真实桃子（n1）的一种方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "另一种嫁接过程（n4）也是产生真实桃子（n1）的一种方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "验证行为（n5）证明了真实桃子（n1）的存在",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "另一种验证行为（n6）也证明了真实桃子（n1）的存在",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "真实桃子（n1）与虚幻桃子（n2）是相对的",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'实像'、'虚像'、'凸透镜'、'照相机'、'投影仪'等物理术语。",
+    "嫁接过程与透镜成像的类比需谨慎，避免混淆。",
+    "邻居的质疑需明确指向'桃子是否真实'，而非其他无关冲突。"
+  ],
+  "mapping_context_sha256": "6f25d47da137d7947afd82123904ff951fa66ad82896c1caa284829dd3348e7e",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "639ab3dfa51973bcc2009bd04f9c14e4abc8da8640d46fbd0be1fc3eb699ee78"
+  }
+}

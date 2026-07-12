@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过数颜色、石头和花瓣的情节，准确体现了通过数物体认识数字7并理解其数量的概念，且未出现任何与定义冲突的内容。",
+    "implicitness": "目标概念“数字7的认识”在故事中完全通过情节隐含，未直接出现该术语或任何禁止词，符合隐含性要求。",
+    "mapping_clarity": "故事中数七种颜色、七块石头、七片花瓣等事件清晰映射了数物体认识数字7的机制，读者能明确理解7代表的数量。",
+    "readability": "语言流畅，情节简单易懂，适合目标年龄段，故事结构完整且富有童趣。",
+    "pedagogical_value": "通过多次数数实践和错误纠正，有效教授了数到7对应七个物体的概念，教学价值高。",
+    "novelty": "故事以七色桥和星星花园为背景，有一定创意，但类似数数主题较常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可增加一个角色写数字7的环节，以强化读写数字的维度。",
+    "可加入一个对比场景，如数到6和数到7的差异，以加深对7的理解。"
+  ]
+}

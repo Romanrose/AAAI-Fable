@@ -1,0 +1,79 @@
+{
+  "query": "biology_7a_rjb_cpt10",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt10",
+    "label": "Concept",
+    "name": "遗传和变异",
+    "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+    "importance": "掌握",
+    "aliases": [],
+    "examples": [
+      "狗的一家体现亲子相似与差异",
+      "同一株碧桃上的花存在差异"
+    ],
+    "retrieval_text": "遗传和变异\nConcept\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\n掌握\n狗的一家体现亲子相似与差异\n同一株碧桃上的花存在差异"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe3",
+        "label": "Exercise",
+        "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。",
+        "definition": null,
+        "importance": null,
+        "aliases": [],
+        "examples": [],
+        "retrieval_text": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。\nExercise"
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_cpt2",
+        "label": "Concept",
+        "name": "生物的共同特征",
+        "definition": "用于区分生物与非生物的一组典型生命表现，包括：生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异（以及除病毒外由细胞构成等）。",
+        "importance": "掌握",
+        "aliases": [],
+        "examples": [
+          "含羞草受碰触叶片合拢（刺激反应）",
+          "鲸浮出水面换气（呼吸）",
+          "人出汗与排尿（排出废物）"
+        ],
+        "retrieval_text": "生物的共同特征\nConcept\n用于区分生物与非生物的一组典型生命表现，包括：生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异（以及除病毒外由细胞构成等）。\n掌握\n含羞草受碰触叶片合拢（刺激反应）\n鲸浮出水面换气（呼吸）\n人出汗与排尿（排出废物）"
+      },
+      {
+        "id": "biology_7a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一章 认识生物",
+        "definition": null,
+        "importance": null,
+        "aliases": [],
+        "examples": [],
+        "retrieval_text": "第一章 认识生物\nSection"
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Target Concept",
+      "text": "Name: 遗传和变异\nLabel: Concept\nDefinition: 子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\nImportance: 掌握"
+    },
+    {
+      "title": "Exercises",
+      "text": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。"
+    },
+    {
+      "title": "Hierarchy",
+      "text": "生物的共同特征: 用于区分生物与非生物的一组典型生命表现，包括：生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异（以及除病毒外由细胞构成等）。\n第一章 认识生物"
+    }
+  ],
+  "meta": {
+    "node_count": 4,
+    "edge_count": 3
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "一位老农用传统方法制作豆腐",
+  "characters": [
+    "老农",
+    "豆腐"
+  ],
+  "objects": [
+    "石磨",
+    "锅灶",
+    "纱布",
+    "卤水"
+  ],
+  "conflict": "老农想用传统石磨磨豆、柴火煮浆、卤水点制的方法做出好豆腐，但这种方法耗时费力，不如现代机器快速便捷。",
+  "event_chain": [
+    "老农决定用传统方法制作豆腐",
+    "老农用石磨磨豆、柴火煮浆、卤水点制",
+    "豆腐成型后，老农将其作为传统手工豆腐的一种",
+    "制作传统手工豆腐需要掌握磨浆、煮浆、点卤等步骤",
+    "制作传统手工豆腐需要优质的黄豆和水",
+    "制作传统手工豆腐需要理解凝固原理",
+    "用机器制作豆腐也是传统手工豆腐的一种",
+    "用现代工艺制作豆腐也是传统手工豆腐的一种",
+    "老农的实践验证了传统手工豆腐的制作方法"
+  ],
+  "turning_point": "老农成功用传统方法做出了豆腐，证明了传统手工豆腐的可行性。",
+  "resolution_state": "老农制作的豆腐被大家认可，传统手工豆腐方法得以传承。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农用传统方法制作豆腐",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "传统手工豆腐的制作方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "豆腐的成型方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "优质的黄豆和水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "凝固原理",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "用机器制作豆腐",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "用现代工艺制作豆腐",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "老农的实践",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农用传统方法制作豆腐是一种传统手工豆腐的制作方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "传统手工豆腐的制作方法需要豆腐的成型方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "优质的黄豆和水是传统手工豆腐的制作方法所需要的",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "凝固原理是传统手工豆腐的制作方法所需要的",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "用机器制作豆腐是一种传统手工豆腐的制作方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "用现代工艺制作豆腐是一种传统手工豆腐的制作方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "老农的实践验证了传统手工豆腐的制作方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'加热高锰酸钾制取氧气'等化学术语。",
+    "所有映射均基于'传统手工豆腐制作'这一单一源域，未引入无关隐喻。",
+    "必须保留的节点n1和边e1已正确映射。",
+    "注意'豆腐的成型方法'对应'氧气的收集方法'，但故事中未直接提及收集，而是隐含在成型步骤中，需确保逻辑连贯。"
+  ]
+}

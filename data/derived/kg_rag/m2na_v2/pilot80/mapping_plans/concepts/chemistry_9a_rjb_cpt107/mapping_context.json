@@ -1,0 +1,238 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt107",
+    "subject": "chemistry",
+    "canonical_name": "过氧化氢分解反应",
+    "aliases": [],
+    "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+    "concept_type": "process",
+    "forbidden_terms": [
+      "过氧化氢分解反应"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "过氧化氢在常温下能缓慢分解生成水和氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_cpt107:formula"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "二氧化锰",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "condition",
+        "text": "加入催化剂如二氧化锰",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:process"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "分解速率显著加快，放出较多氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:phenomena"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "rule",
+        "text": "分解反应：一种物质生成两种或两种以上其他物质的化学反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "state",
+        "text": "二氧化锰质量和化学性质在反应前后没有变化",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n5",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11279"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:process"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:process"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n3",
+        "target": "n4",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt107:definition",
+          "kg-node:chemistry_9a_rjb_exp17:phenomena"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n2",
+        "target": "n6",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22574",
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n6",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp17:conclusion"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "过氧化氢分解反应"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt107",
+      "name": "过氧化氢分解反应",
+      "label": "Concept",
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt109",
+        "name": "分解反应"
+      },
+      {
+        "id": "chemistry_9a_rjb_exp17",
+        "name": "过氧化氢分解实验中二氧化锰的作用"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:11279",
+        "source_id": "chemistry_9a_rjb_cpt107",
+        "source_name": "过氧化氢分解反应",
+        "target_id": "chemistry_9a_rjb_cpt109",
+        "target_name": "分解反应",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt109",
+        "neighbor_name": "分解反应",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:22574",
+        "source_id": "chemistry_9a_rjb_exp17",
+        "source_name": "过氧化氢分解实验中二氧化锰的作用",
+        "target_id": "chemistry_9a_rjb_cpt107",
+        "target_name": "过氧化氢分解反应",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "chemistry_9a_rjb_exp17",
+        "neighbor_name": "过氧化氢分解实验中二氧化锰的作用",
+        "score": 0.95,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "过氧化氢分解反应",
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "formula": "2H₂O₂  ⟶  2H₂O + O₂",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11279] 过氧化氢分解反应 --is_a--> 分解反应",
+      "[normalized:edge:22574] 过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:11279",
+    "normalized:edge:22574"
+  ],
+  "provenance": {
+    "seed_sha256": "a4e52042a30751fa250f8a501910ac6efc1e19eceb08d6e6bcc857553b9eac2a",
+    "retrieval_sha256": "3dd4a25daaeaa14dbeec8daa7ba4714db47db5118adbf8d8fbbcec13be63e42a",
+    "mechanism_record_sha256": "3717675d458c5cb99efbd77252e907986479ac3dc22d4902fdee04a7b7d974a9"
+  }
+}

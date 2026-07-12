@@ -1,0 +1,126 @@
+{
+  "concept_id": "biology_7a_rjb_cpt1",
+  "target_concept": "生物",
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 5,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 2,
+    "novelty": 4
+  },
+  "weighted_overall": 2.85,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事核心是瓷器作坊中工序顺序的重要性，但目标概念是‘生物’的定义（一系列共同生命特征）。故事完全没有体现‘需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异’等核心特征，也没有体现‘除病毒外由细胞构成’。故事将‘避免目的论解释’和‘避免把个体努力写成进化原因’错误地映射为工序步骤，导致概念核心机制丢失。",
+    "implicitness": "故事正文未出现‘生物’、‘生命体’等禁用术语，也未出现任何教材式定义或专业术语，完全通过瓷器作坊的隐喻来讲述。",
+    "mapping_clarity": "机制图中的核心节点n1（生物定义）在故事中映射为‘入口条件核对’，但‘入口条件核对’仅涉及轮廓、纹样骨架和比例，与生物的生命特征毫无对应关系。节点n2（避免目的论）和n3（避免个体努力写成进化原因）被映射为‘第2道转化环节’和‘结果验收记录’，但故事中这些环节的内容（调整釉色、纹理）与避免目的论和进化原因无关。因此，核心机制未得到有效映射。",
+    "readability": "故事语言流畅，情节连贯，人物对话自然，场景描写清晰，适合中文学习者阅读。",
+    "pedagogical_value": "故事讲述的是工序顺序的重要性，与生物概念的教学目标（理解生物的共同特征）完全脱节。读者读完无法理解什么是生物，也无法掌握生物的定义。教学价值极低。",
+    "novelty": "故事以瓷器作坊为背景，避免了常见的动植物寓言壳，情节设计有一定新意，没有明显模板化痕迹。"
+  },
+  "evidence": {
+    "faithfulness": "故事中‘入口条件核对’对应的是瓷器轮廓、纹样骨架和比例，‘第2道转化环节’对应调整釉色和纹理，‘结果验收记录’对应验收员检查。这些内容与生物定义中的生命特征（营养、呼吸、排泄、应激、生长、繁殖、遗传变异）无任何关联。",
+    "implicitness": "全文未出现‘生物’、‘生命体’等词，也未出现‘细胞’、‘呼吸’、‘营养’等生物学术语。",
+    "mapping_clarity": "机制图节点n1（生物定义）映射为‘入口条件核对’，但故事中‘入口条件核对’的内容是瓷器轮廓等，与生物定义无关。节点n2（避免目的论）映射为‘第2道转化环节’，但故事中该环节是调整釉色，与避免目的论无关。节点n3（避免个体努力写成进化原因）映射为‘结果验收记录’，但故事中验收记录检查的是工序顺序，与进化原因无关。",
+    "readability": "故事叙述清晰，对话自然，情节有起承转合，语言简洁易懂。",
+    "pedagogical_value": "故事核心是‘工序顺序不能颠倒’，这与生物定义的教学目标无关。读者无法从中获得关于生物共同特征的任何知识。",
+    "novelty": "瓷器作坊的设定在寓言中较少见，故事围绕工序顺序展开，避免了常见的‘动物比赛’、‘植物生长’等套路。"
+  },
+  "revision_suggestions": [
+    "重新设计故事，使其核心情节直接体现生物的共同生命特征，例如通过不同角色或物品展示‘需要营养’、‘能呼吸’、‘能排出废物’、‘能对刺激作出反应’、‘能生长和繁殖’、‘具有遗传和变异’等特征。",
+    "将‘入口条件核对’改为体现‘具有细胞结构’或‘具备生命特征’的检查环节。",
+    "将‘第2道转化环节’和‘结果验收记录’改为与生命特征相关的因果过程，例如‘先有营养摄入，才能生长’等。",
+    "确保故事中的因果链与生物定义中的特征列表一致，而不是仅仅强调顺序。"
+  ],
+  "final_status": "reject",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 2,
+      "implicitness": 5,
+      "mapping_clarity": 2,
+      "readability": 4,
+      "pedagogical_value": 2,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": true,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事核心是瓷器作坊中工序顺序的重要性，但目标概念是‘生物’的定义（一系列共同生命特征）。故事完全没有体现‘需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异’等核心特征，也没有体现‘除病毒外由细胞构成’。故事将‘避免目的论解释’和‘避免把个体努力写成进化原因’错误地映射为工序步骤，导致概念核心机制丢失。",
+      "implicitness": "故事正文未出现‘生物’、‘生命体’等禁用术语，也未出现任何教材式定义或专业术语，完全通过瓷器作坊的隐喻来讲述。",
+      "mapping_clarity": "机制图中的核心节点n1（生物定义）在故事中映射为‘入口条件核对’，但‘入口条件核对’仅涉及轮廓、纹样骨架和比例，与生物的生命特征毫无对应关系。节点n2（避免目的论）和n3（避免个体努力写成进化原因）被映射为‘第2道转化环节’和‘结果验收记录’，但故事中这些环节的内容（调整釉色、纹理）与避免目的论和进化原因无关。因此，核心机制未得到有效映射。",
+      "readability": "故事语言流畅，情节连贯，人物对话自然，场景描写清晰，适合中文学习者阅读。",
+      "pedagogical_value": "故事讲述的是工序顺序的重要性，与生物概念的教学目标（理解生物的共同特征）完全脱节。读者读完无法理解什么是生物，也无法掌握生物的定义。教学价值极低。",
+      "novelty": "故事以瓷器作坊为背景，避免了常见的动植物寓言壳，情节设计有一定新意，没有明显模板化痕迹。"
+    },
+    "evidence": {
+      "faithfulness": "故事中‘入口条件核对’对应的是瓷器轮廓、纹样骨架和比例，‘第2道转化环节’对应调整釉色和纹理，‘结果验收记录’对应验收员检查。这些内容与生物定义中的生命特征（营养、呼吸、排泄、应激、生长、繁殖、遗传变异）无任何关联。",
+      "implicitness": "全文未出现‘生物’、‘生命体’等词，也未出现‘细胞’、‘呼吸’、‘营养’等生物学术语。",
+      "mapping_clarity": "机制图节点n1（生物定义）映射为‘入口条件核对’，但故事中‘入口条件核对’的内容是瓷器轮廓等，与生物定义无关。节点n2（避免目的论）映射为‘第2道转化环节’，但故事中该环节是调整釉色，与避免目的论无关。节点n3（避免个体努力写成进化原因）映射为‘结果验收记录’，但故事中验收记录检查的是工序顺序，与进化原因无关。",
+      "readability": "故事叙述清晰，对话自然，情节有起承转合，语言简洁易懂。",
+      "pedagogical_value": "故事核心是‘工序顺序不能颠倒’，这与生物定义的教学目标无关。读者无法从中获得关于生物共同特征的任何知识。",
+      "novelty": "瓷器作坊的设定在寓言中较少见，故事围绕工序顺序展开，避免了常见的‘动物比赛’、‘植物生长’等套路。"
+    },
+    "revision_suggestions": [
+      "重新设计故事，使其核心情节直接体现生物的共同生命特征，例如通过不同角色或物品展示‘需要营养’、‘能呼吸’、‘能排出废物’、‘能对刺激作出反应’、‘能生长和繁殖’、‘具有遗传和变异’等特征。",
+      "将‘入口条件核对’改为体现‘具有细胞结构’或‘具备生命特征’的检查环节。",
+      "将‘第2道转化环节’和‘结果验收记录’改为与生命特征相关的因果过程，例如‘先有营养摄入，才能生长’等。",
+      "确保故事中的因果链与生物定义中的特征列表一致，而不是仅仅强调顺序。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "biology_7a_rjb_cpt1",
+    "target_concept": "生物",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

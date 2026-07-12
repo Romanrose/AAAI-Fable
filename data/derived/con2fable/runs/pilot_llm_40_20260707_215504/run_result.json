@@ -1,0 +1,10 @@
+{
+  "output_dir": "data\\derived\\con2fable\\runs\\pilot_llm_40_20260707_215504",
+  "success_count": 40,
+  "failed_count": 0,
+  "records_path": "data\\derived\\con2fable\\runs\\pilot_llm_40_20260707_215504\\records.jsonl",
+  "automatic_metrics_path": "data\\derived\\con2fable\\runs\\pilot_llm_40_20260707_215504\\automatic_metrics.json",
+  "six_dim_summary_path": "data\\derived\\con2fable\\runs\\pilot_llm_40_20260707_215504\\six_dim_eval_summary.jsonl",
+  "six_dim_csv_path": "data\\derived\\con2fable\\runs\\pilot_llm_40_20260707_215504\\six_dim_eval_summary.csv",
+  "eval_report_path": "data\\derived\\con2fable\\runs\\pilot_llm_40_20260707_215504\\eval_report.md"
+}

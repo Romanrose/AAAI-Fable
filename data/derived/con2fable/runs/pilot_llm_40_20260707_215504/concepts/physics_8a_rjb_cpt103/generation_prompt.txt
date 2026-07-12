@@ -1,0 +1,148 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "照相机成像"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：凸透镜",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：调节像距以成清晰像",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要保留上下位关系：实像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17243"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17251"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12419"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "摄影暗房",
+    "setting": "在一间老式摄影暗房里，一位学徒正在学习使用大型座机拍摄远处的景物。暗房里有显影液、定影液、放大机，以及一张张等待冲洗的底片。",
+    "conflict": "学徒发现，当被摄物体离相机越来越远时，底片上形成的影像越来越小，而且是倒立的，这让他困惑不已，不知道如何获得清晰的放大照片。",
+    "characters": [
+      {
+        "name": "学徒",
+        "role": "操作者，代表调节像距的主体",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "座机",
+        "role": "成像装置，代表凸透镜系统",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "远处的山",
+        "role": "被摄物体，代表远离凸透镜的物体",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "底片上的影像",
+        "role": "最终结果，代表缩小倒立的实像",
+        "mapped_element": "m4"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "远处的山"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "座机"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "学徒调节座机的皮腔（像距）"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "底片上形成的缩小倒立影像"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "学徒将座机对准远处的山，发现底片上山的影像很小而且是倒立的。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "学徒回忆师傅的教导，知道座机镜头是凸透镜，需要调节皮腔长度（像距）才能让影像清晰。",
+        "mapped_elements": [
+          "m2",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "学徒仔细转动旋钮，调整皮腔，直到底片上的山影变得轮廓分明，虽然仍是缩小倒立的。",
+        "mapped_elements": [
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "学徒成功得到一张清晰的底片，上面是远处山的缩小倒立实像。",
+        "mapped_elements": [
+          "m4"
+        ]
+      }
+    ],
+    "turning_point": "学徒意识到，只要正确调节像距，即使物体很远，也能在底片上获得清晰的缩小倒立实像。",
+    "ending": "学徒将这张底片冲洗出来，放大后得到一张美丽的风景照，他明白了远距离成像的规律。",
+    "implied_moral": "当目标远离时，通过精确调整接收位置，依然能获得清晰而完整的真实映像，只是大小和方向会改变。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

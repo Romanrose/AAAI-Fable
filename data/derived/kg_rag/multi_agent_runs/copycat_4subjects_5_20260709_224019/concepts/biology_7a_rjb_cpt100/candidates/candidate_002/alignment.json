@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "入口条件核对",
+      "narrative_anchor": "入口条件核对",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "第2道转化环节",
+      "narrative_anchor": "第2道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "验收员核对",
+      "narrative_anchor": "验收员核对",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "入口条件核对确定了基本参数，第2道转化环节才能按条件推进",
+      "evidence": "入口条件核对确定了基本参数，第2道转化环节才能按条件推进",
+      "narrative_anchor": "入口条件核对确定了基本参数，第2道转化环节才能按条件推进",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "第2道转化环节产出的数据稳稳地接上了前面的记录",
+      "evidence": "调度员看了看墙上的流程表，不耐烦地说：“何必那么死板？",
+      "narrative_anchor": "调度员看了看墙上的流程表，不耐烦地说：“何必那么死板？",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

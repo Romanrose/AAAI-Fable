@@ -1,0 +1,91 @@
+{
+  "core_question": "实像的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "投影仪成像 --is_a--> 实像",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12420"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "照相机成像 --is_a--> 实像",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12419"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "投影仪演示实验 --verifies--> 实像",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:23049"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "自制模型照相机实验 --verifies--> 实像",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:23048"
+      ]
+    },
+    {
+      "step_id": "s5",
+      "text": "实像 --relates_to--> 虚像",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:19711"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s4",
+      "target_step_id": "s5",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:12420",
+    "normalized:edge:12419",
+    "normalized:edge:23049",
+    "normalized:edge:23048",
+    "normalized:edge:19711"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "实像",
+    "physics_8a_rjb_cpt102"
+  ],
+  "coverage_targets": {
+    "required_step_count": 5,
+    "required_dependency_count": 4,
+    "must_cover_edge_ids": [
+      "normalized:edge:12420",
+      "normalized:edge:12419",
+      "normalized:edge:23049",
+      "normalized:edge:23048",
+      "normalized:edge:19711"
+    ],
+    "must_cover_path_ids": []
+  }
+}

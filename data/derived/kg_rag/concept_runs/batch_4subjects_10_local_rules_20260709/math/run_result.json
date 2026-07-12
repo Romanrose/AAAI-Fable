@@ -1,0 +1,20 @@
+{
+  "output_dir": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math",
+  "summary_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\summary.jsonl",
+  "eval_summary_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\eval_summary.jsonl",
+  "failed_queue_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\failed_queue.jsonl",
+  "concept_count": 10,
+  "success_count": 10,
+  "failed_count": 0,
+  "skipped_count": 0,
+  "mode": "local",
+  "language": "zh-CN",
+  "workflow": "agentic",
+  "retrieval_mode": "dual_level",
+  "summary_jsonl": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\eval_summary.jsonl",
+  "csv_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\eval_summary.csv",
+  "report_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\eval_report.md",
+  "row_count": "10",
+  "math_report_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\math_eval_report.md",
+  "subject_eval_report_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\math\\subject_eval_report.md"
+}

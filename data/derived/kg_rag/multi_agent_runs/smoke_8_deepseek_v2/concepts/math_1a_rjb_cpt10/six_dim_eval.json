@@ -1,0 +1,122 @@
+{
+  "concept_id": "math_1a_rjb_cpt10",
+  "target_concept": "小于号含义",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确表达了‘小于号含义’的核心机制：前面的数量比后面的数量少。裁判的判定过程严格遵循了先确认‘相等’再判断‘少’的逻辑，与概念定义和机制图完全一致。",
+    "implicitness": "故事正文未出现‘小于号’、‘小于号含义’或任何别名、专业术语，完全通过棋子数量比较来隐含概念，符合隐含性要求。",
+    "mapping_clarity": "故事中裁判、棋手、棋子、记分牌等元素清晰映射到机制图的节点和边：裁判对应规则判定，棋子数量对应数量比较，裁判要求先确认相等对应n2，最终判定对应n1，逻辑关系对应n3。",
+    "readability": "故事语言自然流畅，情节连贯，对话生动，适合中文学习者阅读。字数适中，无冗余或生硬表达。",
+    "pedagogical_value": "读者通过故事能理解‘小于’概念的前提是理解‘相等’，以及两者之间的逻辑关系。故事提供了清晰的比较过程，有助于掌握概念机制。",
+    "novelty": "棋局故事虽有一定模板化风险，但裁判引导先确认相等再判断少的逻辑设计较为新颖，避免了常见的‘动物比大小’或‘食物分配’等陈词滥调。"
+  },
+  "evidence": {
+    "faithfulness": "故事中裁判要求先确认‘数量相等’前提，再通过清点棋子发现白棋少一颗，最终判定白棋数量少于黑棋，完整复现了概念定义和机制图。",
+    "implicitness": "全文未出现‘小于号’、‘小于’等术语，仅用‘少’、‘相等’等日常词汇描述数量关系。",
+    "mapping_clarity": "裁判对应规则判定者，棋子数量对应比较对象，裁判的‘先确认相等’对应n2，‘最终判定少’对应n1，‘相等与少的关系’对应n3，映射清晰。",
+    "readability": "故事从棋手发现数量差异到裁判引导清点，再到最终判定，情节自然，对话合理，无阅读障碍。",
+    "pedagogical_value": "故事通过裁判的引导，让读者明确‘少’的概念建立在‘相等’的基础上，有助于理解概念间的逻辑关系。",
+    "novelty": "棋局故事虽常见，但裁判引导先确认相等再判断少的逻辑设计避免了直接说教，有一定新意。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事结尾增加一句总结性话语，如‘原来，要理解少，必须先知道什么是相等’，以强化教学效果。",
+    "可适当增加棋子数量比较的具体数字描述，如‘白棋有15颗，黑棋有16颗’，使比较更直观。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确表达了‘小于号含义’的核心机制：前面的数量比后面的数量少。裁判的判定过程严格遵循了先确认‘相等’再判断‘少’的逻辑，与概念定义和机制图完全一致。",
+      "implicitness": "故事正文未出现‘小于号’、‘小于号含义’或任何别名、专业术语，完全通过棋子数量比较来隐含概念，符合隐含性要求。",
+      "mapping_clarity": "故事中裁判、棋手、棋子、记分牌等元素清晰映射到机制图的节点和边：裁判对应规则判定，棋子数量对应数量比较，裁判要求先确认相等对应n2，最终判定对应n1，逻辑关系对应n3。",
+      "readability": "故事语言自然流畅，情节连贯，对话生动，适合中文学习者阅读。字数适中，无冗余或生硬表达。",
+      "pedagogical_value": "读者通过故事能理解‘小于’概念的前提是理解‘相等’，以及两者之间的逻辑关系。故事提供了清晰的比较过程，有助于掌握概念机制。",
+      "novelty": "棋局故事虽有一定模板化风险，但裁判引导先确认相等再判断少的逻辑设计较为新颖，避免了常见的‘动物比大小’或‘食物分配’等陈词滥调。"
+    },
+    "evidence": {
+      "faithfulness": "故事中裁判要求先确认‘数量相等’前提，再通过清点棋子发现白棋少一颗，最终判定白棋数量少于黑棋，完整复现了概念定义和机制图。",
+      "implicitness": "全文未出现‘小于号’、‘小于’等术语，仅用‘少’、‘相等’等日常词汇描述数量关系。",
+      "mapping_clarity": "裁判对应规则判定者，棋子数量对应比较对象，裁判的‘先确认相等’对应n2，‘最终判定少’对应n1，‘相等与少的关系’对应n3，映射清晰。",
+      "readability": "故事从棋手发现数量差异到裁判引导清点，再到最终判定，情节自然，对话合理，无阅读障碍。",
+      "pedagogical_value": "故事通过裁判的引导，让读者明确‘少’的概念建立在‘相等’的基础上，有助于理解概念间的逻辑关系。",
+      "novelty": "棋局故事虽常见，但裁判引导先确认相等再判断少的逻辑设计避免了直接说教，有一定新意。"
+    },
+    "revision_suggestions": [
+      "可考虑在故事结尾增加一句总结性话语，如‘原来，要理解少，必须先知道什么是相等’，以强化教学效果。",
+      "可适当增加棋子数量比较的具体数字描述，如‘白棋有15颗，黑棋有16颗’，使比较更直观。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "math_1a_rjb_cpt10",
+    "target_concept": "小于号含义",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

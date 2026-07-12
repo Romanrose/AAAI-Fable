@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly maps n1 (入口条件核对) to the entry condition check, and e1 (is_a relation from n2 to n1) is realized by the protagonist classifying the empty check as a universal rule, analogous to length units. This is stronger than a simple sequential mention because it preserves the hierarchical 'is_a' semantics. The weakest node is n2 because its mapping to '第2道转化环节' is less explicit in the story's conceptual hierarchy, though still present. The weakest edge is e1 because the analogy to length units is a single sentence, but it effectively conveys the relation."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "hard_leakage"
+    ]
+  }
+}

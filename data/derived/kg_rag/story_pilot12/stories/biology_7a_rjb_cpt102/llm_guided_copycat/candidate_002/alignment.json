@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "火候、调料、通风，样样都恰到好处",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "红烧肉终于炖熟了",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "文火慢炖的温度",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "倒出酱油，用舌尖轻轻一舔，咸淡正好，再往锅里添了半碗清水",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "推开厨房的窗户，让穿堂风轻轻吹进来",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "用筷子戳一下肉皮，试试软硬。他又凑近锅沿，看蒸汽里飘出的香味是否纯正——若有焦味，便是火大了；若有酸味，便是酱油放多了。他还侧耳听锅里的咕嘟声，声音太急说明水分快干了，得添些热水",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "火候、调料、通风，样样都恰到好处，才能炖出这般滋味",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "火候、调料、通风，样样都恰到好处",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "火候、调料、通风，样样都恰到好处",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "火候、调料、通风，样样都恰到好处",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "用筷子戳一下肉皮，试试软硬。他又凑近锅沿，看蒸汽里飘出的香味是否纯正——若有焦味，便是火大了；若有酸味，便是酱油放多了。他还侧耳听锅里的咕嘟声，声音太急说明水分快干了，得添些热水",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。故事通过厨师炖红烧肉的过程，生动展示了种子萌发所需条件（温度、水分、空气）及其验证方式，与机制图完全对齐。"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农夫与果树",
+  "characters": [
+    "农夫",
+    "果树"
+  ],
+  "objects": [
+    "果树上的果实",
+    "篮子"
+  ],
+  "conflict": "农夫需要知道果树上有多少果实，才能决定是否采摘并比较不同果树的产量。",
+  "event_chain": [
+    "农夫逐一观察并计数每棵果树上的果实数量。",
+    "农夫根据果实数量的多少，比较哪棵果树结果多、哪棵少，或者是否一样多。",
+    "农夫通过将两棵果树上的果实一一配对，来比较数量的多少。"
+  ],
+  "turning_point": "农夫发现通过逐一计数，可以准确知道每棵果树的果实数量，从而为比较提供基础。",
+  "resolution_state": "农夫成功比较了不同果树的果实数量，并决定优先采摘果实多的果树。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫逐一观察并计数每棵果树上的果实数量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫根据果实数量的多少，比较哪棵果树结果多、哪棵少，或者是否一样多",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫通过将两棵果树上的果实一一配对，来比较数量的多少",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫逐一计数果实数量后，进而比较不同果树的果实多少",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫逐一计数果实数量，使得能够将两棵果树的果实一一配对比较",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数物体（数一数）'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事载体来自单一源域（农夫与果树），不混用其他隐喻。"
+  ],
+  "mapping_context_sha256": "d352606f2cdd485b8538c171b80a51d6a53299e2966530529ee79a2f6533c77f",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b3a038f284e731c77cff784a55c38dc2993812ef2d23de0fd719b8af179ae27c"
+  }
+}

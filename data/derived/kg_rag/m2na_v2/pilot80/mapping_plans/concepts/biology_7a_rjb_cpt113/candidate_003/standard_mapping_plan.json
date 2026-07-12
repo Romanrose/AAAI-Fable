@@ -1,0 +1,106 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个古代村庄的家族传承",
+  "characters": [
+    "族长",
+    "家族长老",
+    "家族祠堂",
+    "家族后代"
+  ],
+  "objects": [
+    "族谱",
+    "祠堂的暗格",
+    "传家宝",
+    "家族印章"
+  ],
+  "conflict": "族长年迈，需要确定一位继承人，但继承人必须通过考验才能获得族谱和传家宝的认可。",
+  "event_chain": [
+    "族长宣布要选择继承人",
+    "候选后代必须通过祠堂的考验",
+    "考验包括找到祠堂暗格中的族谱",
+    "族谱中记载了家族印章的所在",
+    "后代找到家族印章后，才能继承族长之位"
+  ],
+  "turning_point": "一位后代在祠堂中找到了暗格，取出了族谱，并按照族谱指引找到了家族印章。",
+  "resolution_state": "该后代成功继承族长之位，家族传承得以延续。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "族长",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "家族传承体系",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "祠堂暗格",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "族谱",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "家族印章",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "后代通过考验获得印章",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "族长是家族传承体系的核心",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "族长拥有祠堂暗格",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "祠堂暗格内藏有族谱",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "族长拥有家族印章",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "家族印章使得后代能够通过考验",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'雌蕊'等禁止术语",
+    "注意映射中族谱对应胚珠，但族谱本身不直接是后代，而是传承的关键信息载体",
+    "故事中'接受花粉'映射为'后代通过考验获得印章'，需确保方向一致"
+  ],
+  "mapping_context_sha256": "32eb2b52bb092ccd1b13546f876ec44be086b80c3a6c8fdff1847c677db05331",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1333242998b0b2d6be747956d2d7ce899458bf29156e23ce80fbc616dc93012c"
+  }
+}

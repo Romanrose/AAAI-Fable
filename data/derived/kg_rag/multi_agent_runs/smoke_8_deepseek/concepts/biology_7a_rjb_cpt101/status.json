@@ -1,0 +1,10 @@
+{
+  "concept_id": "biology_7a_rjb_cpt101",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 5.0,
+  "selected_candidate_id": "candidate_001",
+  "revision_applied": false
+}

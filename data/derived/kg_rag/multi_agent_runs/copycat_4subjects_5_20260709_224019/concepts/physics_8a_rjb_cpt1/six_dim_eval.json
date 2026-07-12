@@ -1,0 +1,124 @@
+{
+  "concept_id": "physics_8a_rjb_cpt1",
+  "target_concept": "长度",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 4,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "weighted_overall": 4.05,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过记录员用铁尺测量滑道起点和终点标记线的行为，准确传达了‘长度需要通过测量工具获得’这一核心机制。事件链中‘先核对前置条件再推动转化环节’也体现了测量作为后续步骤前提的关系。但故事未明确体现‘描述物体空间延伸程度’这一属性，仅通过‘距离’和‘数值’间接暗示，略有不足。",
+    "implicitness": "全文未出现‘长度’、‘米’、‘厘米’等禁用术语，也未出现教材式定义。概念完全通过‘铁尺测量’、‘数值’、‘距离’等日常语言隐含表达，符合隐含性要求。",
+    "mapping_clarity": "故事中‘铁牌上的数值’对应‘长度’、‘铁尺’对应‘测量工具’、‘记录册’对应‘测量记录’、‘验收员对照’对应‘验证过程’，映射清晰。但‘第2道转化环节’和‘封存箱’等元素与概念机制的对应关系不够直观，可能增加理解负担。",
+    "readability": "故事语言流畅自然，情节连贯，有冲突和转折，适合中学生阅读。但部分表述如‘第2道转化环节’略显生硬，可读性稍受影响。",
+    "pedagogical_value": "故事通过调度员跳过测量导致错误的情节，生动说明了测量作为前提条件的重要性，有助于学生理解‘长度测量是后续步骤的基础’这一教学点。但故事未涉及长度单位或测量方法的具体知识，教学深度有限。",
+    "novelty": "故事采用了‘滑道试验场’这一较新颖的场景，避免了常见的‘教室测量’或‘操场跑步’模板。但整体情节仍属于‘先测量后操作’的常见叙事模式，新颖性中等。"
+  },
+  "evidence": {
+    "faithfulness": "故事中记录员用铁尺测量滑道起点和终点标记线，体现了‘通过测量工具获得长度’；调度员跳过测量导致后续步骤失败，体现了测量作为前提条件。但未明确描述‘空间延伸程度’。",
+    "implicitness": "全文未出现‘长度’、‘米’、‘厘米’等术语，仅使用‘数值’、‘距离’、‘铁尺’等日常词汇。",
+    "mapping_clarity": "铁牌上的数值→长度，铁尺→测量工具，记录册→测量记录，验收员对照→验证过程。但‘第2道转化环节’和‘封存箱’的映射不够明确。",
+    "readability": "故事有完整的情节线，语言流畅，冲突自然，但‘第2道转化环节’表述略显突兀。",
+    "pedagogical_value": "故事通过调度员的错误和改正，强调了测量作为前提条件的重要性，有助于学生理解测量在科学流程中的基础作用。",
+    "novelty": "场景为‘滑道试验场’，较新颖；但情节结构（先测量后操作）较为常见。"
+  },
+  "revision_suggestions": [
+    "可考虑将‘第2道转化环节’改为更自然的表述，如‘下一道工序’或‘后续步骤’。",
+    "可增加对‘空间延伸程度’的间接体现，例如通过描述‘滑道从起点到终点的距离’来强化概念映射。",
+    "可适当融入长度单位（如‘米’）的隐含使用，以增强教学价值，但需注意避免直接暴露术语。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 4,
+      "pedagogical_value": 4,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过记录员用铁尺测量滑道起点和终点标记线的行为，准确传达了‘长度需要通过测量工具获得’这一核心机制。事件链中‘先核对前置条件再推动转化环节’也体现了测量作为后续步骤前提的关系。但故事未明确体现‘描述物体空间延伸程度’这一属性，仅通过‘距离’和‘数值’间接暗示，略有不足。",
+      "implicitness": "全文未出现‘长度’、‘米’、‘厘米’等禁用术语，也未出现教材式定义。概念完全通过‘铁尺测量’、‘数值’、‘距离’等日常语言隐含表达，符合隐含性要求。",
+      "mapping_clarity": "故事中‘铁牌上的数值’对应‘长度’、‘铁尺’对应‘测量工具’、‘记录册’对应‘测量记录’、‘验收员对照’对应‘验证过程’，映射清晰。但‘第2道转化环节’和‘封存箱’等元素与概念机制的对应关系不够直观，可能增加理解负担。",
+      "readability": "故事语言流畅自然，情节连贯，有冲突和转折，适合中学生阅读。但部分表述如‘第2道转化环节’略显生硬，可读性稍受影响。",
+      "pedagogical_value": "故事通过调度员跳过测量导致错误的情节，生动说明了测量作为前提条件的重要性，有助于学生理解‘长度测量是后续步骤的基础’这一教学点。但故事未涉及长度单位或测量方法的具体知识，教学深度有限。",
+      "novelty": "故事采用了‘滑道试验场’这一较新颖的场景，避免了常见的‘教室测量’或‘操场跑步’模板。但整体情节仍属于‘先测量后操作’的常见叙事模式，新颖性中等。"
+    },
+    "evidence": {
+      "faithfulness": "故事中记录员用铁尺测量滑道起点和终点标记线，体现了‘通过测量工具获得长度’；调度员跳过测量导致后续步骤失败，体现了测量作为前提条件。但未明确描述‘空间延伸程度’。",
+      "implicitness": "全文未出现‘长度’、‘米’、‘厘米’等术语，仅使用‘数值’、‘距离’、‘铁尺’等日常词汇。",
+      "mapping_clarity": "铁牌上的数值→长度，铁尺→测量工具，记录册→测量记录，验收员对照→验证过程。但‘第2道转化环节’和‘封存箱’的映射不够明确。",
+      "readability": "故事有完整的情节线，语言流畅，冲突自然，但‘第2道转化环节’表述略显突兀。",
+      "pedagogical_value": "故事通过调度员的错误和改正，强调了测量作为前提条件的重要性，有助于学生理解测量在科学流程中的基础作用。",
+      "novelty": "场景为‘滑道试验场’，较新颖；但情节结构（先测量后操作）较为常见。"
+    },
+    "revision_suggestions": [
+      "可考虑将‘第2道转化环节’改为更自然的表述，如‘下一道工序’或‘后续步骤’。",
+      "可增加对‘空间延伸程度’的间接体现，例如通过描述‘滑道从起点到终点的距离’来强化概念映射。",
+      "可适当融入长度单位（如‘米’）的隐含使用，以增强教学价值，但需注意避免直接暴露术语。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "physics_8a_rjb_cpt1",
+    "target_concept": "长度",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

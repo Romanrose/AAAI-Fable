@@ -1,0 +1,44 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt10:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "生物的共同特征：一组典型生命表现，包括生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异等",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt2:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10771"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}

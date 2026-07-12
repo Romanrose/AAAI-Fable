@@ -1,0 +1,55 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt13",
+  "concept_id": "biology_7a_rjb_cpt13",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "biology_7a_rjb_cpt13",
+    "label": "Concept",
+    "name": "生物与非生物的区分",
+    "definition": "依据生物的共同特征判断一个物体是否具有生命，从而区分生物和非生物。",
+    "aliases": [],
+    "examples": [
+      "机器人能运动但不是生物",
+      "钟乳石能“长大”但不是生物",
+      "树木花草不能移动位置但仍是生物"
+    ]
+  },
+  "source_domain": "园圃工坊",
+  "entities": [
+    "负责观察规则的主角",
+    "一个需要按条件运转的场所",
+    "用来显示变化的物件或行动"
+  ],
+  "event_chain": [
+    "用故事事件隐含表达：依据生物的共同特征判断一个物体是否具有生命，从而区分生物和非生物。"
+  ],
+  "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+  "turning_point": "一次具体观察或检验让主角发现关键关系。",
+  "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "生物与非生物的区分"
+      ],
+      "story_role": "故事中隐含的核心规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "依据生物的共同特征判断一个物体是否具有生命，从而区分生物和非生物。"
+      ],
+      "story_role": "主要事件链和转折"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "避免目的论解释。",
+        "避免把个体努力写成进化原因。",
+        "保留生命系统的条件、过程和结果。"
+      ],
+      "story_role": "避免误导性类比的写作约束"
+    }
+  ]
+}

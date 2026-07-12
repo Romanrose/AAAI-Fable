@@ -1,0 +1,49 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt104",
+    "label": "Concept",
+    "name": "一定的水分",
+    "properties": {
+      "definition": "种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。",
+      "importance": "重要",
+      "retrieval_text": "一定的水分\nConcept\n种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:10774",
+      "source": "biology_7a_rjb_cpt104",
+      "source_name": "一定的水分",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "一定的水分",
+      "definition": "种子萌发所需的适量水分条件；水分不足不利于萌发，水分过多可能导致种子霉烂或缺氧。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:10774] 一定的水分 --is_a--> 种子萌发的环境条件"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 249,
+    "summary_chars": 255,
+    "path_chars": 0,
+    "retrieval_context_chars": 504
+  }
+}

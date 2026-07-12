@@ -1,0 +1,206 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "厨艺",
+      "domain_rationale": "厨艺中食材的软硬度需要通过烹饪工具和技法来确认，类似长度需要测量工具和单位来定义。",
+      "conflict": "食材软硬度是主观感受，而长度是客观物理量，但两者都需要标准化工具才能准确描述。",
+      "event_chain": [
+        "厨师想要判断一块牛肉的嫩度",
+        "嫩度需要嫩度单位（如纹理等级）来量化",
+        "厨师用嫩度计或叉子按压来测量嫩度",
+        "使用嫩度计的方法（如插入角度、力度）确保测量准确"
+      ],
+      "turning_point": "厨师使用嫩度计按压牛肉，得到纹理等级读数，从而确认嫩度。",
+      "resolution_state": "牛肉的嫩度通过嫩度计和标准化方法被准确测量，厨师据此决定烹饪方式。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "牛肉的嫩度",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "嫩度单位（纹理等级）",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "用嫩度计测量嫩度",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "使用嫩度计的方法",
+          "mapping_type": "rule"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "嫩度单位（纹理等级）是牛肉嫩度的一种量化表示",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "用嫩度计测量嫩度的过程验证了牛肉的嫩度",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "牛肉的嫩度使得使用嫩度计的方法成为必要",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 4
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "地图制作",
+      "domain_rationale": "地图上的距离需要比例尺和测量工具来确定，类似长度需要单位和测量工具。",
+      "conflict": "地图距离是抽象表示，而长度是物理实在，但两者都依赖标准化单位与工具进行准确测量。",
+      "event_chain": [
+        "制图师想要知道两座城市之间的实际距离",
+        "距离需要距离单位（如公里）来量化",
+        "制图师用比例尺和直尺在图上测量距离",
+        "使用比例尺和直尺的方法（如对齐、读数）确保测量准确"
+      ],
+      "turning_point": "制图师用比例尺换算图上距离得到实际公里数，从而确认距离。",
+      "resolution_state": "两地实际距离通过比例尺和标准化方法被准确求得，制图师将其标注在地图图例上。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "两城市间的实际距离",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "距离单位（公里）",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "用比例尺和直尺测量图上距离",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "使用比例尺和直尺的方法",
+          "mapping_type": "rule"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "距离单位（公里）是实际距离的一种量化表示",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "用比例尺和直尺测量的过程验证了实际距离",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "实际距离使得使用比例尺和直尺的方法成为必要",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 4
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "中医诊断",
+      "domain_rationale": "中医的脉象需要通过脉诊和脉象单位来辨识，类似长度需要测量和单位。",
+      "conflict": "脉象是生理状态，而长度是物理量，但两者都依赖特定工具和标准化方法才能准确判定。",
+      "event_chain": [
+        "郎中想要判断病人的气血情况",
+        "气血情况需要脉象类型（如浮、沉、数、迟）来分类",
+        "郎中通过切脉（手指按压寸关尺）来测量脉象",
+        "切脉的方法（如取位、力度、时间）确保诊断准确"
+      ],
+      "turning_point": "郎中通过切脉感知到脉象类型，从而确认气血状况。",
+      "resolution_state": "病人的气血情况通过脉象类型和标准切脉方法被准确诊断，郎中据此开方。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "病人的气血情况",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "脉象类型（浮、沉、数、迟）",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "通过切脉测量脉象",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "切脉的方法",
+          "mapping_type": "rule"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "脉象类型是气血情况的一种分类表示",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "切脉的过程验证了气血情况",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "气血情况使得切脉的方法成为必要",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 4
+    }
+  }
+]

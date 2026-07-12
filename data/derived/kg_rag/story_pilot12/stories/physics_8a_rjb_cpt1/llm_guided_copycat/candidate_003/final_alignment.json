@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "病人的气血情况",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "脉象类型（浮、沉、数、迟）",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "通过切脉测量脉象",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "切脉的方法",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "脉象类型，便是气血情况的一面镜子",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "脉象类型本身，又必须通过切脉这一过程才能被感知和确认",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "这一套方法，正是前人千百年经验的结晶，是切脉的规矩与准绳",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story, with direction preserved for edges. The story directly enacts the mapping plan: 气血情况 (n1) is classified by 脉象类型 (n2) (e1), 切脉 (n3) verifies 气血情况 (e2), and 气血情况 enables the use of 切脉的方法 (n4) (e3)."
+}

@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "小林通过观察每个证物袋，逐一计数，最终确定证物的总数量。",
+      "evidence": "实习生小林望着桌上散乱的证物袋，一时不知从何下手。",
+      "narrative_anchor": "实习生小林望着桌上散乱的证物袋，一时不知从何下手。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "老周要求小林使用之前通过‘一一对应比较法’核对过的旧清单，来验证新计数的结果。",
+      "evidence": "老周走了过来，手里拿着一份旧清单",
+      "narrative_anchor": "老周走了过来，手里拿着一份旧清单",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "小林通过将新计数的结果与旧清单进行一一对应比较，得出了‘数量一样多’的结论。",
+      "evidence": "小林松了口气，脸上露出笑容",
+      "narrative_anchor": "小林松了口气，脸上露出笑容",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "小林先进行逐一计数（n1），然后老周要求用一一对应比较法验证（n2），体现了计数需要以一一对应比较法为前提。",
+      "evidence": "书记员小陈走过来，轻声提醒道：“先观察每件证物，然后一个一个地数，确定一共多少件",
+      "narrative_anchor": "书记员小陈走过来，轻声提醒道：“先观察每件证物，然后一个一个地数，确定一共多少件",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "小林通过一一对应比较法验证计数结果后，得出‘数量一样多’的结论，为后续比较数量建立了联系。",
+      "evidence": "小林松了口气，脸上露出笑容",
+      "narrative_anchor": "小林松了口气，脸上露出笑容",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

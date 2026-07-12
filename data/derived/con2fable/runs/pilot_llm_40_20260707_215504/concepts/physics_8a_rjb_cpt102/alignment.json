@@ -1,0 +1,57 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "evidence": "光线穿过透镜后实际会聚在幕布上，才能被承接住",
+      "narrative_anchor": "光线穿过透镜后实际会聚在幕布上，才能被承接住"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "投影仪成像",
+      "evidence": "学徒将底片卡进投影仪的片夹",
+      "narrative_anchor": "投影仪"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "照相机成像",
+      "evidence": "照相机的胶片也在透镜后面，远处的景物怎么就能在胶片上成像",
+      "narrative_anchor": "照相机"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "与相关概念保持可解释关系：虚像",
+      "evidence": "那种影像只能看，不能接；而真正的影像，是光线实实在在聚在一起才能形成的",
+      "narrative_anchor": "那种影像只能看，不能接"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从实像定义到投影仪成像的支撑关系",
+      "evidence": "光线穿过透镜后实际会聚在幕布上，才能被承接住",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "光线穿过透镜后实际会聚在幕布上"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从投影仪成像到照相机成像的类比关系",
+      "evidence": "你刚才做的，就是一台放大了的照相机",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "你刚才做的，就是一台放大了的照相机"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从照相机成像到虚像概念的对比关系",
+      "evidence": "那种影像只能看，不能接；而真正的影像，是光线实实在在聚在一起才能形成的",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "那种影像只能看，不能接"
+    }
+  ]
+}

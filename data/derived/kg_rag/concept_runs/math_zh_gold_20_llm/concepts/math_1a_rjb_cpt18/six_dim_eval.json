@@ -1,0 +1,85 @@
+{
+  "concept_id": "math_1a_rjb_cpt18",
+  "target_concept": "按形状分类",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过三个展厅的分类规则（能否站立、能否滚动、有无尖角）准确体现了根据外形特征进行分类的方法，完全符合概念定义。",
+    "implicitness": "目标概念名称‘按形状分类’未在故事正文中出现，分类规则通过情节自然隐含，符合隐含性要求。",
+    "mapping_clarity": "每个展厅的分类标准与立体图形的外形特征（如长方体有尖角、球体可滚动）一一对应，映射清晰明确。",
+    "readability": "故事语言简洁流畅，情节连贯，角色对话生动，适合目标年龄段阅读。",
+    "pedagogical_value": "故事通过分类活动展示了长方体、正方体、圆柱、球体的关键特征，有助于学生理解形状分类的数学结构。",
+    "novelty": "故事采用了常见的积木王国和展厅分类的设定，虽有效但缺乏独特创意。"
+  },
+  "revision_suggestions": [
+    "可增加一个需要综合多个外形特征进行分类的情节，提升挑战性。",
+    "可引入一个角色因外形特征模糊而产生分类困惑的桥段，增强认知冲突。"
+  ],
+  "rule_findings": {
+    "story_token_count": 486,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过三个展厅的分类规则（能否站立、能否滚动、有无尖角）准确体现了根据外形特征进行分类的方法，完全符合概念定义。",
+      "implicitness": "目标概念名称‘按形状分类’未在故事正文中出现，分类规则通过情节自然隐含，符合隐含性要求。",
+      "mapping_clarity": "每个展厅的分类标准与立体图形的外形特征（如长方体有尖角、球体可滚动）一一对应，映射清晰明确。",
+      "readability": "故事语言简洁流畅，情节连贯，角色对话生动，适合目标年龄段阅读。",
+      "pedagogical_value": "故事通过分类活动展示了长方体、正方体、圆柱、球体的关键特征，有助于学生理解形状分类的数学结构。",
+      "novelty": "故事采用了常见的积木王国和展厅分类的设定，虽有效但缺乏独特创意。"
+    },
+    "revision_suggestions": [
+      "可增加一个需要综合多个外形特征进行分类的情节，提升挑战性。",
+      "可引入一个角色因外形特征模糊而产生分类困惑的桥段，增强认知冲突。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

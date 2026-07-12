@@ -1,0 +1,256 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "种子萌发",
+  "concept_id": "biology_7a_rjb_cpt101",
+  "concept_definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt101",
+    "种子萌发"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "importance": "掌握",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt102",
+          "label": "Concept",
+          "name": "种子萌发的环境条件",
+          "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [
+            "温度过低（如放入冰箱）不利于萌发",
+            "过于潮湿易使种子霉烂",
+            "松土可使土壤中有充足空气"
+          ],
+          "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+        },
+        {
+          "id": "biology_7a_rjb_cpt106",
+          "label": "Concept",
+          "name": "种子萌发的自身条件",
+          "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "种子萌发的自身条件\nConcept\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。\n掌握"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_cpt102",
+          "label": "Concept",
+          "name": "种子萌发的环境条件",
+          "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [
+            "温度过低（如放入冰箱）不利于萌发",
+            "过于潮湿易使种子霉烂",
+            "松土可使土壤中有充足空气"
+          ],
+          "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+        },
+        {
+          "id": "biology_7a_rjb_cpt106",
+          "label": "Concept",
+          "name": "种子萌发的自身条件",
+          "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+          "importance": "掌握",
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "种子萌发的自身条件\nConcept\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。\n掌握"
+        },
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "第二章 被子植物的一生\nSection"
+        }
+      ]
+    },
+    "meta": {
+      "node_count": 4,
+      "edge_count": 5
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt101",
+    "seed": {
+      "id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "importance": "掌握",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+    },
+    "source_domain": "garden workshop",
+    "entities": [
+      "a careful caretaker",
+      "a plot that depends on the right conditions",
+      "tools and routines that reveal whether growth is real"
+    ],
+    "event_chain": [
+      "The caretaker prepares the conditions that must already be in place.",
+      "The plot uses those conditions to produce visible growth.",
+      "Nearby processes either support or compete with that growth.",
+      "Observation and trials reveal whether the growth is genuine and sustained."
+    ],
+    "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+    "turning_point": "A visible change reveals which condition actually controls the outcome.",
+    "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+    "alignment_plan": [
+      {
+        "concept_role": "target concept",
+        "concept_items": [
+          "种子萌发"
+        ],
+        "story_role": "central productive process"
+      },
+      {
+        "concept_role": "prerequisites",
+        "concept_items": [
+          "种子萌发的环境条件",
+          "种子萌发的自身条件"
+        ],
+        "story_role": "conditions or resources that must be prepared first"
+      },
+      {
+        "concept_role": "related concepts",
+        "concept_items": [],
+        "story_role": "neighboring processes that contextualize or contrast the main process"
+      },
+      {
+        "concept_role": "outcomes",
+        "concept_items": [],
+        "story_role": "visible consequences produced by the core process"
+      },
+      {
+        "concept_role": "experiments",
+        "concept_items": [],
+        "story_role": "tests that reveal whether the process truly happened"
+      },
+      {
+        "concept_role": "exercises",
+        "concept_items": [],
+        "story_role": "follow-up checks that reinforce the lesson"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "target concept",
+      "story_evidence": "The plump seed uses its stored food to produce a shoot when warmth and moisture are present."
+    },
+    {
+      "concept_role": "prerequisites",
+      "story_evidence": "Tobin checks soil moisture and warmth; the cracked seed only grows after being moved to a warmer, damper box; the hollow seed lacks internal food."
+    },
+    {
+      "concept_role": "related concepts",
+      "story_evidence": "The hollow seed rots (contrast); the cracked seed swells but doesn't grow until conditions improve."
+    },
+    {
+      "concept_role": "outcomes",
+      "story_evidence": "Visible shoot from plump seed; root from cracked seed after condition change."
+    },
+    {
+      "concept_role": "experiments",
+      "story_evidence": "Tobin digs up the cracked seed and changes its environment; apprentice plants plump seeds in dry sand and cold clay to test."
+    },
+    {
+      "concept_role": "exercises",
+      "story_evidence": "The apprentice's test with dry sand and cold clay reinforces that both inner and outer conditions are necessary."
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "In a sun-dappled garden workshop, Old Tobin prepared a plot of fine soil, checking its moisture and warmth with careful hands. He buried three seeds—one plump, one cracked, one hollow—each in identical beds. Each day, he watered them equally and watched.\n\nAfter a week, the plump seed split the soil with a pale shoot. The cracked seed swelled but remained still. The hollow seed rotted. Tobin then dug up the cracked seed and placed it in a warmer, darker box with steady dampness. Within days, it too sent out a root.\n\n“The seed’s own store fed the first push,” Tobin told his apprentice. “But without the right warmth and water, even a good seed stays asleep. The hollow one had no food inside—no amount of care could wake it.”\n\nTo test, the apprentice planted a plump seed in dry sand and another in cold clay. Neither grew. Only when both inner readiness and outer conditions met did the hidden life stir upward.\n\nThe garden flourished not by wishing, but by preparing what the seeds silently required.",
+  "rule_findings": {
+    "story_token_count": 181,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [],
+    "template_hits": [],
+    "template_similarity": 0.0644
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

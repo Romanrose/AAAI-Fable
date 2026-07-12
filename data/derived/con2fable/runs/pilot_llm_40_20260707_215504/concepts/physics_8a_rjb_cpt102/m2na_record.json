@@ -1,0 +1,129 @@
+{
+  "id": "physics_8a_rjb_cpt102",
+  "method": "con2fable",
+  "concept": {
+    "name": "实像",
+    "aliases": [],
+    "forbidden_terms": [
+      "实像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：投影仪成像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：照相机成像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：虚像",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12420"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12419"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_23049"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "学徒第一次走进暗房时，师傅指着桌上的投影仪说：“你要学会让影像从底片里活过来。”\n\n学徒将底片卡进投影仪的片夹，打开光源。幕布上立刻出现一片模糊的光斑，像一团雾。他试着把片夹往前推，光斑变大、更模糊；往后拉，光斑缩小，却依然混沌。师傅站在一旁不说话。\n\n学徒反复调整底片与透镜之间的距离。当他将底片缓缓向后移动时，幕布上的光斑突然收拢——一个清晰的倒立影像出现了！底片上的人物轮廓分明，连衣褶都看得一清二楚。他伸手在幕布前晃了晃，影像稳稳地落在光屏上，没有飘散。\n\n“成了！”学徒兴奋地喊。\n\n师傅点点头：“记住这个位置。底片和幕布分居透镜两侧，光线穿过透镜后实际会聚在幕布上，才能被承接住。”\n\n学徒盯着那个倒立的影像，忽然想起另一件事。他问：“师傅，那照相机呢？照相机的胶片也在透镜后面，远处的景物怎么就能在胶片上成像？”\n\n师傅笑了：“道理一样。景物在透镜一侧，胶片在另一侧，光线实际会聚在胶片上，影像就被记录下来了。你刚才做的，就是一台放大了的照相机。”\n\n学徒若有所思。他又记起以前在镜子里看到的影像——那影像看起来清晰，却无法用光屏承接，手一伸就穿过去。师傅曾告诉他，那种影像只是光线反向延长线会聚的结果，并非实际光线汇聚而成。\n\n“原来如此。”学徒低声说，“那种影像只能看，不能接；而真正的影像，是光线实实在在聚在一起才能形成的。”\n\n他再次调整投影仪，故意把底片移近透镜。幕布上的影像立刻消失，只剩一片散光。他赶紧把底片推回刚才的位置，清晰的倒立影像重新出现。\n\n学徒终于明白：无论是投影仪还是照相机，都必须让物体和光屏分居透镜两侧，并且保持精确的距离，光线才能实际会聚，形成可以被承接、被记录的影像。那种只能看不能接的影像虽然看得见，却终究无法被留住。\n\n他关掉投影仪，暗房陷入黑暗。但那个清晰的倒立影像，已经深深印在他脑海里。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+        "evidence": "光线穿过透镜后实际会聚在幕布上，才能被承接住",
+        "narrative_anchor": "光线穿过透镜后实际会聚在幕布上，才能被承接住"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "投影仪成像",
+        "evidence": "学徒将底片卡进投影仪的片夹",
+        "narrative_anchor": "投影仪"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "照相机成像",
+        "evidence": "照相机的胶片也在透镜后面，远处的景物怎么就能在胶片上成像",
+        "narrative_anchor": "照相机"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "与相关概念保持可解释关系：虚像",
+        "evidence": "那种影像只能看，不能接；而真正的影像，是光线实实在在聚在一起才能形成的",
+        "narrative_anchor": "那种影像只能看，不能接"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从实像定义到投影仪成像的支撑关系",
+        "evidence": "光线穿过透镜后实际会聚在幕布上，才能被承接住",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "光线穿过透镜后实际会聚在幕布上"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "从投影仪成像到照相机成像的类比关系",
+        "evidence": "你刚才做的，就是一台放大了的照相机",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "你刚才做的，就是一台放大了的照相机"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "从照相机成像到虚像概念的对比关系",
+        "evidence": "那种影像只能看，不能接；而真正的影像，是光线实实在在聚在一起才能形成的",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "那种影像只能看，不能接"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

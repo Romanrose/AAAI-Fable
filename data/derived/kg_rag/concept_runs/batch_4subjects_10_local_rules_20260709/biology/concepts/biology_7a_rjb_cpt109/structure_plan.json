@@ -1,0 +1,244 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt109",
+  "concept_id": "biology_7a_rjb_cpt109",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "biology_7a_rjb_cpt109",
+    "label": "Concept",
+    "name": "发芽率",
+    "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "发芽率\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt109",
+      "label": "Concept",
+      "name": "发芽率",
+      "properties": {
+        "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+        "importance": "掌握",
+        "formula": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+        "unit": "%",
+        "retrieval_text": "发芽率\nConcept\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。\n掌握\n%\n发芽率 = 发芽的种子数 / 供检测的种子数 × 100%"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:22391",
+        "source": "biology_7a_rjb_exp10",
+        "source_name": "测定种子的发芽率（培养皿样本检测）",
+        "target": "biology_7a_rjb_cpt109",
+        "target_name": "发芽率",
+        "relation": "verifies",
+        "relation_description": "verifies",
+        "evidence": "",
+        "score": 0.95
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "发芽率",
+        "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+        "formula": "发芽率 = 发芽的种子数 / 供检测的种子数 × 100%",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:22391] 测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 263,
+      "summary_chars": 281,
+      "path_chars": 0,
+      "retrieval_context_chars": 544
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "发芽率的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率",
+        "kind": "process",
+        "supporting_edge_ids": [
+          "normalized:edge:22391"
+        ]
+      },
+      {
+        "step_id": "s2",
+        "text": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [
+      "normalized:edge:22391"
+    ],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "发芽率",
+      "biology_7a_rjb_cpt109"
+    ],
+    "coverage_targets": {
+      "required_step_count": 2,
+      "required_dependency_count": 1,
+      "must_cover_edge_ids": [
+        "normalized:edge:22391"
+      ],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt109",
+    "concept_id": "biology_7a_rjb_cpt109",
+    "story_language": "zh-CN",
+    "source_domain": "屋顶育苗棚",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "让中间的行动承接前后变化：测定种子的这条隐藏规则（培养皿样本检测） --verifies--> 这条隐藏规则",
+      "让中间的行动承接前后变化：供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：测定种子的这条隐藏规则（培养皿样本检测） --verifies--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "发芽率"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率",
+          "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "屋顶育苗棚",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "让中间的行动承接前后变化：测定种子的这条隐藏规则（培养皿样本检测） --verifies--> 这条隐藏规则",
+    "让中间的行动承接前后变化：供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "发芽率"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率",
+        "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "避免目的论解释。",
+        "避免把个体努力写成进化原因。",
+        "保留生命系统的条件、过程和结果。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：测定种子的这条隐藏规则（培养皿样本检测） --verifies--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

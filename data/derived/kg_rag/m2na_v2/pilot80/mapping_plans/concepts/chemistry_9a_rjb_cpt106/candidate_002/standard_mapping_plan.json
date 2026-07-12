@@ -1,0 +1,126 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的粮食储存与分配系统",
+  "characters": [
+    "村长",
+    "粮仓管理员",
+    "村民"
+  ],
+  "objects": [
+    "粮仓",
+    "粮食",
+    "催化剂（如酵母）",
+    "分粮方案"
+  ],
+  "conflict": "村庄需要将储存的粮食转化为可食用的形式，但转化过程缓慢，且需要遵循特定的分配规则。",
+  "event_chain": [
+    "村长决定将粮仓中的粮食转化为可食用的形式。",
+    "粮仓管理员向村长报告转化过程需要添加催化剂以加速。",
+    "村长批准使用催化剂，并指定转化后的粮食必须按照分粮方案分配给村民。",
+    "粮仓管理员执行转化，得到可食用的粮食。",
+    "村民按照分粮方案领取粮食。"
+  ],
+  "turning_point": "村长决定使用催化剂加速粮食转化，并明确分配规则。",
+  "resolution_state": "粮食成功转化并公平分配，村庄的粮食问题得到解决。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村长决定将粮仓中的粮食转化为可食用的形式",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "分粮方案",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "村民领取粮食",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "转化规则（如添加催化剂）",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "可食用的粮食",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "另一种转化方法（如自然发酵）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "第三种转化方法（如磨粉）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "粮仓管理员成功转化粮食的案例",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "村长决定转化粮食是分粮方案的一种具体实施方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "分粮方案要求村民领取粮食",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "转化规则与分粮方案相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "可食用的粮食与分粮方案相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "自然发酵是分粮方案的一种具体实施方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "磨粉是分粮方案的一种具体实施方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "粮仓管理员成功转化粮食的案例验证了分粮方案的有效性",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何与化学或氧气相关的术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如实验现象推断气体性质）作为因果机制。",
+    "故事载体使用统一的粮食储存与分配系统，不引入无关隐喻。"
+  ],
+  "mapping_context_sha256": "1a4e35cbdd5ad6189ebc4ab2c4e187ab47563ce3bde168dd04f0822cc4b10b34",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "2eaa551b2d68d7d2bcd18d64ca8818df5fa0616691742f2e0a686aba60466088"
+  }
+}

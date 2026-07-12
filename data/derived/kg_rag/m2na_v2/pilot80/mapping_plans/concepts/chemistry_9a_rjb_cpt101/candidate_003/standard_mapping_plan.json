@@ -1,0 +1,102 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代烽火台传信",
+  "characters": [
+    "边关士兵",
+    "烽火台守军",
+    "朝廷信使"
+  ],
+  "objects": [
+    "潮湿的木柴",
+    "干燥的木柴",
+    "烽火台",
+    "狼烟"
+  ],
+  "conflict": "边关士兵需要快速验证远处来的是否是友军信使，但潮湿的木柴无法点燃，无法发出信号确认。",
+  "event_chain": [
+    "边关士兵将潮湿的木柴放入烽火台",
+    "潮湿的木柴无法点燃，没有狼烟升起",
+    "守军意识到木柴潮湿，需要干燥的木柴",
+    "守军换上干燥的木柴",
+    "干燥的木柴被点燃，狼烟升起",
+    "朝廷信使看到狼烟，确认是友军信号"
+  ],
+  "turning_point": "守军换上干燥的木柴并成功点燃，狼烟升起",
+  "resolution_state": "朝廷信使看到狼烟，确认是友军信号，边关与朝廷通信恢复",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "边关士兵将潮湿的木柴放入烽火台",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "干燥的木柴",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "狼烟升起",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "朝廷信使看到狼烟，确认是友军信号",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "干燥的木柴能燃烧产生狼烟",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "边关士兵将潮湿的木柴放入烽火台导致狼烟未升起",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "干燥的木柴使狼烟升起成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "狼烟升起导致朝廷信使确认是友军信号",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "干燥的木柴能燃烧产生狼烟这一规则定义了干燥的木柴",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "干燥的木柴能燃烧产生狼烟这一规则使狼烟升起成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免使用任何与'氧气的检验方法'相关的术语。",
+    "故事载体保持连贯，使用单一的烽火台传信领域。",
+    "注意不要将课程桥接上下文（如'支持燃烧'或'实验2-2'）作为因果机制。"
+  ],
+  "mapping_context_sha256": "f8d49bdc374420b20bfa1b9c7ae257a4243ee9eb2697e4ac13c59196a44fb9a9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3d41a2a177dc10a3550c92f32d5e5676920fd7b498ea06d608fe4dd263d6eae9"
+  }
+}

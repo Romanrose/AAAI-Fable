@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要保留上下位关系：长度单位（米及其倍数、子倍数）",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m3",
+      "text": "与相关概念保持可解释关系：使用刻度尺的方法",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17188"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_12429"
+    }
+  ]
+}

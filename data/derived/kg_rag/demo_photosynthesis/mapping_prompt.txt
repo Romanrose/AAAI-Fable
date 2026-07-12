@@ -1,0 +1,31 @@
+You are a structure-mapping planner for concept-to-story generation.
+Use only the retrieved graph-grounded information.
+Transform the concept neighborhood into a story skeleton that can later support fable generation.
+
+Target Concept: 光合作用
+Definition: 能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。
+Prerequisites:
+- 光是绿色植物制造有机物不可缺少的条件: 在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。
+- 叶绿素: 叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。
+- 绿色植物是生物圈中的生产者（有机物的制造者）: 绿色植物通过光合作用利用无机物合成有机物，制造大量有机物，成为生物圈中生产有机物的“天然工厂”，在生态系统中属于生产者。
+- 农业生产中光合作用的应用：合理密植: 种植作物时既不宜过稀也不宜过密，使叶片充分接受光照、提高光能利用与产量的栽培措施。
+- 叶绿体: 存在于植物叶片细胞中，色素能吸收光能，将光能转变成化学能，并把化学能储存在其制造的糖类等有机物中；是细胞中的能量转换器。
+- 光合作用色素: 存在于叶绿体类囊体薄膜上、能吸收特定波长可见光并用于光合作用的一类色素分子；绿叶中色素不止一种，吸收光谱不同但都可用于光合作用。
+Related Concepts:
+- 光合作用的产物（淀粉等有机物）: 绿叶在光下制造的有机物可用淀粉作为代表；淀粉是光合作用的产物，糖类为主，部分糖类还能转变为蛋白质、脂肪等其他有机物。
+- 呼吸作用: 细胞利用氧，将有机物分解成二氧化碳和水，并将储存在有机物中的能量释放出来以供生命活动需要的过程。
+- 碳—氧平衡: 生物圈中二氧化碳和氧气的相对平衡状态；绿色植物通过光合作用消耗二氧化碳并释放氧气，对维持该平衡起重要作用。
+- 光能的捕获与转化: 太阳光能（或人工光源光能）的输入、被生物捕获并转化为可用于生命活动的能量形式的过程；教材强调其是生物圈维持运转的基础，并由光合作用实现。
+Downstream Outcomes:
+- None
+
+Produce:
+- source_domain
+- entities
+- event_chain
+- conflict
+- turning_point
+- resolution_state
+- concept_to_story_alignment
+
+The output should preserve the concept mechanism and remain suitable for later fable generation.

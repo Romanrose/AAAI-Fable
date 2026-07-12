@@ -1,0 +1,581 @@
+[
+  {
+    "structure_id": "candidate_002:target_concept:001",
+    "structure_type": "TargetConceptStructure",
+    "content": {
+      "concept_id": "physics_8a_rjb_cpt102",
+      "name": "实像",
+      "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "forbidden_terms": [
+        "实像"
+      ]
+    },
+    "strength": 0.9,
+    "salience": 1.0,
+    "support": [
+      "concept_card"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BootstrapTargetConceptCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:source_domain:001",
+    "structure_type": "SourceDomainStructure",
+    "content": {
+      "source_domain": "滑道试验场",
+      "selection_basis": "subject_rotating_domain_pool"
+    },
+    "strength": 0.72,
+    "salience": 0.82,
+    "support": [
+      "copycat.source_domain_pool",
+      "subject=physics"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:001",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:12420",
+      "source_id": "physics_8a_rjb_cpt104",
+      "source_name": "投影仪成像",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "neighbor_name": "投影仪成像",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:002",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:12419",
+      "source_id": "physics_8a_rjb_cpt103",
+      "source_name": "照相机成像",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "neighbor_name": "照相机成像",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:003",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:23049",
+      "source_id": "physics_8a_rjb_exp26",
+      "source_name": "投影仪演示实验",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "neighbor_name": "投影仪演示实验",
+      "kg_relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:004",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:23048",
+      "source_id": "physics_8a_rjb_exp25",
+      "source_name": "自制模型照相机实验",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "neighbor_name": "自制模型照相机实验",
+      "kg_relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:005",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:19711",
+      "source_id": "physics_8a_rjb_cpt102",
+      "source_name": "实像",
+      "target_id": "physics_8a_rjb_cpt82",
+      "target_name": "虚像",
+      "neighbor_name": "虚像",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "outgoing"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:001",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "object",
+      "role_label": "对象",
+      "role_type": "entity",
+      "source_evidence": "物体"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:002",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "variable",
+      "role_label": "变量",
+      "role_type": "variable",
+      "source_evidence": "变量"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:003",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "law",
+      "role_label": "规律",
+      "role_type": "rule",
+      "source_evidence": "规律"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:001",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "object",
+      "role_label": "对象",
+      "role_type": "entity",
+      "story_role": "滑道试验场中的被观察和登记的对象",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:001",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:002",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "variable",
+      "role_label": "变量",
+      "role_type": "variable",
+      "story_role": "滑道试验场中的记录册上变化的数值栏",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:002",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:003",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "law",
+      "role_label": "规律",
+      "role_type": "rule",
+      "story_role": "滑道试验场中的众人共同遵守的判断规则",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:003",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:001",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:12420",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“投影仪成像”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "投影仪成像",
+      "target_name": "实像"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:001",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:002",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:12419",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“照相机成像”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "照相机成像",
+      "target_name": "实像"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:002",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:003",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:23049",
+      "kg_relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "story_relation_type": "evidence_verification",
+      "story_relation": "主角用记录、比较和复查来检验这条判断，证据对上后才允许通过。",
+      "source_name": "投影仪演示实验",
+      "target_name": "实像"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:003",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:004",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:23048",
+      "kg_relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "story_relation_type": "evidence_verification",
+      "story_relation": "主角用记录、比较和复查来检验这条判断，证据对上后才允许通过。",
+      "source_name": "自制模型照相机实验",
+      "target_name": "实像"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:004",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:005",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:19711",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "实像",
+      "target_name": "虚像"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:005",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:001",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "narrative_carrier": "滑道试验场中的入口条件核对",
+      "role": "入口条件核对"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:002",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "保留变量之间的关系。",
+      "narrative_carrier": "滑道试验场中的第2道转化环节",
+      "role": "第2道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:003",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "避免把自然规律写成角色主观意志。",
+      "narrative_carrier": "滑道试验场中的结果验收记录",
+      "role": "结果验收记录"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:edge_correspondence:001",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "kg_relation": "is_a",
+      "source_edge_id": "normalized:edge:12420",
+      "narrative_relation": "主角把这个具体现象归入“实像”这类更大的共同规则，而不是当成孤立事件。",
+      "event_evidence": "主角把这个具体现象归入“实像”这类更大的共同规则，而不是当成孤立事件。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:edge_correspondence:002",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "kg_relation": "is_a",
+      "source_edge_id": "normalized:edge:12419",
+      "narrative_relation": "主角把这个具体现象归入“实像”这类更大的共同规则，而不是当成孤立事件。",
+      "event_evidence": "主角把这个具体现象归入“实像”这类更大的共同规则，而不是当成孤立事件。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:conflict:001",
+    "structure_type": "ConflictStructure",
+    "content": {
+      "conflict": "滑道试验场里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+    },
+    "strength": 0.62,
+    "salience": 0.62,
+    "support": [
+      "copycat.source_domain",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:001",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "主角先在滑道试验场中确认滑道试验场中的入口条件核对是否成立。",
+      "position": 1,
+      "mapped_mechanism_node_id": "n1",
+      "mapped_mechanism_text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:002",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，滑道试验场中的第2道转化环节按前一步留下的条件继续推进。",
+      "position": 2,
+      "mapped_mechanism_node_id": "n2",
+      "mapped_mechanism_text": "保留变量之间的关系。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:002"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:003",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "最后，众人用滑道试验场中的结果验收记录核对整条安排是否得到可靠结果。",
+      "position": 3,
+      "mapped_mechanism_node_id": "n3",
+      "mapped_mechanism_text": "避免把自然规律写成角色主观意志。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:003"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:turning_point:001",
+    "structure_type": "TurningPointStructure",
+    "content": {
+      "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+    },
+    "strength": 0.63,
+    "salience": 0.7,
+    "support": [
+      "candidate_002:edge_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:resolution_state:001",
+    "structure_type": "ResolutionStructure",
+    "content": {
+      "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+    },
+    "strength": 0.63,
+    "salience": 0.68,
+    "support": [
+      "copycat.event_chain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  }
+]

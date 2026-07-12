@@ -1,0 +1,117 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应",
+      "evidence": "一种物质在特定条件下，总能变成两种或更多种新物质",
+      "narrative_anchor": "一种物质在特定条件下，总能变成两种或更多种新物质"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "化学学习中的分类思想",
+      "evidence": "我们要先学会把它们分门别类，才能看清规律",
+      "narrative_anchor": "我们要先学会把它们分门别类"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "用分类方法学习化学",
+      "evidence": "把实验台上的物质和仪器按“加热”和“加催化剂”分成两类",
+      "narrative_anchor": "把实验台上的物质和仪器按“加热”和“加催化剂”分成两类"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "加热氯酸钾制取氧气",
+      "evidence": "将粉末放入试管，用酒精灯加热。不一会儿，试管里冒出气体，王老师用带火星的木条一探，木条复燃了。“这是氧气。”他又指了指试管底部留下的白色固体，“这是氯化钾。”",
+      "narrative_anchor": "加热氯酸钾制取氧气"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "过氧化氢分解反应",
+      "evidence": "过氧化氢溶液。他往里面加入一点黑色粉末，液体立刻翻涌起大量气泡。用同样的方法检验，又是氧气。而液体最终变成了水。",
+      "narrative_anchor": "过氧化氢分解反应"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "高锰酸钾受热分解反应",
+      "evidence": "高锰酸钾。加热后，紫色晶体渐渐变黑，同时也有气体产生。检验后，还是氧气。“紫色晶体受热后，变成了黑色的固体和氧气。”",
+      "narrative_anchor": "高锰酸钾受热分解反应"
+    },
+    {
+      "concept_node_id": "m7",
+      "narrative_element": "实验室制取氧气的方法",
+      "evidence": "王老师先拿起一管白色粉末：“这是氯酸钾。”……接着，王老师取出一瓶无色液体——过氧化氢溶液。……最后，王老师拿出一小撮紫色晶体——高锰酸钾。",
+      "narrative_anchor": "实验室制取氧气的方法"
+    },
+    {
+      "concept_node_id": "m8",
+      "narrative_element": "水的分解反应",
+      "evidence": "王老师又接通了一个电解水的装置。水通电后，两个电极上冒出气泡，一管是氢气，一管是氧气。“水也变成了两种气体。”",
+      "narrative_anchor": "水的分解反应"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从定义引出分类思想",
+      "evidence": "一种物质在特定条件下，总能变成两种或更多种新物质……要理解这些变化，先得学会分类",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "要理解这些变化，先得学会分类"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从分类思想到具体分类方法",
+      "evidence": "我们要先学会把它们分门别类……把实验台上的物质和仪器按“加热”和“加催化剂”分成两类",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "把实验台上的物质和仪器按“加热”和“加催化剂”分成两类"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "用分类方法引出加热氯酸钾实验",
+      "evidence": "把实验台上的物质和仪器按“加热”和“加催化剂”分成两类……王老师先拿起一管白色粉末：“这是氯酸钾。”",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "王老师先拿起一管白色粉末：“这是氯酸钾。”"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "从氯酸钾实验到过氧化氢实验",
+      "evidence": "接着，王老师取出一瓶无色液体——过氧化氢溶液。",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "接着，王老师取出一瓶无色液体——过氧化氢溶液。"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "从过氧化氢实验到高锰酸钾实验",
+      "evidence": "最后，王老师拿出一小撮紫色晶体——高锰酸钾。",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "最后，王老师拿出一小撮紫色晶体——高锰酸钾。"
+    },
+    {
+      "concept_edge_id": "e6",
+      "narrative_relation": "从高锰酸钾实验引出实验室制氧气方法",
+      "evidence": "高锰酸钾……紫色晶体受热后，变成了黑色的固体和氧气。……小明忽然发现，这三个实验有一个共同点",
+      "narrative_source_concept_node_id": "m6",
+      "narrative_target_concept_node_id": "m7",
+      "direction_preserved": true,
+      "narrative_anchor": "这三个实验有一个共同点"
+    },
+    {
+      "concept_edge_id": "e7",
+      "narrative_relation": "从实验室制氧气方法到水的分解",
+      "evidence": "王老师又接通了一个电解水的装置。水通电后，两个电极上冒出气泡，一管是氢气，一管是氧气。",
+      "narrative_source_concept_node_id": "m7",
+      "narrative_target_concept_node_id": "m8",
+      "direction_preserved": true,
+      "narrative_anchor": "王老师又接通了一个电解水的装置。"
+    }
+  ]
+}

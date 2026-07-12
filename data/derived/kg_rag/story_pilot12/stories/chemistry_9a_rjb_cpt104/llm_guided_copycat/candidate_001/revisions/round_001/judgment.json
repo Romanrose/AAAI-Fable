@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n8",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n3 (收获方法) to 'harvest method' is clear, but edge e2 (种植方法需要先了解收获方法) is explicitly stated in the story, making it a strong relation. However, the story also mentions '生长过程' as a prerequisite, which is mapped to n5, but the edge e4 (生长过程是先了解种植方法的前提) is not explicitly stated as a prerequisite in the story; instead, it is listed alongside other prerequisites. This makes e4 slightly weaker than e2. The strongest node is n8 (实验田一号) because it is central to the turning point and resolution, and its relation (e7) is clearly demonstrated."
+  },
+  "revision_instructions": [
+    "Edge e4 (生长过程是先了解种植方法的前提) is not explicitly stated as a prerequisite in the story; it is mentioned as something to understand. Consider rephrasing to make the prerequisite relation clearer, e.g., '种植方法需要先了解生长过程'."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt131",
+  "target_concept": "光是绿色植物制造有机物不可缺少的条件",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整且准确地呈现了目标概念的核心机制：叶片见光部分产生淀粉（变蓝），遮光部分不产生淀粉，从而说明光是绿色植物制造有机物不可缺少的条件。所有细节均与概念定义一致。",
+    "implicitness": "故事未直接提及目标概念名称或任何禁止术语，而是通过小园的观察和实验过程自然引出结论，隐含性良好。但结尾处‘光才是关键’和‘植物只有在光下才能制造养料’稍显直白，略微降低了隐含性。",
+    "mapping_clarity": "故事中的事件链（遮光、煮叶、滴药水、变色对比）与概念的核心机制高度对应，映射清晰明确。读者能轻易从故事中提取出‘光对有机物制造的必要性’这一规则。",
+    "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段读者。对话和动作描写生动，增强了可读性。",
+    "pedagogical_value": "故事通过重复实验和对比设计，强化了科学探究方法，教学价值高。学生不仅能理解概念，还能学习到控制变量和观察记录的科学思维。",
+    "novelty": "故事采用了常见的‘爷爷教孙子’和‘植物实验’框架，情节较为传统，缺乏显著的新颖性。但实验细节的呈现方式仍有一定教育创新。"
+  },
+  "revision_suggestions": [
+    "可考虑将结尾的直白结论改为更含蓄的暗示，例如让小园自己总结规律，以提升隐含性。",
+    "可增加一个意外情节或反转，例如植物在弱光下也能少量制造养料，以增强新颖性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 480,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整且准确地呈现了目标概念的核心机制：叶片见光部分产生淀粉（变蓝），遮光部分不产生淀粉，从而说明光是绿色植物制造有机物不可缺少的条件。所有细节均与概念定义一致。",
+      "implicitness": "故事未直接提及目标概念名称或任何禁止术语，而是通过小园的观察和实验过程自然引出结论，隐含性良好。但结尾处‘光才是关键’和‘植物只有在光下才能制造养料’稍显直白，略微降低了隐含性。",
+      "mapping_clarity": "故事中的事件链（遮光、煮叶、滴药水、变色对比）与概念的核心机制高度对应，映射清晰明确。读者能轻易从故事中提取出‘光对有机物制造的必要性’这一规则。",
+      "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段读者。对话和动作描写生动，增强了可读性。",
+      "pedagogical_value": "故事通过重复实验和对比设计，强化了科学探究方法，教学价值高。学生不仅能理解概念，还能学习到控制变量和观察记录的科学思维。",
+      "novelty": "故事采用了常见的‘爷爷教孙子’和‘植物实验’框架，情节较为传统，缺乏显著的新颖性。但实验细节的呈现方式仍有一定教育创新。"
+    },
+    "revision_suggestions": [
+      "可考虑将结尾的直白结论改为更含蓄的暗示，例如让小园自己总结规律，以提升隐含性。",
+      "可增加一个意外情节或反转，例如植物在弱光下也能少量制造养料，以增强新颖性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

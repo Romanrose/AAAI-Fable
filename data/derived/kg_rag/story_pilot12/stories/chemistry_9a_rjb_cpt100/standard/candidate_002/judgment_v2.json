@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n2 (氧化反应) to '树根吸收水分和养料的过程' is conceptually weaker because the story does not explicitly show that this process is the foundational 'parent' of all other processes, as required by the mechanism. Edge e2 (枯枝燃烧 is_a 树根吸收过程) is the weakest because it inverts the intended hierarchy: in the mechanism, 燃烧 is_a 氧化反应, but in the story, 枯枝燃烧 is said to be a kind of 树根吸收过程, which is not logically consistent. This makes the mapping less clear than other edges where the relation is more naturally preserved."
+  },
+  "revision_instructions": [
+    "Consider rephrasing the statement '枯枝燃烧的过程是树根吸收水分和养料过程的一种' to better reflect that 枯枝燃烧 is a type of 氧化反应 (which is mapped to 树根吸收过程), perhaps by saying '枯枝燃烧也是一种需要水分和养料的过程，就像树根吸收一样' to preserve the is_a direction.",
+    "Ensure that the foundational role of 树根吸收过程 (as the parent of all processes) is more explicitly stated, e.g., by adding a sentence like '树根吸收水分和养料是所有生命活动的基础，无论是缓慢生长还是剧烈燃烧都离不开它.'"
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

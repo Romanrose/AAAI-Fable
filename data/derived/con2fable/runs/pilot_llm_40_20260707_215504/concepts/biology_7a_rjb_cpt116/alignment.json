@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "花粉在外力作用下落到另一朵花柱头上的传粉方式",
+      "evidence": "蜜蜂在青香蕉的花上停留，花粉粒趁机滑落，粘在了那湿润的柱头上。就在这时，一阵风吹过，卷起更多红富士的花粉粒，把它们吹向空中。花粉粒们随风飘荡，像一群小小的尘埃，最终也落到了青香蕉花的柱头上。",
+      "narrative_anchor": "蜜蜂在青香蕉的花上停留，花粉粒趁机滑落，粘在了那湿润的柱头上。就在这时，一阵风吹过，卷起更多红富士的花粉粒，把它们吹向空中。花粉粒们随风飘荡，像一群小小的尘埃，最终也落到了青香蕉花的柱头上。"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "传粉",
+      "evidence": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。",
+      "narrative_anchor": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "异花传粉是传粉的一种方式",
+      "evidence": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。"
+    }
+  ]
+}

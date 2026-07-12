@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "描述物体空间延伸程度的物理量，需要通过测量工具获得",
+      "evidence": "这把尺子上，每一小格是一分，每一大格是一寸。咱们做木器，靠的不是‘觉得’，是这些格子。",
+      "narrative_anchor": "尺子"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "长度单位（米及其倍数、子倍数）",
+      "evidence": "每一小格是一分，每一大格是一寸",
+      "narrative_anchor": "分、寸"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "使用刻度尺的方法",
+      "evidence": "眼睛要正对着看，不能歪，歪了就看不准",
+      "narrative_anchor": "眼睛要正对着看"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从长度概念引出长度单位",
+      "evidence": "这把尺子上，每一小格是一分，每一大格是一寸。咱们做木器，靠的不是‘觉得’，是这些格子。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "尺子上的格子"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从长度单位引出使用刻度尺的方法",
+      "evidence": "眼睛要正对着看，不能歪，歪了就看不准",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "正对着看"
+    }
+  ]
+}

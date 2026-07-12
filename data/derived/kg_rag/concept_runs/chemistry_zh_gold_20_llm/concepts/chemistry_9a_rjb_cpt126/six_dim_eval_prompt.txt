@@ -1,0 +1,218 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "排水法收集气体",
+  "concept_id": "chemistry_9a_rjb_cpt126",
+  "concept_definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt126",
+    "排水法收集气体"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt126",
+      "label": "Concept",
+      "name": "排水法收集气体",
+      "definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。",
+      "aliases": [],
+      "examples": [
+        "用盛满水的集气瓶倒置在水槽内，当导管口伸入瓶中放出气体时，将瓶内水逐渐排出。",
+        "用排水法收集氧气。"
+      ],
+      "retrieval_text": "排水法收集气体\n将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt122",
+          "label": "Concept",
+          "name": "氧气的实验室制取",
+          "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt125",
+          "label": "Concept",
+          "name": "气体收集装置",
+          "definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt134",
+          "label": "Concept",
+          "name": "氧气的性质",
+          "definition": "氧气这种气体的物理和化学特性，包括无色无味、略溶于水、能支持燃烧等，在本节中主要通过木炭和铁丝燃烧体现其支持燃烧的化学性质。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt333",
+          "label": "Concept",
+          "name": "二氧化碳的物理性质（密度与溶解性）",
+          "definition": "二氧化碳密度比空气大，能溶于水并与水反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s4",
+          "label": "Section",
+          "name": "实验活动1 氧气的实验室制取与性质",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_9a_rjb_ch6_s2",
+          "label": "Section",
+          "name": "课题2 二氧化碳制取的研究",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt126",
+    "concept_id": "chemistry_9a_rjb_cpt126",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt126",
+      "label": "Concept",
+      "name": "排水法收集气体",
+      "definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。",
+      "aliases": [],
+      "examples": [
+        "用盛满水的集气瓶倒置在水槽内，当导管口伸入瓶中放出气体时，将瓶内水逐渐排出。",
+        "用排水法收集氧气。"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "排水法收集气体"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中，小明用倒扣在水槽中的瓶子收集气体，通过气体排出水来获得纯净气体，这对应了排水法收集气体的核心操作：将集气瓶装满水倒置于水槽中，用气体排出水收集气体。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事详细描述了操作过程：瓶子先装满水倒扣在水槽中，气体从管子进入瓶内，气泡上升并排出水，最终瓶内充满气体。这体现了气体不溶于水且不与水反应的条件，以及水被排出的物理过程。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中强调气体‘不易溶于水，也不会与水发生任何变化’，区分了物理过程（气体替换水）与化学反应；同时避免使用化学式或元素符号，仅用‘特殊气体’描述，符合学科约束。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：水底的秘密\n\n从前，在一个古老的城邦里，有一位名叫小明的少年，他负责管理城邦的账房。账房里有各种奇特的容器，用来存放不同种类的物品。其中，有一个巨大的水槽，水槽里倒扣着许多透明的瓶子，瓶口朝下，瓶内装满了水。\n\n一天，城邦的智者交给小明一个任务：收集一种特殊的气体，这种气体无色无味，不易溶于水，也不会与水发生任何变化。智者说：“这种气体很珍贵，你要用最纯净的方式收集它，不能让任何杂质混入。”\n\n小明想了想，决定用那些倒扣在水槽里的瓶子。他先将一个瓶子完全浸入水中，让瓶内充满水，然后小心地倒扣过来，瓶口朝下，稳稳地放在水槽底部。接着，他找来一根细长的管子，一端连接着产生气体的装置，另一端伸入倒扣的瓶口下。\n\n气体开始从管子中冒出，一个个气泡从瓶口上升，进入瓶内。随着气泡越来越多，瓶内的水被一点点挤出，水位逐渐下降。小明屏住呼吸，仔细观察。他发现，气泡进入瓶子后，水被排挤出去，瓶子里的空间越来越大，而水槽里的水却没有任何变化。\n\n“原来如此！”小明恍然大悟，“气体进入瓶子，把水挤走了，瓶子就装满了气体。而水槽里的水还是那么多，只是瓶子里的水被气体替换了。”\n\n他继续收集，直到瓶内的水完全被气体取代。这时，瓶子变得很轻，轻轻一提就能从水槽中取出。小明小心地盖上瓶盖，将收集到的气体交给智者。\n\n智者满意地点点头：“你做得很好。记住，这种方法只适用于那些不易溶于水、也不与水反应的气体。如果气体溶于水，或者与水反应，瓶子里的水就不会被完全排出，甚至可能发生危险。”\n\n小明记住了这个道理。后来，他又用同样的方法收集了另一种气体，发现它也能成功，因为那种气体同样不溶于水。从此，他成了城邦里最擅长收集气体的人。",
+  "rule_findings": {
+    "story_token_count": 611,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "智者"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

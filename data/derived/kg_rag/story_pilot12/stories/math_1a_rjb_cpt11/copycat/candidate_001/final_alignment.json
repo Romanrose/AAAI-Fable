@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对——必须确认前置条件牌是否齐全",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "验收员把两份记录放在一起比较，发现它们共同约束最后判断：入口条件核对必须在前，过程登记必须在后，而结果验收必须基于完整的顺序链条",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 maps to the story's '入口条件核对' condition, node n2 maps to '结果验收记录' process, and edge e1's enables relation is verified by the story's explicit statement that the condition must precede the process and that both together constrain the final judgment."
+}

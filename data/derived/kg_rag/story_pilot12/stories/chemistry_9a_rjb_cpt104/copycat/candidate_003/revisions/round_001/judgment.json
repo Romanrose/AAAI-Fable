@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 2,
+    "mapping_clarity": 3,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n4",
+    "weakest_edge_id": "e3",
+    "distinguishing_reason": "Node n4 (氧气) is completely absent from the story, resulting in zero confidence for its alignment. Edge e3 (氧气 requires 实验室制取氧气的方法) is therefore also missing its source node in the story, weakening the relation. In contrast, node n1 (加热高锰酸钾制取氧气) is well represented by the '入口条件核对' carrier and its is_a relation to n2 is explicitly stated."
+  },
+  "revision_instructions": [
+    "1. Incorporate the entity '氧气' (oxygen) into the story implicitly, e.g., as a 'gas' or 'product' that the process aims to obtain, without using the forbidden term.",
+    "2. Ensure edge e3 (氧气 requires 实验室制取氧气的方法) is reflected in the story by showing that the 'gas' or 'product' depends on the overall method (第二道转化环节).",
+    "3. Reduce story length to between 450 and 750 Chinese characters; current length is 854 characters.",
+    "4. Increase node_coverage to at least 0.8 by including all mechanism nodes; currently node_coverage is 0.875 but n4 is missing, so effective coverage for core nodes is lower."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

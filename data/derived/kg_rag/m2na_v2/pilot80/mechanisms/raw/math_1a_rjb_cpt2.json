@@ -1,0 +1,91 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt2",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "数物体（数一数）：通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt1:definition",
+          "kg-node:math_1a_rjb_cpt1:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "一一对应比较法：通过将两组物体一一配对来比较数量的多少。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt3:definition",
+          "kg-node:math_1a_rjb_cpt3:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "比较数量（多、少、一样多）：根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt2:definition",
+          "kg-node:math_1a_rjb_cpt2:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19305"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12138"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "比较数量（多、少、一样多）"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "5282268a3a60c3c0fef26310626d6475a4838771829e5d752b3ea6745242a41c",
+    "retrieval_sha256": "ae4492c1a6ccf4181867fb986f582d8a4ad19b20ada8b409c2f0e5ac34173457",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "0efe30f270e33fe4fc8429a377c765191dfafabbc077ab72145afcabff4d8408"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

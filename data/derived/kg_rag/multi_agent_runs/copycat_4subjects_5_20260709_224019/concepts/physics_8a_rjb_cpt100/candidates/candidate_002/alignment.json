@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "铁牌",
+      "narrative_anchor": "铁牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "第2道转化环节",
+      "narrative_anchor": "第2道转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "验收员",
+      "narrative_anchor": "验收员",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节",
+      "evidence": "记录员每天第一件事就是核对这块牌上的数值是否与调度员报来的数据一致。",
+      "narrative_anchor": "记录员每天第一件事就是核对这块牌上的数值是否与调度员报来的数据一致。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "主角用记录、比较和复查来检验这条判断，证据对上后才允许通过。",
+      "evidence": "验收员用红笔圈出几个数字",
+      "narrative_anchor": "验收员用红笔圈出几个数字",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

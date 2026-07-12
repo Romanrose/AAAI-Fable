@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story maps '高大的禾苗' to both n2 (实像) and n5 (缩小、倒立的实像), but the mechanism requires n2 to be the real image produced by camera imaging, while n5 is the specific outcome (reduced, inverted real image). The story does not distinguish between the general concept and the specific outcome, weakening the mapping clarity. Edge e2 (照相机成像 is_a 实像) is weakly realized because the story only shows that '禾苗生长' leads to '高大的禾苗', which is a generic growth outcome, not a specific 'is_a' relation to a real image. In contrast, e1 (田地 enables 禾苗生长) is strongly realized by the explicit statement '农夫在田地里种下一片禾苗'."
+  },
+  "revision_instructions": [
+    "Strengthen edge e2: explicitly show that '禾苗生长' is a type of '高大的禾苗' (e.g., '禾苗的生长过程，本身就是一种逐渐变得高大的过程') to better reflect the 'is_a' relation.",
+    "Clarify the mapping of n2 and n5: differentiate between the general outcome (高大的禾苗 as the final result) and the specific outcome (高大的禾苗 as the reduced, inverted real image). Consider using different story carriers or adding a sentence to indicate that the final tall seedlings are the result of a specific growth process under sunlight and irrigation.",
+    "Improve edge e3: the story mentions '烈日照射' but does not explicitly state that it enables '禾苗生长'. Add a causal link, e.g., '烈日照射为禾苗生长提供了必要的能量'.",
+    "Ensure edge e4 is more explicit: the story shows that growth produces tall seedlings, but the mechanism requires '禾苗生长 produces 高大的禾苗' as a direct outcome. Add a sentence like '禾苗的生长最终产生了高大的禾苗'."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

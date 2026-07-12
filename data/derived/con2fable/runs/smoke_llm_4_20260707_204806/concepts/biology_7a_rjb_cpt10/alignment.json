@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "子代与亲代在特征上相同与不同的现象",
+      "evidence": "每一株都和他去年留下的种子一模一样——穗子金黄，秆子笔直，连叶片上的纹路都像是同一个模子刻出来的",
+      "narrative_anchor": "每一株都和他去年留下的种子一模一样"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "生物的共同特征（遗传与变异属于生物共同特征）",
+      "evidence": "好稻子，代代不变。变了，就是杂了",
+      "narrative_anchor": "好稻子，代代不变。变了，就是杂了"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "遗传与变异现象支持了生物共同特征的理解",
+      "evidence": "好稻子，代代不变。变了，就是杂了",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "好稻子，代代不变。变了，就是杂了"
+    }
+  ]
+}

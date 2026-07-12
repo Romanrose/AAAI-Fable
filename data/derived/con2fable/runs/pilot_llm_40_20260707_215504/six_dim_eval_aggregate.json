@@ -1,0 +1,12 @@
+{
+  "sample_count": 40,
+  "means": {
+    "faithfulness": 4.6,
+    "implicitness": 5,
+    "mapping_clarity": 4.35,
+    "readability": 4.92,
+    "pedagogical_value": 4.42,
+    "novelty": 3.85
+  },
+  "weighted_overall": 4.53
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "中国古代工匠制鼓",
+  "characters": [
+    "鼓匠",
+    "学徒"
+  ],
+  "objects": [
+    "鼓",
+    "鼓槌",
+    "鼓皮",
+    "鼓腔"
+  ],
+  "conflict": "鼓匠年迈，需要将制鼓绝技传给学徒，但学徒尚未掌握鼓槌与鼓皮、鼓腔的配合之道。",
+  "event_chain": [
+    "鼓匠向学徒展示一面精美的鼓，鼓是整体乐器。",
+    "鼓匠指出鼓槌是鼓的一部分，用于敲击发声。",
+    "鼓匠指出鼓皮是鼓的一部分，覆盖在鼓腔上。",
+    "鼓匠指出鼓腔是鼓的一部分，提供共鸣空间。",
+    "鼓匠强调鼓槌是鼓的敲击结构，属于鼓的发音部件。"
+  ],
+  "turning_point": "学徒领悟到鼓槌、鼓皮、鼓腔三者必须协调，才能让鼓发出好声音。",
+  "resolution_state": "学徒掌握了鼓的构造原理，能够独立制鼓。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "鼓槌",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "鼓",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "鼓皮",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "鼓腔",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "敲击结构",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "鼓槌是鼓的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "鼓槌是鼓皮的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "鼓腔是鼓皮的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "鼓槌是敲击结构",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保鼓槌、鼓皮、鼓腔的层次关系与雄蕊、花药、花粉一致，避免混淆。",
+    "避免使用'雄蕊'、'花'、'花药'、'花粉'等生物学词汇。",
+    "注意鼓槌作为敲击结构的状态映射，需明确其功能属性。"
+  ],
+  "mapping_context_sha256": "c4230465fb27a14ebc4738bf99dcc4a8997e1a5cdaef0aa5bcb2b76c3e15ddcb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "329a2139b3e7233b39ce9f1a73f3438fb931d7b1560a702e6ba639996f455715"
+  }
+}

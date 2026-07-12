@@ -1,0 +1,78 @@
+{
+  "query": "biology_7a_rjb_cpt117",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt117",
+    "label": "Concept",
+    "name": "受精",
+    "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+    "aliases": [
+      "fertilization"
+    ],
+    "examples": [],
+    "retrieval_text": "受精\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt114",
+        "label": "Concept",
+        "name": "传粉",
+        "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt118",
+        "label": "Concept",
+        "name": "果实和种子的形成",
+        "definition": "受精后子房继续发育成果实（子房壁成果皮），子房内胚珠发育成种子，胚珠内受精卵发育成胚。"
+      },
+      {
+        "id": "biology_xzxbx3_rjb_cpt71",
+        "label": "Concept",
+        "name": "胚胎工程",
+        "definition": "对生殖细胞、受精卵或早期胚胎细胞进行多种显微操作和处理，然后将获得的胚胎移植到雌性动物体内生产后代，以满足人类的各种需求的技术体系。"
+      },
+      {
+        "id": "biology_xzxbx3_rjb_cpt75",
+        "label": "Concept",
+        "name": "合子（受精卵）",
+        "definition": "受精过程中形成的、含有两个染色体组的细胞，即受精卵；受精过程结束后其发育开始。"
+      },
+      {
+        "id": "biology_xzxbx3_rjb_cpt76",
+        "label": "Concept",
+        "name": "精子获能",
+        "definition": "刚排出的精子不能立即与卵子受精，必须在雌性动物生殖道发生相应生理变化后才获得受精能力的生理现象。"
+      },
+      {
+        "id": "biology_xzxbx3_rjb_cpt77",
+        "label": "Concept",
+        "name": "卵子成熟到MⅡ期",
+        "definition": "卵子在输卵管内进一步成熟，到减数分裂第二次中期（MⅡ期）时，才具备与精子受精的能力。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      },
+      {
+        "id": "biology_xzxbx3_rjb_ch2_s3",
+        "label": "Section",
+        "name": "第三节 胚胎工程",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：像距",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m3",
+      "text": "需要考虑前置条件或输入：焦距",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m4",
+      "text": "需要考虑前置条件或输入：物距",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m5",
+      "text": "需要保留上下位关系：物镜",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m6",
+      "text": "需要保留上下位关系：目镜",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    },
+    {
+      "id": "m7",
+      "text": "与相关概念保持可解释关系：显微镜",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m8",
+      "text": "与相关概念保持可解释关系：望远镜",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17194"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17191"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17192"
+    },
+    {
+      "id": "e4",
+      "source": "m4",
+      "target": "m5",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17190"
+    },
+    {
+      "id": "e5",
+      "source": "m5",
+      "target": "m6",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17193"
+    },
+    {
+      "id": "e6",
+      "source": "m6",
+      "target": "m7",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_12423"
+    },
+    {
+      "id": "e7",
+      "source": "m7",
+      "target": "m8",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_12424"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt20",
+    "label": "Concept",
+    "name": "6和7的加法",
+    "properties": {
+      "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+      "importance": "重要",
+      "formula": "a+b=6 或 a+b=7",
+      "pages": "出现于加法练习页",
+      "retrieval_text": "6和7的加法\nConcept\n通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。\n重要\na+b=6 或 a+b=7\n出现于加法练习页"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "math_1a_rjb_cpt19",
+      "label": "Concept",
+      "name": "数字6和7的认识",
+      "properties": {
+        "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+        "importance": "重要",
+        "examples": [
+          "摆6个、摆7个；比较5<6、6>5；第7个的位置"
+        ],
+        "pages": "图示页 6~10",
+        "retrieval_text": "数字6和7的认识\nConcept\n能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。\n重要\n图示页 6~10\n摆6个、摆7个；比较5<6、6>5；第7个的位置"
+      }
+    },
+    {
+      "source_node_id": "math_1a_rjb_cpt22",
+      "label": "Concept",
+      "name": "分拆数6和7",
+      "properties": {
+        "definition": "把6或7分成两个部分，了解所有不同的分法。",
+        "importance": "掌握",
+        "examples": [
+          "7分成：1和6、2和5、3和4"
+        ],
+        "retrieval_text": "分拆数6和7\nConcept\n把6或7分成两个部分，了解所有不同的分法。\n掌握\n7分成：1和6、2和5、3和4"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16342",
+      "source": "math_1a_rjb_cpt22",
+      "source_name": "分拆数6和7",
+      "target": "math_1a_rjb_cpt20",
+      "target_name": "6和7的加法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:19308",
+      "source": "math_1a_rjb_cpt19",
+      "source_name": "数字6和7的认识",
+      "target": "math_1a_rjb_cpt20",
+      "target_name": "6和7的加法",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "6和7的加法",
+      "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+      "formula": "a+b=6 或 a+b=7",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16342] 分拆数6和7 --prerequisites_for--> 6和7的加法"
+    ],
+    "process_summary": [
+      "[normalized:edge:19308] 数字6和7的认识 --relates_to--> 6和7的加法"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

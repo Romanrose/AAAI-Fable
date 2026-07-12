@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "禾苗需要水分和养分才能健康生长",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "禾苗吸收了水分和养分，逐渐长高",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "禾苗要先有足够的水分，才能吸收肥料",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are directly supported by exact story substrings. Node n1 aligns with the condition that the seedlings need water and nutrients; node n2 aligns with the process of absorbing water and nutrients to grow. Edge e1 aligns with the story's explicit statement that water must come first for fertilizer absorption, preserving the enables direction."
+}

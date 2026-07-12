@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt17",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "球体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt17:definition",
+          "kg-node:math_1a_rjb_cpt17:examples",
+          "kg-node:math_1a_rjb_cpt17:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "按形状分类",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt18:definition",
+          "kg-node:math_1a_rjb_cpt18:examples",
+          "kg-node:math_1a_rjb_cpt18:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12137"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "球体"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "2d37cce3faee13958493e77f5570a4935c2a372a183560ac406367ed3bdeccc8",
+    "retrieval_sha256": "7a08a654447b7764571d6b61cdd62c9deb9f55e211a60544f2ecd4891c63ab2c",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "f0b9b812f546bdac239a2e73526ae690e768bdfa11a47f4c9adf24edf0a62260"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

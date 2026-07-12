@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story explicitly maps n1 (入口条件核对) and n3 (第三道转化环节) with clear story evidence, but n2 (第二道转化) is only mentioned as a step without embodying the 'is_a' relation to n1 (正方体是特殊的长方体). Edge e2 (n2->n1, is_a) has zero story evidence; the story treats n2 as a sequential step, not as a subtype of n1. This makes the mapping observably worse than a realization where n2 is explicitly described as a special case of n1 (e.g., '第二道转化是入口条件核对的一种特殊形式')."
+  },
+  "revision_instructions": [
+    "Add explicit story evidence for edge e2: show that the second transformation is a special case of the entry condition check (e.g., '第二道转化其实是入口条件核对的一种特殊形式，就像正方体是特殊的长方体一样').",
+    "Add explicit story evidence for edge e3: show that n1 and n2 are related (e.g., '入口条件核对和第二道转化共同决定了后续步骤').",
+    "Add explicit story evidence for edges e4, e5, e6: show that n1 enables n5, n6, and n4 (e.g., '只有入口条件核对通过，才能进行第五道转化和结果验收记录').",
+    "Ensure the story explicitly preserves the 'is_a' relation between n2 and n1, not just sequential order."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

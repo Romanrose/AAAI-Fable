@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "区分化学反应和物理混合。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "保留守恒关系和反应前后变化。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "relates_to",
+      "source_edge_id": "normalized:edge:18224",
+      "source_name": "呼吸与氧气",
+      "target_name": "氧气的物理性质",
+      "relation_semantic_role": "association"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "relates_to",
+      "source_edge_id": "normalized:edge:18223",
+      "source_name": "呼吸与氧气",
+      "target_name": "缓慢氧化",
+      "relation_semantic_role": "association"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:18224",
+    "normalized:edge:18223"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "缓慢氧化",
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "concept_definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt100",
+    "缓慢氧化"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt100",
+      "label": "Concept",
+      "name": "缓慢氧化",
+      "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "aliases": [],
+      "examples": [
+        "动植物的呼吸",
+        "食物的腐烂",
+        "醋的酿造",
+        "农家肥料的腐熟"
+      ],
+      "retrieval_text": "缓慢氧化\n进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt97",
+          "label": "Concept",
+          "name": "氧化反应",
+          "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt102",
+          "label": "Concept",
+          "name": "呼吸与氧气",
+          "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt97",
+          "label": "Concept",
+          "name": "氧化反应",
+          "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt99",
+          "label": "Concept",
+          "name": "燃烧",
+          "definition": "物质在一定条件下(有可燃物、充足的氧气或空气、达到着火点)发生的剧烈放热、发光的氧化反应过程。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s2",
+          "label": "Section",
+          "name": "课题2 氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt100",
+    "concept_id": "chemistry_9a_rjb_cpt100",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt100",
+      "label": "Concept",
+      "name": "缓慢氧化",
+      "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "aliases": [],
+      "examples": [
+        "动植物的呼吸",
+        "食物的腐烂",
+        "醋的酿造",
+        "农家肥料的腐熟"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "缓慢氧化"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "稻谷在存放过程中与空气发生缓慢作用，导致变质、腐烂、重量减轻，没有火焰和明显热量，不易察觉。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "稻谷与空气中无形的东西悄悄发生作用，过程缓慢，没有火焰和明显热量，时间一长导致稻谷变质、重量减轻。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事将稻谷变质描述为一种化学反应（与空气作用），而非物理混合；通过重量减少体现物质变化；未使用化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个古老的城邦里，有一位年轻的账房先生，名叫阿诚。他负责管理城邦的粮仓账目。粮仓里堆满了稻谷，每年都要记录入库和出库的数量。阿诚每天仔细核对，发现稻谷的总量总是在缓慢减少，但粮仓的门窗都锁得严严实实，也没有老鼠啃咬的痕迹。\n\n阿诚百思不得其解。他怀疑是有人偷窃，于是日夜守在粮仓外，却从未看到任何可疑的人进出。他又检查了粮仓的墙壁和地板，没有发现任何破洞。稻谷的减少，就像被一只看不见的手悄悄拿走了一样。\n\n一天，阿诚的师父——一位经验丰富的老账房先生，来粮仓巡查。阿诚把自己的困惑告诉了师父。师父没有直接回答，而是走到粮仓角落，那里堆放着一些陈年的稻谷。他用手捧起一把，凑近鼻子闻了闻，又仔细看了看稻谷的颜色，然后对阿诚说：“你闻闻，这稻谷是不是有一股淡淡的酸味？”\n\n阿诚凑近一闻，果然有一股酸腐的气味。师父接着说：“你再看看这些稻谷，是不是比新稻谷颜色更深，有些还发黑了？”阿诚仔细对比，发现确实如此。\n\n师父这才解释道：“稻谷的减少，并不是被人偷走了，而是它自己在慢慢‘消耗’自己。你看，稻谷在存放过程中，会与空气中的一种无形的东西悄悄发生作用。这个过程非常缓慢，没有火焰，也没有明显的热量，就像你每天看到账目上数字一点点减少一样，不容易察觉。但时间一长，稻谷就会变质、腐烂，重量也就减轻了。这就是为什么粮仓需要通风干燥，就是为了减缓这种变化。”\n\n阿诚恍然大悟。他明白了，原来有些变化虽然看不见、摸不着，却实实在在地发生着，就像稻谷的变质一样，需要细心观察和长期记录才能发现它的规律。从此，阿诚不仅记录账目，还会定期检查稻谷的状态，用鼻子闻、用眼睛看，从细微的变化中判断粮仓的安危。",
+  "rule_findings": {
+    "story_token_count": 617,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

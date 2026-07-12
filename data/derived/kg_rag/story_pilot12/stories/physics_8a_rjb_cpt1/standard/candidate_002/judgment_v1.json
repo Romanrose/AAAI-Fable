@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n2 (长度单位) to '标准量尺（如“寸”）' which is a concrete instance of a length unit, preserving the is_a relation with n1 (长度→玉料的深度) through the explicit statement '要想知道一件物体的深度，需要用标准量尺来量'. This is observably better than a mapping that merely mentions '单位' without a concrete carrier, because it embeds the relation in a tangible action (using the ruler) rather than an abstract statement. Edge e1 is the weakest because its story evidence is a general principle rather than a direct narrative action, but it still correctly preserves the relation."
+  },
+  "revision_instructions": [
+    "No revision needed. All mechanism nodes and edges are faithfully mapped, forbidden terms are avoided, and the story is coherent and pedagogically sound."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,124 @@
+{
+  "concept_id": "math_1a_rjb_cpt1",
+  "target_concept": "数物体（数一数）",
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 5,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 2,
+    "novelty": 3
+  },
+  "weighted_overall": 2.75,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事核心是规则棋局中的流程核对与顺序，但目标概念'数物体'要求的是通过观察逐一计数确定数量，故事中并未体现'逐一计数'这一核心动作，而是抽象为'核对条件牌'，导致核心机制丢失。",
+    "implicitness": "正文未出现任何目标概念名、别名或禁用术语，完全通过故事元素表达，符合隐含性要求。",
+    "mapping_clarity": "虽然故事有明确的角色和事件链，但核心机制'逐一计数'未映射到故事事件，故事中的'核对条件牌'和'转化环节'无法对应到'数物体'的观察和计数过程，导致映射不清晰。",
+    "readability": "故事语言流畅，情节连贯，角色和冲突清晰，适合中文学习者阅读，但部分表述略显重复（如'先稳定规则棋局中的入口条件核对，再推动规则棋局中的第2道转化环节'）。",
+    "pedagogical_value": "故事未能有效传达'数物体'的核心机制，读者无法从中理解如何通过逐一计数确定数量，教学价值较低。",
+    "novelty": "故事采用了'规则棋局'这一非传统场景，避免了常见的动物或物品计数寓言，有一定新颖性，但内部流程描述略显模板化。"
+  },
+  "evidence": {
+    "faithfulness": "故事中记录员'逐张核对牌上的符号'，但未体现'逐一计数'；最终验收'入口条件、转化过程、最终数量'，但未明确数量是如何通过计数得到的。",
+    "implicitness": "正文中无'数物体'、'数一数'、'计数'等术语，所有概念均通过'条件牌'、'符号'、'记录'等故事元素隐含表达。",
+    "mapping_clarity": "机制图核心节点n1'通过观察，对给定的物体逐一计数'在故事中映射为'核对条件牌'，但核对不等于计数；边缘e1和e2的映射虽方向正确，但核心动作缺失。",
+    "readability": "故事共518字，段落分明，对话自然，情节有起承转合，无明显语法错误或生硬表达。",
+    "pedagogical_value": "故事强调了顺序和核对的重要性，但未展示'逐一计数'的具体方法或结果，读者无法将故事与数学概念建立有效联系。",
+    "novelty": "使用'规则棋局'、'记录员'、'调度员'等角色，区别于常见的'小动物数苹果'等模板，但内部流程（先A后B）较为常见。"
+  },
+  "revision_suggestions": [
+    "将故事核心从'核对条件牌'改为'逐一计数封存箱上的符号'，例如记录员需要逐个点数符号并记录数量。",
+    "在验收环节明确展示计数结果，如'记录员数出箱子上有5个符号，调度员转化后得到5个记录，验收员确认数量一致'。",
+    "减少抽象流程描述，增加具体计数动作和数量对比，以体现'数物体'的核心机制。"
+  ],
+  "final_status": "reject",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 2,
+      "implicitness": 5,
+      "mapping_clarity": 2,
+      "readability": 4,
+      "pedagogical_value": 2,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": true,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事核心是规则棋局中的流程核对与顺序，但目标概念'数物体'要求的是通过观察逐一计数确定数量，故事中并未体现'逐一计数'这一核心动作，而是抽象为'核对条件牌'，导致核心机制丢失。",
+      "implicitness": "正文未出现任何目标概念名、别名或禁用术语，完全通过故事元素表达，符合隐含性要求。",
+      "mapping_clarity": "虽然故事有明确的角色和事件链，但核心机制'逐一计数'未映射到故事事件，故事中的'核对条件牌'和'转化环节'无法对应到'数物体'的观察和计数过程，导致映射不清晰。",
+      "readability": "故事语言流畅，情节连贯，角色和冲突清晰，适合中文学习者阅读，但部分表述略显重复（如'先稳定规则棋局中的入口条件核对，再推动规则棋局中的第2道转化环节'）。",
+      "pedagogical_value": "故事未能有效传达'数物体'的核心机制，读者无法从中理解如何通过逐一计数确定数量，教学价值较低。",
+      "novelty": "故事采用了'规则棋局'这一非传统场景，避免了常见的动物或物品计数寓言，有一定新颖性，但内部流程描述略显模板化。"
+    },
+    "evidence": {
+      "faithfulness": "故事中记录员'逐张核对牌上的符号'，但未体现'逐一计数'；最终验收'入口条件、转化过程、最终数量'，但未明确数量是如何通过计数得到的。",
+      "implicitness": "正文中无'数物体'、'数一数'、'计数'等术语，所有概念均通过'条件牌'、'符号'、'记录'等故事元素隐含表达。",
+      "mapping_clarity": "机制图核心节点n1'通过观察，对给定的物体逐一计数'在故事中映射为'核对条件牌'，但核对不等于计数；边缘e1和e2的映射虽方向正确，但核心动作缺失。",
+      "readability": "故事共518字，段落分明，对话自然，情节有起承转合，无明显语法错误或生硬表达。",
+      "pedagogical_value": "故事强调了顺序和核对的重要性，但未展示'逐一计数'的具体方法或结果，读者无法将故事与数学概念建立有效联系。",
+      "novelty": "使用'规则棋局'、'记录员'、'调度员'等角色，区别于常见的'小动物数苹果'等模板，但内部流程（先A后B）较为常见。"
+    },
+    "revision_suggestions": [
+      "将故事核心从'核对条件牌'改为'逐一计数封存箱上的符号'，例如记录员需要逐个点数符号并记录数量。",
+      "在验收环节明确展示计数结果，如'记录员数出箱子上有5个符号，调度员转化后得到5个记录，验收员确认数量一致'。",
+      "减少抽象流程描述，增加具体计数动作和数量对比，以体现'数物体'的核心机制。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "math_1a_rjb_cpt1",
+    "target_concept": "数物体（数一数）",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

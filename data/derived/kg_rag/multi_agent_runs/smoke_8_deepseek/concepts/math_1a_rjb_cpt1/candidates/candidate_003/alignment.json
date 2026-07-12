@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "小方通过逐一取出碎片并对应放置石子，完成对碎片数量的计数，从而确定需要修补的碎片总数。",
+      "evidence": "修补师阿图和小徒弟小方展开一幅残缺的古地图。",
+      "narrative_anchor": "修补师阿图和小徒弟小方展开一幅残缺的古地图。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

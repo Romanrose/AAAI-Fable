@@ -1,0 +1,16 @@
+In a sunlit garden workshop, a careful caretaker named Elara prepared a plot of rich soil, ensuring it had water, air, and warmth. She planted a single seed, then tended it with precise tools and routines—watering at dawn, weeding by noon, and checking the soil’s breath each evening. Nearby, a patch of moss grew on a stone, and a vine crept over the fence, competing for light and nutrients.
+
+Days passed, and a green shoot emerged. Elara observed closely: the shoot reached toward the sun, absorbed water, and pushed out tiny leaves. To test if this growth was genuine, she gently touched the stem—it bent, then slowly straightened, responding to her touch. She then covered one leaf with a dark cloth; within hours, it paled, showing it needed light to live. Finally, she separated a small cutting and placed it in a new pot; it rooted and grew, proving it could reproduce.
+
+The system stabilized. Elara understood: the seed was a living thing—it needed nutrition, breathed through its leaves, responded to stimuli, grew, and reproduced. The moss and vine were also alive, but the stone was not. The visible changes revealed that life required all these hidden conditions to be coordinated.
+
+```json
+[
+  {"concept_role": "target concept", "story_evidence": "The seed grew into a plant that needed nutrition, breathed, responded to touch, grew, and reproduced, demonstrating the characteristics of a living thing."},
+  {"concept_role": "prerequisites", "story_evidence": "Elara prepared soil, water, air, and warmth before the seed could grow."},
+  {"concept_role": "related concepts", "story_evidence": "The moss and vine competed for resources, contrasting the main plant's growth, while the stone showed no life."},
+  {"concept_role": "outcomes", "story_evidence": "The green shoot emerged, reached for light, and produced leaves as visible consequences of the living process."},
+  {"concept_role": "experiments", "story_evidence": "Elara touched the stem to test response, covered a leaf to test light need, and separated a cutting to test reproduction."},
+  {"concept_role": "exercises", "story_evidence": "Elara observed the pale leaf and the rooted cutting as follow-up checks that reinforced the lesson of what makes something alive."}
+]
+```

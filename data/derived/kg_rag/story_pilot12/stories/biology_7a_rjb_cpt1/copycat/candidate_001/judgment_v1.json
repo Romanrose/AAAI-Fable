@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n7",
+    "weakest_edge_id": "e6",
+    "distinguishing_reason": "Node n7 (具有遗传和变异) and its incoming edge e6 have zero evidence in the story, making the mapping incomplete. In contrast, n1 (入口条件核对) is explicitly mentioned and serves as the starting point for all comparisons. A better realization would incorporate a story element representing '遗传和变异' (e.g., a unique inherited pattern or variation in the porcelain) to preserve the full mechanism."
+  },
+  "revision_instructions": [
+    "Add a story element that corresponds to mechanism node n7 (具有遗传和变异), such as a unique inherited pattern or a variation in the porcelain that must be preserved across generations.",
+    "Ensure that edge e6 (n1 requires n7) is explicitly represented in the story, e.g., by showing that the entry condition check must also verify the inherited pattern or variation.",
+    "Consider replacing the generic '主角把两份相关记录放在一起比较' for edges e1-e7 with more specific relational phrases that distinguish the unique 'requires' relation from a simple comparison."
+  ],
+  "final_status": "revise"
+}

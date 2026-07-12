@@ -1,0 +1,30 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "园圃值守所里，记录员翻开旧样本册，里面是几年前的原始记录。",
+      "narrative_anchor": "园圃值守所里，记录员翻开旧样本册，里面是几年前的原始记录。",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "结果验收记录",
+      "evidence": "验收记录",
+      "narrative_anchor": "验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "主角把这个具体现象归入“生物的共同特征”这类更大的共同规则，而不是当成孤立事件。",
+      "evidence": "生物共同的特征",
+      "narrative_anchor": "生物共同的特征",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

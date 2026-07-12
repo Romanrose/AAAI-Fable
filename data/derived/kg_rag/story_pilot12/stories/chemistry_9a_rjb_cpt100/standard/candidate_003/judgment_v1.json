@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "The mapping of n1 (缓慢氧化) to the tree's decay process is strong because the story explicitly describes a slow, imperceptible internal decay, matching the mechanism's key features. In contrast, n2 (氧化反应) mapped to '树根吸收水分和养分' is weaker because the story does not clearly establish root absorption as a type of oxidation reaction; the mapping relies on an analogy (oxygen as water/nutrients) that is not explicitly supported in the text. Edge e4 (阳光是树根吸收过程的一部分) is the weakest because the story never states that sunlight is part of root absorption; it is only implied by the overall context, leading to lower confidence."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping for n2 by explicitly linking root absorption to an oxygen-like role (e.g., '树根吸收水分和养分的过程，就像氧化反应中氧气参与一样') to clarify the is_a relation.",
+    "Improve edge e4 by adding a sentence that connects sunlight to the root absorption process, e.g., '阳光促进了树根对水分和养分的吸收'.",
+    "Enhance edge e2 by making the subtyping relation between photosynthesis and root absorption more explicit, e.g., '树叶的光合作用，是树根吸收过程的一种表现形式'.",
+    "Consider adding a brief mention of the tree's growth as a form of decay (e3) to increase confidence, e.g., '老树的生长过程，其实也是腐朽过程的一部分'."
+  ],
+  "final_status": "revise"
+}

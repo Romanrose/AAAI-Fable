@@ -1,0 +1,94 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "晶状体和角膜",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "凸透镜",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "把来自物体的光会聚在视网膜上形成像",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "视网膜",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "睫状体",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt112:definition"]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "改变晶状体形状，使不同距离物体成像在视网膜上",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt112:definition"]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt111:definition"]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt112:definition"]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": ["kg-edge:normalized:edge:19714"]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": ["n1", "n2", "n3", "n4", "n5", "n6"],
+    "must_preserve_edge_ids": ["e1", "e2", "e3", "e4", "e5"]
+  }
+}

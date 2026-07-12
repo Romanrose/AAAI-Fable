@@ -1,0 +1,110 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农田灌溉",
+  "characters": [
+    "农夫",
+    "禾苗"
+  ],
+  "objects": [
+    "水渠",
+    "水源",
+    "水",
+    "干旱天气"
+  ],
+  "conflict": "禾苗生长需要持续的水分，但水源水位下降导致水渠供水不足，禾苗面临枯萎危险。",
+  "event_chain": [
+    "禾苗生长需要持续的水分（n1）",
+    "干旱天气导致水源水位下降（n2）",
+    "农夫从水渠引水补充灌溉（n3）",
+    "禾苗恢复生机，避免枯萎（n4）",
+    "水是禾苗生长的必需物质（n5）",
+    "水的物理性质：在常温下为液态，可流动（n6）"
+  ],
+  "turning_point": "农夫发现水渠水量减少，决定从更深的水源引水补充灌溉。",
+  "resolution_state": "禾苗得到充足水分，恢复健康生长，避免了枯萎。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "禾苗生长需要持续的水分",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "干旱天气导致水源水位下降",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫从水渠引水补充灌溉",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "禾苗恢复生机，避免枯萎",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "水的物理性质：在常温下为液态，可流动",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "禾苗生长需要水",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "干旱导致水源水位下降，促使农夫引水灌溉",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫引水灌溉使禾苗恢复生机",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "禾苗生长与避免枯萎相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "水具有液态可流动的物理性质",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "禾苗生长与水的物理性质相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'呼吸'、'氧气'、'高原反应'等目标概念术语。",
+    "注意'水'作为载体时，其物理性质（液态可流动）与氧气（密度比空气略大，不易溶于水）不完全对应，但已尽力保持类比一致性。",
+    "避免将'干旱天气'视为课程桥接上下文，仅作为条件节点n2的载体。"
+  ],
+  "mapping_context_sha256": "4218c378f54c5265920046266c3e3323ef73bf77eacb39ef9f31b6d11d728afc",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "2b6b61b7554c73c3bdce60441d872cbdcf43e81581740ccc7e569972b30f58e8"
+  }
+}

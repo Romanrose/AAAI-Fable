@@ -1,0 +1,108 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "中国古代寓言：工匠铸剑",
+  "characters": [
+    "铸剑大师",
+    "普通工匠",
+    "学徒"
+  ],
+  "objects": [
+    "真剑（由精铁反复锻打而成，锋利真实）",
+    "幻影剑（水中倒影或镜中虚影，不可触碰）",
+    "铸剑炉",
+    "锻打锤",
+    "冷却水池"
+  ],
+  "conflict": "普通工匠误以为幻影剑是真剑，试图用它来砍物，结果失败；而铸剑大师教导学徒如何通过实际锻打和冷却得到真正的利剑。",
+  "event_chain": [
+    "铸剑大师在炉中烧红精铁，反复锻打，形成剑胚。",
+    "大师将剑胚放入冷却水池，剑身实际凝聚，成为真剑。",
+    "学徒看到水池中倒映的剑影，误以为是真剑，伸手去捞，却只触到水面。",
+    "普通工匠也模仿大师锻打，但未掌握火候，剑胚未能成形。",
+    "大师用真剑砍断木桩，证明其锋利；幻影剑则无法造成任何痕迹。",
+    "学徒终于明白：只有经过实际锻打和冷却凝聚的剑才是真剑，倒影只是虚像。"
+  ],
+  "turning_point": "学徒伸手捞取水中剑影失败，大师用真剑演示其实际效用。",
+  "resolution_state": "学徒认识到真剑与幻影剑的区别，学会通过实际工艺获得真剑。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "真剑",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "幻影剑（水中倒影）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "铸剑大师用炉火锻打并冷却，得到一把缩小但锋利的真剑（类似匕首）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铸剑大师用更大炉火和更长时间锻打，得到一把放大且锋利的真剑",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "学徒尝试用小型炉火锻打小铁片，冷却后得到一把小真剑，验证了工艺",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "普通工匠用大型炉火锻打大铁块，冷却后得到大真剑，演示了工艺",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铸剑大师用炉火锻打并冷却得到小真剑，这把小真剑是‘真剑’的一种实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "铸剑大师用更大炉火锻打得到大真剑，这把大真剑也是‘真剑’的一种实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "学徒的小型锻打实验证明了‘真剑’可以通过实际工艺得到",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "普通工匠的大型锻打演示证明了‘真剑’可以通过实际工艺得到",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "‘真剑’与‘幻影剑’是相对的概念，一个真实可触，一个虚幻不可触",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保‘真剑’和‘幻影剑’的对比清晰，避免混淆。",
+    "注意‘铸剑大师’和‘普通工匠’的工艺差异要体现‘照相机成像’和‘投影仪成像’的缩放特征。",
+    "避免使用‘实像’、‘虚像’、‘凸透镜’等物理术语。",
+    "所有事件链必须围绕‘铸剑’这一连贯领域，不引入其他无关隐喻。"
+  ],
+  "mapping_context_sha256": "6f25d47da137d7947afd82123904ff951fa66ad82896c1caa284829dd3348e7e",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "898265b73b7fb39b48e6810b96df639d2ec202485cc9a06f23675c7c2b8a4623"
+  }
+}

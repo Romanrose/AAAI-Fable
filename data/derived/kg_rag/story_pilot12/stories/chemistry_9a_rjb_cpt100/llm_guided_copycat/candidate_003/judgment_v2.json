@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story beautifully embodies slow oxidation (n1) through the gradual rusting of the copper sword, with explicit mention of no heat or light. However, the mapping for n2 (oxidation reaction) is somewhat weak because the story never explicitly states that both rusting and combustion are types of oxidation reactions; it only implies they involve oxygen. Edge e1 (n2 is_a n1) is also weak because the story does not explicitly state that slow oxidation is a type of oxidation reaction, though it is implied. This is better than a story that merely mentions oxygen without showing the contrast between slow and fast oxidation."
+  },
+  "revision_instructions": [
+    "Explicitly state that both the slow rusting and the rapid combustion are examples of oxidation reactions (n2) to strengthen the mapping for n2 and edge e1.",
+    "Ensure that the story explicitly mentions that slow oxidation is a type of oxidation reaction, not just a process involving oxygen."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

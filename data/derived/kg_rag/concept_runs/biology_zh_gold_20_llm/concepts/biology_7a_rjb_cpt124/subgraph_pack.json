@@ -1,0 +1,67 @@
+{
+  "query": "biology_7a_rjb_cpt124",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt124",
+    "label": "Concept",
+    "name": "蒸腾作用",
+    "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。",
+    "aliases": [
+      "transpiration"
+    ],
+    "examples": [],
+    "retrieval_text": "蒸腾作用\n水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt128",
+        "label": "Concept",
+        "name": "蒸腾作用的意义",
+        "definition": "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt129",
+        "label": "Concept",
+        "name": "生物圈的水循环（绿色植物的作用）",
+        "definition": "水在海洋、大气和陆地之间循环往复；绿色植物通过蒸腾作用提高大气湿度、增加降水，并通过承接雨水与枯枝落叶吸水等作用减缓雨水冲刷、促进下渗补充地下水。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt125",
+        "label": "Concept",
+        "name": "叶片的结构（表皮、叶肉、叶脉）",
+        "definition": "叶片由表皮、叶肉与叶脉三部分组成；上下表皮为排列紧密的一层细胞；表皮上分布有气孔。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt126",
+        "label": "Concept",
+        "name": "气孔",
+        "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt126",
+        "label": "Concept",
+        "name": "气孔",
+        "definition": "分布在叶片表皮上的结构，是蒸腾作用的“门户”，也是气体交换的“窗口”；由一对保卫细胞围成的空腔，能张开或闭合。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s3",
+        "label": "Section",
+        "name": "第三章 绿色植物与生物圈的水循环",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

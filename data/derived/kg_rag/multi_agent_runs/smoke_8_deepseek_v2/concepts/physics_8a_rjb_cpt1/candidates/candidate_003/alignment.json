@@ -1,0 +1,64 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "小周需要判断的‘货船与信号台之间的空间间隔’",
+      "evidence": "船和信号台之间到底隔了多远",
+      "narrative_anchor": "船和信号台之间到底隔了多远",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "小周学习使用测距标杆的方法",
+      "evidence": "照着老陈教的方法反复练习",
+      "narrative_anchor": "照着老陈教的方法反复练习",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "测距标杆上的‘一格’对应长度单位",
+      "evidence": "一格代表一个固定单位",
+      "narrative_anchor": "一格代表一个固定单位",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "小周通过实际测量验证判断",
+      "evidence": "透过标杆读出读数——三格半",
+      "narrative_anchor": "透过标杆读出读数——三格半",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "小周先学习使用测距标杆，才能准确测量空间间隔",
+      "evidence": "照着老陈教的方法反复练习",
+      "narrative_anchor": "照着老陈教的方法反复练习",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "掌握测距标杆使用方法后，才能将间隔转化为长度单位",
+      "evidence": "一格代表一个固定单位",
+      "narrative_anchor": "一格代表一个固定单位",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "通过实际测量验证长度单位的应用",
+      "evidence": "透过标杆读出读数——三格半",
+      "narrative_anchor": "透过标杆读出读数——三格半",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

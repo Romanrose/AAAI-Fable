@@ -1,0 +1,178 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt18",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "观察与比较立体图形",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl8:description",
+          "kg-node:math_1a_rjb_skl8:name",
+          "kg-node:math_1a_rjb_skl8:retrieval_text",
+          "kg-edge:normalized:edge:16390"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "按形状分类",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt18:definition",
+          "kg-node:math_1a_rjb_cpt18:examples",
+          "kg-node:math_1a_rjb_cpt18:importance",
+          "kg-node:math_1a_rjb_cpt18:name",
+          "kg-node:math_1a_rjb_cpt18:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "长方体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt14:definition",
+          "kg-node:math_1a_rjb_cpt14:examples",
+          "kg-node:math_1a_rjb_cpt14:importance",
+          "kg-node:math_1a_rjb_cpt14:name",
+          "kg-node:math_1a_rjb_cpt14:pages",
+          "kg-node:math_1a_rjb_cpt14:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "正方体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt15:aliases",
+          "kg-node:math_1a_rjb_cpt15:definition",
+          "kg-node:math_1a_rjb_cpt15:examples",
+          "kg-node:math_1a_rjb_cpt15:importance",
+          "kg-node:math_1a_rjb_cpt15:name",
+          "kg-node:math_1a_rjb_cpt15:pages",
+          "kg-node:math_1a_rjb_cpt15:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "圆柱",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt16:aliases",
+          "kg-node:math_1a_rjb_cpt16:definition",
+          "kg-node:math_1a_rjb_cpt16:examples",
+          "kg-node:math_1a_rjb_cpt16:importance",
+          "kg-node:math_1a_rjb_cpt16:name",
+          "kg-node:math_1a_rjb_cpt16:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "球体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt17:definition",
+          "kg-node:math_1a_rjb_cpt17:examples",
+          "kg-node:math_1a_rjb_cpt17:importance",
+          "kg-node:math_1a_rjb_cpt17:name",
+          "kg-node:math_1a_rjb_cpt17:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16390"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12132"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12134"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12135"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12137"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "按形状分类"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "29e3b81986714ad8003f79faa97395b7d9c82a232b81fcccd4ef91c468282e09",
+    "retrieval_sha256": "1e18a1cdac74f6a0eaaf6015e151449eacf13e6289aa3a437045a5631c9d50d1",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "32bb7164609c9ef46042340c957aacf5e67d020c7c1e623c34b048aa9bc08604"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

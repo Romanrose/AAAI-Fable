@@ -1,0 +1,20 @@
+{
+  "output_dir": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics",
+  "summary_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\summary.jsonl",
+  "eval_summary_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\eval_summary.jsonl",
+  "failed_queue_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\failed_queue.jsonl",
+  "concept_count": 10,
+  "success_count": 10,
+  "failed_count": 0,
+  "skipped_count": 0,
+  "mode": "local",
+  "language": "zh-CN",
+  "workflow": "agentic",
+  "retrieval_mode": "dual_level",
+  "summary_jsonl": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\eval_summary.jsonl",
+  "csv_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\eval_summary.csv",
+  "report_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\eval_report.md",
+  "row_count": "10",
+  "physics_report_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\physics_eval_report.md",
+  "subject_eval_report_path": "data\\derived\\kg_rag\\concept_runs\\batch_4subjects_10_local_rules_20260709\\physics\\subject_eval_report.md"
+}

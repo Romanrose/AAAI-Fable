@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：凸透镜",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m3",
+      "text": "需要考虑前置条件或输入：调节像距以成清晰像",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    },
+    {
+      "id": "m4",
+      "text": "需要保留上下位关系：实像",
+      "weight": 0.75,
+      "source": "graph.hierarchy"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17243"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_17251"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_12419"
+    }
+  ]
+}

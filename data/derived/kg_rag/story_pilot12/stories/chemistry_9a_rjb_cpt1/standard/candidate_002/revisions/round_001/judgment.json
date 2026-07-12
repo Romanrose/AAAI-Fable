@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly states '田地需要耕作才能生长庄稼' which preserves the enables relation direction from n1 to n2. However, node_coverage is only 0.5 (only 1 of 2 nodes mapped? Actually both nodes are mapped, but automatic_metrics shows 0.5, which is below the 0.8 threshold, causing automatic rejection. The story is fluent and pedagogically clear, but the automatic gate is binding."
+  },
+  "revision_instructions": [
+    "Increase node_coverage to at least 0.8. Ensure both mechanism nodes (n1: 物质, n2: 物质的变化) are explicitly represented in the story. Currently n1 is mapped to '田地' but the mechanism node '物质' is not directly covered; the story only covers '田地' as a specific instance. Consider adding a sentence that generalizes from 田地 to 物质, e.g., '田地是物质的一种，物质构成宇宙中各种星体...'.",
+    "Alternatively, adjust the mapping plan to map n1 to a more general entity that directly represents '物质' rather than a specific instance like '田地'.",
+    "Ensure the story length remains within 450-750 Chinese characters (currently 562, valid)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

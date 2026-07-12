@@ -1,0 +1,179 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "烹饪",
+      "domain_rationale": "烹饪过程需要外部条件（火候、油温）和内部条件（食材新鲜度），类似种子萌发需要环境条件和自身条件。",
+      "conflict": "无直接冲突，但需注意烹饪中火候控制与种子萌发温度条件对应时的精确度差异。",
+      "event_chain": [
+        "将生米放入锅中",
+        "加入适量的水",
+        "盖上锅盖",
+        "开启炉火并调节至适宜温度",
+        "等待米饭煮熟"
+      ],
+      "turning_point": "米粒吸足水分并受热膨胀",
+      "resolution_state": "米饭熟透，成为可食用的状态",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "将生米煮成熟饭的过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "煮饭所需的外界条件：适宜的火候、适量的水和锅盖的密封",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "米粒本身是否新鲜、无霉变、未受潮",
+          "mapping_type": "condition"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "使能：外界条件使煮饭过程得以进行",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "使能：米粒自身品质使煮饭过程得以成功",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "孵化",
+      "domain_rationale": "鸡蛋孵化需要适宜温度和湿度（环境条件）以及受精且健康的胚胎（自身条件），与种子萌发的双条件结构一致。",
+      "conflict": "无本质冲突，但需注意孵化中湿度条件与种子萌发中水分条件的类比差异。",
+      "event_chain": [
+        "母鸡选择并孵化受精蛋",
+        "保持恒定的体温和巢内湿度",
+        "定期翻动蛋体",
+        "胚胎发育",
+        "雏鸡破壳而出"
+      ],
+      "turning_point": "胚胎开始发育并形成器官",
+      "resolution_state": "雏鸡成功出壳，成为独立个体",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "鸡蛋孵化成雏鸡的过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "孵化所需的外界条件：母鸡体温、巢内湿度、翻动频率",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "鸡蛋本身是否受精、胚胎是否健康、蛋壳是否完整",
+          "mapping_type": "condition"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "使能：外界条件使孵化过程得以启动和维持",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "使能：鸡蛋自身品质使孵化过程得以成功完成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "发酵",
+      "domain_rationale": "面团发酵需要适宜温度、湿度和酵母（环境条件）以及面粉本身的品质（自身条件），与种子萌发的结构高度相似。",
+      "conflict": "无直接冲突，但需注意发酵中酵母作为外部添加物与种子萌发中自身胚的区别。",
+      "event_chain": [
+        "将面粉、水、酵母混合",
+        "揉成面团",
+        "放置在温暖湿润处",
+        "面团膨胀",
+        "发酵完成"
+      ],
+      "turning_point": "酵母产气使面团膨胀",
+      "resolution_state": "面团体积增大，内部呈蜂窝状，适合进一步加工",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "面团发酵的过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "发酵所需的外界条件：适宜的温度、湿度、充足的空气",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "面粉本身是否新鲜、无变质、筋度合适",
+          "mapping_type": "condition"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "使能：外界条件使发酵过程得以发生",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "使能：面粉自身品质使发酵过程得以成功",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 3
+    }
+  }
+]

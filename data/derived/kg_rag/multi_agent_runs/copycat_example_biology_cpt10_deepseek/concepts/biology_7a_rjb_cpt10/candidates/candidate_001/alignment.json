@@ -1,0 +1,30 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "小陈摇头：“流程上写的是先核对入口条件，再推动验收记录。前后必须能接上。”",
+      "narrative_anchor": "小陈摇头：“流程上写的是先核对入口条件，再推动验收记录。前后必须能接上。”",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "结果验收记录",
+      "evidence": "小陈接过册子，按顺序补上验收记录，终于填完了整张通行牌。",
+      "narrative_anchor": "小陈接过册子，按顺序补上验收记录，终于填完了整张通行牌。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "leads_to",
+      "evidence": "小陈摇头：“流程上写的是先核对入口条件，再推动验收记录。前后必须能接上。”",
+      "narrative_anchor": "小陈摇头：“流程上写的是先核对入口条件，再推动验收记录。前后必须能接上。”",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

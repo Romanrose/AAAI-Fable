@@ -1,0 +1,83 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "缓慢氧化",
+  "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+  "aliases": [],
+  "examples": [
+    "动植物的呼吸",
+    "食物的腐烂",
+    "醋的酿造",
+    "农家肥料的腐熟"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt97",
+        "label": "Concept",
+        "name": "氧化反应",
+        "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt102",
+        "label": "Concept",
+        "name": "呼吸与氧气",
+        "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt97",
+        "label": "Concept",
+        "name": "氧化反应",
+        "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt99",
+        "label": "Concept",
+        "name": "燃烧",
+        "definition": "物质在一定条件下(有可燃物、充足的氧气或空气、达到着火点)发生的剧烈放热、发光的氧化反应过程。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s2",
+        "label": "Section",
+        "name": "课题2 氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+  ],
+  "must_preserve_zh": [
+    "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "缓慢氧化"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

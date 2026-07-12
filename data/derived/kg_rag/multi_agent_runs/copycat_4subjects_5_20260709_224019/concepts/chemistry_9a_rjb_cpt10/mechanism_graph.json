@@ -1,0 +1,58 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "区分化学反应和物理混合。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "保留守恒关系和反应前后变化。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:14999",
+      "source_name": "大气压强",
+      "target_name": "沸点",
+      "relation_semantic_role": "prerequisite"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "prerequisites_for",
+      "source_edge_id": "normalized:edge:15075",
+      "source_name": "条件对物质性质的影响",
+      "target_name": "沸点",
+      "relation_semantic_role": "prerequisite"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:14999",
+    "normalized:edge:15075",
+    "normalized:edge:14995",
+    "normalized:edge:14992",
+    "normalized:edge:14993",
+    "normalized:edge:14994",
+    "normalized:edge:18222"
+  ]
+}

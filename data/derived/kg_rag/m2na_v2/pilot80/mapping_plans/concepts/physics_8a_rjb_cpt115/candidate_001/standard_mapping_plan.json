@@ -1,0 +1,65 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农在自家菜园里种菜的故事",
+  "characters": [
+    "老农",
+    "菜园"
+  ],
+  "objects": [
+    "菜畦",
+    "种子",
+    "水壶",
+    "锄头"
+  ],
+  "conflict": "老农发现菜苗长势不好，有的菜苗离得太近，拥挤不堪，而有的地方又太空旷，需要找到最合适的间距来种植，既能让菜苗充分生长，又不浪费土地。",
+  "event_chain": [
+    "老农在菜园里播种，种子撒得密密麻麻。",
+    "菜苗出土后，挤在一起，叶子发黄，长得很慢。",
+    "老农决定间苗，把过密的菜苗拔掉一些。",
+    "他尝试不同的间距，发现有些间距下菜苗依然拥挤，有些则太稀疏。",
+    "经过多次试验，他找到了一个最佳间距，菜苗长得最茂盛，而且他劳作起来也不累。"
+  ],
+  "turning_point": "老农发现当菜苗间距大约为一拃（约20厘米）时，菜苗长得最好，而且他浇水、除草都很方便，不用弯腰太累。",
+  "resolution_state": "老农按照这个最佳间距重新整理了菜园，菜苗茁壮成长，收成很好，他劳作时也不觉得疲劳。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农发现的最佳间距（约一拃），菜苗长得最好且老农劳作不累",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "菜苗能存活的最小间距（约半拃），再近就会拥挤死亡",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "最小间距与最佳间距之间存在关联，最佳间距大于最小间距，且是实践中总结出的舒适距离",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'明视距离'或'近点'等术语。",
+    "注意最佳间距（一拃）是比喻，实际数值不必精确对应25 cm，但需体现'最清晰而不疲劳'的类比。",
+    "确保最小间距（半拃）对应近点（约10 cm），且方向正确：最小间距是更极端的条件，最佳间距是更舒适的条件。",
+    "避免将课程桥接上下文（如眼睛调节机制）引入故事，只保留两个条件节点及其关系。"
+  ],
+  "mapping_context_sha256": "3fc52931370d4dc54982c3e113027131acd5503ba7e3cbf5e278bd4499960b9a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "dd80b7b08e283e2acf6a5e8dcb868ca1d0c07f86fc91eeefd9415e75bd677c9d"
+  }
+}

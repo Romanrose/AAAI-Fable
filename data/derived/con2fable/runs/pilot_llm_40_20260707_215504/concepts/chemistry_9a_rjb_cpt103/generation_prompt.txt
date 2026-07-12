@@ -1,0 +1,244 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "实验室制取氧气的方法"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：分解反应",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：氧气",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要考虑前置条件或输入：通过实验现象推断气体性质",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：分解过氧化氢制取氧气",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m6",
+        "text": "需要保留上下位关系：加热氯酸钾制取氧气",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m7",
+        "text": "需要保留上下位关系：加热高锰酸钾制取氧气",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：氧气的收集方法",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14997"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14996"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15223"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15261"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11278"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11280"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11276"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "古代炼丹与冶金工坊",
+    "setting": "在一座远离尘嚣的深山之中，有一座古老的炼丹与冶金工坊。工坊的主人是一位经验丰富的匠人，他掌握着从不同矿石和药草中提取“精气”的秘法。工坊内摆满了各种炉鼎、药臼和琉璃瓶，墙上挂着记录火候与配方的竹简。",
+    "conflict": "匠人需要为即将到来的祭天仪式准备足够多的“纯净精气”，但他发现不同的材料需要截然不同的处理手法，且稍有不慎就会前功尽弃，甚至引发危险。他必须理清这些方法的顺序与条件，才能安全高效地完成任务。",
+    "characters": [
+      {
+        "name": "老匠人",
+        "role": "工坊的主人，知识的掌握者和实践者，负责执行所有提取步骤。",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "紫晶石",
+        "role": "一种深紫色的矿石，加热后会释放出大量精气，但过程剧烈。",
+        "mapped_element": "m7"
+      },
+      {
+        "name": "碧玉液",
+        "role": "一种翠绿色的药液，加入一种黑色粉末后，会温和地冒出气泡并释放精气。",
+        "mapped_element": "m5"
+      },
+      {
+        "name": "白晶砂",
+        "role": "一种白色结晶粉末，需要与另一种矿石粉末混合并强热才能释放精气。",
+        "mapped_element": "m6"
+      },
+      {
+        "name": "精气",
+        "role": "最终需要收集的无形能量，是祭天仪式的核心。",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "琉璃集气瓶",
+        "role": "用来收集和储存精气的容器，需要特定的技巧才能将精气灌入其中。",
+        "mapped_element": "m8"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老匠人掌握的多种提取精气的秘法"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "将一种物质分解成更简单成分的‘化一为二’之理"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "最终产物‘精气’"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "通过观察气泡、火焰颜色和气味来判断精气是否纯净"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "用碧玉液和黑粉温和制取精气的方法"
+      },
+      {
+        "concept_element": "m6",
+        "narrative_carrier": "用白晶砂和矿石粉强热制取精气的方法"
+      },
+      {
+        "concept_element": "m7",
+        "narrative_carrier": "直接加热紫晶石制取精气的方法"
+      },
+      {
+        "concept_element": "m8",
+        "narrative_carrier": "用琉璃集气瓶收集精气的技巧"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老匠人清点库存，发现紫晶石、碧玉液和白晶砂等材料充足，但每种材料的性质不同，需要不同的处理方式。他决定先理解‘化一为二’的根本道理。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老匠人意识到，无论用哪种方法，最终目标都是得到‘精气’，而精气无色无形，必须通过观察现象来确认其存在。",
+        "mapped_elements": [
+          "m3",
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "他决定从最温和的方法开始：将碧玉液倒入铜盆，加入一小撮黑色粉末，盆中立刻冒出大量细密的气泡，一股清凉的气息弥漫开来。他小心地将这股气息引入琉璃瓶。",
+        "mapped_elements": [
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "接着，他取来白晶砂和一种红色矿石粉，混合后放入耐火泥炉中，用猛火加热。炉中先是冒出白烟，随后火焰转为明亮的黄色，一股更浓烈的精气喷涌而出。他迅速用另一个琉璃瓶接住。",
+        "mapped_elements": [
+          "m6"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "最后，他处理最危险的紫晶石。他将紫晶石碎块放入铁釜，盖上留有细孔的盖子，用炭火加热。铁釜内传来噼啪声响，紫色的烟雾从细孔中喷出，随后化为纯净的精气。他屏住呼吸，用最后一个大琉璃瓶将其全部收集。",
+        "mapped_elements": [
+          "m7"
+        ]
+      },
+      {
+        "beat_id": "b6",
+        "event": "三种精气都收集完毕，老匠人检查了三个琉璃瓶，确认它们都纯净无杂。他满意地将瓶子封好，准备用于祭天仪式。",
+        "mapped_elements": [
+          "m8"
+        ]
+      }
+    ],
+    "turning_point": "当老匠人加热紫晶石时，由于火候过猛，铁釜差点炸裂，紫色的浓烟险些灼伤他的眼睛。这让他深刻意识到，越是看似直接的强效方法，越需要谨慎的控制和前置准备。",
+    "ending": "祭天仪式上，三种不同方法提取的精气汇聚一堂，化作一道柔和而强大的光柱，直冲天际。老匠人明白，无论是温和的分解还是剧烈的分解，只要遵循了物质转化的根本道理，就能殊途同归，获得所需的结果。",
+    "implied_moral": "看似不同的路径，只要遵循了物质分解与转化的根本规律，并注意观察过程中的现象，就能从不同的原料中安全地提取出同一种宝贵的产物。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

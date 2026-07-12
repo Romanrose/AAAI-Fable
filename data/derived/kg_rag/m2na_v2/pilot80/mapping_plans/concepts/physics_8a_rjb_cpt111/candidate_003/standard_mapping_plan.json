@@ -1,0 +1,110 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代中国的磨镜工匠制作铜镜",
+  "characters": [
+    "老工匠（代表晶状体和角膜）",
+    "铜镜（代表凸透镜）",
+    "阳光（代表来自物体的光）",
+    "磨好的镜面（代表视网膜）",
+    "小徒弟（代表睫状体）",
+    "调整铜镜曲度（代表改变晶状体形状）"
+  ],
+  "objects": [
+    "铜镜坯料",
+    "磨石",
+    "阳光",
+    "镜面反射的光斑",
+    "不同距离的物体（如远处的山和近处的花）"
+  ],
+  "conflict": "铜镜坯料本身不平整，无法将阳光汇聚成一个清晰的光斑，导致远处和近处的物体反射的光线无法在镜面上形成清晰的像。",
+  "event_chain": [
+    "老工匠将铜镜坯料打磨成凸面形状，使其具有汇聚光线的能力。",
+    "阳光照射到铜镜上，铜镜将阳光汇聚成一个光斑。",
+    "汇聚的光斑落在磨好的镜面上，形成清晰的像。",
+    "小徒弟发现当观察远处物体时，光斑模糊；观察近处物体时，光斑清晰。",
+    "小徒弟通过调整铜镜的曲度（改变凸面的弯曲程度），使得不同距离的物体反射的光线都能在镜面上形成清晰的光斑。"
+  ],
+  "turning_point": "小徒弟意识到需要根据物体距离调整铜镜曲度，从而让光斑始终清晰。",
+  "resolution_state": "通过小徒弟的调整，铜镜能够根据物体距离改变曲度，使得来自不同距离物体的光线都能在镜面上汇聚成清晰的光斑，形成清晰的像。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老工匠",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "铜镜",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "阳光汇聚成光斑",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "磨好的镜面",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "小徒弟",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "调整铜镜曲度",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老工匠是铜镜的制作者，铜镜由老工匠打磨而成，相当于铜镜具有老工匠赋予的凸透镜特性",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "铜镜使阳光汇聚成光斑",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "汇聚的光斑在磨好的镜面上形成像",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "小徒弟调整铜镜曲度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "调整铜镜曲度影响阳光汇聚成光斑的过程",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'眼睛'、'晶状体'、'角膜'、'视网膜'、'睫状体'等禁忌词。",
+    "注意'调整铜镜曲度'对应'改变晶状体形状'，但不可直接提及。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如眼睛调节）作为因果机制处理。"
+  ],
+  "mapping_context_sha256": "209a85252e5fd7f77e409684bde5ad49f2245d390a7cd6c7d972dc17e158cefd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "0d27b3513f8e08401590f06d24e9444f4f899a46f5520531e69b6cd868f5b4ea"
+  }
+}

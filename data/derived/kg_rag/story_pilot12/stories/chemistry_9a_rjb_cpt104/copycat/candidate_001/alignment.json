@@ -1,0 +1,101 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三道环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "氧气",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "分解反应",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "分解过氧化氢制取氧气",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "加热氯酸钾制取氧气",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他先把货物清单和实物一一对照，确认无误后，才在第二道环节上写下正确的数据",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第三道环节的登记需要用到入口核对的结果",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "记录员把结果验收记录和前面的每一道记录放在一起比较，发现它们环环相扣",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [
+    "n4",
+    "n5",
+    "n6",
+    "n7"
+  ],
+  "missing_edge_ids": [
+    "e3",
+    "e4",
+    "e5",
+    "e6"
+  ],
+  "summary": "故事中明确出现了入口条件核对（n1）、第二道转化环节（n2）、第三道环节（n3）和结果验收记录（n8），并展示了它们之间的顺序依赖关系。但氧气（n4）、分解反应（n5）、分解过氧化氢制取氧气（n6）、加热氯酸钾制取氧气（n7）等化学概念在故事中完全没有出现，对应的边也缺乏证据。"
+}

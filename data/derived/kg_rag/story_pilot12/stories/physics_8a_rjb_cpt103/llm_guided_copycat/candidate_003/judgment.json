@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of '实像' to '致密的铸件' is consistent but the relation 'is_a' between '照相机成像' and '实像' is only indirectly implied in the story (铸造过程产生致密的铸件). The story does not explicitly state that the casting process is a type of dense casting, which weakens the edge alignment. In contrast, the mapping of '凸透镜' to '模具' is directly and explicitly stated as the key to the process, making it the strongest."
+  },
+  "revision_instructions": [
+    "Strengthen the 'is_a' relation (e2) by explicitly stating that the casting process inherently results in a dense casting, e.g., '铸造过程本身就是形成致密铸件的过程'.",
+    "Ensure that the story explicitly mentions that the casting process is a type of dense casting to improve edge coverage and direction accuracy."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

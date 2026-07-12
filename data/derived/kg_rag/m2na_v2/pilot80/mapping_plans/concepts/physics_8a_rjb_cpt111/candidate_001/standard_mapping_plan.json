@@ -1,0 +1,108 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代工匠制作铜镜",
+  "characters": [
+    "老铜匠",
+    "小徒弟"
+  ],
+  "objects": [
+    "铜镜坯",
+    "磨镜石",
+    "镜面",
+    "铜镜架",
+    "小锤"
+  ],
+  "conflict": "小徒弟磨出的铜镜总是照不清人脸，远近都模糊，老铜匠发现是因为镜坯的弧度不对，且镜架无法调节角度。",
+  "event_chain": [
+    "老铜匠将铜镜坯放在磨镜石上，铜镜坯相当于一个曲面镜。",
+    "磨镜石通过打磨使铜镜坯变成合适的曲面，相当于凸透镜。",
+    "合适的曲面能把光线汇聚到镜面上形成清晰影像，相当于把来自物体的光会聚在视网膜上形成像。",
+    "清晰影像落在镜面上，镜面相当于视网膜。",
+    "小锤用于敲打铜镜架，改变镜坯的弯曲程度，相当于睫状体。",
+    "小锤敲打铜镜架改变镜坯形状，使不同远近的物体都能在镜面上成清晰像，相当于改变晶状体形状使不同距离物体成像在视网膜上。",
+    "小锤敲打镜架改变镜坯形状的过程，与曲面汇聚光线的过程相关联，相当于睫状体调节与成像过程的关系。"
+  ],
+  "turning_point": "老铜匠用小锤调整铜镜架的弧度，使镜坯曲率合适，远近物体都能在镜面上成清晰像。",
+  "resolution_state": "小徒弟学会了用铜镜架调节镜坯弧度，从此磨出的铜镜远近皆清。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜镜坯",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "磨镜石打磨后的合适曲面",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "曲面汇聚光线在镜面上形成清晰影像",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "镜面",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "小锤",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "小锤敲打镜架改变镜坯形状使不同远近物体成像清晰",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铜镜坯经过磨镜石打磨后，其曲面相当于一个合适的曲面镜",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "合适的曲面能够汇聚光线，从而在镜面上形成清晰影像",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "汇聚光线形成清晰影像的过程，最终使影像落在镜面上",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "小锤能够敲打铜镜架，从而改变镜坯的形状",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "小锤改变镜坯形状的过程，与曲面汇聚光线形成清晰影像的过程相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'眼睛'、'晶状体'、'角膜'、'视网膜'、'睫状体'等任何目标概念术语。",
+    "确保映射了所有6个节点和5条边，且方向正确。",
+    "确保故事载体来自同一源域（铜镜制作），不混用其他领域。",
+    "注意'磨镜石打磨'是使镜坯成为合适曲面的手段，不是课程桥接上下文。"
+  ],
+  "mapping_context_sha256": "209a85252e5fd7f77e409684bde5ad49f2245d390a7cd6c7d972dc17e158cefd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "fcfc093c11533ce8eb20d332f06e1ade0e74d95a17a427bc5db125c3aeb6eda2"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "target_concept": "过氧化氢分解反应",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整映射了过氧化氢分解反应的核心机制：透明液体在常温下缓慢分解（液体变少、产生水珠），加入黑色粉末（催化剂）后快速产生气泡（氧气），木条复燃验证气体助燃性，且粉末反应后重量不变，完全符合概念定义。",
+    "implicitness": "故事未直接提及任何化学术语或概念名称，所有化学过程均通过生活化场景（宝库液体、黑色粉末、木条复燃）隐含表达，符合禁止术语要求。",
+    "mapping_clarity": "每个关键事件都清晰对应概念要素：液体缓慢变化对应常温分解，加入粉末后剧烈冒泡对应催化加速，木条复燃对应氧气生成，粉末重量不变对应催化剂特性，映射关系明确且无歧义。",
+    "readability": "故事语言流畅自然，情节连贯，角色和场景设置合理，514字篇幅适中，易于理解，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过对比实验（粉末单独、加清水、加液体）和重量守恒观察，有效传递了催化剂加速分解且自身不变的核心知识，能帮助学习者建立正确概念模型。",
+    "novelty": "采用账房宝库和智者粉末的隐喻，将化学实验转化为管理故事，有一定创意，但催化剂加速分解的叙事结构在同类教育故事中较为常见，新颖性稍弱。"
+  },
+  "revision_suggestions": [
+    "可增加一个角色误以为粉末是消耗品的情节，强化催化剂不消耗的认知。",
+    "可加入液体在不同温度下分解速度不同的细节，丰富概念层次。",
+    "结尾可更明确地总结‘帮手不变’的规则，提升教学价值。"
+  ],
+  "rule_findings": {
+    "story_token_count": 514,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "智者"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整映射了过氧化氢分解反应的核心机制：透明液体在常温下缓慢分解（液体变少、产生水珠），加入黑色粉末（催化剂）后快速产生气泡（氧气），木条复燃验证气体助燃性，且粉末反应后重量不变，完全符合概念定义。",
+      "implicitness": "故事未直接提及任何化学术语或概念名称，所有化学过程均通过生活化场景（宝库液体、黑色粉末、木条复燃）隐含表达，符合禁止术语要求。",
+      "mapping_clarity": "每个关键事件都清晰对应概念要素：液体缓慢变化对应常温分解，加入粉末后剧烈冒泡对应催化加速，木条复燃对应氧气生成，粉末重量不变对应催化剂特性，映射关系明确且无歧义。",
+      "readability": "故事语言流畅自然，情节连贯，角色和场景设置合理，514字篇幅适中，易于理解，无冗余或晦涩表达。",
+      "pedagogical_value": "故事通过对比实验（粉末单独、加清水、加液体）和重量守恒观察，有效传递了催化剂加速分解且自身不变的核心知识，能帮助学习者建立正确概念模型。",
+      "novelty": "采用账房宝库和智者粉末的隐喻，将化学实验转化为管理故事，有一定创意，但催化剂加速分解的叙事结构在同类教育故事中较为常见，新颖性稍弱。"
+    },
+    "revision_suggestions": [
+      "可增加一个角色误以为粉末是消耗品的情节，强化催化剂不消耗的认知。",
+      "可加入液体在不同温度下分解速度不同的细节，丰富概念层次。",
+      "结尾可更明确地总结‘帮手不变’的规则，提升教学价值。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

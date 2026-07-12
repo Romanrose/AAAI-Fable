@@ -1,0 +1,117 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt116",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代匠人制墨",
+  "characters": [
+    "匠人",
+    "学徒"
+  ],
+  "objects": [
+    "松烟",
+    "胶",
+    "墨模",
+    "墨锭"
+  ],
+  "conflict": "学徒急于求成，想用普通烟灰和劣胶快速制墨，但匠人坚持用上等松烟和优质胶，并反复捶打、压模，才能制出好墨。",
+  "event_chain": [
+    "匠人收集上等松烟（对应n5：具有富集功能的薄膜）",
+    "匠人将松烟与优质胶混合，并施加适当压力（对应n6：一定压力）",
+    "混合物在墨模中成型，制成墨锭（对应n1：膜分离制取富氧空气）",
+    "墨锭是制墨的一种方法（对应n2：工业制取氧气的方法）",
+    "松烟是制墨的关键原料（对应n3：氧气）",
+    "另一种制墨方法是用油烟制墨（对应n4：液态空气的分馏制氧）",
+    "最终得到上等墨锭（对应n7：富氧空气）"
+  ],
+  "turning_point": "匠人向学徒展示，只有用上等松烟和适当压力，才能制出墨色纯正、经久不褪的墨锭，学徒领悟到方法的重要性。",
+  "resolution_state": "学徒学会并传承了匠人的制墨方法，制出优质墨锭。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "墨锭成型过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "制墨方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "松烟",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "油烟制墨法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "上等松烟",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "适当压力",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "上等墨锭",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "墨锭成型过程是制墨方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "松烟是制墨方法的关键原料",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "油烟制墨法是制墨方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "上等松烟使墨锭成型成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "适当压力使墨锭成型成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "墨锭成型过程产生上等墨锭",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'膜分离制取富氧空气'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事载体来自同一源域（制墨），不混用其他领域。",
+    "避免将课程桥上下文（如'工业制取氧气的方法'）作为因果机制。"
+  ],
+  "mapping_context_sha256": "176a6f19774e004581b66a659675baf0ff4d36e6a9c3f31dd949d151e4739b2c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "82d7520652a045867161646385dc3237cb41f5f92f379379593d31528c73d473"
+  }
+}

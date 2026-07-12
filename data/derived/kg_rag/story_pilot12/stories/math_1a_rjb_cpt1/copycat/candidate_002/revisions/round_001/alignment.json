@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "老周没动，先抬头看了一眼墙上的通行牌——那是证据室入口条件核对的标志，牌子上还挂着昨天的日期。“小陈，今天的入口条件核对做了吗？门禁记录、温湿度日志、封条完好报告，这三样缺一样，后面的登记都不能开始。”",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "小陈这才明白，入口条件核对只是第一步，接下来还需要把两份相关记录对齐，才能推进第二道转化环节。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "老刘对照实物逐箱验收，在结果验收记录上签了字。三份记录——通行牌上的入口登记、分段记录册上的转化过程、验收记录上的最终结果——终于能够互相印证。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "老周把两份记录放在一起比较，发现它们共同约束着最后判断：原始登记里有一箱标注为“待核验”，而分类摘要却写成了“已归档”。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "小陈这才明白，入口条件核对只是第一步，接下来还需要把两份相关记录对齐，才能推进第二道转化环节。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 aligns with the entrance condition check, n2 with the second transformation step, and n3 with the final result verification. Edge e1 (relates_to) is supported by the comparison of two records constraining the final judgment, and edge e2 (enables) is supported by the story stating that the entrance check enables the transformation step. Directions are preserved."
+}

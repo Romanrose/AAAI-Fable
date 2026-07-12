@@ -1,0 +1,129 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农种植不同种类的果树",
+  "characters": [
+    "老农",
+    "果树"
+  ],
+  "objects": [
+    "不同品种的果树苗",
+    "土壤",
+    "阳光",
+    "水分",
+    "果实"
+  ],
+  "conflict": "老农想通过种植果树获得丰收，但不同果树对土壤、阳光、水分的需求不同，需要掌握合适的种植规律才能让每棵果树都结出好果实。",
+  "event_chain": [
+    "老农拥有不同品种的果树苗（如苹果树、梨树、桃树等），每种树苗都有其独特的生长特性。",
+    "老农需要根据土壤肥力（类比焦距）和树苗与水源的距离（类比物距）来决定种植位置。",
+    "果树生长过程中，树苗与水源的距离（物距）会影响根系吸水，进而影响果实的大小和甜度（像的虚实、大小）。",
+    "果实成熟后，果实与树根的距离（像距）反映了果实品质与种植条件的对应关系。",
+    "老农总结出一套种植规律（类比凸透镜成像规律），即不同果树在不同土壤和距离条件下会结出不同品质的果实。",
+    "苹果树（类比物镜）和梨树（类比目镜）都是果树，遵循同样的种植规律。",
+    "这套种植规律帮助老农成功种植出高品质的苹果园（类比显微镜）和梨园（类比望远镜）。"
+  ],
+  "turning_point": "老农通过观察和实验，发现土壤肥力和种植距离共同决定果实品质，从而总结出种植规律。",
+  "resolution_state": "老农应用种植规律，成功培育出丰收的果园，不同果树都结出了理想的果实。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "土壤肥力",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "树苗与水源的距离",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "果实与树根的距离",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农总结的种植规律",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "苹果树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "梨树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "苹果园",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "梨园",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "土壤肥力是种植规律的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "树苗与水源的距离是种植规律的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "果实与树根的距离是种植规律的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "苹果树是遵循种植规律的一种果树",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "梨树是遵循种植规律的一种果树",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "种植规律使苹果园得以成功建立",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "种植规律使梨园得以成功建立",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'凸透镜成像规律'等禁止术语。",
+    "注意'焦距'、'物距'、'像距'等概念已映射为土壤肥力、树苗与水源的距离、果实与树根的距离，避免直接使用原词。",
+    "故事中'苹果树'和'梨树'作为'物镜'和'目镜'的载体，需明确它们都是果树，遵循同一规律。",
+    "避免将课程桥接上下文（如实验探究）作为因果机制的一部分。",
+    "确保所有节点和边均已映射，且方向正确。"
+  ],
+  "mapping_context_sha256": "3fc12b67fa9dbffe59094dc8672238cad508f735131197f54d147b63165d2160",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4d4c3680fa8c97405f8db45630343277f6e940431df72e1010686373159038b3"
+  }
+}

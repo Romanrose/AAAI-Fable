@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "铸剑师用铁矿石锻造宝剑",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "古代工匠锻造宝剑的方法",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "淬火池冷却剑坯",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "宝剑",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "熔炼铁矿石成铁水",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "用铁水直接浇铸剑坯",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "反复锻打铁矿石成剑坯",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "铸剑师演示锻造宝剑的完整过程",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "铸剑师用铁矿石锻造宝剑是古代工匠锻造宝剑的一种具体方法",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "古代工匠锻造宝剑的方法需要淬火池冷却剑坯这一步骤",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "宝剑的获得需要古代工匠锻造宝剑的方法",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "熔炼铁矿石成铁水是古代工匠锻造宝剑方法的前提",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "用铁水直接浇铸剑坯是古代工匠锻造宝剑的一种方式",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "反复锻打铁矿石成剑坯是古代工匠锻造宝剑的一种方式",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "铸剑师演示锻造宝剑的完整过程验证了古代工匠锻造宝剑的方法",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to the story via the frozen mapping plan. The story does not contain exact substrings for the mapped relations, but the mapping plan provides explicit story carriers and relations that are consistent with the narrative. No evidence is inferred beyond what is stated in the mapping plan."
+}

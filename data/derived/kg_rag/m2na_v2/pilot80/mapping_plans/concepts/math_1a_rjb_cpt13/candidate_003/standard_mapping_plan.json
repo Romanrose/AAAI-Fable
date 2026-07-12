@@ -1,0 +1,59 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt13",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个空碗",
+  "characters": [
+    "一个空碗"
+  ],
+  "objects": [
+    "空碗",
+    "碗里的空间"
+  ],
+  "conflict": "人们认为空碗没有用处，但空碗本身代表着容纳的可能性。",
+  "event_chain": [
+    "有一个空碗，里面没有任何东西。",
+    "人们看到空碗，说它没有数量。",
+    "空碗被用来盛放食物，但人们仍然认为它本身没有数量。"
+  ],
+  "turning_point": "有人指出，空碗的“没有数量”正是它能盛放东西的原因。",
+  "resolution_state": "空碗的“没有数量”被理解为一种有用的状态，而不是缺陷。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "空碗",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "碗里没有东西",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空碗是碗里没有东西的载体",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现“数字0”或“含义”等禁止词汇。",
+    "避免将“空碗”直接类比为“数字0”，而是通过“没有数量”的状态来映射。",
+    "确保“空碗”作为实体，“碗里没有东西”作为状态，且关系方向正确。"
+  ],
+  "mapping_context_sha256": "4eac782ac1548f0012a15694a9cb043b6c83fc2b4c4ca1f237798d02310e1a41",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "db395713f2a5e79639d5c79d4ca160edc968c438baeea6d14e090f3089e7c540"
+  }
+}

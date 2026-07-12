@@ -1,0 +1,128 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代工匠制作铜镜的技艺",
+  "characters": [
+    "老铜匠",
+    "学徒"
+  ],
+  "objects": [
+    "铜镜模具",
+    "铜镜",
+    "磨镜石",
+    "铜镜成品"
+  ],
+  "conflict": "学徒无法掌握铜镜打磨的精确角度，导致镜面成像模糊不清。",
+  "event_chain": [
+    "老铜匠拥有磨镜石的特定曲率（焦距），这是打磨铜镜的基础条件。",
+    "学徒将铜镜毛坯放置在磨镜石上的不同距离（物距），尝试打磨。",
+    "铜镜反射成像的位置（像距）取决于打磨的曲率和距离。",
+    "老铜匠传授的打磨规律（凸透镜成像规律）决定了成像的清晰度。",
+    "打磨铜镜的模具（物镜）是遵循该规律制作的工具。",
+    "观察成像的辅助镜（目镜）也是遵循该规律制作的工具。",
+    "遵循规律打磨出的铜镜（显微镜）能放大细微图案。",
+    "遵循规律打磨出的铜镜（望远镜）能看清远处景物。"
+  ],
+  "turning_point": "学徒领悟到必须严格遵循老铜匠传授的曲率与距离的对应关系，才能打磨出清晰的铜镜。",
+  "resolution_state": "学徒掌握了打磨规律，成功制作出清晰成像的铜镜，并能应用于放大和望远。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "磨镜石的特定曲率",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "铜镜毛坯与磨镜石的距离",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "铜镜反射成像的位置",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老铜匠传授的打磨规律",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "打磨铜镜的模具",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "观察成像的辅助镜",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "能放大细微图案的铜镜",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "能看清远处景物的铜镜",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "磨镜石的特定曲率是打磨规律的基础条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "铜镜毛坯与磨镜石的距离是打磨规律的基础条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "铜镜反射成像的位置是打磨规律的基础条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "打磨铜镜的模具是打磨规律的一种应用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "观察成像的辅助镜是打磨规律的一种应用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "打磨规律使得能放大细微图案的铜镜成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "打磨规律使得能看清远处景物的铜镜成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'凸透镜成像规律'等禁止术语。",
+    "所有机制节点和边均已映射，方向保持一致。",
+    "未使用课程桥接上下文作为因果机制。",
+    "源域为单一连贯的古代铜镜制作技艺，未使用无关隐喻。"
+  ],
+  "mapping_context_sha256": "3fc12b67fa9dbffe59094dc8672238cad508f735131197f54d147b63165d2160",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "58810a38392a38bc0004ae4cd5eb7bd709f1777b90f6ef790d797bf4e3a3dfaa"
+  }
+}

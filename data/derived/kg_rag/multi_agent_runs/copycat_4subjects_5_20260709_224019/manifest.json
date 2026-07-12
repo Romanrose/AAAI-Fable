@@ -1,0 +1,19 @@
+{
+  "pipeline": "kg_rag.multi_agent",
+  "language": "zh-CN",
+  "strategy": "copycat",
+  "concept_cards_path": "data\\derived\\kg_rag\\concept_runs\\20260707_220601_local_80_rules\\concept_cards.jsonl",
+  "normalized_graph_path": "data\\derived\\kg_rag\\k12_kgraph_normalized.json",
+  "subjects": "biology,chemistry,math,physics",
+  "priority": null,
+  "limit_per_subject": 5,
+  "limit": null,
+  "num_plans": 3,
+  "revision_rounds": 0,
+  "six_dim_mode": "rules",
+  "max_edges": 16,
+  "copycat_steps": 30,
+  "copycat_initial_candidates": 2,
+  "copycat_temperature_threshold": 35.0,
+  "selected_count": 20
+}

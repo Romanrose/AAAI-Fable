@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "评判瓜的标准不一样，一个看个头，一个听声音",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第一位买家来买瓜，他根据瓜的个头大小判断瓜好不好",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "标准不同，结论自然不同",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "第一位买家来买瓜，他根据瓜的个头大小判断瓜好不好",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "评判瓜的标准不一样，一个看个头，一个听声音，标准不同，结论自然不同",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "标准不同，结论自然不同",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact story substrings. Node n1 maps to the explicit mention of different judging standards; n2 maps to the first buyer's process of judging by size; n3 maps to the conclusion that different standards yield different results. Edges e1, e2, and e3 are supported by contiguous story evidence preserving the intended direction."
+}

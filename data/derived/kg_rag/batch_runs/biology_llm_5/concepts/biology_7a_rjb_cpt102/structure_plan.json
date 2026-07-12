@@ -1,0 +1,71 @@
+{
+  "found": true,
+  "query": "biology_7a_rjb_cpt102",
+  "seed": {
+    "id": "biology_7a_rjb_cpt102",
+    "label": "Concept",
+    "name": "种子萌发的环境条件",
+    "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+    "importance": "掌握",
+    "aliases": [],
+    "examples": [
+      "温度过低（如放入冰箱）不利于萌发",
+      "过于潮湿易使种子霉烂",
+      "松土可使土壤中有充足空气"
+    ],
+    "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+  },
+  "source_domain": "garden workshop",
+  "entities": [
+    "a careful caretaker",
+    "a plot that depends on the right conditions",
+    "tools and routines that reveal whether growth is real"
+  ],
+  "event_chain": [
+    "The caretaker prepares the conditions that must already be in place.",
+    "The plot uses those conditions to produce visible growth.",
+    "Nearby processes either support or compete with that growth.",
+    "Observation and trials reveal whether the growth is genuine and sustained."
+  ],
+  "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+  "turning_point": "A concrete test or observation reveals which condition actually controls the outcome.",
+  "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+  "alignment_plan": [
+    {
+      "concept_role": "target concept",
+      "concept_items": [
+        "种子萌发的环境条件"
+      ],
+      "story_role": "central productive process"
+    },
+    {
+      "concept_role": "prerequisites",
+      "concept_items": [
+        "种子萌发"
+      ],
+      "story_role": "conditions or resources that must be prepared first"
+    },
+    {
+      "concept_role": "related concepts",
+      "concept_items": [],
+      "story_role": "neighboring processes that contextualize or contrast the main process"
+    },
+    {
+      "concept_role": "outcomes",
+      "concept_items": [],
+      "story_role": "visible consequences produced by the core process"
+    },
+    {
+      "concept_role": "experiments",
+      "concept_items": [
+        "探究种子萌发的环境条件（四瓶对照实验）"
+      ],
+      "story_role": "tests that reveal whether the process truly happened"
+    },
+    {
+      "concept_role": "exercises",
+      "concept_items": [],
+      "story_role": "follow-up checks that reinforce the lesson"
+    }
+  ]
+}

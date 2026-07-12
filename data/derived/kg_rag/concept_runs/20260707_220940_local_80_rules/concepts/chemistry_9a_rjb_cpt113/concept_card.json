@@ -1,0 +1,64 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt113",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "催化剂的工业应用",
+  "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+  "aliases": [],
+  "examples": [
+    "生产化肥、农药、多种化工原料都要使用催化剂",
+    "石油炼制过程中用高效催化剂生产汽油、煤油等",
+    "汽车尾气处理中用催化剂促进有害气体的转化",
+    "酿造工业和制药工业中用酶作催化剂"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt111",
+        "label": "Concept",
+        "name": "催化作用",
+        "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+  ],
+  "must_preserve_zh": [
+    "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "催化剂的工业应用"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

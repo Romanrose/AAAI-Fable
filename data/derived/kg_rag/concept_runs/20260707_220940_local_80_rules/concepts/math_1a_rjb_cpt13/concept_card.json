@@ -1,0 +1,52 @@
+{
+  "concept_id": "math_1a_rjb_cpt13",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "数字0的含义",
+  "definition": "表示没有数量。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch3",
+        "label": "Chapter",
+        "name": "5以内数的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "表示没有数量。"
+  ],
+  "must_preserve_zh": [
+    "表示没有数量。",
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "数字0的含义"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "low",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

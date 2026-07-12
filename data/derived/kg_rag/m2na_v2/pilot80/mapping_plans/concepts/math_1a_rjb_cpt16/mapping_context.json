@@ -1,0 +1,205 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt16",
+    "subject": "math",
+    "canonical_name": "圆柱",
+    "aliases": [
+      "圆柱体"
+    ],
+    "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "圆柱",
+      "圆柱体"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "圆柱",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt16:definition",
+          "kg-node:math_1a_rjb_cpt16:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "按形状分类",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt18:definition",
+          "kg-node:math_1a_rjb_cpt18:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "旋转体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_bx2_rjb_cpt59:definition",
+          "kg-node:math_bx2_rjb_cpt59:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "圆锥",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_6b_rjb_cpt15:definition",
+          "kg-node:math_6b_rjb_cpt15:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12135"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12136"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19307"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "圆柱",
+      "圆柱体"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt16",
+      "name": "圆柱",
+      "label": "Concept",
+      "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt18",
+        "name": "按形状分类"
+      },
+      {
+        "id": "math_bx2_rjb_cpt59",
+        "name": "旋转体"
+      },
+      {
+        "id": "math_6b_rjb_cpt15",
+        "name": "圆锥"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:12135",
+        "source_id": "math_1a_rjb_cpt16",
+        "source_name": "圆柱",
+        "target_id": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "math_1a_rjb_cpt18",
+        "neighbor_name": "按形状分类",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12136",
+        "source_id": "math_1a_rjb_cpt16",
+        "source_name": "圆柱",
+        "target_id": "math_bx2_rjb_cpt59",
+        "target_name": "旋转体",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "math_bx2_rjb_cpt59",
+        "neighbor_name": "旋转体",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19307",
+        "source_id": "math_1a_rjb_cpt16",
+        "source_name": "圆柱",
+        "target_id": "math_6b_rjb_cpt15",
+        "target_name": "圆锥",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "math_6b_rjb_cpt15",
+        "neighbor_name": "圆锥",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "圆柱",
+      "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:12135] 圆柱 --is_a--> 按形状分类",
+      "[normalized:edge:12136] 圆柱 --is_a--> 旋转体",
+      "[normalized:edge:19307] 圆柱 --relates_to--> 圆锥"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:12135",
+    "normalized:edge:12136",
+    "normalized:edge:19307"
+  ],
+  "provenance": {
+    "seed_sha256": "f15d4d404d3a93df1a027c9f58b719b22595c85f86c1a2e17e0a3332823e5137",
+    "retrieval_sha256": "a65aa83e3318b39aac0861e754279ed59678725ab026753a71088d4d2f49bf1f",
+    "mechanism_record_sha256": "cd25b861a5b7d0f3873c158d24f9be17f475f1ffa434fddb4cc4dba8530a7cd4"
+  }
+}

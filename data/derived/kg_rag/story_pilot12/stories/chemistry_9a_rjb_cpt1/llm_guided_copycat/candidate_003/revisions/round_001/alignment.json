@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "种子作为一粒物质",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "种子的萌发过程",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "种子吸收水分这一行为，使得萌发过程得以启动",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact contiguous substrings from the story. Node n1 (物质) is evidenced by '种子作为一粒物质', node n2 (物质的变化) by '种子的萌发过程', and edge e1 (enables) by '种子吸收水分这一行为，使得萌发过程得以启动', which confirms the enabling relation and direction."
+}

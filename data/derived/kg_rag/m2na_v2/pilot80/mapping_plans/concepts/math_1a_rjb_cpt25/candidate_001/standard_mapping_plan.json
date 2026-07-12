@@ -1,0 +1,74 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt25",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫种瓜的故事",
+  "characters": [
+    "农夫",
+    "瓜苗",
+    "瓜藤"
+  ],
+  "objects": [
+    "土地",
+    "水",
+    "肥料",
+    "瓜"
+  ],
+  "conflict": "农夫想要收获又大又甜的瓜，但瓜苗和瓜藤需要合适的条件才能结出好瓜。",
+  "event_chain": [
+    "农夫先准备好肥沃的土地（对应掌握数字6的认识）。",
+    "农夫在土地上播种瓜苗，并浇水施肥（对应掌握分与合）。",
+    "瓜苗长出瓜藤，瓜藤上结出一个个瓜（对应掌握6的加减法）。"
+  ],
+  "turning_point": "瓜藤开始结瓜，农夫意识到之前的准备（土地和照料）是结瓜的关键。",
+  "resolution_state": "农夫收获了又大又甜的瓜，因为他先准备好了土地并精心照料了瓜苗。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫准备好肥沃的土地",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫播种瓜苗并浇水施肥",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "瓜藤结出瓜",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫准备好土地后，瓜苗才能生长并结瓜",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫播种并照料瓜苗后，瓜藤才能结瓜",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'6的加减法'等禁止术语。",
+    "确保映射中不出现目标概念名称或别名。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文当作因果机制。"
+  ],
+  "mapping_context_sha256": "3e8812793dacbbe55d9fafa3add6f8526f0c81fe4b43f2423498fd45261250c7",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "dd318f4f3567a44e46bf2d3a558a026a6149bb999798f935de783296fd78a4c9"
+  }
+}

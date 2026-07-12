@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The mapping is strong because all nodes and edges are explicitly and correctly realized in the story. Node n2 ('口'字) is slightly weaker because its role as a special case of n1 (all Chinese characters) is implied rather than directly stated as 'is_a', but the story clearly positions it as a special structure. Edge e1 (n1->n3: all characters are classified) is the weakest because the story mentions classification but does not explicitly state that all characters are the object of classification; however, the alignment evidence is sufficient."
+  },
+  "revision_instructions": [
+    "No revision needed; the story meets all requirements and the mapping is fully preserved."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

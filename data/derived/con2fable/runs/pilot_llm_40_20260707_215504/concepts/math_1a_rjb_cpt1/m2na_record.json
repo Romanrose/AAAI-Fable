@@ -1,0 +1,100 @@
+{
+  "id": "math_1a_rjb_cpt1",
+  "method": "con2fable",
+  "concept": {
+    "name": "数物体（数一数）",
+    "aliases": [],
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：一一对应比较法",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：比较数量（多、少、一样多）",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16335"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19305"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "秋天的果园里，红彤彤的苹果挂满了枝头，像一个个小灯笼。果农老张带着孙子小明来到树下，准备采摘苹果。\n\n老张指着第一棵苹果树说：“小明，你看看这棵树上有多少苹果？”小明仰起头，伸出小手指着苹果，一个一个地点过去：“一个、两个、三个……”他数得很认真，最后高兴地说：“爷爷，这棵树上有十五个苹果！”\n\n老张点点头，又带小明走到第二棵树下：“你再数数这棵。”小明又用手指着苹果，一个一个地数起来：“一个、两个、三个……”数完后，他说：“这棵树上有十三个苹果。”\n\n老张笑着问：“那你说说，这两棵树，哪棵的苹果更多呢？”小明歪着头想了想，他先把第一棵树的苹果在脑子里排成一排，又把第二棵树的苹果也排成一排，然后让它们一个对一个地比。他发现第一棵树的苹果比第二棵多出两个。\n\n小明眼睛一亮，大声说：“爷爷，第一棵树的苹果多！我们先摘那棵吧！”老张摸了摸小明的头，笑着说：“好，就听你的。”\n\n小明高兴地跑向第一棵树，心里美滋滋的。他明白了，只要仔细地一个一个看，就能知道有多少，还能比出谁多谁少。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "小明用手指着苹果，一个一个地点过去：“一个、两个、三个……”他数得很认真，最后高兴地说：“爷爷，这棵树上有十五个苹果！”",
+        "evidence": "一个一个地点过去",
+        "narrative_anchor": "一个一个地点过去"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "他先把第一棵树的苹果在脑子里排成一排，又把第二棵树的苹果也排成一排，然后让它们一个对一个地比。",
+        "evidence": "让它们一个对一个地比",
+        "narrative_anchor": "一个对一个地比"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "他发现第一棵树的苹果比第二棵多出两个。",
+        "evidence": "第一棵树的苹果比第二棵多出两个",
+        "narrative_anchor": "比第二棵多出两个"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "小明先数出第一棵树的苹果数量，然后使用一一对应比较法比较两棵树的苹果数量",
+        "evidence": "他先把第一棵树的苹果在脑子里排成一排，又把第二棵树的苹果也排成一排，然后让它们一个对一个地比。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "让它们一个对一个地比"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "通过一一对应比较，小明得出第一棵树苹果更多的结论",
+        "evidence": "他发现第一棵树的苹果比第二棵多出两个。",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "第一棵树的苹果比第二棵多出两个"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "math",
+    "story_language": "zh-CN",
+    "concept_type": "relation",
+    "generation_priority": "gold"
+  }
+}

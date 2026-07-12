@@ -1,0 +1,120 @@
+{
+  "query": "biology_7a_rjb_cpt10",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt10",
+    "label": "Concept",
+    "name": "遗传和变异",
+    "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+    "aliases": [],
+    "examples": [
+      "狗的一家体现亲子相似与差异",
+      "同一株碧桃上的花存在差异"
+    ],
+    "retrieval_text": "遗传和变异\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt2",
+        "label": "Concept",
+        "name": "生物的共同特征",
+        "definition": "用于区分生物与非生物的一组典型生命表现，包括：生活需要营养、能进行呼吸、能排出废物、能对外界刺激作出反应、能生长和繁殖、具有遗传和变异（以及除病毒外由细胞构成等）。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe3",
+        "label": "Exercise",
+        "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(3) “一猪生九仔, 连母十个样”, 这句话描述了生物的遗传现象。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一章 认识生物",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:10771] 遗传和变异 --is_a--> 生物的共同特征"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '遗传和变异', 'definition': '子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。', 'formula': '', 'importance': '掌握'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:10771] 遗传和变异 --is_a--> 生物的共同特征'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt10",
+      "label": "Concept",
+      "name": "遗传和变异",
+      "properties": {
+        "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+        "importance": "掌握",
+        "examples": [
+          "狗的一家体现亲子相似与差异",
+          "同一株碧桃上的花存在差异"
+        ],
+        "retrieval_text": "遗传和变异\nConcept\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\n掌握\n狗的一家体现亲子相似与差异\n同一株碧桃上的花存在差异"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:10771",
+        "source": "biology_7a_rjb_cpt10",
+        "source_name": "遗传和变异",
+        "target": "biology_7a_rjb_cpt2",
+        "target_name": "生物的共同特征",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "遗传和变异",
+        "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:10771] 遗传和变异 --is_a--> 生物的共同特征"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 244,
+      "summary_chars": 254,
+      "path_chars": 0,
+      "retrieval_context_chars": 498
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 244,
+    "summary_chars": 254,
+    "path_chars": 0,
+    "retrieval_context_chars": 498
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt11",
+    "label": "Concept",
+    "name": "细胞",
+    "properties": {
+      "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+      "importance": "了解",
+      "examples": [
+        "叶的表皮细胞",
+        "心肌细胞",
+        "受精卵（单细胞）"
+      ],
+      "aliases": [
+        "cell"
+      ],
+      "retrieval_text": "细胞\nConcept\n生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。\n了解\ncell\n叶的表皮细胞\n心肌细胞\n受精卵（单细胞）"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "properties": {
+        "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+        "importance": "了解",
+        "examples": [
+          "流感病毒",
+          "艾滋病病毒",
+          "烟草花叶病毒",
+          "噬菌体"
+        ],
+        "aliases": [
+          "virus"
+        ],
+        "unit": "纳米（用于表示大小）",
+        "retrieval_text": "病毒\nConcept\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。\n了解\n纳米（用于表示大小）\nvirus\n流感病毒\n艾滋病病毒\n烟草花叶病毒\n噬菌体"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt68",
+      "label": "Concept",
+      "name": "组织",
+      "properties": {
+        "definition": "由形态相似、结构和功能相同的细胞联合在一起形成的细胞群。",
+        "importance": "掌握",
+        "aliases": [
+          "tissue"
+        ],
+        "examples": [
+          "叶的保护组织、输导组织、营养组织",
+          "心脏的肌肉组织、神经组织、结缔组织"
+        ],
+        "retrieval_text": "组织\nConcept\n由形态相似、结构和功能相同的细胞联合在一起形成的细胞群。\n掌握\ntissue\n叶的保护组织、输导组织、营养组织\n心脏的肌肉组织、神经组织、结缔组织"
+      }
+    },
+    {
+      "source_node_id": "biology_bx1_rjb_cpt1",
+      "label": "Concept",
+      "name": "细胞是生命活动的基本单位",
+      "properties": {
+        "definition": "生物的生长、发育、生殖以及各种生理现象等生命活动的基础都需要到细胞层面去解释，生命活动离不开细胞。",
+        "importance": "重要",
+        "examples": [
+          "动植物以细胞代谢为基础的各种生理活动",
+          "以细胞增殖、分化为基础的生长发育",
+          "以细胞内基因传递和变化为基础的遗传与变异"
+        ],
+        "retrieval_text": "细胞是生命活动的基本单位\nConcept\n生物的生长、发育、生殖以及各种生理现象等生命活动的基础都需要到细胞层面去解释，生命活动离不开细胞。\n重要\n动植物以细胞代谢为基础的各种生理活动\n以细胞增殖、分化为基础的生长发育\n以细胞内基因传递和变化为基础的遗传与变异"
+      }
+    },
+    {
+      "source_node_id": "biology_bx1_rjb_cpt2",
+      "label": "Concept",
+      "name": "细胞是基本的生命系统",
+      "properties": {
+        "definition": "细胞是由多种组分相互作用、相互配合构成的有生命的系统，并且在各层次生命系统中处于最基本层次；更高层次生命系统的形成、维持和运转以细胞为基础。",
+        "importance": "重要",
+        "examples": [
+          "单细胞生物可独立完成生命活动",
+          "多细胞生物依赖分化细胞密切合作完成复杂生命活动"
+        ],
+        "retrieval_text": "细胞是基本的生命系统\nConcept\n细胞是由多种组分相互作用、相互配合构成的有生命的系统，并且在各层次生命系统中处于最基本层次；更高层次生命系统的形成、维持和运转以细胞为基础。\n重要\n单细胞生物可独立完成生命活动\n多细胞生物依赖分化细胞密切合作完成复杂生命活动"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14135",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_7a_rjb_cpt68",
+      "target_name": "组织",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:14136",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_bx1_rjb_cpt1",
+      "target_name": "细胞是生命活动的基本单位",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:14137",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_bx1_rjb_cpt2",
+      "target_name": "细胞是基本的生命系统",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17836",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_7a_rjb_cpt12",
+      "target_name": "病毒",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "细胞",
+      "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:14135] 细胞 --prerequisites_for--> 组织",
+      "[normalized:edge:14136] 细胞 --prerequisites_for--> 细胞是生命活动的基本单位",
+      "[normalized:edge:14137] 细胞 --prerequisites_for--> 细胞是基本的生命系统"
+    ],
+    "process_summary": [
+      "[normalized:edge:17836] 细胞 --relates_to--> 病毒"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 4,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 4,
+    "expanded_to_two_hop": false
+  }
+}

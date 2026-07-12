@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了水分以水蒸气状态从活的植物体表面（主要是叶片）散失到大气中的过程，并通过套袋实验和叶片结构观察来体现，完全符合概念定义。",
+    "implicitness": "故事中未出现'蒸腾作用'或'transpiration'等禁止术语，而是用'水汽从叶片跑出去'、'小门'等隐喻自然隐含概念，符合隐含性要求。",
+    "mapping_clarity": "故事中阿明的观察和实验清晰地映射了蒸腾作用的核心机制：水分从叶片散失、气孔开合调节、套袋实验证明水汽来源，映射关系明确且易于理解。",
+    "readability": "语言流畅自然，情节连贯，用词简单易懂，适合目标读者，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过观察、实验和推理逐步揭示蒸腾作用的过程、意义（降温、运输）及影响因素（土壤水分、光照），教学价值高，能有效促进理解。",
+    "novelty": "故事采用了常见的套袋实验和叶片观察情节，虽表述清晰但缺乏新颖的叙事角度或独特创意。"
+  },
+  "revision_suggestions": [
+    "可尝试用更独特的场景或角色（如植物体内的水滴旅行）来增强新颖性。",
+    "可加入更多关于气孔开合机制（如保卫细胞吸水膨胀）的细节以丰富教学。"
+  ]
+}

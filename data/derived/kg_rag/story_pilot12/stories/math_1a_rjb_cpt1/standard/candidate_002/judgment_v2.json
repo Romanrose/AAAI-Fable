@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (comparison) is only implicitly stated as '心里有了数，但他还想知道到底哪棵树结得更多', lacking explicit comparative judgment (多/少/一样多). Edge e1 (n1→n2) is similarly implicit, relying on inference rather than explicit relation. In contrast, n1 and n3 are fully and explicitly realized with detailed counting and one-to-one pairing actions, making them stronger. This mapping is better than a version that merely mentions counting without showing the process, as it embeds the mechanism in concrete farming actions."
+  },
+  "revision_instructions": [
+    "Strengthen node n2 by adding an explicit comparative statement, e.g., '农夫比较后知道东边的果实比西边的多'.",
+    "Strengthen edge e1 by explicitly stating that counting leads to comparison, e.g., '数完后，农夫开始比较两棵树的果实数量'."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

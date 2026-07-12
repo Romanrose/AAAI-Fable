@@ -1,0 +1,133 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄里的磨坊与磨面过程",
+  "characters": [
+    "磨坊主",
+    "村里的农夫们"
+  ],
+  "objects": [
+    "磨坊",
+    "石磨",
+    "麦子",
+    "面粉",
+    "磨坊主的手艺"
+  ],
+  "conflict": "农夫们希望更快地将麦子磨成面粉，但普通的石磨速度慢，且磨坊主需要频繁清理和调整石磨，导致效率低下。",
+  "event_chain": [
+    "农夫们将麦子送到磨坊，磨坊主开始用石磨磨面。",
+    "磨坊主发现石磨的转速和研磨效果受麦子湿度、石磨磨损等因素影响，磨面速度时快时慢。",
+    "磨坊主尝试调整石磨的间隙和转速，但每次调整后石磨本身会逐渐磨损，需要重新调整。",
+    "磨坊主引入一种特殊的磨石（称为“助磨石”），将其放置在石磨中。",
+    "在助磨石的作用下，麦子被研磨得更快更均匀，磨面速度显著提升。",
+    "助磨石在多次使用后，其形状和重量几乎没有变化，仍然能有效助磨。",
+    "磨坊主发现助磨石只对麦子有效，对豆子等其他谷物效果不佳。",
+    "农夫们通过对比有无助磨石的磨面过程，确认了助磨石的作用。"
+  ],
+  "turning_point": "磨坊主引入助磨石后，磨面速度大幅提升，且助磨石本身没有损耗。",
+  "resolution_state": "磨坊主继续使用助磨石，农夫们能更快得到面粉，磨坊效率提高。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "助磨石",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "助磨石的作用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "助磨石在磨麦子中的具体表现",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "一种特殊的天然磨石（生物助磨石）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "磨面速度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "影响磨面速度的因素（麦子湿度、石磨磨损等）",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "助磨石对磨面速度的影响（加快速度，不改变面粉质量）",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "通过对比有无助磨石的磨面过程来确认助磨石的作用",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "助磨石（n1）与助磨石的作用（n2）之间的关系",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "助磨石（n1）与磨面速度（n5）之间的关系",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "助磨石（n1）是影响磨面速度的因素（n6）的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "助磨石在磨麦子中的具体表现（n3）是助磨石（n1）的一种实例",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "助磨石对磨面速度的影响（n7）是助磨石（n1）的一种规则",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "生物助磨石（n4）与助磨石（n1）相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "助磨石（n1）使得助磨石在磨麦子中的具体表现（n3）成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "通过对比有无助磨石的磨面过程（n8）使得助磨石（n1）的作用得以确认",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中“助磨石”可能被误解为与“催化剂”类似，但未使用任何禁止术语。",
+    "确保“助磨石”在故事中不改变自身性质，且只对特定谷物有效，以对应催化剂的选择性。",
+    "注意“磨面速度”对应“化学反应速率”，避免直接类比化学术语。"
+  ],
+  "mapping_context_sha256": "7e619c8cf80380535c48d5420dbf94eb74ba988bbf0b4ee16bdc7e6cf863110c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "c9a11b130d7f3e15328dda4f9ee8cedfbf6508f56965abb57a99de0b90b41fb9"
+  }
+}

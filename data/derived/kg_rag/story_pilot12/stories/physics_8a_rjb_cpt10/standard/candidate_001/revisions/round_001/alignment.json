@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "岸边的柳树",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "我们的渔船真稳，好像一动也没有动",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "原来不是船动不动的问题，是看它的时候，拿什么来比。拿礁石比，船好像没动；拿柳树比，船一直在动",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "我们的渔船真稳，好像一动也没有动",
+      "direction_preserved": true,
+      "confidence": 0.7
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "你看看那棵柳树，离我们有多远",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "原来不是船动不动的问题，是看它的时候，拿什么来比。拿礁石比，船好像没动；拿柳树比，船一直在动",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story. Node n1 maps to '岸边的柳树' as the reference object. Node n2 maps to the statement about the boat appearing motionless, indicating mechanical motion relative to a reference. Node n3 maps to the realization that motion depends on the reference chosen. Edge e1 relates the boat's motion to the reference object (柳树). Edge e2 shows the reference enabling the understanding of relativity. Edge e3 shows the relativity concept reinforcing the importance of the reference. Direction is preserved in all edges."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "concept_id": "biology_7a_rjb_cpt1",
+  "strategy": "copycat",
+  "candidate_id": "candidate_003",
+  "node_coverage": 1.0,
+  "edge_coverage": 1.0,
+  "direction_accuracy": 1.0,
+  "hard_leakage": false,
+  "judge_status": "accept",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12\\stories\\biology_7a_rjb_cpt1\\copycat\\candidate_003",
+  "length_valid": true,
+  "judge_raw_status": "accept",
+  "quality_gate_reasons": []
+}

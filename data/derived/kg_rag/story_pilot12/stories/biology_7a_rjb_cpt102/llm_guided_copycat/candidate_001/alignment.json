@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "这块田的条件",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "种子发芽",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "阳光充足",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "墒情正好的样子",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "松软透气",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "翻地、浇水、观察墒情",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "这块田的条件终于让种子活过来了",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "阳光充足",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "墒情正好的样子",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "松软透气",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "翻地、浇水、观察墒情",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact substrings from the story. The story explicitly describes the farmer checking soil moisture (墒情), sunlight, and soil looseness, then performing actions (翻地、浇水、观察墒情) that verify the conditions, leading to seed germination. Edge directions are preserved as per the mapping plan."
+}

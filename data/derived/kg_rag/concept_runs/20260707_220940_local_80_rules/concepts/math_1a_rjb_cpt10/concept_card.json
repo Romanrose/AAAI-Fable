@@ -1,0 +1,66 @@
+{
+  "concept_id": "math_1a_rjb_cpt10",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "小于号含义",
+  "definition": "表示前面的数量比后面的数量少。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt8",
+        "label": "Concept",
+        "name": "等号含义",
+        "definition": "表示两边数量相同。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt8",
+        "label": "Concept",
+        "name": "等号含义",
+        "definition": "表示两边数量相同。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch3",
+        "label": "Chapter",
+        "name": "5以内数的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "表示前面的数量比后面的数量少。"
+  ],
+  "must_preserve_zh": [
+    "表示前面的数量比后面的数量少。",
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "小于号含义"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

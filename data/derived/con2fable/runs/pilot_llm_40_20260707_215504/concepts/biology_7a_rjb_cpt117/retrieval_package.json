@@ -1,0 +1,106 @@
+{
+  "seed": {
+    "id": "biology_7a_rjb_cpt117",
+    "resolved_node_id": "biology_7a_rjb_cpt117",
+    "name": "受精",
+    "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+    "aliases": [
+      "fertilization"
+    ]
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_14139",
+      "source_id": "biology_7a_rjb_cpt114",
+      "source_name": "传粉",
+      "target_id": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14964",
+      "source_id": "biology_xzxbx3_rjb_cpt77",
+      "source_name": "卵子成熟到MⅡ期",
+      "target_id": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14142",
+      "source_id": "biology_7a_rjb_cpt117",
+      "source_name": "受精",
+      "target_id": "biology_xzxbx3_rjb_cpt75",
+      "target_name": "合子（受精卵）",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14140",
+      "source_id": "biology_7a_rjb_cpt117",
+      "source_name": "受精",
+      "target_id": "biology_7a_rjb_cpt118",
+      "target_name": "果实和种子的形成",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14141",
+      "source_id": "biology_7a_rjb_cpt117",
+      "source_name": "受精",
+      "target_id": "biology_xzxbx3_rjb_cpt71",
+      "target_name": "胚胎工程",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_14962",
+      "source_id": "biology_xzxbx3_rjb_cpt76",
+      "source_name": "精子获能",
+      "target_id": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+    "condition_summary": [
+      "传粉",
+      "卵子成熟到MⅡ期",
+      "精子获能"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "传粉",
+        "卵子成熟到MⅡ期",
+        "精子获能"
+      ],
+      "related_concepts": [
+        "合子（受精卵）",
+        "果实和种子的形成",
+        "胚胎工程"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 6,
+    "selected_edge_count": 6,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

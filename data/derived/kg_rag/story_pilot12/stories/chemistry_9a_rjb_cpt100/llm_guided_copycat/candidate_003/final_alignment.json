@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "这个过程无声无息，既没有热浪，也没有光亮，只有时间在剑身上刻下痕迹",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "这种铜与氧气缓慢结合生成铜锈的过程，正是一种氧化反应",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "剑身与炉中充足的氧气骤然发生剧烈反应",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "铜剑就这样在潮湿的空气中，与无处不在的氧气悄悄结合",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "氧气",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "当温度达到临界点时，剑身与炉中充足的氧气骤然发生剧烈反应",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "大量热浪扑面而来，剑身发出耀眼的红光",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "这个过程无声无息，既没有热浪，也没有光亮",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "这种铜与氧气缓慢结合生成铜锈的过程，正是一种氧化反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "剑身与炉中充足的氧气骤然发生剧烈反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "铜剑就这样在潮湿的空气中，与无处不在的氧气悄悄结合",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "这种铜与氧气缓慢结合生成铜锈的过程，正是一种氧化反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "剑身与炉中充足的氧气骤然发生剧烈反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "铜剑就这样在潮湿的空气中，与无处不在的氧气悄悄结合",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "当温度达到临界点时，剑身与炉中充足的氧气骤然发生剧烈反应",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "大量热浪扑面而来，剑身发出耀眼的红光",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "这个过程无声无息，既没有热浪，也没有光亮",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "同样是与氧气相遇的氧化反应，一个悄无声息地腐蚀，一个却轰轰烈烈地蜕变",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story, with direction preserved for all edges. The story provides clear evidence for each concept and relation."
+}

@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n2 (实像) to '致密的铸件' is consistent but the relation e2 (is_a) between 铸造过程 and 致密的铸件 is less explicit than the original '照相机成像 is_a 实像'. In the story, 铸造过程 is not explicitly stated as being a type of 致密的铸件; rather, it produces it. This weakens the is_a relation, making it the weakest edge. In contrast, n1 (凸透镜) mapped to 模具 is strong because the story explicitly states '模具是铸造成败的关键', directly mirroring the enabling role of the convex lens."
+  },
+  "revision_instructions": [
+    "Consider making the is_a relation between 铸造过程 and 致密的铸件 more explicit, e.g., by stating that the casting process itself is a form of producing a dense casting, or rephrase to avoid implying a strict is_a relation."
+  ],
+  "final_status": "accept"
+}

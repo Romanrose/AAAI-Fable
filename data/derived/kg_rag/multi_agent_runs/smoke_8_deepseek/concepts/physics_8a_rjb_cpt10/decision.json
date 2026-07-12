@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 以水渠调度为背景，通过两位观察者从不同参照系（堤岸和水面）对同一水流运动状态得出相反结论，自然且不模板化地覆盖了参照系与相对运动的核心机制。故事未泄露任何目标概念术语，节点和边均被完整覆盖，证据对齐可信，且字数适中。candidate_002 和 candidate_003 同样优秀，但 candidate_001 在叙事流畅性和机制隐喻的贴合度上略胜一筹。",
+    "risk_notes": [
+      "故事中‘水渠A的水流是否在正常运动’可能暗示绝对运动概念，但整体未直接泄露目标术语。",
+      "边缘覆盖计数为0，但加权边缘覆盖率为1.0，表明机制边已通过叙事隐含体现。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

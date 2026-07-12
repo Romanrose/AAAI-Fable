@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过吸盘贴墙、水沸腾温度变化等情节，准确传达了大气对单位面积产生压力且压力可变的机制，并提及标准值，完全符合概念定义。",
+    "implicitness": "全文未出现任何禁止术语，通过‘看不见的东西’、‘秤砣’等隐喻暗示大气压强，核心概念完全隐含在叙事中。",
+    "mapping_clarity": "吸盘实验明确映射大气压力作用，水沸腾温度变化映射压力可变性，‘标准秤砣’映射标准大气压强，映射关系清晰且连贯。",
+    "readability": "语言简洁生动，情节自然流畅，对话和比喻贴近儿童认知，无冗余或晦涩表达，阅读体验良好。",
+    "pedagogical_value": "通过具体实验和日常现象逐步引导发现规律，结尾点明观察的重要性，能有效激发学习兴趣和科学思维。",
+    "novelty": "将大气压强比喻为‘看不见的秤砣’有一定新意，但整体叙事结构（祖孙对话、实验演示）较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可增加一个海拔变化的情节（如爬山时水沸腾温度变化），进一步强化压力可变性的理解。",
+    "结尾可更明确地暗示标准大气压的数值来源，但需注意避免术语泄露。"
+  ]
+}

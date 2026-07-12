@@ -1,0 +1,87 @@
+{
+  "concept_id": "biology_7a_rjb_cpt125",
+  "target_concept": "叶片的结构（表皮、叶肉、叶脉）",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 3,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 2
+  },
+  "weighted_overall": 4.4,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了叶片由表皮、叶肉和叶脉三部分组成，上下表皮细胞排列紧密，表皮上有气孔，完全符合概念定义。",
+    "implicitness": "故事通过小禾的观察和爷爷的讲解，直接说出了表皮、叶肉、叶脉和气孔等术语，隐含性较低，但未直接使用目标概念名称。",
+    "mapping_clarity": "每个结构（表皮、气孔、叶肉、叶脉）都有明确的故事对应事件和解释，映射清晰。",
+    "readability": "语言简洁生动，对话自然，情节连贯，适合目标读者。",
+    "pedagogical_value": "通过观察和显微镜使用，逐步揭示叶片结构，教学价值高，有助于学生理解。",
+    "novelty": "故事结构较为常见，缺乏新颖的类比或视角，新颖性一般。"
+  },
+  "revision_suggestions": [
+    "增加更多隐含性，例如用比喻或间接描述代替直接命名结构。",
+    "尝试使用不同的场景或角色（如植物探险家）来增加新颖性。",
+    "可加入更多互动或问题引导，提升探索感。"
+  ],
+  "rule_findings": {
+    "story_token_count": 493,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 3,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 2
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确描述了叶片由表皮、叶肉和叶脉三部分组成，上下表皮细胞排列紧密，表皮上有气孔，完全符合概念定义。",
+      "implicitness": "故事通过小禾的观察和爷爷的讲解，直接说出了表皮、叶肉、叶脉和气孔等术语，隐含性较低，但未直接使用目标概念名称。",
+      "mapping_clarity": "每个结构（表皮、气孔、叶肉、叶脉）都有明确的故事对应事件和解释，映射清晰。",
+      "readability": "语言简洁生动，对话自然，情节连贯，适合目标读者。",
+      "pedagogical_value": "通过观察和显微镜使用，逐步揭示叶片结构，教学价值高，有助于学生理解。",
+      "novelty": "故事结构较为常见，缺乏新颖的类比或视角，新颖性一般。"
+    },
+    "revision_suggestions": [
+      "增加更多隐含性，例如用比喻或间接描述代替直接命名结构。",
+      "尝试使用不同的场景或角色（如植物探险家）来增加新颖性。",
+      "可加入更多互动或问题引导，提升探索感。"
+    ]
+  },
+  "final_status": "revise",
+  "mode": "llm"
+}

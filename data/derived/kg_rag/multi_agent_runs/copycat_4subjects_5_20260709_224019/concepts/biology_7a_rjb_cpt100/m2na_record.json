@@ -1,0 +1,107 @@
+{
+  "id": "biology_7a_rjb_cpt100",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "苔藓植物是监测空气污染的指示植物",
+    "aliases": [],
+    "forbidden_terms": [
+      "苔藓植物是监测空气污染的指示植物"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "避免目的论解释。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把个体努力写成进化原因。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "港口检疫站的记录员老周翻开分段记录册，发现上一班交来的封存箱编号和通行牌数量对不上。调度员小陈说：“别急，先把入口条件核一遍。”老周便从头核对进港船只的检疫申报单，确认每一批货物的来源和申报项目都齐全。他一项一项打勾，直到所有条件都稳定下来，才在记录册上写下“入口条件已核”。\n\n小陈接过记录册，开始推进第二道转化环节。他对照封存箱上的标签，把货物按危险等级分入不同隔离区，又让验收员老赵在每一箱封条上签字。老赵问：“能不能先验收再补核入口？”小陈摇头：“入口条件没定，这步就站不住。”他坚持按顺序来，先让前一项记录成立，再启动后一项操作。\n\n验收员老赵等得不耐烦，有一次趁小陈不在，自己跳过入口核对，直接验收了一批封存箱，然后补写通行牌。结果第二天，港务局查对时发现记录册上货物类别和隔离区编号对不上，整批货物被退回重检。老赵这才明白：顺序不能颠倒，只有先稳定入口条件，再推动第二道转化，最后的验收记录才能接得上。\n\n三人重新按步骤走了一遍。老周先核对申报单，小陈再分类封存，老赵最后验收并发放通行牌。三段记录互相印证，封存箱和通行牌数量完全一致。老周合上记录册，说：“每一步都靠前一步撑住，颠倒就断了。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件已核",
+        "narrative_anchor": "入口条件已核",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "避免目的论解释",
+        "evidence": "顺序不能颠倒",
+        "narrative_anchor": "顺序不能颠倒",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "避免把个体努力写成进化原因",
+        "evidence": "颠倒就断了",
+        "narrative_anchor": "颠倒就断了",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第二道转化环节",
+        "evidence": "入口条件没定，这步就站不住",
+        "narrative_anchor": "入口条件没定，这步就站不住",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定第二道转化环节，再推动结果验收记录",
+        "evidence": "顺序不能颠倒",
+        "narrative_anchor": "顺序不能颠倒",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

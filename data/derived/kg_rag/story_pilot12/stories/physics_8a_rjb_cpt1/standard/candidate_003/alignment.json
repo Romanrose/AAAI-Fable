@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "桥的跨度",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "标准竹尺（一丈、五尺、三尺）",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "用竹尺测量跨度",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "测量口诀",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "标准竹尺（一丈、五尺、三尺）",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "用竹尺测量跨度",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "桥的跨度",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story. Node n1 maps to '桥的跨度', n2 to '标准竹尺（一丈、五尺、三尺）', n3 to '用竹尺测量跨度', n4 to '测量口诀'. Edge e1 (is_a) is supported by the story's mention of the standard bamboo ruler as a unit for measuring the span; e2 (verifies) is supported by the process of measuring the span with the ruler; e3 (enables) is supported by the span enabling the application of the measurement口诀. All directions are preserved."
+}

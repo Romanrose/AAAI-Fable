@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "标准压力值",
+      "evidence": "规范里写着一个标准压力值，是经过无数次试验定下来的",
+      "narrative_anchor": "规范里写着一个标准压力值，是经过无数次试验定下来的"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "沸点（隐含在基准值概念中）",
+      "evidence": "规范里还提到一个更基础的标准——在特定条件下，支撑面承受的压力会有一个基准值",
+      "narrative_anchor": "规范里还提到一个更基础的标准——在特定条件下，支撑面承受的压力会有一个基准值"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "标准压力值支撑后续的基准值概念",
+      "evidence": "小李继续查阅规范，发现规范里还提到一个更基础的标准",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "小李继续查阅规范，发现规范里还提到一个更基础的标准"
+    }
+  ]
+}

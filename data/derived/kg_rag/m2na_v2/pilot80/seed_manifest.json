@@ -1,0 +1,20 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "normalized_graph_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\k12_kgraph_normalized.json",
+  "normalized_graph_sha256": "81738d711df38851bd3d2dd90f6759da20cdca4af7850ea199e99e1f52db1a4a",
+  "output_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\m2na_v2\\pilot80\\seeds.jsonl",
+  "seed_count": 80,
+  "concept_ids_sha256": "7a642d1586a7e8a8a07ad46ea883bfa57949a6089d5cc72955ff61a9f7c7675e",
+  "subject_counts": {
+    "biology": 20,
+    "chemistry": 20,
+    "math": 20,
+    "physics": 20
+  },
+  "frozen_pilot_subject_counts": {
+    "biology": 20,
+    "chemistry": 20,
+    "math": 20,
+    "physics": 20
+  }
+}

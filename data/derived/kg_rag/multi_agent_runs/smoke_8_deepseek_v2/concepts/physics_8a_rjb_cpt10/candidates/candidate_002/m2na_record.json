@@ -1,0 +1,130 @@
+{
+  "id": "physics_8a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "参照物",
+    "aliases": [],
+    "forbidden_terms": [
+      "参照物"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "判断物体运动或静止时所选取的标准物体。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：运动与静止的相对性",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "与相关概念保持关系：机械运动 与 参照物",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "与相关概念保持关系：运动与静止的相对性 与 参照物",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:17189"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:19745"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:19747"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "小林和质检员小张站在高速滑道试验场旁，准备进行标准测试球的滑动测试。小林将球A和球B分别从滑道顶端释放，球A沿左侧滑道滑下，球B沿右侧滑道滑下。\n\n小林紧盯着起点，看到球A先冲过终点线，他兴奋地说：“球A更快！它先到了终点。”小张却摇头，指着滑道边的固定标杆：“你看，球B在相同时间内移动了更长的距离，应该是球B更快才对。”\n\n两人争论起来，小林拿出高速摄像机拍下的画面，画面显示球A触线时间更早；小张则亮出计时器记录，数据显示球B在相同时间间隔内走过的路程更长。公说公有理，婆说婆有理，数据因为各自的标准位置不同，根本无法直接比较。\n\n这时，总工程师走了过来，他听完两人的争执，微笑着说：“你们都没有错，只是判断快慢时选取的标准位置不同。小林是以滑道起点为基准，看谁先到达终点；小张是以固定标杆为基准，看谁在相同时间内移动得更远。标准位置不同，结论自然不同。”\n\n两人恍然大悟。总工程师建议：“现在，我们统一以滑道起点为基准，重新测试一次。”小林和小张同意了，他们重新释放测试球，这次两人的目光都锁定在起点和终点线上。球A再次先触线，两人终于得出一致的结论：在这个标准下，球A更快。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "总工程师提出的‘标准位置’概念，即判断物体运动快慢时所选取的基准点。",
+        "evidence": "标准位置",
+        "narrative_anchor": "标准位置",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "小林和小张对同一测试球运动快慢的不同判断，体现了运动快慢的相对性。",
+        "evidence": "标准位置不同，结论自然不同",
+        "narrative_anchor": "标准位置不同，结论自然不同",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "测试球在滑道上的滑动是机械运动，判断其运动快慢需要参照点。",
+        "evidence": "滑道",
+        "narrative_anchor": "滑道",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "两人对测试球运动快慢的不同结论，直接展示了运动与静止的相对性依赖于参照点的选择。",
+        "evidence": "标准位置不同，结论自然不同",
+        "narrative_anchor": "标准位置不同，结论自然不同",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "总工程师指出标准位置的概念，进而引出两人判断不同的原因。",
+        "evidence": "标准位置",
+        "narrative_anchor": "标准位置",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "两人判断不同体现了运动快慢的相对性，而测试球的滑动是机械运动，需要参照点。",
+        "evidence": "标准位置不同，结论自然不同",
+        "narrative_anchor": "标准位置不同，结论自然不同",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "两人判断不同直接展示了运动与静止的相对性依赖于参照点的选择，而机械运动需要参照点。",
+        "evidence": "标准位置不同，结论自然不同",
+        "narrative_anchor": "标准位置不同，结论自然不同",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

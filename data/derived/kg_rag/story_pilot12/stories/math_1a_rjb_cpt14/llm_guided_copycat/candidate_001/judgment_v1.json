@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly names '斗拱整体结构' and maps it to n1 (长方体) with clear evidence. Node n2 (标准栱) is well-mapped but the relation e1 (n1 is_a n3) is only implicitly shown through the classification process; the story does not explicitly state that the entire dougong structure is a member of the classification category, making it the weakest edge."
+  },
+  "revision_instructions": [
+    "Strengthen edge e1 by explicitly stating that the entire dougong structure is an instance of the classification category (e.g., '整个斗拱属于按外形分类的范畴')."
+  ],
+  "final_status": "accept"
+}

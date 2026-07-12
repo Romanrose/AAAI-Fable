@@ -1,0 +1,65 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄里的两座果园",
+  "characters": [
+    "老农",
+    "小徒弟"
+  ],
+  "objects": [
+    "果园A",
+    "果园B",
+    "同一棵果树",
+    "不同果树",
+    "花粉",
+    "蜜蜂"
+  ],
+  "conflict": "小徒弟想学习如何让果园丰收，但分不清哪些果树能自己结果，哪些需要别的树帮忙。",
+  "event_chain": [
+    "老农带小徒弟观察果园，指出有些果树的花粉能落在同一朵花上结果（果园A），有些需要不同树的花粉（果园B）。",
+    "小徒弟发现果园A的果树开花后，同一朵花的花粉落在自己的柱头上，结出了果实。",
+    "小徒弟意识到果园A的果树是自给自足的，而果园B的果树需要外来花粉。",
+    "老农总结：果园A的果树属于能自己完成传粉的一类，而果园B的则属于需要异花传粉的一类。"
+  ],
+  "turning_point": "小徒弟观察到果园A的同一朵花的花粉落在自己的柱头上并结果，明白了自给自足与依赖外界的区别。",
+  "resolution_state": "小徒弟学会了区分两类果树，并理解了自花传粉是传粉的一种特殊形式。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "花粉从花药散放而落到雌蕊柱头上的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "果园A的同一朵花的花粉落到同一朵花柱头上并结果",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "果园A的果树自花结果的方式属于传粉的一种",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'自花传粉'或'传粉'等术语，已用'同一朵花的花粉落到自己的柱头上'和'花粉落到柱头'替代。",
+    "注意保持'is_a'关系方向：自花传粉是传粉的一种，故事中果园A的果树自花结果是传粉的一种形式。",
+    "避免将课程桥接（如老农的教学对话）作为因果机制，仅作为故事背景。"
+  ],
+  "mapping_context_sha256": "13a63806af78935a153909811219ea80ee255b8481e660cabe7506be1215e182",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "43399f021d2d3ed45a74ed2f7c58748a69c34c8000616d7feb73257215710a4d"
+  }
+}

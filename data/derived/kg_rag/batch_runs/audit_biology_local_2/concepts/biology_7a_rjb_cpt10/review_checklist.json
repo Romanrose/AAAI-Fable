@@ -1,0 +1,12 @@
+{
+  "pass_fail": false,
+  "missing_roles": [
+    "prerequisites",
+    "related concepts",
+    "outcomes",
+    "experiments"
+  ],
+  "draft_length": 139,
+  "alignment_roles_present": [],
+  "seed_concept": "遗传和变异"
+}

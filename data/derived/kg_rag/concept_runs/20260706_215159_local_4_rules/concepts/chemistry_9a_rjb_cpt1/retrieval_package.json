@@ -1,0 +1,59 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt1",
+    "label": "Concept",
+    "name": "物质",
+    "properties": {
+      "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+      "importance": "重要",
+      "examples": [
+        "水",
+        "钢铁制品",
+        "煤",
+        "木材",
+        "胆矾",
+        "石灰石",
+        "氧气",
+        "二氧化碳"
+      ],
+      "retrieval_text": "物质\nConcept\n构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。\n重要\n水\n钢铁制品\n煤\n木材\n胆矾\n石灰石\n氧气\n二氧化碳"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14991",
+      "source": "chemistry_9a_rjb_cpt1",
+      "source_name": "物质",
+      "target": "chemistry_9a_rjb_cpt2",
+      "target_name": "物质的变化",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "物质",
+      "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:14991] 物质 --prerequisites_for--> 物质的变化"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 269,
+    "summary_chars": 276,
+    "path_chars": 0,
+    "retrieval_context_chars": 545
+  }
+}

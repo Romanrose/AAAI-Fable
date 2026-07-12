@@ -1,0 +1,61 @@
+{
+  "concept_id": "math_1a_rjb_cpt17",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "球体",
+  "definition": "表面上所有点到中心的距离都相等的立体图形。",
+  "aliases": [],
+  "examples": [
+    "篮球",
+    "乒乓球"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt18",
+        "label": "Concept",
+        "name": "按形状分类",
+        "definition": "根据物体或图形的外形特征进行分类的方法。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe11",
+        "label": "Exercise",
+        "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch4",
+        "label": "Chapter",
+        "name": "认识图形（一）",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "球体"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001以围棋对弈为背景，通过棋子数量比较自然引出“一一对应”和“数量相等”的前提确认，完整覆盖了机制节点（如“数量比较”“前提确认”）和机制边（如“数量相等→比较结果”），且无任何目标概念泄露。故事语言流畅、情节自然，无模板化痕迹，证据对齐精准，可信度高。",
+    "risk_notes": [
+      "故事中“数量相等”前提的讨论可能被部分读者直接联想到数学中的一一对应概念，但未泄露具体目标术语，风险可控。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

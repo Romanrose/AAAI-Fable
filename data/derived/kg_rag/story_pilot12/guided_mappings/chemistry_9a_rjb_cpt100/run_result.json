@@ -1,0 +1,151 @@
+{
+  "pipeline_version": "llm-guided-copycat-mvp/v1",
+  "created_at_utc": "2026-07-10T10:31:06.191423+00:00",
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "mapping_context_sha256": "f68e9a59697e04920ab6f74fe63c8a7e3e337eb7ed76456df9265dbf59467739",
+  "candidate_count": 3,
+  "selected_candidate_id": "candidate_001",
+  "selected_mapping": {
+    "candidate_id": "candidate_001",
+    "source_domain": "古代工匠制作铁器",
+    "domain_rationale": "古代工匠制作铁器需经历缓慢的氧化过程（生锈），与缓慢氧化的概念高度对应，且涉及不同阶段（氧化反应、燃烧等）的类比。",
+    "conflict": "铁器的缓慢生锈与燃烧的剧烈氧化在速度、现象上形成对比，映射缓慢氧化与燃烧的差异。",
+    "event_chain": [
+      "工匠将铁矿石投入炉中加热，铁与氧气发生缓慢氧化，表面逐渐形成铁锈。",
+      "铁锈继续在潮湿空气中缓慢氧化，铁器逐渐腐蚀。",
+      "工匠将铁器置于炭火中加热至通红，铁与氧气发生剧烈氧化，产生火焰和热量。",
+      "铁器在燃烧中形成氧化铁皮，脱落。"
+    ],
+    "turning_point": "从缓慢生锈到剧烈燃烧的转变，对应缓慢氧化与燃烧的对比。",
+    "resolution_state": "铁器最终完全氧化成铁锈或氧化铁皮，完成氧化过程。",
+    "node_mappings": [
+      {
+        "mechanism_node_id": "n1",
+        "story_carrier": "铁器在潮湿空气中缓慢生锈",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n2",
+        "story_carrier": "铁与氧气发生化学反应生成铁锈",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n3",
+        "story_carrier": "铁在炭火中剧烈燃烧",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n4",
+        "story_carrier": "铁器长期暴露在空气中逐渐腐蚀",
+        "mapping_type": "process"
+      },
+      {
+        "mechanism_node_id": "n5",
+        "story_carrier": "空气中的氧气",
+        "mapping_type": "entity"
+      },
+      {
+        "mechanism_node_id": "n6",
+        "story_carrier": "铁器、充足空气、达到燃点",
+        "mapping_type": "condition"
+      },
+      {
+        "mechanism_node_id": "n7",
+        "story_carrier": "火焰和大量热",
+        "mapping_type": "outcome"
+      },
+      {
+        "mechanism_node_id": "n8",
+        "story_carrier": "铁锈缓慢形成，无明显发热发光",
+        "mapping_type": "outcome"
+      }
+    ],
+    "edge_mappings": [
+      {
+        "mechanism_edge_id": "e1",
+        "story_relation": "铁器在潮湿空气中缓慢生锈是一种铁与氧气的化学反应",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e2",
+        "story_relation": "铁在炭火中剧烈燃烧是一种铁与氧气的化学反应",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e3",
+        "story_relation": "铁器长期暴露在空气中逐渐腐蚀是一种缓慢氧化",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e4",
+        "story_relation": "空气中的氧气是铁与氧气反应的一部分",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e5",
+        "story_relation": "空气中的氧气是铁剧烈燃烧的一部分",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e6",
+        "story_relation": "空气中的氧气是铁器长期腐蚀的一部分",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e7",
+        "story_relation": "铁器、充足空气、达到燃点是铁剧烈燃烧所必需的条件",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e8",
+        "story_relation": "铁剧烈燃烧产生火焰和大量热",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e9",
+        "story_relation": "铁器缓慢生锈产生铁锈，无明显发热发光",
+        "direction_preserved": true
+      },
+      {
+        "mechanism_edge_id": "e10",
+        "story_relation": "铁器缓慢生锈与铁剧烈燃烧相关",
+        "direction_preserved": true
+      }
+    ]
+  },
+  "selected_evaluation": {
+    "score": 0.92,
+    "temperature": 8.0,
+    "node_coverage": 1.0,
+    "edge_coverage": 1.0,
+    "carrier_diversity": 1.0,
+    "relation_diversity": 1.0,
+    "leakage_free": 0.0,
+    "narrative_complete": 1.0,
+    "template_issues": [],
+    "validation_errors": [],
+    "mechanism_node_count": 8
+  },
+  "scout_trace": {
+    "status": "success",
+    "prompt_version": "semantic-scout/v1",
+    "prompt_sha256": "145375b756172a6bbe5a36a7628e7387902abd48d1dd71a673229aa9fbbdaa1f",
+    "model": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    }
+  },
+  "refiner_trace": {
+    "status": "not_needed"
+  },
+  "model": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  }
+}

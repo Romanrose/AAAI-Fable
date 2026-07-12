@@ -1,0 +1,114 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt106",
+    "label": "Concept",
+    "name": "种子萌发的自身条件",
+    "properties": {
+      "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "importance": "掌握",
+      "retrieval_text": "种子萌发的自身条件\nConcept\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。\n掌握"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "properties": {
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "importance": "掌握",
+        "retrieval_text": "种子萌发\nConcept\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。\n掌握"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt107",
+      "label": "Concept",
+      "name": "种子休眠",
+      "properties": {
+        "definition": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。",
+        "importance": "了解",
+        "retrieval_text": "种子休眠\nConcept\n种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。\n了解"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14134",
+      "source": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10776",
+      "source": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:10777",
+      "source": "biology_7a_rjb_cpt107",
+      "source_name": "种子休眠",
+      "target": "biology_7a_rjb_cpt106",
+      "target_name": "种子萌发的自身条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "种子萌发的自身条件",
+      "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14134] 种子萌发的自身条件 --prerequisites_for--> 种子萌发"
+    ],
+    "process_summary": [
+      "[normalized:edge:10776] 种子萌发的自身条件 --is_a--> 种子萌发",
+      "[normalized:edge:10777] 种子休眠 --is_a--> 种子萌发的自身条件"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 3,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 3,
+    "expanded_to_two_hop": false
+  }
+}

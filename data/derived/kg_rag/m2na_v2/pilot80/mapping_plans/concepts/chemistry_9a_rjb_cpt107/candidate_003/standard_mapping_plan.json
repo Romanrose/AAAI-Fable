@@ -1,0 +1,112 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄的磨坊与河流",
+  "characters": [
+    "老磨坊主",
+    "年轻学徒"
+  ],
+  "objects": [
+    "磨坊",
+    "河流",
+    "水车",
+    "磨盘",
+    "催化剂（一块特殊的石头）"
+  ],
+  "conflict": "磨坊的水车在自然水流下转动缓慢，磨面效率低，无法满足村民需求。",
+  "event_chain": [
+    "磨坊的水车在自然水流下缓慢转动，磨面效率低（对应n1：过氧化氢缓慢分解）",
+    "磨坊主发现一块特殊的石头（对应n2：二氧化锰）",
+    "将石头放入水车水道（对应n3：加入催化剂）",
+    "水车转动显著加快，磨面效率大增（对应n4：分解速率加快）",
+    "磨坊主发现石头本身没有变化，可以重复使用（对应n6：催化剂性质不变）",
+    "磨坊主验证了石头的催化作用（对应e5：verifies）"
+  ],
+  "turning_point": "学徒将特殊石头放入水道，水车转速骤增。",
+  "resolution_state": "磨坊使用特殊石头后，磨面效率持续提高，石头保持原样，磨坊主和学徒都认可其催化作用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "水车在自然水流下缓慢转动",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "特殊石头",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "将石头放入水道",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "水车转动显著加快，磨面效率大增",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "水车转动加快属于水流加速的一种方式",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "石头本身没有变化，可以重复使用",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水车缓慢转动是水流加速的一种方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "放入石头使水车转动加快",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "特殊石头是放入水道的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "放入石头导致水车转动显著加快",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "磨坊主验证了石头的催化作用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "石头的无变化状态与石头本身相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'过氧化氢'、'分解'、'催化剂'等化学术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如实验步骤）作为因果机制。",
+    "保持故事连贯，不引入多个不相关的隐喻。"
+  ],
+  "mapping_context_sha256": "feb1dbda195fe2f45dc508c1fec77d113304fbec54f36a4174cad2a5fe739fc4",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "92bf7f81d37ad7af21440a10ee7af7abee0e9a505ab69f6be2603bfcf93cfa5d"
+  }
+}

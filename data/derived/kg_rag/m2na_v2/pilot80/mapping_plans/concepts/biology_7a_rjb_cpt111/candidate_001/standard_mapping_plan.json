@@ -1,0 +1,88 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一座古老的宫殿",
+  "characters": [
+    "宫殿的总管",
+    "守卫正门的卫士",
+    "守卫后门的卫士",
+    "其他辅助人员（如侍从、宫女）"
+  ],
+  "objects": [
+    "宫殿本体",
+    "正门",
+    "后门",
+    "其他辅助结构（如侧门、走廊、花园）"
+  ],
+  "conflict": "宫殿年久失修，总管需要明确哪些门是宫殿最重要的组成部分，以便优先修缮，但辅助人员认为所有结构都同等重要。",
+  "event_chain": [
+    "总管召集所有卫士和辅助人员，宣布要修缮宫殿。",
+    "总管指出宫殿由正门、后门、侧门、走廊、花园等组成。",
+    "总管强调正门和后门是宫殿最重要的门户，因为它们是进出宫殿的主要通道。",
+    "辅助人员提出异议，认为侧门和走廊也很重要。",
+    "总管坚持优先修缮正门和后门，其他结构稍后处理。"
+  ],
+  "turning_point": "总管明确宣布正门和后门是宫殿的核心结构，必须优先修缮。",
+  "resolution_state": "宫殿的正门和后门得到优先修缮，其他辅助结构随后逐步修复，宫殿整体恢复功能。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "宫殿本体",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "正门",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "后门",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "其他辅助结构（侧门、走廊、花园）",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "宫殿本体包含正门",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "宫殿本体包含后门",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "宫殿本体包含其他辅助结构",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中未使用任何目标概念名称或别名。",
+    "所有必须保留的节点（n1）和边（e1）均已映射。",
+    "边方向均被保留。",
+    "未将课程上下文（如“第二章 被子植物的一生”）作为因果机制。",
+    "整个故事使用单一的宫殿修缮领域，未引入无关隐喻。"
+  ],
+  "mapping_context_sha256": "fce4c946a9961636d45be30a21ad8dc8abeed4f3bd2f9997a3af10f74f0c1a7b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b494a8178dd07351874449da2c40e126aafa06ccc83d3c2b4b80d61364312993"
+  }
+}

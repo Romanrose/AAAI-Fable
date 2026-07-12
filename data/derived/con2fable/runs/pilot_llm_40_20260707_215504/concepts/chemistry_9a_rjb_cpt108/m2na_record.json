@@ -1,0 +1,100 @@
+{
+  "id": "chemistry_9a_rjb_cpt108",
+  "method": "con2fable",
+  "concept": {
+    "name": "加热氯酸钾制取氧气",
+    "aliases": [],
+    "forbidden_terms": [
+      "加热氯酸钾制取氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：分解反应",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：实验室制取氧气的方法",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11281"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11280"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "烘焙师今天要做一款需要大量气体的蓬松蛋糕。他取出一袋小苏打粉末，倒进碗里，然后放入烤箱加热。可等了半天，碗里只冒出几个小气泡，蛋糕糊几乎纹丝不动。\n\n“这样可不行，蛋糕根本膨胀不起来。”烘焙师皱起眉头。\n\n他忽然想起师父教过的一个秘诀——从柜子里取出一小瓶神秘黑粉。这黑粉看起来毫不起眼，但据说有奇效。烘焙师捏了一小撮，撒进小苏打粉末里，用勺子仔细搅拌均匀。\n\n再次将碗放入烤箱，奇迹发生了。没过多久，碗里就冒出密密麻麻的气泡，咕嘟咕嘟地往上涌，蛋糕糊像吹气球一样迅速膨胀起来，几乎要溢出碗沿。\n\n烘焙师赶紧取出烤好的蛋糕，发现碗底还残留着一些神秘黑粉。他好奇地用小勺刮了一点，发现黑粉的量几乎没有减少，而原本的小苏打粉末已经变成了一种白色的固体。\n\n“原来如此，”烘焙师恍然大悟，“神秘黑粉自己一点没变，却让小苏打更快地分解出气体，让蛋糕变得蓬松。”\n\n他把神秘黑粉小心地收集起来，装回瓶子里。下次做蛋糕时，这点黑粉还能再用。\n\n蛋糕出炉了，蓬松柔软，香气四溢。烘焙师切下一块，看着里面均匀的气孔，满意地笑了。他知道，有时候一个不起眼的小帮手，自己不会改变，却能大大加速关键的过程，让最终成果更加出色。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "小苏打粉末（氯酸钾）与神秘黑粉（二氧化锰）混合加热，小苏打分解产生气体（氧气），黑粉不变且起催化作用",
+        "evidence": "神秘黑粉自己一点没变，却让小苏打更快地分解出气体，让蛋糕变得蓬松",
+        "narrative_anchor": "神秘黑粉自己一点没变，却让小苏打更快地分解出气体，让蛋糕变得蓬松"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "小苏打分解产生气体是一种分解反应",
+        "evidence": "小苏打更快地分解出气体",
+        "narrative_anchor": "小苏打更快地分解出气体"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "烘焙师用这种方法制作蓬松蛋糕，对应实验室制取氧气的方法",
+        "evidence": "烘焙师今天要做一款需要大量气体的蓬松蛋糕",
+        "narrative_anchor": "烘焙师今天要做一款需要大量气体的蓬松蛋糕"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "小苏打分解（分解反应）是产生气体的具体过程",
+        "evidence": "小苏打更快地分解出气体",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "小苏打更快地分解出气体"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "分解反应产生气体是制作蓬松蛋糕（实验室制取氧气方法）的关键步骤",
+        "evidence": "蛋糕糊像吹气球一样迅速膨胀起来",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "蛋糕糊像吹气球一样迅速膨胀起来"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

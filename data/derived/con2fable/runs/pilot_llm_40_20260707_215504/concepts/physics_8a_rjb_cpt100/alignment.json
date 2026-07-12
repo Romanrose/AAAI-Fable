@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "平行光通过凸透镜汇聚到一点",
+      "evidence": "平行光穿过透镜，在光屏上奇迹般地汇聚起来，形成了一个非常明亮、非常清晰的小点",
+      "narrative_anchor": "平行光穿过透镜，在光屏上奇迹般地汇聚起来，形成了一个非常明亮、非常清晰的小点"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "主光轴作为前置条件",
+      "evidence": "透镜有一个看不见的对称轴，就像一条隐形的中心线",
+      "narrative_anchor": "透镜有一个看不见的对称轴，就像一条隐形的中心线"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "汇聚点与焦距的关系",
+      "evidence": "在光屏上奇迹般地汇聚起来，形成了一个非常明亮、非常清晰的小点",
+      "narrative_anchor": "在光屏上奇迹般地汇聚起来，形成了一个非常明亮、非常清晰的小点"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "调整透镜使光束沿主光轴射入后，平行光才汇聚",
+      "evidence": "小光试着调整透镜的角度，让光束正对着透镜的中心，确保光线沿着那条对称轴前进。调整完毕后，小光再次打开光源。这一次，平行光穿过透镜，在光屏上奇迹般地汇聚起来",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "小光试着调整透镜的角度，让光束正对着透镜的中心，确保光线沿着那条对称轴前进。调整完毕后，小光再次打开光源。这一次，平行光穿过透镜，在光屏上奇迹般地汇聚起来"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "汇聚点（焦点）与主光轴的关系",
+      "evidence": "沿着那条对称轴，光线才能找到共同的方向，集中力量到一处",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "沿着那条对称轴，光线才能找到共同的方向，集中力量到一处"
+    }
+  ]
+}

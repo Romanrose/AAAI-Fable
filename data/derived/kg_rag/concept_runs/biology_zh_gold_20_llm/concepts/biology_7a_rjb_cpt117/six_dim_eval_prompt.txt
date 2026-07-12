@@ -1,0 +1,226 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "受精",
+  "concept_id": "biology_7a_rjb_cpt117",
+  "concept_definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt117",
+    "fertilization",
+    "受精"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt117",
+      "label": "Concept",
+      "name": "受精",
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "aliases": [
+        "fertilization"
+      ],
+      "examples": [],
+      "retrieval_text": "受精\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt114",
+          "label": "Concept",
+          "name": "传粉",
+          "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt118",
+          "label": "Concept",
+          "name": "果实和种子的形成",
+          "definition": "受精后子房继续发育成果实（子房壁成果皮），子房内胚珠发育成种子，胚珠内受精卵发育成胚。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt71",
+          "label": "Concept",
+          "name": "胚胎工程",
+          "definition": "对生殖细胞、受精卵或早期胚胎细胞进行多种显微操作和处理，然后将获得的胚胎移植到雌性动物体内生产后代，以满足人类的各种需求的技术体系。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt75",
+          "label": "Concept",
+          "name": "合子（受精卵）",
+          "definition": "受精过程中形成的、含有两个染色体组的细胞，即受精卵；受精过程结束后其发育开始。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt76",
+          "label": "Concept",
+          "name": "精子获能",
+          "definition": "刚排出的精子不能立即与卵子受精，必须在雌性动物生殖道发生相应生理变化后才获得受精能力的生理现象。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt77",
+          "label": "Concept",
+          "name": "卵子成熟到MⅡ期",
+          "definition": "卵子在输卵管内进一步成熟，到减数分裂第二次中期（MⅡ期）时，才具备与精子受精的能力。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        },
+        {
+          "id": "biology_xzxbx3_rjb_ch2_s3",
+          "label": "Section",
+          "name": "第三节 胚胎工程",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt117",
+    "concept_id": "biology_7a_rjb_cpt117",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt117",
+      "label": "Concept",
+      "name": "受精",
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "aliases": [
+        "fertilization"
+      ],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "受精"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过精细胞与卵细胞结合形成新细胞的过程，隐含地表达了受精的概念，未直接使用'受精'一词。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事描述了花粉管生长、精细胞与卵细胞融合、以及另一个精细胞与极核融合的过程，对应了受精前的准备阶段和受精阶段。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事避免了目的论解释，没有将结合过程归因于个体努力或进化原因，而是客观描述了条件（花粉落在合适柱头、花粉管生长、卵细胞准备好）和结果（形成新细胞、发育成果实和种子）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃里的秘密\n\n春天，园圃工坊的老匠人阿福带着学徒小禾巡视花圃。小禾发现，许多花朵凋谢后，花萼下方会慢慢鼓起一个小包，最后变成青涩的果实。\n\n“阿福伯，为什么花谢了就会结果？”小禾好奇地问。\n\n阿福没有直接回答，而是带他来到一株盛开的桃花前。“你看，这朵花的雌蕊柱头上，落了一些黄色的粉末，那是花粉。花粉粒落在柱头上后，会萌发出一条细长的花粉管，沿着花柱向下生长，一直伸到子房里的胚珠。”\n\n小禾仔细观察，果然看到柱头上沾着细小的花粉粒。\n\n“花粉管里藏着两个精细胞，”阿福继续说，“它们要完成一次重要的结合。当花粉管到达胚珠后，一个精细胞会与胚珠里的卵细胞融合，形成一个新的细胞；另一个精细胞则与两个极核融合，形成另一个细胞。这两个新细胞，一个将发育成种子的胚，另一个将发育成胚乳，为胚提供营养。”\n\n小禾恍然大悟：“所以，花粉管里的精细胞和胚珠里的卵细胞结合，是果实和种子形成的关键一步！”\n\n阿福点点头：“对。这个过程需要很多条件：花粉必须落在合适的柱头上，花粉管要顺利生长，胚珠里的卵细胞也要准备好。就像我们园圃里嫁接果树，也要选对时机和部位。”\n\n小禾若有所思：“那如果花粉管没长到胚珠，或者卵细胞没准备好，就不会结果了？”\n\n“正是这样。”阿福微笑着说，“所以，每一颗果实的出现，都意味着一次成功的结合。你以后观察花朵时，可以多留意这些细节。”\n\n小禾蹲下身，轻轻抚摸着一朵刚谢的桃花，心中充满了对生命奥秘的敬畏。",
+  "rule_findings": {
+    "story_token_count": 518,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "氧气的检验方法"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：支持燃烧",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15246"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "古代烽火台",
+    "setting": "边塞烽火台，守军需要确认远处烽火是否为本方信号。",
+    "conflict": "守军无法确定远处升起的烽烟是否为本方点燃的求救信号，需要一种可靠的方法来验证。",
+    "characters": [
+      {
+        "name": "校尉",
+        "role": "验证方法的执行者",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "老兵",
+        "role": "提供验证条件的人",
+        "mapped_element": "m2"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "校尉用点燃的火把伸向烽火台中的余烬"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "烽火台中的余烬必须仍有火星（支持燃烧）"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "校尉看到远处烽火升起，怀疑是敌方假信号，决定验证。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老兵提醒校尉，只有烽火台中的余烬还有火星，才能用火把引燃确认。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "校尉检查烽火台，发现余烬仍有火星，便将火把伸入，火把瞬间复燃。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      }
+    ],
+    "turning_point": "火把复燃的瞬间，校尉确认远处烽火为本方信号。",
+    "ending": "校尉下令点燃烽火回应，援军及时赶到，边塞得以保全。",
+    "implied_moral": "验证真伪需要借助已知的可靠条件，而非盲目相信表象。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

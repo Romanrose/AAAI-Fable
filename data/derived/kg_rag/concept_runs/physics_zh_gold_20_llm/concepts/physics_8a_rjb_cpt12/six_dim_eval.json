@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt12",
+  "target_concept": "平均速度",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过指针总圈数除以总时间得到平均圈数，准确映射了平均速度的定义（总路程除以总时间），且未出现概念矛盾。",
+    "implicitness": "故事完全未使用目标概念名称或任何禁止术语，通过钟表指针的变速运动隐含地表达了平均速度的计算方法。",
+    "mapping_clarity": "小智计算8圈÷8小时=1圈/小时的过程清晰对应v=s/t公式，老钟表匠的类比进一步强化了映射关系。",
+    "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段学生阅读。",
+    "pedagogical_value": "故事通过具体观察和计算，引导学生理解平均速度在变速运动中的意义，并提供了生活类比，教学效果良好。",
+    "novelty": "钟楼指针的设定有一定新意，但整体结构较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加更多变速细节，如指针在不同时段的速度差异描述，以强化变速运动的概念。",
+    "可加入一个对比场景，如匀速运动与变速运动的平均速度比较，以加深理解。"
+  ],
+  "rule_findings": {
+    "story_token_count": 536,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过指针总圈数除以总时间得到平均圈数，准确映射了平均速度的定义（总路程除以总时间），且未出现概念矛盾。",
+      "implicitness": "故事完全未使用目标概念名称或任何禁止术语，通过钟表指针的变速运动隐含地表达了平均速度的计算方法。",
+      "mapping_clarity": "小智计算8圈÷8小时=1圈/小时的过程清晰对应v=s/t公式，老钟表匠的类比进一步强化了映射关系。",
+      "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段学生阅读。",
+      "pedagogical_value": "故事通过具体观察和计算，引导学生理解平均速度在变速运动中的意义，并提供了生活类比，教学效果良好。",
+      "novelty": "钟楼指针的设定有一定新意，但整体结构较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加更多变速细节，如指针在不同时段的速度差异描述，以强化变速运动的概念。",
+      "可加入一个对比场景，如匀速运动与变速运动的平均速度比较，以加深理解。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

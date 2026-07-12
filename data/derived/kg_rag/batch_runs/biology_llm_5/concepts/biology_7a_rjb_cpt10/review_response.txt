@@ -1,0 +1,7 @@
+{
+  "pass_fail": false,
+  "missing_roles": ["exercises"],
+  "unsupported_story_parts": ["The exercise statement '一猪生九仔, 连母十个样' describes variation, not inheritance, so the answer should be ×."],
+  "coherence_issues": ["The story does not contain an explicit exercise or practice activity for the reader; the alignment table includes an exercise statement that is not part of the draft story."],
+  "suggested_revision": ["Include a clear exercise within the story, such as asking the reader to identify which offspring show inheritance and which show variation, or to predict outcomes of controlled crosses."]
+}

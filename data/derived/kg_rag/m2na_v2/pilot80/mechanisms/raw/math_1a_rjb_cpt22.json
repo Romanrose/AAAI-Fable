@@ -1,0 +1,138 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt22",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "认识数字6和7，包括数物体、读数字、写数字、比较大小",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt19:definition",
+          "kg-node:math_1a_rjb_cpt19:examples",
+          "kg-edge:normalized:edge:16341"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "利用摆摆、画一画理解数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl11:description",
+          "kg-edge:normalized:edge:16381"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "把6或7分成两个部分，了解所有不同的分法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt22:definition",
+          "kg-node:math_1a_rjb_cpt22:examples"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "6和7的加法：通过合并数量得到6或7的加法算式",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt20:definition",
+          "kg-node:math_1a_rjb_cpt20:formula",
+          "kg-edge:normalized:edge:16342"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "outcome",
+        "text": "6和7的减法：通过去掉一部分得到差为6或7的减法算式",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt21:definition",
+          "kg-node:math_1a_rjb_cpt21:formula",
+          "kg-edge:normalized:edge:16343"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16341"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16381"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16342"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n3",
+        "target": "n5",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16343"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "分拆数6和7"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "9b503b366ab81429d260b1494e3165ecbc8cb74f9030ff0fb3a5bca414504129",
+    "retrieval_sha256": "55c00d8f91a2899d62cc81ad92e08428f3701192e8fb0aa5834223701c64286d",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "4ed30fd325b3fe3f08e91ff2d847e6e879fddf434bd6529c7934fe84c4bb6052"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

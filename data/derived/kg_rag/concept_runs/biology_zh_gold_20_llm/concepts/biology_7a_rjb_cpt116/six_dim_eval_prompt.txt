@@ -1,0 +1,206 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "异花传粉",
+  "concept_id": "biology_7a_rjb_cpt116",
+  "concept_definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt116",
+    "异花传粉"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt116",
+      "label": "Concept",
+      "name": "异花传粉",
+      "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+      "aliases": [],
+      "examples": [
+        "玉米传粉主要依靠风",
+        "鼠尾草、油菜可依靠昆虫",
+        "人工异花传粉用于杂交实验"
+      ],
+      "retrieval_text": "异花传粉\n花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt114",
+          "label": "Concept",
+          "name": "传粉",
+          "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe17",
+          "label": "Exercise",
+          "name": "花粉从花药散放而落到雌蕊柱头上的过程叫做什么？异花传粉通常需要哪些媒介？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        },
+        {
+          "id": "biology_bx2_rjb_ch1_s1",
+          "label": "Section",
+          "name": "第一节 孟德尔的豌豆杂交实验(一)",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt116",
+    "concept_id": "biology_7a_rjb_cpt116",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt116",
+      "label": "Concept",
+      "name": "异花传粉",
+      "definition": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+      "aliases": [],
+      "examples": [
+        "玉米传粉主要依靠风",
+        "鼠尾草、油菜可依靠昆虫",
+        "人工异花传粉用于杂交实验"
+      ]
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "异花传粉"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过风把玉米花粉吹到远处玉米须上，以及蜜蜂帮助油菜花传粉，展现了花粉从一朵花传到另一朵花柱头上的过程。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "故事描述了风作为媒介将玉米花粉吹到其他玉米须上，以及蜜蜂作为媒介帮助油菜花传粉，体现了花粉在外力作用下落到另一朵花柱头上的传粉方式。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事没有使用目的论解释（如‘为了传粉’），而是客观描述风力和昆虫行为导致花粉转移的条件和结果；没有将个体努力写成进化原因；保留了生命系统的条件（风、昆虫）、过程（花粉转移）和结果（结出果实和种子）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：风与花的约定\n\n春天，山坡上开满了金黄色的油菜花。小蜜蜂阿飞每天忙碌地穿梭在花丛中，它发现一个有趣的现象：有些花的花粉总是被风吹到别处，而有些花则要靠它这样的昆虫来帮忙。\n\n一天，阿飞问老蜜蜂：“为什么风要把花粉吹走呢？留在自己的花上不是更好吗？”\n\n老蜜蜂笑着说：“你仔细观察，每朵花都有自己的秘密。”\n\n阿飞开始认真观察。它发现，油菜花的花粉很黏，容易粘在它的腿上；而山坡另一边的玉米，花粉却很轻，风一吹就漫天飞舞。更奇怪的是，玉米的花粉很少落在自己的玉米须上，反而常常飘到远处的玉米须上。\n\n“这是为什么呢？”阿飞困惑不已。\n\n一天，突然刮起大风。阿飞躲在一片叶子下，看到无数玉米花粉被风吹起，像金色的雾一样飘向远方。风停后，阿飞飞到玉米地，发现许多玉米须上都沾满了来自别处的花粉。\n\n“原来如此！”阿飞恍然大悟，“风把花粉从这朵花送到那朵花，就像我帮油菜花传粉一样。”\n\n老蜜蜂点点头：“没错。无论是风还是我们昆虫，都在做同一件事——把一朵花的花粉送到另一朵花上。这样，花才能结出果实和种子。”\n\n阿飞明白了：每朵花都有自己的传粉方式，有的靠风，有的靠昆虫，但都需要外力的帮助。从此，它更加认真地帮助每一朵花传递花粉。",
+  "rule_findings": {
+    "story_token_count": 433,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

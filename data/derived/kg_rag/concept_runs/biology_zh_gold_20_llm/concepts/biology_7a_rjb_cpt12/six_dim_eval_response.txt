@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过小禾的观察和实验，准确传达了病毒无细胞结构、需寄生在活细胞内的核心特征，与概念定义完全一致。",
+    "implicitness": "故事全程未出现'病毒'或'virus'等禁止词汇，通过'小颗粒''没有细胞结构''比细胞小得多'等描述隐含地映射目标概念。",
+    "mapping_clarity": "故事中的病叶汁液感染实验和细菌培养液过滤实验清晰地映射了病毒的发现过程，读者能自然理解病毒的特殊性。",
+    "readability": "语言流畅，情节连贯，以学徒小禾的视角展开，适合初中生阅读，无生硬术语。",
+    "pedagogical_value": "通过实验观察和认知冲突，引导学生理解'除病毒外，生物都由细胞构成'这一例外，教学价值高。",
+    "novelty": "以园圃工坊为背景，用实验故事呈现病毒特性，有一定新颖性，但类似隐喻在科普中较常见。"
+  },
+  "revision_suggestions": [
+    "可增加一个更具体的病毒例子（如噬菌体）的隐喻，增强与教材例子的关联。",
+    "结尾可稍加强调'病毒是生物'这一属性，避免学生误解为非生物。"
+  ]
+}

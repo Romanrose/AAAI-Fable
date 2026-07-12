@@ -1,0 +1,73 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个关于木匠与木材的寓言",
+  "characters": [
+    "老木匠",
+    "学徒"
+  ],
+  "objects": [
+    "木材",
+    "刨子",
+    "木尺",
+    "成品木器"
+  ],
+  "conflict": "学徒想用一块短木料制作小木器，但老木匠告诉他，这块木料太短，无法通过刨削调整到合适的尺寸，必须用更长的木料才能做出牢固的成品。",
+  "event_chain": [
+    "老木匠使用刨子（调节工具）改变木材的形状，使不同长度的木料都能被加工成合适的部件。",
+    "木材有一个最短可加工长度（近点），短于这个长度的木料无法通过刨削调整到可用状态。",
+    "木尺上标记了一个标准舒适加工长度（明视距离），在这个长度下，学徒可以轻松地刨削而不费力，且成品最牢固。"
+  ],
+  "turning_point": "学徒试图用一块短于最短可加工长度的木料，结果刨削后木料断裂，无法使用。",
+  "resolution_state": "老木匠教导学徒：每块木料都有其最短可加工长度，必须选用足够长的木料，并在标准舒适加工长度下操作，才能做出好木器。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老木匠使用刨子改变木材形状的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "木材的最短可加工长度",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "木尺上标记的标准舒适加工长度",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老木匠使用刨子的过程决定了木材的最短可加工长度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "木材的最短可加工长度与标准舒适加工长度相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保没有使用'近点'等禁止术语。",
+    "确保故事载体（木材、刨子、木尺）不直接对应目标概念名称。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保不将课程桥上下文视为因果机制。"
+  ],
+  "mapping_context_sha256": "45b68ab01bca00d4b2a8f7aa91fac4df6ef15eeb1743a98ddda63ee8d4712e29",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "94f5f075b606fea237cabe32d6dd37dab9b1be34650d5e5565f5cd30c196e22a"
+  }
+}

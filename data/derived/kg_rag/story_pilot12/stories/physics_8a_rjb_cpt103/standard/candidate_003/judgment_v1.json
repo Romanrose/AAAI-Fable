@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping is observably better than a generic 'lens-camera' analogy because it consistently uses a single source domain (bronze mirror casting) without mixing metaphors. All mechanism nodes and edges are explicitly realized in the story with clear, contiguous evidence. The weakest link is edge e2 (浇铸过程 produces 铜镜), which is stated but could be more explicitly tied to the 'is_a' relation (照相机成像 is_a 实像) — however, the story's '浇铸铜镜的过程' producing '铜镜' sufficiently preserves the relation. The mapping avoids forbidden terms and maintains directionality perfectly."
+  },
+  "revision_instructions": [
+    "No revision needed. The story fully aligns with the mechanism graph and mapping plan."
+  ],
+  "final_status": "accept"
+}

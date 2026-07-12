@@ -1,0 +1,73 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "农夫种稻",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "稻田",
+    "稻种",
+    "秧苗",
+    "稻穗"
+  ],
+  "conflict": "农夫想知道秧苗长成稻穗后，稻穗是直立还是弯垂，以及稻穗的大小，这取决于稻种播种的深度与稻种自身特性之间的关系。",
+  "event_chain": [
+    "农夫在稻田里播种稻种，稻种埋入泥土的深度不同。",
+    "稻种发芽长成秧苗，秧苗逐渐生长。",
+    "秧苗生长过程中，有的长出直立稻穗，有的长出弯垂稻穗，稻穗大小也不同。",
+    "农夫观察稻穗，发现稻穗的直立或弯垂、大小与播种深度和稻种特性有关。"
+  ],
+  "turning_point": "农夫发现，播种深度适中时，稻穗直立且饱满；播种过深或过浅，稻穗弯垂且瘦小。",
+  "resolution_state": "农夫明白了稻穗的形态和大小由播种深度和稻种特性共同决定。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "播种深度与稻种特性",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "稻穗的直立或弯垂以及大小",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "秧苗与稻穗",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "播种深度与稻种特性决定了稻穗的形态和大小",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "秧苗与稻穗的形态和大小相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用任何目标概念名称或别名",
+    "确保故事载体来自同一源域（农夫种稻）",
+    "确保所有机制节点和边都被映射",
+    "确保方向被保留"
+  ],
+  "mapping_context_sha256": "6b6ca1287eacb4bf5ddffba670bd8e47a1a123874e647507453ad1f5949a15ae",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "50b89d7336db1231026e1e7b79319658dfe12fc682d9627ab92fed48bad5d604"
+  }
+}

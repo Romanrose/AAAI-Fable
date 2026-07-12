@@ -1,0 +1,68 @@
+{
+  "core_question": "6和7的加法的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "分拆数6和7 --prerequisites_for--> 6和7的加法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:16342"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "数字6和7的认识 --relates_to--> 6和7的加法",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:19308"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s4",
+      "text": "保留形式定义条件和规则一致性。",
+      "kind": "condition",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:16342",
+    "normalized:edge:19308"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "6和7的加法",
+    "math_1a_rjb_cpt20"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:16342",
+      "normalized:edge:19308"
+    ],
+    "must_cover_path_ids": []
+  }
+}

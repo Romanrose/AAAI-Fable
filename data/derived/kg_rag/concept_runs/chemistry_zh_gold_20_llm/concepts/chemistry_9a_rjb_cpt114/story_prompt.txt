@@ -1,0 +1,137 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "工业制取氧气的方法"
+  ],
+  "concept_card": {
+    "concept_id": "chemistry_9a_rjb_cpt114",
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "canonical_name": "工业制取氧气的方法",
+    "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+    "aliases": [],
+    "examples": [
+      "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+      "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+    ],
+    "teaching_level": "middle_school",
+    "concept_type": "mechanism",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt66",
+          "label": "Concept",
+          "name": "氧气",
+          "definition": "一种重要的气体单质，空气中体积分数约为21%，可由高锰酸钾、过氧化氢溶液、氯酸钾等分解制取，是许多燃烧和化工过程必需的物质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt115",
+          "label": "Concept",
+          "name": "液态空气的分馏制氧",
+          "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt116",
+          "label": "Concept",
+          "name": "膜分离制取富氧空气",
+          "definition": "利用具有富集氧气功能的薄膜，在一定压力下让空气通过，根据膜对氧气和其他气体透过速度不同，得到含氧量较高的富氧空气，并通过多级分离提高含氧量。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "工业制取氧气的方法"
+    ],
+    "subject_constraints_zh": [
+      "区分化学反应和物理混合。",
+      "保留守恒关系和反应前后变化。",
+      "避免化学式或元素符号在故事正文中泄露。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt114",
+    "concept_id": "chemistry_9a_rjb_cpt114",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt114",
+      "label": "Concept",
+      "name": "工业制取氧气的方法",
+      "definition": "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。",
+      "aliases": [],
+      "examples": [
+        "在低温条件下加压使空气液化，然后利用沸点差异分离出液态氧",
+        "在一定压力下，让空气通过具有富集氧气功能的薄膜得到富氧空气"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "工业制取氧气的方法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "为大量生产氧气而采用的工业方法，主要包括低温液化空气后分馏及膜分离技术等。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

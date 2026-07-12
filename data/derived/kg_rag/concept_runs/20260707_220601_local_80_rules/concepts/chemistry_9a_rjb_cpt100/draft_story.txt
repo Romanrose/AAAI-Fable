@@ -1,0 +1,55 @@
+标题：回廊上的记号
+
+信号员刚到材料试炼间时，只盯着窗台里最显眼的结果，却总是判断失准。
+一天，他没有立刻下结论，而是把所见的前后变化分段写在灯盒上。他没有立刻行动，而是先把会影响后续的小条件排成一列。他没把周围的相似现象混在一起，而是先找共同点，再找差异点。
+灯盒上的细银线被移到另一行后，他看出同一条隐线仍然通向：先确认一个起点条件是否具备：氧化反应 --prerequisites_for--> 这条隐藏规则。
+当旁人只看见表面迹象时，信号员指着细银线说，先别跳过这一段：让中间的行动承接前后变化：呼吸与氧气 --relates_to--> 这条隐藏规则。
+信号员在灯盒角上画下细银线，因为这条线索指向：让中间的行动承接前后变化：氧化反应 --relates_to--> 这条隐藏规则。
+为了确认，他悄悄抽走其中一枚标记，再观察后面哪一环开始偏离。最末那个变化没有突然降临，而是沿着前面的路径慢慢显形。信号员把灯盒收好，学会了用路径而不是印象判断事情。
+
+```json
+[
+  {
+    "concept_role": "target concept",
+    "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+    "concept_items": [
+      "缓慢氧化"
+    ]
+  },
+  {
+    "concept_role": "core mechanism",
+    "story_evidence": "前后变化被信号员按顺序记录、改动和复查。"
+  },
+  {
+    "concept_role": "prerequisites",
+    "concept_items": [
+      "氧化反应"
+    ],
+    "story_evidence": "他没有立刻行动，而是先把会影响后续的小条件排成一列。"
+  },
+  {
+    "concept_role": "related concepts",
+    "concept_items": [
+      "呼吸与氧气",
+      "氧化反应",
+      "燃烧"
+    ],
+    "story_evidence": "他没把周围的相似现象混在一起，而是先找共同点，再找差异点。"
+  },
+  {
+    "concept_role": "outcomes",
+    "concept_items": [],
+    "story_evidence": "最末那个变化没有突然降临，而是沿着前面的路径慢慢显形。"
+  },
+  {
+    "concept_role": "experiments",
+    "concept_items": [],
+    "story_evidence": "为了确认，他悄悄抽走其中一枚标记，再观察后面哪一环开始偏离。"
+  },
+  {
+    "concept_role": "exercises",
+    "concept_items": [],
+    "story_evidence": "故事结尾保留了可复查、可迁移的判断任务。"
+  }
+]
+```

@@ -1,0 +1,28 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "copycat_score": 1.8124,
+      "temperature": 20.25,
+      "temperature_band": "stable",
+      "failure_summary": [],
+      "hard_copycat_failure": false
+    },
+    {
+      "candidate_id": "candidate_002",
+      "copycat_score": 1.8124,
+      "temperature": 20.25,
+      "temperature_band": "stable",
+      "failure_summary": [],
+      "hard_copycat_failure": false
+    }
+  ],
+  "arbiter": null,
+  "revision_reason": null,
+  "selected_score": 1.8124,
+  "selected_temperature": 20.25,
+  "selection_mode": "copycat_temperature",
+  "revision_applied": false
+}

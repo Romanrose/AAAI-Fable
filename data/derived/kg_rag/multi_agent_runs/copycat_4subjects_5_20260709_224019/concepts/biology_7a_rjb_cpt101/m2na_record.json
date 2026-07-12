@@ -1,0 +1,107 @@
+{
+  "id": "biology_7a_rjb_cpt101",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "种子萌发",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "避免目的论解释。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把个体努力写成进化原因。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14133",
+        "source_name": "种子萌发的环境条件",
+        "target_name": "种子萌发",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14134",
+        "source_name": "种子萌发的自身条件",
+        "target_name": "种子萌发",
+        "relation_semantic_role": "prerequisite"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "港口检疫站的记录员翻开分段记录册，发现上一班的调度员在封存箱上贴了一张“通行牌已发”的便条，可箱子里根本没有通行牌。记录员找来调度员，指着便条问：“你写这个的时候，核对过入口条件牌吗？”\n\n调度员挠了挠头：“我以为先发牌子，后面再补条件核对也行。”\n\n记录员摇头，把调度员拉到站台入口处，那里挂着一块写着“入场前必须核对条件”的铁牌。“你跳过这块牌，后面的登记就接不上。这不是你一个人的习惯问题——整个检疫站的流程规定，入口条件核对是第一道门槛，没有它，任何通行牌都不能发。”\n\n调度员只好重新走了一遍流程：先确认入口条件牌上的所有项目都打勾，再回到中间操作台，按顺序推进消毒和封存步骤。记录员在一旁记下每一步，把具体操作归入“环境条件”这类大规则里——她心里清楚，这不是孤立事件，而是所有检疫站都通用的顺序。\n\n验收员过来检查时，发现记录册上中间流程的签字日期比入口核对早了两天。他指着那行记录：“这个顺序不对。中间流程必须在入口核对之后，你们是不是倒着做了？”\n\n调度员这才承认，他之前试着先做中间环节，想着后面再补入口核对，结果验收记录怎么也接不上——封存箱里的货物没有对应的通行牌，整批货被卡在站台上。\n\n记录员重新理清顺序：她先在入口处确认条件牌成立，然后让调度员按前一步留下的条件继续推进中间流程，最后验收员用结果记录核对整条安排。三段记录终于能首尾相接，封存箱上贴的通行牌也有了准确的签发依据。\n\n验收员合上记录册，对两人说：“方向不能颠倒。条件、过程、结果，少一个环节，后面的就白做了。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件核对",
+        "narrative_anchor": "入口条件核对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "中间流程",
+        "evidence": "中间流程",
+        "narrative_anchor": "中间流程",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先确认入口条件牌，再推进中间流程",
+        "evidence": "先确认入口条件牌上的所有项目都打勾，再回到中间操作台",
+        "narrative_anchor": "先确认入口条件牌上的所有项目都打勾，再回到中间操作台",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先推进中间流程，再验收记录",
+        "evidence": "让调度员按前一步留下的条件继续推进中间流程，最后验收员用结果记录核对",
+        "narrative_anchor": "让调度员按前一步留下的条件继续推进中间流程，最后验收员用结果记录核对",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

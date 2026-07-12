@@ -1,0 +1,139 @@
+{
+  "query": "chemistry_9a_rjb_cpt11",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt11",
+    "label": "Concept",
+    "name": "大气压强",
+    "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+    "aliases": [
+      "气压",
+      "标准大气压强"
+    ],
+    "examples": [
+      "标准大气压强为101 kPa"
+    ],
+    "retrieval_text": "大气压强\n大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt10",
+        "label": "Concept",
+        "name": "沸点",
+        "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt10",
+        "label": "Concept",
+        "name": "沸点",
+        "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "课题1 物质的变化和性质",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:14999] 大气压强 --prerequisites_for--> 沸点\n- [normalized:edge:18222] 沸点 --relates_to--> 大气压强"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '大气压强', 'definition': '大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。', 'formula': '', 'importance': '了解'}, 'condition_summary': ['[normalized:edge:14999] 大气压强 --prerequisites_for--> 沸点'], 'process_summary': ['[normalized:edge:18222] 沸点 --relates_to--> 大气压强'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "chemistry_9a_rjb_cpt11",
+      "label": "Concept",
+      "name": "大气压强",
+      "properties": {
+        "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+        "importance": "了解",
+        "unit": "kPa",
+        "examples": [
+          "标准大气压强为101 kPa"
+        ],
+        "aliases": [
+          "气压",
+          "标准大气压强"
+        ],
+        "retrieval_text": "大气压强\nConcept\n大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。\n了解\nkPa\n气压\n标准大气压强\n标准大气压强为101 kPa"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:14999",
+        "source": "chemistry_9a_rjb_cpt11",
+        "source_name": "大气压强",
+        "target": "chemistry_9a_rjb_cpt10",
+        "target_name": "沸点",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:18222",
+        "source": "chemistry_9a_rjb_cpt10",
+        "source_name": "沸点",
+        "target": "chemistry_9a_rjb_cpt11",
+        "target_name": "大气压强",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "大气压强",
+        "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [
+        "[normalized:edge:14999] 大气压强 --prerequisites_for--> 沸点"
+      ],
+      "process_summary": [
+        "[normalized:edge:18222] 沸点 --relates_to--> 大气压强"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 525,
+      "summary_chars": 318,
+      "path_chars": 0,
+      "retrieval_context_chars": 843
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 525,
+    "summary_chars": 318,
+    "path_chars": 0,
+    "retrieval_context_chars": 843
+  }
+}

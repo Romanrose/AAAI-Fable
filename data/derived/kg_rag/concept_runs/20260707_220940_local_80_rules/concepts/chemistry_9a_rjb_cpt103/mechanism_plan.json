@@ -1,0 +1,106 @@
+{
+  "core_question": "实验室制取氧气的方法的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:14997"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:14996"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "氧气 --prerequisites_for--> 实验室制取氧气的方法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15223"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15261"
+      ]
+    },
+    {
+      "step_id": "s5",
+      "text": "分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11278"
+      ]
+    },
+    {
+      "step_id": "s6",
+      "text": "加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11280"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s4",
+      "target_step_id": "s5",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s5",
+      "target_step_id": "s6",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:14997",
+    "normalized:edge:14996",
+    "normalized:edge:15223",
+    "normalized:edge:15261",
+    "normalized:edge:11278",
+    "normalized:edge:11280"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "实验室制取氧气的方法",
+    "chemistry_9a_rjb_cpt103"
+  ],
+  "coverage_targets": {
+    "required_step_count": 6,
+    "required_dependency_count": 5,
+    "must_cover_edge_ids": [
+      "normalized:edge:14997",
+      "normalized:edge:14996",
+      "normalized:edge:15223",
+      "normalized:edge:15261",
+      "normalized:edge:11278",
+      "normalized:edge:11280"
+    ],
+    "must_cover_path_ids": []
+  }
+}

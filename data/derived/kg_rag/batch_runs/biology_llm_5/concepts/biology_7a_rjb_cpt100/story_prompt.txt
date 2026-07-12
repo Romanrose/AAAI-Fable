@@ -1,0 +1,41 @@
+You are a fable-writing assistant.
+Write a short concept-grounded fable from the provided structure plan.
+Preserve the mechanism implied by the structure plan.
+Do not introduce unrelated subplots or excessive exposition.
+Do not collapse the target concept into a vague notion like general growth, improvement, or success.
+If an experiment role and an exercise role both exist, keep them distinct.
+The experiment should demonstrate or reveal the mechanism.
+The exercise should act as a follow-up check, question, or reinforcing task.
+
+Target Concept: 苔藓植物是监测空气污染的指示植物
+Definition: 许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。
+Source Domain: garden workshop
+Entities:
+- a careful caretaker
+- a plot that depends on the right conditions
+- tools and routines that reveal whether growth is real
+Event Chain:
+- The caretaker prepares the conditions that must already be in place.
+- The plot uses those conditions to produce visible growth.
+- Nearby processes either support or compete with that growth.
+- Observation and trials reveal whether the growth is genuine and sustained.
+Conflict: The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.
+Turning Point: A visible change reveals which condition actually controls the outcome.
+Resolution State: The system stabilizes once the enabling conditions are understood and the resulting effects become observable.
+Concept-to-Story Alignment:
+- Concept role: target concept | Concept items: 苔藓植物是监测空气污染的指示植物 | Story role: central productive process
+- Concept role: prerequisites | Concept items: None | Story role: conditions or resources that must be prepared first
+- Concept role: related concepts | Concept items: None | Story role: neighboring processes that contextualize or contrast the main process
+- Concept role: outcomes | Concept items: None | Story role: visible consequences produced by the core process
+- Concept role: experiments | Concept items: None | Story role: tests that reveal whether the process truly happened
+- Concept role: exercises | Concept items: None | Story role: follow-up checks that reinforce the lesson
+
+Write one concise story with:
+- 120 to 220 words
+- a clear beginning, development, and resolution
+- concrete actions instead of abstract explanation
+- explicit realization of the target concept mechanism, not just its broad effects
+- no bullet points in the story body
+
+After the story, output a short alignment table in JSON with fields:
+  [{"concept_role": "...", "story_evidence": "..."}]

@@ -1,0 +1,110 @@
+{
+  "concept_id": "math_1a_rjb_cpt14",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "长方体",
+  "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+  "aliases": [],
+  "examples": [
+    "积木中的长方体块",
+    "砖块",
+    "教室里的粉笔盒",
+    "纸巾盒",
+    "长方体纸箱",
+    "粉笔盒、文具盒、牙膏盒等包装盒"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "math_5b_rjb_cpt14",
+        "label": "Concept",
+        "name": "表面积",
+        "definition": "长方体或正方体6个面的面积之和叫做它的表面积。"
+      },
+      {
+        "id": "math_5b_rjb_cpt16",
+        "label": "Concept",
+        "name": "长方体体积公式",
+        "definition": "长方体体积=长×宽×高，也可写为V=a·b·h。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt18",
+        "label": "Concept",
+        "name": "按形状分类",
+        "definition": "根据物体或图形的外形特征进行分类的方法。"
+      },
+      {
+        "id": "math_1a_rjb_cpt15",
+        "label": "Concept",
+        "name": "正方体",
+        "definition": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe11",
+        "label": "Exercise",
+        "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+        "definition": ""
+      },
+      {
+        "id": "math_5b_rjb_exe7",
+        "label": "Exercise",
+        "name": "一个长方体纸箱长40 cm、宽30 cm、高20 cm，在所有棱上粘一圈胶带，至少需要多长的胶带？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch4",
+        "label": "Chapter",
+        "name": "认识图形（一）",
+        "definition": ""
+      },
+      {
+        "id": "math_5b_rjb_ch3",
+        "label": "Chapter",
+        "name": "长方体和正方体",
+        "definition": ""
+      },
+      {
+        "id": "math_7a_rjb_ch4_s4",
+        "label": "Section",
+        "name": "第四节 课题学习 设计制作长方体形状的包装纸盒",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。"
+  ],
+  "must_preserve_zh": [
+    "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "长方体"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

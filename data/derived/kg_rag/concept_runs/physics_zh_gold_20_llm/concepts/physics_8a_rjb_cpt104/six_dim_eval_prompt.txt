@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "投影仪成像",
+  "concept_id": "physics_8a_rjb_cpt104",
+  "concept_definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt104",
+    "投影仪成像"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt104",
+      "label": "Concept",
+      "name": "投影仪成像",
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "投影仪成像\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt95",
+          "label": "Concept",
+          "name": "凸透镜",
+          "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt102",
+          "label": "Concept",
+          "name": "实像",
+          "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s2",
+          "label": "Section",
+          "name": "第二节 生活中的透镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt104",
+    "concept_id": "physics_8a_rjb_cpt104",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt104",
+      "label": "Concept",
+      "name": "投影仪成像",
+      "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "投影仪成像"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中阿明通过调整纸片（物体）与圆窗（凸透镜）的距离，在墙上（投影屏幕）得到放大、倒立的字影（实像），隐含了投影仪成像的机制。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明将纸片靠近圆窗时，墙上出现放大、倒立的字影；纸片远离时字影变小；纸片在特定位置时字影最清晰。这对应了物体靠近凸透镜时，在屏幕上形成放大、倒立的实像。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中保留了物体与透镜距离变化导致像的大小和清晰度变化的关系；阿明通过观察发现规律，而非主观臆断；像的方向（颠倒）和大小（放大或缩小）随条件变化，符合物理规律。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼的秘密\n\n小镇的钟楼已经矗立百年，每到整点，钟声都会准时响起。可是最近，负责维护钟楼的阿明发现了一件怪事：钟楼外墙上的那面大圆窗，每到下午三点，总会在地面上投下一个奇怪的影子——不是圆形的，而是一个拉长的、上下颠倒的图案。\n\n阿明爬上钟楼，仔细检查那面圆窗。窗子是一块中间厚、边缘薄的透明玻璃，阳光透过它，在对面墙上映出一个模糊的光斑。阿明试着把一张写有“钟”字的纸片贴在窗玻璃内侧，纸片上的字立刻在对面墙上投出了一个放大的、上下颠倒的“钟”字。\n\n“这太奇怪了！”阿明自言自语，“明明纸上的字是正的，为什么投出来的影子是倒的？而且比原来的字大得多？”\n\n他试着把纸片慢慢往窗玻璃外移动。随着纸片远离窗子，墙上的字影逐渐变小，但依然保持颠倒。当纸片移到某个位置时，字影变得和纸片一样大，但还是倒的。阿明继续移动纸片，字影变得更小，而且越来越模糊，最后几乎看不见了。\n\n阿明又试了一次，这次他把纸片从远处慢慢靠近窗子。当纸片离窗子很近时，墙上的字影非常大，但非常模糊，几乎认不出是什么字。他继续靠近，字影逐渐清晰起来，而且变得更大、更颠倒。当纸片贴到窗玻璃上时，字影反而消失了。\n\n“原来如此！”阿明恍然大悟，“要让墙上的影子又大又清楚，纸片必须放在离窗子不远不近的位置。而且，影子总是颠倒的，大小会随着纸片的位置变化。”\n\n从那以后，阿明每次调整钟楼上的展示物时，都会先在地面上测试影子的位置和大小，确保钟楼上的图案能清晰地投射到广场上。小镇的人们再也不用仰头看钟楼上的字了，因为地面上就能看到放大的、清晰的倒影。",
+  "rule_findings": {
+    "story_token_count": 572,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

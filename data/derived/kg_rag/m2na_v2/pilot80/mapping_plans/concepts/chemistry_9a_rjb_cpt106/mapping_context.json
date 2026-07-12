@@ -1,0 +1,359 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt106",
+    "subject": "chemistry",
+    "canonical_name": "分解过氧化氢制取氧气",
+    "aliases": [],
+    "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。",
+    "concept_type": "process",
+    "forbidden_terms": [
+      "分解过氧化氢制取氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "分解过氧化氢制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt106:definition",
+          "kg-node:chemistry_9a_rjb_cpt106:formula",
+          "kg-node:chemistry_9a_rjb_cpt106:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "实验室制取氧气的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt103:definition",
+          "kg-node:chemistry_9a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "氧气的收集方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt119:definition",
+          "kg-node:chemistry_9a_rjb_cpt119:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "分解反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:formula",
+          "kg-node:chemistry_9a_rjb_cpt109:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt66:definition",
+          "kg-node:chemistry_9a_rjb_cpt66:formula",
+          "kg-node:chemistry_9a_rjb_cpt66:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "加热高锰酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt104:definition",
+          "kg-node:chemistry_9a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "process",
+        "text": "加热氯酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_cpt108:retrieval_text"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "evidence",
+        "text": "实验2-5 加热高锰酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp16:process",
+          "kg-node:chemistry_9a_rjb_exp16:phenomena",
+          "kg-node:chemistry_9a_rjb_exp16:conclusion",
+          "kg-node:chemistry_9a_rjb_exp16:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11278"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14996"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14997"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15223"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11276"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n7",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11280"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n8",
+        "target": "n2",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22572"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "分解过氧化氢制取氧气"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt106",
+      "name": "分解过氧化氢制取氧气",
+      "label": "Concept",
+      "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt119",
+        "name": "氧气的收集方法"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt103",
+        "name": "实验室制取氧气的方法"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:14996",
+        "source_id": "chemistry_9a_rjb_cpt103",
+        "source_name": "实验室制取氧气的方法",
+        "target_id": "chemistry_9a_rjb_cpt119",
+        "target_name": "氧气的收集方法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt119",
+        "neighbor_name": "氧气的收集方法",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:14997",
+        "source_id": "chemistry_9a_rjb_cpt109",
+        "source_name": "分解反应",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:15223",
+        "source_id": "chemistry_9a_rjb_cpt66",
+        "source_name": "氧气",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:11278",
+        "source_id": "chemistry_9a_rjb_cpt106",
+        "source_name": "分解过氧化氢制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:15261",
+        "source_id": "chemistry_9a_rjb_skl26",
+        "source_name": "通过实验现象推断气体性质",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:11276",
+        "source_id": "chemistry_9a_rjb_cpt104",
+        "source_name": "加热高锰酸钾制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:11280",
+        "source_id": "chemistry_9a_rjb_cpt108",
+        "source_name": "加热氯酸钾制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:22572",
+        "source_id": "chemistry_9a_rjb_exp16",
+        "source_name": "实验2-5 加热高锰酸钾制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "undirected",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 0.95,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 8,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "分解过氧化氢制取氧气",
+      "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。",
+      "formula": "过氧化氢  ⟶(二氧化锰)  水 + 氧气",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14996] 实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+      "[normalized:edge:14997] 分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+      "[normalized:edge:15223] 氧气 --prerequisites_for--> 实验室制取氧气的方法",
+      "[normalized:edge:15261] 通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:11278] 分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:11276] 加热高锰酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:11280] 加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:22572] 实验2-5 加热高锰酸钾制取氧气 --verifies--> 实验室制取氧气的方法"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:14996",
+    "normalized:edge:14997",
+    "normalized:edge:15223",
+    "normalized:edge:11278",
+    "normalized:edge:15261",
+    "normalized:edge:11276",
+    "normalized:edge:11280",
+    "normalized:edge:22572"
+  ],
+  "provenance": {
+    "seed_sha256": "08a23f9210792764e8641ca640eef196b94a38eaace332b3571e20add801d9ee",
+    "retrieval_sha256": "9edbef6c58e4b677f8b39c390dd5ebbd896218fd3d9830d07a66e85d7d90f82a",
+    "mechanism_record_sha256": "557fbd392cfd08d3daa8098f38468ea83aeb514e59e0500ca3fd8f5ec768b63d"
+  }
+}

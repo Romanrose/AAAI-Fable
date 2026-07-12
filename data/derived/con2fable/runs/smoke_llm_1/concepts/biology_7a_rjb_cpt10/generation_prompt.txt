@@ -1,0 +1,102 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "遗传和变异"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：生物的共同特征",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10771"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "农田里的豌豆种植",
+    "setting": "一片老农人世代耕种的豌豆田，每年春天播种，夏天收获，秋天留种。",
+    "conflict": "老农人发现今年收获的豌豆中，有几株豌豆荚里的豆子颜色、大小和往年不一样，他担心是种子出了问题，但又发现大部分豆子还是和往年一样饱满圆润。",
+    "characters": [
+      {
+        "name": "老农人",
+        "role": "观察者和记录者，代表自然规律下的观察视角",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "豌豆田",
+        "role": "承载遗传与变异现象的系统",
+        "mapped_element": "m1"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "豌豆植株结出的豆荚与豆粒，以及它们与上一代豆粒的对比"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "老农人将豌豆田视为“祖传的庄稼”，认为所有豌豆都该和往年一样"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老农人从去年留种的豌豆中选出最大最圆的豆粒，今年春天全部种下。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "夏天豌豆开花结荚，老农人发现大部分植株长势和去年一样，但有几株的豆荚颜色偏紫，豆粒也比其他豆粒小一圈。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老农人把这几株异常的豌豆单独收起来，心里犯嘀咕：明明种子都一样，为什么它们不一样？",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "秋天收获时，老农人把正常豌豆和异常豌豆分开晾晒，发现正常豌豆和去年几乎一模一样，而异常豌豆虽然小，但明年种下去又会怎样？他决定明年把两种豆子分开种。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      }
+    ],
+    "turning_point": "老农人发现，尽管大部分豌豆忠实地复制了上一代的模样，但总有那么几株会跳出“规矩”，长出不同的特征，而且这些特征也能被保留下来传给下一代。",
+    "ending": "老农人不再担心种子坏了，而是把两种豌豆分别装进布袋，在袋子上写下“老样子”和“新样子”，准备明年春天看看“新样子”会长出什么。",
+    "implied_moral": "生命在传递中既保持稳定，又悄悄生出新变，稳定让物种延续，新变让未来充满可能。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

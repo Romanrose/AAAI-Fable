@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n1 (入口条件核对) to the '长方体' entity with high fidelity, using a concrete action (checking condition cards) that preserves the 'is_a' relation to n3 (按形状分类) via the character's reference to a classification chapter. Edge e1 is weakest because the story's evidence for the 'is_a' relation between n1 and n3 is implicit (the character '翻到按形状分类那一章') rather than explicitly stating that the condition check belongs to the classification category; a stronger realization would have the character say 'this condition check is a case of shape classification.'"
+  },
+  "revision_instructions": [
+    "No revisions needed; all must-preserve relations are present and correctly directed, forbidden terms are absent, and the mapping is clear and pedagogically sound."
+  ],
+  "final_status": "accept"
+}

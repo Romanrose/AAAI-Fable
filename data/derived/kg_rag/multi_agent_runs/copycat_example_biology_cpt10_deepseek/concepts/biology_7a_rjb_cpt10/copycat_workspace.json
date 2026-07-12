@@ -1,0 +1,524 @@
+{
+  "concept_id": "biology_7a_rjb_cpt10",
+  "target_domain": {
+    "mechanism_graph_source": "concept_card+dual_level_graphrag",
+    "node_count": 2,
+    "edge_count": 1
+  },
+  "candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "structures": [
+        {
+          "structure_id": "candidate_001:source_domain:001",
+          "structure_type": "SourceDomainStructure",
+          "content": {
+            "source_domain": "港口检疫站",
+            "selection_basis": "subject_rotating_domain_pool"
+          },
+          "strength": 0.72,
+          "salience": 0.82,
+          "support": [
+            "copycat.source_domain_pool",
+            "subject=biology"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeSourceDomainCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:node_correspondence:001",
+          "structure_type": "NodeCorrespondence",
+          "content": {
+            "mechanism_node_id": "n1",
+            "mechanism_text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+            "narrative_carrier": "港口检疫站中的入口条件核对",
+            "role": "入口条件核对"
+          },
+          "strength": 0.68,
+          "salience": 0.9,
+          "support": [
+            "mechanism_graph.nodes"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:node_correspondence:002",
+          "structure_type": "NodeCorrespondence",
+          "content": {
+            "mechanism_node_id": "n2",
+            "mechanism_text": "属于或连接到上位结构：生物的共同特征",
+            "narrative_carrier": "港口检疫站中的结果验收记录",
+            "role": "结果验收记录"
+          },
+          "strength": 0.68,
+          "salience": 0.9,
+          "support": [
+            "mechanism_graph.nodes"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:edge_correspondence:001",
+          "structure_type": "EdgeCorrespondence",
+          "content": {
+            "mechanism_edge_id": "e1",
+            "source": "n1",
+            "target": "n2",
+            "relation": "leads_to",
+            "narrative_relation": "先稳定港口检疫站中的入口条件核对，再推动港口检疫站中的结果验收记录",
+            "event_evidence": "先稳定港口检疫站中的入口条件核对，再推动港口检疫站中的结果验收记录"
+          },
+          "strength": 0.66,
+          "salience": 0.92,
+          "support": [
+            "mechanism_graph.edges",
+            "copycat.node_correspondences"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:edge_causality_repair:001",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "因此，先稳定港口检疫站中的入口条件核对，再推动港口检疫站中的结果验收记录，前后两步必须能在记录中互相承接。",
+            "position": 100,
+            "mapped_mechanism_edge_id": "e1",
+            "repair_target": "edge_causality"
+          },
+          "strength": 0.74,
+          "salience": 0.88,
+          "support": [
+            "candidate_001:edge_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "StrengthenEdgeCausalityCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:direction_repair:001",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "有人试着倒过来安排，却发现只有先稳定港口检疫站中的入口条件核对，再推动港口检疫站中的结果验收记录，后面的验收才可能接上先稳定港口检疫站中的入口条件核对，再推动港口检疫站中的结果验收记录。",
+            "position": 200,
+            "repair_target": "direction_preservation"
+          },
+          "strength": 0.72,
+          "salience": 0.84,
+          "support": [
+            "candidate_001:edge_correspondence:001",
+            "candidate_001:edge_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "RepairDirectionCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:conflict:001",
+          "structure_type": "ConflictStructure",
+          "content": {
+            "conflict": "港口检疫站里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+          },
+          "strength": 0.62,
+          "salience": 0.62,
+          "support": [
+            "copycat.source_domain",
+            "copycat.node_correspondences"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:event_fragment:001",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "主角先在港口检疫站中确认港口检疫站中的入口条件核对是否成立。",
+            "position": 1,
+            "mapped_mechanism_node_id": "n1",
+            "mapped_mechanism_text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。"
+          },
+          "strength": 0.67,
+          "salience": 0.75,
+          "support": [
+            "candidate_001:node_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:event_fragment:002",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "最后，众人用港口检疫站中的结果验收记录核对整条安排是否得到可靠结果。",
+            "position": 2,
+            "mapped_mechanism_node_id": "n2",
+            "mapped_mechanism_text": "属于或连接到上位结构：生物的共同特征"
+          },
+          "strength": 0.67,
+          "salience": 0.75,
+          "support": [
+            "candidate_001:node_correspondence:002"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:turning_point:001",
+          "structure_type": "TurningPointStructure",
+          "content": {
+            "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+          },
+          "strength": 0.63,
+          "salience": 0.7,
+          "support": [
+            "candidate_001:edge_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:resolution_state:001",
+          "structure_type": "ResolutionStructure",
+          "content": {
+            "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+          },
+          "strength": 0.63,
+          "salience": 0.68,
+          "support": [
+            "copycat.event_chain"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:alignment_evidence:001",
+          "structure_type": "AlignmentEvidence",
+          "content": {
+            "alignment_type": "node_alignments",
+            "concept_id": "n1",
+            "evidence": "小陈摇头：“流程上写的是先核对入口条件，再推动验收记录。前后必须能接上。”"
+          },
+          "strength": 1.0,
+          "salience": 0.76,
+          "support": [
+            "alignment"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "bootstrap_from_plan",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:alignment_evidence:002",
+          "structure_type": "AlignmentEvidence",
+          "content": {
+            "alignment_type": "node_alignments",
+            "concept_id": "n2",
+            "evidence": "小陈接过册子，按顺序补上验收记录，终于填完了整张通行牌。"
+          },
+          "strength": 1.0,
+          "salience": 0.76,
+          "support": [
+            "alignment"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "bootstrap_from_plan",
+          "candidate_id": "candidate_001"
+        },
+        {
+          "structure_id": "candidate_001:alignment_evidence:003",
+          "structure_type": "AlignmentEvidence",
+          "content": {
+            "alignment_type": "edge_alignments",
+            "concept_id": "e1",
+            "evidence": "小陈摇头：“流程上写的是先核对入口条件，再推动验收记录。前后必须能接上。”"
+          },
+          "strength": 1.0,
+          "salience": 0.76,
+          "support": [
+            "alignment"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "bootstrap_from_plan",
+          "candidate_id": "candidate_001"
+        }
+      ],
+      "slipnet_state": {
+        "activations": [],
+        "dominant_pressures": []
+      },
+      "temperature": 20.28,
+      "temperature_band": "stable",
+      "copycat_score": 1.5716,
+      "failure_summary": []
+    },
+    {
+      "candidate_id": "candidate_002",
+      "structures": [
+        {
+          "structure_id": "candidate_002:source_domain:001",
+          "structure_type": "SourceDomainStructure",
+          "content": {
+            "source_domain": "园圃值守所",
+            "selection_basis": "subject_rotating_domain_pool"
+          },
+          "strength": 0.72,
+          "salience": 0.82,
+          "support": [
+            "copycat.source_domain_pool",
+            "subject=biology"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeSourceDomainCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:node_correspondence:001",
+          "structure_type": "NodeCorrespondence",
+          "content": {
+            "mechanism_node_id": "n1",
+            "mechanism_text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+            "narrative_carrier": "园圃值守所中的入口条件核对",
+            "role": "入口条件核对"
+          },
+          "strength": 0.68,
+          "salience": 0.9,
+          "support": [
+            "mechanism_graph.nodes"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:node_correspondence:002",
+          "structure_type": "NodeCorrespondence",
+          "content": {
+            "mechanism_node_id": "n2",
+            "mechanism_text": "属于或连接到上位结构：生物的共同特征",
+            "narrative_carrier": "园圃值守所中的结果验收记录",
+            "role": "结果验收记录"
+          },
+          "strength": 0.68,
+          "salience": 0.9,
+          "support": [
+            "mechanism_graph.nodes"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:edge_correspondence:001",
+          "structure_type": "EdgeCorrespondence",
+          "content": {
+            "mechanism_edge_id": "e1",
+            "source": "n1",
+            "target": "n2",
+            "relation": "leads_to",
+            "narrative_relation": "先稳定园圃值守所中的入口条件核对，再推动园圃值守所中的结果验收记录",
+            "event_evidence": "先稳定园圃值守所中的入口条件核对，再推动园圃值守所中的结果验收记录"
+          },
+          "strength": 0.66,
+          "salience": 0.92,
+          "support": [
+            "mechanism_graph.edges",
+            "copycat.node_correspondences"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:edge_causality_repair:001",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "因此，先稳定园圃值守所中的入口条件核对，再推动园圃值守所中的结果验收记录，前后两步必须能在记录中互相承接。",
+            "position": 100,
+            "mapped_mechanism_edge_id": "e1",
+            "repair_target": "edge_causality"
+          },
+          "strength": 0.74,
+          "salience": 0.88,
+          "support": [
+            "candidate_002:edge_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "StrengthenEdgeCausalityCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:direction_repair:001",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "有人试着倒过来安排，却发现只有先稳定园圃值守所中的入口条件核对，再推动园圃值守所中的结果验收记录，后面的验收才可能接上先稳定园圃值守所中的入口条件核对，再推动园圃值守所中的结果验收记录。",
+            "position": 200,
+            "repair_target": "direction_preservation"
+          },
+          "strength": 0.72,
+          "salience": 0.84,
+          "support": [
+            "candidate_002:edge_correspondence:001",
+            "candidate_002:edge_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "RepairDirectionCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:conflict:001",
+          "structure_type": "ConflictStructure",
+          "content": {
+            "conflict": "园圃值守所里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+          },
+          "strength": 0.62,
+          "salience": 0.62,
+          "support": [
+            "copycat.source_domain",
+            "copycat.node_correspondences"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:event_fragment:001",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "主角先在园圃值守所中确认园圃值守所中的入口条件核对是否成立。",
+            "position": 1,
+            "mapped_mechanism_node_id": "n1",
+            "mapped_mechanism_text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。"
+          },
+          "strength": 0.67,
+          "salience": 0.75,
+          "support": [
+            "candidate_002:node_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:event_fragment:002",
+          "structure_type": "EventChainFragment",
+          "content": {
+            "event": "最后，众人用园圃值守所中的结果验收记录核对整条安排是否得到可靠结果。",
+            "position": 2,
+            "mapped_mechanism_node_id": "n2",
+            "mapped_mechanism_text": "属于或连接到上位结构：生物的共同特征"
+          },
+          "strength": 0.67,
+          "salience": 0.75,
+          "support": [
+            "candidate_002:node_correspondence:002"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:turning_point:001",
+          "structure_type": "TurningPointStructure",
+          "content": {
+            "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+          },
+          "strength": 0.63,
+          "salience": 0.7,
+          "support": [
+            "candidate_002:edge_correspondence:001"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:resolution_state:001",
+          "structure_type": "ResolutionStructure",
+          "content": {
+            "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+          },
+          "strength": 0.63,
+          "salience": 0.68,
+          "support": [
+            "copycat.event_chain"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "BuildEventChainFragmentCodelet",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:alignment_evidence:001",
+          "structure_type": "AlignmentEvidence",
+          "content": {
+            "alignment_type": "node_alignments",
+            "concept_id": "n1",
+            "evidence": "园圃值守所里，记录员、调度员和验收员各守其位。"
+          },
+          "strength": 1.0,
+          "salience": 0.76,
+          "support": [
+            "alignment"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "bootstrap_from_plan",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:alignment_evidence:002",
+          "structure_type": "AlignmentEvidence",
+          "content": {
+            "alignment_type": "node_alignments",
+            "concept_id": "n2",
+            "evidence": "最后，众人用结果验收记录核对整条安排"
+          },
+          "strength": 1.0,
+          "salience": 0.76,
+          "support": [
+            "alignment"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "bootstrap_from_plan",
+          "candidate_id": "candidate_002"
+        },
+        {
+          "structure_id": "candidate_002:alignment_evidence:003",
+          "structure_type": "AlignmentEvidence",
+          "content": {
+            "alignment_type": "edge_alignments",
+            "concept_id": "e1",
+            "evidence": "调度员这才发现，只有先完成入口条件核对，验收记录才能接上"
+          },
+          "strength": 1.0,
+          "salience": 0.76,
+          "support": [
+            "alignment"
+          ],
+          "conflicts": [],
+          "created_by_codelet": "bootstrap_from_plan",
+          "candidate_id": "candidate_002"
+        }
+      ],
+      "slipnet_state": {
+        "activations": [],
+        "dominant_pressures": []
+      },
+      "temperature": 20.28,
+      "temperature_band": "stable",
+      "copycat_score": 1.5716,
+      "failure_summary": []
+    }
+  ],
+  "best_candidate_id": "candidate_001",
+  "workspace_temperature": 20.28
+}

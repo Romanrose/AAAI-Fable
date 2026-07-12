@@ -1,0 +1,122 @@
+{
+  "concept_id": "biology_7a_rjb_cpt102",
+  "target_concept": "种子萌发的环境条件",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过条件牌上的温度、水分、空气条目，准确表达了种子萌发所需的外界条件，并强调了这些条件缺一不可，与概念核心机制完全一致。",
+    "implicitness": "正文未出现‘种子萌发’‘环境条件’等任何禁用术语，完全通过港口检疫流程隐喻，符合隐含性要求。",
+    "mapping_clarity": "条件牌对应三个环境条件，记录员核对、归入规则、验证证据等步骤清晰映射了概念机制图中的节点和边关系，因果链明确。",
+    "readability": "故事语言流畅自然，情节连贯，人物和场景设置合理，适合中学生阅读，无生硬说教。",
+    "pedagogical_value": "读者能通过故事理解种子萌发需要同时满足温度、水分、空气三个条件，且条件缺一不可，有助于掌握概念机制。",
+    "novelty": "港口检疫站作为源领域有一定新意，但整体结构仍属于‘流程核对’类寓言，新颖性中等偏上。"
+  },
+  "evidence": {
+    "faithfulness": "条件牌上列出温度、水分、空气条目，记录员逐一核对并归入规则，验证证据后才放行，完整呈现了三个必要条件。",
+    "implicitness": "全文未出现‘种子’‘萌发’‘环境条件’等词，仅用‘货物’‘条件牌’‘封存箱’等隐喻。",
+    "mapping_clarity": "条件牌→三个条件，记录员核对→验证条件，归入规则→概念分类，证据复查→实验验证，映射关系清晰。",
+    "readability": "故事有明确的人物、冲突、转折和结局，语言平实，情节推进自然。",
+    "pedagogical_value": "通过条件缺失导致货物变质的情节，直观展示了缺少任一条件的不良后果，强化了条件缺一不可的理解。",
+    "novelty": "港口检疫场景比常见的‘种子发芽’寓言更有新意，但‘流程核对’模式在寓言中仍较常见。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个‘条件过多’（如水分过多导致霉烂）的负面案例，以更全面展示条件平衡的重要性。",
+    "结尾可稍加一句总结性隐喻，如‘就像种子需要恰到好处的温度、水分和空气’，但需注意避免直接暴露概念名。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过条件牌上的温度、水分、空气条目，准确表达了种子萌发所需的外界条件，并强调了这些条件缺一不可，与概念核心机制完全一致。",
+      "implicitness": "正文未出现‘种子萌发’‘环境条件’等任何禁用术语，完全通过港口检疫流程隐喻，符合隐含性要求。",
+      "mapping_clarity": "条件牌对应三个环境条件，记录员核对、归入规则、验证证据等步骤清晰映射了概念机制图中的节点和边关系，因果链明确。",
+      "readability": "故事语言流畅自然，情节连贯，人物和场景设置合理，适合中学生阅读，无生硬说教。",
+      "pedagogical_value": "读者能通过故事理解种子萌发需要同时满足温度、水分、空气三个条件，且条件缺一不可，有助于掌握概念机制。",
+      "novelty": "港口检疫站作为源领域有一定新意，但整体结构仍属于‘流程核对’类寓言，新颖性中等偏上。"
+    },
+    "evidence": {
+      "faithfulness": "条件牌上列出温度、水分、空气条目，记录员逐一核对并归入规则，验证证据后才放行，完整呈现了三个必要条件。",
+      "implicitness": "全文未出现‘种子’‘萌发’‘环境条件’等词，仅用‘货物’‘条件牌’‘封存箱’等隐喻。",
+      "mapping_clarity": "条件牌→三个条件，记录员核对→验证条件，归入规则→概念分类，证据复查→实验验证，映射关系清晰。",
+      "readability": "故事有明确的人物、冲突、转折和结局，语言平实，情节推进自然。",
+      "pedagogical_value": "通过条件缺失导致货物变质的情节，直观展示了缺少任一条件的不良后果，强化了条件缺一不可的理解。",
+      "novelty": "港口检疫场景比常见的‘种子发芽’寓言更有新意，但‘流程核对’模式在寓言中仍较常见。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个‘条件过多’（如水分过多导致霉烂）的负面案例，以更全面展示条件平衡的重要性。",
+      "结尾可稍加一句总结性隐喻，如‘就像种子需要恰到好处的温度、水分和空气’，但需注意避免直接暴露概念名。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "biology_7a_rjb_cpt102",
+    "target_concept": "种子萌发的环境条件",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

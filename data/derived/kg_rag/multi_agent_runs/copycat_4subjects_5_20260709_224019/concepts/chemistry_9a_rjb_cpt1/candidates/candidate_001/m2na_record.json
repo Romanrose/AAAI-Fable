@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "物质",
+    "aliases": [],
+    "forbidden_terms": [
+      "物质"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:14991",
+        "source_name": "物质",
+        "target_name": "物质的变化",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "账房仓库里，记录员正对着新到的一批货物发愁。调度员推门进来，手里拿着几块通行牌，说：“这批货要入库，先得核对入口条件牌，不然后面没法登记。”记录员点头，翻开分段记录册的第一页，上面写着原始材料的名称和数量。他仔细对照了通行牌上的标记，确认无误后，才在册子上盖了章。\n\n验收员等在一旁，催促道：“快走下一步吧。”记录员却摇头：“不能急。入口条件核对好了，才能推动中间流程。”他指着册子上的第二栏，那里记录着货物按顺序经过的转化环节。调度员接过册子，走到仓库中央，那里有一排封存箱，每个箱子上都贴着标签。他按照记录册上的顺序，把货物逐一放入对应的箱子，每放一个，就在册子上勾一笔。\n\n验收员等得不耐烦，说：“不如先验收结果，再补中间步骤。”他拿起通行牌，想直接去核对封存箱的封条。调度员拦住他：“顺序不能颠倒。中间流程没完成，结果验收记录就没法接上。”记录员也附和：“登记规则不能破坏，每一步都得承接前一步。”\n\n验收员不信，趁两人不注意，偷偷跳过了中间环节，直接去打开一个封存箱。结果发现箱里的货物和通行牌上的标记对不上，封条也乱了。他慌了神，赶紧叫来记录员和调度员。记录员叹了口气，说：“你看，先稳定入口条件，再推动中间流程，最后才能验收结果。你倒过来，就全乱了。”\n\n三人重新核对。记录员先确认了入口条件牌，调度员按顺序推进中间流程，验收员最后核对结果验收记录。这次，所有记录都互相印证，货物顺利入库。记录员合上分段记录册，说：“条件、过程、结果，缺一不可，顺序更不能乱。”调度员和验收员点头，从此再也不敢跳过任何一步。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件牌",
+        "narrative_anchor": "入口条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "转化环节",
+        "narrative_anchor": "转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "入口条件核对好了，才能推动中间流程",
+        "narrative_anchor": "入口条件核对好了，才能推动中间流程",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+        "evidence": "中间流程没完成，结果验收记录就没法接上",
+        "narrative_anchor": "中间流程没完成，结果验收记录就没法接上",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

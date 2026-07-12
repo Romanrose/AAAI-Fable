@@ -1,0 +1,89 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代中国的一个村庄里，一位老农传授种稻技艺的故事",
+  "characters": [
+    "老农（智慧的长者）",
+    "大儿子（勤恳但保守）",
+    "二儿子（善于借助外力）"
+  ],
+  "objects": [
+    "稻田（代表作物生长的基础）",
+    "稻种（代表生命的起点）",
+    "风车（代表自然外力）",
+    "蜜蜂（代表昆虫外力）",
+    "稻穗（代表成果）"
+  ],
+  "conflict": "老农希望两个儿子都能学会让稻种发芽并结出稻穗的方法，但大儿子坚持只用自己的稻种，二儿子则想借用风车和蜜蜂来帮助。",
+  "event_chain": [
+    "老农拿出稻种，告诉两个儿子这是让稻田长出稻穗的关键第一步。",
+    "大儿子将稻种撒在自己田里，只靠自己的稻种互相接触。",
+    "二儿子将稻种撒在田里，并借助风车和蜜蜂将不同稻种混合。",
+    "大儿子的稻田里稻种发芽少，稻穗稀疏。",
+    "二儿子的稻田里稻种发芽多，稻穗饱满。",
+    "老农解释：让稻种接触并混合（类似传粉）是结出稻穗（类似受精）的前提。"
+  ],
+  "turning_point": "老农指出大儿子只靠自己稻种的方式（自花传粉）虽然可行但效率低，而二儿子借助外力（异花传粉）更有效，但无论哪种方式，都必须先让稻种接触混合，才能最终结出稻穗。",
+  "resolution_state": "两个儿子都明白了：无论用何种方式，让稻种接触混合（传粉）是结出稻穗（受精）的必经之路。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "让稻种接触混合的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大儿子只用自己的稻种互相接触的方式",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "二儿子借助风车和蜜蜂让不同稻种接触的方式",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "稻种接触混合后结出稻穗的过程",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大儿子只用自己的稻种互相接触的方式是一种让稻种接触混合的方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "二儿子借助风车和蜜蜂让不同稻种接触的方式是一种让稻种接触混合的方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "让稻种接触混合的过程使得后续能够结出稻穗",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现“传粉”、“花粉”、“花药”、“柱头”等生物学原词。",
+    "确保“让稻种接触混合”对应“传粉”，“结出稻穗”对应“受精”，但不可直接使用这些术语。",
+    "确保大儿子和二儿子的方式分别对应“自花传粉”和“异花传粉”，但不可直接提及。",
+    "确保“让稻种接触混合”是“结出稻穗”的前提，方向正确。",
+    "避免将老农的教导视为因果机制，仅作为故事背景。"
+  ],
+  "mapping_context_sha256": "f410822798847ccf1c53f421928715b2cdab1fedca7013e1bdbe0d894b8d2f86",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "20493f313907b63817e10fbd78e06f9ea71873de6bb712fef134455e836484b4"
+  }
+}

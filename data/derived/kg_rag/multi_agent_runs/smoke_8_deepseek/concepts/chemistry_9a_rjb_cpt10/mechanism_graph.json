@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:14999",
+    "normalized:edge:15075",
+    "normalized:edge:14995",
+    "normalized:edge:14992",
+    "normalized:edge:14993",
+    "normalized:edge:14994",
+    "normalized:edge:18222"
+  ]
+}

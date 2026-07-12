@@ -1,0 +1,645 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "焦点",
+  "concept_id": "physics_8a_rjb_cpt100",
+  "concept_definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt100",
+    "焦点"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt100",
+      "label": "Concept",
+      "name": "焦点",
+      "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "焦点\n平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt98",
+          "label": "Concept",
+          "name": "主光轴",
+          "definition": "通过透镜两个球面球心的直线，简称主轴。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt101",
+          "label": "Concept",
+          "name": "焦距",
+          "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "physics_8a_rjb_exp23",
+          "label": "Experiment",
+          "name": "凸透镜对光的偏折演示",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "physics_8a_rjb_exe12",
+          "label": "Exercise",
+          "name": "太阳光可视为平行光。如何利用阳光测量凸透镜的焦距？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "第一节 透镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 772,
+      "summary_chars": 342,
+      "path_chars": 0,
+      "retrieval_context_chars": 1114
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt100",
+    "concept_id": "physics_8a_rjb_cpt100",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt100",
+      "label": "Concept",
+      "name": "焦点",
+      "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "焦点\n平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "physics_8a_rjb_cpt100",
+        "label": "Concept",
+        "name": "焦点",
+        "properties": {
+          "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+          "importance": "掌握",
+          "retrieval_text": "焦点\nConcept\n平行于主光轴的光通过凸透镜后会聚到主轴上的一点。\n掌握"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:17246",
+          "source": "physics_8a_rjb_cpt98",
+          "source_name": "主光轴",
+          "target": "physics_8a_rjb_cpt100",
+          "target_name": "焦点",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:23045",
+          "source": "physics_8a_rjb_exp23",
+          "source_name": "凸透镜对光的偏折演示",
+          "target": "physics_8a_rjb_cpt100",
+          "target_name": "焦点",
+          "relation": "verifies",
+          "relation_description": "verifies",
+          "evidence": "",
+          "score": 0.95
+        },
+        {
+          "source_edge_id": "normalized:edge:19710",
+          "source": "physics_8a_rjb_cpt100",
+          "source_name": "焦点",
+          "target": "physics_8a_rjb_cpt101",
+          "target_name": "焦距",
+          "relation": "relates_to",
+          "relation_description": "relates_to",
+          "evidence": "",
+          "score": 0.9
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "焦点",
+          "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+          "formula": "",
+          "importance": "掌握"
+        },
+        "condition_summary": [
+          "[normalized:edge:17246] 主光轴 --prerequisites_for--> 焦点"
+        ],
+        "process_summary": [
+          "[normalized:edge:23045] 凸透镜对光的偏折演示 --verifies--> 焦点",
+          "[normalized:edge:19710] 焦点 --relates_to--> 焦距"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 3,
+        "candidate_edge_count": 3,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 772,
+        "summary_chars": 342,
+        "path_chars": 0,
+        "retrieval_context_chars": 1114
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "焦点的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "主光轴 --prerequisites_for--> 焦点",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:17246"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "凸透镜对光的偏折演示 --verifies--> 焦点",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:23045"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "焦点 --relates_to--> 焦距",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:19710"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:17246",
+        "normalized:edge:23045",
+        "normalized:edge:19710"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "焦点",
+        "physics_8a_rjb_cpt100"
+      ],
+      "coverage_targets": {
+        "required_step_count": 4,
+        "required_dependency_count": 3,
+        "must_cover_edge_ids": [
+          "normalized:edge:17246",
+          "normalized:edge:23045",
+          "normalized:edge:19710"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "physics_8a_rjb_cpt100",
+      "concept_id": "physics_8a_rjb_cpt100",
+      "story_language": "zh-CN",
+      "source_domain": "轨道调度台",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：主光轴 --prerequisites_for--> 这条隐藏规则",
+        "让中间的行动承接前后变化：凸透镜对光的偏折演示 --verifies--> 这条隐藏规则",
+        "让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 焦距",
+        "让中间的行动承接前后变化：平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：主光轴 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：凸透镜对光的偏折演示 --verifies--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 焦距"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "焦点"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "主光轴 --prerequisites_for--> 焦点",
+            "凸透镜对光的偏折演示 --verifies--> 焦点",
+            "焦点 --relates_to--> 焦距",
+            "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "保留变量之间的关系。",
+            "避免把自然规律写成角色主观意志。",
+            "保留方向、大小、条件变化。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "轨道调度台",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：主光轴 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：凸透镜对光的偏折演示 --verifies--> 这条隐藏规则",
+      "让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 焦距",
+      "让中间的行动承接前后变化：平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "焦点"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "主光轴 --prerequisites_for--> 焦点",
+          "凸透镜对光的偏折演示 --verifies--> 焦点",
+          "焦点 --relates_to--> 焦距",
+          "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：主光轴 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：凸透镜对光的偏折演示 --verifies--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 焦距"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "target concept",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "焦点"
+      ]
+    },
+    {
+      "concept_role": "core mechanism",
+      "story_evidence": "前后变化被调弦师按顺序记录、改动和复查。"
+    },
+    {
+      "concept_role": "prerequisites",
+      "concept_items": [
+        "主光轴"
+      ],
+      "story_evidence": "他先查看前面几道门槛是否都已到位。"
+    },
+    {
+      "concept_role": "related concepts",
+      "concept_items": [
+        "焦距"
+      ],
+      "story_evidence": "旁边的几件事看似相近，他却在{marker}上用不同符号区分。"
+    },
+    {
+      "concept_role": "outcomes",
+      "concept_items": [],
+      "story_evidence": "后来的痕迹与他的记录对上了，原来变化并非随意而来。"
+    },
+    {
+      "concept_role": "experiments",
+      "concept_items": [
+        "凸透镜对光的偏折演示"
+      ],
+      "story_evidence": "他请同伴重复一遍记录，自己只在边上检查哪些环节不能丢。"
+    },
+    {
+      "concept_role": "exercises",
+      "concept_items": [
+        "太阳光可视为平行光。如何利用阳光测量凸透镜的焦距？"
+      ],
+      "story_evidence": "故事结尾保留了可复查、可迁移的判断任务。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：不会说话的线索\n\n每到日落，轨道调度台的屋角都会留下一串奇怪迹象，调弦师把它们收进墨格里逐一对照。\n一天，他没有立刻下结论，而是把所见的前后变化分段写在墨格上。他先查看前面几道门槛是否都已到位。旁边的几件事看似相近，他却在{marker}上用不同符号区分。\n当旁人只看见表面迹象时，调弦师指着短短的红线说，先别跳过这一段：先确认一个起点条件是否具备：主光轴 --prerequisites_for--> 这条隐藏规则。\n调弦师在墨格角上画下短短的红线，因为这条线索指向：让中间的行动承接前后变化：凸透镜对光的偏折演示 --verifies--> 这条隐藏规则。\n第3次复查时，短短的红线旁的痕迹提醒他：让中间的行动承接前后变化：这条隐藏规则 --relates_to--> 焦距。\n他请同伴重复一遍记录，自己只在边上检查哪些环节不能丢。后来的痕迹与他的记录对上了，原来变化并非随意而来。新来的人请教时，调弦师只把墨格推过去，让对方按顺序自己查看。",
+  "rule_findings": {
+    "story_token_count": 331,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "dimension_rubrics": {
+    "faithfulness": {
+      "name_zh": "忠实度",
+      "core_question": "故事是否准确保留目标概念的核心机制、必要条件、因果关系和学科约束。",
+      "evidence_to_check": [
+        "concept_definition",
+        "subgraph_pack_summary.seed",
+        "subgraph_pack_summary.sections",
+        "structure_plan.event_chain",
+        "structure_plan.alignment_plan",
+        "alignment_table",
+        "story_body_to_evaluate_for_leakage"
+      ],
+      "score_5": "核心机制完整、因果链正确、没有概念误导；故事中的关键事件能支持概念定义和 KG 上下文。",
+      "score_4": "核心机制基本正确，仅有轻微遗漏或表述不够精确，但不会误导学习者。",
+      "score_3": "故事与概念相关，但只覆盖部分机制；存在明显简化，教学时需要补充解释。",
+      "score_2": "机制覆盖很弱，重要条件或因果关系缺失；读者可能学到片面的理解。",
+      "score_1": "故事传达的机制与目标概念冲突，或几乎没有表达目标概念。",
+      "hard_downgrade_rules": [
+        "If the story contradicts the concept definition, set concept_contradiction=true and faithfulness<=2.",
+        "If the main concept mechanism cannot be recovered from story events, set unmapped_core_mechanism=true and faithfulness<=3.",
+        "If the story only gives a moral lesson without the target mechanism, faithfulness<=2."
+      ]
+    },
+    "implicitness": {
+      "name_zh": "隐含性",
+      "core_question": "故事正文和标题是否避免直接暴露目标概念名、别名、禁用词或过强术语线索。",
+      "evidence_to_check": [
+        "forbidden_terms_for_story_body",
+        "story_body_to_evaluate_for_leakage",
+        "rule_findings.leaked_terms",
+        "rule_findings.title_leaks",
+        "rule_findings.soft_leakage_terms"
+      ],
+      "score_5": "正文和标题不出现目标概念名、别名、禁用词或明显术语；概念只通过情节结构隐含表达。",
+      "score_4": "没有硬泄露，但存在少量较弱的学科线索；仍需要通过故事推理才能猜到概念。",
+      "score_3": "没有直接写出概念名，但出现'概念/机制/定义/术语'等解释性词，隐含性一般。",
+      "score_2": "出现接近目标概念的强提示、别名变体或过于直白的解释，学习者几乎无需推理。",
+      "score_1": "正文或标题直接出现目标概念名、别名、禁用词，或直接说明'这个故事解释的是 X'。",
+      "hard_downgrade_rules": [
+        "If hard_leakage or title_leakage is true, implicitness=1.",
+        "If soft_leakage is true but no hard leakage appears, implicitness<=3.",
+        "Do not penalize target terms that appear only inside the JSON alignment metadata, unless they appear in the story body or title."
+      ]
+    },
+    "mapping_clarity": {
+      "name_zh": "映射清晰度",
+      "core_question": "目标概念中的实体、条件、关系、过程和结果是否能稳定映射到故事角色、物件、冲突、行动和结局。",
+      "evidence_to_check": [
+        "structure_plan",
+        "alignment_table",
+        "rule_findings.alignment_roles_present",
+        "rule_findings.missing_alignment_roles"
+      ],
+      "score_5": "alignment_table 明确覆盖目标概念、核心机制、前置条件、相关概念、结果/应用和验证环节；故事证据具体可定位。",
+      "score_4": "映射覆盖核心机制和主要因果链，但部分辅助角色或验证环节略简略。",
+      "score_3": "能看出大致类比关系，但映射表或故事证据较泛；部分重要关系需要读者自行补齐。",
+      "score_2": "只有零散角色或表层相似，核心机制和故事事件之间缺少稳定对应。",
+      "score_1": "没有有效 alignment table，或故事与概念结构无法建立对应。",
+      "hard_downgrade_rules": [
+        "If alignment_table is empty or only contains vague generic evidence, mapping_clarity<=2.",
+        "If target concept and core mechanism roles are both missing, set unmapped_core_mechanism=true.",
+        "If the mapping relies on post-hoc explanation not present in the story, mapping_clarity<=3."
+      ]
+    },
+    "readability": {
+      "name_zh": "可读性",
+      "core_question": "故事是否是自然、连贯、适合目标年级的中文短寓言。",
+      "evidence_to_check": [
+        "story_body_to_evaluate_for_leakage",
+        "rule_findings.story_token_count",
+        "grade",
+        "subject"
+      ],
+      "score_5": "中文自然流畅，叙事有起承转合，长度适中，目标年级学习者无需额外解释即可读懂故事情节。",
+      "score_4": "整体通顺，少量句子生硬或信息密度略高，但不影响阅读。",
+      "score_3": "基本可读，但情节跳跃、重复、过短或过长；需要教师辅助理解。",
+      "score_2": "语言明显机械，故事结构不完整，或大量堆砌抽象说明。",
+      "score_1": "文本不连贯、难以读懂、不是故事，或语言不符合要求。",
+      "hard_downgrade_rules": [
+        "If the story is mostly exposition rather than narrative, readability<=3.",
+        "If the story is too short to form a complete conflict-resolution arc, readability<=2.",
+        "Do not give readability>3 when the text is fluent but not age-appropriate."
+      ]
+    },
+    "pedagogical_value": {
+      "name_zh": "教学价值",
+      "core_question": "故事是否能帮助学习者理解、记忆、解释或迁移目标概念。",
+      "evidence_to_check": [
+        "concept_definition",
+        "subgraph_pack_summary.sections.prerequisites",
+        "subgraph_pack_summary.sections.outcomes",
+        "structure_plan.resolution_state",
+        "alignment_table",
+        "story_body_to_evaluate_for_leakage"
+      ],
+      "score_5": "故事能自然引导学习者形成正确机制理解，并支持事后回映射、课堂提问或迁移应用。",
+      "score_4": "有明确教学帮助，能辅助理解核心机制，但迁移或诊断误区的能力略弱。",
+      "score_3": "有启发性，但主要停留在记忆或兴趣层面；概念理解仍需教师补充。",
+      "score_2": "教学作用弱，故事好看但不能稳定帮助理解目标概念。",
+      "score_1": "可能造成误解，或完全没有教育价值。",
+      "hard_downgrade_rules": [
+        "If faithfulness<=2, pedagogical_value<=2.",
+        "If mapping_clarity<=2, pedagogical_value<=2.",
+        "If the story cannot support a follow-up question about the target mechanism, pedagogical_value<=3."
+      ]
+    },
+    "novelty": {
+      "name_zh": "新颖性",
+      "core_question": "故事是否避免常见寓言模板、同质化场景、套话结尾和同批次高度相似情节。",
+      "evidence_to_check": [
+        "story_body_to_evaluate_for_leakage",
+        "rule_findings.template_hits",
+        "rule_findings.template_similarity"
+      ],
+      "score_5": "场景、角色、冲突和解决方式具体且少见；没有明显模板句式，同批故事中区分度高。",
+      "score_4": "有一定新意，虽包含常见叙事结构，但关键设定和冲突较具体。",
+      "score_3": "可接受但普通；存在常见寓言套路或较泛化的场景。",
+      "score_2": "明显模板化，使用常见套话、相似角色或同批故事高度相似。",
+      "score_1": "几乎是通用模板替换概念，缺乏任何具体创意。",
+      "hard_downgrade_rules": [
+        "If template_like is true, novelty<=2.",
+        "If template_similarity>=0.82, novelty<=2.",
+        "If the story uses generic wise elder/village/everyone understood style closure, novelty<=3."
+      ]
+    }
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

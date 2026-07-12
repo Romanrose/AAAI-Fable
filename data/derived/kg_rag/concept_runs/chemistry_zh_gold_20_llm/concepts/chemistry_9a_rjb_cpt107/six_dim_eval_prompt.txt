@@ -1,0 +1,198 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "过氧化氢分解反应",
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "concept_definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt107",
+    "过氧化氢分解反应"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt107",
+      "label": "Concept",
+      "name": "过氧化氢分解反应",
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "aliases": [],
+      "examples": [
+        "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+      ],
+      "retrieval_text": "过氧化氢分解反应\n过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp17",
+          "label": "Experiment",
+          "name": "过氧化氢分解实验中二氧化锰的作用",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt107",
+    "concept_id": "chemistry_9a_rjb_cpt107",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt107",
+      "label": "Concept",
+      "name": "过氧化氢分解反应",
+      "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "aliases": [],
+      "examples": [
+        "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "过氧化氢分解反应"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "透明液体在常温下缓慢变少并产生水珠，加入黑色粉末后快速产生气泡，木条复燃，体现了液体分解生成水和助燃气体的过程。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "黑色粉末加入后液体剧烈冒泡，木条复燃；粉末单独或加入清水无变化；粉末反应后重量不变，说明它加速了分解但自身未消耗。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事区分了粉末与液体的混合（物理）与液体变成水和气体（化学）；粉末重量守恒；未出现化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个古老的城邦里，有一位年轻的账房先生叫阿诚。他负责管理城邦的宝库，宝库里存放着一种神奇的透明液体，据说能让枯萎的花朵重新绽放。但阿诚发现，这种液体放在瓶子里，时间久了就会慢慢变少，瓶底还会出现一些细小的水珠。\n\n一天，城邦的智者交给阿诚一包黑色的粉末，说：“把这包粉末加入液体中，看看会发生什么。”阿诚将粉末倒入一瓶液体中，只见液体立刻冒出大量气泡，像沸腾了一样。他赶紧用一根带火星的木条伸到瓶口，木条瞬间燃起明亮的火焰。阿诚惊讶极了，他从未见过液体如此剧烈地变化。\n\n阿诚想：难道这黑色粉末是液体的一部分？他试着把粉末单独放在碗里，粉末却毫无变化。他又把粉末加入清水中，水只是变浑浊，没有气泡，木条也不复燃。阿诚明白了：黑色粉末本身不会产生火焰，只有和那种液体在一起时，才会让液体快速变成水和另一种看不见的气体，而气体能让火星变成火焰。\n\n阿诚还发现，粉末用完后，液体就不再冒泡了。但当他倒出液体，发现粉末还留在瓶底，重量一点没少。原来，粉末只是帮助液体更快地变化，自己却没有消耗。阿诚把这个发现告诉了智者，智者笑着说：“你找到了让宝库液体更快发挥效力的秘诀。”\n\n从此，阿诚用这包粉末帮助城邦更快地制作让花朵绽放的灵液，城邦的花园四季如春。而阿诚也懂得了：有些变化看似缓慢，但只要找到合适的帮手，就能瞬间加速，而帮手本身却始终如一。",
+  "rule_findings": {
+    "story_token_count": 514,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "智者"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

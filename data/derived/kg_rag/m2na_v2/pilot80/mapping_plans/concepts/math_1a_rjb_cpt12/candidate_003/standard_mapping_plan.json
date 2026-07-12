@@ -1,0 +1,61 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt12",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个老农分梨的故事",
+  "characters": [
+    "老农",
+    "小儿子"
+  ],
+  "objects": [
+    "一筐梨",
+    "五个梨",
+    "两个梨"
+  ],
+  "conflict": "小儿子想要吃梨，但老农需要从已有的梨中分出一部分给儿子，剩下的梨要留作他用。",
+  "event_chain": [
+    "老农有一筐梨，他数了数，一共有五个梨。",
+    "小儿子跑来说想吃梨，老农决定从五个梨中拿出两个给儿子。",
+    "老农把两个梨给了小儿子，筐里剩下三个梨。"
+  ],
+  "turning_point": "老农决定从五个梨中拿出两个给儿子，即从一个数量中去掉一部分。",
+  "resolution_state": "小儿子得到了两个梨，老农的筐里还剩下三个梨，双方都满意。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农能数出并知道筐里有五个梨，且知道每个梨对应一个数量单位。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农从五个梨中拿出两个给儿子，筐里梨的数量减少。",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农能数出五个梨（条件）使得他能够执行从五个梨中拿出两个的动作（过程）。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'减法'、'减法的含义'等禁止词汇。",
+    "故事中'五个梨'和'两个梨'的数字需明确，以对应认识1到5的数量。",
+    "注意故事中'从一个数量中去掉一部分'的过程要清晰，避免混淆为加法或比较。"
+  ],
+  "mapping_context_sha256": "312e483443dfa31df95f381a76ff16faca2943c8a4c7cd094e1faee96bb4b1f7",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "e60d346c95a3543af4930d49be6453115516e4a16fc1f40fbb319302102e54f5"
+  }
+}

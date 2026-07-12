@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:17188",
+        "source_name": "长度",
+        "target_name": "使用刻度尺的方法",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:12429",
+        "source_name": "长度单位（米及其倍数、子倍数）",
+        "target_name": "长度",
+        "relation_semantic_role": "category_membership"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "滑道试验场的入口处立着一块铁牌，上面标着“前置条件”。记录员每天第一件事就是去核对这块牌上的数值，用一把铁尺比对着滑道起点和终点的标记线。调度员站在旁边看着，说：“你每天量来量去，不嫌烦吗？”记录员回答：“不量清楚，后面的登记册就没法填。滑道上的每一段距离都要先有数，我们才能知道下一步该走多少。”\n\n调度员不以为然。有一天他趁记录员不在，直接跳过核对，把分段记录册上的数字按自己估计填了进去，然后推开了第2道转化环节的门。那扇门后是封存箱，箱里放着通行牌，按规矩必须先登记再封存。调度员把通行牌扔进箱里，盖上盖子，等着验收员来签字。\n\n验收员来了，打开记录册一看，脸色沉了下来。“前置条件核对栏是空的，你这数字从哪来的？”调度员说：“我目测的，差不多。”验收员摇头：“差不多不是依据。”他把册子合上，指着铁牌说：“你得先让这个数成立，再谈后面的转化。顺序不能改。”\n\n记录员回来后，重新用铁尺量了一遍，把数值填进册子，又拿另一把尺复查了一次。调度员这才明白，滑道试验场里的每一步都像铁尺上的刻度，错一个格子，整条线就歪了。他老老实实按顺序来：先核对铁牌上的条件，再推动第2道转化环节，最后让验收员用记录册上的数字对照通行牌。三样东西一一对上了，封存箱才真正关上。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "滑道试验场中的入口条件核对",
+        "evidence": "核对这块牌上的数值",
+        "narrative_anchor": "核对这块牌上的数值",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "滑道试验场中的第2道转化环节",
+        "evidence": "第2道转化环节",
+        "narrative_anchor": "第2道转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "滑道试验场中的结果验收记录",
+        "evidence": "验收员用记录册上的数字对照通行牌",
+        "narrative_anchor": "验收员用记录册上的数字对照通行牌",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节",
+        "evidence": "不量清楚，后面的登记册就没法填",
+        "narrative_anchor": "不量清楚，后面的登记册就没法填",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "主角把这个具体现象归入“长度”这类更大的共同规则，而不是当成孤立事件",
+        "evidence": "滑道试验场里的每一步都像铁尺上的刻度",
+        "narrative_anchor": "滑道试验场里的每一步都像铁尺上的刻度",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

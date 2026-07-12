@@ -1,0 +1,80 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "中国书法中的汉字结构（楷书）",
+  "domain_rationale": "汉字由多个笔画组成，结构有左右、上下、包围等，类似长方体由面围成。某些汉字（如“口”）可视为特殊结构（正方体），而汉字按结构分类（如独体、合体）与按形状分类对应。汉字的组合（拼搭）成词以及笔画面积、书写公式能映射所有节点。",
+  "conflict": "书法是艺术，长方体是几何，但结构逻辑和分类关系高度相似。",
+  "event_chain": [
+    "书法家识别出不同结构类型的汉字（如上下结构、左右结构）",
+    "书法家按结构类型对汉字进行分类",
+    "书法家理解“口”字是特殊结构（方正、对称），类似正方体",
+    "书法家将多个汉字组合成词语或篇章",
+    "书法家计算单个汉字的笔画所占面积（类似表面积）",
+    "书法家运用结字公式（如黄金分割）安排笔画比例"
+  ],
+  "turning_point": "书法家发现“口”字虽然简单，但在不同汉字中作为部件出现，类似正方体在长方体中的普遍性。",
+  "resolution_state": "书法家掌握了汉字结构分类、组合成词和笔画比例计算。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "所有汉字（整体集合）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "“口”字（结构方正、完全对称的汉字）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "按汉字结构分类（独体、上下、左右等）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "组合汉字成词语或句子",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "汉字笔画所占面积（各笔画覆盖区域之和）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "结字公式（如重心、比例、疏密规则）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "所有汉字是分类的对象",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "“口”字是所有汉字的一种特殊形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "所有汉字与“口”字相关联（口是常用部件）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "所有汉字使计算笔画面积成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "所有汉字使应用结字公式成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "所有汉字使组合成词成为可能",
+      "direction_preserved": true
+    }
+  ]
+}

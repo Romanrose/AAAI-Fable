@@ -1,0 +1,111 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "math_1a_rjb_cpt19",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt19:definition",
+          "kg-node:math_1a_rjb_cpt19:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt20:definition",
+          "kg-node:math_1a_rjb_cpt20:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt21:definition",
+          "kg-node:math_1a_rjb_cpt21:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "把6或7分成两个部分，了解所有不同的分法，如7分成1和6、2和5、3和4",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt22:definition",
+          "kg-node:math_1a_rjb_cpt22:examples",
+          "kg-node:math_1a_rjb_cpt22:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19308"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19309"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16341"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数字6和7的认识"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "74909aa437aa41715285a3cd1de8f36c7f9139d952d9567e69fe6c375c6bca9e",
+    "retrieval_sha256": "ace358fc9fc8ad7ef0f1f23088cf2faecd397fb3e16262d927c9932ec6dd4d8d",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "d2076ce4e3c8cb90f4c62856ce4e6617389b6068ad40c4f1a713203fb3669f0e"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

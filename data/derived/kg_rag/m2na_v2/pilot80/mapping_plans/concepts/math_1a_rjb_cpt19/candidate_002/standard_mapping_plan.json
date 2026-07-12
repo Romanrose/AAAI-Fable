@@ -1,0 +1,82 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt19",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个农夫种果树的故事",
+  "characters": [
+    "农夫",
+    "果树"
+  ],
+  "objects": [
+    "果园",
+    "果实",
+    "篮子"
+  ],
+  "conflict": "农夫想要让果树结出更多果实，但不知道如何正确照料果树。",
+  "event_chain": [
+    "农夫观察果园里不同的果树，认识每棵树的果实数量和大小。",
+    "农夫把两棵树的果实合并到一个篮子里，发现总数是6或7个。",
+    "农夫从一棵树上摘掉一些果实，发现剩下的果实数量是6或7个。",
+    "农夫把6或7个果实分成两堆，尝试所有不同的分法。"
+  ],
+  "turning_point": "农夫意识到只有先认识每棵树的果实情况，才能正确进行合并、摘除和分堆。",
+  "resolution_state": "农夫学会了通过观察、合并、摘除和分堆来全面认识果树的果实数量。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫观察果园里不同的果树，认识每棵树的果实数量和大小",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫把两棵树的果实合并到一个篮子里，发现总数是6或7个",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫从一棵树上摘掉一些果实，发现剩下的果实数量是6或7个",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫把6或7个果实分成两堆，尝试所有不同的分法",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫观察果树后，开始合并果实",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫观察果树后，开始摘除果实",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫观察果树后，开始分堆果实",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数字6和7'等术语，仅用'6或7个'等数量描述。",
+    "所有事件链步骤均围绕同一棵或同一批果树，保持源域连贯。",
+    "边缘方向均从n1指向n2/n3/n4，故事中农夫必须先观察再行动。"
+  ],
+  "mapping_context_sha256": "8780a6362d746ae5b14848149d0f898409c58815dd993a2e7cc9f4eac6c8078a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "02da22c194f6a1586f2fa97a8b14078f04fadec9d2de275bc24aca4be19aa0bf"
+  }
+}

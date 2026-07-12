@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "Node n3 (收获方法) and edge e2 (种植方法需要先了解收获方法) are completely missing from the story, while node n5 (生长过程) and edge e4 (生长过程是先了解种植方法的前提) are also absent. This makes the mapping structurally incomplete compared to a realization that includes all nodes and edges. The story focuses on soil, seeds, and water but omits the 'harvest method' and 'growth process' components, which are essential in the mechanism graph."
+  },
+  "revision_instructions": [
+    "Add explicit mention of '收获方法' (harvest method) as a prerequisite for planting methods, e.g., '种植方法需要先了解收获方法，比如水稻何时收割、如何脱粒。'",
+    "Include '生长过程' (growth process) as a prerequisite, e.g., '种植方法需要先了解生长过程，比如水稻从育苗到抽穗的各个阶段。'",
+    "Ensure that the story covers all nodes and edges from the mechanism graph to meet the automatic metrics thresholds (node_coverage >= 0.8, edge_coverage >= 0.8)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

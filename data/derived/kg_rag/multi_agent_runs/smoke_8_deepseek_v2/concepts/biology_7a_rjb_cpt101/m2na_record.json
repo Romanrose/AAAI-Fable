@@ -1,0 +1,161 @@
+{
+  "id": "biology_7a_rjb_cpt101",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "种子萌发",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：种子萌发的环境条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "需要先满足或理解：种子萌发的自身条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "属于或连接到上位结构：种子萌发的环境条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n5",
+        "text": "属于或连接到上位结构：种子萌发的自身条件",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14133"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14134"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10772"
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10776"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "货轮靠港时，检疫员老郑带着实习生小陈登船抽样。船长递上报关单，满脸堆笑：“这批谷物质量很好，就是有些玉米粒被虫啃了几口，表皮有点小孔，里头绝对没问题。”\n\n小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观完好。他犹豫着看向老郑。\n\n老郑没急着表态，他把样本分成两组：一组外观完好，一组有虫蛀痕迹。然后分别放入检疫站的温湿度培养箱里。培养箱内温度恒定，湿度适宜，空气流通——这正是种子发芽所需的基本环境。\n\n三天后，结果出来了。外观完好的玉米粒大多长出了细白的胚根和嫩黄的胚芽，在培养皿中舒展生长。而有虫蛀痕迹的那一组，一颗也没有动静，内部早已干瘪发黑。\n\n老郑指着那些失败的样本对小陈说：“你看，环境条件我们都给足了——温度、水分、空气一样不少。但这些玉米粒的胚已经被虫蛀破坏了，就像房子的地基被掏空，外面再好的条件也没用。”\n\n小陈恍然大悟，在检疫记录本上认真写下：虫蛀玉米粒内部胚已死亡，自身条件不满足发芽要求，判定不合格，禁止入境作为种用。\n\n船长见状，不再争辩。老郑补充道：“外观完好的那些，我们还要进一步检测，没问题就可以放行。但这一批，确实不行。”\n\n小陈看着培养箱里截然不同的两组玉米粒，终于明白：发芽这件事，光有适宜的环境远远不够，种子自己也得是完整的、有活力的。两个条件，缺一个都不行。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "外观完好的玉米粒大多长出了细白的胚根和嫩黄的胚芽",
+        "evidence": "货轮靠港时，检疫员老郑带着实习生小陈登船抽样。",
+        "narrative_anchor": "货轮靠港时，检疫员老郑带着实习生小陈登船抽样。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "培养箱内温度恒定，湿度适宜，空气流通——这正是种子发芽所需的基本环境",
+        "evidence": "环境条件",
+        "narrative_anchor": "环境条件",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "有虫蛀痕迹的玉米粒内部胚已死亡，自身条件不满足发芽要求",
+        "evidence": "自身条件",
+        "narrative_anchor": "自身条件",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "培养箱的温湿度控制是环境条件的具象化",
+        "evidence": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+        "narrative_anchor": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n5",
+        "narrative_element": "玉米粒胚的完整性是自身条件的具象化",
+        "evidence": "他犹豫着看向老郑。",
+        "narrative_anchor": "他犹豫着看向老郑。",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "提供环境条件后，种子萌发过程得以发生",
+        "evidence": "船长递上报关单，满脸堆笑：“这批谷物质量很好，就是有些玉米粒被虫啃了几口，表皮有",
+        "narrative_anchor": "船长递上报关单，满脸堆笑：“这批谷物质量很好，就是有些玉米粒被虫啃了几口，表皮有",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "环境条件满足后，自身条件成为关键",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "自身条件不满足导致无法萌发，对应上位结构",
+        "evidence": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+        "narrative_anchor": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "环境条件满足后，自身条件成为关键，对应上位结构",
+        "evidence": "他犹豫着看向老郑。",
+        "narrative_anchor": "他犹豫着看向老郑。",
+        "narrative_source_concept_node_id": "n4",
+        "narrative_target_concept_node_id": "n5",
+        "direction_preserved": true,
+        "confidence": 0.8
+      }
+    ]
+  }
+}

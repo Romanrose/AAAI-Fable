@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n4",
+    "weakest_edge_id": "e3",
+    "distinguishing_reason": "The story successfully maps the sequential dependency of the laboratory oxygen preparation process (n1→n2→n3→n8) into a warehouse workflow, preserving the 'requires' relation for e2 and e7. However, it fails to map the 'is_a' relations (e1, e5, e6) and the 'requires' relations (e3, e4) that connect specific methods (n1, n6, n7) and concepts (n4, n5) to the general process (n2). The story treats all nodes as sequential steps, ignoring the hierarchical and categorical relations that distinguish specific instances from general categories. This makes the mapping weaker than a realization that would, for example, show that '入口条件核对' (n1) is a specific type of '第二道转化环节' (n2) or that '氧气' (n4) is a required input for the process."
+  },
+  "revision_instructions": [
+    "Incorporate the missing nodes n4 (氧气), n5 (分解反应), n6 (分解过氧化氢制取氧气), and n7 (加热氯酸钾制取氧气) into the story as distinct entities or processes within the warehouse setting, ensuring they are not mentioned by their original names.",
+    "Map the 'is_a' relations (e1, e5, e6) by showing that the specific methods (n1, n6, n7) are subtypes of the general process (n2), e.g., by having the record clerk categorize different types of checks under a broader procedure.",
+    "Map the 'requires' relations (e3, e4) by demonstrating that the general process (n2) depends on the presence of certain materials (n4) or conditions (n5), e.g., by requiring a specific '氧气' token or a '分解反应' approval before proceeding.",
+    "Ensure that the story's conflict and resolution explicitly involve the missing relations, not just the sequential order of steps."
+  ],
+  "final_status": "revise"
+}

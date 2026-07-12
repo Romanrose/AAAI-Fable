@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "subject": "biology",
+  "canonical_name": "种子萌发的环境条件",
+  "aliases": [],
+  "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+  "concept_type": "definition",
+  "forbidden_terms": [
+    "种子萌发的环境条件"
+  ]
+}

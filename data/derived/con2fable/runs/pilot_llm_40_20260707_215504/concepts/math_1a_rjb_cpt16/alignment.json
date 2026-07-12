@@ -1,0 +1,57 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "圆柱的定义",
+      "evidence": "上下两个底必须一模一样大，中间用一块钢板围起来，上下两个底圆心之间的垂直距离，就是柱子的高度",
+      "narrative_anchor": "上下两个底必须一模一样大，中间用一块钢板围起来，上下两个底圆心之间的垂直距离，就是柱子的高度"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "按形状分类（圆柱属于柱体）",
+      "evidence": "这根柱子能立得稳，靠的是三个关键：两个底一模一样大，侧面高度正好等于两个底之间的距离，这样才上下一样粗、笔直不歪",
+      "narrative_anchor": "上下一样粗、笔直不歪"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "旋转体（圆柱由矩形钢板卷制而成）",
+      "evidence": "他推来一块平整的矩形钢板，架在卷板机上。机器转动，钢板慢慢弯曲，老王一边加压一边盯着弧度，直到钢板首尾相接，形成一个圆筒",
+      "narrative_anchor": "钢板慢慢弯曲，直到钢板首尾相接，形成一个圆筒"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "与圆锥的关系",
+      "evidence": "柱子底部的圆环和墩子顶部的圆环尺寸不一样，直接放上去肯定不稳",
+      "narrative_anchor": "柱子底部的圆环和墩子顶部的圆环尺寸不一样"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "由圆柱定义引出形状分类",
+      "evidence": "两个底一模一样大，侧面高度正好等于两个底之间的距离，这样才上下一样粗、笔直不歪",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "两个底一模一样大，侧面高度正好等于两个底之间的距离，这样才上下一样粗、笔直不歪"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "由形状分类引出旋转体制作过程",
+      "evidence": "他推来一块平整的矩形钢板，架在卷板机上。机器转动，钢板慢慢弯曲，直到首尾相接，形成一个圆筒",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "钢板慢慢弯曲，直到首尾相接，形成一个圆筒"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "圆柱与圆锥的匹配关系",
+      "evidence": "柱子底部的圆环和墩子顶部的圆环尺寸不一样，直接放上去肯定不稳",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "柱子底部的圆环和墩子顶部的圆环尺寸不一样"
+    }
+  ]
+}

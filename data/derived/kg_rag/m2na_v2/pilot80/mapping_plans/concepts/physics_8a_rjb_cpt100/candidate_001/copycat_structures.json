@@ -1,0 +1,472 @@
+[
+  {
+    "structure_id": "candidate_001:target_concept:001",
+    "structure_type": "TargetConceptStructure",
+    "content": {
+      "concept_id": "physics_8a_rjb_cpt100",
+      "name": "焦点",
+      "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+      "forbidden_terms": [
+        "焦点"
+      ]
+    },
+    "strength": 0.9,
+    "salience": 1.0,
+    "support": [
+      "concept_card"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BootstrapTargetConceptCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:source_domain:001",
+    "structure_type": "SourceDomainStructure",
+    "content": {
+      "source_domain": "水渠调度站",
+      "selection_basis": "subject_rotating_domain_pool"
+    },
+    "strength": 0.72,
+    "salience": 0.82,
+    "support": [
+      "copycat.source_domain_pool",
+      "subject=physics"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:001",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:17246",
+      "source_id": "physics_8a_rjb_cpt98",
+      "source_name": "主光轴",
+      "target_id": "physics_8a_rjb_cpt100",
+      "target_name": "焦点",
+      "neighbor_name": "主光轴",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:002",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:23045",
+      "source_id": "physics_8a_rjb_exp23",
+      "source_name": "凸透镜对光的偏折演示",
+      "target_id": "physics_8a_rjb_cpt100",
+      "target_name": "焦点",
+      "neighbor_name": "凸透镜对光的偏折演示",
+      "kg_relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_relation:003",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:19710",
+      "source_id": "physics_8a_rjb_cpt100",
+      "source_name": "焦点",
+      "target_id": "physics_8a_rjb_cpt101",
+      "target_name": "焦距",
+      "neighbor_name": "焦距",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "outgoing"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:concept_role:001",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "object",
+      "role_label": "对象",
+      "role_type": "entity",
+      "source_evidence": "光"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:role_correspondence:001",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "object",
+      "role_label": "对象",
+      "role_type": "entity",
+      "story_role": "水渠调度站中的被观察和登记的对象",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_001:concept_role:001",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:001",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:17246",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认水渠调度站里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "主光轴",
+      "target_name": "焦点"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:001",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:002",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:23045",
+      "kg_relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "story_relation_type": "evidence_verification",
+      "story_relation": "主角用记录、比较和复查来检验这条判断，证据对上后才允许通过。",
+      "source_name": "凸透镜对光的偏折演示",
+      "target_name": "焦点"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:002",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:relation_correspondence:003",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:19710",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "焦点",
+      "target_name": "焦距"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_001:concept_relation:003",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:001",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "主光轴是通过透镜两个球面球心的直线",
+      "narrative_carrier": "水渠调度站中的入口条件核对",
+      "role": "入口条件核对"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:002",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点",
+      "narrative_carrier": "水渠调度站中的第2道转化环节",
+      "role": "第2道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:003",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "焦点",
+      "narrative_carrier": "水渠调度站中的第3道转化环节",
+      "role": "第3道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:node_correspondence:004",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n4",
+      "mechanism_text": "焦距",
+      "narrative_carrier": "水渠调度站中的结果验收记录",
+      "role": "结果验收记录"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:001",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "enables",
+      "kg_relation": "enables",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:002",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "produces",
+      "kg_relation": "produces",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:edge_correspondence:003",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "relation": "relates_to",
+      "kg_relation": "relates_to",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:conflict:001",
+    "structure_type": "ConflictStructure",
+    "content": {
+      "conflict": "水渠调度站里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+    },
+    "strength": 0.62,
+    "salience": 0.62,
+    "support": [
+      "copycat.source_domain",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:001",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "主角先在水渠调度站中确认水渠调度站中的入口条件核对是否成立。",
+      "position": 1,
+      "mapped_mechanism_node_id": "n1",
+      "mapped_mechanism_text": "主光轴是通过透镜两个球面球心的直线"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:002",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，水渠调度站中的第2道转化环节按前一步留下的条件继续推进。",
+      "position": 2,
+      "mapped_mechanism_node_id": "n2",
+      "mapped_mechanism_text": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:002"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:003",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，水渠调度站中的第3道转化环节按前一步留下的条件继续推进。",
+      "position": 3,
+      "mapped_mechanism_node_id": "n3",
+      "mapped_mechanism_text": "焦点"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:003"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:event_fragment:004",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "最后，众人用水渠调度站中的结果验收记录核对整条安排是否得到可靠结果。",
+      "position": 4,
+      "mapped_mechanism_node_id": "n4",
+      "mapped_mechanism_text": "焦距"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_001:node_correspondence:004"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:turning_point:001",
+    "structure_type": "TurningPointStructure",
+    "content": {
+      "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+    },
+    "strength": 0.63,
+    "salience": 0.7,
+    "support": [
+      "candidate_001:edge_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  },
+  {
+    "structure_id": "candidate_001:resolution_state:001",
+    "structure_type": "ResolutionStructure",
+    "content": {
+      "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+    },
+    "strength": 0.63,
+    "salience": 0.68,
+    "support": [
+      "copycat.event_chain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_001"
+  }
+]

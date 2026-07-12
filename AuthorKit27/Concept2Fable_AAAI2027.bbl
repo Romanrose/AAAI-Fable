@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Chen, Pan, and Li(2026)}]{chen2026storybox}
+Chen, Z.; Pan, R.; and Li, H. 2026.
+\newblock {StoryBox}: Collaborative Multi-Agent Simulation for Hybrid Bottom-Up
+  Long-Form Story Generation Using Large Language Models.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~40, 30359--30367.
+
+\bibitem[{Edge et~al.(2024)Edge, Trinh, Cheng, Bradley, Chao, Mody, Truitt, and
+  Larson}]{edge2024graphrag}
+Edge, D.; Trinh, H.; Cheng, N.; Bradley, J.; Chao, A.; Mody, A.; Truitt, S.;
+  and Larson, J. 2024.
+\newblock From Local to Global: A Graph {RAG} Approach to Query-Focused
+  Summarization.
+\newblock \emph{arXiv preprint arXiv:2404.16130}.
+
+\bibitem[{Feng et~al.(2025)Feng, Song, Wang, Chen, Bi, Huang, Jing, and
+  Yu}]{feng2025ssgen}
+Feng, Y.; Song, M.; Wang, J.; Chen, Z.; Bi, G.; Huang, M.; Jing, L.; and Yu, J.
+  2025.
+\newblock {SS-GEN}: A Social Story Generation Framework with Large Language
+  Models.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~39, 1300--1308.
+
+\bibitem[{Gentner(1983)}]{gentner1983structure}
+Gentner, D. 1983.
+\newblock Structure-Mapping: A Theoretical Framework for Analogy.
+\newblock \emph{Cognitive Science}, 7(2): 155--170.
+
+\bibitem[{Gentner and Markman(1997)}]{gentner1997structure}
+Gentner, D.; and Markman, A.~B. 1997.
+\newblock Structure Mapping in Analogy and Similarity.
+\newblock \emph{American Psychologist}, 52(1): 45--56.
+
+\bibitem[{Gick and Holyoak(1983)}]{gick1983schema}
+Gick, M.~L.; and Holyoak, K.~J. 1983.
+\newblock Schema Induction and Analogical Transfer.
+\newblock \emph{Cognitive Psychology}, 15(1): 1--38.
+
+\bibitem[{Glynn(2008)}]{glynn2008teaching}
+Glynn, S.~M. 2008.
+\newblock Making Science Concepts Meaningful to Students: Teaching with
+  Analogies.
+\newblock \emph{Four Decades of Research in Science Education: From Curriculum
+  Development to Quality Improvement}, 113--125.
+
+\bibitem[{Xu et~al.(2025)Xu, Li, Zhang, Lin, Zhu, Zheng, Wu, Zhao, Xu, and
+  Chen}]{xu2025amar}
+Xu, D.; Li, X.; Zhang, Z.; Lin, Z.; Zhu, Z.; Zheng, Z.; Wu, X.; Zhao, X.; Xu,
+  T.; and Chen, E. 2025.
+\newblock Harnessing Large Language Models for Knowledge Graph Question
+  Answering via Adaptive Multi-Aspect Retrieval-Augmentation.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~39, 25570--25578.
+
+\bibitem[{Yang et~al.(2022)Yang, Peng, Tian, and Klein}]{yang2022re3}
+Yang, K.; Peng, N.; Tian, Y.; and Klein, D. 2022.
+\newblock Re3: Generating Longer Stories With Recursive Reprompting and
+  Revision.
+\newblock In \emph{Proceedings of the 2022 Conference on Empirical Methods in
+  Natural Language Processing}, 4393--4479.
+
+\bibitem[{Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
+  Li, Xing, Zhang, Gonzalez, and Stoica}]{zheng2023judging}
+Zheng, L.; Chiang, W.-L.; Sheng, Y.; Zhuang, S.; Wu, Z.; Zhuang, Y.; Lin, Z.;
+  Li, Z.; Li, D.; Xing, E.~P.; Zhang, H.; Gonzalez, J.~E.; and Stoica, I. 2023.
+\newblock Judging {LLM}-as-a-Judge with {MT}-Bench and Chatbot Arena.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~36, 46595--46623.
+
+\end{thebibliography}

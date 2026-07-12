@@ -1,0 +1,497 @@
+[
+  {
+    "structure_id": "candidate_003:target_concept:001",
+    "structure_type": "TargetConceptStructure",
+    "content": {
+      "concept_id": "biology_7a_rjb_cpt101",
+      "name": "种子萌发",
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "forbidden_terms": [
+        "种子萌发"
+      ]
+    },
+    "strength": 0.9,
+    "salience": 1.0,
+    "support": [
+      "concept_card"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BootstrapTargetConceptCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:source_domain:001",
+    "structure_type": "SourceDomainStructure",
+    "content": {
+      "source_domain": "剧场后台",
+      "selection_basis": "subject_rotating_domain_pool"
+    },
+    "strength": 0.72,
+    "salience": 0.82,
+    "support": [
+      "copycat.source_domain_pool",
+      "subject=biology"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeSourceDomainCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:concept_relation:001",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:14133",
+      "source_id": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "neighbor_name": "种子萌发的环境条件",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:concept_relation:002",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:14134",
+      "source_id": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "neighbor_name": "种子萌发的自身条件",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:concept_relation:003",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:10772",
+      "source_id": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "neighbor_name": "种子萌发的环境条件",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:concept_relation:004",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "normalized:edge:10776",
+      "source_id": "biology_7a_rjb_cpt106",
+      "source_name": "种子萌发的自身条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "neighbor_name": "种子萌发的自身条件",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:concept_role:001",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "environment",
+      "role_label": "环境",
+      "role_type": "condition",
+      "source_evidence": "条件"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:concept_role:002",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "process",
+      "role_label": "过程",
+      "role_type": "process",
+      "source_evidence": "过程"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:role_correspondence:001",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "environment",
+      "role_label": "环境",
+      "role_type": "condition",
+      "story_role": "剧场后台中的入场前必须核对的条件牌",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_003:concept_role:001",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:role_correspondence:002",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "process",
+      "role_label": "过程",
+      "role_type": "process",
+      "story_role": "剧场后台中的按顺序推进的中间流程",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_003:concept_role:002",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:relation_correspondence:001",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:14133",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认剧场后台里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "种子萌发的环境条件",
+      "target_name": "种子萌发"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_003:concept_relation:001",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:relation_correspondence:002",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:14134",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认剧场后台里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "种子萌发的自身条件",
+      "target_name": "种子萌发"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_003:concept_relation:002",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:relation_correspondence:003",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:10772",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“种子萌发的环境条件”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "种子萌发的环境条件",
+      "target_name": "种子萌发"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_003:concept_relation:003",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:relation_correspondence:004",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "normalized:edge:10776",
+      "kg_relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "story_relation_type": "category_membership",
+      "story_relation": "主角把这个具体现象归入“种子萌发的自身条件”这类更大的共同规则，而不是当成孤立事件。",
+      "source_name": "种子萌发的自身条件",
+      "target_name": "种子萌发"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_003:concept_relation:004",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:node_correspondence:001",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "narrative_carrier": "剧场后台中的入口条件核对",
+      "role": "入口条件核对"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:node_correspondence:002",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "narrative_carrier": "剧场后台中的第2道转化环节",
+      "role": "第2道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:node_correspondence:003",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "narrative_carrier": "剧场后台中的结果验收记录",
+      "role": "结果验收记录"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:edge_correspondence:001",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e1",
+      "source": "n2",
+      "target": "n1",
+      "relation": "enables",
+      "kg_relation": "enables",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:edge_correspondence:002",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e2",
+      "source": "n3",
+      "target": "n1",
+      "relation": "enables",
+      "kg_relation": "enables",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:conflict:001",
+    "structure_type": "ConflictStructure",
+    "content": {
+      "conflict": "剧场后台里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+    },
+    "strength": 0.62,
+    "salience": 0.62,
+    "support": [
+      "copycat.source_domain",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:event_fragment:001",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "主角先在剧场后台中确认剧场后台中的入口条件核对是否成立。",
+      "position": 1,
+      "mapped_mechanism_node_id": "n1",
+      "mapped_mechanism_text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_003:node_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:event_fragment:002",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，剧场后台中的第2道转化环节按前一步留下的条件继续推进。",
+      "position": 2,
+      "mapped_mechanism_node_id": "n2",
+      "mapped_mechanism_text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_003:node_correspondence:002"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:event_fragment:003",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "最后，众人用剧场后台中的结果验收记录核对整条安排是否得到可靠结果。",
+      "position": 3,
+      "mapped_mechanism_node_id": "n3",
+      "mapped_mechanism_text": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_003:node_correspondence:003"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:turning_point:001",
+    "structure_type": "TurningPointStructure",
+    "content": {
+      "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+    },
+    "strength": 0.63,
+    "salience": 0.7,
+    "support": [
+      "candidate_003:edge_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_003"
+  },
+  {
+    "structure_id": "candidate_003:resolution_state:001",
+    "structure_type": "ResolutionStructure",
+    "content": {
+      "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+    },
+    "strength": 0.63,
+    "salience": 0.68,
+    "support": [
+      "copycat.event_chain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_003"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "concept_id": "math_1a_rjb_cpt25",
+  "target_concept": "6的加减法",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过小鸟、兔子、蝴蝶的数量变化，准确呈现了所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等，完全符合概念定义。",
+    "implicitness": "故事未直接提及'6的加减法'或概念ID，而是通过动物数量变化和观察记录隐含地表达加减关系，符合隐含性要求。",
+    "mapping_clarity": "故事中五加一、四加二、三加三得六，以及六减一、六减二、六减三得五、四、三的机制清晰映射到目标概念，且主角的推理过程明确。",
+    "readability": "语言简洁流畅，情节连贯，适合一年级学生理解，没有复杂词汇或句式。",
+    "pedagogical_value": "故事通过多次观察和记录，系统展示了6的加减法所有组合，并引导主角应用规则，具有很高的教学价值。",
+    "novelty": "将加减法融入谜城和六色门的奇幻设定，有一定创意，但类似动物数量变化的故事较常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可增加更多减法场景，如六只蝴蝶飞走四只、五只，以覆盖所有减法情形。",
+    "可加入一个角色提出错误猜测的情节，增强冲突和转折。"
+  ],
+  "rule_findings": {
+    "story_token_count": 608,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过小鸟、兔子、蝴蝶的数量变化，准确呈现了所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等，完全符合概念定义。",
+      "implicitness": "故事未直接提及'6的加减法'或概念ID，而是通过动物数量变化和观察记录隐含地表达加减关系，符合隐含性要求。",
+      "mapping_clarity": "故事中五加一、四加二、三加三得六，以及六减一、六减二、六减三得五、四、三的机制清晰映射到目标概念，且主角的推理过程明确。",
+      "readability": "语言简洁流畅，情节连贯，适合一年级学生理解，没有复杂词汇或句式。",
+      "pedagogical_value": "故事通过多次观察和记录，系统展示了6的加减法所有组合，并引导主角应用规则，具有很高的教学价值。",
+      "novelty": "将加减法融入谜城和六色门的奇幻设定，有一定创意，但类似动物数量变化的故事较常见，新颖性中等偏上。"
+    },
+    "revision_suggestions": [
+      "可增加更多减法场景，如六只蝴蝶飞走四只、五只，以覆盖所有减法情形。",
+      "可加入一个角色提出错误猜测的情节，增强冲突和转折。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

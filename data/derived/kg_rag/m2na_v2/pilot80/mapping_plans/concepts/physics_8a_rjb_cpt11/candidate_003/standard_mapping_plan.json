@@ -1,0 +1,122 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位农夫用不同方式运送货物到集市的故事",
+  "characters": [
+    "农夫",
+    "老牛",
+    "快马",
+    "骡子"
+  ],
+  "objects": [
+    "货物",
+    "路程",
+    "时间",
+    "集市"
+  ],
+  "conflict": "农夫需要将货物尽快送到集市，但不同牲畜的速度不同，且路况变化导致速度不稳定，农夫需要选择合适的方式并理解速度变化。",
+  "event_chain": [
+    "农夫决定用老牛运送货物，老牛以恒定速度走完全程，但速度较慢。",
+    "农夫改用快马，但快马时快时慢，导致平均速度与老牛不同。",
+    "农夫观察快马在某一瞬间的奔跑速度，发现其瞬时速度变化很大。",
+    "农夫用骡子拉车，并记录不同时间的位置，绘制出速度随时间变化的图像。",
+    "通过图像，农夫理解了速度如何影响到达时间，并最终选择最合适的运输方式。"
+  ],
+  "turning_point": "农夫通过记录位置和时间，绘制出速度-时间图像，从而直观看到速度变化规律。",
+  "resolution_state": "农夫掌握了速度的概念及其变化规律，能够根据路况和需求选择最佳运输方式。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "货物运输的快慢和方向（即牲畜的移动速率和方向）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老牛走完全程的平均速度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老牛以恒定速度直线行走",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "快马速度时快时慢的直线奔跑",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "快马在某一瞬间的奔跑速度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "农夫记录的骡子速度随时间变化的图表",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "农夫用绳子测量位置并记录时间，计算速度并画图",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老牛的平均速度是货物运输速度的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老牛匀速行走是货物运输速度的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "快马的瞬时速度是货物运输速度的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "农夫用绳子测量位置并记录时间的过程验证了货物运输速度的概念",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "货物运输速度的概念使得农夫能够理解老牛匀速行走",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "货物运输速度的概念使得农夫能够理解快马变速奔跑",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "货物运输速度的概念使得农夫能够绘制速度-时间图表",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'速度'、'velocity'等禁止词汇。",
+    "所有节点和边均已映射，且方向保持。",
+    "故事载体使用单一源域（农夫运货），避免无关隐喻。",
+    "课程桥接上下文（如教学顺序）未作为因果机制处理。"
+  ],
+  "mapping_context_sha256": "4f4517c0d1440695e4bdb25ffa3c8fb053976619fd2094573c7a8991498c530f",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "37028264cf3d51e3372699105fba4865674be7d0c96fd0756da2126d252b4c85"
+  }
+}

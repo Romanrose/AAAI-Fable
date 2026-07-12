@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "滑道弯道的弧长、内外径等空间延伸程度，必须通过标准测量工具（卷尺）来获得精确数值，才能发现设计偏差并进行修正。",
+      "evidence": "测量弯道的内外径，又量了弧长",
+      "narrative_anchor": "测量弯道的内外径，又量了弧长",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

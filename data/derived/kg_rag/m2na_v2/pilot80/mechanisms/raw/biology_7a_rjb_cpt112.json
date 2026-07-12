@@ -1,0 +1,134 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt112",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "雄蕊",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:name",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "花",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "花药",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "花粉",
+        "weight": 0.8,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "雄性生殖结构",
+        "weight": 0.9,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ],
+        "canonicalized_from": "contains"
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt112:definition",
+          "kg-node:biology_7a_rjb_cpt112:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "雄蕊"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "d87de7d63e744fcf4b25465a0ac2b2777498700d738d4a104c83686bfd295c39",
+    "retrieval_sha256": "4cf7bd2aa828187a3adef6b6f979fe28af658e79d6a803496c84dea06cfbfe58",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "6d6bfc9104597fa2b406a81ca15998ba1a61e59674eefb7bd5be42cebe22a1e1"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

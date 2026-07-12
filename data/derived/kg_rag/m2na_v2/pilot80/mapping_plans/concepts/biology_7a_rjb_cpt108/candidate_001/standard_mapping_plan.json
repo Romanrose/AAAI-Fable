@@ -1,0 +1,114 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的春耕故事",
+  "characters": [
+    "老农",
+    "田地",
+    "种子",
+    "水分",
+    "养分",
+    "根",
+    "茎",
+    "叶"
+  ],
+  "objects": [
+    "种子",
+    "水分",
+    "养分",
+    "根",
+    "茎",
+    "叶",
+    "田地",
+    "老农"
+  ],
+  "conflict": "田地干旱，种子无法吸收水分，导致后续生长停滞。",
+  "event_chain": [
+    "老农给田地浇水，种子吸收水分。",
+    "种子吸收水分后，老农施加肥料，养分被转运给根、茎、叶的雏形。",
+    "根突破种皮，扎入土壤。",
+    "茎向上伸长。",
+    "叶发育成完整的叶片。"
+  ],
+  "turning_point": "老农浇水后，种子开始吸收水分。",
+  "resolution_state": "种子成功萌发，长成幼苗。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "种子吸收水分",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "养分被转运给根、茎、叶的雏形",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "根突破种皮，扎入土壤",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "茎向上伸长",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "叶发育成完整的叶片",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "种子萌发",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "种子吸收水分后，养分被转运",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "养分被转运后，根突破种皮",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "养分被转运后，茎向上伸长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "养分被转运后，叶发育",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "种子萌发与种子吸收水分相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'种子萌发的过程'等禁止术语。",
+    "所有机制节点和边均已映射，方向保留。",
+    "未使用课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "59d4e1389fa48c761dfbf4cd82936577050feea52a41f37ea3d4cade544d1d7b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "a88e426e137921c6f8dc18ed16acf4ef774644add77bc588410beffc25ac4187"
+  }
+}

@@ -1,0 +1,16 @@
+**pass_fail**: FAIL
+
+**missing_roles**: None. All six roles are explicitly covered.
+
+**unsupported_story_parts**:  
+- The compost pile’s “warmth” is described as “a reminder that all living things consume and release,” but this is not clearly tied to respiration or any related concept in the target concept structure. It feels decorative rather than functional.  
+- The “weeds competing for light” is mentioned but never integrated into the story’s logic or outcomes; it remains an isolated observation.
+
+**coherence_issues**:  
+- The “experiment” (covering a plant with a dark cloth) and the “exercise” (pondweed jar at varying distances) are both presented as tests of light dependence, but they are not clearly distinguished in purpose or method. The story treats both as demonstrations of the same mechanism, blurring the intended distinction between a controlled experiment and a practice exercise.  
+- The claim that “the process of capturing light energy was the only source of this visible life” is an overstatement: the story shows that light is necessary for starch production and oxygen bubbles, but does not establish that photosynthesis is the *only* source of life energy in the garden (e.g., the compost pile suggests other energy pathways).
+
+**suggested_revision**:  
+- Remove or explicitly connect the compost pile to respiration as a related concept (e.g., “The compost pile released CO₂, which the plants used in photosynthesis”).  
+- Clarify the distinction: the dark-cloth test is an *experiment* (manipulating one variable to test a hypothesis), while the pondweed distance test is an *exercise* (applying known principles to predict and measure outcomes). Rewrite the exercise section to emphasize prediction and measurement rather than discovery.  
+- Avoid the absolute claim “only source”; instead say “the primary source of energy for the plants.”

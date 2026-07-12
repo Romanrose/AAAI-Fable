@@ -1,0 +1,371 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "古代工匠制作铁器",
+      "domain_rationale": "古代工匠制作铁器需经历缓慢的氧化过程（生锈），与缓慢氧化的概念高度对应，且涉及不同阶段（氧化反应、燃烧等）的类比。",
+      "conflict": "铁器的缓慢生锈与燃烧的剧烈氧化在速度、现象上形成对比，映射缓慢氧化与燃烧的差异。",
+      "event_chain": [
+        "工匠将铁矿石投入炉中加热，铁与氧气发生缓慢氧化，表面逐渐形成铁锈。",
+        "铁锈继续在潮湿空气中缓慢氧化，铁器逐渐腐蚀。",
+        "工匠将铁器置于炭火中加热至通红，铁与氧气发生剧烈氧化，产生火焰和热量。",
+        "铁器在燃烧中形成氧化铁皮，脱落。"
+      ],
+      "turning_point": "从缓慢生锈到剧烈燃烧的转变，对应缓慢氧化与燃烧的对比。",
+      "resolution_state": "铁器最终完全氧化成铁锈或氧化铁皮，完成氧化过程。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "铁器在潮湿空气中缓慢生锈",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "铁与氧气发生化学反应生成铁锈",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "铁在炭火中剧烈燃烧",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "铁器长期暴露在空气中逐渐腐蚀",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "空气中的氧气",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "铁器、充足空气、达到燃点",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "火焰和大量热",
+          "mapping_type": "outcome"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "铁锈缓慢形成，无明显发热发光",
+          "mapping_type": "outcome"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "铁器在潮湿空气中缓慢生锈是一种铁与氧气的化学反应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "铁在炭火中剧烈燃烧是一种铁与氧气的化学反应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "铁器长期暴露在空气中逐渐腐蚀是一种缓慢氧化",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "空气中的氧气是铁与氧气反应的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "空气中的氧气是铁剧烈燃烧的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "空气中的氧气是铁器长期腐蚀的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "铁器、充足空气、达到燃点是铁剧烈燃烧所必需的条件",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e8",
+          "story_relation": "铁剧烈燃烧产生火焰和大量热",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e9",
+          "story_relation": "铁器缓慢生锈产生铁锈，无明显发热发光",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e10",
+          "story_relation": "铁器缓慢生锈与铁剧烈燃烧相关",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.92,
+      "temperature": 8.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 0.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "古代酿酒过程",
+      "domain_rationale": "酿酒中粮食缓慢发酵（类似缓慢氧化）与蒸馏（类似剧烈燃烧）形成对比，且发酵和燃烧均涉及氧气作用。",
+      "conflict": "发酵缓慢、无明火，而蒸馏需加热至沸腾，现象对比明显，映射缓慢氧化与燃烧的差异。",
+      "event_chain": [
+        "粮食在酒曲作用下缓慢发酵，产生酒精，无明显放热发光。",
+        "发酵过程中，粮食与空气中氧气缓慢反应，生成有机酸。",
+        "将发酵液加热至沸腾，酒精蒸汽与氧气剧烈反应，燃烧产生蓝色火焰。",
+        "燃烧后产生水和二氧化碳。"
+      ],
+      "turning_point": "从发酵到蒸馏加热的转变，对应缓慢氧化到燃烧的转变。",
+      "resolution_state": "最终酒精完全燃烧，氧化过程结束。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "粮食在酒曲作用下缓慢发酵",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "粮食与氧气发生的化学反应",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "酒精蒸汽在空气中剧烈燃烧",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "粮食发酵过程中缓慢消耗氧气",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "空气中的氧气",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "酒精蒸汽、充足空气、达到燃点",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "蓝色火焰和大量热",
+          "mapping_type": "outcome"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "发酵过程缓慢，无明显放热发光",
+          "mapping_type": "outcome"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "粮食缓慢发酵是一种粮食与氧气的化学反应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "酒精蒸汽剧烈燃烧是一种酒精与氧气的化学反应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "粮食发酵缓慢消耗氧气是一种缓慢氧化",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "空气中的氧气是粮食化学反应的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "空气中的氧气是酒精燃烧的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "空气中的氧气是粮食发酵消耗氧气的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "酒精蒸汽、充足空气、达到燃点是酒精剧烈燃烧所必需的条件",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e8",
+          "story_relation": "酒精剧烈燃烧产生蓝色火焰和大量热",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e9",
+          "story_relation": "粮食缓慢发酵产生酒精，无明显放热发光",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e10",
+          "story_relation": "粮食缓慢发酵与酒精剧烈燃烧相关",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.92,
+      "temperature": 8.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 0.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "古代铜器氧化变色",
+      "domain_rationale": "铜器在空气中缓慢氧化生成铜绿（类似缓慢氧化），与加热铜器使其剧烈氧化形成对比，映射缓慢氧化与燃烧的差异。",
+      "conflict": "铜器自然生锈缓慢、无光热，而加热铜器时铜与氧气剧烈反应生成黑色氧化铜并放热，现象对比明显。",
+      "event_chain": [
+        "铜剑在潮湿空气中缓慢氧化，表面逐渐生成绿色铜锈。",
+        "铜锈继续缓慢氧化，铜器逐渐腐蚀。",
+        "将铜剑置于炉火中加热至红热，铜与氧气剧烈反应，表面生成黑色氧化铜。",
+        "反应放出大量热，铜剑表面发红。"
+      ],
+      "turning_point": "从自然生锈到加热氧化的转变，对应缓慢氧化到燃烧的转变。",
+      "resolution_state": "铜器最终完全氧化成铜锈或氧化铜，氧化过程完成。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "铜剑在潮湿空气中缓慢生锈",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "铜与氧气发生化学反应生成铜锈",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "铜在炉火中剧烈氧化生成黑色氧化铜",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "铜剑长期暴露在空气中逐渐腐蚀",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "空气中的氧气",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "铜剑、充足空气、达到红热温度",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n7",
+          "story_carrier": "大量热和红光",
+          "mapping_type": "outcome"
+        },
+        {
+          "mechanism_node_id": "n8",
+          "story_carrier": "铜锈缓慢形成，无明显发热发光",
+          "mapping_type": "outcome"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "铜剑在潮湿空气中缓慢生锈是一种铜与氧气的化学反应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "铜在炉火中剧烈氧化是一种铜与氧气的化学反应",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "铜剑长期暴露在空气中逐渐腐蚀是一种缓慢氧化",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "空气中的氧气是铜与氧气反应的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "空气中的氧气是铜剧烈氧化的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "空气中的氧气是铜剑长期腐蚀的一部分",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "铜剑、充足空气、达到红热温度是铜剧烈氧化所必需的条件",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e8",
+          "story_relation": "铜剧烈氧化产生大量热和红光",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e9",
+          "story_relation": "铜剑缓慢生锈产生铜锈，无明显发热发光",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e10",
+          "story_relation": "铜剑缓慢生锈与铜剧烈氧化相关",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.92,
+      "temperature": 8.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 0.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  }
+]

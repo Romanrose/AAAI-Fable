@@ -1,0 +1,238 @@
+{
+  "id": "chemistry_9a_rjb_cpt10",
+  "method": "con2fable",
+  "concept": {
+    "name": "沸点",
+    "aliases": [],
+    "forbidden_terms": [
+      "沸点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：大气压强",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：条件对物质性质的影响",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：氧气的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：水的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：铁的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m7",
+        "text": "与相关概念保持可解释关系：铝的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：大气压强",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14999"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15075"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14995"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14992"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14993"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14994"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18222"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老张的“云端厨房”开在海拔四千米的高原小镇上，窗外是连绵的雪山，空气稀薄得像被抽走了什么。\n\n开业第一天，老张信心满满地烧了一大锅水，准备给客人煮土豆炖牛肉。可水很快就咕嘟咕嘟冒起了大泡，看起来开得热闹。老张把土豆丢进去，煮了足足一个小时，捞出来一咬——还是硬邦邦的，中间带着生涩。牛肉更是纹丝不动，嚼都嚼不动。\n\n客人等了半天，端上来的菜半生不熟，气得直拍桌子：“你这厨子会不会做饭？”\n\n老张满头大汗，又加了一把火，锅里的水翻得更厉害了，可土豆依然顽固。他盯着墙上的气压计，指针指在一个很低的位置。老张想起年轻时在平原学厨，师父说过，水烧开的温度不是固定的，要看气压。气压越低，水沸腾的温度就越低。这里的气压只有平原的一半，水不到八十度就“开”了，可这点温度根本对付不了土豆和牛肉。\n\n老张明白了，不是火不够大，是这里的空气太稀薄，水根本达不到能煮熟食物的温度。\n\n他翻遍了厨房，从角落找出一个老式气压锅。这锅密封严实，盖上盖子后，锅里的蒸汽跑不出去，压强就会越来越高。老张把土豆和水放进去，拧紧盖子，放在火上。不一会儿，锅上的小阀门开始嘶嘶作响，锅内的压力越来越大。老张盯着气压计，指针慢慢爬升，超过了平原的标准。\n\n二十分钟后，他打开锅，土豆已经软糯得像要化开。牛肉也酥烂得用筷子一夹就散。老张又试了最难煮的豆子，平时泡一夜都煮不烂，在气压锅里只用了半小时，就变得绵软香甜。\n\n从此，“云端厨房”的招牌菜重新赢得了顾客的喜爱。老张在厨房里贴了一张纸条：“记住，不是水不够烫，是这里的空气太稀薄。”他明白了一个道理：有些东西看似不变，其实完全取决于它所在的环境。换一个环境，那个让一切发生改变的关键节点，也就跟着变了。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "沸点的定义及其随气压变化",
+        "evidence": "水烧开的温度不是固定的，要看气压。气压越低，水沸腾的温度就越低。这里的气压只有平原的一半，水不到八十度就‘开’了",
+        "narrative_anchor": "水烧开的温度不是固定的，要看气压。气压越低，水沸腾的温度就越低。这里的气压只有平原的一半，水不到八十度就‘开’了"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "大气压强作为前置条件",
+        "evidence": "气压计，指针指在一个很低的位置。这里的气压只有平原的一半",
+        "narrative_anchor": "气压计，指针指在一个很低的位置。这里的气压只有平原的一半"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "条件对物质性质的影响",
+        "evidence": "不是水不够烫，是这里的空气太稀薄。有些东西看似不变，其实完全取决于它所在的环境",
+        "narrative_anchor": "不是水不够烫，是这里的空气太稀薄。有些东西看似不变，其实完全取决于它所在的环境"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "氧气的熔点和沸点（未直接提及，但作为相关概念无直接证据）",
+        "evidence": "氧气的熔点和沸点（未直接提及，但作为相关概念无直接证据）"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "水的熔点和沸点",
+        "evidence": "水不到八十度就‘开’了",
+        "narrative_anchor": "水不到八十度就‘开’了"
+      },
+      {
+        "concept_node_id": "m6",
+        "narrative_element": "铁的熔点和沸点（未直接提及）",
+        "evidence": "铁的熔点和沸点（未直接提及）"
+      },
+      {
+        "concept_node_id": "m7",
+        "narrative_element": "铝的熔点和沸点（未直接提及）",
+        "evidence": "铝的熔点和沸点（未直接提及）"
+      },
+      {
+        "concept_node_id": "m8",
+        "narrative_element": "大气压强",
+        "evidence": "气压计，指针指在一个很低的位置。这里的气压只有平原的一半",
+        "narrative_anchor": "气压计，指针指在一个很低的位置。这里的气压只有平原的一半"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "沸点定义引出大气压强条件",
+        "evidence": "水烧开的温度不是固定的，要看气压。气压越低，水沸腾的温度就越低。这里的气压只有平原的一半",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "水烧开的温度不是固定的，要看气压。气压越低，水沸腾的温度就越低。这里的气压只有平原的一半"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "大气压强影响条件对物质性质的影响",
+        "evidence": "不是水不够烫，是这里的空气太稀薄。有些东西看似不变，其实完全取决于它所在的环境",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "不是水不够烫，是这里的空气太稀薄。有些东西看似不变，其实完全取决于它所在的环境"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "条件影响引出水的沸点（跳过氧气）",
+        "evidence": "水不到八十度就‘开’了",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "水不到八十度就‘开’了"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "水的沸点引出其他物质沸点（无直接证据）",
+        "evidence": "水的沸点引出其他物质沸点（无直接证据）",
+        "narrative_source_concept_node_id": "m5",
+        "narrative_target_concept_node_id": "m6",
+        "direction_preserved": true
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "铁的沸点引出铝的沸点（无直接证据）",
+        "evidence": "铁的沸点引出铝的沸点（无直接证据）",
+        "narrative_source_concept_node_id": "m6",
+        "narrative_target_concept_node_id": "m7",
+        "direction_preserved": true
+      },
+      {
+        "concept_edge_id": "e6",
+        "narrative_relation": "铝的沸点引出大气压强（无直接证据）",
+        "evidence": "铝的沸点引出大气压强（无直接证据）",
+        "narrative_source_concept_node_id": "m7",
+        "narrative_target_concept_node_id": "m8",
+        "direction_preserved": true
+      },
+      {
+        "concept_edge_id": "e7",
+        "narrative_relation": "大气压强作为相关概念（无直接证据）",
+        "evidence": "大气压强作为相关概念（无直接证据）",
+        "narrative_source_concept_node_id": "m8",
+        "narrative_target_concept_node_id": "m1",
+        "direction_preserved": false
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "concept_type": "entity",
+    "generation_priority": "gold"
+  }
+}

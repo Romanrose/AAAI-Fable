@@ -1,0 +1,17 @@
+{
+  "generator": {
+    "status": "success",
+    "version": "frozen-mapping-generator/v1",
+    "prompt_sha256": "1aac2b0bcd654740e1ad9a90b8e9bce98fbc246e69b31e683f7354c1ba31ed0e"
+  },
+  "aligner": {
+    "status": "success",
+    "version": "evidence-aligner/v1",
+    "prompt_sha256": "68c926258588c376382a239ecef97e40ef0dbf8902397aafbe02c1080f1b5b8c"
+  },
+  "judge": {
+    "status": "success",
+    "version": "mapping-aware-judge/v1",
+    "prompt_sha256": "115e0c220fbc1e8cf6cb0095906811c2aa63bbdcabf4a0af4cd65c405a9c7a9a"
+  }
+}

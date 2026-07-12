@@ -1,0 +1,108 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄的春耕故事",
+  "characters": [
+    "老农夫（代表种子）",
+    "春雨（代表水分）",
+    "仓库（代表子叶或胚乳）",
+    "锄头（代表胚根）",
+    "扁担（代表胚轴）",
+    "秧苗（代表胚芽）"
+  ],
+  "objects": [
+    "田地（代表种皮）",
+    "肥料（代表营养物质）",
+    "水渠（代表水分通道）"
+  ],
+  "conflict": "老农夫沉睡在田地里，春雨不来，仓库紧闭，锄头、扁担和秧苗都困在仓库中，田地坚硬如石，无法生长。",
+  "event_chain": [
+    "春雨降临，老农夫吸收水分，身体膨胀苏醒。",
+    "老农夫打开仓库，将肥料转运给锄头、扁担和秧苗。",
+    "锄头得到肥料后，奋力突破田地，形成根。",
+    "扁担得到肥料后，逐渐伸长，支撑起秧苗。",
+    "秧苗得到肥料后，向上生长，变成茂盛的庄稼。"
+  ],
+  "turning_point": "春雨降临，老农夫吸收水分，仓库开启，肥料开始转运。",
+  "resolution_state": "田地中庄稼茂盛，老农夫成功完成春耕，村庄迎来丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "春雨降临，老农夫吸收水分",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农夫打开仓库，将肥料转运给锄头、扁担和秧苗",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "锄头得到肥料后，奋力突破田地，形成根",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "扁担得到肥料后，逐渐伸长",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "秧苗得到肥料后，向上生长，变成茂盛的庄稼",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老农夫成功完成春耕，村庄迎来丰收",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "春雨降临使老农夫吸收水分，从而触发仓库开启和肥料转运",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "肥料转运使锄头获得力量，从而突破田地",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "肥料转运使扁担获得营养，从而伸长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "肥料转运使秧苗获得养分，从而生长成庄稼",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "老农夫春耕成功与春雨降临相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子萌发的过程'等禁止术语。",
+    "春雨对应水分吸收，仓库对应子叶/胚乳，肥料对应营养物质，锄头对应胚根，扁担对应胚轴，秧苗对应胚芽，田地对应种皮。",
+    "所有机制边方向已严格保留，且未使用课程桥接上下文。",
+    "故事载体均为单一源域（村庄春耕），无混合隐喻。"
+  ],
+  "mapping_context_sha256": "59d4e1389fa48c761dfbf4cd82936577050feea52a41f37ea3d4cade544d1d7b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "bacc16fb8c8ceb7820577b107214512157195015b16ff4886b2e13df127b65d6"
+  }
+}

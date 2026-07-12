@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "物体位于焦点以内时，凸透镜形成放大、正立的虚像",
+      "evidence": "那株原本瘦弱的豆苗竟然变得又大又正",
+      "narrative_anchor": "又大又正"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "凸透镜",
+      "evidence": "透明圆鼓的玻璃瓶",
+      "narrative_anchor": "透明圆鼓的玻璃瓶"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "虚像",
+      "evidence": "那放大的影像并非真实存在",
+      "narrative_anchor": "并非真实存在"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "使用凸透镜后产生放大正立虚像",
+      "evidence": "他把豆苗移到玻璃瓶的正后方...透过圆鼓鼓的玻璃，园丁惊奇地发现，那株原本瘦弱的豆苗竟然变得又大又正",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m1",
+      "direction_preserved": true,
+      "narrative_anchor": "透过圆鼓鼓的玻璃...变得又大又正"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "放大正立虚像属于虚像",
+      "evidence": "那放大的影像并非真实存在",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "放大的影像并非真实存在"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "7的加减法",
+  "concept_id": "math_1a_rjb_cpt26",
+  "concept_definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+  "forbidden_terms_for_story_body": [
+    "7的加减法",
+    "math_1a_rjb_cpt26"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt26",
+      "label": "Concept",
+      "name": "7的加减法",
+      "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "7的加减法\n掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt24",
+          "label": "Concept",
+          "name": "数字7的认识",
+          "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+        },
+        {
+          "id": "math_1a_rjb_cpt28",
+          "label": "Concept",
+          "name": "分与合（拆分与组合）",
+          "definition": "把一个数分成两个部分或由两个部分合成一个数，如“7可以分成1和6、2和5、3和4”。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "6和7",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt26",
+    "concept_id": "math_1a_rjb_cpt26",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt26",
+      "label": "Concept",
+      "name": "7的加减法",
+      "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "7的加减法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过花圃中花朵的组合与拆分，隐含地展示了所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等，但未直接提及'7的加减法'术语。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "皮皮将红花黄花合并为7朵，再从中拿走黄花得到红花；将蓝花紫花合并为7朵，再拿走蓝花得到紫花；将白花橙花合并为7朵，再拿走橙花得到白花。这些事件完整映射了所有得数是7或从7中减去的加减法。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了形式定义条件和规则一致性（总数始终为7），通过数学结构（组合与拆分）而非道德说教来呈现概念，避免了只有故事没有数学结构的问题。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：花圃的秘密\n\n小兔皮皮在森林里发现了一个神奇的花圃，花圃里有七块小土地，每块土地上都开着不同颜色的花。花圃的入口处立着一块木牌，上面写着：“只有让每块土地上的花朵总数保持不变，花圃才会永远美丽。”\n\n皮皮好奇地数了数，发现每块土地上的花数量都不一样：第一块有5朵红花，第二块有2朵黄花，第三块有3朵蓝花，第四块有4朵紫花，第五块有6朵白花，第六块有1朵橙花，第七块有0朵绿花。\n\n皮皮想：“如果我把红花和黄花放在一起，会变成多少朵呢？”他小心翼翼地把5朵红花和2朵黄花移到一起，数了数，正好是7朵。他又把3朵蓝花和4朵紫花合在一起，也是7朵。接着，他把6朵白花和1朵橙花放在一起，还是7朵。\n\n皮皮高兴极了，但他又想到：“如果我从这些花里拿走一些，会怎么样呢？”他从7朵红花黄花中拿走了2朵黄花，剩下5朵红花。他又从7朵蓝花紫花中拿走了3朵蓝花，剩下4朵紫花。他还从7朵白花橙花中拿走了1朵橙花，剩下6朵白花。\n\n皮皮发现，不管怎么组合，只要总数是7，拿走一部分，剩下的部分总是和另一部分对应。他试着把7朵花分成两组，一组是5朵，另一组就是2朵；一组是3朵，另一组就是4朵；一组是6朵，另一组就是1朵。\n\n皮皮明白了，原来这个花圃的秘密就是：所有花朵的总数总是保持不变，而不同的组合方式可以互相转换。他开心地跳了起来，觉得自己学会了花圃里最神奇的规律。\n\n从此，皮皮每天都会来花圃，用不同的方式组合花朵，但总数永远不变。花圃也一直保持着美丽，因为皮皮懂得了它的秘密。",
+  "rule_findings": {
+    "story_token_count": 554,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

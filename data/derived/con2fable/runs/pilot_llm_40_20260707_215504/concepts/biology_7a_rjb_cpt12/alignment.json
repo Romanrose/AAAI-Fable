@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+      "evidence": "小灰不是用来砌墙的，也不是用来承重的。它的任务，是连接那些砖块和钢筋无法直接接触的地方。",
+      "narrative_anchor": "小灰不是用来砌墙的，也不是用来承重的。它的任务，是连接那些砖块和钢筋无法直接接触的地方。"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "与相关概念保持可解释关系：病毒的分类（按寄生细胞不同）",
+      "evidence": "根据连接对象不同，分为混凝土连接型和玻璃连接型。",
+      "narrative_anchor": "根据连接对象不同，分为混凝土连接型和玻璃连接型。"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "与相关概念保持可解释关系：细胞",
+      "evidence": "砖块们整整齐齐地码放着，它们是最标准的建筑材料。每一块砖都方方正正，尺寸统一，是构成高楼大厦的主力军。",
+      "narrative_anchor": "砖块们整整齐齐地码放着，它们是最标准的建筑材料。每一块砖都方方正正，尺寸统一，是构成高楼大厦的主力军。"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "小灰（特殊材料）的分类依据连接对象不同，分为混凝土连接型和玻璃连接型。",
+      "evidence": "根据连接对象不同，分为混凝土连接型和玻璃连接型。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "根据连接对象不同，分为混凝土连接型和玻璃连接型。"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "小灰的分类（混凝土连接型和玻璃连接型）用于连接砖块（细胞）等材料。",
+      "evidence": "当混凝土墙需要和玻璃幕墙无缝衔接时，就需要小灰来填补缝隙、粘合界面。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "当混凝土墙需要和玻璃幕墙无缝衔接时，就需要小灰来填补缝隙、粘合界面。"
+    }
+  ]
+}

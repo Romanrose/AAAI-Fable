@@ -1,0 +1,85 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠制作铜镜",
+  "characters": [
+    "老铜匠",
+    "学徒"
+  ],
+  "objects": [
+    "铜镜坯",
+    "磨镜石",
+    "铜镜",
+    "镜面中心"
+  ],
+  "conflict": "学徒打磨铜镜时，光线杂乱，无法形成清晰的影像。",
+  "event_chain": [
+    "老铜匠告诉学徒，铜镜的镜面中心线是打磨的基础。",
+    "学徒沿着中心线方向，用磨镜石平行于中心线打磨铜镜。",
+    "经过反复打磨，所有平行于中心线的磨痕都汇聚到镜面中心的一点。",
+    "这一点成为铜镜最亮、最清晰的焦点。",
+    "从这一点到镜面的距离，决定了铜镜的聚光能力。"
+  ],
+  "turning_point": "学徒发现所有平行磨痕汇聚到镜面中心的一点，影像变得清晰。",
+  "resolution_state": "铜镜制成，镜面中心成为汇聚光线的焦点，学徒掌握了打磨技巧。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜镜的镜面中心线是打磨的基础",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "学徒沿着中心线方向，用磨镜石平行于中心线打磨铜镜，所有平行于中心线的磨痕都汇聚到镜面中心的一点",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "镜面中心",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "从镜面中心到镜面的距离",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "铜镜的镜面中心线是打磨的基础，使得学徒能够沿着中心线方向进行平行打磨",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "平行于中心线的打磨过程，产生了镜面中心这个汇聚点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "镜面中心与从镜面中心到镜面的距离相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'焦点'、'主光轴'、'凸透镜'、'焦距'等物理术语。",
+    "避免将'镜面中心'直接等同于物理概念，仅作为故事载体。",
+    "注意'镜面中心线'对应'主光轴'，但不要直接提及。",
+    "确保所有机制节点和边都被映射，且方向正确。"
+  ],
+  "mapping_context_sha256": "24ad493b685cd9798e6f4b3d9bf7448a72b9c91c8bb641ad55b70a408b022968",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ef981bd9a5aa9b68c635529d42ee152c381a86e0e0a2ce99a12896c50a310046"
+  }
+}

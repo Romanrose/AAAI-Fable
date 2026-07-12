@@ -1,0 +1,47 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "一棵老树与四季变化",
+  "characters": [
+    "老树"
+  ],
+  "objects": [
+    "老树",
+    "春天",
+    "夏天",
+    "秋天",
+    "冬天"
+  ],
+  "conflict": "老树本身是静止的，但四季变化使它不断经历发芽、茂盛、落叶、休眠的过程。",
+  "event_chain": [
+    "老树在春天发芽生长",
+    "老树在夏天枝繁叶茂",
+    "老树在秋天落叶凋零",
+    "老树在冬天休眠蓄力"
+  ],
+  "turning_point": "四季循环，老树在每个季节都发生形态变化，但始终是一棵树。",
+  "resolution_state": "老树通过四季变化展现其存在与变化，变化是树的本性。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "四季变化",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老树的存在使得四季变化得以在其身上展现",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'物质'一词",
+    "确保每个机制节点和边都被映射",
+    "确保故事连贯，不引入无关隐喻"
+  ]
+}

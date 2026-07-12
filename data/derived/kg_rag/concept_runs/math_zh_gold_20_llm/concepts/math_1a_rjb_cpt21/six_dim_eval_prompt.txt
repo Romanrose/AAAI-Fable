@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "6和7的减法",
+  "concept_id": "math_1a_rjb_cpt21",
+  "concept_definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+  "forbidden_terms_for_story_body": [
+    "6和7的减法",
+    "math_1a_rjb_cpt21"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt21",
+      "label": "Concept",
+      "name": "6和7的减法",
+      "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "6和7的减法\n通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt22",
+          "label": "Concept",
+          "name": "分拆数6和7",
+          "definition": "把6或7分成两个部分，了解所有不同的分法。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt19",
+          "label": "Concept",
+          "name": "数字6和7的认识",
+          "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5",
+          "label": "Chapter",
+          "name": "6~10的认识和加减法",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt21",
+    "concept_id": "math_1a_rjb_cpt21",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt21",
+      "label": "Concept",
+      "name": "6和7的减法",
+      "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "6和7的减法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过七颗宝石和六朵花的场景，隐含地展示了从7或6中减去一部分得到差的过程，如7-2=5、6-1=5等，但未直接提及'6和7的减法'这一术语。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "守护者取走宝石和摘花的事件链，体现了'从已有数量中去掉一部分'的操作，而小方发现剩下的水量与取走的数量之和等于原数，揭示了减法算式的结构。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了减法形式定义（如7-2=5）和规则一致性（每次操作后总和不变），避免了道德化说教，且数学结构通过事件自然呈现，未写成科学解释。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：规则谜城的秘密\n\n在规则谜城里，有一座神奇的“平衡喷泉”。喷泉的水流由七颗宝石控制，每颗宝石代表一份水量。每天清晨，守护者会从喷泉中取出一些宝石，让水流减少，但必须保证剩下的水量恰好能让喷泉继续运转。\n\n一天，新来的学徒小方观察守护者操作。第一次，守护者从七颗宝石中取走两颗，喷泉的水流变成了五份。小方记下：“七减二等于五。”第二次，守护者取走三颗，水流变成四份。小方又记：“七减三等于四。”第三次，守护者取走四颗，水流变成三份。小方疑惑：“为什么每次剩下的水量都不一样？”\n\n守护者笑着说：“你只看到了取走和剩下的关系，却没发现一个秘密：无论取走多少，剩下的水量和取走的数量加起来，总是等于原来的七份。”小方恍然大悟：“原来七减去一个数，结果就是另一个数，而这两个数合起来还是七！”\n\n接着，守护者带小方来到另一处“六色花坛”。花坛里有六朵花，每朵代表一个颜色。守护者每次摘走几朵，剩下的花朵必须能组成完整的彩虹。第一次摘走一朵，剩下五朵；第二次摘走两朵，剩下四朵；第三次摘走三朵，剩下三朵。小方发现：“六减去一个数，结果和摘走的数加起来也是六！”\n\n小方终于明白：在规则谜城里，从七或六中取走一部分，剩下的部分就是减法算式的答案。这个规则始终不变，就像喷泉和花坛的秘密一样。\n\n从此，小方能够准确判断任何类似的情况，再也不会被表面现象迷惑了。",
+  "rule_findings": {
+    "story_token_count": 488,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

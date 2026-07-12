@@ -1,0 +1,64 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一棵古树与其新生的枝条",
+  "characters": [
+    "古树（老树）",
+    "新枝（嫩芽）"
+  ],
+  "objects": [
+    "古树的根系",
+    "古树的树皮",
+    "新枝的叶片",
+    "新枝的芽苞"
+  ],
+  "conflict": "新枝在生长过程中，既保留了古树的树皮纹理和叶片形状（相同特征），又出现了新的芽苞形态和叶片大小（变异特征），但其他树木认为新枝不属于古树这一类别。",
+  "event_chain": [
+    "古树在春天萌发出许多新枝。",
+    "新枝逐渐长大，其树皮纹理与古树相似，叶片形状也基本一致。",
+    "但新枝的芽苞比古树更饱满，叶片也略大，颜色稍浅。",
+    "其他树木看到新枝，认为它与古树不同，不应算作古树的一部分。",
+    "古树和新枝共同展示：新枝既继承了古树的特征，又拥有自己的新特点。"
+  ],
+  "turning_point": "古树通过根系和树皮传递养分，证明新枝与自己是同一棵树的组成部分，尽管有差异，但新枝属于古树这一类别。",
+  "resolution_state": "新枝被认可为古树的一部分，因为它既具有古树的共同特征，又带有自身的变异特征，这恰恰是古树类别中正常存在的现象。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "新枝与古树在很多方面表现出相同特征（如树皮纹理、叶片形状），但总有一部分特征不相同（如芽苞形态、叶片大小）的现象",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "古树的共同特征：一组典型生命表现，包括通过根系吸收水分、通过树皮输送养分、能进行光合作用、能对外界刺激（如风）作出反应、能生长和繁殖、具有新枝与古树之间的相同与不同特征等",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "新枝与古树之间的相同与不同特征现象（n1）是古树共同特征（n2）的一个实例",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'遗传'、'变异'、'遗传和变异'等词。",
+    "确保新枝与古树的相同与不同特征现象明确映射到n1，且该现象是古树共同特征的一个实例。",
+    "避免将其他树木的质疑误解为因果机制，仅作为冲突背景。"
+  ],
+  "mapping_context_sha256": "7dd6cb123b413c4d3b2b69f7edd5836497f31567db9f98254d7df7e8a740cf25",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "31a37a924a183a723ee3179b18f1f6b03e2149a53a47cd23bd06d781737dc824"
+  }
+}

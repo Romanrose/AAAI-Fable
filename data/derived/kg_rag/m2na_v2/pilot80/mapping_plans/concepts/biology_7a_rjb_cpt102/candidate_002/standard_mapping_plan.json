@@ -1,0 +1,103 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠烧制陶器",
+  "characters": [
+    "老窑匠",
+    "学徒"
+  ],
+  "objects": [
+    "陶坯",
+    "窑炉",
+    "火候",
+    "水分",
+    "通风口"
+  ],
+  "conflict": "学徒急于求成，忽视烧制陶器所需的关键条件，导致陶器开裂或不成形。",
+  "event_chain": [
+    "老窑匠告诉学徒，烧制一件完美的陶器需要三个条件：适宜的火候、陶坯保持一定的湿润、窑炉内有充足的空气流通。",
+    "学徒尝试烧制，但火候过高或过低，陶坯过干或过湿，通风口堵塞，结果陶器烧制失败。",
+    "老窑匠通过对比实验（四只陶坯在不同条件下烧制）向学徒展示：只有同时满足三个条件，陶器才能成功烧制。"
+  ],
+  "turning_point": "学徒通过对比实验认识到，三个条件缺一不可，且必须同时满足。",
+  "resolution_state": "学徒掌握了烧制陶器的正确方法，成功烧制出完美的陶器。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "烧制陶器的条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "陶器成功烧制",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "适宜的火候",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "陶坯保持一定的湿润",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "窑炉内有充足的空气流通",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老窑匠用四只陶坯做对比实验",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "烧制陶器的条件使陶器成功烧制成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "适宜的火候是烧制陶器的条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "陶坯保持一定的湿润是烧制陶器的条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "窑炉内有充足的空气流通是烧制陶器的条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "对比实验验证了烧制陶器的条件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子'、'萌发'等生物学相关词汇。",
+    "确保'烧制陶器的条件'不直接对应'种子萌发的环境条件'，而是作为类比载体。",
+    "注意对比实验的细节要清晰，体现四只陶坯在不同条件下的结果差异。"
+  ],
+  "mapping_context_sha256": "573f207f2a855bfc4526da2f4c2ec6ec3899ad4d8bdc0b54387cdcfa9fbad025",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7e478d6a0c8c0acf5afe39329769fc697fa550ec1d105d2f9ceb4df29a91c27e"
+  }
+}

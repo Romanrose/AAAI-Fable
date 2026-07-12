@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story maps n1 (凸透镜) to '入口条件核对' with clear enabling relation to n3 (照相机成像) via e1, shown by copying data from first to second booklet. n2 (实像) is mapped to '第二道转化环节', but the is_a relation (e2) is only implicitly stated as '转化环节的一种具体类型', which could be more explicit. Edge e2 is weakest because its is_a relation is less directly demonstrated than other edges like e1 (enables) or e4 (produces)."
+  },
+  "revision_instructions": [
+    "Consider making the is_a relation for e2 more explicit by directly stating that the second transformation step is a type of transformation step, rather than using a simile."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

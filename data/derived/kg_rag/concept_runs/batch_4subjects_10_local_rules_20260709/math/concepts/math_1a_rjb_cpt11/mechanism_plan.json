@@ -1,0 +1,42 @@
+{
+  "core_question": "加法的含义的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "数字1到5的认识 --prerequisites_for--> 加法的含义",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:16375"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "表示两个数量合并在一起。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:16375"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "加法的含义",
+    "math_1a_rjb_cpt11"
+  ],
+  "coverage_targets": {
+    "required_step_count": 2,
+    "required_dependency_count": 1,
+    "must_cover_edge_ids": [
+      "normalized:edge:16375"
+    ],
+    "must_cover_path_ids": []
+  }
+}

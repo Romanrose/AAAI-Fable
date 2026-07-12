@@ -1,0 +1,61 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一棵桃树上的桃花与蜜蜂",
+  "characters": [
+    "桃花",
+    "蜜蜂"
+  ],
+  "objects": [
+    "同一棵桃树上的两朵桃花",
+    "蜜蜂"
+  ],
+  "conflict": "桃花希望自己的花粉能传播到另一棵桃树的花上，但蜜蜂却只在同一棵桃树的花朵间采蜜。",
+  "event_chain": [
+    "桃花盛开，花粉成熟。",
+    "蜜蜂飞来，在同一棵桃树的不同花朵间采蜜。",
+    "蜜蜂将一朵桃花的花粉带到同一棵桃树的另一朵花的柱头上。",
+    "花粉在柱头上萌发，完成受精。"
+  ],
+  "turning_point": "蜜蜂没有飞往其他桃树，而是继续在同一棵桃树上采蜜。",
+  "resolution_state": "桃花的花粉成功在同一棵桃树的另一朵花上受精，但未能与其他桃树的花粉交流。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "蜜蜂将一朵桃花的花粉带到同一棵桃树的另一朵花的柱头上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "蜜蜂在同一棵桃树的不同花朵间采蜜，导致花粉在同一棵桃树的花朵间传递",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "蜜蜂在同一棵桃树的不同花朵间采蜜（n2）是蜜蜂将一朵桃花的花粉带到同一棵桃树的另一朵花的柱头上（n1）的一种具体方式",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'自花传粉'或'传粉'等禁止术语。",
+    "确保'同一棵桃树'作为载体，明确表示花粉来自同一朵花或同一植株的不同花，但需避免直接提及'同一朵花'以免与定义冲突，此处用'同一棵桃树的不同花朵'来类比'同一朵花'，需注意是否严格对应。",
+    "注意'蜜蜂'作为外部媒介，可能引入额外因果，但此处仅作为花粉传递的载体，未改变核心机制。"
+  ],
+  "mapping_context_sha256": "13a63806af78935a153909811219ea80ee255b8481e660cabe7506be1215e182",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "873ec46b6566ffcba2fceb9dec50b9a30132437d987f0a11bed0381aa722435b"
+  }
+}

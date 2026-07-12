@@ -1,0 +1,162 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt105",
+    "subject": "biology",
+    "canonical_name": "充足的空气（氧气）",
+    "aliases": [
+      "充足空气"
+    ],
+    "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "充足的空气（氧气）",
+      "充足空气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "充足的空气（氧气）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "种子萌发的环境条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "种子萌发需要有空气以保证呼吸等生命活动",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "种子萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt102:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10775"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt105:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt105:definition",
+          "kg-node:biology_7a_rjb_cpt102:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "充足的空气（氧气）",
+      "充足空气"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt105",
+      "name": "充足的空气（氧气）",
+      "label": "Concept",
+      "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt102",
+        "name": "种子萌发的环境条件"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:10775",
+        "source_id": "biology_7a_rjb_cpt105",
+        "source_name": "充足的空气（氧气）",
+        "target_id": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt102",
+        "neighbor_name": "种子萌发的环境条件",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "充足的空气（氧气）",
+      "definition": "种子萌发需要有空气以保证呼吸等生命活动；空气不足会影响萌发。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:10775] 充足的空气（氧气） --is_a--> 种子萌发的环境条件"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:10775"
+  ],
+  "provenance": {
+    "seed_sha256": "bdbb61f392c7b8c166590d058d06ed37bb7f8ed41f6d6253c45de2788fefd88b",
+    "retrieval_sha256": "be9f97d1ffb9123b7104097dd6bcd932fa2e98dd22389275cc9c0353504958e3",
+    "mechanism_record_sha256": "6d6e74088e8465f71916c0e639a96a5b94cfa6f3390a8085b19464da7e425e1e"
+  }
+}

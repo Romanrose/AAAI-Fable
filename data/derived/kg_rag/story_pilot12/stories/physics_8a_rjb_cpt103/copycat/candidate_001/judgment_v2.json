@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story maps n2 (实像) to '第二道转化环节' but the edge e2 (照相机成像 is_a 实像) is realized as '把具体现象归入更大的共同规则', which captures the generalization but not the specific 'is_a' relation between the process and the entity. A stronger realization would explicitly state that the second step is a specific instance of the broader category, e.g., '第二道转化环节是转化环节的一种'."
+  },
+  "revision_instructions": [
+    "Strengthen edge e2: explicitly state that the second transformation step is a type of the broader 'transformation step' category, not just an instance of a rule.",
+    "Ensure edge e3 (物体远离凸透镜 enables 照相机成像) is more directly realized: the story mentions '第四道转化环节的数据' but does not show how the condition (物体远离) enables the process (照相机成像). Add a sentence linking the condition to the process.",
+    "Edge e4 (照相机成像 produces 缩小倒立的实像) is weakly realized as '第五道转化环节' without showing the production relation. Add a line indicating that the third step produces the fifth step's outcome."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

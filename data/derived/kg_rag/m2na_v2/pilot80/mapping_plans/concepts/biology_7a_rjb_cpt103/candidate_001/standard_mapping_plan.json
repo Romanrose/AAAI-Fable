@@ -1,0 +1,105 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt103",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农种麦子的故事",
+  "characters": [
+    "老农",
+    "麦种"
+  ],
+  "objects": [
+    "田地",
+    "春日的暖阳",
+    "严寒的霜冻"
+  ],
+  "conflict": "麦种需要温暖才能发芽生长，但早春时节仍有严寒霜冻，会抑制麦种萌发。",
+  "event_chain": [
+    "老农在早春时节将麦种种在田地里。",
+    "麦种需要适宜的温度才能开始生长活动。",
+    "适宜的温度是种子萌发的环境条件之一。",
+    "在春日的暖阳照耀下，麦种开始进行萌发生理活动。",
+    "麦种完成萌发，长出嫩芽。",
+    "如果遇到严寒的霜冻，温度过低，麦种的萌发生理活动会受到抑制。",
+    "严寒的霜冻导致麦种无法萌发，甚至冻死。"
+  ],
+  "turning_point": "春日的暖阳持续照耀，麦种得以顺利萌发；而严寒霜冻的出现则导致萌发失败。",
+  "resolution_state": "在暖阳下，麦种成功萌发；在霜冻下，麦种萌发被抑制。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "春日的暖阳",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子萌发的环境条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "麦种萌发生理活动",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "麦种完成萌发",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "严寒的霜冻",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "抑制萌发",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "春日的暖阳是种子萌发的环境条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "春日的暖阳使麦种能够进行萌发生理活动",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "麦种萌发生理活动导致麦种完成萌发",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "严寒的霜冻抑制麦种萌发生理活动",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "严寒的霜冻导致抑制萌发",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'适宜的温度'等禁止术语。",
+    "注意保持故事连贯性，避免引入无关隐喻。",
+    "所有机制节点和边均已映射，方向正确。"
+  ],
+  "mapping_context_sha256": "d5bee00added8c20555821087cc054e4a316990ebe9e6379bdaeac3309e37691",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "6b1cd221d70ce2f59ede8238f0d5773033385f339bd61ed110a824b1ed4813f5"
+  }
+}

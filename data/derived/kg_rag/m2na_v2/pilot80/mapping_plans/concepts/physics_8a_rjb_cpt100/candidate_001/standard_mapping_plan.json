@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代中国工匠制作玉璧的故事",
+  "characters": [
+    "老玉匠",
+    "小徒弟"
+  ],
+  "objects": [
+    "玉料",
+    "玉璧",
+    "玉璧的中心圆孔",
+    "玉璧的圆心",
+    "圆孔到圆心的距离"
+  ],
+  "conflict": "小徒弟无法理解为什么玉璧的中心圆孔必须位于圆心，以及如何确定圆孔的位置。",
+  "event_chain": [
+    "老玉匠告诉小徒弟，玉璧的圆心是通过玉料上两个对称点连线的中点确定的。",
+    "小徒弟将玉料放在工作台上，用墨线标记出两个对称点，并画出连线。",
+    "小徒弟沿着连线方向，将雕刻刀对准圆心，垂直向下用力。",
+    "雕刻刀精准地落在圆心处，形成了一个完美的中心圆孔。",
+    "小徒弟测量了圆孔到圆心的距离，发现这个距离决定了玉璧的对称性和美观度。"
+  ],
+  "turning_point": "小徒弟意识到，只要先确定圆心，再沿着通过圆心的直线方向施力，就能准确打出中心圆孔。",
+  "resolution_state": "小徒弟掌握了制作玉璧的关键技艺，能够独立完成精美的玉璧。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "玉璧的圆心是通过玉料上两个对称点连线的中点确定的",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小徒弟沿着连线方向，将雕刻刀对准圆心，垂直向下用力，雕刻刀精准地落在圆心处",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "玉璧的中心圆孔",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "圆孔到圆心的距离",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "玉璧的圆心确定后，小徒弟才能沿着连线方向施力打孔",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小徒弟沿着连线方向施力打孔，产生了玉璧的中心圆孔",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "玉璧的中心圆孔与圆孔到圆心的距离相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'焦点'、'凸透镜'、'主光轴'、'焦距'等物理术语。",
+    "确保'玉璧的圆心'对应'主光轴'（条件），'沿着连线方向施力打孔'对应'平行光通过凸透镜'（过程），'中心圆孔'对应'焦点'（产物），'圆孔到圆心的距离'对应'焦距'（关联实体）。",
+    "确保所有机制边方向被严格保留：条件使能过程，过程产生实体，实体关联另一实体。",
+    "避免将'老玉匠的教导'或'小徒弟的领悟'作为因果机制的一部分，仅作为叙事背景。"
+  ],
+  "mapping_context_sha256": "24ad493b685cd9798e6f4b3d9bf7448a72b9c91c8bb641ad55b70a408b022968",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "bb3cc70087be33c5e0c0a7a3b5440ed504c739b3a9d914ac990def1923b924f5"
+  }
+}

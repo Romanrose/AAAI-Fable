@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n2",
+      "text": "需要先满足或理解：氧化反应",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n3",
+      "text": "与相关概念保持关系：呼吸与氧气 与 缓慢氧化",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n4",
+      "text": "与相关概念保持关系：氧化反应 与 缓慢氧化",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n5",
+      "text": "与相关概念保持关系：燃烧 与 缓慢氧化",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:15248"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:18223"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:18426"
+    },
+    {
+      "id": "e4",
+      "source": "n4",
+      "target": "n5",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:18429"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:15248",
+    "normalized:edge:18223",
+    "normalized:edge:18426",
+    "normalized:edge:18429"
+  ]
+}

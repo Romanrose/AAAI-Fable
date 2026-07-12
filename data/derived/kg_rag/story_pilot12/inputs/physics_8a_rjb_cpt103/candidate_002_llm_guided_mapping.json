@@ -1,0 +1,73 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "古代造纸工艺",
+  "domain_rationale": "造纸中，抄纸帘（凸透镜）和压榨工序（调节像距）在纸浆远离（物体远离）时形成薄而均匀的纸页（缩小、倒立的实像），映射成像机制。",
+  "conflict": "纸浆并非光线，但工艺步骤与光学过程结构一致。",
+  "event_chain": [
+    "抄纸帘架设于纸槽",
+    "纸浆远离抄纸帘",
+    "压榨工序调整纸页厚度",
+    "形成薄而均匀的纸页"
+  ],
+  "turning_point": "压榨工序施加压力",
+  "resolution_state": "形成薄而均匀的纸页",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "抄纸帘",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "薄而均匀的纸页",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "造纸过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "纸浆远离抄纸帘",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "薄而均匀的纸页",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "压榨工序",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "抄纸帘使造纸过程成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "造纸过程产生薄而均匀的纸页",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "纸浆远离抄纸帘促进了造纸过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "造纸过程形成薄而均匀的纸页",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "压榨工序促进了造纸过程",
+      "direction_preserved": true
+    }
+  ]
+}

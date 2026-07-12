@@ -1,0 +1,32 @@
+You are a strict reviewer for concept-grounded story generation.
+Evaluate whether the draft story preserves the intended concept structure.
+Focus on fidelity, coverage, coherence, and whether the story actually realizes the planned mapping.
+Reject stories that replace the target mechanism with a vague proxy such as generic growth or improvement.
+Check whether experiment and exercise are clearly distinct when both roles are expected.
+Return valid JSON only. Do not use markdown. Do not add prose outside the JSON object.
+
+Target Concept: 种子萌发的环境条件
+Definition: 种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。
+Expected Alignment Roles:
+- target concept
+- prerequisites
+- related concepts
+- outcomes
+- experiments
+- exercises
+
+Draft Story:
+In a garden workshop, a careful caretaker watched over a plot that depends on the right conditions. Before expecting anything from it, the caretaker prepared what had to be ready first: 种子萌发. Only after that did the caretaker trust tools and routines that reveal whether growth is real to help the work begin.
+
+As days passed, the central process behind 种子萌发的环境条件 started to show itself through action rather than talk. The plot uses those conditions to produce visible growth. Nearby influences such as other surrounding processes either supported the change or revealed what could not replace it.
+
+To settle doubt, the caretaker relied on 探究种子萌发的环境条件（四瓶对照实验）. The result made the lesson plain: the right conditions produce the right result. Later, even follow-up checks like small repeated trials pointed back to the same truth.
+
+Return a JSON object with exactly these fields:
+{
+  "pass_fail": true,
+  "missing_roles": ["..."],
+  "unsupported_story_parts": ["..."],
+  "coherence_issues": ["..."],
+  "suggested_revision": ["..."]
+}

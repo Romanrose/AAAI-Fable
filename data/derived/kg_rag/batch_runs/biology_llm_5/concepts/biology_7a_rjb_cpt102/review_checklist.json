@@ -1,0 +1,15 @@
+{
+  "pass_fail": false,
+  "missing_roles": [
+    "related concepts",
+    "outcomes"
+  ],
+  "draft_length": 282,
+  "alignment_roles_present": [
+    "exercises",
+    "探究种子萌发的环境条件（四瓶对照实验）",
+    "种子萌发",
+    "种子萌发的环境条件"
+  ],
+  "seed_concept": "种子萌发的环境条件"
+}

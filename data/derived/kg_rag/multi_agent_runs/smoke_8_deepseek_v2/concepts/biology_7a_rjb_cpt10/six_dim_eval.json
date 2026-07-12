@@ -1,0 +1,122 @@
+{
+  "concept_id": "biology_7a_rjb_cpt10",
+  "target_concept": "遗传和变异",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过多数水果与标准样本一致、少数出现斑点或畸形，准确传达了遗传（相似）和变异（差异）同时存在的核心机制，且变异被描述为自然现象，未歪曲概念。",
+    "implicitness": "正文中未出现‘遗传’‘变异’或任何禁用术语，概念完全通过情节和对话暗示，符合隐含性要求。",
+    "mapping_clarity": "故事中的标准样本对应遗传，异常水果对应变异，老徐的指导对应上位概念‘生物的共同特征’，映射清晰且因果链完整。",
+    "readability": "故事语言流畅自然，情节连贯，对话生动，适合中学生阅读，无生硬说教。",
+    "pedagogical_value": "读者能通过检疫案例理解遗传和变异是同时存在的自然现象，并学会区分正常差异与异常，教学价值高。",
+    "novelty": "以港口检疫为背景，避免了常见的亲子或植物类比，有一定新颖性，但‘老带新’模式稍显常见。"
+  },
+  "evidence": {
+    "faithfulness": "多数水果与标准样本一致（遗传），少数水果有斑点或畸形（变异），老徐指出这是历史记录中的个体差异，非病害。",
+    "implicitness": "全文未出现‘遗传’‘变异’等词，仅通过‘一模一样’‘不一样’‘个体差异’等日常用语暗示。",
+    "mapping_clarity": "标准样本→遗传，异常水果→变异，老徐的指导→上位概念‘生物的共同特征’，映射关系明确。",
+    "readability": "故事从登船抽样到发现异常、老徐解释、小陈理解，情节自然，语言平实。",
+    "pedagogical_value": "通过检疫案例，读者能直观理解遗传和变异是生物的共同特征，并学会在实际工作中应用。",
+    "novelty": "港口检疫背景较新颖，但‘老带新’和‘对照记录’的叙事结构在寓言中较常见。"
+  },
+  "revision_suggestions": [
+    "可进一步强化变异作为自然现象而非缺陷的表述，例如增加‘同一棵树上的果子也有差异’的细节。",
+    "可考虑增加一个更独特的角色或冲突，减少‘老带新’的模板感。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过多数水果与标准样本一致、少数出现斑点或畸形，准确传达了遗传（相似）和变异（差异）同时存在的核心机制，且变异被描述为自然现象，未歪曲概念。",
+      "implicitness": "正文中未出现‘遗传’‘变异’或任何禁用术语，概念完全通过情节和对话暗示，符合隐含性要求。",
+      "mapping_clarity": "故事中的标准样本对应遗传，异常水果对应变异，老徐的指导对应上位概念‘生物的共同特征’，映射清晰且因果链完整。",
+      "readability": "故事语言流畅自然，情节连贯，对话生动，适合中学生阅读，无生硬说教。",
+      "pedagogical_value": "读者能通过检疫案例理解遗传和变异是同时存在的自然现象，并学会区分正常差异与异常，教学价值高。",
+      "novelty": "以港口检疫为背景，避免了常见的亲子或植物类比，有一定新颖性，但‘老带新’模式稍显常见。"
+    },
+    "evidence": {
+      "faithfulness": "多数水果与标准样本一致（遗传），少数水果有斑点或畸形（变异），老徐指出这是历史记录中的个体差异，非病害。",
+      "implicitness": "全文未出现‘遗传’‘变异’等词，仅通过‘一模一样’‘不一样’‘个体差异’等日常用语暗示。",
+      "mapping_clarity": "标准样本→遗传，异常水果→变异，老徐的指导→上位概念‘生物的共同特征’，映射关系明确。",
+      "readability": "故事从登船抽样到发现异常、老徐解释、小陈理解，情节自然，语言平实。",
+      "pedagogical_value": "通过检疫案例，读者能直观理解遗传和变异是生物的共同特征，并学会在实际工作中应用。",
+      "novelty": "港口检疫背景较新颖，但‘老带新’和‘对照记录’的叙事结构在寓言中较常见。"
+    },
+    "revision_suggestions": [
+      "可进一步强化变异作为自然现象而非缺陷的表述，例如增加‘同一棵树上的果子也有差异’的细节。",
+      "可考虑增加一个更独特的角色或冲突，减少‘老带新’的模板感。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "biology_7a_rjb_cpt10",
+    "target_concept": "遗传和变异",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

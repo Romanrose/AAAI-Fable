@@ -1,0 +1,102 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt107",
+    "label": "Concept",
+    "name": "物距",
+    "properties": {
+      "definition": "物体到凸透镜的距离，用u表示。",
+      "importance": "掌握",
+      "unit": "cm",
+      "retrieval_text": "物距\nConcept\n物体到凸透镜的距离，用u表示。\n掌握\ncm"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt106",
+      "label": "Concept",
+      "name": "凸透镜成像规律",
+      "properties": {
+        "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+        "importance": "重要",
+        "retrieval_text": "凸透镜成像规律\nConcept\n凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。\n重要"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt108",
+      "label": "Concept",
+      "name": "像距",
+      "properties": {
+        "definition": "像到凸透镜的距离，用v表示。",
+        "importance": "掌握",
+        "unit": "cm",
+        "retrieval_text": "像距\nConcept\n像到凸透镜的距离，用v表示。\n掌握\ncm"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17193",
+      "source": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:19712",
+      "source": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target": "physics_8a_rjb_cpt108",
+      "target_name": "像距",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "物距",
+      "definition": "物体到凸透镜的距离，用u表示。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17193] 物距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:19712] 物距 --relates_to--> 像距"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

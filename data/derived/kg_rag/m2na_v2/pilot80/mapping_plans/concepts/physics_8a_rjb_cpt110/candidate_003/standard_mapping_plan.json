@@ -1,0 +1,76 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "中国古代寓言故事",
+  "characters": [
+    "农夫",
+    "园丁"
+  ],
+  "objects": [
+    "种子",
+    "土壤",
+    "阳光",
+    "水分",
+    "幼苗",
+    "果实"
+  ],
+  "conflict": "农夫想种出又大又甜的果实，但不知道种子与土壤、阳光、水分的关系如何影响果实的形态。",
+  "event_chain": [
+    "农夫将种子埋入土壤中，并给予适量的水分和阳光。",
+    "种子发芽，长出幼苗。",
+    "农夫根据幼苗的生长情况，调整水分和阳光的供给。",
+    "幼苗逐渐长大，最终结出果实。",
+    "果实的形态（大小、甜度）取决于种子与土壤、阳光、水分的配合关系。"
+  ],
+  "turning_point": "农夫发现，当种子与土壤、阳光、水分的配合恰到好处时，果实又大又甜；否则，果实可能小或酸涩。",
+  "resolution_state": "农夫明白了，果实的形态是由种子与生长条件的配合关系决定的，而非单一因素。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "种子与土壤、阳光、水分的配合关系",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "果实的形态（大小、甜度）",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "幼苗与果实",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "种子与土壤、阳光、水分的配合关系决定了果实的形态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "幼苗与果实相关，幼苗的生长状况影响果实的形态",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'像的正倒与大小'等禁止术语。",
+    "注意'实像与虚像'映射为'幼苗与果实'，避免直接使用物理概念。",
+    "保持因果关系清晰，避免引入无关的课程桥接内容。"
+  ],
+  "mapping_context_sha256": "6b6ca1287eacb4bf5ddffba670bd8e47a1a123874e647507453ad1f5949a15ae",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4c4e4cda6d729d93889897147328c131f4f77994db36c44644516775eb12921b"
+  }
+}

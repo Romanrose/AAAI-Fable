@@ -1,0 +1,128 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一座村庄的兴衰",
+  "characters": [
+    "村庄",
+    "村民"
+  ],
+  "objects": [
+    "田地",
+    "水井",
+    "房屋",
+    "粮仓",
+    "学堂",
+    "族谱"
+  ],
+  "conflict": "村庄是否具备持续繁荣的条件",
+  "event_chain": [
+    "村庄需要从田地获取粮食",
+    "村庄需要水井提供水源",
+    "村庄需要清理垃圾和污水",
+    "村庄需要扩建房屋和道路",
+    "村庄需要新生儿和外来人口",
+    "村庄需要传承技艺和适应变化",
+    "村庄需要由房屋、街道等基本单元构成"
+  ],
+  "turning_point": "村民认识到只有同时满足这些条件，村庄才能长久兴旺",
+  "resolution_state": "村庄通过满足所有条件实现了持续繁荣",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村庄",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "需要从田地获取粮食",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "需要水井提供水源",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "需要清理垃圾和污水",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "需要扩建房屋和道路",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "需要新生儿和外来人口",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "需要传承技艺和适应变化",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "需要由房屋、街道等基本单元构成",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "村庄需要从田地获取粮食",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "村庄需要水井提供水源",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "村庄需要清理垃圾和污水",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "村庄需要扩建房屋和道路",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "村庄需要新生儿和外来人口",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "村庄需要传承技艺和适应变化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "村庄需要由房屋、街道等基本单元构成",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'生物'、'生命体'等禁止术语",
+    "所有映射均基于村庄这一统一源域，无混合隐喻",
+    "课程上下文（如'第一章 认识生物'）未作为因果机制处理"
+  ],
+  "mapping_context_sha256": "ca3f8e6072f2966f8601b0dbf2b6803fe6a181b4033095d7a24a7cb61b00eb93",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "91a59959d89b2941551bddbbb6180345250b69976b82d9067644c2e2b1a6aa09"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农种植一种特殊的豆子，这种豆子需要一种特别的石头（催化石）才能快速发芽生长，最终结出两种不同的果实：一种可食用，另一种可作肥料。",
+  "characters": [
+    "老农",
+    "催化石"
+  ],
+  "objects": [
+    "豆子（代表氯酸钾）",
+    "催化石（代表二氧化锰）",
+    "阳光（代表加热）",
+    "可食用果实（代表氧气）",
+    "肥料果实（代表氯化钾）"
+  ],
+  "conflict": "豆子在没有催化石的情况下发芽极慢，无法在季节内完成生长周期，老农面临收成失败的风险。",
+  "event_chain": [
+    "老农将豆子与催化石混合在一起（n1：混有二氧化锰的氯酸钾固体）",
+    "老农将混合物置于阳光下暴晒（n2：加热）",
+    "在阳光和催化石的共同作用下，豆子开始快速发芽生长（n3：氯酸钾分解生成氯化钾和氧气）",
+    "催化石在整个过程中保持自身性质和重量不变（n5：二氧化锰在反应前后质量和性质基本不变）",
+    "豆子生长后结出可食用果实（n6：生成氧气）",
+    "豆子生长后也结出肥料果实（n7：生成氯化钾）",
+    "这种豆子从一颗种子变成两种果实的过程，属于一种特殊的“一物生二物”的生长规律（n8：分解反应：一种物质生成两种或两种以上其他物质）"
+  ],
+  "turning_point": "老农发现催化石的作用，并正确使用阳光和催化石，使豆子成功生长。",
+  "resolution_state": "老农收获了可食用果实和肥料果实，催化石完好无损，可以继续用于下一季种植。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "豆子与催化石的混合物",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "阳光暴晒",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "豆子发芽生长并结出两种果实的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "催化石",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "催化石在生长过程中保持自身性质和重量不变",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "可食用果实",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "肥料果实",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "一物生二物的生长规律",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "豆子与催化石的混合物是豆子发芽生长的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "阳光暴晒是豆子发芽生长的必要条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "催化石的存在使豆子发芽生长得以快速进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "催化石在生长过程中保持自身性质和重量不变",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "豆子发芽生长过程产生了可食用果实",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "豆子发芽生长过程产生了肥料果实",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "豆子发芽生长过程属于一物生二物的生长规律",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "豆子发芽生长过程需要豆子与催化石的混合物作为原料",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "豆子发芽生长过程需要阳光暴晒作为能量来源",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "豆子发芽生长过程需要催化石的参与",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中的“催化石”可能被误解为化学中的催化剂，但未使用任何目标概念名称或禁止术语。",
+    "“一物生二物”的规则映射可能不够精确，但避免了直接使用“分解反应”等术语。",
+    "确保所有节点和边均被映射，且方向正确。"
+  ],
+  "mapping_context_sha256": "188b46a6e6a8f047a6521da68eef8b5eb187b4aa40cb2506e9ac5180899d40cb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "744116fbca13599d6305406529afbdcbcd7b494b136a9e5149f74a3e434786d5"
+  }
+}

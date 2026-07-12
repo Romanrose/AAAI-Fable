@@ -1,0 +1,198 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt112",
+    "subject": "physics",
+    "canonical_name": "眼睛调节",
+    "aliases": [],
+    "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "眼睛调节"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "眼睛调节：通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt112:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "眼睛成像原理：晶状体和角膜共同作用相当于凸透镜，把来自物体的光会聚在视网膜上形成像。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "远点：眼睛依靠调节能看清的最远点。正常眼的远点在无限远。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "state",
+        "text": "近点：眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19714"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17198"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17199"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "眼睛调节"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt112",
+      "name": "眼睛调节",
+      "label": "Concept",
+      "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt113",
+        "name": "远点"
+      },
+      {
+        "id": "physics_8a_rjb_cpt114",
+        "name": "近点"
+      },
+      {
+        "id": "physics_8a_rjb_cpt111",
+        "name": "眼睛成像原理"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17198",
+        "source_id": "physics_8a_rjb_cpt112",
+        "source_name": "眼睛调节",
+        "target_id": "physics_8a_rjb_cpt113",
+        "target_name": "远点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt113",
+        "neighbor_name": "远点",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17199",
+        "source_id": "physics_8a_rjb_cpt112",
+        "source_name": "眼睛调节",
+        "target_id": "physics_8a_rjb_cpt114",
+        "target_name": "近点",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt114",
+        "neighbor_name": "近点",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19714",
+        "source_id": "physics_8a_rjb_cpt111",
+        "source_name": "眼睛成像原理",
+        "target_id": "physics_8a_rjb_cpt112",
+        "target_name": "眼睛调节",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt111",
+        "neighbor_name": "眼睛成像原理",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "眼睛调节",
+      "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17198] 眼睛调节 --prerequisites_for--> 远点",
+      "[normalized:edge:17199] 眼睛调节 --prerequisites_for--> 近点"
+    ],
+    "process_summary": [
+      "[normalized:edge:19714] 眼睛成像原理 --relates_to--> 眼睛调节"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17198",
+    "normalized:edge:17199",
+    "normalized:edge:19714"
+  ],
+  "provenance": {
+    "seed_sha256": "9320786c73da1abf8fff301c882954cd366ef84a65422b484e966ac21733f5cb",
+    "retrieval_sha256": "d5cb50bdbe75f72defe2fca87223c9bfff5145e0d889987f810142f360d4c7c5",
+    "mechanism_record_sha256": "d14b79acfb2bba41469863df62d498ea64861ec839d21a24593817e026ebe36a"
+  }
+}

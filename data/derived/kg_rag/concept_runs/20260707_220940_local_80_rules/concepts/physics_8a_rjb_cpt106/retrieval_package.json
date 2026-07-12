@@ -1,0 +1,134 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt106",
+    "label": "Concept",
+    "name": "凸透镜成像规律",
+    "properties": {
+      "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+      "importance": "重要",
+      "retrieval_text": "凸透镜成像规律\nConcept\n凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。\n重要"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17194",
+      "source": "physics_8a_rjb_cpt108",
+      "source_name": "像距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17191",
+      "source": "physics_8a_rjb_cpt106",
+      "source_name": "凸透镜成像规律",
+      "target": "physics_8a_rjb_cpt119",
+      "target_name": "显微镜",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17192",
+      "source": "physics_8a_rjb_cpt106",
+      "source_name": "凸透镜成像规律",
+      "target": "physics_8a_rjb_cpt120",
+      "target_name": "望远镜",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17190",
+      "source": "physics_8a_rjb_cpt101",
+      "source_name": "焦距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17193",
+      "source": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:12423",
+      "source": "physics_8a_rjb_cpt121",
+      "source_name": "物镜",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12424",
+      "source": "physics_8a_rjb_cpt122",
+      "source_name": "目镜",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:23050",
+      "source": "physics_8a_rjb_exp27",
+      "source_name": "探究凸透镜成像的规律",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "凸透镜成像规律",
+      "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17194] 像距 --prerequisites_for--> 凸透镜成像规律",
+      "[normalized:edge:17191] 凸透镜成像规律 --prerequisites_for--> 显微镜",
+      "[normalized:edge:17192] 凸透镜成像规律 --prerequisites_for--> 望远镜",
+      "[normalized:edge:17190] 焦距 --prerequisites_for--> 凸透镜成像规律",
+      "[normalized:edge:17193] 物距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:12423] 物镜 --is_a--> 凸透镜成像规律",
+      "[normalized:edge:12424] 目镜 --is_a--> 凸透镜成像规律",
+      "[normalized:edge:23050] 探究凸透镜成像的规律 --verifies--> 凸透镜成像规律"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 8,
+    "candidate_edge_count": 8,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2105,
+    "summary_chars": 661,
+    "path_chars": 0,
+    "retrieval_context_chars": 2766
+  }
+}

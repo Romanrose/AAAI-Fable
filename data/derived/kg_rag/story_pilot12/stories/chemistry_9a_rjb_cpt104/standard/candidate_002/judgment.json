@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n3 (豆腐的成型方法) to the story's '豆腐的成型方法' is explicit but the edge e2 (requires relation from n2 to n3) is realized as a direct statement '传统手工豆腐的制作方法需要豆腐的成型方法', which is clear but slightly less integrated into the narrative flow compared to other edges that are woven into actions. However, it still meets the requirement. The story avoids chemical terms and maintains a coherent traditional tofu-making narrative, making it observably better than a version that would directly mention '加热高锰酸钾制取氧气'."
+  },
+  "revision_instructions": [
+    "No revisions needed. The story meets all requirements."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

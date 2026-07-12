@@ -1,0 +1,11 @@
+﻿concept_id,target_concept,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,template_like
+physics_8a_rjb_cpt1,长度,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt10,参照物,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt100,焦点,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt101,焦距,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt102,实像,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt103,照相机成像,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt104,投影仪成像,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt105,放大镜成像,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt106,凸透镜成像规律,4,5,4,4,4,4,4.15,accept,False,False,False
+physics_8a_rjb_cpt107,物距,4,5,4,4,4,4,4.15,accept,False,False,False

@@ -1,0 +1,66 @@
+{
+  "schema_version": "aaai-eval-protocol/v1",
+  "experiment_id": "story-pilot-12-import-v1",
+  "dataset_id": "story-pilot-12",
+  "dataset_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\story_pilot12\\datasets\\story_pilot12.jsonl",
+  "output_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\aaai_eval\\story_pilot12\\run",
+  "methods": [
+    {
+      "method_id": "mapping.standard",
+      "display_name": "Standard Mapping",
+      "family": "mapping",
+      "version": "v1",
+      "adapter": "story_pilot_artifact",
+      "config": {
+        "pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+        "strategy": "standard"
+      }
+    },
+    {
+      "method_id": "mapping.deterministic_copycat",
+      "display_name": "Deterministic Copycat",
+      "family": "mapping",
+      "version": "v1",
+      "adapter": "story_pilot_artifact",
+      "config": {
+        "pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+        "strategy": "copycat"
+      }
+    },
+    {
+      "method_id": "mapping.llm_guided_copycat",
+      "display_name": "LLM-guided Copycat",
+      "family": "mapping",
+      "version": "v1",
+      "adapter": "story_pilot_artifact",
+      "config": {
+        "pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+        "strategy": "llm_guided_copycat"
+      }
+    }
+  ],
+  "budget": {
+    "candidate_count": 3,
+    "revision_rounds": 1,
+    "max_story_tokens": 1800
+  },
+  "generator": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "judge": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "metadata": {
+    "source_pipeline": "kg_rag.story_pilot",
+    "source_pilot_root": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12",
+    "dataset_sha256": "c4a72300b3641fdcba0d350cbb00b2500ab73f12d39377e08b1a3ae2ee45722d"
+  }
+}

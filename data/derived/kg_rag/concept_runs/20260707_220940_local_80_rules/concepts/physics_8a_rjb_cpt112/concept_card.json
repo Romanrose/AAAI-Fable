@@ -1,0 +1,72 @@
+{
+  "concept_id": "physics_8a_rjb_cpt112",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "眼睛调节",
+  "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt113",
+        "label": "Concept",
+        "name": "远点",
+        "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt114",
+        "label": "Concept",
+        "name": "近点",
+        "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt111",
+        "label": "Concept",
+        "name": "眼睛成像原理",
+        "definition": "晶状体和角膜共同作用相当于凸透镜，把来自物体的光会聚在视网膜上形成像。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+  ],
+  "must_preserve_zh": [
+    "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "眼睛调节"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

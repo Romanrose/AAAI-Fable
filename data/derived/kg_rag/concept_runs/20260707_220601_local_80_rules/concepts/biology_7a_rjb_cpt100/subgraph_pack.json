@@ -1,0 +1,85 @@
+{
+  "query": "biology_7a_rjb_cpt100",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt100",
+    "label": "Concept",
+    "name": "苔藓植物是监测空气污染的指示植物",
+    "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "苔藓植物是监测空气污染的指示植物\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s1",
+        "label": "Section",
+        "name": "第一章 生物圈中有哪些绿色植物",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": ""
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '苔藓植物是监测空气污染的指示植物', 'definition': '许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。', 'formula': '', 'importance': '了解'}, 'condition_summary': [], 'process_summary': [], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt100",
+      "label": "Concept",
+      "name": "苔藓植物是监测空气污染的指示植物",
+      "properties": {
+        "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+        "importance": "了解",
+        "retrieval_text": "苔藓植物是监测空气污染的指示植物\nConcept\n许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。\n了解"
+      }
+    },
+    "raw_edges": [],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "苔藓植物是监测空气污染的指示植物",
+        "definition": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 0,
+      "candidate_edge_count": 0,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 2,
+      "summary_chars": 232,
+      "path_chars": 0,
+      "retrieval_context_chars": 234
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 0,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 2,
+    "summary_chars": 232,
+    "path_chars": 0,
+    "retrieval_context_chars": 234
+  }
+}

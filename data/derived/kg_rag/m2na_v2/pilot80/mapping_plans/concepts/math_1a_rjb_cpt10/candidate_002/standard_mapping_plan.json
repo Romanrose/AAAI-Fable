@@ -1,0 +1,66 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代寓言",
+  "characters": [
+    "农夫",
+    "邻居"
+  ],
+  "objects": [
+    "一筐苹果",
+    "一筐梨"
+  ],
+  "conflict": "农夫认为自己的苹果比邻居的梨多，但邻居认为梨比苹果多，两人争执不下。",
+  "event_chain": [
+    "农夫和邻居各自有一筐水果，农夫有一筐苹果，邻居有一筐梨。",
+    "农夫说他的苹果比邻居的梨多，邻居说他的梨比农夫的苹果多。",
+    "两人无法比较，因为苹果和梨是不同的水果。",
+    "一位智者路过，建议他们先比较相同的水果：先数出苹果和梨各自的数量。",
+    "农夫数出苹果有10个，邻居数出梨有8个。",
+    "智者说：'现在你们知道苹果和梨的数量不同，但如何比较呢？'",
+    "农夫说：'苹果比梨多。'邻居说：'梨比苹果少。'",
+    "智者解释：'当两个数量不同时，我们说前面的数量比后面的数量少，或者后面的数量比前面的数量多。'",
+    "农夫和邻居明白了：苹果比梨多，梨比苹果少。"
+  ],
+  "turning_point": "智者介入，引导他们先数出各自的数量，然后解释比较的规则。",
+  "resolution_state": "农夫和邻居理解了比较的规则：当两个数量不同时，前面的数量比后面的数量少，或者后面的数量比前面的数量多。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫和邻居各自数出苹果和梨的数量，发现数量不同。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "智者解释：苹果比梨多，所以梨比苹果少。",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "先有数量不同的认识（等号含义的否定），然后引出比较规则（小于号含义）。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'小于号'、'等号'等数学术语。",
+    "确保故事中不出现'小于号含义'等禁止词汇。",
+    "确保故事中比较的规则是：前面的数量比后面的数量少，而不是直接使用数学符号。"
+  ],
+  "mapping_context_sha256": "8f7fb6fd774d6b0e0f1339084cb6e4d5acf17fc6752ca221af32d9633af4bb93",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "dd6acc9fa8a24dba82bbb4345d3073b9873ba46e1e1d7c170846c29642a1b76c"
+  }
+}

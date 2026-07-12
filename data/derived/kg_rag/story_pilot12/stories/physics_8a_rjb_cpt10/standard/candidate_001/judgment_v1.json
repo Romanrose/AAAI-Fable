@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story maps n3 (运动与静止的相对性) with a clear, explicit realization by the young fisherman, which is pedagogically strong. n2 (机械运动) is implicitly shown through the boat's movement relative to the willow, but the term '机械运动' is never used, which is correct for implicitness. Edge e1 (relates_to from n2 to n1) is evidenced by the same motion description, but the relation is slightly less explicit than e2 and e3, which are directly tied to the turning point and resolution."
+  },
+  "revision_instructions": [
+    "No revision needed. The story perfectly maps all mechanism nodes and edges with high implicitness and faithfulness."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,13 @@
+{
+  "pass_fail": false,
+  "missing_roles": [
+    "prerequisites",
+    "related concepts",
+    "outcomes",
+    "experiments",
+    "exercises"
+  ],
+  "draft_length": 138,
+  "alignment_roles_present": [],
+  "seed_concept": "生物"
+}

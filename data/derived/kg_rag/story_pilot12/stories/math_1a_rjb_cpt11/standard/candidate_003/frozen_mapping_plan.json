@@ -1,0 +1,47 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "农夫与禾苗",
+  "characters": [
+    "农夫",
+    "禾苗"
+  ],
+  "objects": [
+    "田地",
+    "水桶",
+    "肥料"
+  ],
+  "conflict": "农夫想要禾苗茁壮成长，但禾苗需要先有足够的水分和养分才能吸收肥料，农夫却急于施肥而忽略了浇水。",
+  "event_chain": [
+    "农夫有一片禾苗，他每天观察禾苗的生长。",
+    "农夫知道禾苗需要水分和养分才能健康生长。",
+    "农夫先给禾苗浇水，确保土壤湿润。",
+    "农夫再给禾苗施肥，肥料溶解在水中被禾苗吸收。",
+    "禾苗吸收了水分和养分，逐渐长高。"
+  ],
+  "turning_point": "农夫意识到必须先浇水再施肥，否则肥料无法被禾苗吸收。",
+  "resolution_state": "农夫按照正确的顺序操作，禾苗茁壮成长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫先给禾苗浇水，确保土壤湿润",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "禾苗吸收了水分和养分，逐渐长高",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫先浇水（条件）使得禾苗能够吸收肥料（过程）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'加法'、'合并'等目标概念术语。",
+    "确保条件节点（n1）对应的是先浇水，过程节点（n2）对应的是禾苗吸收养分后生长，方向从条件到过程。",
+    "避免将课程背景（如数学课）作为因果机制的一部分。"
+  ]
+}

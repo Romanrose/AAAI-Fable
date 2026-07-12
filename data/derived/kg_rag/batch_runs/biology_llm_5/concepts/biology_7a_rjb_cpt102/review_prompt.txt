@@ -1,0 +1,41 @@
+You are a strict reviewer for concept-grounded story generation.
+Evaluate whether the draft story preserves the intended concept structure.
+Focus on fidelity, coverage, coherence, and whether the story actually realizes the planned mapping.
+Reject stories that replace the target mechanism with a vague proxy such as generic growth or improvement.
+Check whether experiment and exercise are clearly distinct when both roles are expected.
+Return valid JSON only. Do not use markdown. Do not add prose outside the JSON object.
+
+Target Concept: 种子萌发的环境条件
+Definition: 种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。
+Expected Alignment Roles:
+- target concept
+- prerequisites
+- related concepts
+- outcomes
+- experiments
+- exercises
+
+Draft Story:
+In a sunlit garden workshop, a careful caretaker named Mira prepared three plots. She knew seeds needed warmth, moisture, and air to sprout. For the first plot, she kept the soil dry. For the second, she soaked it but sealed it in a jar with no air. For the third, she gave it water, warmth, and loose soil. The fourth plot she left cold and damp.
+
+Days passed. Only the third plot showed green shoots. The others remained bare. Mira’s neighbor, a gardener who watered every plot equally, scoffed. “Your method is too fussy,” he said. Mira replied, “Let’s test it.” She took seeds from the dry plot and placed them in warm, moist, airy soil. They sprouted within a week. She took seeds from the sealed jar and planted them in open, warm soil—they also grew. But seeds from the cold plot, even with water and air, stayed dormant until moved to warmth.
+
+Mira gathered her apprentices. “The seeds need all three conditions together,” she said. “Missing one stops the whole process.” They then checked each plot’s conditions daily, confirming that growth only followed when warmth, water, and air were present.
+
+```json
+[
+  {"concept_role": "种子萌发的环境条件", "story_evidence": "Mira prepared three plots with different combinations of warmth, water, and air to test seed germination."},
+  {"concept_role": "种子萌发", "story_evidence": "Only the third plot with all three conditions produced green shoots; seeds from other plots sprouted when moved to proper conditions."},
+  {"concept_role": "探究种子萌发的环境条件（四瓶对照实验）", "story_evidence": "Mira used four plots as a controlled experiment: dry, sealed without air, warm with water and air, and cold with water."},
+  {"concept_role": "exercises", "story_evidence": "Mira’s apprentices checked each plot’s conditions daily to confirm that growth required all three factors together."}
+]
+```
+
+Return a JSON object with exactly these fields:
+{
+  "pass_fail": true,
+  "missing_roles": ["..."],
+  "unsupported_story_parts": ["..."],
+  "coherence_issues": ["..."],
+  "suggested_revision": ["..."]
+}

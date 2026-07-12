@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 0.99,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 在格式有效性、无概念泄露、节点与边覆盖、对齐精度等核心指标上均达到满分，且无模板化痕迹，六维评分全5分，故事自然流畅，符合中文叙事习惯。candidate_002 存在模板化短语“从此以后”，candidate_003 字数略多且情节稍显复杂，因此选择 candidate_001。",
+    "risk_notes": [
+      "故事中未明确展示机制边（如因果关系），但指标显示 edge_coverage 为1.0，可能隐含在后续未截取部分。",
+      "valid_edge_alignment_count 为0，需确认完整故事是否真正覆盖了所有机制边。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "他把种子一粒一粒地放进坑里，每放一粒，心里就默默记一下。A地他放了十粒，B地他放了八粒。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "他看着两片菜地，心里想：“A地的菜苗比B地多，但到底多多少呢？是不是真的多呢？”",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "他先把A地的第一棵菜苗和B地的第一棵菜苗用一根细线连起来，表示它们是一对。接着，他又把A地的第二棵和B地的第二棵连起来。就这样，他一棵一棵地配对。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他看着两片菜地，心里想：“A地的菜苗比B地多，但到底多多少呢？是不是真的多呢？”",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他先把A地的第一棵菜苗和B地的第一棵菜苗用一根细线连起来，表示它们是一对。接着，他又把A地的第二棵和B地的第二棵连起来。就这样，他一棵一棵地配对。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。"
+}

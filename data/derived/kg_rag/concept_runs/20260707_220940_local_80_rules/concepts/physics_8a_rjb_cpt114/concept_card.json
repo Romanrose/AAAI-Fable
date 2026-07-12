@@ -1,0 +1,66 @@
+{
+  "concept_id": "physics_8a_rjb_cpt114",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "近点",
+  "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt112",
+        "label": "Concept",
+        "name": "眼睛调节",
+        "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt115",
+        "label": "Concept",
+        "name": "明视距离",
+        "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+  ],
+  "must_preserve_zh": [
+    "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "近点"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

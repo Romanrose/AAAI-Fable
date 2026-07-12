@@ -1,0 +1,61 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt17",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个关于形状分类的寓言故事",
+  "characters": [
+    "圆滚滚的石子"
+  ],
+  "objects": [
+    "圆滚滚的石子",
+    "形状分类游戏"
+  ],
+  "conflict": "圆滚滚的石子想要参加形状分类游戏，但其他形状的石子认为它不属于任何类别。",
+  "event_chain": [
+    "圆滚滚的石子来到形状分类游戏现场。",
+    "其他形状的石子（方形、三角形等）各自找到了自己的类别队伍。",
+    "圆滚滚的石子没有找到与自己完全相同的队伍，感到困惑。",
+    "形状分类游戏的裁判解释说，所有表面到中心距离相等的石子都属于同一类别。",
+    "圆滚滚的石子发现自己的表面到中心距离处处相等，于是被归入一类。"
+  ],
+  "turning_point": "裁判解释了分类规则，圆滚滚的石子意识到自己符合规则中的条件。",
+  "resolution_state": "圆滚滚的石子被成功分类到符合其属性的类别中。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "圆滚滚的石子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "形状分类游戏",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "圆滚滚的石子参与形状分类游戏",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'球体'等禁止术语。",
+    "确保'圆滚滚的石子'作为实体，其属性（表面到中心距离相等）隐含了球体的特征，但不直接提及。",
+    "确保'形状分类游戏'作为过程，与'按形状分类'对应，且方向正确。"
+  ],
+  "mapping_context_sha256": "50a1cd176bd51998a41e6b89316f3c0abc88ea8bd4376b369c4d1a9c8fd78dff",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b2a2f94505de13a606b3b5bceaa7d573bc92475f5ab1bd3ab474d8c5095b3e7c"
+  }
+}

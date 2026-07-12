@@ -1,0 +1,233 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "平均速度",
+  "concept_id": "physics_8a_rjb_cpt12",
+  "concept_definition": "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt12",
+    "平均速度"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt12",
+      "label": "Concept",
+      "name": "平均速度",
+      "definition": "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。",
+      "aliases": [],
+      "examples": [
+        "刘翔110 m跨栏的平均速度"
+      ],
+      "retrieval_text": "平均速度\n在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt11",
+          "label": "Concept",
+          "name": "速度",
+          "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt13",
+          "label": "Concept",
+          "name": "匀速直线运动",
+          "definition": "速度大小和方向都保持不变的直线运动。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "physics_8a_rjb_exp3",
+          "label": "Experiment",
+          "name": "测量物体运动的平均速度",
+          "definition": ""
+        },
+        {
+          "id": "physics_bx1_rjb_exp2",
+          "label": "Experiment",
+          "name": "测量纸带的平均速度",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "physics_8a_rjb_exe2",
+          "label": "Exercise",
+          "name": "刘翔在2004雅典奥运会上完成110 m跨栏的时间为12.91 s，求他的平均速度。",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_exe3",
+          "label": "Exercise",
+          "name": "在测量平均速度的实验中，应该用什么测量路程，用什么测量时间，并用什么公式求出平均速度？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch1_s3",
+          "label": "Section",
+          "name": "第三节 运动的快慢",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_ch1_s4",
+          "label": "Section",
+          "name": "第四节 测量平均速度",
+          "definition": ""
+        },
+        {
+          "id": "physics_bx1_rjb_ch1_s3",
+          "label": "Section",
+          "name": "第三节 位置变化快慢的描述——速度",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt12",
+    "concept_id": "physics_8a_rjb_cpt12",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt12",
+      "label": "Concept",
+      "name": "平均速度",
+      "definition": "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。",
+      "aliases": [],
+      "examples": [
+        "刘翔110 m跨栏的平均速度"
+      ]
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "平均速度"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "小智通过计算总圈数除以总时间，得到指针平均每小时的圈数，隐含了用总路程除以总时间得到平均速度的概念。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小智记录8小时总时间，指针总转8圈，计算8圈÷8小时=1圈/小时，体现了总路程除以总时间的公式。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中指针运动快慢变化（变速），但计算时保留了总路程和总时间的关系，没有把规律写成角色主观意志，也没有忽略方向或条件变化。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼里的秘密\n\n从前，在一座古老的小镇上，有一座高高的钟楼。钟楼里住着一位年轻的守钟人，名叫小智。小智每天的工作就是观察钟楼里那口大钟的运转情况。大钟的指针有时走得快，有时走得慢，小智很想知道，大钟到底走得怎么样。\n\n一天，小智决定记录大钟指针的运动。他从早上8点开始，一直观察到下午4点。在这8个小时里，大钟的指针并不是匀速转动的：有时它转得飞快，比如在整点报时的时候；有时它又慢悠悠的，比如在午后安静的时光。小智发现，指针总共转过了8圈。他想知道，指针平均每圈用了多长时间？于是，他计算了一下：8小时除以8圈，得到每圈平均用了1小时。他又想，如果想知道指针平均每小时的圈数，那就是8圈除以8小时，得到每小时1圈。小智恍然大悟：原来，不管指针中间转得快还是慢，只要知道总圈数和总时间，就能算出它平均每小时的圈数。\n\n小智把这个发现告诉了镇上的老钟表匠。老钟表匠笑着说：“你发现了一个重要的道理。就像你从家走到学校，路上有时快有时慢，但只要知道总路程和总时间，就能算出你平均每小时的行走距离。这个平均的快慢，能帮你比较不同路段的整体情况。”\n\n小智点点头，他明白了：在变化的过程中，用总路程除以总时间，就能得到一个描述整体快慢的数值。这个数值虽然不能反映每一瞬间的快慢，但能让人对整个过程有一个清晰的认识。\n\n从此，小智不仅会观察钟楼的指针，还会用这个道理去理解生活中的其他运动。他成了一个更聪明的守钟人。",
+  "rule_findings": {
+    "story_token_count": 536,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

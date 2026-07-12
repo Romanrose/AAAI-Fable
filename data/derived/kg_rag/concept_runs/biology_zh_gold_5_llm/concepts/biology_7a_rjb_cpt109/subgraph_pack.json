@@ -1,0 +1,47 @@
+{
+  "query": "biology_7a_rjb_cpt109",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt109",
+    "label": "Concept",
+    "name": "发芽率",
+    "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "发芽率\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp10",
+        "label": "Experiment",
+        "name": "测定种子的发芽率（培养皿样本检测）",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe16",
+        "label": "Exercise",
+        "name": "种子发芽率的计算公式是什么？若供检测的种子数为100粒，其中发芽的种子数为92粒，则该批种子的发芽率是多少？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

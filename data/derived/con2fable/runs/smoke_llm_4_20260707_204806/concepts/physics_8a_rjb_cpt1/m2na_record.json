@@ -1,0 +1,100 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：长度单位（米及其倍数、子倍数）",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：使用刻度尺的方法",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17188"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12429"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老陈的木匠铺子里，堆满了刨花和木料，墙上挂着一排排做好的桌椅板凳。学徒小木干活很卖力，可就是有个毛病——下料全凭眼睛看。\n\n这天，小木要做一个方凳的腿。他对着木料端详了一会儿，心里估摸了个大概，抄起锯子就锯了下去。等他把木腿往凳面上一对，顿时傻了眼——短了整整一截，根本卡不住榫头。一块好好的榆木料，就这么废了。\n\n老陈走过来，捡起那截废料，摇了摇头：“小木，你这一锯下去，差的可不止一分半分。”\n\n小木挠着头说：“师傅，我明明觉得差不多啊，怎么就不对呢？”\n\n老陈没说话，从墙上取下一把油亮的木工尺，指着上面密密麻麻的刻线说：“你看，这把尺子上，每一小格是一分，每一大格是一寸。咱们做木器，靠的不是‘觉得’，是这些格子。”\n\n小木凑过去看，尺子上的刻线整整齐齐，像一排排站岗的士兵。老陈把尺子平放在一根新木料上，将尺头的零刻度对准木料的一端，然后指着另一端说：“你来看，这根木料正好到了‘五寸’这条线。记住，眼睛要正对着看，不能歪，歪了就看不准。”\n\n小木照着师傅的样子，自己拿起尺子量了一根木料。他小心翼翼地把尺子对齐，眼睛平视过去，读出了刻度。然后他深吸一口气，沿着画好的线锯了下去。\n\n锯完一比对，凳腿和凳面上的榫眼严丝合缝，分毫不差。小木惊喜地叫了起来：“师傅，成了！和图纸上画的一模一样！”\n\n老陈捋着胡子笑了：“这就对了。咱们做木匠的，手再巧，也巧不过尺子上的规矩。长短大小，不是心里想的，是尺子量的。”\n\n从那以后，小木每次下料前，都先拿起尺子仔细量一量。他做的家具越来越合缝，再也没有浪费过一块好木料。老陈逢人就夸：“我这徒弟，总算懂得了什么叫‘一是一，二是二’。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "描述物体空间延伸程度的物理量，需要通过测量工具获得",
+        "evidence": "这把尺子上，每一小格是一分，每一大格是一寸。咱们做木器，靠的不是‘觉得’，是这些格子。",
+        "narrative_anchor": "尺子"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "长度单位（米及其倍数、子倍数）",
+        "evidence": "每一小格是一分，每一大格是一寸",
+        "narrative_anchor": "分、寸"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "使用刻度尺的方法",
+        "evidence": "眼睛要正对着看，不能歪，歪了就看不准",
+        "narrative_anchor": "眼睛要正对着看"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从长度概念引出长度单位",
+        "evidence": "这把尺子上，每一小格是一分，每一大格是一寸。咱们做木器，靠的不是‘觉得’，是这些格子。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "尺子上的格子"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "从长度单位引出使用刻度尺的方法",
+        "evidence": "眼睛要正对着看，不能歪，歪了就看不准",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "正对着看"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

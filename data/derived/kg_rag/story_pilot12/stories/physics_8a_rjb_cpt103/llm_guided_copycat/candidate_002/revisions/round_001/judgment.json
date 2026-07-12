@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The mapping of n1 (凸透镜) to '抄纸帘' is strong because the story explicitly states '抄纸帘是造纸过程的关键工具', directly mirroring the mechanism's 'enables' relation. The mapping of n2 (实像) to '薄而均匀的纸页' is weaker because the story does not explicitly state that the paper sheet is an 'image' or 'likeness' of the pulp; the relation is more of a product than a representation. Edge e1 (n1 enables n3) is the weakest because while the story says the screen is a key tool, it does not explicitly state that the screen 'enables' the entire papermaking process; the enabling is implicit. This mapping is observably better than a direct physics story because it uses a concrete, familiar domain (papermaking) to illustrate abstract optical principles, making the mechanism more accessible."
+  },
+  "revision_instructions": [
+    "Consider making the mapping of n2 (实像) more explicit by adding a line that the paper sheet is a 'likeness' or 'image' of the pulp arrangement, e.g., '纸页如同纸浆的倒立缩影'.",
+    "To strengthen edge e1, explicitly state that without the screen, the papermaking process would not be possible, e.g., '没有抄纸帘，纤维无法附着，造纸过程无从谈起'."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

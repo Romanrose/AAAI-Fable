@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "记录员核对入口条件",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "验收员把通行牌与封存箱里的结果验收记录比对",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员先把入口条件逐条核对完毕，再交给调度员按册发牌，最后验收员拿牌与箱中记录一一比对",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 maps to '记录员核对入口条件', node n2 maps to '验收员把通行牌与封存箱里的结果验收记录比对', and edge e1 (enables) is supported by the sequential dependency described in the story, with direction preserved."
+}

@@ -1,0 +1,103 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "大气压强",
+    "气压",
+    "标准大气压强"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14999"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "建筑工地",
+    "setting": "一座正在施工的高层建筑工地，工人们正在用塔吊吊运建材，地面上堆放着不同重量的预制板。",
+    "conflict": "工头发现不同楼层的地面承受的压力不同，导致预制板铺设时出现变形和开裂，需要找到统一的施工标准。",
+    "characters": [
+      {
+        "name": "老张",
+        "role": "经验丰富的工头，负责监督施工质量",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "小李",
+        "role": "年轻的技术员，负责测量和记录数据",
+        "mapped_element": "m2"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "预制板对下方支撑面产生的压力，以及工头老张发现压力值会随楼层高度变化"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "技术员小李发现不同楼层的压力值差异，并参考建筑规范中的标准压力值来调整施工方案"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老张在检查底层预制板时发现板面出现细微裂纹，怀疑是下方支撑面承受的压力过大。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小李用仪器测量不同楼层支撑面的压力值，发现底层压力远高于高层，且数值不稳定。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "小李查阅建筑规范，找到一种标准压力值（相当于每平方米承受一定重量），并建议老张按此标准调整预制板的厚度和支撑结构。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "老张采纳建议，统一按标准压力值施工，后续楼层预制板不再开裂，工程顺利进行。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      }
+    ],
+    "turning_point": "小李发现规范中的标准压力值，并说服老张放弃凭经验估算，改用统一标准。",
+    "ending": "整栋大楼按标准压力值完成施工，所有预制板平整牢固，工程验收合格。",
+    "implied_moral": "看似变化无常的压力，其实可以通过一个公认的标准来统一衡量，从而保证整体稳定。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

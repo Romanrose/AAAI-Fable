@@ -1,0 +1,191 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "呼吸与氧气",
+  "concept_id": "chemistry_9a_rjb_cpt102",
+  "concept_definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt102",
+    "呼吸与氧气"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt102",
+      "label": "Concept",
+      "name": "呼吸与氧气",
+      "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "呼吸与氧气\n人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt100",
+          "label": "Concept",
+          "name": "缓慢氧化",
+          "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt16",
+          "label": "Concept",
+          "name": "氧气的物理性质",
+          "definition": "在标准状况下，氧气的密度为1.429 g/L，比空气略大；不易溶于水，在室温和101 kPa下，1L水中约溶解30 mL氧气；在101 kPa下，–183 ℃时变为淡蓝色液体，–218 ℃时变为淡蓝色雪花状固体。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s2",
+          "label": "Section",
+          "name": "课题2 氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt102",
+    "concept_id": "chemistry_9a_rjb_cpt102",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt102",
+      "label": "Concept",
+      "name": "呼吸与氧气",
+      "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "呼吸与氧气"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中老账房先生在密闭密室中感到不适，以及油灯变暗，隐喻了呼吸需要消耗氧气；开窗后问题解决，隐喻了补充氧气可以缓解缺氧症状。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "油灯燃烧（隐喻缓慢氧化）和人的呼吸同时消耗同一种看不见的东西（隐喻氧气），导致密室中该物质减少，引发人体不适（隐喻高原反应等缺氧症状）；开窗引入新鲜空气（隐喻补充氧气）后，不适消失，油灯恢复明亮。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事未提及化学式或元素符号；油灯燃烧和呼吸均被描述为消耗同一种物质的过程，隐含了化学反应中的反应物消耗；开窗引入空气属于物理混合，未混淆化学反应与物理变化。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的灯火\n\n从前，在一座繁华的城邦里，有一座古老的账房。账房的主人是一位经验丰富的老账房先生，他负责管理城邦里所有的账目。账房深处有一间密室，密室里存放着最重要的账册。这间密室没有窗户，只有一盏油灯照明。老账房先生发现，每当他在密室里待久了，就会感到头昏脑涨，浑身乏力，连算盘都拨不动了。他以为是油灯里的灯油不够好，便换了一种更昂贵的灯油，可情况依然没有改善。\n\n老账房先生有个聪明的徒弟，名叫阿明。阿明注意到，每次师傅从密室里出来，脸色都不太好，而密室里的油灯也总是比外面的灯暗一些。阿明心想：“难道这油灯和师傅的不适有什么关系吗？”他决定仔细观察。\n\n一天，阿明趁师傅休息时，独自进入密室。他先点燃了油灯，然后关上门，静静地坐着。起初，他只觉得光线明亮，一切正常。但过了大约半个时辰，他开始觉得胸口发闷，呼吸也变得急促起来。他再看那盏油灯，火焰果然比刚才小了一些，颜色也偏黄了。阿明赶紧打开门，走到院子里，深深吸了几口气，很快便觉得舒服多了。\n\n阿明把这个发现告诉了老账房先生。老账房先生恍然大悟：“原来，油灯燃烧和我的呼吸，都在消耗同一种看不见的东西！密室太小，这东西用完了，灯就暗了，我也难受了。”后来，老账房先生在密室墙上开了一扇小窗，让外面的空气能流进来。从此，他再也不会在密室里感到不适了，油灯也一直明亮如初。\n\n阿明明白了：任何需要持续运转的地方，都必须有充足的“养料”供应，否则就会出问题。这个道理，就像城邦的账目一样，收支必须平衡。",
+  "rule_findings": {
+    "story_token_count": 547,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

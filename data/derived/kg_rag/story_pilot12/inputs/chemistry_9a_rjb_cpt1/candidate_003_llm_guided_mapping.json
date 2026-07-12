@@ -1,0 +1,32 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "植物生长",
+  "domain_rationale": "种子在土壤、水分、阳光等条件下发芽、生长为植株，是物质在自然条件下发生形态和功能变化的过程。",
+  "conflict": "种子是生物体，与无生命的物质不同，但变化机制相似。",
+  "event_chain": [
+    "园丁播下一粒种子",
+    "种子吸收水分、养分，胚芽萌发",
+    "种子长成一株幼苗"
+  ],
+  "turning_point": "种子开始吸收水分",
+  "resolution_state": "种子转化为幼苗，形态和功能改变",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "一粒种子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子的萌发过程",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "种子被萌发条件激活",
+      "direction_preserved": true
+    }
+  ]
+}

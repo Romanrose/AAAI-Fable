@@ -1,0 +1,201 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "分拆数6和7",
+  "concept_id": "math_1a_rjb_cpt22",
+  "concept_definition": "把6或7分成两个部分，了解所有不同的分法。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt22",
+    "分拆数6和7"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt22",
+      "label": "Concept",
+      "name": "分拆数6和7",
+      "definition": "把6或7分成两个部分，了解所有不同的分法。",
+      "aliases": [],
+      "examples": [
+        "7分成：1和6、2和5、3和4"
+      ],
+      "retrieval_text": "分拆数6和7\n把6或7分成两个部分，了解所有不同的分法。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt19",
+          "label": "Concept",
+          "name": "数字6和7的认识",
+          "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。"
+        },
+        {
+          "id": "math_1a_rjb_cpt20",
+          "label": "Concept",
+          "name": "6和7的加法",
+          "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+        },
+        {
+          "id": "math_1a_rjb_cpt21",
+          "label": "Concept",
+          "name": "6和7的减法",
+          "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5",
+          "label": "Chapter",
+          "name": "6~10的认识和加减法",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt22",
+    "concept_id": "math_1a_rjb_cpt22",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt22",
+      "label": "Concept",
+      "name": "分拆数6和7",
+      "definition": "把6或7分成两个部分，了解所有不同的分法。",
+      "aliases": [],
+      "examples": [
+        "7分成：1和6、2和5、3和4"
+      ]
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：把6或7分成两个部分，了解所有不同的分法。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "分拆数6和7"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "把6或7分成两个部分，了解所有不同的分法。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中通过七朵花和六朵花的分组，展示了把6或7分成两个部分的所有不同分法，如七朵花分成1和6、2和5、3和4等，六朵花分成1和5、2和4、3和3等。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "主角白白从只试一种分法到尝试所有分法，体现了‘把6或7分成两个部分，了解所有不同的分法’这一核心机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了分拆的数学结构（如七朵花有六种分法，六朵花有五种分法），没有道德化，也没有直接提及‘分拆数6和7’这一术语。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：七色花圃的秘密\n\n小兔白白住在规则谜城，城里有个著名的七色花圃。花圃里种着七朵不同颜色的花：红、橙、黄、绿、青、蓝、紫。花圃的守护者猫头鹰爷爷定下了一条规矩：每天清晨，必须把七朵花分成两组，分别移入东、西两个花坛，而且两组花的数量都不能是零。白白觉得这太简单了，随手就把红、橙、黄三朵花放进东坛，剩下的四朵放进西坛。猫头鹰爷爷摇摇头说：“不对，你只试了一种分法。七朵花可以分成1和6、2和5、3和4，还有反过来6和1、5和2、4和3，一共六种分法。每一种都要尝试，才能让花圃均衡生长。”\n\n白白恍然大悟，原来分法不是唯一的。第二天，他又来到花圃，这次他面对的是六朵花——因为有一朵被移到了温室。猫头鹰爷爷说：“今天只有六朵花，同样要分成两组，每组不能为零。你试试看。”白白想了想，把一朵花放进东坛，五朵放进西坛。爷爷点点头：“还有呢？”白白又试了2和4、3和3，以及4和2、5和1。爷爷微笑着说：“六朵花有五种分法，比七朵少一种。你发现了吗？七朵花的分法比六朵多一种，因为七是奇数，可以分成3和4这样两个不同的数，而六是偶数，可以分成3和3这样两个相同的数。”\n\n白白终于明白了：无论是六朵还是七朵，都要把所有不同的分法找全，不能漏掉任何一种。从此，他每天都会仔细地尝试每一种分法，花圃里的花开得格外鲜艳。",
+  "rule_findings": {
+    "story_token_count": 471,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

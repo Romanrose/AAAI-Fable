@@ -1,0 +1,245 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "长方体",
+  "concept_id": "math_1a_rjb_cpt14",
+  "concept_definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt14",
+    "长方体"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt14",
+      "label": "Concept",
+      "name": "长方体",
+      "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+      "aliases": [],
+      "examples": [
+        "积木中的长方体块",
+        "砖块",
+        "教室里的粉笔盒",
+        "纸巾盒",
+        "长方体纸箱",
+        "粉笔盒、文具盒、牙膏盒等包装盒"
+      ],
+      "retrieval_text": "长方体\n由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_5b_rjb_cpt14",
+          "label": "Concept",
+          "name": "表面积",
+          "definition": "长方体或正方体6个面的面积之和叫做它的表面积。"
+        },
+        {
+          "id": "math_5b_rjb_cpt16",
+          "label": "Concept",
+          "name": "长方体体积公式",
+          "definition": "长方体体积=长×宽×高，也可写为V=a·b·h。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt18",
+          "label": "Concept",
+          "name": "按形状分类",
+          "definition": "根据物体或图形的外形特征进行分类的方法。"
+        },
+        {
+          "id": "math_1a_rjb_cpt15",
+          "label": "Concept",
+          "name": "正方体",
+          "definition": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "math_1a_rjb_exe11",
+          "label": "Exercise",
+          "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+          "definition": ""
+        },
+        {
+          "id": "math_5b_rjb_exe7",
+          "label": "Exercise",
+          "name": "一个长方体纸箱长40 cm、宽30 cm、高20 cm，在所有棱上粘一圈胶带，至少需要多长的胶带？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch4",
+          "label": "Chapter",
+          "name": "认识图形（一）",
+          "definition": ""
+        },
+        {
+          "id": "math_5b_rjb_ch3",
+          "label": "Chapter",
+          "name": "长方体和正方体",
+          "definition": ""
+        },
+        {
+          "id": "math_7a_rjb_ch4_s4",
+          "label": "Section",
+          "name": "第四节 课题学习 设计制作长方体形状的包装纸盒",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt14",
+    "concept_id": "math_1a_rjb_cpt14",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt14",
+      "label": "Concept",
+      "name": "长方体",
+      "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+      "aliases": [],
+      "examples": [
+        "积木中的长方体块",
+        "砖块",
+        "教室里的粉笔盒",
+        "纸巾盒",
+        "长方体纸箱",
+        "粉笔盒、文具盒、牙膏盒等包装盒"
+      ]
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "长方体"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中的六面屋有六个面（两个相对的面是正方形，其余是长方形）、十二条棱（相对的棱长度相等）、八个顶点（每个顶点连接三条棱），这些特征隐含了目标概念的定义。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小智通过观察和操作，发现了相对的面完全相同、相对的棱长度相等、每个顶点连接三条棱等规律，这些对应了目标概念的核心机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事没有直接提及目标概念名称，也没有将概念道德化，而是通过事件链自然呈现了数学结构，符合保留形式定义条件和规则一致性的要求。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：神秘的六面屋\n\n小智在森林里发现了一座奇怪的小屋。小屋有六个面，每个面都是长方形，只有两个相对的面是正方形。他好奇地绕着屋子走了一圈，发现每个面都光滑平整，没有窗户和门。\n\n“这屋子怎么进去呢？”小智自言自语。他试着推了推一个面，面纹丝不动。他又推了推对面的面，同样推不动。他注意到，相对的两个面大小完全一样，连颜色都相同。\n\n小智决定仔细观察。他数了数屋子的棱，一共有十二条。他用手比划着，发现相对的棱长度都相等。他又数了数顶点，有八个。每个顶点处，三条棱交汇在一起。\n\n“如果我能找到一种方法，让这些面都活动起来……”小智想着。他注意到，每个面都与四个其他面相邻，只有相对的面不相邻。他试着同时推动两个相邻的面，屋子开始微微晃动。\n\n小智继续探索。他发现，如果同时推动三个相交于一个顶点的面，屋子就会旋转。他试了试，屋子果然转了起来。在旋转中，他看到了屋子的全貌：六个面，两两相对，完全相同；十二条棱，相对的棱等长；八个顶点，每个顶点连接三条棱。\n\n“原来如此！”小智恍然大悟，“这屋子虽然看起来简单，但它的结构非常严谨。每个部分都有固定的关系，不能随意改变。”\n\n他决定给这座小屋起个名字，叫“六面屋”。从此，小智经常来六面屋玩，每次都能发现新的规律。他明白了，看似简单的事物，往往蕴含着深刻的道理。",
+  "rule_findings": {
+    "story_token_count": 468,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

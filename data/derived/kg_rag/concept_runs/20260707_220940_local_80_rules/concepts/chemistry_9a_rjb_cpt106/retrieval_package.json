@@ -1,0 +1,50 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt106",
+    "label": "Concept",
+    "name": "分解过氧化氢制取氧气",
+    "properties": {
+      "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。",
+      "importance": "掌握",
+      "formula": "过氧化氢  ⟶(二氧化锰)  水 + 氧气",
+      "retrieval_text": "分解过氧化氢制取氧气\nConcept\n利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。\n掌握\n过氧化氢  ⟶(二氧化锰)  水 + 氧气"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:11278",
+      "source": "chemistry_9a_rjb_cpt106",
+      "source_name": "分解过氧化氢制取氧气",
+      "target": "chemistry_9a_rjb_cpt103",
+      "target_name": "实验室制取氧气的方法",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "分解过氧化氢制取氧气",
+      "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。",
+      "formula": "过氧化氢  ⟶(二氧化锰)  水 + 氧气",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11278] 分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 259,
+    "summary_chars": 286,
+    "path_chars": 0,
+    "retrieval_context_chars": 545
+  }
+}

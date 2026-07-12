@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt13",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "数字0的含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "数字0的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "表示没有数量。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "法庭证据室里，记录员翻开分段记录册，看到第一页上写着“无物可记”。他放下笔，对调度员说：“入口条件核对过了，这里表示没有数量，不能放任何物品进封存箱。”\n\n调度员点头，在通行牌上写下“条件一致”，然后推了一下封存箱的锁扣。他说：“形式定义必须保留，规则不能改。如果入口说没有数量，那第2道转化环节就得按这个条件来。”\n\n验收员站在旁边，手里拿着结果验收记录册。他皱眉问：“那后面怎么填？如果中间跳过核对，直接写结果，能行吗？”\n\n调度员摇头：“不行。必须先稳定入口条件核对，再推动第2道转化环节，最后才能接上结果验收记录。前后顺序不能乱。”\n\n记录员合上册子，提议试一次倒序。调度员把通行牌直接塞给验收员，跳过中间环节。验收员翻开记录册，发现封存箱里根本没有对应物品，条件与结果对不上，记录全成了空话。\n\n“你看，”调度员指着错乱的记录，“提前跳过中间承接，整条链就断了。入口核对是前提，转化环节是过程，验收记录是结果。缺一环，其他两环就立不住。”\n\n记录员重新打开第一页，确认“没有数量”的条件。调度员按这个条件调整封存箱的锁扣规则。验收员最后记录：条件已核，过程已转，结果可靠。三本册子上的编号终于互相吻合，法庭证据室的流程恢复了连贯。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "表示没有数量",
+        "narrative_anchor": "表示没有数量",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "他放下笔，对调度员说：“入口条件核对过了，这里表示没有数量，不能放任何物品进封存",
+        "narrative_anchor": "他放下笔，对调度员说：“入口条件核对过了，这里表示没有数量，不能放任何物品进封存",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "他放下笔，对调度员说：“入口条件核对过了，这里表示没有数量，不能放任何物品进封存",
+        "narrative_anchor": "他放下笔，对调度员说：“入口条件核对过了，这里表示没有数量，不能放任何物品进封存",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+        "evidence": "”",
+        "narrative_anchor": "”",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

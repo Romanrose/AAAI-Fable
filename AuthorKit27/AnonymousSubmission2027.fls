@@ -1,0 +1,15 @@
+PWD d:/Project/AAAI/AAAI-Fable/AuthorKit27
+INPUT e:/Program/Texlive/texmf.cnf
+INPUT e:/Program/Texlive/texmf-dist/web2c/texmf.cnf
+INPUT e:/Program/Texlive/texmf-var/web2c/xetex/xelatex.fmt
+INPUT d:/Project/AAAI/AAAI-Fable/AuthorKit27/AnonymousSubmission2027.tex
+OUTPUT AnonymousSubmission2027.log
+INPUT e:/Program/Texlive/texmf-dist/tex/latex/base/article.cls
+INPUT e:/Program/Texlive/texmf-dist/tex/latex/base/article.cls
+INPUT e:/Program/Texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT e:/Program/Texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT e:/Program/Texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT ./aaai2027.sty
+INPUT aaai2027.sty
+INPUT e:/Program/Texlive/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT e:/Program/Texlive/texmf-dist/tex/generic/iftex/iftex.sty

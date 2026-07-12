@@ -1,0 +1,21 @@
+{
+  "concept_cards_path": "data\\derived\\kg_rag\\concept_cards\\machine_eval_concept_cards.enriched.jsonl",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm",
+  "workflow": "agentic",
+  "mode": "llm",
+  "language": "zh-CN",
+  "subject": null,
+  "priority": null,
+  "limit": 1,
+  "offset": 0,
+  "batch_size": 100,
+  "retry": 0,
+  "resume": true,
+  "evaluate_mode": "llm",
+  "retrieval_mode": "dual_level",
+  "max_edges": 16,
+  "revision_rounds": 0,
+  "template_blacklist": "default",
+  "normalized_graph_path": "data\\derived\\kg_rag\\k12_kgraph_normalized.json",
+  "concept_count": 1
+}

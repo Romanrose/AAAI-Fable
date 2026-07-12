@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农测试一批稻种的质量",
+  "characters": [
+    "老农",
+    "稻种"
+  ],
+  "objects": [
+    "竹匾",
+    "湿布",
+    "清水",
+    "记录簿"
+  ],
+  "conflict": "老农需要知道这批稻种是否优质，以便决定是否用于播种",
+  "event_chain": [
+    "老农准备竹匾、湿布、清水和记录簿",
+    "老农在竹匾上铺湿布并洒水保持湿润",
+    "老农均匀摆放100粒稻种在湿布上",
+    "老农每天观察并记录萌发的稻种粒数，连续7天",
+    "老农重复测定多次并计算平均值",
+    "老农根据平均值判断稻种质量，为播种提供依据"
+  ],
+  "turning_point": "老农通过多次观察和计算平均值，得出稻种萌发比例",
+  "resolution_state": "老农知道了稻种的质量，可以决定是否播种",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "稻种质量（萌发比例）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "萌发比例 = 萌发粒数 / 总粒数 × 100%",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农在竹匾上铺湿布并洒水，均匀摆放100粒稻种，每天观察记录萌发粒数，连续7天，重复多次",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农计算平均值，得出稻种萌发比例，为播种提供依据",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "竹匾、湿布、清水、记录簿",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农使用竹匾、湿布、清水和记录簿来开始观察稻种萌发",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农的观察过程产生了萌发粒数的记录和平均值",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "平均值结果验证了稻种质量（萌发比例）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "稻种质量（萌发比例）与萌发比例的计算公式相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保没有使用'发芽率'等禁止术语",
+    "确保故事载体来自同一源域（老农测试稻种）",
+    "确保所有机制节点和边都被映射，方向正确",
+    "确保课程桥接上下文（如'测定种子的发芽率'）未作为因果机制处理"
+  ],
+  "mapping_context_sha256": "48dddd9f36a442734e10bd4ba8ffc416c9fbeb06a3c155b678e7d4ebb2835e58",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ec88f26101725daa74a4c34b2a8f844480ef2248ede8b68e12681fbde0d093aa"
+  }
+}

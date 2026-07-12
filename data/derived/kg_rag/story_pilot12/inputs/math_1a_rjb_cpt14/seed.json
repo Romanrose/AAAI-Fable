@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "math_1a_rjb_cpt14",
+  "subject": "math",
+  "canonical_name": "长方体",
+  "aliases": [],
+  "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+  "concept_type": "relation",
+  "forbidden_terms": [
+    "长方体"
+  ]
+}

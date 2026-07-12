@@ -1,0 +1,59 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt106",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "分解过氧化氢制取氧气",
+  "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt103",
+        "label": "Concept",
+        "name": "实验室制取氧气的方法",
+        "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。"
+  ],
+  "must_preserve_zh": [
+    "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。",
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "分解过氧化氢制取氧气"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

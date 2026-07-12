@@ -1,0 +1,233 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "圆柱",
+  "concept_id": "math_1a_rjb_cpt16",
+  "concept_definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt16",
+    "圆柱",
+    "圆柱体"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt16",
+      "label": "Concept",
+      "name": "圆柱",
+      "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+      "aliases": [
+        "圆柱体"
+      ],
+      "examples": [
+        "易拉罐",
+        "水杯",
+        "铅笔筒",
+        "储罐",
+        "柱子"
+      ],
+      "retrieval_text": "圆柱\n由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt18",
+          "label": "Concept",
+          "name": "按形状分类",
+          "definition": "根据物体或图形的外形特征进行分类的方法。"
+        },
+        {
+          "id": "math_bx2_rjb_cpt59",
+          "label": "Concept",
+          "name": "旋转体",
+          "definition": "一条平面曲线绕其所在平面内的一条定直线旋转所形成的曲面围成的几何体。"
+        },
+        {
+          "id": "math_6b_rjb_cpt15",
+          "label": "Concept",
+          "name": "圆锥",
+          "definition": "由一个圆形底面和一个侧面组成的立体图形，从顶点到底面圆心的距离为高。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "math_1a_rjb_exe11",
+          "label": "Exercise",
+          "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch4",
+          "label": "Chapter",
+          "name": "认识图形（一）",
+          "definition": ""
+        },
+        {
+          "id": "math_6b_rjb_ch3",
+          "label": "Chapter",
+          "name": "圆柱与圆锥",
+          "definition": ""
+        },
+        {
+          "id": "math_bx2_rjb_ch8_s1",
+          "label": "Section",
+          "name": "第一节 基本立体图形",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt16",
+    "concept_id": "math_1a_rjb_cpt16",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt16",
+      "label": "Concept",
+      "name": "圆柱",
+      "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+      "aliases": [
+        "圆柱体"
+      ],
+      "examples": [
+        "易拉罐",
+        "水杯",
+        "铅笔筒",
+        "储罐",
+        "柱子"
+      ]
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "圆柱"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中的石柱由两个完全相同的圆形石盘（底面）和一个光滑曲面围成，符合目标概念的定义。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小明测量发现上下圆盘大小相等，曲面平滑连接，且两个圆心之间的距离（高）决定了柱子的高度，体现了底面圆心之间的距离为高的关键特征。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事通过测量影子、绳长和圆心距离等具体事件，保留了形式定义和规则一致性，没有道德化说教，也没有直接提及禁止术语。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：石柱的秘密\n\n在规则谜城中央，有一座古老的石柱。它由两个完全相同的圆形石盘上下夹住，中间是光滑的曲面，看起来像一枚巨大的棋子。城里的居民都叫它“双盘柱”。\n\n一天，负责观察规则的小明发现：每当正午阳光直射时，石柱的影子会在地面形成一个完美的长方形。他好奇地测量了石盘直径——正好是影子宽度的两倍。更奇怪的是，无论太阳如何移动，影子的长度始终等于两个石盘圆心之间的距离。\n\n“这影子怎么总是这么规矩？”小明问守城的老匠人。匠人笑着说：“你试着用绳子绕石柱一圈，再量量两个石盘圆心之间的直线距离。”\n\n小明照做了。他发现绳子绕曲面一周的长度，恰好等于两个石盘圆周长的平均值。他又用尺子量了上下石盘的圆心——它们之间的直线距离，正好是影子长度的两倍。\n\n“原来如此！”小明恍然大悟，“这个石柱的秘密在于：上下两个圆盘大小完全相同，中间曲面平滑连接，而两个圆心之间的那条看不见的线，决定了整个柱子的高度。”\n\n从此，小明学会了用影子、绳子和尺子来验证任何类似的结构。他发现城里的水井、粮仓，甚至庙宇的柱子，都藏着同样的规则：两个相等的圆盘，一个光滑的曲面，以及连接圆心的那条关键线段。\n\n后来，规则谜城的人们把这种结构称为“双圆直柱”，并把它写进了城规手册。而小明也成了城里最懂规则的人。",
+  "rule_findings": {
+    "story_token_count": 467,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

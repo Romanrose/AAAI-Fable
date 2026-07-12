@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "农夫将稻种一粒粒播入秧盘，每播一粒，他就在心里默念一个数，但他其实不会数数，只是做了个记住的动作。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "他看看手里的秧苗，又看看稻田里空着的位置，心里比了比，发现秧苗比需要的位置少了一些。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "每插一株，就又对应之前的一个数。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他看看手里的秧苗，又看看稻田里空着的位置，心里比了比，发现秧苗比需要的位置少了一些。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "每插一株，就又对应之前的一个数。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact contiguous substrings from the story. Node n1 aligns with the counting-by-action process; n2 aligns with the comparison of quantities; n3 aligns with the one-to-one correspondence method. Edge e1 (n1→n2) is supported by the story's comparison step, and edge e2 (n1→n3) is supported by the one-to-one mapping during insertion. Directions are preserved as per the mechanism graph."
+}

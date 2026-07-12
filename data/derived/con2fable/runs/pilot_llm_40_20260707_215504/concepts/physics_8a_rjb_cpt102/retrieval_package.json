@@ -1,0 +1,91 @@
+{
+  "seed": {
+    "id": "physics_8a_rjb_cpt102",
+    "resolved_node_id": "physics_8a_rjb_cpt102",
+    "name": "实像",
+    "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_12420",
+      "source_id": "physics_8a_rjb_cpt104",
+      "source_name": "投影仪成像",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12419",
+      "source_id": "physics_8a_rjb_cpt103",
+      "source_name": "照相机成像",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_23049",
+      "source_id": "physics_8a_rjb_exp26",
+      "source_name": "投影仪演示实验",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "verifies",
+      "score": 0.89
+    },
+    {
+      "source_edge_id": "edge_23048",
+      "source_id": "physics_8a_rjb_exp25",
+      "source_name": "自制模型照相机实验",
+      "target_id": "physics_8a_rjb_cpt102",
+      "target_name": "实像",
+      "relation": "verifies",
+      "score": 0.89
+    },
+    {
+      "source_edge_id": "edge_19711",
+      "source_id": "physics_8a_rjb_cpt102",
+      "source_name": "实像",
+      "target_id": "physics_8a_rjb_cpt82",
+      "target_name": "虚像",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "虚像"
+      ],
+      "outcomes": [],
+      "experiments": [
+        "投影仪演示实验",
+        "自制模型照相机实验"
+      ],
+      "hierarchy": [
+        "投影仪成像",
+        "照相机成像"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 5,
+    "selected_edge_count": 5,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

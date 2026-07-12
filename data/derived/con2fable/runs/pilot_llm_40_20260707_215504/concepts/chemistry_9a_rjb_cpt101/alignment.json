@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "用余烬中的火星验证烽火真伪",
+      "evidence": "他拿起一根干火把，小心地伸进余烬中。火把刚一接触那暗红的火星，只听“呼”的一声，火把瞬间燃起明亮的火焰",
+      "narrative_anchor": "火把刚一接触那暗红的火星，只听“呼”的一声，火把瞬间燃起明亮的火焰"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "余烬中还有火星（支持燃烧的条件）",
+      "evidence": "这余烬里还有火星，只要还有火星，就能用它来验证",
+      "narrative_anchor": "这余烬里还有火星"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "用余烬中的火星使火把复燃，从而验证烽火真伪",
+      "evidence": "他拿起一根干火把，小心地伸进余烬中。火把刚一接触那暗红的火星，只听“呼”的一声，火把瞬间燃起明亮的火焰",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "火把刚一接触那暗红的火星，只听“呼”的一声，火把瞬间燃起明亮的火焰"
+    }
+  ]
+}

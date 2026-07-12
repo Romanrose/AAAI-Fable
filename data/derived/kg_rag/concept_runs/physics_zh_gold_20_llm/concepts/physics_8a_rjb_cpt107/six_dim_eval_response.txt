@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过阿光测量站立位置与镜子的距离并记录影像变化，准确映射了物距的定义（物体到凸透镜的距离），且成像规律与凸透镜成像规律一致，无矛盾。",
+    "implicitness": "目标概念“物距”及其别名从未在故事正文中出现，完全通过“站的位置”、“距离”等情境化表述隐含传达，符合隐含性要求。",
+    "mapping_clarity": "故事清晰展示了物距变化（远、稍近、更近、极近）与成像特征（缩小清晰、放大模糊、消失、正立放大）的对应关系，映射明确且易于理解。",
+    "readability": "语言流畅自然，情节连贯，使用日常词汇和简单句式，适合目标读者，无理解障碍。",
+    "pedagogical_value": "故事完整呈现了物距决定成像规律的核心机制，并引导读者通过观察和测量发现规律，具有较高的教学价值。",
+    "novelty": "将凸透镜成像规律融入钟楼观察场景，虽有一定新意，但“距离决定现象”的叙事框架较为常见，新颖性略逊于其他维度。"
+  },
+  "revision_suggestions": [
+    "可增加一个角色因误解物距导致错误判断的情节，以增强冲突和认知转变。",
+    "可补充一个具体数值示例（如“两倍焦距”），使物距与成像规律的量化关系更明确。",
+    "可考虑在结尾点明“物距”这一术语的日常含义，但需避免直接使用术语本身。"
+  ]
+}

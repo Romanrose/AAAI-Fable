@@ -1,0 +1,63 @@
+{
+  "source_domain": "光学实验",
+  "setting": "一间光线充足的物理实验室，实验台上摆放着凸透镜、光源和光屏。",
+  "conflict": "一束平行光经过凸透镜后无法准确汇聚到一点，导致光屏上的光斑散乱。",
+  "characters": [
+    {
+      "name": "小光",
+      "role": "实验操作者，负责调整光源和透镜",
+      "mapped_element": "m1"
+    },
+    {
+      "name": "透镜",
+      "role": "凸透镜，负责折射光线",
+      "mapped_element": "m2"
+    },
+    {
+      "name": "光屏",
+      "role": "接收光线的屏幕，显示汇聚效果",
+      "mapped_element": "m3"
+    }
+  ],
+  "mappings": [
+    {
+      "concept_element": "m1",
+      "narrative_carrier": "小光将平行光束对准透镜中心"
+    },
+    {
+      "concept_element": "m2",
+      "narrative_carrier": "透镜的对称轴（主光轴）确保光束方向正确"
+    },
+    {
+      "concept_element": "m3",
+      "narrative_carrier": "光屏上出现一个明亮的小点，代表光线汇聚"
+    }
+  ],
+  "plot_beats": [
+    {
+      "beat_id": "b1",
+      "event": "小光打开光源，一束平行光射向凸透镜，但光屏上光斑散乱。",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b2",
+      "event": "小光检查透镜是否正对光源，确保光束沿透镜的对称轴入射。",
+      "mapped_elements": [
+        "m2"
+      ]
+    },
+    {
+      "beat_id": "b3",
+      "event": "调整后，平行光穿过透镜，在光屏上汇聚成一个明亮的小点。",
+      "mapped_elements": [
+        "m1",
+        "m3"
+      ]
+    }
+  ],
+  "turning_point": "小光发现光斑散乱是因为光束没有沿透镜的对称轴入射，调整后光线成功汇聚。",
+  "ending": "光屏上出现一个清晰的小点，实验成功，小光理解了光线汇聚的条件。",
+  "implied_moral": "只有沿着正确的路径，分散的力量才能集中到一处，产生最大的效果。"
+}

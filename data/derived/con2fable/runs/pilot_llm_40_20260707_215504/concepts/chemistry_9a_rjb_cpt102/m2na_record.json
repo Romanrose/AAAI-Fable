@@ -1,0 +1,100 @@
+{
+  "id": "chemistry_9a_rjb_cpt102",
+  "method": "con2fable",
+  "concept": {
+    "name": "呼吸与氧气",
+    "aliases": [],
+    "forbidden_terms": [
+      "呼吸与氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：氧气的物理性质",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：缓慢氧化",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18224"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18223"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老张坐在帐篷外，大口喘着气，脸色发白。他刚想站起来去帮忙搬物资，腿一软，差点摔倒。\n\n“别动！”李队医快步走过来，扶住他，“你这是高原反应，这里的空气太稀薄了，你身体里的能量不够用了。”\n\n老张头晕眼花，只觉得胸口像压了块石头，每吸一口气都费劲。他虚弱地问：“那怎么办？我们才到半山腰，总不能现在就下山吧？”\n\n李队医没说话，转身从急救包里取出一个银色的氧气瓶，又拿出一根透明的管子，连着一个面罩。他检查了一下瓶口的压力表，指针稳稳地指向绿色区域。\n\n“来，戴上这个。”李队医把面罩轻轻罩在老张的口鼻上，然后拧开阀门，只听“嘶——”的一声轻响，一股清凉的气流涌进面罩。\n\n“慢慢吸，别急。”李队医蹲在旁边，用手势示意老张放慢节奏。\n\n老张闭上眼睛，按照队医的指导，深深地、缓缓地吸了一口气。那股气流顺着管子进入面罩，再进入他的喉咙、胸膛。他感觉原本紧绷的胸口一点点松开了，脑袋里的眩晕也像潮水一样退去。\n\n他又吸了一口，这次更慢、更深。那股清凉的气流在身体里慢慢扩散，像干涸的土地终于等来了雨水。他的手脚不再发软，眼前的世界重新清晰起来。\n\n过了几分钟，老张长出一口气，自己摘下面罩，脸色已经恢复了不少。“好多了，这东西真管用。”\n\n李队医把氧气瓶收好，拍了拍他的肩膀：“记住，呼吸要慢，要稳。这瓶氧气有限，省着点用，后面的路还长着呢。”\n\n老张点点头，站起身，重新背好背包。他望着前方雪线之上的山峰，调整了一下呼吸，迈出了稳健的一步。\n\n李队医看着他的背影，心里想：这氧气瓶里的气体，平时压缩在瓶里，一打开就释放出来，正好能补充老张身体里缺少的东西。老张慢慢呼吸，那气体就一点点被用掉，不多不少，刚刚好。要是吸得太快，反而浪费了。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "人体呼吸消耗氧气，吸氧缓解高原反应",
+        "evidence": "李队医快步走过来，扶住他，“你这是高原反应，这里的空气太稀薄了，你身体里的能量不够用了。”",
+        "narrative_anchor": "空气太稀薄了，你身体里的能量不够用了"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "氧气瓶中的气体平时压缩在瓶里，一打开就释放出来",
+        "evidence": "这氧气瓶里的气体，平时压缩在瓶里，一打开就释放出来",
+        "narrative_anchor": "平时压缩在瓶里，一打开就释放出来"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "缓慢呼吸，氧气一点点被用掉",
+        "evidence": "老张慢慢呼吸，那气体就一点点被用掉，不多不少，刚刚好。要是吸得太快，反而浪费了。",
+        "narrative_anchor": "老张慢慢呼吸，那气体就一点点被用掉"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "氧气瓶释放气体（物理性质）支持呼吸消耗氧气（缓慢氧化）",
+        "evidence": "这氧气瓶里的气体，平时压缩在瓶里，一打开就释放出来，正好能补充老张身体里缺少的东西。",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m1",
+        "direction_preserved": false,
+        "narrative_anchor": "一打开就释放出来，正好能补充老张身体里缺少的东西"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "氧气物理性质（压缩释放）支持缓慢氧化（慢慢呼吸消耗氧气）",
+        "evidence": "老张慢慢呼吸，那气体就一点点被用掉，不多不少，刚刚好。",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "老张慢慢呼吸，那气体就一点点被用掉"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

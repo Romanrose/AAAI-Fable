@@ -1,0 +1,13 @@
+{
+  "concept_id": "biology_7a_rjb_cpt125",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "concept_type": "definition",
+  "generation_priority": "gold",
+  "generation_status": "rewritten",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.65,
+  "retry_count": 2,
+  "chinese_char_ratio": 0.8399,
+  "rewrite_retry_count": 1
+}

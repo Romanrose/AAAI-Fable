@@ -1,0 +1,54 @@
+{
+  "query": "biology_7a_rjb_cpt131",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt131",
+    "label": "Concept",
+    "name": "光是绿色植物制造有机物不可缺少的条件",
+    "definition": "在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "光是绿色植物制造有机物不可缺少的条件\n在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt4",
+        "label": "Concept",
+        "name": "光合作用",
+        "definition": "能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "biology_7a_rjb_exp15",
+        "label": "Experiment",
+        "name": "绿叶在光下制造有机物",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe21",
+        "label": "Exercise",
+        "name": "判断：光是绿色植物制造有机物不可缺少的条件。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s4",
+        "label": "Section",
+        "name": "第四章 绿色植物是生物圈中有机物的制造者",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "记录员逐张核对牌上的符号，确认每一枚都准确无误",
+      "evidence": "入口条件核对",
+      "narrative_anchor": "入口条件核对",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "调度员按前一步留下的条件继续推进，将每个符号对应到转化册中",
+      "evidence": "第2道转化环节",
+      "narrative_anchor": "第2道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "验收员用结果验收记录核对整条安排：入口条件、转化过程、最终数量，一一对应",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+      "evidence": "每个箱子上都贴着条件牌，牌面刻着不同的符号。",
+      "narrative_anchor": "每个箱子上都贴着条件牌，牌面刻着不同的符号。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "把两份相关记录放在一起比较，发现它们共同约束最后判断",
+      "evidence": "调度员催促道：“赶紧登记吧，后面还有两关要过。",
+      "narrative_anchor": "调度员催促道：“赶紧登记吧，后面还有两关要过。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Edge e1 (n2->n1, is_a) is realized by the story's explicit classification of the empty check as a universal rule, which preserves the hierarchical relation. However, the mapping could be stronger if the story more directly linked the '第2道转化环节' to the concept of standard units, rather than relying on an analogy. Node n2 is weakest because its story carrier '第2道转化环节' is less explicitly tied to the mechanism concept of '长度单位（米及其倍数、子倍数）' compared to other nodes."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements with high scores."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

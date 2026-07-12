@@ -1,0 +1,245 @@
+{
+  "id": "chemistry_9a_rjb_cpt103",
+  "method": "con2fable",
+  "concept": {
+    "name": "实验室制取氧气的方法",
+    "aliases": [],
+    "forbidden_terms": [
+      "实验室制取氧气的方法"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：分解反应",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：氧气",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "需要考虑前置条件或输入：通过实验现象推断气体性质",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：分解过氧化氢制取氧气",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m6",
+        "text": "需要保留上下位关系：加热氯酸钾制取氧气",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m7",
+        "text": "需要保留上下位关系：加热高锰酸钾制取氧气",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：氧气的收集方法",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14997"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14996"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15223"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15261"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11278"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11280"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11276"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "深山里的工坊中，老匠人正对着满架的材料发愁。祭天仪式在即，他需要大量纯净的“精气”，可手头的紫晶石、碧玉液和白晶砂，每一样都脾气迥异。\n\n他放下手中的竹简，喃喃自语：“万物皆可化一为二，只要找到那把钥匙。”他决定先弄明白这个根本道理——将一种东西分解成更简单的东西。\n\n他最先拿起那瓶翠绿的碧玉液。这药液性子温和，只需往里面撒一小撮黑色粉末，盆中便咕嘟咕嘟冒出无数细密的气泡。一股清凉的气息升腾起来，老匠人用琉璃集气瓶小心地接住，看着瓶中渐渐充盈的无形之气，满意地点了点头。\n\n接着是白晶砂。这白色结晶粉末性子倔强，必须与一种红色矿石粉混合，再放入耐火泥炉中用猛火煅烧。炉膛里先是冒出滚滚白烟，随即火焰转为明亮的黄色，一股更浓烈的精气喷涌而出。老匠人早有准备，迅速用另一个琉璃瓶将其收拢。\n\n最后，他看向那堆深紫色的紫晶石。这是最危险的材料。他将石块敲碎，投入铁釜，盖上留有细孔的盖子，用炭火直接加热。起初一切顺利，可火势稍猛，铁釜内便传来噼啪爆响，一股紫色的浓烟从细孔中猛地喷出，险些灼伤他的眼睛。老匠人惊出一身冷汗，连忙退后半步，稳住火候，才见那紫色烟雾渐渐转为纯净的精气。他屏住呼吸，用最大的琉璃瓶将其一滴不漏地收集起来。\n\n三个琉璃瓶摆在案上，里面都充盈着同样的无形之气。老匠人举起瓶子对着光，仔细观察气泡的动静和气息的纯净度，确认无一杂质。\n\n祭天之日，三种不同方法提取的精气汇聚一处，化作一道柔和而强大的光柱，直冲天际。老匠人望着那道光柱，心中了然：无论是温和的分解还是剧烈的分解，只要遵循了物质转化的根本道理，并时刻留心观察过程中的每一个征兆，便能从不同的原料中，安全地得到同一种宝贵的馈赠。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "老匠人用三种不同方法制取纯净的“精气”",
+        "evidence": "他需要大量纯净的“精气”……他最先拿起那瓶翠绿的碧玉液……接着是白晶砂……最后，他看向那堆深紫色的紫晶石",
+        "narrative_anchor": "他需要大量纯净的“精气”"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "将一种东西分解成更简单的东西",
+        "evidence": "万物皆可化一为二，只要找到那把钥匙……将一种东西分解成更简单的东西",
+        "narrative_anchor": "将一种东西分解成更简单的东西"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "收集到的无形之气（精气）",
+        "evidence": "三个琉璃瓶摆在案上，里面都充盈着同样的无形之气",
+        "narrative_anchor": "同样的无形之气"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "通过观察气泡和气息纯净度来推断气体性质",
+        "evidence": "老匠人举起瓶子对着光，仔细观察气泡的动静和气息的纯净度，确认无一杂质",
+        "narrative_anchor": "仔细观察气泡的动静和气息的纯净度"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "用碧玉液（过氧化氢）制取精气",
+        "evidence": "他最先拿起那瓶翠绿的碧玉液。这药液性子温和，只需往里面撒一小撮黑色粉末，盆中便咕嘟咕嘟冒出无数细密的气泡",
+        "narrative_anchor": "碧玉液"
+      },
+      {
+        "concept_node_id": "m6",
+        "narrative_element": "用白晶砂（氯酸钾）制取精气",
+        "evidence": "接着是白晶砂。这白色结晶粉末性子倔强，必须与一种红色矿石粉混合，再放入耐火泥炉中用猛火煅烧",
+        "narrative_anchor": "白晶砂"
+      },
+      {
+        "concept_node_id": "m7",
+        "narrative_element": "用紫晶石（高锰酸钾）制取精气",
+        "evidence": "最后，他看向那堆深紫色的紫晶石。这是最危险的材料。他将石块敲碎，投入铁釜，盖上留有细孔的盖子，用炭火直接加热",
+        "narrative_anchor": "紫晶石"
+      },
+      {
+        "concept_node_id": "m8",
+        "narrative_element": "用琉璃集气瓶收集精气",
+        "evidence": "老匠人用琉璃集气瓶小心地接住……迅速用另一个琉璃瓶将其收拢……用最大的琉璃瓶将其一滴不漏地收集起来",
+        "narrative_anchor": "琉璃集气瓶"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "老匠人先理解分解原理，再开始制取精气",
+        "evidence": "他决定先弄明白这个根本道理——将一种东西分解成更简单的东西。他最先拿起那瓶翠绿的碧玉液",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "他决定先弄明白这个根本道理"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "分解原理导致产生精气（氧气）",
+        "evidence": "盆中便咕嘟咕嘟冒出无数细密的气泡。一股清凉的气息升腾起来",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "一股清凉的气息升腾起来"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "收集到精气后通过观察现象推断其性质",
+        "evidence": "三个琉璃瓶摆在案上，里面都充盈着同样的无形之气。老匠人举起瓶子对着光，仔细观察气泡的动静和气息的纯净度",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "仔细观察气泡的动静和气息的纯净度"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "通过观察现象，确认碧玉液分解制气的方法可行",
+        "evidence": "老匠人用琉璃集气瓶小心地接住，看着瓶中渐渐充盈的无形之气，满意地点了点头",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "满意地点了点头"
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "从碧玉液方法过渡到白晶砂方法",
+        "evidence": "接着是白晶砂",
+        "narrative_source_concept_node_id": "m5",
+        "narrative_target_concept_node_id": "m6",
+        "direction_preserved": true,
+        "narrative_anchor": "接着是白晶砂"
+      },
+      {
+        "concept_edge_id": "e6",
+        "narrative_relation": "从白晶砂方法过渡到紫晶石方法",
+        "evidence": "最后，他看向那堆深紫色的紫晶石",
+        "narrative_source_concept_node_id": "m6",
+        "narrative_target_concept_node_id": "m7",
+        "direction_preserved": true,
+        "narrative_anchor": "最后，他看向那堆深紫色的紫晶石"
+      },
+      {
+        "concept_edge_id": "e7",
+        "narrative_relation": "紫晶石制气后，用琉璃瓶收集精气",
+        "evidence": "他屏住呼吸，用最大的琉璃瓶将其一滴不漏地收集起来",
+        "narrative_source_concept_node_id": "m7",
+        "narrative_target_concept_node_id": "m8",
+        "direction_preserved": true,
+        "narrative_anchor": "用最大的琉璃瓶将其一滴不漏地收集起来"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

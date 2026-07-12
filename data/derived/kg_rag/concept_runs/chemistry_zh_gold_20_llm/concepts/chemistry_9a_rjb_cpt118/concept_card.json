@@ -1,0 +1,60 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt118",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "化学学习中的分类思想",
+  "definition": "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。",
+  "aliases": [],
+  "examples": [
+    "把化学反应分为化合反应和分解反应",
+    "把物质分为纯净物和混合物"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt117",
+        "label": "Concept",
+        "name": "化学反应的分类方法",
+        "definition": "在化学学习中，根据反应物和生成物的组成特征，将化学反应分为化合反应、分解反应等的学习方法。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt109",
+        "label": "Concept",
+        "name": "分解反应",
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "化学学习中的分类思想"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n8",
+    "weakest_edge_id": "e7",
+    "distinguishing_reason": "The story explicitly mentions '农田' as the entity and maps all processes with concrete agricultural events. Node n8 ('由细胞构成') is only implied through '细密的组织' and '放大镜' rather than directly stated, making it slightly weaker than others. Edge e7 ('农田由细胞构成') is similarly implicit, whereas other edges are directly stated in the story."
+  },
+  "revision_instructions": [
+    "Consider adding an explicit statement that crops are made of cells, e.g., '老农告诉孙子，每一株庄稼都是由无数个细胞构成的' to strengthen node n8 and edge e7."
+  ],
+  "final_status": "accept"
+}

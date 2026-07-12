@@ -1,0 +1,307 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt18",
+    "subject": "math",
+    "canonical_name": "按形状分类",
+    "aliases": [],
+    "definition": "根据物体或图形的外形特征进行分类的方法。",
+    "concept_type": "method",
+    "forbidden_terms": [
+      "按形状分类"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "观察与比较立体图形",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl8:description",
+          "kg-node:math_1a_rjb_skl8:name",
+          "kg-node:math_1a_rjb_skl8:retrieval_text",
+          "kg-edge:normalized:edge:16390"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "按形状分类",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt18:definition",
+          "kg-node:math_1a_rjb_cpt18:examples",
+          "kg-node:math_1a_rjb_cpt18:importance",
+          "kg-node:math_1a_rjb_cpt18:name",
+          "kg-node:math_1a_rjb_cpt18:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "长方体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt14:definition",
+          "kg-node:math_1a_rjb_cpt14:examples",
+          "kg-node:math_1a_rjb_cpt14:importance",
+          "kg-node:math_1a_rjb_cpt14:name",
+          "kg-node:math_1a_rjb_cpt14:pages",
+          "kg-node:math_1a_rjb_cpt14:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "正方体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt15:aliases",
+          "kg-node:math_1a_rjb_cpt15:definition",
+          "kg-node:math_1a_rjb_cpt15:examples",
+          "kg-node:math_1a_rjb_cpt15:importance",
+          "kg-node:math_1a_rjb_cpt15:name",
+          "kg-node:math_1a_rjb_cpt15:pages",
+          "kg-node:math_1a_rjb_cpt15:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "圆柱",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt16:aliases",
+          "kg-node:math_1a_rjb_cpt16:definition",
+          "kg-node:math_1a_rjb_cpt16:examples",
+          "kg-node:math_1a_rjb_cpt16:importance",
+          "kg-node:math_1a_rjb_cpt16:name",
+          "kg-node:math_1a_rjb_cpt16:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "球体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt17:definition",
+          "kg-node:math_1a_rjb_cpt17:examples",
+          "kg-node:math_1a_rjb_cpt17:importance",
+          "kg-node:math_1a_rjb_cpt17:name",
+          "kg-node:math_1a_rjb_cpt17:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16390"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12132"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12134"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12135"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12137"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "按形状分类"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt18",
+      "name": "按形状分类",
+      "label": "Concept",
+      "definition": "根据物体或图形的外形特征进行分类的方法。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_skl8",
+        "name": "观察与比较立体图形"
+      },
+      {
+        "id": "math_1a_rjb_cpt14",
+        "name": "长方体"
+      },
+      {
+        "id": "math_1a_rjb_cpt15",
+        "name": "正方体"
+      },
+      {
+        "id": "math_1a_rjb_cpt16",
+        "name": "圆柱"
+      },
+      {
+        "id": "math_1a_rjb_cpt17",
+        "name": "球体"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:16390",
+        "source_id": "math_1a_rjb_skl8",
+        "source_name": "观察与比较立体图形",
+        "target_id": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_skl8",
+        "neighbor_name": "观察与比较立体图形",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12132",
+        "source_id": "math_1a_rjb_cpt14",
+        "source_name": "长方体",
+        "target_id": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt14",
+        "neighbor_name": "长方体",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12134",
+        "source_id": "math_1a_rjb_cpt15",
+        "source_name": "正方体",
+        "target_id": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt15",
+        "neighbor_name": "正方体",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12135",
+        "source_id": "math_1a_rjb_cpt16",
+        "source_name": "圆柱",
+        "target_id": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt16",
+        "neighbor_name": "圆柱",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12137",
+        "source_id": "math_1a_rjb_cpt17",
+        "source_name": "球体",
+        "target_id": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt17",
+        "neighbor_name": "球体",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 5,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "按形状分类",
+      "definition": "根据物体或图形的外形特征进行分类的方法。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16390] 观察与比较立体图形 --prerequisites_for--> 按形状分类"
+    ],
+    "process_summary": [
+      "[normalized:edge:12132] 长方体 --is_a--> 按形状分类",
+      "[normalized:edge:12134] 正方体 --is_a--> 按形状分类",
+      "[normalized:edge:12135] 圆柱 --is_a--> 按形状分类",
+      "[normalized:edge:12137] 球体 --is_a--> 按形状分类"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:16390",
+    "normalized:edge:12132",
+    "normalized:edge:12134",
+    "normalized:edge:12135",
+    "normalized:edge:12137"
+  ],
+  "provenance": {
+    "seed_sha256": "29e3b81986714ad8003f79faa97395b7d9c82a232b81fcccd4ef91c468282e09",
+    "retrieval_sha256": "1e18a1cdac74f6a0eaaf6015e151449eacf13e6289aa3a437045a5631c9d50d1",
+    "mechanism_record_sha256": "8bb5dfc2f6b2b3a53c472aa5fe4e0f2054facf49c065cb6629979b0f1070b123"
+  }
+}

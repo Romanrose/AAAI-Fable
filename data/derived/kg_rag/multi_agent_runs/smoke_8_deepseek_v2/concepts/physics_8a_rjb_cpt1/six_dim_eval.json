@@ -1,0 +1,122 @@
+{
+  "concept_id": "physics_8a_rjb_cpt1",
+  "target_concept": "长度",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "寓言准确传达了长度作为空间延伸程度、需测量工具获得的核心机制，通过闸门高度对应刻度、标准管口径对应统一单位，完整呈现了从测量到验证的因果链。",
+    "implicitness": "正文未出现‘长度’、‘米’、‘厘米’等禁用术语，全部使用‘闸门高度’、‘刻度’、‘口径’等替代，完全符合隐含性要求。",
+    "mapping_clarity": "故事中每个角色、物品和事件都清晰对应机制图节点和边：闸门高度对应n1，刻度读取对应n2，标准管口径对应n3，实验验证对应n4，且因果顺序与机制图一致。",
+    "readability": "故事语言自然流畅，情节连贯，对话生动，适合中学生阅读，无生硬术语或复杂句式。",
+    "pedagogical_value": "读者能通过故事理解长度测量需要工具、需要统一标准、需要实验验证的完整逻辑，教学价值高。",
+    "novelty": "水渠调度场景有一定新意，避免了常见的‘尺子量桌子’模板，但‘标准管’类比在寓言中不算特别罕见，新颖性略减。"
+  },
+  "evidence": {
+    "faithfulness": "闸门高度对应空间延伸程度，刻度标尺对应测量工具，标准管口径对应统一单位，实验验证对应规律发现。",
+    "implicitness": "全文无‘长度’、‘米’、‘厘米’等词，仅用‘刻度’、‘口径’、‘高度’等替代。",
+    "mapping_clarity": "每个机制节点和边都有明确故事元素对应，且方向正确，如‘闸门高度→刻度读取→标准管→实验验证’。",
+    "readability": "故事有冲突、转折、解决，语言简洁，对话自然，如‘这太乱了’、‘你看，这上面有刻度’。",
+    "pedagogical_value": "读者能学到长度测量需要工具、统一标准和实验验证，而非仅凭感觉。",
+    "novelty": "水渠调度场景较新颖，但‘标准管’类比在寓言中已有类似用法。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个角色对‘标准管’来源或制作过程的简单说明，以增强统一标准的教学深度。",
+    "可略微丰富下游农户的反馈细节，使冲突更具体。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "寓言准确传达了长度作为空间延伸程度、需测量工具获得的核心机制，通过闸门高度对应刻度、标准管口径对应统一单位，完整呈现了从测量到验证的因果链。",
+      "implicitness": "正文未出现‘长度’、‘米’、‘厘米’等禁用术语，全部使用‘闸门高度’、‘刻度’、‘口径’等替代，完全符合隐含性要求。",
+      "mapping_clarity": "故事中每个角色、物品和事件都清晰对应机制图节点和边：闸门高度对应n1，刻度读取对应n2，标准管口径对应n3，实验验证对应n4，且因果顺序与机制图一致。",
+      "readability": "故事语言自然流畅，情节连贯，对话生动，适合中学生阅读，无生硬术语或复杂句式。",
+      "pedagogical_value": "读者能通过故事理解长度测量需要工具、需要统一标准、需要实验验证的完整逻辑，教学价值高。",
+      "novelty": "水渠调度场景有一定新意，避免了常见的‘尺子量桌子’模板，但‘标准管’类比在寓言中不算特别罕见，新颖性略减。"
+    },
+    "evidence": {
+      "faithfulness": "闸门高度对应空间延伸程度，刻度标尺对应测量工具，标准管口径对应统一单位，实验验证对应规律发现。",
+      "implicitness": "全文无‘长度’、‘米’、‘厘米’等词，仅用‘刻度’、‘口径’、‘高度’等替代。",
+      "mapping_clarity": "每个机制节点和边都有明确故事元素对应，且方向正确，如‘闸门高度→刻度读取→标准管→实验验证’。",
+      "readability": "故事有冲突、转折、解决，语言简洁，对话自然，如‘这太乱了’、‘你看，这上面有刻度’。",
+      "pedagogical_value": "读者能学到长度测量需要工具、统一标准和实验验证，而非仅凭感觉。",
+      "novelty": "水渠调度场景较新颖，但‘标准管’类比在寓言中已有类似用法。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个角色对‘标准管’来源或制作过程的简单说明，以增强统一标准的教学深度。",
+      "可略微丰富下游农户的反馈细节，使冲突更具体。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "physics_8a_rjb_cpt1",
+    "target_concept": "长度",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

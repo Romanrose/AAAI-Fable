@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "6和7的加法",
+  "concept_id": "math_1a_rjb_cpt20",
+  "concept_definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+  "forbidden_terms_for_story_body": [
+    "6和7的加法",
+    "math_1a_rjb_cpt20"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt20",
+      "label": "Concept",
+      "name": "6和7的加法",
+      "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "6和7的加法\n通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt22",
+          "label": "Concept",
+          "name": "分拆数6和7",
+          "definition": "把6或7分成两个部分，了解所有不同的分法。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt19",
+          "label": "Concept",
+          "name": "数字6和7的认识",
+          "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5",
+          "label": "Chapter",
+          "name": "6~10的认识和加减法",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt20",
+    "concept_id": "math_1a_rjb_cpt20",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt20",
+      "label": "Concept",
+      "name": "6和7的加法",
+      "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "6和7的加法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中石槽亮起的条件是左右石头总数恰好为6或7，对应6和7的加法算式（如5+1=6、1+5=6、4+2=6、3+3=6、5+2=7等）。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小智通过观察和试验发现，左右石头数量合并后得到6或7时石槽才会亮，体现了通过将数量合并理解得到6或7的加法算式的过程。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了加法形式定义（左右合并为总数）和规则一致性（总数非6或7不亮），没有道德化，且数学结构通过事件链清晰呈现。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：石桥的秘密\n\n在规则谜城的东边，有一座古老的石桥。桥头立着一块石碑，上面刻着：“每次过桥，必须同时从左右两边的篮子里各取一块石头，放入桥中央的石槽中。石槽满时，桥自会亮起。”\n\n小智是城里负责观察规则的孩子。他每天都来桥边记录。第一天，他看见左边篮子有5块圆石，右边有1块方石。一个行人取走它们放入石槽，石槽立刻亮起柔和的光。小智记下：“5和1，亮。”\n\n第二天，左边是1块圆石，右边是5块方石。行人照做，石槽又亮了。小智写：“1和5，也亮。”\n\n第三天，左边4块，右边2块。石槽亮起。第四天，左边2块，右边4块。同样亮。第五天，左边3块，右边3块。石槽亮得最久。\n\n小智开始疑惑：为什么有时左边多、右边少，有时反过来，石槽都会亮？他决定做一次检验。他故意让左边放6块，右边放0块。行人只取走6块放入，石槽毫无反应。他又试左边0块、右边6块，依然不亮。\n\n他又试左边5块、右边2块——共7块，石槽亮了。左边2块、右边5块——也亮。左边4块、右边3块——亮。左边1块、右边6块——亮。左边6块、右边1块——亮。\n\n小智终于明白了：石槽不在乎石头来自哪边，也不在乎谁多谁少，它只在乎总数。当左右两边的石头合起来正好是6块或7块时，石槽就会亮起。如果总数不是6或7，无论怎么摆，石槽都不会亮。\n\n从此，小智能准确判断每一次过桥是否成功。他明白了一个道理：有些规则，表面看是左右分配的问题，实际上却是总数决定的。",
+  "rule_findings": {
+    "story_token_count": 494,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly separates the counting process (n1) from the comparison process (n2) and the pairing process (n3). The edge e1 (n1→n2) is naturally implied by the narrative sequence: after counting, the farmer compares. However, the comparison (n2) is only implicitly shown through the pairing result, not explicitly stated as a separate step. This makes n2 slightly weaker than n1 and n3, which are more explicitly described. The mapping is observably better than a version that would merge counting and comparison into one step, because it preserves the distinct mechanism nodes and their relations."
+  },
+  "revision_instructions": [
+    "Consider making the comparison step (n2) more explicit, e.g., by having the farmer verbally state '苹果比橘子多' after the pairing, to strengthen the mapping to n2."
+  ],
+  "final_status": "accept"
+}

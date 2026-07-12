@@ -1,0 +1,70 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt26",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个农夫种七棵果树的故事",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "七棵果树",
+    "果园",
+    "工具"
+  ],
+  "conflict": "农夫想收获七棵果树的全部果实，但他必须先认识每棵树的位置和数量，再学会如何将果实合理分配采摘。",
+  "event_chain": [
+    "农夫先数清果园里有七棵果树，记住它们的位置和数量。",
+    "农夫学习将七棵果树分成不同的小组，比如三棵和四棵，或者两棵和五棵，并练习组合与拆分。",
+    "农夫根据分组和组合的知识，开始采摘果实：从一组中摘取部分，再从另一组中补足，确保总数是七；或者从七棵中减去一些，得到剩余的数量。"
+  ],
+  "turning_point": "农夫掌握了分组和组合的方法后，能够灵活地采摘和计算果实，不再困惑。",
+  "resolution_state": "农夫成功收获所有七棵果树的果实，并理解了如何通过拆分与组合来管理总数。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫认识果园里有七棵果树",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫学习将七棵果树分成不同小组并组合",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫根据分组和组合采摘果实，掌握所有得数是七或从七中减去的采摘方法",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识七棵果树是后续采摘的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫掌握分组组合方法是后续采摘的前提条件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'7的加减法'等禁止术语，已用'采摘果实'替代。",
+    "注意故事中'七'是数字，但未直接使用概念名称，符合要求。",
+    "映射中'condition'和'process'类型准确，边缘方向保持。"
+  ],
+  "mapping_context_sha256": "4fbcfae43c72f26310eea05e2cce3d9e509bca2042ddd5c8185f6ad979755cd1",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "513e6babd959ee58ad226ce233800b657411dc1fa3e6f3414a659be80c9ea58c"
+  }
+}

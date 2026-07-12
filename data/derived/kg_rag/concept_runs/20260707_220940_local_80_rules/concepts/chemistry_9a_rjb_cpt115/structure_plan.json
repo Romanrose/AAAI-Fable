@@ -1,0 +1,314 @@
+{
+  "found": true,
+  "query": "chemistry_9a_rjb_cpt115",
+  "concept_id": "chemistry_9a_rjb_cpt115",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt115",
+    "label": "Concept",
+    "name": "液态空气的分馏制氧",
+    "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+    "aliases": [],
+    "examples": [
+      "液态氮的沸点是−196℃，比液态氧的沸点−183℃低，因此氮气首先从液态空气中分离出来"
+    ],
+    "retrieval_text": "液态空气的分馏制氧\n在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "chemistry_9a_rjb_cpt115",
+      "label": "Concept",
+      "name": "液态空气的分馏制氧",
+      "properties": {
+        "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+        "importance": "了解",
+        "examples": [
+          "液态氮的沸点是−196℃，比液态氧的沸点−183℃低，因此氮气首先从液态空气中分离出来"
+        ],
+        "retrieval_text": "液态空气的分馏制氧\nConcept\n在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。\n了解\n液态氮的沸点是−196℃，比液态氧的沸点−183℃低，因此氮气首先从液态空气中分离出来"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:15004",
+        "source": "chemistry_9a_rjb_cpt121",
+        "source_name": "气体沸点差异的利用",
+        "target": "chemistry_9a_rjb_cpt115",
+        "target_name": "液态空气的分馏制氧",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:11284",
+        "source": "chemistry_9a_rjb_cpt115",
+        "source_name": "液态空气的分馏制氧",
+        "target": "chemistry_9a_rjb_cpt114",
+        "target_name": "工业制取氧气的方法",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "液态空气的分馏制氧",
+        "definition": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [
+        "[normalized:edge:15004] 气体沸点差异的利用 --prerequisites_for--> 液态空气的分馏制氧"
+      ],
+      "process_summary": [
+        "[normalized:edge:11284] 液态空气的分馏制氧 --is_a--> 工业制取氧气的方法"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 541,
+      "summary_chars": 352,
+      "path_chars": 0,
+      "retrieval_context_chars": 893
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "液态空气的分馏制氧的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "气体沸点差异的利用 --prerequisites_for--> 液态空气的分馏制氧",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:15004"
+        ]
+      },
+      {
+        "step_id": "s2",
+        "text": "液态空气的分馏制氧 --is_a--> 工业制取氧气的方法",
+        "kind": "process",
+        "supporting_edge_ids": [
+          "normalized:edge:11284"
+        ]
+      },
+      {
+        "step_id": "s3",
+        "text": "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+        "kind": "condition",
+        "supporting_edge_ids": []
+      },
+      {
+        "step_id": "s4",
+        "text": "区分化学反应和物理混合。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s2",
+        "target_step_id": "s3",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s3",
+        "target_step_id": "s4",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [
+      "normalized:edge:15004",
+      "normalized:edge:11284"
+    ],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "液态空气的分馏制氧",
+      "chemistry_9a_rjb_cpt115"
+    ],
+    "coverage_targets": {
+      "required_step_count": 4,
+      "required_dependency_count": 3,
+      "must_cover_edge_ids": [
+        "normalized:edge:15004",
+        "normalized:edge:11284"
+      ],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt115",
+    "concept_id": "chemistry_9a_rjb_cpt115",
+    "story_language": "zh-CN",
+    "source_domain": "材料试炼间",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "先确认一个起点条件是否具备：气体沸点差异的利用 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 工业制取氧气的方法",
+      "先确认一个起点条件是否具备：在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+      "让中间的行动承接前后变化：区分化学反应和物理混合。"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：气体沸点差异的利用 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 工业制取氧气的方法"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：区分化学反应和物理混合。"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "液态空气的分馏制氧"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "气体沸点差异的利用 --prerequisites_for--> 液态空气的分馏制氧",
+          "液态空气的分馏制氧 --is_a--> 工业制取氧气的方法",
+          "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+          "区分化学反应和物理混合。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "材料试炼间",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "先确认一个起点条件是否具备：气体沸点差异的利用 --prerequisites_for--> 这条隐藏规则",
+    "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 工业制取氧气的方法",
+    "先确认一个起点条件是否具备：在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+    "让中间的行动承接前后变化：区分化学反应和物理混合。"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "液态空气的分馏制氧"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "气体沸点差异的利用 --prerequisites_for--> 液态空气的分馏制氧",
+        "液态空气的分馏制氧 --is_a--> 工业制取氧气的方法",
+        "在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。",
+        "区分化学反应和物理混合。"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "区分化学反应和物理混合。",
+        "保留守恒关系和反应前后变化。",
+        "避免化学式或元素符号在故事正文中泄露。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：气体沸点差异的利用 --prerequisites_for--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：这条隐藏规则 --is_a--> 工业制取氧气的方法"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：在低温条件下加压使空气转变为液态，然后升温，利用氮气和氧气沸点不同，使氮气先蒸出，剩余液态氧，从而获得氧气的工业制氧方法。"
+    },
+    {
+      "mechanism_step_id": "s4",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：区分化学反应和物理混合。"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

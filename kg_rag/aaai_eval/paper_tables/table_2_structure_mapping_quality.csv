@@ -1,0 +1,4 @@
+﻿group,records,direction_preservation,edge_mapping_coverage,node_mapping_coverage,approved_rate,mapping_context_match_rate,plan_valid_rate
+overall,480,1.0,0.9974,0.9979,0.0,1.0,0.9958
+copycat,240,1.0,1.0,1.0,0.0,1.0,1.0
+standard,240,1.0,0.9948,0.9958,0.0,1.0,0.9917

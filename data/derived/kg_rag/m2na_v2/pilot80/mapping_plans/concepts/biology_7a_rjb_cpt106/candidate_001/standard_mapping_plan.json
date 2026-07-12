@@ -1,0 +1,75 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt106",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的春耕准备",
+  "characters": [
+    "老农",
+    "种子"
+  ],
+  "objects": [
+    "饱满的种子",
+    "干瘪的种子",
+    "被虫蛀的种子",
+    "休眠的种子"
+  ],
+  "conflict": "并非所有种子都能在春天发芽，只有具备完整胚且未休眠的种子才能生长。",
+  "event_chain": [
+    "老农在春天准备播种，他检查各种种子。",
+    "饱满的种子胚完整且有活性，被选为可播种。",
+    "干瘪的种子胚不完整，被丢弃。",
+    "被虫蛀的种子胚被破坏，无法发芽。",
+    "休眠的种子虽然完整但处于休眠状态，暂时不能播种。",
+    "只有胚完整且有活性且未休眠的种子才能被播种并发芽。"
+  ],
+  "turning_point": "老农识别出哪些种子具备萌发的自身条件，并决定播种它们。",
+  "resolution_state": "具备条件的种子成功发芽，长出幼苗；不具备条件的种子无法发芽。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "种子萌发的自身条件：胚完整且有活性、未休眠",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子发芽并长成幼苗",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "种子休眠：种子即使环境适宜也不发芽",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "具备胚完整且有活性且未休眠条件的种子，能够发芽并长成幼苗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "种子休眠是种子萌发的自身条件的一种（即休眠的种子不具备萌发条件）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子萌发的自身条件'等禁止术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "确保故事载体来自单一源域（村庄春耕），不使用无关隐喻。"
+  ],
+  "mapping_context_sha256": "4b02b345cf1fd000354c00d97d9700f97e67da27449c9cc7ff0949244ead70a4",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "564e1ef6c3156a3a9a74ac01a7729a1ddffb2fecd363c5a26bb72012535c1ff6"
+  }
+}

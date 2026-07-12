@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄的磨坊",
+  "characters": [
+    "老磨坊主",
+    "小麦",
+    "面粉、麸皮、麦胚"
+  ],
+  "objects": [
+    "石磨",
+    "小麦粒",
+    "面粉、麸皮、麦胚"
+  ],
+  "conflict": "老磨坊主发现石磨在高温下运转时，小麦会分解成不同的产物，但需要验证这一过程是否可靠。",
+  "event_chain": [
+    "老磨坊主将小麦放入石磨，并加热石磨（条件）。",
+    "小麦在高温下被石磨研磨分解（过程）。",
+    "分解后得到面粉、麸皮和麦胚（产物）。",
+    "这一过程属于‘研磨分解’的规则（规则）。",
+    "老磨坊主通过实验验证：加热石磨后，小麦确实分解成面粉、麸皮和麦胚（证据）。"
+  ],
+  "turning_point": "老磨坊主通过实验确认了高温下小麦分解的可靠性。",
+  "resolution_state": "老磨坊主掌握了高温研磨分解小麦的方法，并能够稳定生产面粉、麸皮和麦胚。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老磨坊主将小麦放入石磨，并加热石磨",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "小麦在高温下被石磨研磨分解",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "面粉、麸皮、麦胚",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "研磨分解：一种原料在高温和机械力下生成多种成分的过程",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "老磨坊主通过实验验证：加热石磨后，小麦确实分解成面粉、麸皮和麦胚",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老磨坊主将小麦放入石磨并加热石磨，使得小麦在高温下被石磨研磨分解",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小麦在高温下被石磨研磨分解，产生了面粉、麸皮和麦胚",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "小麦在高温下被石磨研磨分解属于研磨分解的规则",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "老磨坊主的实验验证了小麦在高温下被石磨研磨分解的过程",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘高锰酸钾’、‘受热分解’等化学术语。",
+    "确保‘研磨分解’规则不直接对应‘分解反应’概念名称。",
+    "确保‘面粉、麸皮、麦胚’不直接对应‘二氧化锰、锰酸钾、氧气’。",
+    "确保实验验证环节不暗示化学实验，而是磨坊中的操作验证。"
+  ],
+  "mapping_context_sha256": "be1e3be8ebf2134d3e7248f262be72550fac329ad662a6672b57feb081700425",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "da7e56eeabca6204b34d0eec6cf543f0823980a0eafc3881d885ecfc4f7cff36"
+  }
+}

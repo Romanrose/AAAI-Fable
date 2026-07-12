@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt109",
+  "target_concept": "分解反应",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过黑石粉和白晶石在加热后分别生成两种新物质，准确映射了‘一种物质在一定条件下生成两种或两种以上其他物质’的分解反应定义，无概念矛盾。",
+    "implicitness": "目标概念‘分解反应’及其别名均未在故事正文中出现，完全通过事件隐含表达，符合禁止术语要求。",
+    "mapping_clarity": "黑石粉→青烟+银灰金属、白晶石→气泡+白色残渣，清晰对应‘一种物质生成多种物质’的核心机制，灰白粉末无变化作为对比，映射明确。",
+    "readability": "故事语言流畅，情节自然，使用日常比喻（账房、粉末、加热）降低理解门槛，适合目标读者。",
+    "pedagogical_value": "通过观察、对比和师父引导，逐步揭示分解反应的本质，并区分化学变化与物理混合，教学价值高。",
+    "novelty": "将分解反应置于账房情境中，用粉末变化隐喻化学反应，有一定新颖性，但结构较常见。"
+  },
+  "revision_suggestions": [
+    "可增加一个‘混合粉末加热后生成多种物质’的对比事件，进一步强化‘一种物质’的前提条件。",
+    "结尾可略微点明‘从一种变成多种’的规律，但需避免直接使用术语。"
+  ],
+  "rule_findings": {
+    "story_token_count": 671,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过黑石粉和白晶石在加热后分别生成两种新物质，准确映射了‘一种物质在一定条件下生成两种或两种以上其他物质’的分解反应定义，无概念矛盾。",
+      "implicitness": "目标概念‘分解反应’及其别名均未在故事正文中出现，完全通过事件隐含表达，符合禁止术语要求。",
+      "mapping_clarity": "黑石粉→青烟+银灰金属、白晶石→气泡+白色残渣，清晰对应‘一种物质生成多种物质’的核心机制，灰白粉末无变化作为对比，映射明确。",
+      "readability": "故事语言流畅，情节自然，使用日常比喻（账房、粉末、加热）降低理解门槛，适合目标读者。",
+      "pedagogical_value": "通过观察、对比和师父引导，逐步揭示分解反应的本质，并区分化学变化与物理混合，教学价值高。",
+      "novelty": "将分解反应置于账房情境中，用粉末变化隐喻化学反应，有一定新颖性，但结构较常见。"
+    },
+    "revision_suggestions": [
+      "可增加一个‘混合粉末加热后生成多种物质’的对比事件，进一步强化‘一种物质’的前提条件。",
+      "结尾可略微点明‘从一种变成多种’的规律，但需避免直接使用术语。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,90 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt112",
+    "label": "Concept",
+    "name": "二氧化锰的催化作用",
+    "properties": {
+      "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+      "importance": "掌握",
+      "examples": [
+        "在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃",
+        "在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+      ],
+      "retrieval_text": "二氧化锰的催化作用\nConcept\n二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。\n掌握\n在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃\n在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15000",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:11283",
+      "source": "chemistry_9a_rjb_cpt112",
+      "source_name": "二氧化锰的催化作用",
+      "target": "chemistry_9a_rjb_cpt110",
+      "target_name": "催化剂",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:22577",
+      "source": "chemistry_9a_rjb_exp18",
+      "source_name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    },
+    {
+      "source_edge_id": "normalized:edge:22575",
+      "source": "chemistry_9a_rjb_exp17",
+      "source_name": "过氧化氢分解实验中二氧化锰的作用",
+      "target": "chemistry_9a_rjb_cpt112",
+      "target_name": "二氧化锰的催化作用",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "二氧化锰的催化作用",
+      "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:15000] 催化剂 --prerequisites_for--> 二氧化锰的催化作用"
+    ],
+    "process_summary": [
+      "[normalized:edge:11283] 二氧化锰的催化作用 --is_a--> 催化剂",
+      "[normalized:edge:22577] 加热混有二氧化锰的氯酸钾固体制取氧气 --verifies--> 二氧化锰的催化作用",
+      "[normalized:edge:22575] 过氧化氢分解实验中二氧化锰的作用 --verifies--> 二氧化锰的催化作用"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1075,
+    "summary_chars": 473,
+    "path_chars": 0,
+    "retrieval_context_chars": 1548
+  }
+}

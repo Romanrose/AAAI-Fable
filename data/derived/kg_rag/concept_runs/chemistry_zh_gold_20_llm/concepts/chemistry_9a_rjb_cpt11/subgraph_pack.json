@@ -1,0 +1,52 @@
+{
+  "query": "chemistry_9a_rjb_cpt11",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt11",
+    "label": "Concept",
+    "name": "大气压强",
+    "definition": "大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。",
+    "aliases": [
+      "气压",
+      "标准大气压强"
+    ],
+    "examples": [
+      "标准大气压强为101 kPa"
+    ],
+    "retrieval_text": "大气压强\n大气对单位面积所产生的压力。教材中提到大气压强不是固定不变，人们把101 kPa规定为标准大气压强。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt10",
+        "label": "Concept",
+        "name": "沸点",
+        "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt10",
+        "label": "Concept",
+        "name": "沸点",
+        "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "课题1 物质的变化和性质",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

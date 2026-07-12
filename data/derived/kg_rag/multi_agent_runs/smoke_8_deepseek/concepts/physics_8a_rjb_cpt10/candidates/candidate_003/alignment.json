@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "阿风以远处浮标为标准判断旗舰运动，阿旗以备用信号塔为标准判断旗舰静止",
+      "evidence": "两人选的基准不同",
+      "narrative_anchor": "两人选的基准不同",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": []
+}

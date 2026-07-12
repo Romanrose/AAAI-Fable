@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (comparison after counting) is only implicitly stated as '心里有了数，但他还想知道到底哪棵树结得更多', lacking explicit comparative judgment (多/少/一样多). Edge e1 (n1→n2) is similarly weak because the story does not clearly show that counting directly leads to a comparative conclusion; instead, the comparison is performed via pairing (n3). This makes the mapping less observable than a direct 'count then compare' realization."
+  },
+  "revision_instructions": [
+    "Strengthen node n2: after counting, explicitly state that the farmer judges which tree has more, fewer, or equal fruits (e.g., '农夫数完后发现东边树有30颗，西边树有25颗，所以东边树更多').",
+    "Strengthen edge e1: show that the counting result directly informs the comparison, not just that the farmer 'wants to know' which is more."
+  ],
+  "final_status": "accept"
+}

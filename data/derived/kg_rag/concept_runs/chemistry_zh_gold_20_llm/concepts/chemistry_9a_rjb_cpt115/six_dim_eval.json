@@ -1,0 +1,87 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt115",
+  "target_concept": "液态空气的分馏制氧",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "weighted_overall": 4.0,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过珍珠和宝石的分离，准确映射了液态空气分馏制氧的核心机制：利用沸点差异，通过加热使低沸点组分先气化分离。",
+    "implicitness": "目标概念名称和学科术语均未在故事中出现，机制通过比喻隐含表达，读者需推理才能建立联系。",
+    "mapping_clarity": "珍珠对应氧气（高沸点），宝石对应氮气（低沸点），加热分离过程清晰对应，但未明确提及低温加压液化步骤，略有模糊。",
+    "readability": "语言流畅，情节简单易懂，适合目标年龄段，无生僻词汇或复杂句式。",
+    "pedagogical_value": "故事能帮助理解沸点差异分离混合物的原理，但缺少对工业制氧具体条件（低温加压）的映射，教学深度有限。",
+    "novelty": "分离混合物的比喻较常见，但将沸点差异融入账房情境有一定新意，整体新颖性中等。"
+  },
+  "revision_suggestions": [
+    "在故事中增加一个类似‘先让混合物变冷凝固’的步骤，以映射低温加压液化空气。",
+    "可加入一个角色解释‘宝石和珍珠需要先变成液体才能用温度分开’，以强化液化前提。"
+  ],
+  "rule_findings": {
+    "story_token_count": 521,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "老人"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 4,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过珍珠和宝石的分离，准确映射了液态空气分馏制氧的核心机制：利用沸点差异，通过加热使低沸点组分先气化分离。",
+      "implicitness": "目标概念名称和学科术语均未在故事中出现，机制通过比喻隐含表达，读者需推理才能建立联系。",
+      "mapping_clarity": "珍珠对应氧气（高沸点），宝石对应氮气（低沸点），加热分离过程清晰对应，但未明确提及低温加压液化步骤，略有模糊。",
+      "readability": "语言流畅，情节简单易懂，适合目标年龄段，无生僻词汇或复杂句式。",
+      "pedagogical_value": "故事能帮助理解沸点差异分离混合物的原理，但缺少对工业制氧具体条件（低温加压）的映射，教学深度有限。",
+      "novelty": "分离混合物的比喻较常见，但将沸点差异融入账房情境有一定新意，整体新颖性中等。"
+    },
+    "revision_suggestions": [
+      "在故事中增加一个类似‘先让混合物变冷凝固’的步骤，以映射低温加压液化空气。",
+      "可加入一个角色解释‘宝石和珍珠需要先变成液体才能用温度分开’，以强化液化前提。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

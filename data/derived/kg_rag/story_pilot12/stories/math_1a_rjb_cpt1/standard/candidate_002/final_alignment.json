@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "他绕着树走了一圈，从最低的枝条开始，一颗一颗地看过去。他数着那些红彤彤的果子，有的藏在叶子后面，有的垂在枝头。他仔仔细细地看遍了每一根枝条，直到确认没有遗漏任何一颗果实。然后，他走到西边的果树下，用同样的方法，从树冠的一侧开始，慢慢地转到另一侧，把每一颗果实都看在眼里。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "农夫心里有了数，但他还想知道到底哪棵树结得更多。",
+      "confidence": 0.8
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "他先从东边树上摘下一颗最大的果子放进篮子，又从西边树上摘下一颗同样大的果子放在旁边。就这样，他一颗对一颗，东边摘一颗，西边摘一颗，篮子里的果子渐渐多了起来。摘着摘着，西边树上的果子先摘完了，而东边树上还剩下好几颗。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "数完两棵树的果实后，农夫心里有了数，但他还想知道到底哪棵树结得更多。",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他先从东边树上摘下一颗最大的果子放进篮子，又从西边树上摘下一颗同样大的果子放在旁边。就这样，他一颗对一颗，东边摘一颗，西边摘一颗，篮子里的果子渐渐多了起来。",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均已在故事中找到对应证据，方向正确，无缺失。"
+}

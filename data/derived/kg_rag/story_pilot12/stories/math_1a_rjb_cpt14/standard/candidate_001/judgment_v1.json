@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly defines '标准砖块' (n1) with all its attributes (6 rectangular faces, opposite faces equal, etc.) and uses it as the central entity for all subsequent operations (classification, building, surface area, volume). This makes n1 the strongest mapped node. Node n2 ('特殊砖块') is well-mapped but its definition is slightly less detailed than n1's in the story, though still sufficient. Edge e1 (n1 is_a n3) is the weakest because the story's classification action ('按外形特征来分，所有标准砖块都归入这一类') is somewhat generic and could be interpreted as a general categorization rather than a strict 'is_a' relation between the brick and the classification method. However, it still meets the requirement. The mapping is observably better than a hypothetical version where the classification is merely mentioned without being performed, or where the special brick is not explicitly stated as a subset of standard brick."
+  },
+  "revision_instructions": [
+    "Consider making the classification process (n3) more explicit as a method rather than just an action, e.g., by naming it '砖块分类法' in the story.",
+    "The story could slightly increase the novelty of the mapping by using a more creative source domain (e.g., 'magic bricks' or 'puzzle pieces') while preserving the same structural relations, but the current version is acceptable."
+  ],
+  "final_status": "accept"
+}

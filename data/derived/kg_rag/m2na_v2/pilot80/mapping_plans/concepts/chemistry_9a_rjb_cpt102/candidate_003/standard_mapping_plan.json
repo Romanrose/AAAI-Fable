@@ -1,0 +1,110 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代农田灌溉",
+  "characters": [
+    "农夫",
+    "水车",
+    "水渠"
+  ],
+  "objects": [
+    "水车",
+    "水渠",
+    "田地",
+    "水源",
+    "水"
+  ],
+  "conflict": "田地干旱缺水，但水源充足却无法有效引水灌溉。",
+  "event_chain": [
+    "农夫依靠水车从水源取水灌溉田地，水车需要水才能运转。",
+    "水源水位下降，水车无法正常取水。",
+    "农夫挖掘水渠，将水源的水引导至水车附近，使水车重新获得足够的水量。",
+    "水车重新运转，将水输送到田地，缓解了干旱。"
+  ],
+  "turning_point": "农夫挖掘水渠，引导水源至水车。",
+  "resolution_state": "田地得到灌溉，干旱缓解。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫依靠水车从水源取水灌溉田地，水车需要水才能运转。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水源水位下降，水车无法正常取水。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫挖掘水渠，将水源的水引导至水车附近，使水车重新获得足够的水量。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "田地得到灌溉，干旱缓解。",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "水具有流动性，能沿水渠流动。",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水车需要水才能运转。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "水源水位下降，促使农夫挖掘水渠。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "挖掘水渠引导水源，导致水车重新获得水量。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "水车取水灌溉田地，与缓解干旱相关。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "水具有流动性，能沿水渠流动。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "水车取水灌溉田地，与水具有流动性相关。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'呼吸'、'氧气'、'高原反应'等目标概念术语。",
+    "注意水车取水与呼吸的类比，避免直接映射为'呼吸'。",
+    "水渠引导水与吸氧的类比，需保持方向一致。"
+  ],
+  "mapping_context_sha256": "4218c378f54c5265920046266c3e3323ef73bf77eacb39ef9f31b6d11d728afc",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7ef456c27062d26c744db16a402d8b88635229ff1edb13a54ec507a4c31022d6"
+  }
+}

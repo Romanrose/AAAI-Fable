@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n6",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story's strongest node is n6 (对比实验) because it is explicitly and vividly realized with four distinct conditions and outcomes, directly mirroring the mechanism's evidence node. The weakest node is n2 (陶器成功烧制) because its story evidence is only a brief mention at the end ('一只完美的陶器稳稳立在其中'), lacking the process detail of the mechanism. Edge e1 (条件使过程成为可能) is the weakest because the story states the conditions are necessary but does not explicitly articulate the enabling relation between the condition set and the successful outcome as a causal chain; it is implied rather than stated."
+  },
+  "revision_instructions": [
+    "Strengthen the explicit causal link between the three conditions and the successful firing of the pottery, e.g., by having the old potter say '只有这三个条件同时满足，陶器才能成功烧制' before the experiment.",
+    "Add a brief description of the process of successful firing (e.g., '陶坯在窑中慢慢变硬，最终成型') to better map to mechanism node n2."
+  ],
+  "final_status": "accept"
+}

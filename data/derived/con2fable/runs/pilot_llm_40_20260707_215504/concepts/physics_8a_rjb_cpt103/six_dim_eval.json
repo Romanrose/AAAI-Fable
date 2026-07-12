@@ -1,0 +1,60 @@
+{
+  "concept_id": "physics_8a_rjb_cpt103",
+  "target_concept": "照相机成像",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 2
+  },
+  "weighted_overall": 4.7,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": true
+  },
+  "rationales": {
+    "faithfulness": "根据机制节点覆盖率、方向保持率和自动对齐证据给出保守估计。",
+    "implicitness": "检查寓言正文和标题是否出现目标概念名、别名或禁用术语。",
+    "mapping_clarity": "根据节点覆盖、边覆盖和对齐证据有效性综合评分。",
+    "readability": "根据正文长度和是否形成可阅读短故事做基础判断。",
+    "pedagogical_value": "根据机制覆盖和映射清晰度估计教学帮助。",
+    "novelty": "根据模板词命中和常见寓言壳判断是否模板化。"
+  },
+  "evidence": {},
+  "revision_suggestions": [
+    "更换常见寓言模板，使用更具体、少见的场景和冲突。"
+  ],
+  "final_status": "revise",
+  "mode": "rules",
+  "automatic_metrics": {
+    "id": "physics_8a_rjb_cpt103",
+    "method": "con2fable",
+    "format_validity": 1.0,
+    "validation_errors": [],
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "exact_leakage_hits": [],
+    "soft_leakage_hits": [],
+    "node_coverage": 1.0,
+    "weighted_node_coverage": 1.0,
+    "edge_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "alignment_hallucination_rate": 0.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.1111111111111111,
+    "template_hits": [
+      "镜子"
+    ],
+    "narrative_char_count": 648,
+    "valid_node_alignment_count": 4,
+    "valid_edge_alignment_count": 3
+  },
+  "judge_response": null
+}

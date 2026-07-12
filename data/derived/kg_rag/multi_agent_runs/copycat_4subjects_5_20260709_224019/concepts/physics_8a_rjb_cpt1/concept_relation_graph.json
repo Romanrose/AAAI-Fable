@@ -1,0 +1,68 @@
+{
+  "target_concept": {
+    "id": "physics_8a_rjb_cpt1",
+    "name": "长度",
+    "label": "Concept",
+    "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。"
+  },
+  "neighbors": [
+    {
+      "id": "physics_8a_rjb_skl1",
+      "name": "使用刻度尺的方法"
+    },
+    {
+      "id": "physics_8a_rjb_cpt2",
+      "name": "长度单位（米及其倍数、子倍数）"
+    },
+    {
+      "id": "physics_8a_rjb_exp1",
+      "name": "用刻度尺测量长度"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:17188",
+      "source_id": "physics_8a_rjb_cpt1",
+      "source_name": "长度",
+      "target_id": "physics_8a_rjb_skl1",
+      "target_name": "使用刻度尺的方法",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "outgoing",
+      "neighbor_id": "physics_8a_rjb_skl1",
+      "neighbor_name": "使用刻度尺的方法",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:12429",
+      "source_id": "physics_8a_rjb_cpt2",
+      "source_name": "长度单位（米及其倍数、子倍数）",
+      "target_id": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_cpt2",
+      "neighbor_name": "长度单位（米及其倍数、子倍数）",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:23027",
+      "source_id": "physics_8a_rjb_exp1",
+      "source_name": "用刻度尺测量长度",
+      "target_id": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming",
+      "neighbor_id": "physics_8a_rjb_exp1",
+      "neighbor_name": "用刻度尺测量长度",
+      "score": 0.95,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 3,
+  "source": "dual_level_graphrag"
+}

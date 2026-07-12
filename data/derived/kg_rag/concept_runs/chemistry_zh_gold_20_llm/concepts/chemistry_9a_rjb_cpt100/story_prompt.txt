@@ -1,0 +1,147 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "缓慢氧化"
+  ],
+  "concept_card": {
+    "concept_id": "chemistry_9a_rjb_cpt100",
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "canonical_name": "缓慢氧化",
+    "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+    "aliases": [],
+    "examples": [
+      "动植物的呼吸",
+      "食物的腐烂",
+      "醋的酿造",
+      "农家肥料的腐熟"
+    ],
+    "teaching_level": "middle_school",
+    "concept_type": "process",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt97",
+          "label": "Concept",
+          "name": "氧化反应",
+          "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt102",
+          "label": "Concept",
+          "name": "呼吸与氧气",
+          "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt97",
+          "label": "Concept",
+          "name": "氧化反应",
+          "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt99",
+          "label": "Concept",
+          "name": "燃烧",
+          "definition": "物质在一定条件下(有可燃物、充足的氧气或空气、达到着火点)发生的剧烈放热、发光的氧化反应过程。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s2",
+          "label": "Section",
+          "name": "课题2 氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "缓慢氧化"
+    ],
+    "subject_constraints_zh": [
+      "区分化学反应和物理混合。",
+      "保留守恒关系和反应前后变化。",
+      "避免化学式或元素符号在故事正文中泄露。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt100",
+    "concept_id": "chemistry_9a_rjb_cpt100",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt100",
+      "label": "Concept",
+      "name": "缓慢氧化",
+      "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "aliases": [],
+      "examples": [
+        "动植物的呼吸",
+        "食物的腐烂",
+        "醋的酿造",
+        "农家肥料的腐熟"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "缓慢氧化"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

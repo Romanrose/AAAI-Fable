@@ -1,0 +1,124 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "target_concept": "沸点",
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 5,
+    "mapping_clarity": 3,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 4
+  },
+  "weighted_overall": 3.5,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事强调了条件（气压）对后续流程的影响，但核心机制‘液体汽化最剧烈时的温度随压强改变’未直接体现，故事更侧重于流程顺序而非压强与汽化温度的因果关系。",
+    "implicitness": "故事正文未出现‘沸点’、‘汽化’、‘温度’等禁用术语，完全通过仓库流程隐喻，符合隐含性要求。",
+    "mapping_clarity": "故事中的条件牌、中间转化、验收记录与机制图中的节点有明确对应，但‘气压偏低’与‘标准气压’的对比未能清晰映射到‘压强改变导致沸点改变’这一核心关系，映射不够精准。",
+    "readability": "故事语言流畅，情节连贯，角色和场景设定清晰，适合中学生阅读，但部分细节（如‘气压偏低’）对非专业读者可能稍显突兀。",
+    "pedagogical_value": "故事传达了‘条件影响结果’和‘顺序不可颠倒’的通用道理，但未能有效帮助学生理解沸点随压强变化的物理机制，教学价值有限。",
+    "novelty": "账房仓库的设定有一定新意，避免了常见的‘烧水’或‘登山煮饭’模板，但整体仍属于‘流程管理’类寓言，新颖性中等。"
+  },
+  "evidence": {
+    "faithfulness": "故事中‘气压偏低’导致记录对不上，但未解释为何气压低会影响‘汽化最剧烈时的温度’，核心机制缺失。",
+    "implicitness": "全文无‘沸点’、‘汽化’、‘温度’等词，仅用‘条件牌’、‘气压’暗示。",
+    "mapping_clarity": "条件牌→大气压强（n1），中间转化→区分物理/化学变化（n2），验收记录→守恒（n3），但‘气压偏低’与‘标准气压’的对比未映射到沸点变化。",
+    "readability": "故事553字，段落分明，对话自然，无生僻词汇，阅读流畅。",
+    "pedagogical_value": "读者能学到‘条件影响流程’，但无法理解沸点与压强的具体关系，教学深度不足。",
+    "novelty": "账房仓库场景较新颖，但‘顺序不可颠倒’的教训常见于流程类寓言。"
+  },
+  "revision_suggestions": [
+    "在故事中增加一个环节：当气压偏低时，物料在中间转化阶段‘提前沸腾’或‘更容易汽化’，从而直接映射沸点随压强降低而降低的机制。",
+    "将‘条件牌’具体化为‘气压牌’，并明确其数值变化如何影响后续‘汽化登记’环节。",
+    "在验收记录中体现‘不同气压下物料状态不同’，强化压强与沸点的因果关系。"
+  ],
+  "final_status": "revise",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 3,
+      "implicitness": 5,
+      "mapping_clarity": 3,
+      "readability": 4,
+      "pedagogical_value": 3,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事强调了条件（气压）对后续流程的影响，但核心机制‘液体汽化最剧烈时的温度随压强改变’未直接体现，故事更侧重于流程顺序而非压强与汽化温度的因果关系。",
+      "implicitness": "故事正文未出现‘沸点’、‘汽化’、‘温度’等禁用术语，完全通过仓库流程隐喻，符合隐含性要求。",
+      "mapping_clarity": "故事中的条件牌、中间转化、验收记录与机制图中的节点有明确对应，但‘气压偏低’与‘标准气压’的对比未能清晰映射到‘压强改变导致沸点改变’这一核心关系，映射不够精准。",
+      "readability": "故事语言流畅，情节连贯，角色和场景设定清晰，适合中学生阅读，但部分细节（如‘气压偏低’）对非专业读者可能稍显突兀。",
+      "pedagogical_value": "故事传达了‘条件影响结果’和‘顺序不可颠倒’的通用道理，但未能有效帮助学生理解沸点随压强变化的物理机制，教学价值有限。",
+      "novelty": "账房仓库的设定有一定新意，避免了常见的‘烧水’或‘登山煮饭’模板，但整体仍属于‘流程管理’类寓言，新颖性中等。"
+    },
+    "evidence": {
+      "faithfulness": "故事中‘气压偏低’导致记录对不上，但未解释为何气压低会影响‘汽化最剧烈时的温度’，核心机制缺失。",
+      "implicitness": "全文无‘沸点’、‘汽化’、‘温度’等词，仅用‘条件牌’、‘气压’暗示。",
+      "mapping_clarity": "条件牌→大气压强（n1），中间转化→区分物理/化学变化（n2），验收记录→守恒（n3），但‘气压偏低’与‘标准气压’的对比未映射到沸点变化。",
+      "readability": "故事553字，段落分明，对话自然，无生僻词汇，阅读流畅。",
+      "pedagogical_value": "读者能学到‘条件影响流程’，但无法理解沸点与压强的具体关系，教学深度不足。",
+      "novelty": "账房仓库场景较新颖，但‘顺序不可颠倒’的教训常见于流程类寓言。"
+    },
+    "revision_suggestions": [
+      "在故事中增加一个环节：当气压偏低时，物料在中间转化阶段‘提前沸腾’或‘更容易汽化’，从而直接映射沸点随压强降低而降低的机制。",
+      "将‘条件牌’具体化为‘气压牌’，并明确其数值变化如何影响后续‘汽化登记’环节。",
+      "在验收记录中体现‘不同气压下物料状态不同’，强化压强与沸点的因果关系。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "chemistry_9a_rjb_cpt10",
+    "target_concept": "沸点",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

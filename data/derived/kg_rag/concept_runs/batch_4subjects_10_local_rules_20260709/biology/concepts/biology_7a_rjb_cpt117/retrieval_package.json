@@ -1,0 +1,111 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt117",
+    "label": "Concept",
+    "name": "受精",
+    "properties": {
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "importance": "掌握",
+      "aliases": [
+        "fertilization"
+      ],
+      "retrieval_text": "受精\nConcept\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。\n掌握\nfertilization"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14139",
+      "source": "biology_7a_rjb_cpt114",
+      "source_name": "传粉",
+      "target": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14964",
+      "source": "biology_xzxbx3_rjb_cpt77",
+      "source_name": "卵子成熟到MⅡ期",
+      "target": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14142",
+      "source": "biology_7a_rjb_cpt117",
+      "source_name": "受精",
+      "target": "biology_xzxbx3_rjb_cpt75",
+      "target_name": "合子（受精卵）",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14140",
+      "source": "biology_7a_rjb_cpt117",
+      "source_name": "受精",
+      "target": "biology_7a_rjb_cpt118",
+      "target_name": "果实和种子的形成",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14141",
+      "source": "biology_7a_rjb_cpt117",
+      "source_name": "受精",
+      "target": "biology_xzxbx3_rjb_cpt71",
+      "target_name": "胚胎工程",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14962",
+      "source": "biology_xzxbx3_rjb_cpt76",
+      "source_name": "精子获能",
+      "target": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "受精",
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精",
+      "[normalized:edge:14964] 卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+      "[normalized:edge:14142] 受精 --prerequisites_for--> 合子（受精卵）",
+      "[normalized:edge:14140] 受精 --prerequisites_for--> 果实和种子的形成",
+      "[normalized:edge:14141] 受精 --prerequisites_for--> 胚胎工程"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 6,
+    "candidate_edge_count": 6,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1629,
+    "summary_chars": 513,
+    "path_chars": 0,
+    "retrieval_context_chars": 2142
+  }
+}

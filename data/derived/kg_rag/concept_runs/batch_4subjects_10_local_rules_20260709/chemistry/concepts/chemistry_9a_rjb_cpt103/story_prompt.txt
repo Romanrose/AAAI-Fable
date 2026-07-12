@@ -1,0 +1,565 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "实验室制取氧气的方法"
+  ],
+  "concept_card": {
+    "concept_id": "chemistry_9a_rjb_cpt103",
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "canonical_name": "实验室制取氧气的方法",
+    "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+    "aliases": [],
+    "examples": [
+      "加热高锰酸钾制取氧气",
+      "在二氧化锰催化下分解过氧化氢制取氧气",
+      "加热混有二氧化锰的氯酸钾固体制取氧气"
+    ],
+    "teaching_level": "middle_school",
+    "concept_type": "process",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt119",
+          "label": "Concept",
+          "name": "氧气的收集方法",
+          "definition": "实验室制取氧气后，将生成的氧气导出并收集起来的具体方法，如排水法等。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt66",
+          "label": "Concept",
+          "name": "氧气",
+          "definition": "一种重要的气体单质，空气中体积分数约为21%，可由高锰酸钾、过氧化氢溶液、氯酸钾等分解制取，是许多燃烧和化工过程必需的物质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt104",
+          "label": "Concept",
+          "name": "加热高锰酸钾制取氧气",
+          "definition": "在试管中装入少量高锰酸钾并加热，使其受热分解生成二氧化锰、锰酸钾和氧气的实验室制氧方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt106",
+          "label": "Concept",
+          "name": "分解过氧化氢制取氧气",
+          "definition": "利用过氧化氢溶液分解放出氧气的实验室制氧方法，通常加入少量二氧化锰以加速分解。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt108",
+          "label": "Concept",
+          "name": "加热氯酸钾制取氧气",
+          "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp16",
+          "label": "Experiment",
+          "name": "实验2-5 加热高锰酸钾制取氧气",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "实验室制取氧气的方法"
+    ],
+    "subject_constraints_zh": [
+      "区分化学反应和物理混合。",
+      "保留守恒关系和反应前后变化。",
+      "避免化学式或元素符号在故事正文中泄露。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "high",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt103",
+    "concept_id": "chemistry_9a_rjb_cpt103",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt103",
+      "label": "Concept",
+      "name": "实验室制取氧气的方法",
+      "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+      "aliases": [],
+      "examples": [
+        "加热高锰酸钾制取氧气",
+        "在二氧化锰催化下分解过氧化氢制取氧气",
+        "加热混有二氧化锰的氯酸钾固体制取氧气"
+      ],
+      "retrieval_text": "实验室制取氧气的方法\n在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "chemistry_9a_rjb_cpt103",
+        "label": "Concept",
+        "name": "实验室制取氧气的方法",
+        "properties": {
+          "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+          "importance": "重要",
+          "examples": [
+            "加热高锰酸钾制取氧气",
+            "在二氧化锰催化下分解过氧化氢制取氧气",
+            "加热混有二氧化锰的氯酸钾固体制取氧气"
+          ],
+          "retrieval_text": "实验室制取氧气的方法\nConcept\n在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。\n重要\n加热高锰酸钾制取氧气\n在二氧化锰催化下分解过氧化氢制取氧气\n加热混有二氧化锰的氯酸钾固体制取氧气"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:14997",
+          "source": "chemistry_9a_rjb_cpt109",
+          "source_name": "分解反应",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14996",
+          "source": "chemistry_9a_rjb_cpt103",
+          "source_name": "实验室制取氧气的方法",
+          "target": "chemistry_9a_rjb_cpt119",
+          "target_name": "氧气的收集方法",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:15223",
+          "source": "chemistry_9a_rjb_cpt66",
+          "source_name": "氧气",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:15261",
+          "source": "chemistry_9a_rjb_skl26",
+          "source_name": "通过实验现象推断气体性质",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:11278",
+          "source": "chemistry_9a_rjb_cpt106",
+          "source_name": "分解过氧化氢制取氧气",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:11280",
+          "source": "chemistry_9a_rjb_cpt108",
+          "source_name": "加热氯酸钾制取氧气",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:11276",
+          "source": "chemistry_9a_rjb_cpt104",
+          "source_name": "加热高锰酸钾制取氧气",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "is_a",
+          "relation_description": "is_a",
+          "evidence": "",
+          "score": 1.2
+        },
+        {
+          "source_edge_id": "normalized:edge:22572",
+          "source": "chemistry_9a_rjb_exp16",
+          "source_name": "实验2-5 加热高锰酸钾制取氧气",
+          "target": "chemistry_9a_rjb_cpt103",
+          "target_name": "实验室制取氧气的方法",
+          "relation": "verifies",
+          "relation_description": "verifies",
+          "evidence": "",
+          "score": 0.95
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "实验室制取氧气的方法",
+          "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。",
+          "formula": "",
+          "importance": "重要"
+        },
+        "condition_summary": [
+          "[normalized:edge:14997] 分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+          "[normalized:edge:14996] 实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+          "[normalized:edge:15223] 氧气 --prerequisites_for--> 实验室制取氧气的方法",
+          "[normalized:edge:15261] 通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法"
+        ],
+        "process_summary": [
+          "[normalized:edge:11278] 分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+          "[normalized:edge:11280] 加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+          "[normalized:edge:11276] 加热高锰酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+          "[normalized:edge:22572] 实验2-5 加热高锰酸钾制取氧气 --verifies--> 实验室制取氧气的方法"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 8,
+        "candidate_edge_count": 8,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 2175,
+        "summary_chars": 729,
+        "path_chars": 0,
+        "retrieval_context_chars": 2904
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "实验室制取氧气的方法的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14997"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14996"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "氧气 --prerequisites_for--> 实验室制取氧气的方法",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:15223"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:15261"
+          ]
+        },
+        {
+          "step_id": "s5",
+          "text": "分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:11278"
+          ]
+        },
+        {
+          "step_id": "s6",
+          "text": "加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:11280"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s4",
+          "target_step_id": "s5",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s5",
+          "target_step_id": "s6",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:14997",
+        "normalized:edge:14996",
+        "normalized:edge:15223",
+        "normalized:edge:15261",
+        "normalized:edge:11278",
+        "normalized:edge:11280"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "实验室制取氧气的方法",
+        "chemistry_9a_rjb_cpt103"
+      ],
+      "coverage_targets": {
+        "required_step_count": 6,
+        "required_dependency_count": 5,
+        "must_cover_edge_ids": [
+          "normalized:edge:14997",
+          "normalized:edge:14996",
+          "normalized:edge:15223",
+          "normalized:edge:15261",
+          "normalized:edge:11278",
+          "normalized:edge:11280"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "chemistry_9a_rjb_cpt103",
+      "concept_id": "chemistry_9a_rjb_cpt103",
+      "story_language": "zh-CN",
+      "source_domain": "材料试炼间",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：分解反应 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 氧气的收集方法",
+        "先确认一个起点条件是否具备：氧气 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：通过实验现象推断气体性质 --prerequisites_for--> 这条隐藏规则",
+        "让中间的行动承接前后变化：分解过氧化氢制取氧气 --is_a--> 这条隐藏规则",
+        "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：分解反应 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 氧气的收集方法"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：氧气 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：通过实验现象推断气体性质 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s5",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：分解过氧化氢制取氧气 --is_a--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s6",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "实验室制取氧气的方法"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+            "实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+            "氧气 --prerequisites_for--> 实验室制取氧气的方法",
+            "通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法",
+            "分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+            "加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "区分化学反应和物理混合。",
+            "保留守恒关系和反应前后变化。",
+            "避免化学式或元素符号在故事正文中泄露。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "材料试炼间",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：分解反应 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 氧气的收集方法",
+      "先确认一个起点条件是否具备：氧气 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：通过实验现象推断气体性质 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：分解过氧化氢制取氧气 --is_a--> 这条隐藏规则",
+      "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "实验室制取氧气的方法"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "分解反应 --prerequisites_for--> 实验室制取氧气的方法",
+          "实验室制取氧气的方法 --prerequisites_for--> 氧气的收集方法",
+          "氧气 --prerequisites_for--> 实验室制取氧气的方法",
+          "通过实验现象推断气体性质 --prerequisites_for--> 实验室制取氧气的方法",
+          "分解过氧化氢制取氧气 --is_a--> 实验室制取氧气的方法",
+          "加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：分解反应 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 氧气的收集方法"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：氧气 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：通过实验现象推断气体性质 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s5",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：分解过氧化氢制取氧气 --is_a--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s6",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：加热氯酸钾制取氧气 --is_a--> 这条隐藏规则"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

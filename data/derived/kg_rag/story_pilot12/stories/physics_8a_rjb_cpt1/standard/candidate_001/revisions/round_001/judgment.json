@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (长度单位) is mapped to '尺子' but the story does not explicitly establish '尺子' as a standard unit of length; it merely uses it as a measuring tool. Edge e1 (n2 is_a n1) requires that '尺子' be a type of '长度单位', but the story only says '尺子上的每一格都是一个标准的单位', which is ambiguous and does not clearly preserve the is_a relation. This is weaker than a direct statement like '尺子是一种长度单位'."
+  },
+  "revision_instructions": [
+    "Explicitly state that '尺子' is a standard unit of length (e.g., '尺子上的每一格代表一个标准的长度单位').",
+    "Clarify that '用锄头测量禾苗高度' is a process that verifies the height, not just a comparison; add a sentence like '通过锄头柄上的标记，老农夫验证了禾苗的高度与尺子读数一致'.",
+    "Ensure edge e3 is more directly causal: '禾苗的高度决定了使用锄头的方法' is present but could be strengthened by showing that the height enables the method, e.g., '禾苗的高度让老农夫知道该用多大力气挥锄头'.",
+    "Avoid any indirect reference to '长度' (e.g., '高度' is acceptable but ensure no synonym of '长度' appears)."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

@@ -1,0 +1,589 @@
+[
+  {
+    "structure_id": "candidate_002:target_concept:001",
+    "structure_type": "TargetConceptStructure",
+    "content": {
+      "concept_id": "biology_7a_rjb_cpt111",
+      "name": "花的基本结构",
+      "definition": "一朵花由花柄、花托、萼片、花瓣、雄蕊和雌蕊等组成，其中主要结构是雄蕊和雌蕊。",
+      "forbidden_terms": [
+        "花的基本结构"
+      ]
+    },
+    "strength": 0.9,
+    "salience": 1.0,
+    "support": [
+      "concept_card"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BootstrapTargetConceptCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:source_domain:001",
+    "structure_type": "SourceDomainStructure",
+    "content": {
+      "source_domain": "园圃值守所",
+      "selection_basis": "subject_rotating_domain_pool"
+    },
+    "strength": 0.72,
+    "salience": 0.82,
+    "support": [
+      "copycat.source_domain_pool",
+      "subject=biology"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:001",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "e1",
+      "source_id": "n1",
+      "source_name": "n1",
+      "target_id": "n2",
+      "target_name": "n2",
+      "neighbor_name": "n2",
+      "kg_relation": "part_of",
+      "relation_semantic_role": "association",
+      "direction": "mechanism"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:002",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "e2",
+      "source_id": "n1",
+      "source_name": "n1",
+      "target_id": "n3",
+      "target_name": "n3",
+      "neighbor_name": "n3",
+      "kg_relation": "part_of",
+      "relation_semantic_role": "association",
+      "direction": "mechanism"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_relation:003",
+    "structure_type": "ConceptRelationStructure",
+    "content": {
+      "source_edge_id": "e3",
+      "source_id": "n1",
+      "source_name": "n1",
+      "target_id": "n4",
+      "target_name": "n4",
+      "neighbor_name": "n4",
+      "kg_relation": "part_of",
+      "relation_semantic_role": "association",
+      "direction": "mechanism"
+    },
+    "strength": 0.76,
+    "salience": 0.96,
+    "support": [
+      "concept_relation_graph.relations"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildConceptRelationStructuresCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:001",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "role_001",
+      "role_label": "一朵花由花柄",
+      "role_type": "concept_fragment",
+      "source_evidence": "一朵花由花柄"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:002",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "role_002",
+      "role_label": "花托",
+      "role_type": "concept_fragment",
+      "source_evidence": "花托"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:003",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "role_003",
+      "role_label": "萼片",
+      "role_type": "concept_fragment",
+      "source_evidence": "萼片"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:concept_role:004",
+    "structure_type": "ConceptRoleStructure",
+    "content": {
+      "concept_role_id": "role_004",
+      "role_label": "花瓣",
+      "role_type": "concept_fragment",
+      "source_evidence": "花瓣"
+    },
+    "strength": 0.7,
+    "salience": 0.88,
+    "support": [
+      "concept_card.definition",
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ExtractConceptRolesCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:001",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "role_001",
+      "role_label": "一朵花由花柄",
+      "role_type": "concept_fragment",
+      "story_role": "园圃值守所中的园圃值守所中的一朵花由花柄",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:001",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:002",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "role_002",
+      "role_label": "花托",
+      "role_type": "concept_fragment",
+      "story_role": "园圃值守所中的园圃值守所中的花托",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:002",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:003",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "role_003",
+      "role_label": "萼片",
+      "role_type": "concept_fragment",
+      "story_role": "园圃值守所中的园圃值守所中的萼片",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:003",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:role_correspondence:004",
+    "structure_type": "RoleCorrespondence",
+    "content": {
+      "concept_role_id": "role_004",
+      "role_label": "花瓣",
+      "role_type": "concept_fragment",
+      "story_role": "园圃值守所中的园圃值守所中的花瓣",
+      "mapping_reason": "concept role mapped into the selected source domain"
+    },
+    "strength": 0.69,
+    "salience": 0.86,
+    "support": [
+      "candidate_002:concept_role:004",
+      "copycat.source_domain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapConceptRolesToSourceDomainCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:001",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "e1",
+      "kg_relation": "part_of",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "n1",
+      "target_name": "n2"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:001",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:002",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "e2",
+      "kg_relation": "part_of",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "n1",
+      "target_name": "n3"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:002",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:relation_correspondence:003",
+    "structure_type": "RelationCorrespondence",
+    "content": {
+      "source_edge_id": "e3",
+      "kg_relation": "part_of",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "n1",
+      "target_name": "n4"
+    },
+    "strength": 0.71,
+    "salience": 0.9,
+    "support": [
+      "candidate_002:concept_relation:003",
+      "copycat.typed_relation_mapping"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "MapTypedRelationCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:001",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "花的基本结构",
+      "narrative_carrier": "园圃值守所中的入口条件核对",
+      "role": "入口条件核对"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:002",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "雄蕊",
+      "narrative_carrier": "园圃值守所中的第2道转化环节",
+      "role": "第2道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:003",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "雌蕊",
+      "narrative_carrier": "园圃值守所中的第3道转化环节",
+      "role": "第3道转化环节"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:node_correspondence:004",
+    "structure_type": "NodeCorrespondence",
+    "content": {
+      "mechanism_node_id": "n4",
+      "mechanism_text": "花柄、花托、萼片、花瓣",
+      "narrative_carrier": "园圃值守所中的结果验收记录",
+      "role": "结果验收记录"
+    },
+    "strength": 0.68,
+    "salience": 0.9,
+    "support": [
+      "mechanism_graph.nodes"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeNodeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:edge_correspondence:001",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "part_of",
+      "kg_relation": "part_of",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:edge_correspondence:002",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e2",
+      "source": "n1",
+      "target": "n3",
+      "relation": "part_of",
+      "kg_relation": "part_of",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:edge_correspondence:003",
+    "structure_type": "EdgeCorrespondence",
+    "content": {
+      "mechanism_edge_id": "e3",
+      "source": "n1",
+      "target": "n4",
+      "relation": "part_of",
+      "kg_relation": "part_of",
+      "source_edge_id": null,
+      "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "event_evidence": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。"
+    },
+    "strength": 0.66,
+    "salience": 0.92,
+    "support": [
+      "mechanism_graph.edges",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "ProposeEdgeCorrespondenceCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:conflict:001",
+    "structure_type": "ConflictStructure",
+    "content": {
+      "conflict": "园圃值守所里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。"
+    },
+    "strength": 0.62,
+    "salience": 0.62,
+    "support": [
+      "copycat.source_domain",
+      "copycat.node_correspondences"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:001",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "主角先在园圃值守所中确认园圃值守所中的入口条件核对是否成立。",
+      "position": 1,
+      "mapped_mechanism_node_id": "n1",
+      "mapped_mechanism_text": "花的基本结构"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:002",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，园圃值守所中的第2道转化环节按前一步留下的条件继续推进。",
+      "position": 2,
+      "mapped_mechanism_node_id": "n2",
+      "mapped_mechanism_text": "雄蕊"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:002"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:003",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "随后，园圃值守所中的第3道转化环节按前一步留下的条件继续推进。",
+      "position": 3,
+      "mapped_mechanism_node_id": "n3",
+      "mapped_mechanism_text": "雌蕊"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:003"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:event_fragment:004",
+    "structure_type": "EventChainFragment",
+    "content": {
+      "event": "最后，众人用园圃值守所中的结果验收记录核对整条安排是否得到可靠结果。",
+      "position": 4,
+      "mapped_mechanism_node_id": "n4",
+      "mapped_mechanism_text": "花柄、花托、萼片、花瓣"
+    },
+    "strength": 0.67,
+    "salience": 0.75,
+    "support": [
+      "candidate_002:node_correspondence:004"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:turning_point:001",
+    "structure_type": "TurningPointStructure",
+    "content": {
+      "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。"
+    },
+    "strength": 0.63,
+    "salience": 0.7,
+    "support": [
+      "candidate_002:edge_correspondence:001"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  },
+  {
+    "structure_id": "candidate_002:resolution_state:001",
+    "structure_type": "ResolutionStructure",
+    "content": {
+      "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。"
+    },
+    "strength": 0.63,
+    "salience": 0.68,
+    "support": [
+      "copycat.event_chain"
+    ],
+    "conflicts": [],
+    "created_by_codelet": "BuildEventChainFragmentCodelet",
+    "candidate_id": "candidate_002"
+  }
+]

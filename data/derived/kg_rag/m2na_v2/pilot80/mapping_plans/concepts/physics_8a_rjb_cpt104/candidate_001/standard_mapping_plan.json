@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt104",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代中国寓言：一位工匠制作铜镜的故事",
+  "characters": [
+    "工匠（老师傅）",
+    "学徒"
+  ],
+  "objects": [
+    "粗糙的铜镜坯（未打磨的铜镜）",
+    "精细打磨工具（如细砂、布）",
+    "磨好的铜镜（能清晰照人）"
+  ],
+  "conflict": "学徒急于求成，想直接用粗糙的铜镜坯照出清晰的像，但镜面模糊，无法看清。",
+  "event_chain": [
+    "工匠拥有粗糙的铜镜坯（对应凸透镜）",
+    "学徒靠近铜镜坯，试图照出清晰的像（对应物体靠近凸透镜）",
+    "工匠用精细打磨工具对铜镜坯进行打磨（对应透镜在投影屏幕上形成放大、倒立的实像）",
+    "打磨后的铜镜能清晰照出人的倒影（对应实像）"
+  ],
+  "turning_point": "工匠开始用精细打磨工具打磨铜镜坯，镜面逐渐变得光滑。",
+  "resolution_state": "学徒通过打磨后的铜镜看到了自己清晰的倒影，明白了耐心打磨的重要性。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "粗糙的铜镜坯",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "学徒靠近铜镜坯，试图照出清晰的像",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "工匠用精细打磨工具对铜镜坯进行打磨",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "打磨后的铜镜能清晰照出人的倒影",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "粗糙的铜镜坯的存在使得学徒靠近它成为可能（即铜镜坯是照镜子的前提）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "学徒靠近铜镜坯导致工匠开始打磨（即条件触发过程）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "工匠打磨铜镜坯最终产生清晰的倒影（即过程产生结果）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中未出现'投影仪成像'或其任何别名。",
+    "确保'粗糙的铜镜坯'、'打磨'等载体不直接对应物理概念，仅作为寓言元素。",
+    "注意'打磨'过程是工匠主动行为，而原机制中透镜是被动作用，但因果关系方向一致。",
+    "避免将'学徒靠近'解释为物理上的'物体靠近'，而是故事中的行为条件。"
+  ],
+  "mapping_context_sha256": "f7ddcef0437976190d49c77b505d826b340d785e4ffeca335badf09b41c64af2",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f32b4fc2f845587c5b7d3e255c08fb3403982a1f6257a7458e1c2c67f3a1d31b"
+  }
+}

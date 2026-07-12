@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt11",
+  "target_concept": "细胞",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过砖块比喻完整映射了细胞作为生物体基本单位、具有独立结构功能且需协作的核心定义，无任何矛盾。",
+    "implicitness": "全文未出现'细胞'或'cell'等禁用词，完全通过砖窑场景隐含表达概念，符合隐含性要求。",
+    "mapping_clarity": "砖块独立成型对应细胞独立生命活动，内部结构决定功能对应细胞结构与功能统一，砖块协作建墙对应细胞协作构成整体，映射清晰且一致。",
+    "readability": "语言流畅自然，情节连贯，比喻贴近生活，易于理解，无冗余或晦涩表达。",
+    "pedagogical_value": "通过观察和冲突引导发现核心规则，结尾点明'最微小的单元藏着最根本的奥秘'，有效促进概念理解。",
+    "novelty": "砖窑比喻虽常见，但结合独立成型、内部结构、协作建墙的细节设计有一定新意，未落入俗套。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事中更明确地暗示'砖块内部结构决定功能'与细胞器分工的类比，以增强深度。",
+    "结尾可稍作扩展，引导读者思考砖块（细胞）在不同建筑（组织）中的角色差异。"
+  ],
+  "rule_findings": {
+    "story_token_count": 542,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过砖块比喻完整映射了细胞作为生物体基本单位、具有独立结构功能且需协作的核心定义，无任何矛盾。",
+      "implicitness": "全文未出现'细胞'或'cell'等禁用词，完全通过砖窑场景隐含表达概念，符合隐含性要求。",
+      "mapping_clarity": "砖块独立成型对应细胞独立生命活动，内部结构决定功能对应细胞结构与功能统一，砖块协作建墙对应细胞协作构成整体，映射清晰且一致。",
+      "readability": "语言流畅自然，情节连贯，比喻贴近生活，易于理解，无冗余或晦涩表达。",
+      "pedagogical_value": "通过观察和冲突引导发现核心规则，结尾点明'最微小的单元藏着最根本的奥秘'，有效促进概念理解。",
+      "novelty": "砖窑比喻虽常见，但结合独立成型、内部结构、协作建墙的细节设计有一定新意，未落入俗套。"
+    },
+    "revision_suggestions": [
+      "可考虑在故事中更明确地暗示'砖块内部结构决定功能'与细胞器分工的类比，以增强深度。",
+      "结尾可稍作扩展，引导读者思考砖块（细胞）在不同建筑（组织）中的角色差异。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "滑道试验场中的入口条件核对",
+      "evidence": "核对这块牌上的数值",
+      "narrative_anchor": "核对这块牌上的数值",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "滑道试验场中的第2道转化环节",
+      "evidence": "第2道转化环节",
+      "narrative_anchor": "第2道转化环节",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "滑道试验场中的结果验收记录",
+      "evidence": "验收员用记录册上的数字对照通行牌",
+      "narrative_anchor": "验收员用记录册上的数字对照通行牌",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节",
+      "evidence": "不量清楚，后面的登记册就没法填",
+      "narrative_anchor": "不量清楚，后面的登记册就没法填",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "主角把这个具体现象归入“长度”这类更大的共同规则，而不是当成孤立事件",
+      "evidence": "滑道试验场里的每一步都像铁尺上的刻度",
+      "narrative_anchor": "滑道试验场里的每一步都像铁尺上的刻度",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

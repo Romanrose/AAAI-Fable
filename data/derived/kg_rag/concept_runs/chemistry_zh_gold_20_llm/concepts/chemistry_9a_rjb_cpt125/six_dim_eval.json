@@ -1,0 +1,88 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt125",
+  "target_concept": "气体收集装置",
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "weighted_overall": 4.15,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过装稻谷（桶口朝上）和陈米（桶口朝下浸水）两种方法，准确映射了排空气法和排水法的核心机制，且最终香料案例体现了根据气体性质选择收集方法的思路，与概念定义高度一致。",
+    "implicitness": "目标概念名称和所有禁止术语均未在故事正文中出现，完全通过隐喻表达，符合隐含性要求。",
+    "mapping_clarity": "桶口朝上对应向上排空气法，桶口朝下浸水对应排水法，映射关系清晰，但香料案例中布袋的使用稍显复杂，可能对部分读者造成理解偏差。",
+    "readability": "故事语言流畅，情节连贯，比喻贴近生活，易于理解，无生硬术语。",
+    "pedagogical_value": "故事通过对比和问题解决（香料案例）强化了根据气体性质选择收集方法的核心思想，有助于学生理解概念，但缺少对装置结构的具体描述。",
+    "novelty": "以粮仓装粮食为喻体，角度较为新颖，但整体结构仍属于常见的类比故事模式。"
+  },
+  "revision_suggestions": [
+    "在香料案例中，可更明确地暗示布袋的作用类似于防止气体与收集介质直接接触（如用干燥剂），以增强映射清晰度。",
+    "可增加一个失败案例，如用错误方法导致粮食浪费，以强化正确选择方法的重要性。",
+    "适当补充装置结构细节（如桶的形状、小口位置）的隐喻，以更贴近气体收集装置的物理特征。"
+  ],
+  "rule_findings": {
+    "story_token_count": 719,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "气体收集装置",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 4,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过装稻谷（桶口朝上）和陈米（桶口朝下浸水）两种方法，准确映射了排空气法和排水法的核心机制，且最终香料案例体现了根据气体性质选择收集方法的思路，与概念定义高度一致。",
+      "implicitness": "目标概念名称和所有禁止术语均未在故事正文中出现，完全通过隐喻表达，符合隐含性要求。",
+      "mapping_clarity": "桶口朝上对应向上排空气法，桶口朝下浸水对应排水法，映射关系清晰，但香料案例中布袋的使用稍显复杂，可能对部分读者造成理解偏差。",
+      "readability": "故事语言流畅，情节连贯，比喻贴近生活，易于理解，无生硬术语。",
+      "pedagogical_value": "故事通过对比和问题解决（香料案例）强化了根据气体性质选择收集方法的核心思想，有助于学生理解概念，但缺少对装置结构的具体描述。",
+      "novelty": "以粮仓装粮食为喻体，角度较为新颖，但整体结构仍属于常见的类比故事模式。"
+    },
+    "revision_suggestions": [
+      "在香料案例中，可更明确地暗示布袋的作用类似于防止气体与收集介质直接接触（如用干燥剂），以增强映射清晰度。",
+      "可增加一个失败案例，如用错误方法导致粮食浪费，以强化正确选择方法的重要性。",
+      "适当补充装置结构细节（如桶的形状、小口位置）的隐喻，以更贴近气体收集装置的物理特征。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

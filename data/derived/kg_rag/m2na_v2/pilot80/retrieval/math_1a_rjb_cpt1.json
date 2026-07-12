@@ -1,0 +1,113 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt1",
+    "label": "Concept",
+    "name": "数物体（数一数）",
+    "properties": {
+      "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+      "importance": "掌握",
+      "pages": "练习一、图1-10",
+      "examples": [
+        "数图中的小熊、苹果、树叶等的数量"
+      ],
+      "retrieval_text": "数物体（数一数）\nConcept\n通过观察，对给定的物体逐一计数，确定物体的数量。\n掌握\n练习一、图1-10\n数图中的小熊、苹果、树叶等的数量"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "math_1a_rjb_cpt2",
+      "label": "Concept",
+      "name": "比较数量（多、少、一样多）",
+      "properties": {
+        "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+        "importance": "重要",
+        "pages": "P1-P10",
+        "examples": [
+          "比较两组小棒的数量",
+          "判断哪个图形数量更多"
+        ],
+        "retrieval_text": "比较数量（多、少、一样多）\nConcept\n根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。\n重要\nP1-P10\n比较两组小棒的数量\n判断哪个图形数量更多"
+      }
+    },
+    {
+      "source_node_id": "math_1a_rjb_cpt3",
+      "label": "Concept",
+      "name": "一一对应比较法",
+      "properties": {
+        "definition": "通过将两组物体一一配对来比较数量的多少。",
+        "importance": "掌握",
+        "pages": "P3-P6",
+        "examples": [
+          "让小棒一根对一根配对，剩余的一方为多"
+        ],
+        "retrieval_text": "一一对应比较法\nConcept\n通过将两组物体一一配对来比较数量的多少。\n掌握\nP3-P6\n让小棒一根对一根配对，剩余的一方为多"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16335",
+      "source": "math_1a_rjb_cpt1",
+      "source_name": "数物体（数一数）",
+      "target": "math_1a_rjb_cpt3",
+      "target_name": "一一对应比较法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:19305",
+      "source": "math_1a_rjb_cpt1",
+      "source_name": "数物体（数一数）",
+      "target": "math_1a_rjb_cpt2",
+      "target_name": "比较数量（多、少、一样多）",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "数物体（数一数）",
+      "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:16335] 数物体（数一数） --prerequisites_for--> 一一对应比较法"
+    ],
+    "process_summary": [
+      "[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

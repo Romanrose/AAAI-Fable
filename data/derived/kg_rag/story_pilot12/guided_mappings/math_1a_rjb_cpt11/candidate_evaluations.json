@@ -1,0 +1,140 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "煮饭",
+      "domain_rationale": "煮饭过程需要先具备识别和量取米的能力（数出米粒数量），然后将米与水合并，这与加法中将两个数量合并的机制相似。",
+      "conflict": "煮饭中米和水的合并是物理混合，而加法是数学抽象合并，但结构上都是先有独立数量认知，再合并。",
+      "event_chain": [
+        "厨师认识并能数出适量的米粒",
+        "厨师将米粒和水合并在一起煮成饭"
+      ],
+      "turning_point": "厨师将米和水倒入锅中开始烹饪",
+      "resolution_state": "米和水合并成为一锅米饭",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "厨师认识并能数出适量的米粒",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "厨师将米粒和水合并在一起煮成饭",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "厨师数出米粒的能力使他能进行合并操作",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 2
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "拼图",
+      "domain_rationale": "拼图需要先识别并数出拼图块的数量与形状，然后将两块拼图合并在一起形成完整图案，符合先认知数量再合并的结构。",
+      "conflict": "拼图合并是空间上的拼接，而加法是数值合并，但机制都是先独立认知再组合。",
+      "event_chain": [
+        "小孩认识并能数出两块拼图块",
+        "小孩将两块拼图块合并在一起拼成完整图案"
+      ],
+      "turning_point": "小孩将两块拼图块拼合",
+      "resolution_state": "两块拼图合并成完整图案",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "小孩认识并能数出两块拼图块",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "小孩将两块拼图块合并在一起拼成完整图案",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "小孩识别和数出拼图块的能力使他能进行拼合操作",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 2
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "搭积木",
+      "domain_rationale": "搭积木需要先认识并能数出积木的数量和形状，然后将两块积木合并在一起搭建更高结构，与加法中先认知数量再合并的机制一致。",
+      "conflict": "搭积木是物理堆叠，加法是数值相加，但抽象机制都是先有独立认知再进行合并。",
+      "event_chain": [
+        "孩子认识并能数出两块积木",
+        "孩子将两块积木合并在一起搭成更高的结构"
+      ],
+      "turning_point": "孩子将两块积木叠放在一起",
+      "resolution_state": "两块积木合并成更高的结构",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "孩子认识并能数出两块积木",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "孩子将两块积木合并在一起搭成更高的结构",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "孩子识别和数出积木的能力使他能进行搭叠操作",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 2
+    }
+  }
+]

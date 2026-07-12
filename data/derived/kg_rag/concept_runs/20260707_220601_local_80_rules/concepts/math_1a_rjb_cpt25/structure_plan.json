@@ -1,0 +1,308 @@
+{
+  "found": true,
+  "query": "math_1a_rjb_cpt25",
+  "concept_id": "math_1a_rjb_cpt25",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "math_1a_rjb_cpt25",
+    "label": "Concept",
+    "name": "6的加减法",
+    "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "6的加减法\n掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt25",
+      "label": "Concept",
+      "name": "6的加减法",
+      "properties": {
+        "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+        "importance": "重要",
+        "retrieval_text": "6的加减法\nConcept\n掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。\n重要"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16346",
+        "source": "math_1a_rjb_cpt28",
+        "source_name": "分与合（拆分与组合）",
+        "target": "math_1a_rjb_cpt25",
+        "target_name": "6的加减法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16344",
+        "source": "math_1a_rjb_cpt23",
+        "source_name": "数字6的认识",
+        "target": "math_1a_rjb_cpt25",
+        "target_name": "6的加减法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "6的加减法",
+        "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+        "formula": "",
+        "importance": "重要"
+      },
+      "condition_summary": [
+        "[normalized:edge:16346] 分与合（拆分与组合） --prerequisites_for--> 6的加减法",
+        "[normalized:edge:16344] 数字6的认识 --prerequisites_for--> 6的加减法"
+      ],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 534,
+      "summary_chars": 325,
+      "path_chars": 0,
+      "retrieval_context_chars": 859
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "6的加减法的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "分与合（拆分与组合） --prerequisites_for--> 6的加减法",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:16346"
+        ]
+      },
+      {
+        "step_id": "s2",
+        "text": "数字6的认识 --prerequisites_for--> 6的加减法",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:16344"
+        ]
+      },
+      {
+        "step_id": "s3",
+        "text": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+        "kind": "process",
+        "supporting_edge_ids": []
+      },
+      {
+        "step_id": "s4",
+        "text": "保留形式定义条件和规则一致性。",
+        "kind": "condition",
+        "supporting_edge_ids": []
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s2",
+        "target_step_id": "s3",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s3",
+        "target_step_id": "s4",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [
+      "normalized:edge:16346",
+      "normalized:edge:16344"
+    ],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "6的加减法",
+      "math_1a_rjb_cpt25"
+    ],
+    "coverage_targets": {
+      "required_step_count": 4,
+      "required_dependency_count": 3,
+      "must_cover_edge_ids": [
+        "normalized:edge:16346",
+        "normalized:edge:16344"
+      ],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt25",
+    "concept_id": "math_1a_rjb_cpt25",
+    "story_language": "zh-CN",
+    "source_domain": "折纸修复台",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "先确认一个起点条件是否具备：分与合（拆分与组合） --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：数字6的认识 --prerequisites_for--> 这条隐藏规则",
+      "让中间的行动承接前后变化：掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+      "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：分与合（拆分与组合） --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：数字6的认识 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "6的加减法"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "分与合（拆分与组合） --prerequisites_for--> 6的加减法",
+          "数字6的认识 --prerequisites_for--> 6的加减法",
+          "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+          "保留形式定义条件和规则一致性。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "折纸修复台",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "先确认一个起点条件是否具备：分与合（拆分与组合） --prerequisites_for--> 这条隐藏规则",
+    "先确认一个起点条件是否具备：数字6的认识 --prerequisites_for--> 这条隐藏规则",
+    "让中间的行动承接前后变化：掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+    "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "6的加减法"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "分与合（拆分与组合） --prerequisites_for--> 6的加减法",
+        "数字6的认识 --prerequisites_for--> 6的加减法",
+        "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+        "保留形式定义条件和规则一致性。"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "保留形式定义条件和规则一致性。",
+        "避免只有故事没有数学结构。",
+        "避免把数学概念道德化。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：分与合（拆分与组合） --prerequisites_for--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：数字6的认识 --prerequisites_for--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "process",
+      "story_event": "让中间的行动承接前后变化：掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。"
+    },
+    {
+      "mechanism_step_id": "s4",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：保留形式定义条件和规则一致性。"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

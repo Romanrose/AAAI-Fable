@@ -1,0 +1,139 @@
+{
+  "query": "math_1a_rjb_cpt1",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt1",
+    "label": "Concept",
+    "name": "数物体（数一数）",
+    "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+    "aliases": [],
+    "examples": [
+      "数图中的小熊、苹果、树叶等的数量"
+    ],
+    "retrieval_text": "数物体（数一数）\n通过观察，对给定的物体逐一计数，确定物体的数量。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt3",
+        "label": "Concept",
+        "name": "一一对应比较法",
+        "definition": "通过将两组物体一一配对来比较数量的多少。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt2",
+        "label": "Concept",
+        "name": "比较数量（多、少、一样多）",
+        "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe3",
+        "label": "Exercise",
+        "name": "数一数图中的物体，并把正确的数量与相应的数字连线。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch1",
+        "label": "Chapter",
+        "name": "准备课",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:16335] 数物体（数一数） --prerequisites_for--> 一一对应比较法\n- [normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '数物体（数一数）', 'definition': '通过观察，对给定的物体逐一计数，确定物体的数量。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:16335] 数物体（数一数） --prerequisites_for--> 一一对应比较法'], 'process_summary': ['[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt1",
+      "label": "Concept",
+      "name": "数物体（数一数）",
+      "properties": {
+        "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "importance": "掌握",
+        "pages": "练习一、图1-10",
+        "examples": [
+          "数图中的小熊、苹果、树叶等的数量"
+        ],
+        "retrieval_text": "数物体（数一数）\nConcept\n通过观察，对给定的物体逐一计数，确定物体的数量。\n掌握\n练习一、图1-10\n数图中的小熊、苹果、树叶等的数量"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16335",
+        "source": "math_1a_rjb_cpt1",
+        "source_name": "数物体（数一数）",
+        "target": "math_1a_rjb_cpt3",
+        "target_name": "一一对应比较法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:19305",
+        "source": "math_1a_rjb_cpt1",
+        "source_name": "数物体（数一数）",
+        "target": "math_1a_rjb_cpt2",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "数物体（数一数）",
+        "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:16335] 数物体（数一数） --prerequisites_for--> 一一对应比较法"
+      ],
+      "process_summary": [
+        "[normalized:edge:19305] 数物体（数一数） --relates_to--> 比较数量（多、少、一样多）"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 525,
+      "summary_chars": 320,
+      "path_chars": 0,
+      "retrieval_context_chars": 845
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 525,
+    "summary_chars": 320,
+    "path_chars": 0,
+    "retrieval_context_chars": 845
+  }
+}

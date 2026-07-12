@@ -1,0 +1,97 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt104",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代农夫种稻",
+  "characters": [
+    "老农",
+    "稻种",
+    "春雨",
+    "烈日",
+    "暴雨"
+  ],
+  "objects": [
+    "稻田",
+    "水渠",
+    "水车"
+  ],
+  "conflict": "稻种需要适量的水才能发芽生长，但春雨不足或暴雨过多都会导致失败。",
+  "event_chain": [
+    "老农在春天播下稻种",
+    "稻种需要适量的水才能发芽",
+    "春雨适时落下，稻种得到适量水分",
+    "但有时春雨不足，稻种因缺水而无法发芽",
+    "有时暴雨倾盆，稻田积水过多，稻种霉烂或窒息"
+  ],
+  "turning_point": "老农通过观察天气和调节水渠，确保稻种获得适量水分，最终稻种顺利发芽。",
+  "resolution_state": "稻种在适量水分条件下成功发芽，茁壮成长。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "适量水分",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "稻种发芽所需的外界条件（适量水分、适宜温度、空气）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "稻种发芽",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "春雨不足导致稻种缺水",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "暴雨过多导致稻种霉烂或窒息",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "适量水分是稻种发芽所需外界条件的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "稻种发芽所需的外界条件（包括适量水分）使稻种发芽",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "春雨不足（水分不足）阻碍稻种发芽",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "暴雨过多（水分过多）阻碍稻种发芽",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'一定的水分'等禁止术语",
+    "确保所有机制节点和边都被映射，且方向正确",
+    "避免将课程桥接上下文（如老农调节水渠）视为因果机制",
+    "保持单一源域（古代农夫种稻），不混用其他隐喻"
+  ],
+  "mapping_context_sha256": "e9a9938a86f91a9e44059f6d017e5175ab15d1f91790dbf98c0f96f1655f93dd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d868d04fa5910dda5da22fbd09908ba1130b72eb07f87fe15646dd4b20bbad4a"
+  }
+}

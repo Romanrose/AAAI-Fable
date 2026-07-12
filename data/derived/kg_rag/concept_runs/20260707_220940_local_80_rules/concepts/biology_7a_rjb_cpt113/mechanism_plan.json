@@ -1,0 +1,47 @@
+{
+  "core_question": "雌蕊的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "花的雌性生殖结构，下部子房内有胚珠，柱头用于接受花粉。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s2",
+      "text": "避免目的论解释。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "避免把个体努力写成进化原因。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "雌蕊",
+    "biology_7a_rjb_cpt113"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [],
+    "must_cover_path_ids": []
+  }
+}

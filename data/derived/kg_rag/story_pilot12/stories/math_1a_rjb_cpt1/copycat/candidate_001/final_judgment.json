@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (入口条件核对) is most explicitly and repeatedly enacted in the story (e.g., '记录员先确认入口条件牌是否成立'), with clear cause-effect. Node n2 (第2道转化环节) is present but less distinct from n1 in narrative; edge e1 (n1→n2 relates_to) is preserved directionally but the relation 'relates_to' is somewhat conflated with 'enables' in the story, as both edges are realized by the same sentence '调度员按前一步留下的条件推进第二道转化', which could be interpreted as either. This makes e1 the weakest because its specific relation type is less differentiated."
+  },
+  "revision_instructions": [
+    "Consider making the 'relates_to' relation between n1 and n2 more distinct from the 'enables' relation between n1 and n3. For example, show that n1 and n2 are compared or correlated (relates_to) rather than one directly enabling the other. The current story uses '按前一步留下的条件推进' which implies enablement, not just relation.",
+    "Ensure that the mapping for edge e2 (n1 enables n3) is not solely represented by the same sentence as e1; provide a separate narrative moment where the condition from n1 directly enables the final verification (n3)."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

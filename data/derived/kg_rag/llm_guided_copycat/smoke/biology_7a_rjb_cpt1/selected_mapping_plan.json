@@ -1,0 +1,61 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "农业耕作",
+  "domain_rationale": "农田中的作物生长过程与生物特征集相似，作物需要养分、呼吸、排泄、生长、繁殖、遗传变异，且由细胞构成。",
+  "conflict": "作物不能主动移动，可能不涉及所有生物特征，但此处仅映射核心机制，冲突可接受。",
+  "event_chain": [
+    "一片农田中的作物",
+    "作物从土壤中吸收水分和矿物质",
+    "作物叶片进行光合作用释放氧气",
+    "作物通过蒸腾作用排出多余水分",
+    "作物从种子萌发逐渐长高",
+    "作物开花结果产生种子",
+    "作物通过种子传递遗传信息并出现变异"
+  ],
+  "turning_point": "作物开花结果，进入繁殖阶段。",
+  "resolution_state": "作物完成生命周期，产生新种子，延续种群。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "作物",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "作物从土壤中吸收水分和矿物质以获得营养",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "作物通过叶片气孔进行气体交换以完成呼吸",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "作物通过蒸腾作用排出多余水分和废物",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "作物从种子萌发逐渐长高以实现生长",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "作物开花结果产生种子以实现繁殖",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "作物通过种子传递遗传信息并可能出现变异",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "作物由细胞构成（如根尖细胞、叶肉细胞）",
+      "direction_preserved": true
+    }
+  ]
+}

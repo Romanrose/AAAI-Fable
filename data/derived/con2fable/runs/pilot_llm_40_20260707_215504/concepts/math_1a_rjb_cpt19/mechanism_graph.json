@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "与相关概念保持可解释关系：分拆数6和7",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m3",
+      "text": "与相关概念保持可解释关系：6和7的减法",
+      "weight": 0.65,
+      "source": "graph.related"
+    },
+    {
+      "id": "m4",
+      "text": "与相关概念保持可解释关系：6和7的加法",
+      "weight": 0.65,
+      "source": "graph.related"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_16341"
+    },
+    {
+      "id": "e2",
+      "source": "m2",
+      "target": "m3",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_19309"
+    },
+    {
+      "id": "e3",
+      "source": "m3",
+      "target": "m4",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_19308"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "Node n3 (照相机成像) is mapped to '第3道转化环节' but the story does not clearly establish this as a process that produces an outcome; instead it is treated as a sequential step. Edge e2 (is_a relation from n3 to n2) is realized as '把整个现象归入滑道试验场中的第2道转化环节这类更大的共同规则', which reverses the direction: the story says the phenomenon is classified under the larger rule, but the mechanism requires that the process (照相机成像) is a type of 实像. This reversal weakens the mapping. In contrast, node n1 (凸透镜) is well mapped to '入口条件核对' as a prerequisite that enables the process, and the story explicitly shows its necessity."
+  },
+  "revision_instructions": [
+    "Revise edge e2 mapping: the story should show that '第3道转化环节' (照相机成像) is a specific instance of '第2道转化环节' (实像), not the other way around. For example, have the record员 state that '第3道转化环节' is a type of '第2道转化环节'.",
+    "Clarify node n3 mapping: ensure '第3道转化环节' is portrayed as a process that actively produces an outcome (e.g., '第5道转化环节'), not just a step in a sequence. Add a sentence like '第3道转化环节完成后，产生了第5道转化环节所需的数据'.",
+    "Strengthen edge e4 mapping: the story currently says '第3道、第4道、第5道依次衔接', which is a sequential relation, but the mechanism requires that n3 (照相机成像) produces n5 (缩小、倒立的实像). Add explicit causal language, e.g., '第3道转化环节产生了第5道转化环节的结果'."
+  ],
+  "final_status": "revise"
+}

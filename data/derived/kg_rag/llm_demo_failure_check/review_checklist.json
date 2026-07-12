@@ -1,0 +1,14 @@
+{
+  "pass_fail": true,
+  "missing_roles": [],
+  "draft_length": 183,
+  "alignment_roles_present": [
+    "exercises",
+    "experiments",
+    "outcomes",
+    "prerequisites",
+    "related concepts",
+    "target concept"
+  ],
+  "seed_concept": "光合作用"
+}

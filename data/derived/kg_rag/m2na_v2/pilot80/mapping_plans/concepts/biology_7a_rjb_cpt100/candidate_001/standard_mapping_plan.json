@@ -1,0 +1,85 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的井水监测系统",
+  "characters": [
+    "村民",
+    "村长"
+  ],
+  "objects": [
+    "薄壁陶罐",
+    "有毒气体",
+    "井水",
+    "村庄"
+  ],
+  "conflict": "村庄的井水可能被有毒气体污染，威胁村民健康，但无法直接检测气体是否渗入水中。",
+  "event_chain": [
+    "村民使用薄壁陶罐从井中取水",
+    "薄壁陶罐的罐壁只有一层薄薄的陶土",
+    "有毒气体可以从罐壁内外两侧渗入罐内，污染井水",
+    "村民通过观察罐内井水是否变色来监测空气污染程度"
+  ],
+  "turning_point": "村民发现薄壁陶罐内的井水变色，意识到有毒气体已渗入，从而得知空气污染严重。",
+  "resolution_state": "村民利用薄壁陶罐的薄壁特性，成功将有毒气体的渗入转化为可见的井水变色，从而有效监测空气污染，保护村庄健康。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "薄壁陶罐的罐壁只有一层薄薄的陶土",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "有毒气体可以从罐壁内外两侧渗入罐内，污染井水",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "薄壁陶罐",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "村民通过观察罐内井水是否变色来监测空气污染程度",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "薄壁陶罐的薄壁特性使得有毒气体能够从两侧渗入",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "薄壁陶罐具有薄壁特性",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "有毒气体渗入罐内污染井水，导致村民通过观察井水变色来监测污染",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'苔藓植物'、'指示植物'等禁止术语。",
+    "确保'薄壁陶罐'的薄壁特性与苔藓植物叶片单层细胞的结构特性对应，且有毒气体渗入方式对应。",
+    "确保'井水变色'作为监测手段，对应苔藓植物作为指示植物的功能，但避免直接提及'指示'一词。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程章节上下文（如'第一章 生物圈中有哪些绿色植物'）作为因果机制的一部分。"
+  ],
+  "mapping_context_sha256": "0a3ea773eade6513a863a41f23f2357d4fadf36b9ba33d51cff1c8f2aa68f4b9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "e0b70493a1e07af1daa47d04c4023433ae31ae90060525e3725157665ceec956"
+  }
+}

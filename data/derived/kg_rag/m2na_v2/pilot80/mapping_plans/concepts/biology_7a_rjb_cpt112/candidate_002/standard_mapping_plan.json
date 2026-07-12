@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代中国工匠制作青铜鼎",
+  "characters": [
+    "铸鼎大师傅",
+    "小徒弟"
+  ],
+  "objects": [
+    "青铜鼎",
+    "鼎腹",
+    "铜液",
+    "模范"
+  ],
+  "conflict": "小徒弟不明白为何鼎腹必须由大师傅亲自铸造，而其他部分可由徒弟完成。",
+  "event_chain": [
+    "大师傅教导小徒弟铸造青铜鼎的技艺。",
+    "大师傅指出鼎腹是鼎的核心部分，必须由他亲自铸造。",
+    "小徒弟负责准备铜液和模范。",
+    "大师傅将铜液注入鼎腹的模范中。",
+    "铜液在模范中冷却成型，成为鼎腹的一部分。"
+  ],
+  "turning_point": "小徒弟发现鼎腹的模范内壁刻有精细的纹路，这些纹路只有大师傅才能掌握。",
+  "resolution_state": "小徒弟领悟到鼎腹是鼎的精华所在，其铸造技艺需要最高水平的师傅传承。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "大师傅",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "青铜鼎",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "鼎腹",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "铜液",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "核心铸造者",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大师傅是青铜鼎的铸造者",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "大师傅负责铸造鼎腹",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "铜液被注入鼎腹的模范",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "大师傅是核心铸造者",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'雄蕊'等禁止术语。",
+    "注意映射中大师傅对应雄蕊，青铜鼎对应花，鼎腹对应花药，铜液对应花粉，核心铸造者对应雄性生殖结构。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "c4230465fb27a14ebc4738bf99dcc4a8997e1a5cdaef0aa5bcb2b76c3e15ddcb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b9baaf1dbd6f4cc331c4e1a54ff1b6834b9f66f9fb655a3b54e55e1aa730e4bc"
+  }
+}

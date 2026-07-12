@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "北极星是天上最稳的星，千百年来位置几乎不变，咱们航海全靠它来定方向。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "一艘大船在茫茫大海上航行",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "在不同的地方看北极星，它跟海平面的夹角是不一样的。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "一艘大船在茫茫大海上航行，船长老王站在甲板上，仰头望着夜空中那颗最亮的北极星。他告诉年轻的水手阿海：“北极星是天上最稳的星，千百年来位置几乎不变，咱们航海全靠它来定方向。”",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "只要测出北极星与海平面的夹角，就能知道咱们航行到了哪个纬度。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "北极星能帮我们确定纬度，却不能直接告诉我们经度。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到直接对应的证据，且方向一致。"
+}

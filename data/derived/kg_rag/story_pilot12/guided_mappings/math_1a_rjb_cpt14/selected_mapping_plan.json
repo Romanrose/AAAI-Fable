@@ -1,0 +1,80 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "中国古建筑中的斗拱结构",
+  "domain_rationale": "斗拱由多个木块（如栱、翘、昂）以特定方式组合而成，形成稳定的支撑体系，类似于长方体由多个长方形面围成。斗拱中的标准件（如栱）可类比正方体作为特殊长方体，而斗拱的分类（如单翘单昂、五踩斗拱）与按形状分类相似。斗拱的组合、拆分过程（拼搭）以及其受力计算（体积、表面积）能映射所有节点和边。",
+  "conflict": "斗拱是建筑构件，长方体是几何概念，但结构逻辑和分类关系高度对应。",
+  "event_chain": [
+    "工匠识别出不同类型的斗拱组件（如栱、翘、昂）",
+    "工匠按组件外形特征进行分类（如直线型、曲线型）",
+    "工匠将标准组件（如栱）视为特殊组合件",
+    "工匠使用这些组件拼搭出完整的斗拱层",
+    "工匠计算斗拱的承重面积（类似表面积）",
+    "工匠应用经验公式计算斗拱的承重能力（类似体积公式）"
+  ],
+  "turning_point": "当工匠发现标准组件（栱）可以同时满足多种拼搭需求时，意识到其与普通组件的关系。",
+  "resolution_state": "斗拱结构稳定，工匠掌握了不同组件的分类、组合及力学计算方法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "斗拱整体结构（由多种木块组合而成）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "标准栱（形状规则、尺寸统一的组件）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "按组件外形特征分类（如区分直栱、曲栱）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "拼搭斗拱层（将组件组合成整体结构）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "斗拱承重面积（各承力面之和）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "斗拱承重经验公式（根据组件尺寸计算承载力）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "斗拱整体结构是分类的对象",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "标准栱是斗拱整体结构的一种特殊形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "斗拱整体结构与标准栱相关联（可相互转化）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "斗拱整体结构使计算承重面积成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "斗拱整体结构使应用承重公式成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "斗拱整体结构使拼搭层成为可能",
+      "direction_preserved": true
+    }
+  ]
+}

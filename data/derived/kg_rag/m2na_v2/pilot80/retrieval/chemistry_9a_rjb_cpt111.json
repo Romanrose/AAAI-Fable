@@ -1,0 +1,119 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt111",
+    "label": "Concept",
+    "name": "催化作用",
+    "properties": {
+      "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "importance": "重要",
+      "retrieval_text": "催化作用\nConcept\n催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt110",
+      "label": "Concept",
+      "name": "催化剂",
+      "properties": {
+        "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+        "importance": "重要",
+        "aliases": [
+          "触媒",
+          "化学催化剂"
+        ],
+        "examples": [
+          "二氧化锰在过氧化氢分解反应中起催化剂作用",
+          "二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用",
+          "硫酸铜溶液对过氧化氢分解具有催化作用",
+          "酶在酿造工业和制药工业中的催化作用",
+          "催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。",
+          "MnO2在过氧化氢分解反应中的催化作用。",
+          "FeCl3溶液在过氧化氢分解反应中的催化作用。"
+        ],
+        "retrieval_text": "催化剂\nConcept\n一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。\n重要\n触媒\n化学催化剂\n二氧化锰在过氧化氢分解反应中起催化剂作用\n二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用\n硫酸铜溶液对过氧化氢分解具有催化作用\n酶在酿造工业和制药工业中的催化作用\n催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。\nMnO2在过氧化氢分解反应中的催化作用。\nFeCl3溶液在过氧化氢分解反应中的催化作用。"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt113",
+      "label": "Concept",
+      "name": "催化剂的工业应用",
+      "properties": {
+        "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+        "importance": "了解",
+        "examples": [
+          "生产化肥、农药、多种化工原料都要使用催化剂",
+          "石油炼制过程中用高效催化剂生产汽油、煤油等",
+          "汽车尾气处理中用催化剂促进有害气体的转化",
+          "酿造工业和制药工业中用酶作催化剂"
+        ],
+        "retrieval_text": "催化剂的工业应用\nConcept\n催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。\n了解\n生产化肥、农药、多种化工原料都要使用催化剂\n石油炼制过程中用高效催化剂生产汽油、煤油等\n汽车尾气处理中用催化剂促进有害气体的转化\n酿造工业和制药工业中用酶作催化剂"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15001",
+      "source": "chemistry_9a_rjb_cpt111",
+      "source_name": "催化作用",
+      "target": "chemistry_9a_rjb_cpt113",
+      "target_name": "催化剂的工业应用",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:18226",
+      "source": "chemistry_9a_rjb_cpt110",
+      "source_name": "催化剂",
+      "target": "chemistry_9a_rjb_cpt111",
+      "target_name": "催化作用",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "催化作用",
+      "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:15001] 催化作用 --prerequisites_for--> 催化剂的工业应用"
+    ],
+    "process_summary": [
+      "[normalized:edge:18226] 催化剂 --relates_to--> 催化作用"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

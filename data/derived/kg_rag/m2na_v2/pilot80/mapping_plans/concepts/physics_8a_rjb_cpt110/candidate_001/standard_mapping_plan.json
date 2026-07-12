@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "农夫种稻",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "稻田",
+    "稻种",
+    "秧苗",
+    "稻穗"
+  ],
+  "conflict": "农夫发现稻穗有时饱满有时干瘪，不知如何确保收成。",
+  "event_chain": [
+    "农夫根据稻种与稻田的距离（播种深度）决定秧苗的生长状态。",
+    "播种太深或太浅，秧苗可能无法正常生长，导致稻穗饱满或干瘪。",
+    "秧苗的生长状态（健壮或弱小）与稻穗的最终形态（饱满或干瘪）相关联。"
+  ],
+  "turning_point": "农夫通过调整播种深度，使秧苗健壮，最终稻穗饱满。",
+  "resolution_state": "农夫掌握了播种深度与稻穗形态的关系，并理解了秧苗状态对收成的影响。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "播种深度（稻种与稻田表面的距离）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "稻穗的形态（饱满或干瘪）",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "秧苗的生长状态（健壮或弱小）",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "播种深度决定稻穗形态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "秧苗状态与稻穗形态相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保播种深度与稻穗形态的因果关系明确，避免混淆为单纯关联。",
+    "避免使用'像'、'正倒'、'大小'等物理术语。",
+    "确保秧苗状态（健壮/弱小）与稻穗形态（饱满/干瘪）的对应关系清晰，且不引入额外因果。"
+  ],
+  "mapping_context_sha256": "6b6ca1287eacb4bf5ddffba670bd8e47a1a123874e647507453ad1f5949a15ae",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d9517ddd02fbab2dbcfdba95a0e4ac24167b3250642dcdf83fa1d7621e1045bf"
+  }
+}

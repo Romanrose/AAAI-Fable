@@ -1,0 +1,110 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt116",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "折光过强或眼球过长",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "远处物体成像在视网膜前",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "用凹透镜矫正",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "透镜焦度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt118:definition",
+          "kg-node:physics_8a_rjb_cpt118:formula"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n2",
+        "relation": "transforms",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt116:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19716"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "近视眼及矫正"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "a248b5eb02e2c1822869299e84ef5ec607e5ddcda4b2a83197dc8cf6d03d1cd2",
+    "retrieval_sha256": "4f2eb883c1e62a14d53156e0ccb5e0c3cca239c3252d4743f46b05b2b85be68e",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "7176a88f5c7c257920ac3e29ef730a4ef19aad18a79fc8664eceddbe4e7a29e5"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

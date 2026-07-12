@@ -1,0 +1,70 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "古代一位工匠测量一块珍贵玉料的深度",
+  "characters": [
+    "工匠",
+    "玉料"
+  ],
+  "objects": [
+    "玉料",
+    "标准量尺（如“寸”）",
+    "测量过程（用尺子量）",
+    "测量方法（对齐、读数）"
+  ],
+  "conflict": "工匠需要知道玉料的准确深度，但玉料形状不规则，直接目测不准确。",
+  "event_chain": [
+    "工匠有一块玉料，其深度未知。",
+    "工匠知道标准量尺（如“寸”）是衡量深度的单位。",
+    "工匠用标准量尺（寸）去测量玉料的深度。",
+    "工匠遵循正确的测量方法（对齐起点、平视读数）。",
+    "通过测量，工匠得到了玉料的准确深度数值。"
+  ],
+  "turning_point": "工匠使用标准量尺并按照正确方法进行测量，从而获得了准确深度。",
+  "resolution_state": "工匠知道了玉料的准确深度，可以据此进行后续加工。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "玉料的深度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "标准量尺（如“寸”）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用标准量尺测量玉料深度的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "测量方法（对齐起点、平视读数）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准量尺（寸）是衡量深度的单位，即深度的一种标准表示",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "测量过程验证了玉料的深度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "玉料的深度使得测量方法得以应用（因为需要测量深度，所以需要方法）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保“玉料的深度”不直接对应“长度”一词，符合禁止术语要求。",
+    "确保“标准量尺（寸）”不直接对应“长度单位”等禁止术语。",
+    "确保“测量过程”和“测量方法”不直接使用“刻度尺”等禁止术语。",
+    "确保所有机制边方向在故事中保持一致。",
+    "确保故事连贯，不引入无关隐喻。"
+  ]
+}

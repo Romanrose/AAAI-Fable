@@ -1,0 +1,79 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "两位画师的不同画作",
+  "characters": [
+    "画师甲",
+    "画师乙",
+    "观画者"
+  ],
+  "objects": [
+    "画作甲",
+    "画作乙",
+    "画屏",
+    "透镜"
+  ],
+  "conflict": "两位画师展示画作，画作甲能被画屏承接，画作乙不能直接被画屏承接，需透过透镜观察，且两幅画作的正倒与大小不同。",
+  "event_chain": [
+    "画师甲展示画作甲，画作甲能被画屏承接。",
+    "画师乙展示画作乙，画作乙不能直接被画屏承接。",
+    "观画者需透过透镜从画师乙的方向观察画作乙。",
+    "画作甲与画作乙的正倒与大小不同。"
+  ],
+  "turning_point": "观画者发现画作乙无法被画屏承接，必须透过透镜观察。",
+  "resolution_state": "画作甲和画作乙的正倒与大小不同，且画作甲可被画屏承接，画作乙需透过透镜观察。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "画作甲能被画屏承接",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "画作乙不能直接被画屏承接，需透过透镜从画师乙方向观察",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "画作甲与画作乙的正倒与大小不同",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "画作甲能被画屏承接与画作乙不能直接被画屏承接且需透过透镜观察形成对比",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "画作甲能被画屏承接与画作甲的正倒大小相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "画作乙不能直接被画屏承接且需透过透镜观察与画作乙的正倒大小相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'实像'、'虚像'等术语。",
+    "确保画作甲和画作乙的正倒与大小不同，但未明确具体差异，需避免暗示具体光学性质。",
+    "确保透镜仅作为观察工具，不涉及光学原理解释。"
+  ],
+  "mapping_context_sha256": "1233aac61dc892ec5a357400522e7840ceb4b4d846ca11d1b72b697e71f30b37",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "2cfb40a669a31ea4ddb981befc045ca7cd8cba754b91eb3f373b57238278a70e"
+  }
+}

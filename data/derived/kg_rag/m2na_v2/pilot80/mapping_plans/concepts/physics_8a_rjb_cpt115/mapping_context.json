@@ -1,0 +1,115 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt115",
+    "subject": "physics",
+    "canonical_name": "明视距离",
+    "aliases": [],
+    "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "明视距离"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt115:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "眼睛依靠调节能看清的最近点，正常眼近点约为10 cm",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt114:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19715"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "明视距离"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt115",
+      "name": "明视距离",
+      "label": "Concept",
+      "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt114",
+        "name": "近点"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:19715",
+        "source_id": "physics_8a_rjb_cpt114",
+        "source_name": "近点",
+        "target_id": "physics_8a_rjb_cpt115",
+        "target_name": "明视距离",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt114",
+        "neighbor_name": "近点",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "明视距离",
+      "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:19715] 近点 --relates_to--> 明视距离"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:19715"
+  ],
+  "provenance": {
+    "seed_sha256": "3a88d65f3aee6fe117e5286393905bb067ab50c7df33712a7b93c3b6beea9e41",
+    "retrieval_sha256": "66bb46073738725bc43cc9f0c886f27a849c869581148c542ee863e5e75ec3e6",
+    "mechanism_record_sha256": "1bb374763a8049e8583454c5a21264e8cd17279c03c32236a60672fee64ace44"
+  }
+}

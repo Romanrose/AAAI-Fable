@@ -1,0 +1,12 @@
+{
+  "node_coverage": 1.0,
+  "edge_coverage": 1.0,
+  "direction_accuracy": 1.0,
+  "exact_evidence_precision": 1.0,
+  "forbidden_terms_found": [
+    "参照物"
+  ],
+  "hard_leakage": true,
+  "story_chars": 679,
+  "length_valid": true
+}

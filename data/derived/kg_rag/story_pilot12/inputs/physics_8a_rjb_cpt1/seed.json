@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "physics_8a_rjb_cpt1",
+  "subject": "physics",
+  "canonical_name": "长度",
+  "aliases": [],
+  "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+  "concept_type": "mechanism",
+  "forbidden_terms": [
+    "长度"
+  ]
+}

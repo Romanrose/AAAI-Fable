@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 以港口检疫为背景，通过对比大部分正常柑橘与少数带褐色斑点的柑橘，自然引出“变异”概念，既覆盖了机制节点和边，又未泄露目标概念。故事语言流畅、细节丰富，避免了模板化表达，且对齐证据可信。",
+    "risk_notes": [
+      "故事中未明确提及“变异”机制，但通过对比正常与异常柑橘，暗示了变异的存在，可能对部分读者而言不够直接。",
+      "边缘覆盖计数为0，需确认是否完全覆盖所有机制边。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

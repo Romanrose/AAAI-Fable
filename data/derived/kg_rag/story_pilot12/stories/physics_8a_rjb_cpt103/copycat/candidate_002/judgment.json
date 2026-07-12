@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n1 (凸透镜) is mapped to '入口条件核对' with clear story evidence and consistent role as a prerequisite. Node n2 (实像) is mapped to '第2道转化环节', but the story does not explicitly show that this step is a category or generalization (is_a relation) of the specific phenomenon; the mapping is weak because the story only mentions it as a step in a sequence, not as a classification. Edge e1 (n1 enables n3) is represented by '把两份记录放在一起比较，发现它们共同约束最后判断', which is a generic comparison rather than a specific enabling relation; a better realization would explicitly show that the prerequisite (入口条件核对) must be completed before the process (第3道转化环节) can start."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping for node n2 (实像) by having the story explicitly state that the specific phenomenon (e.g., the misordered records) is an instance of a general rule (实像), not just a step in a sequence.",
+    "Improve edge e1 (n1 enables n3) by showing a direct causal or enabling link: e.g., '只有入口条件核对通过，第3道转化环节才能开始' instead of a vague comparison.",
+    "Ensure that edge e2 (n3 is_a n2) is realized as a classification relation, not just a sequential step; the story should say something like '这个现象属于第2道转化环节这类规则'.",
+    "The story currently uses '第2道转化环节' as a step, but the mechanism requires it to be a category; revise to make the is_a relation explicit."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

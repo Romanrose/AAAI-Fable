@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt102",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "实像",
+    "aliases": [],
+    "forbidden_terms": [
+      "实像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:12420",
+        "source_name": "投影仪成像",
+        "target_name": "实像",
+        "relation_semantic_role": "category_membership"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:12419",
+        "source_name": "照相机成像",
+        "target_name": "实像",
+        "relation_semantic_role": "category_membership"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "水渠调度站里新来了一批分段记录册，记录员小陈负责把每天的流量数据填进去。调度员老周说：“今天上游来水，下游要配水，你得先核对入口处的条件——水从哪条渠来，到哪条渠去，两边是不是在同一条干线上。”\n\n小陈翻开第一本记录册，发现上游的进水口和下游的出水口分居在调度站的两侧，中间隔着三座闸门。他想起以前培训时说过，这种布置和投影仪的原理一样，光线穿过透镜后，物体和像分别待在透镜两边。他把这个现象归入那条共同规则，而不是当成孤立的数字。\n\n接着他拿出第二本记录册，上面写着下游的配水流量。他又想起照相机成像时，光线从物体出发，经过镜头后在底片上汇聚，物体和像也是分居两侧。他再次把这个现象归入同一类规则，觉得两条记录应该能互相印证。\n\n老周走过来看了看，说：“别急着填结论，你得用记录、比较和复查来检验你的判断。先把这两本册子放在一起，看看它们共同约束什么。”小陈把两本册子摊开，发现上游进水流量和下游配水流量之间有个固定的比例关系，就像透镜成像时物距和像距相互制约一样。\n\n这时验收员老刘来了，他手里拿着一块光屏，说：“我提前试了一次，直接跳过中间那道转化环节，结果水没配准，下游的池子差点干了。”小陈这才明白，顺序不能颠倒——必须先确认入口条件，再经过第二道转化环节，最后用结果验收记录核对整条安排。\n\n三个人重新把记录册按条件、过程和结果衔接起来。小陈先核对入口处物体和像是否分居两侧，老周据此调整闸门位置，老刘再用光屏承接水流，看到汇聚点正好落在预定位置。所有环节互相印证，记录终于能放进封存箱里了。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "水渠调度站中的入口条件核对",
+        "evidence": "先核对入口处的条件",
+        "narrative_anchor": "先核对入口处的条件",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "水渠调度站中的第2道转化环节",
+        "evidence": "第二道转化环节",
+        "narrative_anchor": "第二道转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "水渠调度站中的结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "主角把这个具体现象归入“投影仪成像”这类更大的共同规则，而不是当成孤立事件。",
+        "evidence": "他把这个现象归入那条共同规则",
+        "narrative_anchor": "他把这个现象归入那条共同规则",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "主角把这个具体现象归入“照相机成像”这类更大的共同规则，而不是当成孤立事件。",
+        "evidence": "他再次把这个现象归入同一类规则",
+        "narrative_anchor": "他再次把这个现象归入同一类规则",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "Edge e2 (n2 is_a n1) is mapped to '第二道转化其实是入口条件核对的一种特殊形式', which correctly preserves the is_a relation direction (n2→n1). However, the story does not explicitly state that n2 (第二道转化) is a special case of n1 (入口条件核对) in the context of the mechanism; it only mentions this relation once without reinforcing it through the event chain. This makes the mapping weaker compared to e1, which is more explicitly tied to the story's turning point."
+  },
+  "revision_instructions": [
+    "Reduce story length to between 450 and 750 Chinese characters (current: 774). Suggested cuts: condense the description of the three characters' roles and the initial setup.",
+    "Strengthen the mapping for edge e2 by explicitly showing that the second transformation is a special case of the entry condition check, not just stating it once. For example, have the recorder explain that the second transformation inherits the rules of the entry check.",
+    "Ensure that the story's event chain more clearly reflects the sequential dependency of the transformations, especially the role of the third transformation as a rule-based check (n3) rather than just a step."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

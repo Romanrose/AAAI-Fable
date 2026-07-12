@@ -1,0 +1,22 @@
+{
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm",
+  "summary_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\summary.jsonl",
+  "eval_summary_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\eval_summary.jsonl",
+  "failed_queue_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\failed_queue.jsonl",
+  "concept_count": 1,
+  "success_count": 1,
+  "failed_count": 0,
+  "skipped_count": 0,
+  "mode": "llm",
+  "language": "zh-CN",
+  "workflow": "agentic",
+  "retrieval_mode": "dual_level",
+  "summary_jsonl": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\eval_summary.jsonl",
+  "csv_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\eval_summary.csv",
+  "report_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\eval_report.md",
+  "analysis_chart_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\eval_analysis.svg",
+  "row_count": "1",
+  "biology_report_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\biology_eval_report.md",
+  "subject_eval_report_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\20260706_215337_llm_1_llm\\subject_eval_report.md",
+  "run_index_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_runs\\runs_index.jsonl"
+}

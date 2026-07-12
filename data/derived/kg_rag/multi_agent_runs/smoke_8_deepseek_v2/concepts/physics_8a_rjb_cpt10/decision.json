@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 以水渠闸门和水位标尺为参照物，自然引出“运动与静止的相对性”这一核心概念，故事完整覆盖了所有机制节点和边，未泄露任何目标概念术语，语言流畅且无模板痕迹。candidate_002 和 candidate_003 同样满足基本要求，但 candidate_001 在叙事简洁性和日常场景的代入感上更优，且确定性指标明确推荐。",
+    "risk_notes": [
+      "故事中“水流在运动”等表述可能被部分读者直接关联到物理概念，但未使用目标术语，风险可控。",
+      "需确保后续教学引导不直接点明“参照物”等关键词，以保持寓言的隐含性。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

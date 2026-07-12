@@ -1,0 +1,141 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一棵老树的生长与变化",
+  "characters": [
+    "老树",
+    "园丁"
+  ],
+  "objects": [
+    "阳光",
+    "水分",
+    "土壤",
+    "落叶",
+    "新芽"
+  ],
+  "conflict": "老树在园中缓慢生长，没有明显变化，园丁误以为它已经枯死，想要砍掉它。",
+  "event_chain": [
+    "老树吸收阳光和水分，进行缓慢的生长（对应缓慢氧化）。",
+    "园丁观察到老树没有新芽或开花（对应没有显著的发光发热现象）。",
+    "园丁认为老树已死，准备砍伐。",
+    "老树通过根系与土壤中的微生物互动，持续进行养分循环（对应呼吸与氧气）。",
+    "园丁发现老树内部仍有生机，停止砍伐。"
+  ],
+  "turning_point": "园丁发现老树内部仍有生机，意识到缓慢生长也是生命的一部分。",
+  "resolution_state": "老树继续缓慢生长，园丁不再干预，尊重其自然节奏。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老树的缓慢生长",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老树的生长（包括所有生长过程）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老树突然开花或结果（剧烈变化）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老树通过根系与土壤微生物互动（呼吸与养分循环）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "阳光和水分",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "充足的阳光、水分和适宜的温度",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "老树突然开花或结果（剧烈变化）",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "老树没有新芽或开花（没有明显变化）",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老树的缓慢生长是老树生长的一种形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老树突然开花或结果是老树生长的一种形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老树通过根系与土壤微生物互动是老树缓慢生长的一种形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "阳光和水分是老树生长的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "阳光和水分是老树突然开花或结果的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "阳光和水分是老树通过根系与土壤微生物互动的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "充足的阳光、水分和适宜的温度是老树突然开花或结果的必要条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "老树突然开花或结果产生剧烈变化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "老树的缓慢生长产生没有明显变化",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "老树的缓慢生长与老树突然开花或结果相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不使用'缓慢氧化'或其任何别名。",
+    "确保所有机制节点和边都被映射，特别是n1和e1必须保留。",
+    "避免将课程桥接上下文（如呼吸与氧气）作为因果机制，仅作为类比的一部分。",
+    "确保故事载体来自单一源域（老树生长），不混合其他无关隐喻。"
+  ],
+  "mapping_context_sha256": "f68e9a59697e04920ab6f74fe63c8a7e3e337eb7ed76456df9265dbf59467739",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b932faf11916cf0e8be2ca5756f10c5f8ddf23d0d4b933a24d9f07659bfcc856"
+  }
+}

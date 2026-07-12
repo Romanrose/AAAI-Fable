@@ -1,0 +1,82 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个老园丁培育一棵枯萎的梅树",
+  "characters": [
+    "老园丁",
+    "枯萎的梅树"
+  ],
+  "objects": [
+    "老园丁的培育方法",
+    "梅树的新芽",
+    "梅树的花朵"
+  ],
+  "conflict": "梅树因缺水而枯萎，老园丁需要找到合适的方法让它重新焕发生机。",
+  "event_chain": [
+    "老园丁发现梅树枯萎，判断其根系尚存生机（条件：物体位于焦点以内）",
+    "老园丁采用特殊的浇水和修剪方法（实体：凸透镜）",
+    "梅树逐渐长出嫩芽，最终开出繁盛的花朵（结果：放大、正立的虚像）",
+    "这些花朵虽然美丽，但并非真实的果实，而是虚花（状态：虚像）"
+  ],
+  "turning_point": "老园丁采用特殊的培育方法，而不是直接大量浇水。",
+  "resolution_state": "梅树开出繁盛的虚花，虽不结果，但观赏价值极高。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老园丁发现梅树枯萎，判断其根系尚存生机",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老园丁采用特殊的浇水和修剪方法",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "梅树逐渐长出嫩芽，最终开出繁盛的花朵",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "这些花朵虽然美丽，但并非真实的果实，而是虚花",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老园丁发现梅树枯萎后，决定采用特殊的培育方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "特殊的培育方法使梅树逐渐长出嫩芽并开花",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "开出的繁盛花朵属于虚花",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'放大镜成像'、'凸透镜'、'虚像'等术语。",
+    "注意'虚花'与'虚像'的类比，避免混淆。",
+    "保持事件链的因果一致性，避免引入无关元素。"
+  ],
+  "mapping_context_sha256": "9cbf7ca7f4abad49e0098fbedb8604db6538a1d3041d812df8ecf865c3ee5c16",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "36828f8c6b7ac293bbc8ed6c91760732e980f190e5fe2a2227efb7f336af6026"
+  }
+}

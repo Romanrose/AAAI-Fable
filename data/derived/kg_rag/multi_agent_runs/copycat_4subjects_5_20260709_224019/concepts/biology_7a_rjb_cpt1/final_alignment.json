@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "老匠人带着学徒在瓷器作坊里做一套新件。",
+      "narrative_anchor": "老匠人带着学徒在瓷器作坊里做一套新件。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "第二道转化环节",
+      "narrative_anchor": "第二道转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "验收记录",
+      "narrative_anchor": "验收记录",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+      "evidence": "母版摆在中央，学徒照着它的轮廓、纹样骨架和比例，捏出一只碗的泥坯。",
+      "narrative_anchor": "母版摆在中央，学徒照着它的轮廓、纹样骨架和比例，捏出一只碗的泥坯。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+      "evidence": "转化环节稳了，验收记录才能成立",
+      "narrative_anchor": "转化环节稳了，验收记录才能成立",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

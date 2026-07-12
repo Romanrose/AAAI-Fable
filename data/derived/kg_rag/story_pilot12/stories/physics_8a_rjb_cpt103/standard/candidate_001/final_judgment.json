@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n4",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of '物体远离凸透镜' to '小葫芦远离主干（剪枝）' is particularly strong because it preserves the causal condition (spatial separation enabling a process) without using any physics terminology. The weakest node is '实像' mapped to '大葫芦' because the story does not explicitly state that the large gourd is an 'image' of the small gourd, but the mapping is still acceptable as an outcome. Edge e2 ('照相机成像' is_a '实像') is weakest because the story does not explicitly state that the gourd growth process 'is' a large gourd; however, the relation is preserved as 'produces' in the story, which is a reasonable adaptation."
+  },
+  "revision_instructions": [
+    "No revision needed. All mechanism nodes and edges are faithfully mapped, directions preserved, no forbidden terms, and story length is within range."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

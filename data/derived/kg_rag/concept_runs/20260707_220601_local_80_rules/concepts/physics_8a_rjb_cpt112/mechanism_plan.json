@@ -1,0 +1,72 @@
+{
+  "core_question": "眼睛调节的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "眼睛调节 --prerequisites_for--> 近点",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:17199"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "眼睛调节 --prerequisites_for--> 远点",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:17198"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "眼睛成像原理 --relates_to--> 眼睛调节",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:19714"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:17199",
+    "normalized:edge:17198",
+    "normalized:edge:19714"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "眼睛调节",
+    "physics_8a_rjb_cpt112"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:17199",
+      "normalized:edge:17198",
+      "normalized:edge:19714"
+    ],
+    "must_cover_path_ids": []
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "城市交通系统",
+  "domain_rationale": "城市交通系统作为有机整体，具有类似生命的各种需求与功能，每个特征可映射到交通元素。",
+  "conflict": "交通系统无生物意义上的细胞结构，需抽象为节点（如车站、车辆）。",
+  "event_chain": [
+    "交通系统需要燃油和电力（需要营养）",
+    "交通系统通过排放尾气和散热（能进行呼吸）",
+    "交通系统通过维修厂和废料处理（能排出废物）",
+    "交通系统路线延长和网络扩张（能生长）",
+    "交通系统新建线路和站点（能繁殖）",
+    "交通系统时刻表传承和路线调整（具有遗传和变异）",
+    "交通系统由车站、车辆、轨道等单元构成（由细胞构成）"
+  ],
+  "turning_point": "无转折点，为并列特征描述。",
+  "resolution_state": "城市交通系统是一个具有类似生命特征的综合体系。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "城市交通系统",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "需要燃油和电力",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "排放尾气和散热",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "通过维修厂和废料处理",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "路线延长和网络扩张",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "新建线路和站点",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "时刻表传承和路线调整",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "由车站、车辆、轨道等单元构成",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "城市交通系统需要燃油和电力",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "城市交通系统排放尾气和散热",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "城市交通系统通过维修厂和废料处理",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "城市交通系统路线延长和网络扩张",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "城市交通系统新建线路和站点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "城市交通系统时刻表传承和路线调整",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "城市交通系统由车站、车辆、轨道等单元构成",
+      "direction_preserved": true
+    }
+  ]
+}

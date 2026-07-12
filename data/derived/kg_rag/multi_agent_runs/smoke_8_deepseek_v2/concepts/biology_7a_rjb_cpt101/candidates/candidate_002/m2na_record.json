@@ -1,0 +1,161 @@
+{
+  "id": "biology_7a_rjb_cpt101",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "种子萌发",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：种子萌发的环境条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "需要先满足或理解：种子萌发的自身条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "属于或连接到上位结构：种子萌发的环境条件",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n5",
+        "text": "属于或连接到上位结构：种子萌发的自身条件",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14133"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:14134"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10772"
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:10776"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "见习生站在园圃值守所的种子箱前，手里的温度计显示二十度，喷水壶里的水刚刚浇过，通风窗也开着。他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。一切正常，可种子就是没动静。\n\n老园丁走过来，看了一眼种子箱，摇了摇头。“你只看了外面，没看里面。”\n\n见习生愣住了。他打开种子箱，把种子倒在手心。老园丁指着几粒干瘪的种子说：“这些胚已经坏了，再怎么浇水也没用。”又拨开一粒饱满的，露出里面的小胚芽，“这种才行。”\n\n见习生恍然大悟，连忙把完好的种子挑出来，放进温水里浸泡。老园丁把种子箱搬到朝阳的窗台上，让它们晒到温暖的阳光。\n\n几天后，那些浸泡过的种子开始吸水膨胀，种皮裂开一条缝，白色的胚根探出头来。又过了两天，嫩绿的胚芽破土而出，在苗床上站得笔直。\n\n见习生蹲在苗床前，看着那些幼苗，终于明白了一个道理：种子要长出幼苗，既要有合适的土壤和水分，更要有自身完整的胚和活力。两者缺一不可，就像钥匙和锁孔，光有锁孔不行，钥匙也得对得上。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "种子吸水膨胀、长出幼苗的完整过程",
+        "evidence": "见习生站在园圃值守所的种子箱前，手里的温度计显示二十度，喷水壶里的水刚刚浇过，通",
+        "narrative_anchor": "见习生站在园圃值守所的种子箱前，手里的温度计显示二十度，喷水壶里的水刚刚浇过，通",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "见习生检查温度、湿度、空气等外部环境条件",
+        "evidence": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+        "narrative_anchor": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "老园丁指出需要检查种子自身条件",
+        "evidence": "一切正常，可种子就是没动静。",
+        "narrative_anchor": "一切正常，可种子就是没动静。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "环境条件是种子萌发的先决条件之一",
+        "evidence": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+        "narrative_anchor": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n5",
+        "narrative_element": "自身条件是种子萌发的另一个先决条件",
+        "evidence": "“你只看了外面，没看里面。",
+        "narrative_anchor": "“你只看了外面，没看里面。",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "种子萌发过程需要先满足环境条件",
+        "evidence": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+        "narrative_anchor": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "环境条件之后需要检查自身条件",
+        "evidence": "一切正常，可种子就是没动静。",
+        "narrative_anchor": "一切正常，可种子就是没动静。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "自身条件属于上位结构环境条件",
+        "evidence": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+        "narrative_anchor": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.8
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "环境条件属于上位结构自身条件",
+        "evidence": "“你只看了外面，没看里面。",
+        "narrative_anchor": "“你只看了外面，没看里面。",
+        "narrative_source_concept_node_id": "n4",
+        "narrative_target_concept_node_id": "n5",
+        "direction_preserved": true,
+        "confidence": 0.8
+      }
+    ]
+  }
+}

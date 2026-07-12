@@ -1,0 +1,106 @@
+{
+  "query": "biology_7a_rjb_cpt107",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt107",
+    "label": "Concept",
+    "name": "种子休眠",
+    "definition": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "种子休眠\n种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt106",
+        "label": "Concept",
+        "name": "种子萌发的自身条件",
+        "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:10777] 种子休眠 --is_a--> 种子萌发的自身条件"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '种子休眠', 'definition': '种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。', 'formula': '', 'importance': '了解'}, 'condition_summary': ['[normalized:edge:10777] 种子休眠 --is_a--> 种子萌发的自身条件'], 'process_summary': [], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt107",
+      "label": "Concept",
+      "name": "种子休眠",
+      "properties": {
+        "definition": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。",
+        "importance": "了解",
+        "retrieval_text": "种子休眠\nConcept\n种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。\n了解"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:10777",
+        "source": "biology_7a_rjb_cpt107",
+        "source_name": "种子休眠",
+        "target": "biology_7a_rjb_cpt106",
+        "target_name": "种子萌发的自身条件",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "种子休眠",
+        "definition": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [
+        "[normalized:edge:10777] 种子休眠 --is_a--> 种子萌发的自身条件"
+      ],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 248,
+      "summary_chars": 267,
+      "path_chars": 0,
+      "retrieval_context_chars": 515
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 248,
+    "summary_chars": 267,
+    "path_chars": 0,
+    "retrieval_context_chars": 515
+  }
+}

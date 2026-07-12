@@ -1,0 +1,106 @@
+{
+  "query": "physics_8a_rjb_cpt109",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt109",
+    "label": "Concept",
+    "name": "实像与虚像",
+    "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "实像与虚像\n实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt110",
+        "label": "Concept",
+        "name": "像的正倒与大小",
+        "definition": "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s3",
+        "label": "Section",
+        "name": "第三节 凸透镜成像的规律",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:19713] 实像与虚像 --relates_to--> 像的正倒与大小"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '实像与虚像', 'definition': '实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。', 'formula': '', 'importance': '掌握'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:19713] 实像与虚像 --relates_to--> 像的正倒与大小'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "physics_8a_rjb_cpt109",
+      "label": "Concept",
+      "name": "实像与虚像",
+      "properties": {
+        "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。",
+        "importance": "掌握",
+        "retrieval_text": "实像与虚像\nConcept\n实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。\n掌握"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:19713",
+        "source": "physics_8a_rjb_cpt109",
+        "source_name": "实像与虚像",
+        "target": "physics_8a_rjb_cpt110",
+        "target_name": "像的正倒与大小",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "实像与虚像",
+        "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:19713] 实像与虚像 --relates_to--> 像的正倒与大小"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 259,
+      "summary_chars": 248,
+      "path_chars": 0,
+      "retrieval_context_chars": 507
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 259,
+    "summary_chars": 248,
+    "path_chars": 0,
+    "retrieval_context_chars": 507
+  }
+}

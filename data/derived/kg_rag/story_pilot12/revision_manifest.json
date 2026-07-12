@@ -1,0 +1,54 @@
+{
+  "story_count": 108,
+  "failure_count": 0,
+  "revision_attempted_count": 57,
+  "revision_improved_count": 39,
+  "generator_reviser": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "judge": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "analysis": {
+    "by_strategy": {
+      "standard": {
+        "count": 36,
+        "mean_node_coverage": 0.875,
+        "mean_edge_coverage": 0.8652,
+        "accept_count": 22,
+        "revise_count": 9,
+        "reject_count": 5,
+        "revision_improved_count": 14,
+        "leakage_count": 0
+      },
+      "copycat": {
+        "count": 36,
+        "mean_node_coverage": 0.8426,
+        "mean_edge_coverage": 0.9444,
+        "accept_count": 18,
+        "revise_count": 10,
+        "reject_count": 8,
+        "revision_improved_count": 15,
+        "leakage_count": 0
+      },
+      "llm_guided_copycat": {
+        "count": 36,
+        "mean_node_coverage": 0.8484,
+        "mean_edge_coverage": 0.8841,
+        "accept_count": 26,
+        "revise_count": 5,
+        "reject_count": 5,
+        "revision_improved_count": 10,
+        "leakage_count": 2
+      }
+    }
+  }
+}

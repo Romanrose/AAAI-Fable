@@ -1,0 +1,130 @@
+{
+  "id": "physics_8a_rjb_cpt10",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "参照物",
+    "aliases": [],
+    "forbidden_terms": [
+      "参照物"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "判断物体运动或静止时所选取的标准物体。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：运动与静止的相对性",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "与相关概念保持关系：机械运动 与 参照物",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "与相关概念保持关系：运动与静止的相对性 与 参照物",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:17189"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:19745"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:19747"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "船队在海面上航行，旗舰位于最前方，补给船在后方跟随。\n\n瞭望手阿风举起望远镜，盯着后方的补给船。他转头对信号官老陈说：“补给船正在向我们靠近，距离越来越短了。”\n\n老陈却摇摇头，指着远处一座固定的灯塔说：“不对，你看它和那座灯塔的位置——它在往反方向移动，正在远离我们。”\n\n两人同时走进舰长室报告。舰长听完，眉头微皱：“同一艘船，一个说靠近，一个说远离，到底怎么回事？”\n\n阿风抢先说：“我以我们自己的旗舰为标准，它离我们越来越近，当然是靠近。”\n\n老陈接着说：“我以那座固定灯塔为标准，它离灯塔越来越远，当然是远离。”\n\n舰长笑了，他摊开海图，用手指点了点两个位置：“你们都没有错。只是阿风用的是旗舰，老陈用的是灯塔，标准不同，判断自然不同。补给船相对于旗舰在靠近，相对于灯塔却在远离。”\n\n他顿了顿，又说：“运动还是静止，要看拿什么来比。在编队里，我们以旗舰为标准描述相对位置；对外报告航向时，以固定灯塔为标准描述绝对变化。两个标准各有用途，并不矛盾。”\n\n阿风和老陈对视一眼，恍然大悟。同一艘船，同一个瞬间，只因选的标准不同，就呈现出两种截然相反的运动状态。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "阿风以旗舰为标准，老陈以灯塔为标准，判断补给船的运动",
+        "evidence": "标准",
+        "narrative_anchor": "标准",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "舰长解释运动与静止的相对性",
+        "evidence": "运动还是静止，要看拿什么来比",
+        "narrative_anchor": "运动还是静止，要看拿什么来比",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "补给船相对于旗舰的位置变化是机械运动，通过旗舰这个参照物描述",
+        "evidence": "相对于旗舰在靠近",
+        "narrative_anchor": "相对于旗舰在靠近",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "同一补给船因参照物不同被判断为靠近和远离，体现相对性",
+        "evidence": "同一艘船，同一个瞬间，只因选的标准不同，就呈现出两种截然相反的运动状态",
+        "narrative_anchor": "同一艘船，同一个瞬间，只因选的标准不同，就呈现出两种截然相反的运动状态",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "理解参照物概念后，才能理解运动与静止的相对性",
+        "evidence": "标准",
+        "narrative_anchor": "标准",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "理解相对性后，才能将机械运动与参照物关联",
+        "evidence": "运动还是静止，要看拿什么来比",
+        "narrative_anchor": "运动还是静止，要看拿什么来比",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "机械运动与参照物的关系进一步引出相对性与参照物的关系",
+        "evidence": "同一艘船，同一个瞬间，只因选的标准不同，就呈现出两种截然相反的运动状态",
+        "narrative_anchor": "同一艘船，同一个瞬间，只因选的标准不同，就呈现出两种截然相反的运动状态",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

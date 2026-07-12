@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n4",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "The story explicitly describes soil moisture (墒情) and sunlight, but the '充足的空气（氧气）' condition is only indirectly represented by '松软的土壤' (loose soil). While loose soil implies air, the story does not explicitly mention oxygen or air as a separate condition, making the mapping of n5 weaker than others. Edge e4 (n5 is_a n1) is thus less directly supported than e2 and e3."
+  },
+  "revision_instructions": [
+    "Increase node_coverage and edge_coverage to at least 0.8 by explicitly mentioning all three conditions (temperature, moisture, air) in the story. Currently, temperature (适宜的温度) is missing entirely; add a sentence about warm spring weather or similar.",
+    "Ensure each condition is clearly stated as a separate element, not just implied by soil texture. For air, explicitly mention '充足的空气' or '氧气'.",
+    "The story length (511 chars) is valid, but the low coverage metrics require adding content without exceeding 750 chars."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

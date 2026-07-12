@@ -1,0 +1,126 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt10",
+    "label": "Concept",
+    "name": "沸点",
+    "properties": {
+      "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "importance": "掌握",
+      "unit": "℃",
+      "examples": [
+        "水的沸点为100℃（在101 kPa下）",
+        "大气稀薄处水的沸点降低"
+      ],
+      "retrieval_text": "沸点\nConcept\n物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。\n掌握\n℃\n水的沸点为100℃（在101 kPa下）\n大气稀薄处水的沸点降低"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14999",
+      "source": "chemistry_9a_rjb_cpt11",
+      "source_name": "大气压强",
+      "target": "chemistry_9a_rjb_cpt10",
+      "target_name": "沸点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:15075",
+      "source": "chemistry_9a_rjb_cpt21",
+      "source_name": "条件对物质性质的影响",
+      "target": "chemistry_9a_rjb_cpt10",
+      "target_name": "沸点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14995",
+      "source": "chemistry_9a_rjb_cpt10",
+      "source_name": "沸点",
+      "target": "chemistry_9a_rjb_cpt15",
+      "target_name": "氧气的熔点和沸点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14992",
+      "source": "chemistry_9a_rjb_cpt10",
+      "source_name": "沸点",
+      "target": "chemistry_9a_rjb_cpt12",
+      "target_name": "水的熔点和沸点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14993",
+      "source": "chemistry_9a_rjb_cpt10",
+      "source_name": "沸点",
+      "target": "chemistry_9a_rjb_cpt13",
+      "target_name": "铁的熔点和沸点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14994",
+      "source": "chemistry_9a_rjb_cpt10",
+      "source_name": "沸点",
+      "target": "chemistry_9a_rjb_cpt14",
+      "target_name": "铝的熔点和沸点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:18222",
+      "source": "chemistry_9a_rjb_cpt10",
+      "source_name": "沸点",
+      "target": "chemistry_9a_rjb_cpt11",
+      "target_name": "大气压强",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "沸点",
+      "definition": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14999] 大气压强 --prerequisites_for--> 沸点",
+      "[normalized:edge:15075] 条件对物质性质的影响 --prerequisites_for--> 沸点",
+      "[normalized:edge:14995] 沸点 --prerequisites_for--> 氧气的熔点和沸点",
+      "[normalized:edge:14992] 沸点 --prerequisites_for--> 水的熔点和沸点",
+      "[normalized:edge:14993] 沸点 --prerequisites_for--> 铁的熔点和沸点"
+    ],
+    "process_summary": [
+      "[normalized:edge:18222] 沸点 --relates_to--> 大气压强"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 7,
+    "candidate_edge_count": 7,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1894,
+    "summary_chars": 557,
+    "path_chars": 0,
+    "retrieval_context_chars": 2451
+  }
+}

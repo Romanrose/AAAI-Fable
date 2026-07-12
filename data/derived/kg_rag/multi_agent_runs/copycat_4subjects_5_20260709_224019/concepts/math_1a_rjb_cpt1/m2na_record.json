@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "数物体（数一数）",
+    "aliases": [],
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:16335",
+        "source_name": "数物体（数一数）",
+        "target_name": "一一对应比较法",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:19305",
+        "source_name": "数物体（数一数）",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation_semantic_role": "association"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "记录员站在规则棋局的入口，面前摆着一排封存箱。每个箱子上都贴着条件牌，牌面刻着不同的符号。调度员催促道：“赶紧登记吧，后面还有两关要过。”记录员摇摇头，没有急着打开箱子，而是先拿起第一块条件牌，仔细端详。他逐张核对牌上的符号，确认每一枚都准确无误，才在分段记录册上写下第一笔。\n\n调度员不耐烦地翻开另一本册子，想直接把两份记录合并。验收员拦住他：“别急，先把这两份记录放在一起比较。”记录员把入口核对的结果和调度员手里的转化记录摊开，发现它们共同约束着最后的判断——如果入口符号少了一个，转化环节就接不上。\n\n有人提议倒过来安排：先做转化，再补入口核对。调度员试了一次，结果封存箱怎么也合不上，通行牌也无法签发。记录员叹了口气：“只有先稳定入口条件核对，再推动第2道转化环节，前后两步才能在记录中互相承接。”\n\n于是，记录员重新回到起点，确认每一枚条件牌是否成立。随后，调度员按前一步留下的条件继续推进，将每个符号对应到转化册中。最后，验收员用结果验收记录核对整条安排：入口条件、转化过程、最终数量，一一对应，环环相扣。封存箱终于锁紧，通行牌顺利签发。众人这才明白，方向和顺序不能颠倒，只有按条件、过程和结果重新衔接，记录才能互相印证。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "记录员逐张核对牌上的符号，确认每一枚都准确无误",
+        "evidence": "入口条件核对",
+        "narrative_anchor": "入口条件核对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "调度员按前一步留下的条件继续推进，将每个符号对应到转化册中",
+        "evidence": "第2道转化环节",
+        "narrative_anchor": "第2道转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "验收员用结果验收记录核对整条安排：入口条件、转化过程、最终数量，一一对应",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "每个箱子上都贴着条件牌，牌面刻着不同的符号。",
+        "narrative_anchor": "每个箱子上都贴着条件牌，牌面刻着不同的符号。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "把两份相关记录放在一起比较，发现它们共同约束最后判断",
+        "evidence": "调度员催促道：“赶紧登记吧，后面还有两关要过。",
+        "narrative_anchor": "调度员催促道：“赶紧登记吧，后面还有两关要过。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

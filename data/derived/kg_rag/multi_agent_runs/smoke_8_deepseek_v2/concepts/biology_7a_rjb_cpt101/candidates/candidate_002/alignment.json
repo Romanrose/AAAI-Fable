@@ -1,0 +1,81 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "种子吸水膨胀、长出幼苗的完整过程",
+      "evidence": "见习生站在园圃值守所的种子箱前，手里的温度计显示二十度，喷水壶里的水刚刚浇过，通",
+      "narrative_anchor": "见习生站在园圃值守所的种子箱前，手里的温度计显示二十度，喷水壶里的水刚刚浇过，通",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "见习生检查温度、湿度、空气等外部环境条件",
+      "evidence": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+      "narrative_anchor": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "老园丁指出需要检查种子自身条件",
+      "evidence": "一切正常，可种子就是没动静。",
+      "narrative_anchor": "一切正常，可种子就是没动静。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "环境条件是种子萌发的先决条件之一",
+      "evidence": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+      "narrative_anchor": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "自身条件是种子萌发的另一个先决条件",
+      "evidence": "“你只看了外面，没看里面。",
+      "narrative_anchor": "“你只看了外面，没看里面。",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "种子萌发过程需要先满足环境条件",
+      "evidence": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+      "narrative_anchor": "他翻着手册，一条条核对：温度适宜、湿度足够、空气流通。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "环境条件之后需要检查自身条件",
+      "evidence": "一切正常，可种子就是没动静。",
+      "narrative_anchor": "一切正常，可种子就是没动静。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "自身条件属于上位结构环境条件",
+      "evidence": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+      "narrative_anchor": "老园丁走过来，看了一眼种子箱，摇了摇头。",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "环境条件属于上位结构自身条件",
+      "evidence": "“你只看了外面，没看里面。",
+      "narrative_anchor": "“你只看了外面，没看里面。",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ]
+}

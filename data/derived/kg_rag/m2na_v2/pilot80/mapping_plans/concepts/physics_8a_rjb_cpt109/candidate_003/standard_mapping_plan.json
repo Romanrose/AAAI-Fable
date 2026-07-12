@@ -1,0 +1,78 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt109",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠鉴别玉器真伪的故事",
+  "characters": [
+    "老工匠",
+    "学徒"
+  ],
+  "objects": [
+    "真玉（可被光屏承接的实像）",
+    "仿玉（不可被光屏承接的虚像）",
+    "光屏（鉴别工具）",
+    "透镜（观察工具）"
+  ],
+  "conflict": "学徒无法区分真玉与仿玉，因为仿玉在光屏上无投影，需从透镜方向观察才能看到影像。",
+  "event_chain": [
+    "老工匠展示真玉，其影像可被光屏承接（对应n1）。",
+    "老工匠展示仿玉，其影像不可被光屏承接，需从透镜方向观察（对应n2）。",
+    "学徒观察两种玉的影像，发现真玉与仿玉的影像在正倒与大小上不同（对应n3）。",
+    "学徒通过光屏和透镜的配合，掌握了鉴别方法。"
+  ],
+  "turning_point": "学徒意识到仿玉的影像必须通过透镜方向才能看到，而真玉的影像可直接在光屏上呈现。",
+  "resolution_state": "学徒学会使用光屏和透镜正确鉴别玉器真伪。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "真玉的影像可被光屏承接",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "仿玉的影像不可被光屏承接，需从透镜方向观察",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "真玉与仿玉的影像在正倒与大小上不同",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "真玉的影像可被光屏承接，而仿玉的影像不可被光屏承接，需从透镜方向观察，两者形成对比关系",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "真玉的影像可被光屏承接，此条件与影像的正倒与大小特征相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "仿玉的影像不可被光屏承接，需从透镜方向观察，此条件与影像的正倒与大小特征相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'实像'、'虚像'等术语。",
+    "注意'光屏'和'透镜'是鉴别工具，不是目标概念。",
+    "避免将'像的正倒与大小'直接作为故事中的概念，而是通过玉器影像的特征来体现。"
+  ],
+  "mapping_context_sha256": "1233aac61dc892ec5a357400522e7840ceb4b4d846ca11d1b72b697e71f30b37",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "6f42031d29adaf6ada12ae816386062edde2aaa9dc42d198158f1a93bbfa4262"
+  }
+}

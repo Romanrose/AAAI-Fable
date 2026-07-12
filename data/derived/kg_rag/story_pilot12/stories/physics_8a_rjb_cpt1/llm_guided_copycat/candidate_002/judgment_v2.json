@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (长度单位) is mapped to '公里' but the story does not explicitly establish '公里' as a unit of length (长度单位) in the physics sense; it is presented as a kingdom's standard distance unit, which weakens the is_a relation to n1 (长度). Edge e1 (n2 is_a n1) is only implicitly present and not clearly preserved as a hierarchical relation. In contrast, n1 (长度) is well embodied as '实际距离' and its role in enabling measurement (e3) is clearly shown."
+  },
+  "revision_instructions": [
+    "Explicitly state that '公里' is a unit of length (长度单位), not just a kingdom's standard, to strengthen the is_a relation.",
+    "Ensure edge e1 (n2 is_a n1) is directly stated, e.g., '公里是一种长度单位'.",
+    "Improve node_coverage (currently 0.75) by ensuring all four mechanism nodes are distinctly and correctly represented in the story.",
+    "Edge_coverage is 0.0; all three edges must be explicitly realized with correct direction. Currently e1 and e2 are only implicit.",
+    "Consider adding a sentence that directly links the measurement process (n3) to verifying the distance (n1), as required by e2."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

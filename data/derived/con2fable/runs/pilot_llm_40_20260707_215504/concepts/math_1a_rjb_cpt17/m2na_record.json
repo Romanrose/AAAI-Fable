@@ -1,0 +1,71 @@
+{
+  "id": "math_1a_rjb_cpt17",
+  "method": "con2fable",
+  "concept": {
+    "name": "球体",
+    "aliases": [],
+    "forbidden_terms": [
+      "球体"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "表面上所有点到中心的距离都相等的立体图形。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：按形状分类",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12137"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "李工站在穹顶钢架下，手里的激光测距仪闪着红光。他每天的工作，就是检查每一根钢梁的两端到穹顶中心点的距离是否完全一样。\n\n“王队长，你过来看看。”李工皱着眉头，指着北侧的一片区域，“这几根钢梁明显短了，装上去之后，穹顶表面凹进去一块，像被人打了一拳。”\n\n王队长爬上脚手架，用手摸了摸那片凹陷的钢梁表面，脸色也沉了下来。“这批钢梁是昨天到的，我按长短分了三堆，可能……分的时候没分仔细。”\n\n“不行。”李工摇头，“穹顶要完美闭合，每一根钢梁到中心的距离都必须相等。差一毫米，整个穹顶就合不拢。”\n\n王队长咬咬牙，叫来几个工人，把所有钢梁重新卸下来，一根一根地测量。李工用激光测距仪报数，王队长在钢梁上做标记。凡是两端到中心距离相等的，就归为一组；不相等的，单独放一边。\n\n“这根，合格。这根，不合格。这根，也合格……”王队长一边分类，一边指挥工人把等长的钢梁按顺序码好。\n\n整整干了一天，所有钢梁终于按长度严格分成了几组。王队长带着工人，把等长的钢梁一根一根装回原位，替换掉那些不合格的。\n\n李工再次用激光测距仪检查，每一根钢梁的两端到穹顶中心点的距离，都完全一致。穹顶表面光滑均匀，再也没有凹陷或凸起。\n\n最后一块钢梁安装到位，穹顶完美合龙。工人们欢呼起来，体育馆如期完工。\n\n王队长擦了把汗，对李工说：“多亏你发现得早。原来要穹顶完美闭合，每一根钢梁到中心的距离都必须相等，一点都不能差。”\n\n李工笑了笑：“是啊，一个整体要完美，每个部分到核心的距离都得一样，还得按这个规则分类排列，才能严丝合缝。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "穹顶钢梁两端到中心距离相等的条件",
+        "evidence": "每一根钢梁的两端到穹顶中心点的距离，都完全一致",
+        "narrative_anchor": "每一根钢梁的两端到穹顶中心点的距离，都完全一致"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "按长度分类钢梁",
+        "evidence": "凡是两端到中心距离相等的，就归为一组；不相等的，单独放一边",
+        "narrative_anchor": "凡是两端到中心距离相等的，就归为一组；不相等的，单独放一边"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "基于距离相等的条件进行形状分类",
+        "evidence": "凡是两端到中心距离相等的，就归为一组",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "凡是两端到中心距离相等的，就归为一组"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "math",
+    "story_language": "zh-CN",
+    "concept_type": "relation",
+    "generation_priority": "gold"
+  }
+}

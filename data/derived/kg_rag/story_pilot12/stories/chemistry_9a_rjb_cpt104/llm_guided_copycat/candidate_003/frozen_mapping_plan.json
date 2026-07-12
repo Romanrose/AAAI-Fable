@@ -1,0 +1,95 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "手工艺制作",
+  "domain_rationale": "手工艺制作中，具体的制作方法（如陶艺拉坯）是一般工艺方法的一个实例，且工艺方法依赖于材料（陶土）和基础技术（成型），同时有示范作品验证方法。",
+  "conflict": "不同手工艺（陶艺拉坯、木雕、刺绣）都是工艺方法的实例，且都依赖材料和基础工艺，示范作品验证了陶艺拉坯方法。",
+  "event_chain": [
+    "工匠采用陶艺拉坯方法",
+    "陶艺拉坯方法是工艺方法的一种",
+    "工艺方法需要先了解烧制技巧",
+    "工艺方法需要先了解陶土特性",
+    "工艺方法需要先了解成型原理",
+    "示范作品一号验证了陶艺拉坯方法的可行性"
+  ],
+  "turning_point": "工匠根据示范作品成功完成陶艺拉坯，验证了方法的有效性。",
+  "resolution_state": "示范作品的成功证明了陶艺拉坯方法，并为其他工艺提供参考。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "陶艺拉坯方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "工艺方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "烧制技巧",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "陶土",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "成型原理",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "木雕方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "刺绣方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "示范作品一号",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "陶艺拉坯方法是工艺方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "工艺方法需要先了解烧制技巧",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "陶土是工艺方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "成型原理是工艺方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "木雕方法是工艺方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "刺绣方法是工艺方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "示范作品一号验证了工艺方法的可行性",
+      "direction_preserved": true
+    }
+  ]
+}

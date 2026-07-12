@@ -1,0 +1,79 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt1",
+    "label": "Concept",
+    "name": "长度",
+    "properties": {
+      "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "importance": "重要",
+      "examples": [
+        "帽檐直径",
+        "课桌高度"
+      ],
+      "unit": "m",
+      "retrieval_text": "长度\nConcept\n描述物体空间延伸程度的物理量，需要通过测量工具获得。\n重要\nm\n帽檐直径\n课桌高度"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17188",
+      "source": "physics_8a_rjb_cpt1",
+      "source_name": "长度",
+      "target": "physics_8a_rjb_skl1",
+      "target_name": "使用刻度尺的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12429",
+      "source": "physics_8a_rjb_cpt2",
+      "source_name": "长度单位（米及其倍数、子倍数）",
+      "target": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:23027",
+      "source": "physics_8a_rjb_exp1",
+      "source_name": "用刻度尺测量长度",
+      "target": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "长度",
+      "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17188] 长度 --prerequisites_for--> 使用刻度尺的方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:12429] 长度单位（米及其倍数、子倍数） --is_a--> 长度",
+      "[normalized:edge:23027] 用刻度尺测量长度 --verifies--> 长度"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 765,
+    "summary_chars": 354,
+    "path_chars": 0,
+    "retrieval_context_chars": 1119
+  }
+}

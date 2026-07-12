@@ -1,0 +1,17 @@
+[
+  {
+    "codelet_name": "CheckLeakageCodelet",
+    "target_candidate_id": "candidate_001",
+    "structures_added": [],
+    "structures_removed": [],
+    "activations_delta": {
+      "failure.leakage": 0.0
+    },
+    "temperature_before": null,
+    "temperature_after": null,
+    "confidence": 1.0,
+    "notes": [
+      "no_leakage_detected"
+    ]
+  }
+]

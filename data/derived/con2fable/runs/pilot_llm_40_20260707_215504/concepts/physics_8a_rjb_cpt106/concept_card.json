@@ -1,0 +1,101 @@
+{
+  "concept_id": "physics_8a_rjb_cpt106",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "凸透镜成像规律",
+  "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "law",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt101",
+        "label": "Concept",
+        "name": "焦距",
+        "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt119",
+        "label": "Concept",
+        "name": "显微镜",
+        "definition": "由物镜和目镜两组凸透镜构成，用两次放大作用观察肉眼看不见的微小物体。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt120",
+        "label": "Concept",
+        "name": "望远镜",
+        "definition": "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt107",
+        "label": "Concept",
+        "name": "物距",
+        "definition": "物体到凸透镜的距离，用u表示。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt108",
+        "label": "Concept",
+        "name": "像距",
+        "definition": "像到凸透镜的距离，用v表示。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt121",
+        "label": "Concept",
+        "name": "物镜",
+        "definition": "显微镜或望远镜中靠近被观察物体的凸透镜，用于成实像。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt122",
+        "label": "Concept",
+        "name": "目镜",
+        "definition": "显微镜或望远镜中靠近眼睛的凸透镜，用来对实像进行放大。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp27",
+        "label": "Experiment",
+        "name": "探究凸透镜成像的规律",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s3",
+        "label": "Section",
+        "name": "第三节 凸透镜成像的规律",
+        "definition": ""
+      },
+      {
+        "id": "physics_8a_rjb_ch5_s5",
+        "label": "Section",
+        "name": "第五节 显微镜和望远镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "凸透镜成像规律"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

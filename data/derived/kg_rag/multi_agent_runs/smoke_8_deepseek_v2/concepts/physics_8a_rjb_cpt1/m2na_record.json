@@ -1,0 +1,130 @@
+{
+  "id": "physics_8a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "长度",
+    "aliases": [],
+    "forbidden_terms": [
+      "长度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n2",
+        "text": "需要先满足或理解：使用刻度尺的方法",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n3",
+        "text": "属于或连接到上位结构：长度单位（米及其倍数、子倍数）",
+        "weight": 0.85,
+        "source": "definition"
+      },
+      {
+        "id": "n4",
+        "text": "可以通过相关证据或实验验证：用刻度尺测量长度",
+        "weight": 0.85,
+        "source": "definition"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:17188"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:12429"
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "source_edge_id": "normalized:edge:23027"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "调度员小陈站在水渠边，拧动分水闸门的手轮。他凭经验把闸门提了提，感觉差不多了，就转身去忙别的事。可没过多久，下游的农户就打来电话，说水一会儿大一会儿小，没法灌田。\n\n巡检员老周走过来，指了指闸门侧面的金属条：“你看，这上面有刻度。闸门提多高，刻度就显示多少。光靠感觉不行，得看这个。”\n\n小陈凑近一看，金属条上刻着一道道横线，旁边还有数字。他试着把闸门提到某个刻度，然后去观察引水管里的水流。他找来一个空桶，接水计时，发现闸门高度不同，水流的速度和到达标记点的时间都不一样。\n\n“这太乱了，每个刻度对应的时间都不一样，怎么记？”小陈翻着记录本发愁。\n\n老周从工具房搬来一捆引水管，每根管子的接口处都标着一个数字。“这是标准口径的管子，10、20、30，都是统一做好的。你用哪根管子，就把闸门提到对应的刻度，这样每次放水都一样。”\n\n小陈将一根标着20的管子换上，把闸门提到20的刻度。水从管口流出，他再次接水计时，发现这次水流稳定极了，每次都是同样的时间灌满桶。他又换了30的管子，闸门提到30，水量果然成比例地增加。\n\n从此，小陈不再凭感觉拧闸门。他看一眼需要的刻度，选一根对应的标准管，放水就变得稳稳当当。下游农户再也没打过抱怨电话。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "闸门提升的高度（闸门开口的垂直距离）",
+        "evidence": "闸门提多高，刻度就显示多少",
+        "narrative_anchor": "闸门提多高，刻度就显示多少",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "调度员小陈需要先学会如何正确读取和记录水渠闸门上的刻度标尺",
+        "evidence": "他试着把闸门提到某个刻度",
+        "narrative_anchor": "他试着把闸门提到某个刻度",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "标准引水管的口径（直径）是固定的，属于统一的长度标准体系",
+        "evidence": "这是标准口径的管子，10、20、30，都是统一做好的",
+        "narrative_anchor": "这是标准口径的管子，10、20、30，都是统一做好的",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n4",
+        "narrative_element": "小陈通过实际放水实验验证了规律",
+        "evidence": "他再次接水计时，发现这次水流稳定极了",
+        "narrative_anchor": "他再次接水计时，发现这次水流稳定极了",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从理解刻度标尺到使用刻度标尺",
+        "evidence": "他试着把闸门提到某个刻度",
+        "narrative_anchor": "他试着把闸门提到某个刻度",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "从使用刻度标尺到建立统一单位",
+        "evidence": "这是标准口径的管子，10、20、30，都是统一做好的",
+        "narrative_anchor": "这是标准口径的管子，10、20、30，都是统一做好的",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "从建立统一单位到实验验证",
+        "evidence": "他再次接水计时，发现这次水流稳定极了",
+        "narrative_anchor": "他再次接水计时，发现这次水流稳定极了",
+        "narrative_source_concept_node_id": "n3",
+        "narrative_target_concept_node_id": "n4",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

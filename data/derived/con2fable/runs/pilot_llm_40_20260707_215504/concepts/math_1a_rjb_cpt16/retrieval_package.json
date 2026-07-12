@@ -1,0 +1,72 @@
+{
+  "seed": {
+    "id": "math_1a_rjb_cpt16",
+    "resolved_node_id": "math_1a_rjb_cpt16",
+    "name": "圆柱",
+    "definition": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+    "aliases": [
+      "圆柱体"
+    ]
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_12135",
+      "source_id": "math_1a_rjb_cpt16",
+      "source_name": "圆柱",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12136",
+      "source_id": "math_1a_rjb_cpt16",
+      "source_name": "圆柱",
+      "target_id": "math_bx2_rjb_cpt59",
+      "target_name": "旋转体",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_19307",
+      "source_id": "math_1a_rjb_cpt16",
+      "source_name": "圆柱",
+      "target_id": "math_6b_rjb_cpt15",
+      "target_name": "圆锥",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "由两个相等的圆形底面和一个曲面围成的立体图形，底面圆心之间的距离叫作高。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "圆锥"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "按形状分类",
+        "旋转体"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 3,
+    "selected_edge_count": 3,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

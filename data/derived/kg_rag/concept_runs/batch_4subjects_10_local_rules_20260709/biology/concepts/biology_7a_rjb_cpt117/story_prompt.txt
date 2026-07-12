@@ -1,0 +1,534 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "受精",
+    "fertilization"
+  ],
+  "concept_card": {
+    "concept_id": "biology_7a_rjb_cpt117",
+    "subject": "biology",
+    "story_language": "zh-CN",
+    "canonical_name": "受精",
+    "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+    "aliases": [
+      "fertilization"
+    ],
+    "examples": [],
+    "teaching_level": "middle_school",
+    "concept_type": "process",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt114",
+          "label": "Concept",
+          "name": "传粉",
+          "definition": "花粉从花药散放而落到雌蕊柱头上的过程。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt118",
+          "label": "Concept",
+          "name": "果实和种子的形成",
+          "definition": "受精后子房继续发育成果实（子房壁成果皮），子房内胚珠发育成种子，胚珠内受精卵发育成胚。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt71",
+          "label": "Concept",
+          "name": "胚胎工程",
+          "definition": "对生殖细胞、受精卵或早期胚胎细胞进行多种显微操作和处理，然后将获得的胚胎移植到雌性动物体内生产后代，以满足人类的各种需求的技术体系。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt75",
+          "label": "Concept",
+          "name": "合子（受精卵）",
+          "definition": "受精过程中形成的、含有两个染色体组的细胞，即受精卵；受精过程结束后其发育开始。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt76",
+          "label": "Concept",
+          "name": "精子获能",
+          "definition": "刚排出的精子不能立即与卵子受精，必须在雌性动物生殖道发生相应生理变化后才获得受精能力的生理现象。"
+        },
+        {
+          "id": "biology_xzxbx3_rjb_cpt77",
+          "label": "Concept",
+          "name": "卵子成熟到MⅡ期",
+          "definition": "卵子在输卵管内进一步成熟，到减数分裂第二次中期（MⅡ期）时，才具备与精子受精的能力。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        },
+        {
+          "id": "biology_xzxbx3_rjb_ch2_s3",
+          "label": "Section",
+          "name": "第三节 胚胎工程",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "受精",
+      "fertilization"
+    ],
+    "subject_constraints_zh": [
+      "避免目的论解释。",
+      "避免把个体努力写成进化原因。",
+      "保留生命系统的条件、过程和结果。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "high",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt117",
+    "concept_id": "biology_7a_rjb_cpt117",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt117",
+      "label": "Concept",
+      "name": "受精",
+      "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+      "aliases": [
+        "fertilization"
+      ],
+      "examples": [],
+      "retrieval_text": "受精\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "biology_7a_rjb_cpt117",
+        "label": "Concept",
+        "name": "受精",
+        "properties": {
+          "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+          "importance": "掌握",
+          "aliases": [
+            "fertilization"
+          ],
+          "retrieval_text": "受精\nConcept\n精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。\n掌握\nfertilization"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:14139",
+          "source": "biology_7a_rjb_cpt114",
+          "source_name": "传粉",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14964",
+          "source": "biology_xzxbx3_rjb_cpt77",
+          "source_name": "卵子成熟到MⅡ期",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14142",
+          "source": "biology_7a_rjb_cpt117",
+          "source_name": "受精",
+          "target": "biology_xzxbx3_rjb_cpt75",
+          "target_name": "合子（受精卵）",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14140",
+          "source": "biology_7a_rjb_cpt117",
+          "source_name": "受精",
+          "target": "biology_7a_rjb_cpt118",
+          "target_name": "果实和种子的形成",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14141",
+          "source": "biology_7a_rjb_cpt117",
+          "source_name": "受精",
+          "target": "biology_xzxbx3_rjb_cpt71",
+          "target_name": "胚胎工程",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:14962",
+          "source": "biology_xzxbx3_rjb_cpt76",
+          "source_name": "精子获能",
+          "target": "biology_7a_rjb_cpt117",
+          "target_name": "受精",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "受精",
+          "definition": "精子与卵子结合形成合子（即受精卵）的过程，包括受精前的准备阶段和受精阶段；哺乳动物自然受精通常在输卵管内完成。",
+          "formula": "",
+          "importance": "掌握"
+        },
+        "condition_summary": [
+          "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精",
+          "[normalized:edge:14964] 卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+          "[normalized:edge:14142] 受精 --prerequisites_for--> 合子（受精卵）",
+          "[normalized:edge:14140] 受精 --prerequisites_for--> 果实和种子的形成",
+          "[normalized:edge:14141] 受精 --prerequisites_for--> 胚胎工程"
+        ],
+        "process_summary": [],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 6,
+        "candidate_edge_count": 6,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 1629,
+        "summary_chars": 513,
+        "path_chars": 0,
+        "retrieval_context_chars": 2142
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "受精的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "传粉 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14139"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14964"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "受精 --prerequisites_for--> 合子（受精卵）",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14142"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "受精 --prerequisites_for--> 果实和种子的形成",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14140"
+          ]
+        },
+        {
+          "step_id": "s5",
+          "text": "受精 --prerequisites_for--> 胚胎工程",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14141"
+          ]
+        },
+        {
+          "step_id": "s6",
+          "text": "精子获能 --prerequisites_for--> 受精",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14962"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s4",
+          "target_step_id": "s5",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s5",
+          "target_step_id": "s6",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:14139",
+        "normalized:edge:14964",
+        "normalized:edge:14142",
+        "normalized:edge:14140",
+        "normalized:edge:14141",
+        "normalized:edge:14962"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "受精",
+        "biology_7a_rjb_cpt117",
+        "fertilization"
+      ],
+      "coverage_targets": {
+        "required_step_count": 6,
+        "required_dependency_count": 5,
+        "must_cover_edge_ids": [
+          "normalized:edge:14139",
+          "normalized:edge:14964",
+          "normalized:edge:14142",
+          "normalized:edge:14140",
+          "normalized:edge:14141",
+          "normalized:edge:14962"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "biology_7a_rjb_cpt117",
+      "concept_id": "biology_7a_rjb_cpt117",
+      "story_language": "zh-CN",
+      "source_domain": "屋顶育苗棚",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成",
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程",
+        "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成"
+        },
+        {
+          "mechanism_step_id": "s5",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程"
+        },
+        {
+          "mechanism_step_id": "s6",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "受精"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "传粉 --prerequisites_for--> 受精",
+            "卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+            "受精 --prerequisites_for--> 合子（受精卵）",
+            "受精 --prerequisites_for--> 果实和种子的形成",
+            "受精 --prerequisites_for--> 胚胎工程",
+            "精子获能 --prerequisites_for--> 受精"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "避免目的论解释。",
+            "避免把个体努力写成进化原因。",
+            "保留生命系统的条件、过程和结果。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "屋顶育苗棚",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程",
+      "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "受精"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "传粉 --prerequisites_for--> 受精",
+          "卵子成熟到MⅡ期 --prerequisites_for--> 受精",
+          "受精 --prerequisites_for--> 合子（受精卵）",
+          "受精 --prerequisites_for--> 果实和种子的形成",
+          "受精 --prerequisites_for--> 胚胎工程",
+          "精子获能 --prerequisites_for--> 受精"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：传粉 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：卵子成熟到MⅡ期 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 合子（这条隐藏规则卵）"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 果实和种子的形成"
+      },
+      {
+        "mechanism_step_id": "s5",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 胚胎工程"
+      },
+      {
+        "mechanism_step_id": "s6",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：精子获能 --prerequisites_for--> 这条隐藏规则"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位隐居深山的铸剑师与他的宝剑",
+  "characters": [
+    "铸剑师",
+    "宝剑"
+  ],
+  "objects": [
+    "铸剑炉",
+    "剑鞘",
+    "磨刀石"
+  ],
+  "conflict": "宝剑铸成后，铸剑师却将其封入剑鞘，即使有人前来求剑也不拔出，导致宝剑无法展现锋芒。",
+  "event_chain": [
+    "铸剑师精心锻造了一把宝剑，剑胚完整且锋利。",
+    "铸剑师将宝剑插入剑鞘，使其处于封藏状态。",
+    "宝剑封藏在剑鞘中，即使有人来求剑，铸剑师也不拔出。",
+    "宝剑不能展现锋芒，无法被使用。",
+    "宝剑封藏有助于它避开可能被滥用或损坏的时期（如战乱）。"
+  ],
+  "turning_point": "铸剑师意识到，只有拔出剑鞘，宝剑才能被使用，但为了长远保存，他选择继续封藏。",
+  "resolution_state": "宝剑继续封藏在剑鞘中，无法展现锋芒，但得以保存完好。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "宝剑封藏在剑鞘中，即使有人来求剑，铸剑师也不拔出",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "有助于宝剑避开可能被滥用或损坏的时期（如战乱）",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "宝剑处于封藏状态",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "剑胚完整且锋利",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "宝剑未处于封藏状态",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "宝剑不能展现锋芒",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "宝剑封藏在剑鞘中且不拔出，导致其能避开可能被滥用或损坏的时期",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "宝剑处于封藏状态是宝剑封藏在剑鞘中且不拔出的具体表现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "剑胚完整且锋利要求宝剑未处于封藏状态才能展现锋芒",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "宝剑未处于封藏状态使得宝剑能够展现锋芒",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "宝剑处于封藏状态导致宝剑不能展现锋芒",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保未使用任何种子休眠相关术语。",
+    "故事中“剑胚完整且锋利”对应n4，但n4在机制中是种子萌发的自身条件，此处映射为宝剑的内在品质，逻辑一致。",
+    "所有机制边方向均已保留。",
+    "未使用目标概念名称、别名或禁止术语。",
+    "整个故事围绕铸剑师与宝剑展开，为单一连贯源域。"
+  ],
+  "mapping_context_sha256": "a89f1a24978e8d95beb169bedc1b6dc26af79db25883da81516c71c646910017",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "8317200dc2985f8d0665aab4ed253989464ad68b973a4ce183eefd0c25404cb7"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "output_path": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\concept_selection\\machine_eval_concepts.jsonl",
+  "concept_count": 80,
+  "subjects": {
+    "biology": 20,
+    "chemistry": 20,
+    "math": 20,
+    "physics": 20
+  },
+  "priorities": {
+    "gold": 56,
+    "silver": 24
+  }
+}

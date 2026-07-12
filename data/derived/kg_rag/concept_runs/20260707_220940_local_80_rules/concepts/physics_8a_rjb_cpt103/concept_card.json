@@ -1,0 +1,73 @@
+{
+  "concept_id": "physics_8a_rjb_cpt103",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "照相机成像",
+  "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt95",
+        "label": "Concept",
+        "name": "凸透镜",
+        "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt102",
+        "label": "Concept",
+        "name": "实像",
+        "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "physics_8a_rjb_exe13",
+        "label": "Exercise",
+        "name": "照相机成像时，物体较远，照相机底片上形成的像是什么性质？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s2",
+        "label": "Section",
+        "name": "第二节 生活中的透镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。"
+  ],
+  "must_preserve_zh": [
+    "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "照相机成像"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

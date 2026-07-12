@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly describes the process of dough rising (n1) with vivid detail, and the external conditions (n2) are clearly stated through dialogue and plot events. However, the enabling relation (e1) between external conditions and the process is shown implicitly through the narrative (e.g., moving dough to warm place) rather than explicitly stated as a causal link. This implicit handling is pedagogically effective but slightly less direct than the explicit mention of internal condition (n3) and its enabling relation (e2). The mapping is observably better than a version that merely lists conditions without integrating them into a coherent story, as it demonstrates the consequences of missing conditions (cold, excess water) and thus reinforces the enabling relation."
+  },
+  "revision_instructions": [
+    "No major revisions needed. Optionally, make the enabling relation of external conditions slightly more explicit by adding a sentence like '正是温暖和湿度让面团慢慢鼓了起来' to strengthen the causal link."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

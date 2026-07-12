@@ -1,0 +1,93 @@
+{
+  "concept_id": "math_1a_rjb_cpt15",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "正方体",
+  "definition": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。",
+  "aliases": [
+    "立方体"
+  ],
+  "examples": [
+    "骰子",
+    "魔方的小方块",
+    "魔方",
+    "小正方体积木"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "math_5b_rjb_cpt17",
+        "label": "Concept",
+        "name": "正方体体积公式",
+        "definition": "正方体体积=棱长×棱长×棱长，写作V=a³。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt14",
+        "label": "Concept",
+        "name": "长方体",
+        "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。"
+      },
+      {
+        "id": "math_1a_rjb_cpt18",
+        "label": "Concept",
+        "name": "按形状分类",
+        "definition": "根据物体或图形的外形特征进行分类的方法。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe11",
+        "label": "Exercise",
+        "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch4",
+        "label": "Chapter",
+        "name": "认识图形（一）",
+        "definition": ""
+      },
+      {
+        "id": "math_5b_rjb_ch3",
+        "label": "Chapter",
+        "name": "长方体和正方体",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。"
+  ],
+  "must_preserve_zh": [
+    "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。",
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "正方体",
+    "立方体"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

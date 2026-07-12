@@ -1,0 +1,65 @@
+{
+  "concept_id": "biology_7a_rjb_cpt133",
+  "subject": "biology",
+  "story_language": "zh-CN",
+  "canonical_name": "叶绿素",
+  "definition": "叶绿体中含有的色素，使叶绿体呈绿色；绿色植物通过叶绿素捕获太阳光，为在叶绿体中合成有机物提供能量来源。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "definition",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt4",
+        "label": "Concept",
+        "name": "光合作用",
+        "definition": "能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt52",
+        "label": "Concept",
+        "name": "叶绿体",
+        "definition": "存在于植物叶片细胞中，色素能吸收光能，将光能转变成化学能，并把化学能储存在其制造的糖类等有机物中；是细胞中的能量转换器。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe22",
+        "label": "Exercise",
+        "name": "判断：叶绿素是绿叶进行光合作用的主要场所。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s4",
+        "label": "Section",
+        "name": "第四章 绿色植物是生物圈中有机物的制造者",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "叶绿素"
+  ],
+  "subject_constraints_zh": [
+    "避免目的论解释。",
+    "避免把个体努力写成进化原因。",
+    "保留生命系统的条件、过程和结果。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

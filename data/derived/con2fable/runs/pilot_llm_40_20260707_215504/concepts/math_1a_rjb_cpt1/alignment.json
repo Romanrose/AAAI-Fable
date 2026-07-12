@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "小明用手指着苹果，一个一个地点过去：“一个、两个、三个……”他数得很认真，最后高兴地说：“爷爷，这棵树上有十五个苹果！”",
+      "evidence": "一个一个地点过去",
+      "narrative_anchor": "一个一个地点过去"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "他先把第一棵树的苹果在脑子里排成一排，又把第二棵树的苹果也排成一排，然后让它们一个对一个地比。",
+      "evidence": "让它们一个对一个地比",
+      "narrative_anchor": "一个对一个地比"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "他发现第一棵树的苹果比第二棵多出两个。",
+      "evidence": "第一棵树的苹果比第二棵多出两个",
+      "narrative_anchor": "比第二棵多出两个"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "小明先数出第一棵树的苹果数量，然后使用一一对应比较法比较两棵树的苹果数量",
+      "evidence": "他先把第一棵树的苹果在脑子里排成一排，又把第二棵树的苹果也排成一排，然后让它们一个对一个地比。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "让它们一个对一个地比"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "通过一一对应比较，小明得出第一棵树苹果更多的结论",
+      "evidence": "他发现第一棵树的苹果比第二棵多出两个。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "第一棵树的苹果比第二棵多出两个"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "高锰酸钾受热分解反应",
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "concept_definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt105",
+    "高锰酸钾受热分解反应"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt105",
+      "label": "Concept",
+      "name": "高锰酸钾受热分解反应",
+      "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "高锰酸钾受热分解反应\n高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt109",
+          "label": "Concept",
+          "name": "分解反应",
+          "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp16",
+          "label": "Experiment",
+          "name": "实验2-5 加热高锰酸钾制取氧气",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt105",
+    "concept_id": "chemistry_9a_rjb_cpt105",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt105",
+      "label": "Concept",
+      "name": "高锰酸钾受热分解反应",
+      "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "高锰酸钾受热分解反应"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "紫色粉末受热后变成黑色粉末、绿色粉末和一种看不见的气体，且总质量不变，对应高锰酸钾受热分解生成二氧化锰、锰酸钾和氧气。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "紫色粉末在加热时颜色变深、产生气泡、出现黑色和绿色物质，以及带火星木条复燃，暗示分解反应和氧气生成。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事区分了物理混合（如颜色变化）和化学反应（物质种类改变），并通过师父的比喻强调守恒关系，未使用化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个古老的城邦里，有一位年轻的账房学徒，名叫小墨。他的师父是一位经验丰富的老账房先生，掌管着城邦里最大的钱庄。钱庄里有一间密室，里面存放着一种特殊的紫色粉末，据说是用来检验银两真伪的秘药。\n\n一天，师父交给小墨一个任务：“你把这紫色粉末放在炉火上加热，仔细观察它的变化，然后告诉我你看到了什么。”小墨好奇地取出一小撮紫色粉末，粉末在阳光下闪着暗紫色的光泽，像碾碎的紫水晶。他小心翼翼地将粉末倒入一个陶碗中，放在炭炉上。\n\n随着温度升高，紫色粉末开始发生变化。小墨看到粉末的颜色逐渐变深，从暗紫色变成了近乎黑色。他心想：“这粉末一定是被烧焦了。”但很快，他注意到陶碗里开始冒出细微的气泡，就像水沸腾时一样。更神奇的是，碗壁上出现了一些黑色的斑点，而粉末中夹杂着一些绿色的颗粒。小墨惊讶地发现，原本单一的紫色粉末，现在变成了黑色和绿色的混合物。\n\n他急忙跑去告诉师父：“师父，紫色粉末被烧坏了，变成了黑色和绿色的东西，还冒出了气泡！”师父微微一笑，说：“你只看到了表面。那些气泡不是水汽，而是一种看不见的气体，它能助燃。你把一根带火星的木条伸进碗里试试。”小墨照做，木条果然重新燃烧起来，火焰明亮。\n\n师父解释道：“紫色粉末并没有被烧坏，而是在热的作用下发生了转变。它原本是一种物质，受热后变成了三种不同的东西：一种黑色粉末、一种绿色粉末，还有一种看不见却能助燃的气体。这就像账房里的账目，看似混乱，实则遵循着不变的规则——无论怎么变化，总账的数目不会少，只是分成了不同的科目。”\n\n小墨恍然大悟。他明白了，有些变化不是简单的混合或烧毁，而是物质本身发生了根本的转变，从一种变成了多种，而且总质量不变。从此，他学会了用更深的眼光观察事物，不再被表面的颜色所迷惑。",
+  "rule_findings": {
+    "story_token_count": 648,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,32 @@
+You are a strict reviewer for concept-grounded story generation.
+Evaluate whether the draft story preserves the intended concept structure.
+Focus on fidelity, coverage, coherence, and whether the story actually realizes the planned mapping.
+Reject stories that replace the target mechanism with a vague proxy such as generic growth or improvement.
+Check whether experiment and exercise are clearly distinct when both roles are expected.
+Return valid JSON only. Do not use markdown. Do not add prose outside the JSON object.
+
+Target Concept: 苔藓植物是监测空气污染的指示植物
+Definition: 许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。
+Expected Alignment Roles:
+- target concept
+- prerequisites
+- related concepts
+- outcomes
+- experiments
+- exercises
+
+Draft Story:
+In a garden workshop, a careful caretaker watched over a plot that depends on the right conditions. Before expecting anything from it, the caretaker prepared what had to be ready first: the right hidden conditions. Only after that did the caretaker trust tools and routines that reveal whether growth is real to help the work begin.
+
+As days passed, the central process behind 苔藓植物是监测空气污染的指示植物 started to show itself through action rather than talk. The plot uses those conditions to produce visible growth. Nearby influences such as other surrounding processes either supported the change or revealed what could not replace it.
+
+To settle doubt, the caretaker relied on a simple visible test. The result made the lesson plain: the right conditions produce the right result. Later, even follow-up checks like small repeated trials pointed back to the same truth.
+
+Return a JSON object with exactly these fields:
+{
+  "pass_fail": true,
+  "missing_roles": ["..."],
+  "unsupported_story_parts": ["..."],
+  "coherence_issues": ["..."],
+  "suggested_revision": ["..."]
+}

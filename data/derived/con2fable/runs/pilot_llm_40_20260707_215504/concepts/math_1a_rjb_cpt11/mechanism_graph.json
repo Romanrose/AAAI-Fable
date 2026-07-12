@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {
+      "id": "m1",
+      "text": "表示两个数量合并在一起。",
+      "weight": 1.0,
+      "source": "concept_card.definition"
+    },
+    {
+      "id": "m2",
+      "text": "需要考虑前置条件或输入：数字1到5的认识",
+      "weight": 0.9,
+      "source": "graph.prerequisite"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "m1",
+      "target": "m2",
+      "relation": "supports_next_step",
+      "weight": 1.0,
+      "source_edge_id": "edge_16375"
+    }
+  ]
+}

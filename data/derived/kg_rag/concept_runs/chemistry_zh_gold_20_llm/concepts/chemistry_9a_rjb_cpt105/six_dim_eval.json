@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "target_concept": "高锰酸钾受热分解反应",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整准确地映射了高锰酸钾受热分解生成二氧化锰、锰酸钾和氧气的核心机制，包括颜色变化、气泡产生、带火星木条复燃等关键现象，未出现任何科学错误。",
+    "implicitness": "目标概念名称和禁止术语均未在故事正文中出现，所有化学知识通过紫色粉末、黑色粉末、绿色粉末、助燃气体的比喻隐含表达，完全符合隐含性要求。",
+    "mapping_clarity": "紫色粉末→高锰酸钾、黑色粉末→二氧化锰、绿色粉末→锰酸钾、助燃气体→氧气的映射清晰且一致，故事事件链与概念机制一一对应，读者能轻松理解。",
+    "readability": "故事语言流畅自然，情节连贯，比喻生动（如账目比喻守恒），无生硬术语，适合目标年龄段阅读。",
+    "pedagogical_value": "通过观察、实验和师父的讲解，完整呈现了分解反应和守恒关系，并引导读者从表面现象深入理解本质，教学价值高。",
+    "novelty": "账房和紫色粉末的设定有一定新意，但整体叙事结构（学徒观察、师父揭示）较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加更多关于反应条件（如持续加热）的细节，以强化教学深度。",
+    "可考虑在结尾加入一个类似情境的思考题，进一步提升教学价值。"
+  ],
+  "rule_findings": {
+    "story_token_count": 648,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完整准确地映射了高锰酸钾受热分解生成二氧化锰、锰酸钾和氧气的核心机制，包括颜色变化、气泡产生、带火星木条复燃等关键现象，未出现任何科学错误。",
+      "implicitness": "目标概念名称和禁止术语均未在故事正文中出现，所有化学知识通过紫色粉末、黑色粉末、绿色粉末、助燃气体的比喻隐含表达，完全符合隐含性要求。",
+      "mapping_clarity": "紫色粉末→高锰酸钾、黑色粉末→二氧化锰、绿色粉末→锰酸钾、助燃气体→氧气的映射清晰且一致，故事事件链与概念机制一一对应，读者能轻松理解。",
+      "readability": "故事语言流畅自然，情节连贯，比喻生动（如账目比喻守恒），无生硬术语，适合目标年龄段阅读。",
+      "pedagogical_value": "通过观察、实验和师父的讲解，完整呈现了分解反应和守恒关系，并引导读者从表面现象深入理解本质，教学价值高。",
+      "novelty": "账房和紫色粉末的设定有一定新意，但整体叙事结构（学徒观察、师父揭示）较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加更多关于反应条件（如持续加热）的细节，以强化教学深度。",
+      "可考虑在结尾加入一个类似情境的思考题，进一步提升教学价值。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

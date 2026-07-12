@@ -1,0 +1,2 @@
+{"concept_id": "biology_7a_rjb_cpt1", "concept_name": "生物", "status": "success", "mode": "local", "output_dir": "data\\derived\\kg_rag\\batch_runs\\audit_local_2\\concepts\\biology_7a_rjb_cpt1", "local_pass_fail": false, "review_pass_fail": null, "draft_length": 138}
+{"concept_id": "biology_7a_rjb_cpt10", "concept_name": "遗传和变异", "status": "success", "mode": "local", "output_dir": "data\\derived\\kg_rag\\batch_runs\\audit_local_2\\concepts\\biology_7a_rjb_cpt10", "local_pass_fail": false, "review_pass_fail": null, "draft_length": 139}

@@ -1,0 +1,91 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "水稻种植方法",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "种植方法",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "土壤",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "小麦种植方法",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "玉米种植方法",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "实验田一号",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "水稻种植方法是种植方法的一种",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "必须先了解土壤条件",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "小麦种植方法是种植方法的一种",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "玉米种植方法也都是种植方法的一种",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "实验田一号验证了种植方法的可行性",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "对齐完成。节点n3（收获方法）和n5（生长过程）在故事中无直接对应证据，故story_evidence为空且置信度为0。边e2（种植方法需要先了解收获方法）和e4（生长过程是先了解种植方法的前提）在故事中未明确表述，故story_evidence为空且置信度为0。其余节点和边均找到精确的连续子串证据，方向均正确。"
+}

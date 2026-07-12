@@ -1,0 +1,227 @@
+{
+  "query": "math_1a_rjb_cpt14",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt14",
+    "label": "Concept",
+    "name": "长方体",
+    "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+    "aliases": [],
+    "examples": [
+      "积木中的长方体块",
+      "砖块",
+      "教室里的粉笔盒",
+      "纸巾盒",
+      "长方体纸箱",
+      "粉笔盒、文具盒、牙膏盒等包装盒"
+    ],
+    "retrieval_text": "长方体\n由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_5b_rjb_cpt14",
+        "label": "Concept",
+        "name": "表面积",
+        "definition": "长方体或正方体6个面的面积之和叫做它的表面积。"
+      },
+      {
+        "id": "math_5b_rjb_cpt16",
+        "label": "Concept",
+        "name": "长方体体积公式",
+        "definition": "长方体体积=长×宽×高，也可写为V=a·b·h。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt18",
+        "label": "Concept",
+        "name": "按形状分类",
+        "definition": "根据物体或图形的外形特征进行分类的方法。"
+      },
+      {
+        "id": "math_1a_rjb_cpt15",
+        "label": "Concept",
+        "name": "正方体",
+        "definition": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe11",
+        "label": "Exercise",
+        "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+        "definition": ""
+      },
+      {
+        "id": "math_5b_rjb_exe7",
+        "label": "Exercise",
+        "name": "一个长方体纸箱长40 cm、宽30 cm、高20 cm，在所有棱上粘一圈胶带，至少需要多长的胶带？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch4",
+        "label": "Chapter",
+        "name": "认识图形（一）",
+        "definition": ""
+      },
+      {
+        "id": "math_5b_rjb_ch3",
+        "label": "Chapter",
+        "name": "长方体和正方体",
+        "definition": ""
+      },
+      {
+        "id": "math_7a_rjb_ch4_s4",
+        "label": "Section",
+        "name": "第四节 课题学习 设计制作长方体形状的包装纸盒",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:16337] 长方体 --prerequisites_for--> 表面积\n- [normalized:edge:16338] 长方体 --prerequisites_for--> 长方体体积公式\n- [normalized:edge:16336] 长方体 --prerequisites_for--> 拼搭立体图形\n- [normalized:edge:12133] 正方体 --is_a--> 长方体\n- [normalized:edge:12132] 长方体 --is_a--> 按形状分类\n- [normalized:edge:19306] 长方体 --relates_to--> 正方体"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '长方体', 'definition': '由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:16337] 长方体 --prerequisites_for--> 表面积', '[normalized:edge:16338] 长方体 --prerequisites_for--> 长方体体积公式', '[normalized:edge:16336] 长方体 --prerequisites_for--> 拼搭立体图形'], 'process_summary': ['[normalized:edge:12133] 正方体 --is_a--> 长方体', '[normalized:edge:12132] 长方体 --is_a--> 按形状分类', '[normalized:edge:19306] 长方体 --relates_to--> 正方体'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt14",
+      "label": "Concept",
+      "name": "长方体",
+      "properties": {
+        "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+        "importance": "掌握",
+        "examples": [
+          "积木中的长方体块",
+          "砖块",
+          "教室里的粉笔盒",
+          "纸巾盒",
+          "长方体纸箱",
+          "粉笔盒、文具盒、牙膏盒等包装盒"
+        ],
+        "pages": "第3章·第1节",
+        "retrieval_text": "长方体\nConcept\n由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。\n掌握\n第3章·第1节\n积木中的长方体块\n砖块\n教室里的粉笔盒\n纸巾盒\n长方体纸箱\n粉笔盒、文具盒、牙膏盒等包装盒"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16337",
+        "source": "math_1a_rjb_cpt14",
+        "source_name": "长方体",
+        "target": "math_5b_rjb_cpt14",
+        "target_name": "表面积",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16338",
+        "source": "math_1a_rjb_cpt14",
+        "source_name": "长方体",
+        "target": "math_5b_rjb_cpt16",
+        "target_name": "长方体体积公式",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16336",
+        "source": "math_1a_rjb_cpt14",
+        "source_name": "长方体",
+        "target": "math_1a_rjb_skl9",
+        "target_name": "拼搭立体图形",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:12133",
+        "source": "math_1a_rjb_cpt15",
+        "source_name": "正方体",
+        "target": "math_1a_rjb_cpt14",
+        "target_name": "长方体",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:12132",
+        "source": "math_1a_rjb_cpt14",
+        "source_name": "长方体",
+        "target": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      },
+      {
+        "source_edge_id": "normalized:edge:19306",
+        "source": "math_1a_rjb_cpt14",
+        "source_name": "长方体",
+        "target": "math_1a_rjb_cpt15",
+        "target_name": "正方体",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "长方体",
+        "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:16337] 长方体 --prerequisites_for--> 表面积",
+        "[normalized:edge:16338] 长方体 --prerequisites_for--> 长方体体积公式",
+        "[normalized:edge:16336] 长方体 --prerequisites_for--> 拼搭立体图形"
+      ],
+      "process_summary": [
+        "[normalized:edge:12133] 正方体 --is_a--> 长方体",
+        "[normalized:edge:12132] 长方体 --is_a--> 按形状分类",
+        "[normalized:edge:19306] 长方体 --relates_to--> 正方体"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 6,
+      "candidate_edge_count": 6,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 1498,
+      "summary_chars": 546,
+      "path_chars": 0,
+      "retrieval_context_chars": 2044
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 6,
+    "candidate_edge_count": 6,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1498,
+    "summary_chars": 546,
+    "path_chars": 0,
+    "retrieval_context_chars": 2044
+  }
+}

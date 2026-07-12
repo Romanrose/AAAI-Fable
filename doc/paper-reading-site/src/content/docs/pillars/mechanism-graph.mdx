@@ -1,0 +1,64 @@
+---
+title: 02 · 机制图
+description: 把检索证据压缩为故事必须保留的条件、过程、作用、变化与结果。
+sidebar:
+  order: 2
+---
+
+把检索证据压缩为故事必须保留的条件、过程、作用、变化与结果。
+
+> 核心问题：**目标知识背后有哪些不可丢失、不可倒置的机制结构？**
+
+## 在完整流程中的位置
+
+固定寓言不能改变的深层知识结构。
+
+**上游输入**：RetrievalPackage、目标概念和机制抽取约束。  
+**当前实现**：M2NA 将证据组织为 MechanismRecord/MechanismGraph：节点表示必须保留的机制成分，有向边表示条件、作用、变化、因果或结果。结构经过严格 schema 校验和人工审核；桥接上下文不能冒充机制边。节点与边 ID 在进入映射后保持稳定，为候选映射和反向对齐提供共同坐标系。  
+**阶段产物**：已验证并经人工批准的 MechanismGraph，以及证据引用和审核历史。
+
+## 进入下一阶段的门槛
+
+节点和边均有证据支持；边方向正确；must_preserve 结构明确；不存在无来源机制或未决审核。
+
+## 失败如何回退
+
+证据不支持时回到图检索；结构抽取错误时重新建图；未批准的机制图不得进入候选映射。
+
+## 主要参考文献（4）
+
+这些论文直接定义或改变本阶段的方法、数据结构、验证门槛或输出。
+
+| 论文 | 年份/来源 | 摘要初读：为什么相关 | 在本项目中的适配方式 |
+|---|---|---|---|
+| [Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences](/papers/moral-stories/) | 2021 · EMNLP | 构建道德故事数据集，强调规范、意图、行动和结果。 | 可借鉴故事结构字段，为教育寓言加入情境、冲突、行动、结论。 |
+| [Enhanced Story Comprehension for Large Language Models through Dynamic Document-Based Knowledge Graphs](/papers/enhanced-story-comprehension/) | 2022 · AAAI | 摘要用从故事动态抽取的知识图增强长篇故事问答和补全，并提出长文问答任务与更稳定的故事补全评价。 | 借鉴故事侧动态图作为反向对齐中间表示，减少只靠整体文本打分的不可解释性。 |
+| [Guiding Neural Story Generation with Reader Models](/papers/story-generation-reader-models/) | 2021 · arXiv | 摘要提出 StoRM：用知识图表示读者对故事世界的概念、实体和关系信念，指导故事保持连贯并达到目标世界状态。 | 借鉴读者状态作为叙事规划约束和教育理解检查的中间变量。 |
+| [Generating Stories with Commonsense Knowledge Graphs and Axioms](/papers/commonsense-kg-axioms/) | 2021 · CSKB | 摘要把常识公理与常识知识图结合，生成带常识解释的大规模故事，并用众包评价合理性与趣味性。 | 借鉴“机制证据层/常识补全层”分层，避免常识替代课程事实。 |
+
+## 跨阶段参考文献（14）
+
+这些论文的主要位置在其他阶段，但其方法或评价也为本阶段提供约束。
+
+| 论文 | 主要阶段 | 对本阶段的可借鉴点 |
+|---|---|---|
+| [Plan-and-Write: Towards Better Automatic Storytelling](/papers/plan-and-write/) | 寓言叙事 | 可把 KG 路径或概念解释步骤转成 storyline，再让 LLM 扩写。 |
+| [Concept Extraction and Prerequisite Relation Learning from Educational Data](/papers/concept-extraction-prerequisite/) | 图检索与证据 | 可用于从教材中自动抽取知识点和先修链，形成寓言生成输入。 |
+| [MOOCCube: A Large-scale Data Repository for NLP Applications in MOOCs](/papers/mooccube/) | 图检索与证据 | 可借鉴数据组织方式，为小学知识点、教材段落和生成寓言建立统一索引。 |
+| [Automatic Story Generation: A Survey of Approaches](/papers/automatic-story-generation-survey/) | 寓言叙事 | 可用于 related work 中梳理从 general story generation 到 educational fable generation 的演化。 |
+| [A Corpus for Understanding and Generating Moral Stories](/papers/storal/) | 反向结构对齐与教育质量评测 | 可借鉴语料标注方式，为每个寓言标注情境、行为、结果和知识点。 |
+| [Educational Material to Knowledge Graph Conversion](/papers/educational-material-to-kg/) | 图检索与证据 | 可用于把教材章节转成 Concept-to-Fable 的输入图。 |
+| [Guiding Generative Storytelling with Knowledge Graphs](/papers/kg-guided-storytelling/) | 寓言叙事 | 可借鉴 KG-guided generation，把课程 KG 节点和边作为故事生成约束。 |
+| [K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs](/papers/k12-kgraph/) | 图检索与证据 | 可直接作为小学全学科知识图谱构建和任务输入设计的参照。 |
+| [Dimensions of Analogy in Narratives](/papers/narrative-analogy-dimensions/) | Copycat 式候选映射竞争 | 借鉴多维标注表检查角色、事件、因果和高阶关系是否共同保持。 |
+| [Harnessing Large Language Models for Knowledge Graph Question Answering via Adaptive Multi-Aspect Retrieval-Augmentation](/papers/amar-kgqa/) | 图检索与证据 | 借鉴多视角检索与软门控，为 RetrievalPackage 增加证据相关性和噪声抑制。 |
+| [The Copycat Project: Mental Fluidity, Part I](/papers/copycat-mental-fluidity-part1/) | Copycat 式候选映射竞争 | 借鉴“角色比对象字面身份更重要”和情境诱导概念滑动的原则。 |
+| [Conceptual Slippage and Analogy-Making: A Report on the Copycat Project](/papers/conceptual-slippage-copycat/) | Copycat 式候选映射竞争 | 借鉴受限概念滑动：表层角色可变，必须保留的机制身份和方向不可变。 |
+| [Long Story Generation via Knowledge Graph and Literary Theory](/papers/long-story-kg-literary-theory/) | 寓言叙事 | 借鉴受机制约束的障碍/转折生成与独立修订记录。 |
+| [CreAgentive: An Agent Workflow Driven Multi-Category Creative Generation Engine](/papers/creagentive/) | 寓言叙事 | 借鉴结构原型与表层实现解耦，但用 Mapping Plan 取代开放式故事原型。 |
+
+## 与相邻阶段的接口
+
+- 本阶段只能消费上游已经通过门槛的产物。
+- 本阶段产物必须保留稳定标识和审计信息，供下游与反向评测回查。
+- 如果下游发现的问题属于本阶段责任，应按“失败如何回退”返回处理，而不是在最终文本中掩盖。

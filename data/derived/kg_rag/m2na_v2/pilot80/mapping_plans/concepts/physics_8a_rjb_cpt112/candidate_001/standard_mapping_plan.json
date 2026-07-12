@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个园丁调节花棚的遮阳帘以适应不同季节的阳光",
+  "characters": [
+    "园丁",
+    "花棚"
+  ],
+  "objects": [
+    "遮阳帘",
+    "阳光",
+    "花朵",
+    "卷轴"
+  ],
+  "conflict": "花朵需要不同强度的阳光才能健康生长，但阳光的强弱随季节变化，园丁需要调整遮阳帘来满足花朵的需求。",
+  "event_chain": [
+    "园丁观察到阳光通过花棚的透明顶棚照射到花朵上，形成适宜的光照环境。",
+    "园丁通过卷轴调节遮阳帘的展开程度，改变进入花棚的光线量。",
+    "当遮阳帘完全收起时，花朵能接受最强烈的阳光，对应夏季正午的远点。",
+    "当遮阳帘完全展开时，花朵只能接受最微弱的光线，对应冬季清晨的近点。"
+  ],
+  "turning_point": "园丁发现花朵在极端光照下生长不良，意识到需要根据季节变化精细调节遮阳帘。",
+  "resolution_state": "园丁掌握了调节技巧，能够根据季节和天气变化，灵活调整遮阳帘，使花朵始终处于最佳光照中。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "园丁通过卷轴调节遮阳帘的展开程度",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "阳光通过花棚透明顶棚照射到花朵上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "遮阳帘完全收起时花朵接受最强烈阳光的状态",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "遮阳帘完全展开时花朵接受最微弱光线的状态",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "阳光照射花朵的过程与园丁调节遮阳帘的过程相关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "园丁调节遮阳帘使得花朵能接受最强烈阳光的状态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "园丁调节遮阳帘使得花朵能接受最微弱光线的状态",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'眼睛调节'等禁止术语。",
+    "遮阳帘的调节过程需明确体现为园丁主动改变遮阳帘形状（展开程度），而非被动反应。",
+    "远点和近点映射为两种极端状态，需在故事中清晰区分。"
+  ],
+  "mapping_context_sha256": "b90f78bed0fce7c118a015c4f5541069afb28344e8c547e7f3f2760f1db8df39",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5ed7c17bdb7deb1be1c57b2f1891f60c7d1aca7087b514f7822b6b1ffcdbe429"
+  }
+}

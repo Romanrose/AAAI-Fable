@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story explicitly mentions '铜镜模具' (n1) and its role in enabling the casting process (e1), and clearly shows the condition '模具远离熔铜炉' (n4) leading to the outcome '缩小、倒立的铜镜图案' (n5). However, the relation e2 (浇铸过程 is_a 实像) is not explicitly stated in the story; the story only implies that the casting process produces a mirror (实像), but does not assert that the process itself is a type of real image. This weakens the mapping for e2 compared to other edges that are directly narrated."
+  },
+  "revision_instructions": [
+    "Explicitly state that the casting process (浇铸铜镜的过程) is a type of real image formation (实像), e.g., by having the old coppersmith explain that the mirror formed is a real image, not just a product.",
+    "Ensure that the edge e2 (n3 is_a n2) is directly mentioned in the story, not just inferred from the product."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

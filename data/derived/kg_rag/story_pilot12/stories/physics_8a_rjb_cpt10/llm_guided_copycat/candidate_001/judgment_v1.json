@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story strongly embodies the relativity of motion/state (n3) through the explicit example of the same bag of rice yielding different weights on different scales, which directly mirrors the mechanism's core idea. Node n2 (mechanical motion) is only weakly represented by the initial tilt of the scale beam, lacking a clear depiction of continuous position change over time. Edge e1 (relates_to from mechanical motion to reference object) is the weakest because the story does not explicitly show how the tilt (motion) is quantified or related to the star marks (reference) as a measurement process; the relation is implied but not directly stated."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping for node n2 (mechanical motion) by adding a sentence that describes the scale beam's tilt as a continuous change in position relative to the star marks, e.g., 'As the weight was added, the beam moved downward, passing several star marks before stopping.'",
+    "Clarify edge e1 by explicitly stating that the degree of tilt is read against the star marks, e.g., 'The farther the beam tilted, the more star marks it passed, showing how motion is measured by the reference.'",
+    "Consider adding a brief note about the optionality of reference objects (conflict in mapping plan) to avoid oversimplification, e.g., 'Just as different star marks give different weights, different reference objects can change whether something is seen as moving or still.'"
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位老农用特制石磨将粗盐反复研磨成细盐的故事",
+  "characters": [
+    "老农",
+    "粗盐",
+    "细盐",
+    "普通石磨",
+    "特制石磨"
+  ],
+  "objects": [
+    "粗盐",
+    "细盐",
+    "普通石磨",
+    "特制石磨"
+  ],
+  "conflict": "老农发现普通石磨研磨粗盐时效率低且盐粒大小不均，无法得到均匀的细盐。",
+  "event_chain": [
+    "老农尝试用普通石磨研磨粗盐，但研磨效果不佳，盐粒大小不一。",
+    "老农听说有一种特制石磨能高效研磨粗盐，且研磨后盐粒均匀。",
+    "老农借来特制石磨，将粗盐放入其中研磨。",
+    "特制石磨快速将粗盐研磨成均匀的细盐。",
+    "老农检查特制石磨，发现其质量和结构在研磨前后没有变化。",
+    "老农再次用特制石磨研磨另一批粗盐，依然得到均匀细盐。",
+    "老农得出结论：特制石磨是一种高效的研磨工具，能改变粗盐的粒度，且自身不变。"
+  ],
+  "turning_point": "老农发现特制石磨在研磨前后质量和结构不变，却能高效改变粗盐的粒度。",
+  "resolution_state": "老农认识到特制石磨是一种特殊的研磨工具，能显著改变粗盐的粒度，而自身在研磨前后质量和结构基本不变。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "特制石磨研磨粗盐的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "特制石磨",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老农用特制石磨研磨粗盐得到细盐的实验",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农用特制石磨研磨另一批粗盐得到细盐的实验",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "特制石磨在研磨前后质量和结构不变，却能显著改变粗盐的粒度",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "特制石磨研磨粗盐的过程是特制石磨的一种应用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农用特制石磨研磨粗盐得到细盐的实验验证了特制石磨研磨粗盐的过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老农用特制石磨研磨另一批粗盐得到细盐的实验验证了特制石磨研磨粗盐的过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "特制石磨在研磨前后质量和结构不变，却能显著改变粗盐的粒度这一条件使得特制石磨研磨粗盐的过程成立",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'催化'、'二氧化锰'、'催化剂'等化学术语。",
+    "确保特制石磨在研磨前后质量和结构不变，避免暗示石磨被消耗或改变。",
+    "确保两个实验（证据）都明确指向特制石磨研磨粗盐的过程，且过程本身是核心。",
+    "避免将'普通石磨'作为催化剂类比，因为普通石磨不具备催化特性。"
+  ],
+  "mapping_context_sha256": "b91c571ec2dc444c003cba416841f6873c0c58c656f99e0e0738a6cb696641a9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "1947de60ead8acfcc80a974902453d820cc1bf225b5017a27d770458c78f00ae"
+  }
+}

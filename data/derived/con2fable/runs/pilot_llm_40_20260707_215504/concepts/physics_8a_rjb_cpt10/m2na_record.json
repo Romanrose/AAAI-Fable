@@ -1,0 +1,100 @@
+{
+  "id": "physics_8a_rjb_cpt10",
+  "method": "con2fable",
+  "concept": {
+    "name": "参照物",
+    "aliases": [],
+    "forbidden_terms": [
+      "参照物"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "判断物体运动或静止时所选取的标准物体。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：运动与静止的相对性",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：机械运动",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17189"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19745"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "工地上机器轰鸣，塔吊的长臂在空中缓缓转动。新来的塔吊操作员小李坐在驾驶室里，额头冒汗——他刚刚又把吊臂撞上了旁边的钢筋堆。\n\n“停！停！”工头老张跑过来，仰头喊道，“小李，你怎么回事？吊臂明明在往左偏，你怎么还往右打？”\n\n小李从驾驶室探出头，满脸委屈：“张工，我真没觉得它在动啊！我感觉自己明明在往右，可它偏偏往左跑……”\n\n老张叹了口气。他明白问题出在哪里——小李在几十米高的驾驶室里，四周都是移动的物体，没有固定的东西可以参照，自然分不清方向。\n\n当天下午，老张在工地正中央竖起了一根刷着红漆的钢标杆，笔直地插在水泥基座上。他把所有操作员和地面指挥叫到跟前，指着那根标杆说：“从今天起，这根杆子就是咱们工地的‘定海神针’。所有移动，都以它为基准来判断。”\n\n小李半信半疑地回到驾驶室。他试着转动吊臂，眼睛盯着那根红标杆——果然，吊臂的顶端正缓缓远离标杆，向左移动。他再往右打方向，吊臂又慢慢靠近标杆。他低头看看自己坐的塔吊底座，又看看那根标杆，忽然明白了：吊臂相对于标杆是运动的，可相对于底座却是静止的。原来，动还是不动，要看跟谁比。\n\n地面指挥王师傅站在标杆旁，用手势指挥小李。他伸出左手，小李就朝标杆左侧转；他举起右手，小李就朝右侧转。有了统一的参照，吊臂的每一次移动都精准有序，再也没撞上任何东西。\n\n一个月后，工地恢复了高效安全的工作节奏。小李每次操作前，都会先找到那根红标杆的位置。老张的标杆成了工地上人人信赖的基准，连新来的工人都知道：想分清动和静，先找个不动的桩子。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "标杆作为判断物体运动或静止时所选取的标准物体",
+        "evidence": "老张在工地正中央竖起了一根刷着红漆的钢标杆，笔直地插在水泥基座上。他把所有操作员和地面指挥叫到跟前，指着那根标杆说：“从今天起，这根杆子就是咱们工地的‘定海神针’。所有移动，都以它为基准来判断。”",
+        "narrative_anchor": "这根杆子就是咱们工地的‘定海神针’。所有移动，都以它为基准来判断。"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "运动与静止的相对性",
+        "evidence": "吊臂相对于标杆是运动的，可相对于底座却是静止的。原来，动还是不动，要看跟谁比。",
+        "narrative_anchor": "动还是不动，要看跟谁比。"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "机械运动",
+        "evidence": "吊臂的顶端正缓缓远离标杆，向左移动。他再往右打方向，吊臂又慢慢靠近标杆。",
+        "narrative_anchor": "吊臂的顶端正缓缓远离标杆，向左移动"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "以标杆为参照物，理解运动与静止的相对性",
+        "evidence": "他低头看看自己坐的塔吊底座，又看看那根标杆，忽然明白了：吊臂相对于标杆是运动的，可相对于底座却是静止的。原来，动还是不动，要看跟谁比。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "吊臂相对于标杆是运动的，可相对于底座却是静止的。原来，动还是不动，要看跟谁比。"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "运动与静止的相对性引出机械运动的具体实例",
+        "evidence": "吊臂的顶端正缓缓远离标杆，向左移动。他再往右打方向，吊臂又慢慢靠近标杆。",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "吊臂的顶端正缓缓远离标杆，向左移动。他再往右打方向，吊臂又慢慢靠近标杆。"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

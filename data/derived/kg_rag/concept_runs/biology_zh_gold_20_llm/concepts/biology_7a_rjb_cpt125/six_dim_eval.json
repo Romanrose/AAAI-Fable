@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt125",
+  "target_concept": "叶片的结构（表皮、叶肉、叶脉）",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确映射了叶片的三层结构：表皮（外衣、紧密排列的细胞、气孔）、叶肉（上下两层不同形状的区域、绿色颗粒）、叶脉（细长管道），完全符合概念定义。",
+    "implicitness": "目标概念名称未直接出现，但通过比喻（外衣、厨房、血管）和爷爷的解释间接传达，隐含性良好。",
+    "mapping_clarity": "每个结构元素都有清晰的故事对应物，且爷爷的说明直接点明功能与组成，映射非常清晰。",
+    "readability": "语言生动流畅，比喻贴近儿童认知，情节自然连贯，可读性高。",
+    "pedagogical_value": "通过观察和对话逐步揭示结构，且结尾强调各部分协作，教学价值高。",
+    "novelty": "使用显微镜观察和比喻手法虽常见，但整体构思合理，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑加入一个对比场景，如不同植物叶片的差异，以增强新颖性。",
+    "可略微增加气孔分布的细节描述，如上下表皮气孔数量不同，以提升深度。"
+  ],
+  "rule_findings": {
+    "story_token_count": 570,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确映射了叶片的三层结构：表皮（外衣、紧密排列的细胞、气孔）、叶肉（上下两层不同形状的区域、绿色颗粒）、叶脉（细长管道），完全符合概念定义。",
+      "implicitness": "目标概念名称未直接出现，但通过比喻（外衣、厨房、血管）和爷爷的解释间接传达，隐含性良好。",
+      "mapping_clarity": "每个结构元素都有清晰的故事对应物，且爷爷的说明直接点明功能与组成，映射非常清晰。",
+      "readability": "语言生动流畅，比喻贴近儿童认知，情节自然连贯，可读性高。",
+      "pedagogical_value": "通过观察和对话逐步揭示结构，且结尾强调各部分协作，教学价值高。",
+      "novelty": "使用显微镜观察和比喻手法虽常见，但整体构思合理，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可考虑加入一个对比场景，如不同植物叶片的差异，以增强新颖性。",
+      "可略微增加气孔分布的细节描述，如上下表皮气孔数量不同，以提升深度。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,10 @@
+{
+  "output_dir": "data\\derived\\con2fable\\runs\\smoke_llm_1",
+  "success_count": 1,
+  "failed_count": 0,
+  "records_path": "data\\derived\\con2fable\\runs\\smoke_llm_1\\records.jsonl",
+  "automatic_metrics_path": "data\\derived\\con2fable\\runs\\smoke_llm_1\\automatic_metrics.json",
+  "six_dim_summary_path": "data\\derived\\con2fable\\runs\\smoke_llm_1\\six_dim_eval_summary.jsonl",
+  "six_dim_csv_path": "data\\derived\\con2fable\\runs\\smoke_llm_1\\six_dim_eval_summary.csv",
+  "eval_report_path": "data\\derived\\con2fable\\runs\\smoke_llm_1\\eval_report.md"
+}

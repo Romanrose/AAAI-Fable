@@ -1,0 +1,204 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "种子萌发",
+  "concept_id": "biology_7a_rjb_cpt101",
+  "concept_definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt101",
+    "种子萌发"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "种子萌发\n种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt102",
+          "label": "Concept",
+          "name": "种子萌发的环境条件",
+          "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt106",
+          "label": "Concept",
+          "name": "种子萌发的自身条件",
+          "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt102",
+          "label": "Concept",
+          "name": "种子萌发的环境条件",
+          "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt106",
+          "label": "Concept",
+          "name": "种子萌发的自身条件",
+          "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt101",
+    "concept_id": "biology_7a_rjb_cpt101",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt101",
+      "label": "Concept",
+      "name": "种子萌发",
+      "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "种子萌发"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过小颗粒在适宜条件下吸水、利用内部营养，最终长成幼苗的过程，隐喻种子萌发。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明观察到：浇水保持湿润（吸水）、温暖环境（适宜温度）、埋土深度（空气条件）、颗粒自身完好（胚完整）——这些条件共同导致小颗粒变成幼苗。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事避免目的论（如‘小颗粒努力生长’），强调条件（水分、温度、空气、自身完整性）和自然结果（变成幼苗），保留生命系统的条件、过程和结果。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃的秘密\n\n老园丁在园圃里埋下许多小颗粒，嘱咐小徒弟阿明每天浇水、保持温暖。阿明好奇地问：“这些硬邦邦的小东西，真的能变成绿苗吗？”老园丁笑而不答。\n\n头几天，阿明看到土面毫无变化，有些失望。但他还是坚持浇水，让土壤保持湿润。一周后，他发现几处土面微微鼓起，像有小手在顶动。又过了两天，一个嫩黄的小芽破土而出，接着第二个、第三个……阿明兴奋地记录着。\n\n他注意到，那些埋得浅的颗粒先发芽，埋得太深的始终没有动静。他还发现，有些颗粒虽然也浇水，但放在阴冷角落的，迟迟不见变化；而放在温暖窗台下的，芽苗长得又快又壮。阿明想：难道这些小东西也需要合适的温度和深度？\n\n一天，阿明挖开一颗始终没发芽的颗粒，发现它里面已经干瘪发黑。老园丁告诉他：“不是所有颗粒都能成活，有些本身就不完整。”阿明恍然大悟：原来，要让小颗粒变成幼苗，需要它自身完好，还要有适宜的水分、温度和空气。\n\n从此，阿明不再只看表面，而是用心观察每一个条件。他明白，生命的转变不是魔法，而是条件齐备后的自然结果。",
+  "rule_findings": {
+    "story_token_count": 375,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

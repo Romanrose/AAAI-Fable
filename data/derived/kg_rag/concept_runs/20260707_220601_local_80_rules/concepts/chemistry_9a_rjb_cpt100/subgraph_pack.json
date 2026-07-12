@@ -1,0 +1,173 @@
+{
+  "query": "chemistry_9a_rjb_cpt100",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt100",
+    "label": "Concept",
+    "name": "缓慢氧化",
+    "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+    "aliases": [],
+    "examples": [
+      "动植物的呼吸",
+      "食物的腐烂",
+      "醋的酿造",
+      "农家肥料的腐熟"
+    ],
+    "retrieval_text": "缓慢氧化\n进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt97",
+        "label": "Concept",
+        "name": "氧化反应",
+        "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt102",
+        "label": "Concept",
+        "name": "呼吸与氧气",
+        "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt97",
+        "label": "Concept",
+        "name": "氧化反应",
+        "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt99",
+        "label": "Concept",
+        "name": "燃烧",
+        "definition": "物质在一定条件下(有可燃物、充足的氧气或空气、达到着火点)发生的剧烈放热、发光的氧化反应过程。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s2",
+        "label": "Section",
+        "name": "课题2 氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:15248] 氧化反应 --prerequisites_for--> 缓慢氧化\n- [normalized:edge:18223] 呼吸与氧气 --relates_to--> 缓慢氧化\n- [normalized:edge:18426] 氧化反应 --relates_to--> 缓慢氧化\n- [normalized:edge:18429] 燃烧 --relates_to--> 缓慢氧化"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '缓慢氧化', 'definition': '进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:15248] 氧化反应 --prerequisites_for--> 缓慢氧化'], 'process_summary': ['[normalized:edge:18223] 呼吸与氧气 --relates_to--> 缓慢氧化', '[normalized:edge:18426] 氧化反应 --relates_to--> 缓慢氧化', '[normalized:edge:18429] 燃烧 --relates_to--> 缓慢氧化'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "chemistry_9a_rjb_cpt100",
+      "label": "Concept",
+      "name": "缓慢氧化",
+      "properties": {
+        "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+        "importance": "掌握",
+        "examples": [
+          "动植物的呼吸",
+          "食物的腐烂",
+          "醋的酿造",
+          "农家肥料的腐熟"
+        ],
+        "retrieval_text": "缓慢氧化\nConcept\n进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。\n掌握\n动植物的呼吸\n食物的腐烂\n醋的酿造\n农家肥料的腐熟"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:15248",
+        "source": "chemistry_9a_rjb_cpt97",
+        "source_name": "氧化反应",
+        "target": "chemistry_9a_rjb_cpt100",
+        "target_name": "缓慢氧化",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:18223",
+        "source": "chemistry_9a_rjb_cpt102",
+        "source_name": "呼吸与氧气",
+        "target": "chemistry_9a_rjb_cpt100",
+        "target_name": "缓慢氧化",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      },
+      {
+        "source_edge_id": "normalized:edge:18426",
+        "source": "chemistry_9a_rjb_cpt97",
+        "source_name": "氧化反应",
+        "target": "chemistry_9a_rjb_cpt100",
+        "target_name": "缓慢氧化",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      },
+      {
+        "source_edge_id": "normalized:edge:18429",
+        "source": "chemistry_9a_rjb_cpt99",
+        "source_name": "燃烧",
+        "target": "chemistry_9a_rjb_cpt100",
+        "target_name": "缓慢氧化",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "缓慢氧化",
+        "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:15248] 氧化反应 --prerequisites_for--> 缓慢氧化"
+      ],
+      "process_summary": [
+        "[normalized:edge:18223] 呼吸与氧气 --relates_to--> 缓慢氧化",
+        "[normalized:edge:18426] 氧化反应 --relates_to--> 缓慢氧化",
+        "[normalized:edge:18429] 燃烧 --relates_to--> 缓慢氧化"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 4,
+      "candidate_edge_count": 4,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 1047,
+      "summary_chars": 417,
+      "path_chars": 0,
+      "retrieval_context_chars": 1464
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1047,
+    "summary_chars": 417,
+    "path_chars": 0,
+    "retrieval_context_chars": 1464
+  }
+}

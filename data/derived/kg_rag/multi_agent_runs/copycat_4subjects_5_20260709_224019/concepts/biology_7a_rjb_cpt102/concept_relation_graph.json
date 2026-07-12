@@ -1,0 +1,118 @@
+{
+  "target_concept": {
+    "id": "biology_7a_rjb_cpt102",
+    "name": "种子萌发的环境条件",
+    "label": "Concept",
+    "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。"
+  },
+  "neighbors": [
+    {
+      "id": "biology_7a_rjb_cpt101",
+      "name": "种子萌发"
+    },
+    {
+      "id": "biology_7a_rjb_cpt104",
+      "name": "一定的水分"
+    },
+    {
+      "id": "biology_7a_rjb_cpt105",
+      "name": "充足的空气（氧气）"
+    },
+    {
+      "id": "biology_7a_rjb_cpt103",
+      "name": "适宜的温度"
+    },
+    {
+      "id": "biology_7a_rjb_exp9",
+      "name": "探究种子萌发的环境条件（四瓶对照实验）"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:14133",
+      "source_id": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "outgoing",
+      "neighbor_id": "biology_7a_rjb_cpt101",
+      "neighbor_name": "种子萌发",
+      "score": 1.35,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:10774",
+      "source_id": "biology_7a_rjb_cpt104",
+      "source_name": "一定的水分",
+      "target_id": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming",
+      "neighbor_id": "biology_7a_rjb_cpt104",
+      "neighbor_name": "一定的水分",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:10775",
+      "source_id": "biology_7a_rjb_cpt105",
+      "source_name": "充足的空气（氧气）",
+      "target_id": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming",
+      "neighbor_id": "biology_7a_rjb_cpt105",
+      "neighbor_name": "充足的空气（氧气）",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:10772",
+      "source_id": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target_id": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "outgoing",
+      "neighbor_id": "biology_7a_rjb_cpt101",
+      "neighbor_name": "种子萌发",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:10773",
+      "source_id": "biology_7a_rjb_cpt103",
+      "source_name": "适宜的温度",
+      "target_id": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_semantic_role": "category_membership",
+      "direction": "incoming",
+      "neighbor_id": "biology_7a_rjb_cpt103",
+      "neighbor_name": "适宜的温度",
+      "score": 1.2,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:22413",
+      "source_id": "biology_7a_rjb_exp9",
+      "source_name": "探究种子萌发的环境条件（四瓶对照实验）",
+      "target_id": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "verifies",
+      "relation_semantic_role": "evidence_verification",
+      "direction": "incoming",
+      "neighbor_id": "biology_7a_rjb_exp9",
+      "neighbor_name": "探究种子萌发的环境条件（四瓶对照实验）",
+      "score": 0.95,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 6,
+  "source": "dual_level_graphrag"
+}

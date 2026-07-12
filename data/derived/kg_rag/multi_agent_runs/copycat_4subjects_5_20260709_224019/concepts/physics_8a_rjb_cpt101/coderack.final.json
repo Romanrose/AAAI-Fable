@@ -1,0 +1,25 @@
+{
+  "concept_id": "physics_8a_rjb_cpt101",
+  "items": [
+    {
+      "item_id": "candidate_001:coderack:001",
+      "codelet_type": "EvaluateStructureStrengthCodelet",
+      "urgency": 0.25,
+      "temperature_sensitivity": 0.2,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_001",
+      "reason": "candidate has no dominant failure pressure",
+      "evidence": {}
+    },
+    {
+      "item_id": "candidate_002:coderack:001",
+      "codelet_type": "EvaluateStructureStrengthCodelet",
+      "urgency": 0.25,
+      "temperature_sensitivity": 0.2,
+      "target_structure_id": null,
+      "target_candidate_id": "candidate_002",
+      "reason": "candidate has no dominant failure pressure",
+      "evidence": {}
+    }
+  ]
+}

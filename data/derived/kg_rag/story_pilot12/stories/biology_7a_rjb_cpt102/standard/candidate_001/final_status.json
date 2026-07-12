@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "selected_source": "initial",
+  "revision_attempted": false,
+  "revision_improved": false,
+  "node_coverage": 0.8333,
+  "edge_coverage": 1.0,
+  "direction_accuracy": 1.0,
+  "hard_leakage": false,
+  "length_valid": true,
+  "judge_status": "accept",
+  "output_dir": "D:\\Project\\AAAI\\AAAI-Fable\\data\\derived\\kg_rag\\story_pilot12\\stories\\biology_7a_rjb_cpt102\\standard\\candidate_001"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的井水监测系统",
+  "characters": [
+    "村民",
+    "井水"
+  ],
+  "objects": [
+    "单层滤网",
+    "有毒物质",
+    "井水监测系统"
+  ],
+  "conflict": "村庄的井水只有一层薄薄的滤网，有毒物质容易从滤网两侧渗入，威胁村民健康。",
+  "event_chain": [
+    "村庄的井水只有一层薄薄的滤网",
+    "有毒物质可以从滤网两侧渗入井水",
+    "井水被污染后威胁村民健康",
+    "村民利用井水作为监测水源污染的指示系统"
+  ],
+  "turning_point": "村民发现井水变味，意识到滤网太薄导致污染。",
+  "resolution_state": "村民决定用井水作为监测水源污染的指示系统，一旦井水变味就立即采取防护措施。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村庄的井水只有一层薄薄的滤网",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "有毒物质可以从滤网两侧渗入井水",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "井水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "村民利用井水作为监测水源污染的指示系统",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "使得",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "是",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "导致",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "未使用任何禁止术语或目标概念名称",
+    "所有机制节点和边均已映射，方向保留",
+    "未将课程桥接上下文作为因果机制",
+    "使用单一连贯的源域：井水监测系统"
+  ],
+  "mapping_context_sha256": "0a3ea773eade6513a863a41f23f2357d4fadf36b9ba33d51cff1c8f2aa68f4b9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "2d3520c9251c2608ba702c3e9dfdab0890cb6a30ef34683ab6cd2e934d5edb8c"
+  }
+}

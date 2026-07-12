@@ -1,0 +1,129 @@
+{
+  "id": "physics_8a_rjb_cpt101",
+  "method": "con2fable",
+  "concept": {
+    "name": "焦距",
+    "aliases": [],
+    "forbidden_terms": [
+      "焦距"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：光心",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：凸透镜成像规律",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：焦点",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17247"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17190"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19710"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "老陈是城里最有名的透镜工匠，他带领的工坊专门为天文台制造望远镜的镜片。可最近，一批重要的透镜出了问题——无论怎么打磨，光线透过透镜后汇聚成的那个小光点，总是忽远忽近，成像模糊得像隔着一层雾。\n\n“不对，不对！”老陈对着暗室里的测试光斑直摇头，“这光斑的位置飘忽不定，根本没法用。”\n\n学徒小张检查了打磨机，机器运转正常，没有一丝偏差。他又以透镜正中心那个透明的点作为基准，重新校准了所有测量工具。“师傅，机器和基准都没问题，问题肯定出在透镜本身。”\n\n老陈盯着桌上的透镜毛坯，陷入了沉思。他拿起一块曲率较大的毛坯，打磨抛光后，让小张用平行光照射。光穿过透镜，很快汇聚成一个明亮的小点，离透镜很近。他又换了一块曲率较小的毛坯，同样打磨抛光，这次光汇聚的点却离透镜远了许多。\n\n“曲率越大，光线偏折得越厉害，汇聚点就越近；曲率越小，偏折得越弱，汇聚点就越远。”老陈一边记录，一边喃喃自语，“可光知道这个还不够，我得知道那个距离到底是多少。”\n\n他不再盲目地打磨，而是开始系统地测量每一块透镜。他让小张在透镜中心做好标记，然后精确测量从那个中心点到光线汇聚点之间的距离。他记下每一个数据，发现这个距离和透镜的曲率之间，存在着一种精确的反比关系——曲率大一倍，这个距离就短一半。\n\n“找到了！”老陈兴奋地一拍桌子，“决定透镜对光线偏折能力的，就是这个从透镜中心到汇聚点的距离！只要控制好这个距离，就能让光线精准地汇聚到我们想要的位置。”\n\n根据这个发现，老陈重新设计了打磨方案。他先计算出需要的汇聚点位置，再反推出透镜应有的曲率。这一次，制造出来的透镜在暗室中测试时，光斑稳稳地落在预定位置，清晰得像一颗星星。\n\n天文望远镜装上了老陈的透镜，原本模糊的星云变得轮廓分明，遥远的土星环也清晰可见。工坊的名声传遍了整个城，而老陈总是对前来请教的人说：“看透一件事物的能力，关键就在于找到它内部那个决定性的距离。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "从透镜中心到汇聚点的距离",
+        "evidence": "从透镜中心到汇聚点的距离",
+        "narrative_anchor": "从透镜中心到汇聚点的距离"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "透镜正中心那个透明的点",
+        "evidence": "透镜正中心那个透明的点",
+        "narrative_anchor": "透镜正中心那个透明的点"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "凸透镜成像规律",
+        "evidence": "成像模糊得像隔着一层雾",
+        "narrative_anchor": "成像模糊得像隔着一层雾"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "焦点",
+        "evidence": "光线透过透镜后汇聚成的那个小光点",
+        "narrative_anchor": "光线透过透镜后汇聚成的那个小光点"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "以透镜中心为基准测量从中心到汇聚点的距离",
+        "evidence": "他让小张在透镜中心做好标记，然后精确测量从那个中心点到光线汇聚点之间的距离",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "他让小张在透镜中心做好标记，然后精确测量从那个中心点到光线汇聚点之间的距离"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "通过控制从透镜中心到汇聚点的距离来获得清晰成像",
+        "evidence": "只要控制好这个距离，就能让光线精准地汇聚到我们想要的位置",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "只要控制好这个距离，就能让光线精准地汇聚到我们想要的位置"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "汇聚点（焦点）的位置决定了成像的清晰度",
+        "evidence": "光斑稳稳地落在预定位置，清晰得像一颗星星",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "光斑稳稳地落在预定位置，清晰得像一颗星星"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt103",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠锻造宝剑",
+  "characters": [
+    "铸剑大师",
+    "学徒甲",
+    "学徒乙",
+    "学徒丙"
+  ],
+  "objects": [
+    "宝剑",
+    "精铁",
+    "熔炉",
+    "铁砧",
+    "模具",
+    "淬火池",
+    "试剑石"
+  ],
+  "conflict": "铸剑大师需要锻造出锋利的宝剑，但不同的锻造方法各有优劣，且需要合适的材料、分解工序和验证手段。",
+  "event_chain": [
+    "铸剑大师决定锻造一把宝剑，他拥有多种锻造方法。",
+    "学徒甲用精铁在熔炉中高温锻打，制成宝剑。",
+    "学徒乙用精铁在熔炉中低温折叠锻打，制成宝剑。",
+    "学徒丙用精铁在熔炉中高温加催化剂锻打，制成宝剑。",
+    "每种锻造方法都涉及将精铁分解成更纯的材质。",
+    "精铁是锻造宝剑的必要材料。",
+    "锻造出的宝剑需要经过淬火池冷却定型。",
+    "学徒甲的方法在试剑石上验证了宝剑的锋利。"
+  ],
+  "turning_point": "学徒甲在试剑石上成功验证了宝剑的锋利，证明了其锻造方法的有效性。",
+  "resolution_state": "铸剑大师总结出多种锻造宝剑的方法，并确认了淬火和验证的重要性。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铸剑大师锻造宝剑的方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "学徒甲用精铁在熔炉中高温锻打",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "学徒乙用精铁在熔炉中低温折叠锻打",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "学徒丙用精铁在熔炉中高温加催化剂锻打",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "宝剑",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "将精铁分解成更纯的材质",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "淬火池冷却定型",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "学徒甲的方法在试剑石上验证",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "学徒甲的方法属于铸剑大师的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "学徒乙的方法属于铸剑大师的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "学徒丙的方法属于铸剑大师的方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "分解精铁是铸剑大师方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "宝剑是铸剑大师方法的前提",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "铸剑大师的方法需要淬火池冷却定型",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "学徒甲的验证证明了铸剑大师的方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "学徒甲的方法属于分解精铁的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "学徒乙的方法属于分解精铁的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "学徒丙的方法属于分解精铁的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e11",
+      "story_relation": "学徒甲的方法产出宝剑",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e12",
+      "story_relation": "学徒乙的方法产出宝剑",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "避免使用任何化学术语或目标概念名称。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "故事中未使用“氧气”、“分解反应”等禁止术语。",
+    "所有映射均基于同一源领域“古代工匠锻造宝剑”。"
+  ],
+  "mapping_context_sha256": "66f9e75b1c1a9c051817c4eeca642c8afcbbfe0599b926a1c8a9709022f3c36d",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5b61c0209eb95bcc6dd8a8617ff726951aa00dac2d87afdc2764e194d7f3dedb"
+  }
+}

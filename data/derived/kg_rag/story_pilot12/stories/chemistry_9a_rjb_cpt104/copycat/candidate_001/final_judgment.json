@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n5",
+    "weakest_node_id": "n4",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The story maps '氧气' (oxygen) to '关键货物' (key goods), which is a reasonable abstraction but loses the specific chemical identity. Edge e2 (n2->n3, 'requires') is mapped to a generic dependency statement ('第三道环节的登记需要用到入口核对的结果'), which does not explicitly convey the specific relation that the collection method requires the preparation method. In contrast, node n5 ('分解反应') is mapped to '通用的拆分规则' (general splitting rule), which effectively captures the abstract process type without revealing the chemical term, and the story explicitly shows two instances (温水浸泡 and 火烘烤) that are both 'is_a' of that rule, preserving the relation well."
+  },
+  "revision_instructions": [
+    "Edge e2 (n2->n3) mapping should more explicitly indicate that the collection method (第三道转化环节) requires the preparation method (第二道转化环节) as a prerequisite, not just a generic dependency.",
+    "Node n4 ('氧气') mapping to '关键货物' is acceptable but could be strengthened by showing that the key goods are the product of the splitting operations, mirroring oxygen as the product of decomposition reactions.",
+    "Ensure that the story's length is within 450-750 Chinese characters; current length is 875 characters, which exceeds the limit."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

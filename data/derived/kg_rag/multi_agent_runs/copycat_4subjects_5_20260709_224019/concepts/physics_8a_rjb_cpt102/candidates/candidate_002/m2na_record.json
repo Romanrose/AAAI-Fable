@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt102",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "实像",
+    "aliases": [],
+    "forbidden_terms": [
+      "实像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:12420",
+        "source_name": "投影仪成像",
+        "target_name": "实像",
+        "relation_semantic_role": "category_membership"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "is_a",
+        "source_edge_id": "normalized:edge:12419",
+        "source_name": "照相机成像",
+        "target_name": "实像",
+        "relation_semantic_role": "category_membership"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "滑道试验场的流程刚启动，记录员、调度员和验收员都站在各自的位置上。记录员翻开分段记录册，第一页写着入口条件：试验对象必须从滑道一端投入，在特定位置被一道光线照过，才会在终端形成可被封存箱承接的影像。调度员看了看滑道的布局，发现试验对象和最终影像分居滑道两侧，中间隔着凸透镜台。\n\n“这是个典型情况，”记录员说，“和投影仪演示实验里记录的一样，都是同一种规则。”他翻开另一本记录册，里面画着照相机模型实验的示意图，也是光线汇聚后形成可承接的像。“这两件事其实是一类，不能当成孤立的偶然现象。”\n\n调度员点头，但验收员提出疑问：“光说类似不够，得用记录来验证。”于是三人开始核对。记录员把投影仪实验的数值栏和当前滑道试验的数值栏并列，发现变量之间的关系完全一致——物距、像距、透镜焦距的对应顺序没有偏差。接着他又对比照相机模型实验的数据，同样吻合。\n\n“两份相关记录放在一起比较，它们共同约束最后判断，”记录员说，“只有当两套证据都对上，才能允许通过。”\n\n验收员在通行牌上敲了个章，流程进入下一环节。调度员准备按入口条件推进第2道转化，但这时有人提议跳过中间承接，直接让封存箱去接影像。记录员坚决反对：“方向和顺序不能颠倒。入口条件核对的是光线实际会聚的位置，中间环节保留的是变量之间的关系，跳过任何一个，结果就无法可靠。”\n\n众人只好回头，重新把入口条件、转化环节和结果验收记录一一衔接。最后，验收员拿着封存箱里接到的影像，与记录册上的数值逐项比对，所有数据互相印证。记录员合上本子，说：“规律不是谁说了算，是记录和比较告诉我们的。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件",
+        "narrative_anchor": "入口条件",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "变量之间的关系",
+        "narrative_anchor": "变量之间的关系",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "入口条件核对导致第2道转化环节",
+        "evidence": "推进第2道转化",
+        "narrative_anchor": "推进第2道转化",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "第2道转化环节导致结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

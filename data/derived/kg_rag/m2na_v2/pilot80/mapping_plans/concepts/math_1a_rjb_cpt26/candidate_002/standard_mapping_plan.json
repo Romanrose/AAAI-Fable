@@ -1,0 +1,72 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt26",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个农夫种果树的故事",
+  "characters": [
+    "老农夫",
+    "小徒弟"
+  ],
+  "objects": [
+    "苹果树",
+    "七棵小树苗",
+    "嫁接工具",
+    "果园"
+  ],
+  "conflict": "小徒弟想直接种出七棵能结果的苹果树，但老农夫告诉他必须先认识苹果树的生长规律（认识七棵小树苗）和学会嫁接技术（分与合），才能成功。",
+  "event_chain": [
+    "老农夫先教小徒弟认识七棵不同品种的小树苗，了解每棵树苗的特点。",
+    "老农夫教小徒弟嫁接技术，如何将不同树苗的枝条组合在一起，或者分开培育。",
+    "小徒弟运用嫁接技术，将七棵小树苗进行组合或拆分，最终培育出能结出七种不同苹果的苹果树。"
+  ],
+  "turning_point": "小徒弟从只想着直接结果，转变为先学习认识树苗和嫁接技术，然后成功培育。",
+  "resolution_state": "小徒弟成功培育出能结出七种苹果的苹果树，果园丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "认识七棵不同品种的小树苗",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "嫁接技术（组合与拆分枝条）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "培育出能结七种苹果的苹果树",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "认识七棵小树苗是培育苹果树的先决条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "学会嫁接技术是培育苹果树的先决条件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'7的加减法'或其同义词。",
+    "确保'七'只作为数量出现，不暗示加减运算。",
+    "确保嫁接技术明确对应'分与合'，避免混淆。"
+  ],
+  "mapping_context_sha256": "4fbcfae43c72f26310eea05e2cce3d9e509bca2042ddd5c8185f6ad979755cd1",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "09a99dfeef5479d26c2e7ec57d05b5e8fab891ae8fd7d9b887687302fa3c044c"
+  }
+}

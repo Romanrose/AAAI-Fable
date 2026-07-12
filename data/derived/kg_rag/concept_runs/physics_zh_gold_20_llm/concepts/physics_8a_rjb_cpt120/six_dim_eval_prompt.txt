@@ -1,0 +1,200 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "望远镜",
+  "concept_id": "physics_8a_rjb_cpt120",
+  "concept_definition": "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt120",
+    "望远镜"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt120",
+      "label": "Concept",
+      "name": "望远镜",
+      "definition": "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "望远镜\n由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt106",
+          "label": "Concept",
+          "name": "凸透镜成像规律",
+          "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt123",
+          "label": "Concept",
+          "name": "视角",
+          "definition": "物体对眼睛形成的角度大小，影响人眼观察物体清晰程度。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "physics_8a_rjb_exp28",
+          "label": "Experiment",
+          "name": "模拟望远镜实验",
+          "definition": ""
+        }
+      ],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s5",
+          "label": "Section",
+          "name": "第五节 显微镜和望远镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt120",
+    "concept_id": "physics_8a_rjb_cpt120",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt120",
+      "label": "Concept",
+      "name": "望远镜",
+      "definition": "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "望远镜"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "望远镜",
+      "story_evidence": "阿明用长竹管（物镜）和短竹管（目镜）组合，观察远处钟楼，实现了将远处物体放大、看清细节的效果。"
+    },
+    {
+      "concept_role": "核心机制：物镜成实像，目镜放大实像",
+      "story_evidence": "长竹管（物镜）使远处钟楼在竹管中间形成倒立、缩小的清晰实像；短竹管（目镜）将这个实像放大，使钟楼变得又大又正。"
+    },
+    {
+      "concept_role": "学科约束：保留变量关系、方向、大小、条件变化",
+      "story_evidence": "故事中描述了物距（远处钟楼）、像距（竹管间距离）、像的大小（缩小再放大）和方向（倒立变正立）的变化关系，以及调整两根竹管距离（条件变化）才能获得清晰图像。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼上的秘密\n\n小镇的钟楼已经矗立了一百多年，每天正午，大钟都会准时敲响。可是最近，负责看管钟楼的阿明发现了一件怪事：每当有雾的清晨，钟楼顶上的风向标似乎总在微微颤动，可等他跑上钟楼查看时，风向标又纹丝不动。\n\n阿明决定弄清楚原因。他找来两根长短不同的空心竹管，长的约一臂，短的只有半臂。他把长竹管放在眼前，透过它看向远处的钟楼——奇怪，钟楼反而变小了，而且模模糊糊。他又把短竹管放在眼前，这次钟楼倒是放大了，可边缘扭曲得厉害。\n\n“这样不行。”阿明挠挠头。他想起爷爷说过，看远处的东西需要两样东西配合：一个先让远处的景象在近处形成一个清晰的影子，另一个再把这个影子放大。阿明找来一块凸透镜片，装在长竹管的一端，又找来另一块更凸的镜片，装在短竹管的一端。\n\n他把长竹管带镜片的那头对准钟楼，眼睛凑近另一端。咦？钟楼的影子出现在竹管中间，是倒着的，小小的，但很清晰。他赶紧把短竹管带镜片的那头对准这个倒着的影子，眼睛从另一端看去——钟楼变得又大又正，连砖缝都看得清清楚楚！\n\n阿明兴奋地调整两根竹管的距离。当它们恰好相距一掌时，景象最清晰。他忽然明白：长竹管把远处的钟楼变成了一个近处的倒影，短竹管再把倒影放大，这样原本模糊的远处细节就变得一目了然。\n\n第二天清晨，阿明用这个装置观察钟楼。果然，风向标在微风中轻轻转动，而钟楼顶上的鸽子正在啄食——原来风向标的颤动是鸽子起飞时碰到的。阿明终于解开了谜团。\n\n从此，阿明常常用这个装置观察远处。他明白了一个道理：要看清远方，不能只靠一个步骤，而要让两个步骤配合——先让远处的景象在近处成形，再把这个成形后的景象放大。这样，原本看不见的细节就会清晰地呈现在眼前。",
+  "rule_findings": {
+    "story_token_count": 619,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "望远镜",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

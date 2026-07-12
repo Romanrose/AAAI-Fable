@@ -1,0 +1,31 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "煮饭",
+  "domain_rationale": "煮饭过程需要先具备识别和量取米的能力（数出米粒数量），然后将米与水合并，这与加法中将两个数量合并的机制相似。",
+  "conflict": "煮饭中米和水的合并是物理混合，而加法是数学抽象合并，但结构上都是先有独立数量认知，再合并。",
+  "event_chain": [
+    "厨师认识并能数出适量的米粒",
+    "厨师将米粒和水合并在一起煮成饭"
+  ],
+  "turning_point": "厨师将米和水倒入锅中开始烹饪",
+  "resolution_state": "米和水合并成为一锅米饭",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "厨师认识并能数出适量的米粒",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "厨师将米粒和水合并在一起煮成饭",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "厨师数出米粒的能力使他能进行合并操作",
+      "direction_preserved": true
+    }
+  ]
+}

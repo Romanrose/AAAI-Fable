@@ -1,0 +1,64 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "闸门提升的高度（闸门开口的垂直距离）",
+      "evidence": "闸门提多高，刻度就显示多少",
+      "narrative_anchor": "闸门提多高，刻度就显示多少",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "调度员小陈需要先学会如何正确读取和记录水渠闸门上的刻度标尺",
+      "evidence": "他试着把闸门提到某个刻度",
+      "narrative_anchor": "他试着把闸门提到某个刻度",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "标准引水管的口径（直径）是固定的，属于统一的长度标准体系",
+      "evidence": "这是标准口径的管子，10、20、30，都是统一做好的",
+      "narrative_anchor": "这是标准口径的管子，10、20、30，都是统一做好的",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "小陈通过实际放水实验验证了规律",
+      "evidence": "他再次接水计时，发现这次水流稳定极了",
+      "narrative_anchor": "他再次接水计时，发现这次水流稳定极了",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从理解刻度标尺到使用刻度标尺",
+      "evidence": "他试着把闸门提到某个刻度",
+      "narrative_anchor": "他试着把闸门提到某个刻度",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从使用刻度标尺到建立统一单位",
+      "evidence": "这是标准口径的管子，10、20、30，都是统一做好的",
+      "narrative_anchor": "这是标准口径的管子，10、20、30，都是统一做好的",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从建立统一单位到实验验证",
+      "evidence": "他再次接水计时，发现这次水流稳定极了",
+      "narrative_anchor": "他再次接水计时，发现这次水流稳定极了",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

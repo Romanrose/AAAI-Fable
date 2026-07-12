@@ -1,0 +1,89 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt24",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫种稻",
+  "characters": [
+    "农夫",
+    "稻种",
+    "稻苗",
+    "稻田",
+    "稻穗",
+    "谷粒"
+  ],
+  "objects": [
+    "田地",
+    "水渠",
+    "肥料",
+    "镰刀",
+    "谷仓"
+  ],
+  "conflict": "农夫想要收获足够多的谷粒，但需要先学会数稻穗的数量，才能知道该施多少肥、该收多少谷，而数稻穗需要先学会按顺序数稻株。",
+  "event_chain": [
+    "农夫先学会按顺序数田里的稻株，从第一株数到最后一株。",
+    "农夫通过数稻株，认识了‘七株稻’这个数量，知道七株稻代表多少。",
+    "农夫掌握了七株稻的加减：比如五株稻加两株稻等于七株稻，七株稻减去五株稻等于两株稻。",
+    "农夫用‘大于’和‘小于’来比较不同田块稻株的数量，比如六株稻小于七株稻，七株稻大于六株稻。"
+  ],
+  "turning_point": "农夫发现，只有先学会按顺序数稻株，才能正确认识‘七株稻’这个数量，进而才能进行加减和比较。",
+  "resolution_state": "农夫成功种出七株稻，并学会了用七株稻进行加减和比较，最终收获了足够的谷粒。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫按顺序数稻株",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫认识‘七株稻’这个数量",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫掌握七株稻的加减法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫比较不同田块稻株的数量",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫按顺序数稻株，使他能够认识‘七株稻’这个数量",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫认识‘七株稻’这个数量，使他能够掌握七株稻的加减法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫比较不同田块稻株的数量，与认识‘七株稻’这个数量相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "注意：故事中未使用任何目标概念名称或别名，如‘数字7的认识’等。",
+    "注意：所有机制节点和边均已映射，且边方向保持原样。",
+    "注意：课程桥上下文（如数数方法、7的加减法、数量的比较）未作为因果机制处理，仅作为故事背景。",
+    "注意：故事载体均来自同一源域（农夫种稻），未引入无关隐喻。"
+  ],
+  "mapping_context_sha256": "6478efa80d4cb8516d1b6f15d51eae43785405648b119fccc62e63c83cbd4c85",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "9d4e34841c281a530fb95343d8c733d5898ce7ba9308b4917cb3ae46aade56a9"
+  }
+}

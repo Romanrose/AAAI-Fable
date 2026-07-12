@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 2,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": true
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story uses a generic '第2道转化环节' label for n2, failing to convey the specific mechanism concept of '实像' (real image) as a category. Edge e1 (凸透镜 enables 照相机成像) is mapped to a vague '两份相关记录放在一起比较' which does not preserve the 'enables' relation; a better mapping would show a prerequisite step enabling a subsequent process."
+  },
+  "revision_instructions": [
+    "Replace generic labels like '第2道转化环节' with story-specific carriers that reflect the mechanism node's meaning (e.g., for n2 '实像', use a story element like '归类记录册' that represents categorization).",
+    "For edge e1, rewrite the story relation to explicitly show that the first step (入口条件核对) enables the second step (照相机成像 equivalent), not just 'comparing records'.",
+    "For edges e3, e4, e5, differentiate each relation (enables, produces) with distinct story actions instead of repeating the same phrase.",
+    "Avoid template-like repetition of '第X道转化环节' to improve mapping clarity and novelty."
+  ],
+  "final_status": "revise"
+}

@@ -1,0 +1,120 @@
+{
+  "query": "math_1a_rjb_cpt17",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt17",
+    "label": "Concept",
+    "name": "球体",
+    "definition": "表面上所有点到中心的距离都相等的立体图形。",
+    "aliases": [],
+    "examples": [
+      "篮球",
+      "乒乓球"
+    ],
+    "retrieval_text": "球体\n表面上所有点到中心的距离都相等的立体图形。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt18",
+        "label": "Concept",
+        "name": "按形状分类",
+        "definition": "根据物体或图形的外形特征进行分类的方法。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe11",
+        "label": "Exercise",
+        "name": "判断图中物体分别属于哪种立体图形（连一连）。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch4",
+        "label": "Chapter",
+        "name": "认识图形（一）",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:12137] 球体 --is_a--> 按形状分类"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '球体', 'definition': '表面上所有点到中心的距离都相等的立体图形。', 'formula': '', 'importance': '掌握'}, 'condition_summary': [], 'process_summary': ['[normalized:edge:12137] 球体 --is_a--> 按形状分类'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt17",
+      "label": "Concept",
+      "name": "球体",
+      "properties": {
+        "definition": "表面上所有点到中心的距离都相等的立体图形。",
+        "importance": "掌握",
+        "examples": [
+          "篮球",
+          "乒乓球"
+        ],
+        "retrieval_text": "球体\nConcept\n表面上所有点到中心的距离都相等的立体图形。\n掌握\n篮球\n乒乓球"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:12137",
+        "source": "math_1a_rjb_cpt17",
+        "source_name": "球体",
+        "target": "math_1a_rjb_cpt18",
+        "target_name": "按形状分类",
+        "relation": "is_a",
+        "relation_description": "is_a",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "球体",
+        "definition": "表面上所有点到中心的距离都相等的立体图形。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [],
+      "process_summary": [
+        "[normalized:edge:12137] 球体 --is_a--> 按形状分类"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 1,
+      "candidate_edge_count": 1,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 234,
+      "summary_chars": 226,
+      "path_chars": 0,
+      "retrieval_context_chars": 460
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 234,
+    "summary_chars": 226,
+    "path_chars": 0,
+    "retrieval_context_chars": 460
+  }
+}

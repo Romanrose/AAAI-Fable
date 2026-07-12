@@ -1,0 +1,65 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt17",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代工匠制作玉璧",
+  "characters": [
+    "老玉匠",
+    "学徒"
+  ],
+  "objects": [
+    "圆形玉璧",
+    "方形玉料",
+    "其他形状的玉料"
+  ],
+  "conflict": "学徒分不清哪些玉料适合制作圆形玉璧，哪些适合制作方形或其他形状的器物。",
+  "event_chain": [
+    "老玉匠拿出一块圆形玉璧，告诉学徒这是由特定形状的玉料制成的。",
+    "学徒观察玉璧，发现其表面每一点到中心的距离都相等。",
+    "老玉匠将玉璧与方形玉料对比，指出方形玉料无法直接打磨成圆形玉璧。",
+    "学徒领悟到，只有具备‘中心到表面距离相等’特征的玉料才能制成圆形玉璧。",
+    "老玉匠进一步展示其他形状的玉料，并说明它们各自适合的器物形状。",
+    "学徒学会根据玉料形状判断其用途，并正确分类。"
+  ],
+  "turning_point": "学徒通过对比圆形玉璧和方形玉料，理解了形状与分类之间的必然联系。",
+  "resolution_state": "学徒能够准确识别哪些玉料属于‘圆形玉璧类’，并正确分类。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "圆形玉璧",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "根据形状判断玉料适合制作的器物类型",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "圆形玉璧属于根据形状判断玉料适合制作的器物类型这一分类过程",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不使用‘球体’一词，已用‘圆形玉璧’替代。",
+    "注意‘按形状分类’映射为‘根据形状判断玉料适合制作的器物类型’，避免直接使用原词。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如数学定义）作为因果机制。"
+  ],
+  "mapping_context_sha256": "50a1cd176bd51998a41e6b89316f3c0abc88ea8bd4376b369c4d1a9c8fd78dff",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d0e34342d5f5798529610dae08de7f0ea80f9acf6f2383eb2f9d6727d0da0d6c"
+  }
+}

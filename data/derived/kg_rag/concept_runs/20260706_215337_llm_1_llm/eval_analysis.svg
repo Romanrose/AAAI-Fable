@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="640" viewBox="0 0 1040 640">
+<rect width="1040" height="640" fill="#f8fafc"/>
+<rect x="28" y="24" width="984" height="592" rx="8" fill="#ffffff" stroke="#d8dee9"/>
+<text x="52" y="64" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#17202a">Machine Evaluation Summary</text>
+<text x="52" y="90" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#17202a">samples=1  weighted_overall_mean=4.25</text>
+<text x="78" y="80" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#17202a">Six-Dimension Mean Scores</text>
+<line x1="78" y1="344" x2="638" y2="344" stroke="#e5e7eb"/>
+<text x="64" y="349" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="end" fill="#17202a">1</text>
+<line x1="78" y1="284" x2="638" y2="284" stroke="#e5e7eb"/>
+<text x="64" y="289" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="end" fill="#17202a">2</text>
+<line x1="78" y1="224" x2="638" y2="224" stroke="#e5e7eb"/>
+<text x="64" y="229" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="end" fill="#17202a">3</text>
+<line x1="78" y1="164" x2="638" y2="164" stroke="#e5e7eb"/>
+<text x="64" y="169" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="end" fill="#17202a">4</text>
+<line x1="78" y1="104" x2="638" y2="104" stroke="#e5e7eb"/>
+<text x="64" y="109" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="end" fill="#17202a">5</text>
+<line x1="78" y1="104" x2="78" y2="404" stroke="#94a3b8"/>
+<line x1="78" y1="404" x2="638" y2="404" stroke="#94a3b8"/>
+<rect x="96" y="164" width="72" height="240" rx="4" fill="#2563eb"/>
+<text x="132" y="156" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#17202a">4.00</text>
+<text x="132" y="428" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#17202a">忠实度</text>
+<text x="132" y="446" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#17202a">faithfulness</text>
+<rect x="186" y="104" width="72" height="300" rx="4" fill="#16a34a"/>
+<text x="222" y="96" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#17202a">5.00</text>
+<text x="222" y="428" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#17202a">隐含性</text>
+<text x="222" y="446" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#17202a">implicitness</text>
+<rect x="276" y="164" width="72" height="240" rx="4" fill="#7c3aed"/>
+<text x="312" y="156" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#17202a">4.00</text>
+<text x="312" y="428" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#17202a">映射清晰度</text>
+<text x="312" y="446" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#17202a">mapping_clarity</text>
+<rect x="366" y="104" width="72" height="300" rx="4" fill="#0891b2"/>
+<text x="402" y="96" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#17202a">5.00</text>
+<text x="402" y="428" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#17202a">可读性</text>
+<text x="402" y="446" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#17202a">readability</text>
+<rect x="456" y="164" width="72" height="240" rx="4" fill="#ea580c"/>
+<text x="492" y="156" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#17202a">4.00</text>
+<text x="492" y="428" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#17202a">教学价值</text>
+<text x="492" y="446" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#17202a">pedagogical_value</text>
+<rect x="546" y="164" width="72" height="240" rx="4" fill="#db2777"/>
+<text x="582" y="156" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#17202a">4.00</text>
+<text x="582" y="428" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#17202a">新颖性</text>
+<text x="582" y="446" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#17202a">novelty</text>
+<text x="720" y="80" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#17202a">Final Status Counts</text>
+<rect x="720" y="116" width="220" height="26" rx="4" fill="#e5e7eb"/>
+<rect x="720" y="116" width="220" height="26" rx="4" fill="#16a34a"/>
+<text x="720" y="109" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#17202a">accept</text>
+<text x="956" y="135" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#17202a">1</text>
+<rect x="720" y="184" width="220" height="26" rx="4" fill="#e5e7eb"/>
+<rect x="720" y="184" width="0" height="26" rx="4" fill="#f59e0b"/>
+<text x="720" y="177" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#17202a">revise</text>
+<text x="956" y="203" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#17202a">0</text>
+<rect x="720" y="252" width="220" height="26" rx="4" fill="#e5e7eb"/>
+<rect x="720" y="252" width="0" height="26" rx="4" fill="#dc2626"/>
+<text x="720" y="245" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" fill="#17202a">reject</text>
+<text x="956" y="271" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#17202a">0</text>
+<text x="720" y="410" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#17202a">Risk Rates</text>
+<text x="720" y="442" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#17202a">hard leakage rate: 0.0%</text>
+<text x="720" y="470" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#17202a">template-like rate: 0.0%</text>
+<text x="52" y="568" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#17202a">Decision rule: reject on hard leakage, contradiction, unmapped core mechanism, or low faithfulness/mapping.</text>
+</svg>

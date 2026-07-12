@@ -1,0 +1,81 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "外观完好的玉米粒大多长出了细白的胚根和嫩黄的胚芽",
+      "evidence": "货轮靠港时，检疫员老郑带着实习生小陈登船抽样。",
+      "narrative_anchor": "货轮靠港时，检疫员老郑带着实习生小陈登船抽样。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "培养箱内温度恒定，湿度适宜，空气流通——这正是种子发芽所需的基本环境",
+      "evidence": "环境条件",
+      "narrative_anchor": "环境条件",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "有虫蛀痕迹的玉米粒内部胚已死亡，自身条件不满足发芽要求",
+      "evidence": "自身条件",
+      "narrative_anchor": "自身条件",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "培养箱的温湿度控制是环境条件的具象化",
+      "evidence": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+      "narrative_anchor": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "玉米粒胚的完整性是自身条件的具象化",
+      "evidence": "他犹豫着看向老郑。",
+      "narrative_anchor": "他犹豫着看向老郑。",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "提供环境条件后，种子萌发过程得以发生",
+      "evidence": "船长递上报关单，满脸堆笑：“这批谷物质量很好，就是有些玉米粒被虫啃了几口，表皮有",
+      "narrative_anchor": "船长递上报关单，满脸堆笑：“这批谷物质量很好，就是有些玉米粒被虫啃了几口，表皮有",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "环境条件满足后，自身条件成为关键",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "自身条件不满足导致无法萌发，对应上位结构",
+      "evidence": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+      "narrative_anchor": "小陈在样本中仔细翻检，确实发现一批玉米粒表面有细小的虫蛀痕迹，但大部分玉米粒外观",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "环境条件满足后，自身条件成为关键，对应上位结构",
+      "evidence": "他犹豫着看向老郑。",
+      "narrative_anchor": "他犹豫着看向老郑。",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ]
+}

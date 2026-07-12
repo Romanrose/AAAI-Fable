@@ -1,0 +1,130 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠锻造宝剑的传说",
+  "characters": [
+    "铸剑大师",
+    "学徒"
+  ],
+  "objects": [
+    "剑坯（铁块）",
+    "标准炉火（特定温度的炭火）",
+    "水的沸点",
+    "铁的熔点和沸点",
+    "铝的熔点和沸点",
+    "氧气的熔点和沸点",
+    "锻造规则（火候与材料性质的关系）"
+  ],
+  "conflict": "铸剑大师发现，即使使用标准炉火，不同材料的剑坯（铁、水、铝、氧气）的熔炼状态却各不相同，这让他困惑于火候与材料性质之间的规律。",
+  "event_chain": [
+    "铸剑大师使用标准炉火（n1→n2）",
+    "标准炉火使剑坯达到可锻造状态（n1→n3）",
+    "可锻造状态使水剑坯达到沸点（n3→n4）",
+    "可锻造状态使铁剑坯达到熔点和沸点（n3→n5）",
+    "可锻造状态使铝剑坯达到熔点和沸点（n3→n6）",
+    "可锻造状态使氧气剑坯达到熔点和沸点（n3→n7）",
+    "锻造规则（火候与材料性质的关系）约束可锻造状态（n8→n3）"
+  ],
+  "turning_point": "铸剑大师领悟到，标准炉火虽固定，但不同材料的内在性质决定了它们达到熔炼状态的条件，从而理解了火候与材料性质的普遍规律。",
+  "resolution_state": "铸剑大师根据锻造规则，针对不同材料调整火候，成功锻造出各种宝剑。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "标准炉火",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "标准炉火（特定温度的炭火）",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "可锻造状态",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "水的沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "铁的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "铝的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "氧气的熔点和沸点",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "锻造规则（火候与材料性质的关系）",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准炉火是标准炉火的一种具体表现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "标准炉火使剑坯达到可锻造状态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "可锻造状态使水剑坯达到沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "可锻造状态使铁剑坯达到熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "可锻造状态使铝剑坯达到熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "可锻造状态使氧气剑坯达到熔点和沸点",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "锻造规则约束可锻造状态",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'大气压强'、'气压'、'标准大气压强'等词汇。",
+    "注意'标准炉火'对应'标准大气压强'，但不可直接使用原词。",
+    "所有节点和边均已映射，方向保持。",
+    "故事为单一连贯的古代工匠锻造传说，未使用无关隐喻。"
+  ],
+  "mapping_context_sha256": "743017e0063ce0e1b71101c89a92c9c8767fa2c9c7bf90fa3db6a4ea9b437116",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "49dbea799edc70f16c4803901e58918576152ed07b4d926eb9d86f3878348a8a"
+  }
+}

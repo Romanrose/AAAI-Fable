@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly shows n1 (入口条件核对) as a prerequisite for n2 (结果验收记录), with the edge e1 (enables) preserved through the sequence of actions: condition check first, then process, then result verification. The turning point where skipping the intermediate step leads to failure reinforces the direction and necessity of the relation. This is observably better than a version where the order is reversed or the relation is merely mentioned without causal consequence."
+  },
+  "revision_instructions": [
+    "No revision needed; all requirements met."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

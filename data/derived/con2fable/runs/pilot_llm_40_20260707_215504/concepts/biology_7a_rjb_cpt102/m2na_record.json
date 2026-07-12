@@ -1,0 +1,187 @@
+{
+  "id": "biology_7a_rjb_cpt102",
+  "method": "con2fable",
+  "concept": {
+    "name": "种子萌发的环境条件",
+    "aliases": [],
+    "forbidden_terms": [
+      "种子萌发的环境条件"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：一定的水分",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：充足的空气（氧气）",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "需要保留上下位关系：种子萌发",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m5",
+        "text": "需要保留上下位关系：适宜的温度",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：种子萌发",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14133"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10774"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10775"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10772"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10773"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "古镇的陶艺工坊里，老陶匠正对着一块上好的黏土发愁。这块黏土质地细腻，颜色温润，本该是制作花瓶的好材料，可它却始终软塌塌地摊在角落，怎么也立不起来。\n\n“奇怪，”老陶匠蹲下身，用手指戳了戳黏土，“明明是好料子，怎么就是不成形呢？”\n\n黏土团委屈地缩了缩身子。它多么渴望能被老陶匠的巧手塑造成一件精美的器皿啊，可工坊里的环境似乎总跟它作对——有时冷得它浑身僵硬，一碰就裂；有时又干得它表面起皮，怎么也揉不到一起；有时工坊门窗紧闭，它闷得透不过气，浑身发软。\n\n老陶匠没有放弃。他先端来一盆温水，将黏土浸泡其中。黏土贪婪地吸收着水分，渐渐变得柔软而有韧性，不再干裂。\n\n“还不够，”老陶匠说着，推开了工坊的通风窗。清新的空气涌了进来，黏土感觉浑身舒畅，不再憋闷发霉。\n\n最后，老陶匠点燃了角落里的炭火炉。温暖的空气在工坊里缓缓流动，黏土不再因寒冷而僵硬，反而变得温顺听话。\n\n“现在，让我们开始吧。”老陶匠洗净双手，将处理好的黏土放在转盘上。他的手指轻轻按压，黏土便顺从地旋转起来，一点一点向上拔高，渐渐显露出优雅的曲线。\n\n当夕阳透过窗棂洒进工坊时，转盘上已经立起了一个线条流畅的花瓶。它静静地站在那里，不再软塌，不再开裂，而是挺直了腰身，仿佛在说：“我终于成了我想要的样子。”\n\n老陶匠满意地端详着自己的作品，轻轻将它移到架子上晾干。他知道，这只是一个开始，但至少，黏土已经迈出了最关键的一步。\n\n老陶匠望着架子上的花瓶，心中明白：黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可，就像任何生命的转变都需要外部条件同时满足，而非仅靠内在的渴望。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "黏土塑形需要的外部条件",
+        "evidence": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可，就像任何生命的转变都需要外部条件同时满足",
+        "narrative_anchor": "温水盆的湿润、通风窗的清新空气和炭火炉的温暖"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "一定的水分",
+        "evidence": "温水盆的湿润",
+        "narrative_anchor": "温水盆的湿润"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "充足的空气（氧气）",
+        "evidence": "通风窗的清新空气",
+        "narrative_anchor": "通风窗的清新空气"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "种子萌发（黏土塑形）",
+        "evidence": "黏土能塑形",
+        "narrative_anchor": "黏土能塑形"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "适宜的温度",
+        "evidence": "炭火炉的温暖",
+        "narrative_anchor": "炭火炉的温暖"
+      },
+      {
+        "concept_node_id": "m6",
+        "narrative_element": "与种子萌发（黏土塑形）相关的外部条件",
+        "evidence": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可",
+        "narrative_anchor": "温水盆的湿润、通风窗的清新空气和炭火炉的温暖"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先提供水分，再提供空气",
+        "evidence": "他先端来一盆温水，将黏土浸泡其中。黏土贪婪地吸收着水分，渐渐变得柔软而有韧性，不再干裂。'还不够，'老陶匠说着，推开了工坊的通风窗。清新的空气涌了进来",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "先端来一盆温水……推开了工坊的通风窗"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "提供水分后，再提供空气",
+        "evidence": "他先端来一盆温水……推开了工坊的通风窗。清新的空气涌了进来",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "先端来一盆温水……推开了工坊的通风窗"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "提供空气后，再提供温度",
+        "evidence": "推开了工坊的通风窗。清新的空气涌了进来……最后，老陶匠点燃了角落里的炭火炉。温暖的空气在工坊里缓缓流动",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "推开了工坊的通风窗……点燃了角落里的炭火炉"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "提供温度后，黏土开始塑形",
+        "evidence": "温暖的空气在工坊里缓缓流动，黏土不再因寒冷而僵硬，反而变得温顺听话。'现在，让我们开始吧。'老陶匠洗净双手，将处理好的黏土放在转盘上。他的手指轻轻按压，黏土便顺从地旋转起来，一点一点向上拔高，渐渐显露出优雅的曲线",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "温暖的空气……黏土便顺从地旋转起来，一点一点向上拔高"
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "黏土塑形后，总结外部条件的重要性",
+        "evidence": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可",
+        "narrative_source_concept_node_id": "m5",
+        "narrative_target_concept_node_id": "m6",
+        "direction_preserved": true,
+        "narrative_anchor": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "biology",
+    "story_language": "zh-CN",
+    "concept_type": "definition",
+    "generation_priority": "gold"
+  }
+}

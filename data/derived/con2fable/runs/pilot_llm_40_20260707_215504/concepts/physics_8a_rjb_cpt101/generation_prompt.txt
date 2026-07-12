@@ -1,0 +1,146 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "焦距"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：光心",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：凸透镜成像规律",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：焦点",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17247"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17190"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19710"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "光学透镜制造与调试",
+    "setting": "一座精密光学仪器工坊，工匠们正在调试一批用于天文望远镜的凸透镜。工坊中央有一台可调节透镜曲率和厚度的打磨机，以及一个用于测试光线偏折效果的暗室。",
+    "conflict": "首席工匠发现，无论怎样打磨透镜，光线汇聚的焦点位置总是不稳定，导致成像模糊。他需要找到决定透镜对光线偏折能力的核心参数，才能制造出完美的透镜。",
+    "characters": [
+      {
+        "name": "老陈",
+        "role": "经验丰富但陷入瓶颈的首席工匠，负责最终调试",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "小张",
+        "role": "学徒，负责记录和操作打磨机",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "透镜毛坯",
+        "role": "被加工的对象，其物理特性决定结果",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "测试光斑",
+        "role": "光线经过透镜后汇聚成的亮点，是调试的最终判据",
+        "mapped_element": "m4"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老陈反复思考的‘透镜中心到汇聚点的距离’这个关键参数"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "小张操作的打磨机，以及透镜的‘中心点’（光心）作为测量的基准"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "透镜毛坯的‘成像规律’——即光线经过后如何汇聚或发散的特性"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "测试光斑的‘位置’（焦点），它直接反映了透镜的偏折能力"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老陈发现所有透镜的成像都不清晰，焦点位置飘忽不定。他意识到问题出在透镜本身，而非打磨工艺。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "小张检查打磨机，确认机器运转正常，并以透镜的‘中心点’为基准重新校准了测量工具。",
+        "mapped_elements": [
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老陈开始系统性地改变透镜的曲率，并观察光线经过透镜后的‘成像规律’——他发现曲率越大，光线偏折越厉害，汇聚点离透镜越近。",
+        "mapped_elements": [
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "通过反复实验，老陈终于确定：透镜中心到汇聚点的距离，是决定光线偏折能力的唯一关键。他根据这个距离，成功预测并制造出了焦点位置精准的透镜。",
+        "mapped_elements": [
+          "m4"
+        ]
+      }
+    ],
+    "turning_point": "老陈不再盲目打磨，而是开始测量并记录透镜中心到汇聚点的距离，发现这个距离与透镜曲率之间存在精确的反比关系。",
+    "ending": "老陈根据这个关键距离参数，设计并制造出了焦点位置完全符合要求的透镜。天文望远镜的成像变得无比清晰，工坊名声大噪。",
+    "implied_moral": "决定事物能力的核心，往往在于其内部某个关键点之间的距离，这个距离决定了它对其他事物的影响程度。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "query": "math_1a_rjb_cpt22",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt22",
+    "label": "Concept",
+    "name": "分拆数6和7",
+    "definition": "把6或7分成两个部分，了解所有不同的分法。",
+    "aliases": [],
+    "examples": [
+      "7分成：1和6、2和5、3和4"
+    ],
+    "retrieval_text": "分拆数6和7\n把6或7分成两个部分，了解所有不同的分法。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt19",
+        "label": "Concept",
+        "name": "数字6和7的认识",
+        "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。"
+      },
+      {
+        "id": "math_1a_rjb_cpt20",
+        "label": "Concept",
+        "name": "6和7的加法",
+        "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+      },
+      {
+        "id": "math_1a_rjb_cpt21",
+        "label": "Concept",
+        "name": "6和7的减法",
+        "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5",
+        "label": "Chapter",
+        "name": "6~10的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:16343] 分拆数6和7 --prerequisites_for--> 6和7的减法\n- [normalized:edge:16342] 分拆数6和7 --prerequisites_for--> 6和7的加法\n- [normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7\n- [normalized:edge:16381] 利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '分拆数6和7', 'definition': '把6或7分成两个部分，了解所有不同的分法。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:16343] 分拆数6和7 --prerequisites_for--> 6和7的减法', '[normalized:edge:16342] 分拆数6和7 --prerequisites_for--> 6和7的加法', '[normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7', '[normalized:edge:16381] 利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7'], 'process_summary': [], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt22",
+      "label": "Concept",
+      "name": "分拆数6和7",
+      "properties": {
+        "definition": "把6或7分成两个部分，了解所有不同的分法。",
+        "importance": "掌握",
+        "examples": [
+          "7分成：1和6、2和5、3和4"
+        ],
+        "retrieval_text": "分拆数6和7\nConcept\n把6或7分成两个部分，了解所有不同的分法。\n掌握\n7分成：1和6、2和5、3和4"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16343",
+        "source": "math_1a_rjb_cpt22",
+        "source_name": "分拆数6和7",
+        "target": "math_1a_rjb_cpt21",
+        "target_name": "6和7的减法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16342",
+        "source": "math_1a_rjb_cpt22",
+        "source_name": "分拆数6和7",
+        "target": "math_1a_rjb_cpt20",
+        "target_name": "6和7的加法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16341",
+        "source": "math_1a_rjb_cpt19",
+        "source_name": "数字6和7的认识",
+        "target": "math_1a_rjb_cpt22",
+        "target_name": "分拆数6和7",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16381",
+        "source": "math_1a_rjb_skl11",
+        "source_name": "利用摆摆、画一画理解数量",
+        "target": "math_1a_rjb_cpt22",
+        "target_name": "分拆数6和7",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "分拆数6和7",
+        "definition": "把6或7分成两个部分，了解所有不同的分法。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:16343] 分拆数6和7 --prerequisites_for--> 6和7的减法",
+        "[normalized:edge:16342] 分拆数6和7 --prerequisites_for--> 6和7的加法",
+        "[normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7",
+        "[normalized:edge:16381] 利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7"
+      ],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 4,
+      "candidate_edge_count": 4,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 1071,
+      "summary_chars": 448,
+      "path_chars": 0,
+      "retrieval_context_chars": 1519
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1071,
+    "summary_chars": 448,
+    "path_chars": 0,
+    "retrieval_context_chars": 1519
+  }
+}

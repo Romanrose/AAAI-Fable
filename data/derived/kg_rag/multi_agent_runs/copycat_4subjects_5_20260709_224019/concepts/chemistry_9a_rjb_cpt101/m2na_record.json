@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt101",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "氧气的检验方法",
+    "aliases": [],
+    "forbidden_terms": [
+      "氧气的检验方法"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:15246",
+        "source_name": "支持燃烧",
+        "target_name": "氧气的检验方法",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "verifies",
+        "source_edge_id": "normalized:edge:22566",
+        "source_name": "实验2-2 带火星木条在氧气中的复燃",
+        "target_name": "氧气的检验方法",
+        "relation_semantic_role": "evidence_verification"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "账房仓库里，新到了一批封存箱。调度员按旧例，把通行牌挂在箱上，准备让验收员直接登记入库。\n\n记录员拦住他：“你还没核对入口条件牌。”\n\n“什么条件牌？”\n\n“就是那面挂在仓库门柱上的木牌。上面写着，只有用带火星的细木条伸进箱缝，木条能重新燃起，才能确认这箱子里装的是能助燃的货。如果木条不燃，就不能走后面的登记。”\n\n调度员觉得多此一举，但记录员坚持要按规矩来。他取来细木条，在炭炉上引燃，吹灭明火，只剩火星。然后，他小心地将木条伸进箱缝。木条上的火星变亮，接着燃起明火。\n\n“这箱货是助燃的。”记录员在分段记录册上写下第一笔。\n\n调度员这才开始登记，把箱号、来源、批次一一记录。接着，他需要完成账房仓库中的第2道转化环节——把这批货从“待验”状态转为“可入库”状态。这一步必须依据前一步的记录，不能跳。\n\n有个新来的伙计想省事，趁记录员不在，直接把一批没经过木条测试的箱子登记成“可入库”。结果验收员复查时，发现那箱子的木条根本不燃，而记录册上却写着“助燃货”。整个流程乱了套，所有箱子都得重新核对。\n\n最后，众人把入口条件牌重新挂好，从第一箱开始，按条件、过程、结果一步步走完。记录员用分段记录册核对每一条，调度员按顺序推进，验收员用结果验收记录复核。三本册子终于能互相印证，账房仓库才恢复了秩序。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件牌",
+        "evidence": "入口条件牌",
+        "narrative_anchor": "入口条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "第2道转化环节",
+        "narrative_anchor": "第2道转化环节",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.85
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先确认入口条件牌，再开始登记",
+        "evidence": "核对入口条件牌",
+        "narrative_anchor": "核对入口条件牌",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.9
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "用记录、比较和复查来检验判断",
+        "evidence": "记录员用分段记录册核对",
+        "narrative_anchor": "记录员用分段记录册核对",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

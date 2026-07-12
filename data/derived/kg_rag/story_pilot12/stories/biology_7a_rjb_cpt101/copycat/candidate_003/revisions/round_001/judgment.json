@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All mappings are strong and consistent. Node n1 (process) is most clearly embodied by the '后台登记流程' which is the central action. Node n2 (external conditions) is well-mapped to '通行牌齐全' but could be slightly more distinct from n3's mapping. Edge e1 is well-preserved in direction and relation, but the story's evidence for e1 and e2 is very similar, making them less distinguishable."
+  },
+  "revision_instructions": [
+    "The story length is 880 characters, exceeding the 450-750 limit. Please shorten the story to fit within the required range.",
+    "Consider making the mapping for edge e2 (internal conditions enabling process) more distinct from e1, perhaps by emphasizing the internal nature of the personnel/record condition versus the external nature of the entry pass condition."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

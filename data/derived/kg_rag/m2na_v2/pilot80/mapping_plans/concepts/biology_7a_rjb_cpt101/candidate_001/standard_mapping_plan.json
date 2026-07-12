@@ -1,0 +1,75 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的磨坊",
+  "characters": [
+    "磨坊主",
+    "学徒"
+  ],
+  "objects": [
+    "磨盘",
+    "水车",
+    "谷物",
+    "仓库"
+  ],
+  "conflict": "磨坊主想启动磨盘磨面，但水车因水流不足而无法转动，且仓库中的谷物因潮湿而发霉，无法使用。",
+  "event_chain": [
+    "磨坊主检查水车，发现水流太小，无法带动水车转动。",
+    "磨坊主检查仓库，发现谷物潮湿发霉，无法用于磨面。",
+    "磨坊主修复水车，调整水闸使水流增大，水车开始转动。",
+    "磨坊主清理仓库，挑选出未发霉的谷物，并晾干备用。",
+    "磨坊主将谷物倒入磨盘，水车带动磨盘转动，开始磨面。",
+    "磨坊主成功磨出面粉，学徒帮忙收集面粉。"
+  ],
+  "turning_point": "磨坊主同时解决了水车的水流问题和谷物的霉变问题，使磨盘得以启动。",
+  "resolution_state": "磨坊成功运转，磨出面粉，村庄得以获得食物。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "磨盘转动磨面",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水车获得足够水流",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "谷物干燥未霉变",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水车获得足够水流 enables 磨盘转动磨面",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "谷物干燥未霉变 enables 磨盘转动磨面",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子萌发'或其同义词。",
+    "确保水车和谷物这两个条件都直接作用于磨面过程，而非相互依赖。",
+    "避免将磨坊主或学徒作为条件，而是作为操作者。"
+  ],
+  "mapping_context_sha256": "30f1ada39cf5d433c1eb5957fbdc3d8f8a2a68b67cc5733c3c075756f5f95c77",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "91b8033f5f6f02c950aa6ec81fcfe439bc2e5c45ab0df89d0a3f073dfd78e2ee"
+  }
+}

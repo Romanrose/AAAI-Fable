@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "稻种在田里待了几天，根扎稳了，芽也长高了。",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "阳光晒着，水温慢慢升高，稻种的外壳渐渐变软。水从壳上的小孔渗进去，稻种里头的胚乳开始膨胀。",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "他专门留下那些鼓鼓囊囊、色泽金黄、捏起来硬邦邦的稻种。有一粒稻种外壳上有个针尖大的虫眼，老农犹豫了一下，还是把它剔了出去。",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "阳光晒着，水温慢慢升高，稻种的外壳渐渐变软。水从壳上的小孔渗进去，稻种里头的胚乳开始膨胀。",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他专门留下那些鼓鼓囊囊、色泽金黄、捏起来硬邦邦的稻种。有一粒稻种外壳上有个针尖大的虫眼，老农犹豫了一下，还是把它剔了出去。",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中，稻种萌发长成秧苗的过程（n1）由外部条件（n2：阳光、水分、温度）和内部条件（n3：饱满、无虫蛀）共同使能，证据分别对应故事中阳光水温使稻种膨胀、以及老农挑选饱满无虫稻种的描述。"
+}

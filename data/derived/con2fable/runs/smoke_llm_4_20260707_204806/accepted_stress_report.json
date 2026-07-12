@@ -1,0 +1,62 @@
+{
+  "suite": {
+    "base_concept_count": 1,
+    "record_count": 4,
+    "minimum_detection_rate": 0.9,
+    "maximum_clean_false_positive_rate": 0.1
+  },
+  "by_stress_type": {
+    "surface_distractor": {
+      "sample_count": 1,
+      "detected_count": 1,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "node_coverage": -1.0,
+        "edge_coverage": -1.0,
+        "weighted_node_coverage": -1.0,
+        "weighted_edge_coverage": -1.0,
+        "alignment_precision": -1.0,
+        "relation_direction_accuracy": null
+      },
+      "undetected": [],
+      "passed": true
+    },
+    "relation_corruption": {
+      "sample_count": 1,
+      "detected_count": 1,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "node_coverage": 0.0,
+        "edge_coverage": 0.0,
+        "weighted_node_coverage": 0.0,
+        "weighted_edge_coverage": 0.0,
+        "alignment_precision": 0.0,
+        "relation_direction_accuracy": -1.0
+      },
+      "undetected": [],
+      "passed": true
+    },
+    "mechanism_omission": {
+      "sample_count": 1,
+      "detected_count": 1,
+      "detection_rate": 1.0,
+      "mean_metric_delta_from_clean": {
+        "node_coverage": -1.0,
+        "edge_coverage": -1.0,
+        "weighted_node_coverage": -1.0,
+        "weighted_edge_coverage": -1.0,
+        "alignment_precision": -1.0,
+        "relation_direction_accuracy": null
+      },
+      "undetected": [],
+      "passed": true
+    }
+  },
+  "clean_samples": {
+    "false_positive_count": 0,
+    "false_positive_rate": 0.0,
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

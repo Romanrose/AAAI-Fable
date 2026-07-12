@@ -1,0 +1,15 @@
+{
+  "concept_cards_path": "data\\derived\\kg_rag\\concept_cards\\smoke_concept_cards.enriched.jsonl",
+  "output_dir": "data\\derived\\kg_rag\\concept_runs\\smoke_zh_local",
+  "mode": "local",
+  "language": "zh-CN",
+  "subject": null,
+  "priority": null,
+  "limit": 4,
+  "offset": 0,
+  "batch_size": 100,
+  "retry": 1,
+  "resume": false,
+  "evaluate_mode": "rules",
+  "concept_count": 4
+}

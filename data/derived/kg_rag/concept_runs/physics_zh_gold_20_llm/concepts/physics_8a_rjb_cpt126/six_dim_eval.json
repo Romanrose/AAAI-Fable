@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt126",
+  "target_concept": "质量守恒",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过铁块生锈、锤打成铁片、浸入河水等事件，准确演示了质量不随形状、物态和位置改变而改变的核心机制，完全符合目标概念定义。",
+    "implicitness": "故事未直接提及'质量守恒'或任何禁止术语，而是通过小周的观察和称重实验自然隐含概念，符合隐含性要求。",
+    "mapping_clarity": "每个事件（生锈、锤打、浸水）都明确对应物态、形状、位置的变化，且每次称重结果不变，映射清晰且一致。",
+    "readability": "故事语言流畅，情节连贯，角色对话自然，适合目标读者理解，无冗余或晦涩表达。",
+    "pedagogical_value": "通过学徒的探索和顿悟，引导读者理解质量守恒的规律，并强调'表面变化而本质不变'的深层含义，教学价值高。",
+    "novelty": "以钟楼和铁块为载体的故事有一定新意，但整体结构较为常见，未显著突破常见教育寓言模式。"
+  },
+  "revision_suggestions": [
+    "可增加一个对比情节，例如让另一块铁因磨损而变轻，以强化守恒的例外条件。",
+    "可在结尾稍作延伸，提示读者思考其他类似守恒规律，如能量守恒。"
+  ],
+  "rule_findings": {
+    "story_token_count": 503,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过铁块生锈、锤打成铁片、浸入河水等事件，准确演示了质量不随形状、物态和位置改变而改变的核心机制，完全符合目标概念定义。",
+      "implicitness": "故事未直接提及'质量守恒'或任何禁止术语，而是通过小周的观察和称重实验自然隐含概念，符合隐含性要求。",
+      "mapping_clarity": "每个事件（生锈、锤打、浸水）都明确对应物态、形状、位置的变化，且每次称重结果不变，映射清晰且一致。",
+      "readability": "故事语言流畅，情节连贯，角色对话自然，适合目标读者理解，无冗余或晦涩表达。",
+      "pedagogical_value": "通过学徒的探索和顿悟，引导读者理解质量守恒的规律，并强调'表面变化而本质不变'的深层含义，教学价值高。",
+      "novelty": "以钟楼和铁块为载体的故事有一定新意，但整体结构较为常见，未显著突破常见教育寓言模式。"
+    },
+    "revision_suggestions": [
+      "可增加一个对比情节，例如让另一块铁因磨损而变轻，以强化守恒的例外条件。",
+      "可在结尾稍作延伸，提示读者思考其他类似守恒规律，如能量守恒。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

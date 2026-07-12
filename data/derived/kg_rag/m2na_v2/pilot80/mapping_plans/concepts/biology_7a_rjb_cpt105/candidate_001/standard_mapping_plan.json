@@ -1,0 +1,85 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代农夫种田的故事",
+  "characters": [
+    "老农夫",
+    "小徒弟"
+  ],
+  "objects": [
+    "田地",
+    "种子",
+    "锄头",
+    "水桶",
+    "风箱"
+  ],
+  "conflict": "小徒弟种下的种子迟迟不发芽，老农夫发现是因为田地里的土太实，空气进不去，种子无法呼吸。",
+  "event_chain": [
+    "老农夫教小徒弟种田，小徒弟把种子埋进土里。",
+    "小徒弟每天浇水，但种子一直不发芽。",
+    "老农夫检查田地，发现土被踩得太实，空气无法进入。",
+    "老农夫用锄头松土，让空气能进入土壤。",
+    "种子得到空气后，开始发芽生长。"
+  ],
+  "turning_point": "老农夫用锄头松土，使空气能够进入土壤。",
+  "resolution_state": "种子在松土后获得空气，成功发芽。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "空气进入土壤",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子发芽所需的环境条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "种子通过呼吸作用获得能量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "种子发芽",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空气进入土壤是种子发芽所需的环境条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "空气进入土壤使得种子能够进行呼吸作用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "种子通过呼吸作用获得能量，从而发芽",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'充足的空气（氧气）'或'充足空气'等禁止术语。",
+    "注意保持'空气进入土壤'作为条件，而不是直接使用'空气'。",
+    "确保所有机制边方向与原始一致。"
+  ],
+  "mapping_context_sha256": "fe2d2cae2e87194bb4e2262c532e5d8355b32ca13867b80b268f2391673c62a6",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4be61e7cc27a4a789bce1fcdf0792ac0262c55ebe6253b2dc167cad1ee6e3318"
+  }
+}

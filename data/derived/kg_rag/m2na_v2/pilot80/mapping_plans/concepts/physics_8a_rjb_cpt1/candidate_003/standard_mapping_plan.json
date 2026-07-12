@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "古代工匠造桥",
+  "characters": [
+    "老桥匠",
+    "年轻学徒"
+  ],
+  "objects": [
+    "桥的跨度",
+    "标准竹尺（一丈、五尺、三尺）",
+    "用竹尺测量跨度",
+    "测量口诀"
+  ],
+  "conflict": "学徒想凭经验估算桥的跨度，但老桥匠坚持必须用标准竹尺精确测量，否则桥会垮塌。",
+  "event_chain": [
+    "老桥匠要求学徒测量河两岸的跨度以造桥。",
+    "学徒想用目测估算跨度。",
+    "老桥匠拿出标准竹尺（一丈、五尺、三尺），强调跨度必须用竹尺量。",
+    "学徒用竹尺反复测量，得到精确跨度数值。",
+    "老桥匠根据测量结果，教授学徒使用竹尺的测量口诀（如“对齐零刻线、紧贴桥面、读数时视线垂直”）。"
+  ],
+  "turning_point": "学徒发现目测估算的跨度与竹尺测量结果相差很大，意识到精确测量的必要性。",
+  "resolution_state": "学徒学会用标准竹尺测量跨度，并掌握测量口诀，成功造出稳固的桥。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "桥的跨度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "标准竹尺（一丈、五尺、三尺）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用竹尺测量跨度",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "测量口诀",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准竹尺是桥的跨度的一种度量单位",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "用竹尺测量跨度验证了桥的跨度的精确数值",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "桥的跨度使得测量口诀得以应用",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保“桥的跨度”不直接等同于“长度”，避免使用禁止词。",
+    "确保“标准竹尺”不直接等同于“长度单位”，但保持“is_a”关系。",
+    "确保“用竹尺测量跨度”不直接等同于“用刻度尺测量长度”，但保持“verifies”关系。",
+    "确保“测量口诀”不直接等同于“使用刻度尺的方法”，但保持“enables”关系。",
+    "整个故事围绕造桥这一连贯源域，不引入无关比喻。"
+  ],
+  "mapping_context_sha256": "04c35911ccf3dfb2b79ee72e850930088a1e8c56d0f43b259e3c0e0b53d6aa2c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3e22e2336f1c8a04adec2288a63d30ecec9c56031c731935b01520c58d916df4"
+  }
+}

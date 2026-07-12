@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整且准确地呈现了排水法收集气体的核心操作（倒扣装满水的瓶子、气体进入排出水）和适用条件（气体不溶于水、不反应），无任何错误或矛盾。",
+    "implicitness": "目标概念名称“排水法收集气体”及其别名均未在故事正文中出现，所有关键步骤和条件均通过情节自然隐含，符合隐含性要求。",
+    "mapping_clarity": "故事中的每个关键元素（倒扣瓶子、水槽、气体进入、水被排出）都清晰对应概念定义中的操作和原理，映射明确且易于识别。",
+    "readability": "故事语言流畅、情节连贯，用词简单易懂，适合目标读者，无冗余或晦涩表达。",
+    "pedagogical_value": "故事通过小明观察气泡、水位变化和智者解释，有效传达了排水法的原理和适用条件，能帮助学习者理解并记忆概念。",
+    "novelty": "故事采用账房和智者背景，有一定创意，但核心情节（用倒扣瓶子收集气体）在科学教育中较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑在故事中增加一个对比案例（如气体溶于水导致失败），以强化适用条件的教学效果。",
+    "可加入更多细节描述气泡上升和水位下降的视觉变化，提升沉浸感。"
+  ]
+}

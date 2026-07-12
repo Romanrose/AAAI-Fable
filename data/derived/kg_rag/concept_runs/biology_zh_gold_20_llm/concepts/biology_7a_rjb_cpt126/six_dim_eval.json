@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt126",
+  "target_concept": "气孔",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确反映了气孔的结构（由两个半月形保卫细胞控制）、功能（蒸腾作用和气体交换的门户）以及调节机制（根据环境开闭），无任何科学错误。",
+    "implicitness": "故事完全避免了直接使用'气孔'、'保卫细胞'等术语，通过'窗口'、'小门卫'等隐喻和观察事件隐含地传达了概念，符合隐含性要求。",
+    "mapping_clarity": "故事中'窗口'对应气孔，'小门卫'对应保卫细胞，'打开/关闭'对应气孔的开闭机制，映射清晰且一致，读者能自然理解。",
+    "readability": "语言流畅自然，情节简单有趣，适合目标读者（中学生），无复杂句式或生僻词汇，可读性高。",
+    "pedagogical_value": "故事通过小蜗牛的观察和发现，生动展示了气孔的结构与功能，并隐含了蒸腾作用和保卫细胞等前置概念，能有效促进理解。",
+    "novelty": "以园圃和小蜗牛为视角，通过日常观察揭示科学原理，有一定新意，但类似拟人化手法在科普中较常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可增加不同植物气孔调节差异的具体例子，如仙人掌白天关闭气孔，以增强教学价值。",
+    "结尾可稍作扩展，暗示气孔与光合作用的关系，丰富概念网络。"
+  ],
+  "rule_findings": {
+    "story_token_count": 474,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确反映了气孔的结构（由两个半月形保卫细胞控制）、功能（蒸腾作用和气体交换的门户）以及调节机制（根据环境开闭），无任何科学错误。",
+      "implicitness": "故事完全避免了直接使用'气孔'、'保卫细胞'等术语，通过'窗口'、'小门卫'等隐喻和观察事件隐含地传达了概念，符合隐含性要求。",
+      "mapping_clarity": "故事中'窗口'对应气孔，'小门卫'对应保卫细胞，'打开/关闭'对应气孔的开闭机制，映射清晰且一致，读者能自然理解。",
+      "readability": "语言流畅自然，情节简单有趣，适合目标读者（中学生），无复杂句式或生僻词汇，可读性高。",
+      "pedagogical_value": "故事通过小蜗牛的观察和发现，生动展示了气孔的结构与功能，并隐含了蒸腾作用和保卫细胞等前置概念，能有效促进理解。",
+      "novelty": "以园圃和小蜗牛为视角，通过日常观察揭示科学原理，有一定新意，但类似拟人化手法在科普中较常见，新颖性中等偏上。"
+    },
+    "revision_suggestions": [
+      "可增加不同植物气孔调节差异的具体例子，如仙人掌白天关闭气孔，以增强教学价值。",
+      "结尾可稍作扩展，暗示气孔与光合作用的关系，丰富概念网络。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

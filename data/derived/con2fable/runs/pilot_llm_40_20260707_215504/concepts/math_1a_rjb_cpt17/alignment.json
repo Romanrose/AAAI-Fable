@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "穹顶钢梁两端到中心距离相等的条件",
+      "evidence": "每一根钢梁的两端到穹顶中心点的距离，都完全一致",
+      "narrative_anchor": "每一根钢梁的两端到穹顶中心点的距离，都完全一致"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "按长度分类钢梁",
+      "evidence": "凡是两端到中心距离相等的，就归为一组；不相等的，单独放一边",
+      "narrative_anchor": "凡是两端到中心距离相等的，就归为一组；不相等的，单独放一边"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "基于距离相等的条件进行形状分类",
+      "evidence": "凡是两端到中心距离相等的，就归为一组",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "凡是两端到中心距离相等的，就归为一组"
+    }
+  ]
+}

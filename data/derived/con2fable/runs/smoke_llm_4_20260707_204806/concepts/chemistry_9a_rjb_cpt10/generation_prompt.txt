@@ -1,0 +1,264 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "沸点"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：大气压强",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：条件对物质性质的影响",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：氧气的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：水的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：铁的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m7",
+        "text": "与相关概念保持可解释关系：铝的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：大气压强",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14999"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15075"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14995"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14992"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14993"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14994"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18222"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "高原烹饪与气压锅",
+    "setting": "一座海拔四千米的高原小镇上，一家名为“云端厨房”的小餐馆。厨房里摆满了各种锅具和食材，窗外是稀薄的空气和连绵的雪山。",
+    "conflict": "厨师老张发现，按照平原的菜谱，水永远烧不开，肉永远煮不烂，顾客纷纷抱怨。他必须在高原的特殊环境下，找到让食物真正“沸腾”和“熟透”的方法。",
+    "characters": [
+      {
+        "name": "老张",
+        "role": "经验丰富的厨师，面对高原环境感到困惑，是探索和解决问题的核心角色。",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "高原的空气",
+        "role": "无形的环境力量，是导致水无法烧开、食物煮不烂的根本原因。",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "气压锅",
+        "role": "老张最终找到的解决方案，通过改变内部压强来改变水的沸腾条件。",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "水",
+        "role": "烹饪的基本介质，其沸腾状态受环境压强影响。",
+        "mapped_element": "m4"
+      },
+      {
+        "name": "土豆",
+        "role": "一种常见的、需要长时间水煮才能变软的食物，是检验烹饪效果的标尺。",
+        "mapped_element": "m5"
+      },
+      {
+        "name": "牛肉",
+        "role": "另一种需要高温长时间炖煮的食材，比土豆更难对付。",
+        "mapped_element": "m6"
+      },
+      {
+        "name": "豆子",
+        "role": "一种在高原上极难煮烂的食材，是挑战的顶点。",
+        "mapped_element": "m7"
+      },
+      {
+        "name": "气压计",
+        "role": "测量环境压强的工具，帮助老张理解问题的本质。",
+        "mapped_element": "m8"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老张发现高原上水烧不开、食物煮不烂的困惑与探索过程"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "高原上稀薄的大气，导致水的沸点降低"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "老张使用气压锅，通过增加锅内压强来提升水的沸点"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "水在高原上不到100度就沸腾的现象"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "土豆在普通锅里煮不熟，在气压锅里却能很快煮烂"
+      },
+      {
+        "concept_element": "m6",
+        "narrative_carrier": "牛肉在普通锅里炖不烂，在气压锅里变得软烂"
+      },
+      {
+        "concept_element": "m7",
+        "narrative_carrier": "豆子在普通锅里始终坚硬，在气压锅里被彻底征服"
+      },
+      {
+        "concept_element": "m8",
+        "narrative_carrier": "老张通过气压计读数，理解了压强与沸腾温度的关系"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "老张在高原厨房里烧水，水在80度左右就沸腾了，但煮的土豆和牛肉始终是硬的。顾客投诉不断。",
+        "mapped_elements": [
+          "m1",
+          "m2",
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "老张观察气压计，发现高原气压远低于平原，意识到是稀薄的空气导致水无法达到足够的温度。",
+        "mapped_elements": [
+          "m2",
+          "m8"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老张想起一个老办法——使用气压锅。他明白，通过密封加压，可以人为地提高锅内的压强。",
+        "mapped_elements": [
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "老张用气压锅煮土豆，水在更高的温度下沸腾，土豆很快变得软糯。",
+        "mapped_elements": [
+          "m4",
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "老张用气压锅炖牛肉，牛肉在高压下迅速变得酥烂。",
+        "mapped_elements": [
+          "m6"
+        ]
+      },
+      {
+        "beat_id": "b6",
+        "event": "老张挑战最难煮的豆子，在气压锅的帮助下，豆子也完全煮烂了。",
+        "mapped_elements": [
+          "m7"
+        ]
+      },
+      {
+        "beat_id": "b7",
+        "event": "老张看着气压计和咕嘟冒泡的气压锅，彻底明白了：改变环境条件，就能改变物质变化的临界点。",
+        "mapped_elements": [
+          "m8",
+          "m1"
+        ]
+      }
+    ],
+    "turning_point": "老张放弃在普通锅里加大火力的徒劳尝试，转而使用气压锅，从改变环境压强入手解决问题。",
+    "ending": "“云端厨房”的招牌菜重新赢得了顾客的喜爱。老张在厨房里贴了一张纸条：“记住，不是水不够烫，是这里的空气太稀薄。”",
+    "implied_moral": "事物的性质并非一成不变，它依赖于所处的环境条件。改变环境，就能改变事物发生质变的那个关键节点。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

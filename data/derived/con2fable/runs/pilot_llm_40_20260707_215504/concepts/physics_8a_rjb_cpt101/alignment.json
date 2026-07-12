@@ -1,0 +1,57 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "从透镜中心到汇聚点的距离",
+      "evidence": "从透镜中心到汇聚点的距离",
+      "narrative_anchor": "从透镜中心到汇聚点的距离"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "透镜正中心那个透明的点",
+      "evidence": "透镜正中心那个透明的点",
+      "narrative_anchor": "透镜正中心那个透明的点"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "凸透镜成像规律",
+      "evidence": "成像模糊得像隔着一层雾",
+      "narrative_anchor": "成像模糊得像隔着一层雾"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "焦点",
+      "evidence": "光线透过透镜后汇聚成的那个小光点",
+      "narrative_anchor": "光线透过透镜后汇聚成的那个小光点"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "以透镜中心为基准测量从中心到汇聚点的距离",
+      "evidence": "他让小张在透镜中心做好标记，然后精确测量从那个中心点到光线汇聚点之间的距离",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "他让小张在透镜中心做好标记，然后精确测量从那个中心点到光线汇聚点之间的距离"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "通过控制从透镜中心到汇聚点的距离来获得清晰成像",
+      "evidence": "只要控制好这个距离，就能让光线精准地汇聚到我们想要的位置",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "只要控制好这个距离，就能让光线精准地汇聚到我们想要的位置"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "汇聚点（焦点）的位置决定了成像的清晰度",
+      "evidence": "光斑稳稳地落在预定位置，清晰得像一颗星星",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "光斑稳稳地落在预定位置，清晰得像一颗星星"
+    }
+  ]
+}

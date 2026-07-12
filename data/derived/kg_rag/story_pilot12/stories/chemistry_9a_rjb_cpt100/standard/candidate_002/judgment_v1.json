@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n2 (氧化反应) to '树根吸收水分和养料的过程' is conceptually sound but the story explicitly states '枯枝燃烧的过程是树根吸收水分和养料过程的一种', which reverses the intended is_a hierarchy (n3 is_a n2, but story says n3 is_a n2's mapping). This is a critical direction error that weakens the mapping. In contrast, n1 (缓慢氧化) is perfectly realized as '老树的缓慢生长过程' with clear evidence and correct is_a relations."
+  },
+  "revision_instructions": [
+    "Correct edge e2: The story states '枯枝燃烧的过程是树根吸收水分和养料过程的一种', but the mechanism requires that 燃烧 (n3) is a type of 氧化反应 (n2). The story should instead say '树根吸收水分和养料的过程是枯枝燃烧过程的一种' or rephrase to reflect that 氧化反应 is the broader category. Alternatively, adjust the mapping of n2 to a more general process that encompasses both growth and burning.",
+    "Ensure that all is_a relations (e1, e2, e3) maintain the correct parent-child direction: the mapped carrier for n2 should be the parent of the mapped carriers for n1 and n3."
+  ],
+  "final_status": "revise"
+}

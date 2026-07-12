@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "入口处的条件牌",
+      "narrative_anchor": "入口处的条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "第二道转化环节",
+      "narrative_anchor": "第二道转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先确认入口条件，再推动第二道转化",
+      "evidence": "先确认条件牌是否齐全，调度员再按留下的条件继续推进第二步",
+      "narrative_anchor": "先确认条件牌是否齐全，调度员再按留下的条件继续推进第二步",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先推动第二道转化，再做结果验收",
+      "evidence": "调度员再按留下的条件继续推进第二步，验收员最后用结果验收记录核对整条安排",
+      "narrative_anchor": "调度员再按留下的条件继续推进第二步，验收员最后用结果验收记录核对整条安排",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

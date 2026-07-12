@@ -1,0 +1,73 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt25",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个农夫种瓜的故事",
+  "characters": [
+    "农夫",
+    "瓜苗",
+    "瓜藤"
+  ],
+  "objects": [
+    "土地",
+    "水",
+    "阳光",
+    "瓜"
+  ],
+  "conflict": "农夫想要种出又大又甜的瓜，但瓜苗和瓜藤需要先长好，否则结不出好瓜。",
+  "event_chain": [
+    "农夫先松土、播种，让瓜苗在土地里扎根，并认识阳光和水分（对应掌握数字6的认识）。",
+    "农夫再引导瓜藤学会分叉和缠绕，即一根藤分出两枝，或两枝合为一藤（对应掌握分与合）。",
+    "农夫在瓜苗和瓜藤都长好后，才让它们开花结果，结出6个瓜，或从6个瓜中摘取一些（对应掌握6的加减法）。"
+  ],
+  "turning_point": "瓜藤学会分与合后，农夫开始让它们结果。",
+  "resolution_state": "瓜藤结出6个瓜，农夫根据需要摘取或添加，总数始终是6。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "瓜苗在土地里扎根，并认识阳光和水分",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "瓜藤学会分叉和缠绕（分与合）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "瓜藤结出6个瓜，或从6个瓜中摘取",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "瓜苗扎根并认识阳光水分后，才能让瓜藤结果",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "瓜藤学会分与合后，才能让瓜藤结果",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'6的加减法'等禁止术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如教学顺序）误作因果机制。"
+  ],
+  "mapping_context_sha256": "3e8812793dacbbe55d9fafa3add6f8526f0c81fe4b43f2423498fd45261250c7",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "6eb8090adea5f3d3f0a04acc2d0b301466ee0a667a8ad251b7fb8cc943c0c1b5"
+  }
+}

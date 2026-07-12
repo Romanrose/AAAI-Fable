@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt19",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫种瓜的故事",
+  "characters": [
+    "农夫",
+    "瓜苗"
+  ],
+  "objects": [
+    "田地",
+    "水",
+    "肥料",
+    "剪刀"
+  ],
+  "conflict": "农夫想要种出又大又甜的瓜，但不知道如何正确照料瓜苗才能让它们结出好瓜。",
+  "event_chain": [
+    "农夫在田地里种下瓜苗，每天观察瓜苗的生长情况，记录叶子的数量和藤蔓的长度。",
+    "农夫通过给瓜苗浇水和施肥，让瓜苗长出更多的藤蔓，最终结出6个或7个瓜。",
+    "农夫通过剪掉一些多余的藤蔓，让瓜苗减少负担，最终剩下6个或7个瓜。",
+    "农夫把瓜藤分成两段，分别数出每段上的瓜数，发现所有不同的分法，比如7个瓜分成1和6、2和5、3和4。"
+  ],
+  "turning_point": "农夫意识到，只有先仔细观察和记录瓜苗的生长（认识瓜的数量），才能正确地进行浇水施肥（加法）、修剪（减法）和分藤（拆分）。",
+  "resolution_state": "农夫按照正确的顺序照料瓜苗，最终种出了又大又甜的瓜，并且学会了如何通过不同的方法得到想要的瓜数。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫通过数叶子、量藤长等方式认识瓜苗上瓜的数量（6或7）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫通过浇水和施肥，让瓜苗合并生长，得到6或7个瓜",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫通过剪掉多余藤蔓，去掉一部分瓜，得到差为6或7的瓜数",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫把瓜藤分成两段，数出每段瓜数，了解所有不同的分法",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫认识瓜的数量后，开始浇水施肥（加法）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫认识瓜的数量后，开始剪藤（减法）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫认识瓜的数量后，开始分藤（拆分）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数字6和7的认识'等禁止术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "确保故事是一个连贯的种瓜过程，而不是多个无关比喻。",
+    "注意不要将课程背景（如教学顺序）作为因果机制。"
+  ],
+  "mapping_context_sha256": "8780a6362d746ae5b14848149d0f898409c58815dd993a2e7cc9f4eac6c8078a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3b07a55804f81b7203dc3c31fd1cf7881ebdcd54069b41b722c3fb4910ca43de"
+  }
+}

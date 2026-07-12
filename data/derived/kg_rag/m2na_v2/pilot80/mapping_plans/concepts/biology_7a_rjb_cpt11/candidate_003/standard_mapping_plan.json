@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt11",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个古代村庄的砖窑与砖块",
+  "characters": [
+    "砖窑主人",
+    "砖块"
+  ],
+  "objects": [
+    "砖窑",
+    "砖块",
+    "砖墙",
+    "土坯房",
+    "流浪的碎石"
+  ],
+  "conflict": "砖块虽小，但有人质疑它是否真的能支撑起整个村庄的房屋和城墙。",
+  "event_chain": [
+    "砖窑主人用泥土烧制出许多砖块。",
+    "砖块被用来建造房屋的墙壁和城墙。",
+    "砖块成为村庄建筑的基本单位，支撑起房屋和城墙。",
+    "砖块之间相互配合，形成坚固的墙体。",
+    "流浪的碎石来到村庄，砖块与碎石相遇，砖块展示了自己的作用。"
+  ],
+  "turning_point": "当流浪的碎石质疑砖块的作用时，砖块通过展示自己如何构成墙体、支撑房屋，证明了自身的重要性。",
+  "resolution_state": "砖块被公认为村庄建筑的基本单位，是房屋和城墙不可或缺的基础。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "砖块",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "砖墙",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "砖块是房屋和城墙的基本构成单位",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "砖块是建筑系统的基础层次",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "流浪的碎石",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "砖块被用来建造砖墙",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "砖块使得房屋和城墙得以存在",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "砖块使得建筑系统的基础层次得以确立",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "砖块与流浪的碎石相遇并对比",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保不使用'细胞'或'cell'等禁止术语。",
+    "确保故事载体一致，不引入无关隐喻。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "注意不要将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "8025dc50821f0197346d67457f7df8b72ca782316ad17bdc6781499e15df1a70",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4eef09527873dba4324eed9a9efe24266e40904b878dff1e7349bb369b10f661"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt22",
+    "label": "Concept",
+    "name": "分拆数6和7",
+    "properties": {
+      "definition": "把6或7分成两个部分，了解所有不同的分法。",
+      "importance": "掌握",
+      "examples": [
+        "7分成：1和6、2和5、3和4"
+      ],
+      "retrieval_text": "分拆数6和7\nConcept\n把6或7分成两个部分，了解所有不同的分法。\n掌握\n7分成：1和6、2和5、3和4"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "math_1a_rjb_cpt19",
+      "label": "Concept",
+      "name": "数字6和7的认识",
+      "properties": {
+        "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+        "importance": "重要",
+        "examples": [
+          "摆6个、摆7个；比较5<6、6>5；第7个的位置"
+        ],
+        "pages": "图示页 6~10",
+        "retrieval_text": "数字6和7的认识\nConcept\n能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。\n重要\n图示页 6~10\n摆6个、摆7个；比较5<6、6>5；第7个的位置"
+      }
+    },
+    {
+      "source_node_id": "math_1a_rjb_cpt20",
+      "label": "Concept",
+      "name": "6和7的加法",
+      "properties": {
+        "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+        "importance": "重要",
+        "formula": "a+b=6 或 a+b=7",
+        "pages": "出现于加法练习页",
+        "retrieval_text": "6和7的加法\nConcept\n通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。\n重要\na+b=6 或 a+b=7\n出现于加法练习页"
+      }
+    },
+    {
+      "source_node_id": "math_1a_rjb_cpt21",
+      "label": "Concept",
+      "name": "6和7的减法",
+      "properties": {
+        "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+        "importance": "重要",
+        "formula": "a-b=6 或 a-b=7",
+        "retrieval_text": "6和7的减法\nConcept\n通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。\n重要\na-b=6 或 a-b=7"
+      }
+    },
+    {
+      "source_node_id": "math_1a_rjb_skl11",
+      "label": "Skill",
+      "name": "利用摆摆、画一画理解数量",
+      "properties": {
+        "description": "通过摆物体、画圈等操作理解数量合成与分解。",
+        "retrieval_text": "利用摆摆、画一画理解数量\nSkill"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16341",
+      "source": "math_1a_rjb_cpt19",
+      "source_name": "数字6和7的认识",
+      "target": "math_1a_rjb_cpt22",
+      "target_name": "分拆数6和7",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:16342",
+      "source": "math_1a_rjb_cpt22",
+      "source_name": "分拆数6和7",
+      "target": "math_1a_rjb_cpt20",
+      "target_name": "6和7的加法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:16343",
+      "source": "math_1a_rjb_cpt22",
+      "source_name": "分拆数6和7",
+      "target": "math_1a_rjb_cpt21",
+      "target_name": "6和7的减法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:16381",
+      "source": "math_1a_rjb_skl11",
+      "source_name": "利用摆摆、画一画理解数量",
+      "target": "math_1a_rjb_cpt22",
+      "target_name": "分拆数6和7",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "分拆数6和7",
+      "definition": "把6或7分成两个部分，了解所有不同的分法。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7",
+      "[normalized:edge:16342] 分拆数6和7 --prerequisites_for--> 6和7的加法",
+      "[normalized:edge:16343] 分拆数6和7 --prerequisites_for--> 6和7的减法",
+      "[normalized:edge:16381] 利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 4,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 4,
+    "expanded_to_two_hop": false
+  }
+}

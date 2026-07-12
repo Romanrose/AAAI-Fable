@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "米粒开始慢慢吸足水分，一粒粒膨胀起来",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "既要有适宜的外界条件——火候、水量、密封",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "有些米粒已经发霉，有些受潮结块。他挑出坏米，留下饱满干燥的米粒",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "既要有适宜的外界条件——火候、水量、密封",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "若米本身已坏，再好的火候也煮不出好饭",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to explicit story evidence. Node n1 aligns to the process of rice absorbing water and swelling. Node n2 aligns to the stated external conditions (fire, water, seal). Node n3 aligns to the internal condition of rice quality (removing moldy/damp grains). Edge e1 (external conditions enable process) is supported by the statement linking conditions to success. Edge e2 (internal conditions enable process) is supported by the statement that bad rice cannot yield good rice even with good fire."
+}

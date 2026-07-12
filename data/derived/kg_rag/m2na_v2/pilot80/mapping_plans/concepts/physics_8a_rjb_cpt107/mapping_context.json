@@ -1,0 +1,176 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt107",
+    "subject": "physics",
+    "canonical_name": "物距",
+    "aliases": [],
+    "definition": "物体到凸透镜的距离，用u表示。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "物距"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "物体到凸透镜的距离",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "物距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition",
+          "kg-node:physics_8a_rjb_cpt107:name"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "像距",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt108:definition",
+          "kg-node:physics_8a_rjb_cpt108:name"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "凸透镜成像规律",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt106:definition",
+          "kg-node:physics_8a_rjb_cpt106:name"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt107:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19712"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17193"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "物距"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt107",
+      "name": "物距",
+      "label": "Concept",
+      "definition": "物体到凸透镜的距离，用u表示。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt106",
+        "name": "凸透镜成像规律"
+      },
+      {
+        "id": "physics_8a_rjb_cpt108",
+        "name": "像距"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17193",
+        "source_id": "physics_8a_rjb_cpt107",
+        "source_name": "物距",
+        "target_id": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt106",
+        "neighbor_name": "凸透镜成像规律",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19712",
+        "source_id": "physics_8a_rjb_cpt107",
+        "source_name": "物距",
+        "target_id": "physics_8a_rjb_cpt108",
+        "target_name": "像距",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt108",
+        "neighbor_name": "像距",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "物距",
+      "definition": "物体到凸透镜的距离，用u表示。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17193] 物距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:19712] 物距 --relates_to--> 像距"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17193",
+    "normalized:edge:19712"
+  ],
+  "provenance": {
+    "seed_sha256": "ec4a9b6b52de58e66fcfd3faca2831a68ca2b7b4747bce2e69be9f3fc24258d7",
+    "retrieval_sha256": "33f880469216a4e683cb14266371d39d49cd4973ffd702e8d443df5d4cad417a",
+    "mechanism_record_sha256": "63df21e9d380e01fb46247f2211e5b5840e0287f1e5cf39230179e2f1a8042e2"
+  }
+}

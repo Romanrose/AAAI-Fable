@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "测试员以地面上的标记杆为标准，观察员以自己乘坐的车为标准，判断小滑车的运动状态",
+      "evidence": "标准物体",
+      "narrative_anchor": "标准物体",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": []
+}

@@ -1,0 +1,134 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt1",
+    "label": "Concept",
+    "name": "长度",
+    "properties": {
+      "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "importance": "重要",
+      "examples": [
+        "帽檐直径",
+        "课桌高度"
+      ],
+      "unit": "m",
+      "retrieval_text": "长度\nConcept\n描述物体空间延伸程度的物理量，需要通过测量工具获得。\n重要\nm\n帽檐直径\n课桌高度"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt2",
+      "label": "Concept",
+      "name": "长度单位（米及其倍数、子倍数）",
+      "properties": {
+        "definition": "国际单位制中长度的单位包括米及其倍数和子倍数，如km、dm、cm、mm等。",
+        "importance": "掌握",
+        "formula": "1 km = 1000 m；1 cm = 0.01 m 等",
+        "retrieval_text": "长度单位（米及其倍数、子倍数）\nConcept\n国际单位制中长度的单位包括米及其倍数和子倍数，如km、dm、cm、mm等。\n掌握\n1 km = 1000 m；1 cm = 0.01 m 等"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_exp1",
+      "label": "Experiment",
+      "name": "用刻度尺测量长度",
+      "properties": {
+        "instrument": [
+          "刻度尺"
+        ],
+        "is_student": 1,
+        "process": "使用刻度尺测量铅笔等物体长度，注意零刻度线、视线及记录单位。",
+        "phenomena": "得到物体长度的读数。",
+        "conclusion": "正确方法能提高测量准确性。",
+        "retrieval_text": "用刻度尺测量长度\nExperiment"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_skl1",
+      "label": "Skill",
+      "name": "使用刻度尺的方法",
+      "properties": {
+        "description": "包括零刻度线对准、尺紧靠物体且平行、视线垂直读数、记录单位等操作规范。",
+        "retrieval_text": "使用刻度尺的方法\nSkill"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17188",
+      "source": "physics_8a_rjb_cpt1",
+      "source_name": "长度",
+      "target": "physics_8a_rjb_skl1",
+      "target_name": "使用刻度尺的方法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12429",
+      "source": "physics_8a_rjb_cpt2",
+      "source_name": "长度单位（米及其倍数、子倍数）",
+      "target": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:23027",
+      "source": "physics_8a_rjb_exp1",
+      "source_name": "用刻度尺测量长度",
+      "target": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "长度",
+      "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17188] 长度 --prerequisites_for--> 使用刻度尺的方法"
+    ],
+    "process_summary": [
+      "[normalized:edge:12429] 长度单位（米及其倍数、子倍数） --is_a--> 长度",
+      "[normalized:edge:23027] 用刻度尺测量长度 --verifies--> 长度"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 3,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 3,
+    "expanded_to_two_hop": false
+  }
+}

@@ -1,0 +1,6 @@
+﻿concept_id,target_concept,faithfulness,implicitness,mapping_clarity,readability,pedagogical_value,novelty,weighted_overall,final_status,hard_leakage,concept_contradiction,template_like
+biology_7a_rjb_cpt10,遗传和变异,5,5,5,5,5,3,4.8,accept,False,False,False
+biology_7a_rjb_cpt101,种子萌发,5,5,5,5,5,4,4.9,accept,False,False,False
+biology_7a_rjb_cpt102,种子萌发的环境条件,5,5,5,5,5,3,4.8,accept,False,False,False
+biology_7a_rjb_cpt106,种子萌发的自身条件,5,5,5,5,5,3,4.8,accept,False,False,False
+biology_7a_rjb_cpt109,发芽率,5,5,5,5,5,3,4.8,accept,False,False,False

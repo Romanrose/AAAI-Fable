@@ -1,0 +1,47 @@
+{
+  "query": "physics_8a_rjb_cpt104",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt104",
+    "label": "Concept",
+    "name": "投影仪成像",
+    "definition": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "投影仪成像\n物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt95",
+        "label": "Concept",
+        "name": "凸透镜",
+        "definition": "一种中间厚、边缘薄的透镜，可使光线会聚或发散，常用于照相机、投影仪和放大镜等光学仪器中。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt102",
+        "label": "Concept",
+        "name": "实像",
+        "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s2",
+        "label": "Section",
+        "name": "第二节 生活中的透镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "像距",
+  "concept_id": "physics_8a_rjb_cpt108",
+  "concept_definition": "像到凸透镜的距离，用v表示。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt108",
+    "像距"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt108",
+      "label": "Concept",
+      "name": "像距",
+      "definition": "像到凸透镜的距离，用v表示。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "像距\n像到凸透镜的距离，用v表示。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt106",
+          "label": "Concept",
+          "name": "凸透镜成像规律",
+          "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt107",
+          "label": "Concept",
+          "name": "物距",
+          "definition": "物体到凸透镜的距离，用u表示。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s3",
+          "label": "Section",
+          "name": "第三节 凸透镜成像的规律",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt108",
+    "concept_id": "physics_8a_rjb_cpt108",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt108",
+      "label": "Concept",
+      "name": "像距",
+      "definition": "像到凸透镜的距离，用v表示。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：像到凸透镜的距离，用v表示。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "像距"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "像到凸透镜的距离，用v表示。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "光点到镜片的距离，即故事中光点在地面上的位置与镜片之间的直线距离，对应像距v。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "灯的位置（物距u）变化时，光点的位置（像距v）随之变化：灯远则光点近，灯近则光点远，体现了物距与像距的对应关系。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中光点位置由灯的位置决定，而非角色主观意志；保留了距离变化的方向和大小关系；通过连续观察揭示规律，避免直接命名概念。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼上的光点\n\n小镇中心有一座古老的钟楼，楼顶有一盏明亮的灯。每到夜晚，灯光会透过一面巨大的水晶镜片，在广场的地面上投下一个清晰的光点。负责守护钟楼的小林，每天都要调整镜片的位置，让光点落在指定的标记上。\n\n一天，老钟表匠对小林说：“你要记住，光点的位置不仅取决于镜片，还取决于灯本身的位置。灯离镜片越远，光点就越靠近镜片；灯离镜片越近，光点就越远离镜片。”\n\n小林点点头，开始观察。他把灯放在离镜片很远的地方，光点果然落在镜片附近的地面上。他又把灯慢慢移近镜片，光点便逐渐向远处移动。小林发现，灯的位置变化时，光点的位置也会跟着变化，而且两者之间似乎有一种固定的关系。\n\n有一次，小林把灯放在离镜片很近的位置，光点竟然跑到了广场的尽头，几乎看不见了。他赶紧把灯移远一些，光点又慢慢回到了地面中央。小林恍然大悟：原来光点的位置是由灯的位置决定的，两者之间存在着一个精确的对应关系。\n\n后来，小林在记录本上画了一张图，标出了灯在不同位置时，光点对应的位置。他发现，无论灯怎么移动，光点总是出现在一个特定的范围内，而且这个范围的大小与镜片的大小有关。\n\n一天夜里，一位游客问小林：“为什么光点有时近有时远？”小林笑着回答：“因为灯的位置变了。灯离镜片越远，光点离镜片越近；灯离镜片越近，光点离镜片越远。只要知道灯的位置，就能知道光点的位置。”\n\n游客恍然大悟，称赞小林观察细致。小林心里明白，这个规律不仅适用于钟楼，也适用于所有类似的情况。从此，他更加用心地守护着钟楼，确保光点永远准确无误地落在广场上。",
+  "rule_findings": {
+    "story_token_count": 569,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

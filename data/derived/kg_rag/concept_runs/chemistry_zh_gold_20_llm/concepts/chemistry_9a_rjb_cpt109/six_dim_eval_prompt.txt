@@ -1,0 +1,247 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "分解反应",
+  "concept_id": "chemistry_9a_rjb_cpt109",
+  "concept_definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt109",
+    "分解反应"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt109",
+      "label": "Concept",
+      "name": "分解反应",
+      "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "aliases": [],
+      "examples": [
+        "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+        "过氧化氢分解生成水和氧气",
+        "氯酸钾分解生成氯化钾和氧气",
+        "水在电解时分解生成氢气和氧气，是分解反应。",
+        "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      ],
+      "retrieval_text": "分解反应\n一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt103",
+          "label": "Concept",
+          "name": "实验室制取氧气的方法",
+          "definition": "在实验室里制取氧气常用的几种化学方法，包括加热高锰酸钾、分解过氧化氢溶液和加热氯酸钾等反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt251",
+          "label": "Concept",
+          "name": "水的分解反应",
+          "definition": "水在电流等作用下分解生成氢气和氧气的化学变化，是一种分解反应。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt118",
+          "label": "Concept",
+          "name": "化学学习中的分类思想",
+          "definition": "在化学学习过程中，有意识地根据一定标准把物质或反应归类，以便更系统、更高效地掌握化学知识的方法思想。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt105",
+          "label": "Concept",
+          "name": "高锰酸钾受热分解反应",
+          "definition": "高锰酸钾是一种暗紫色固体，受热时发生分解反应，生成二氧化锰、锰酸钾并放出氧气。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt107",
+          "label": "Concept",
+          "name": "过氧化氢分解反应",
+          "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt108",
+          "label": "Concept",
+          "name": "加热氯酸钾制取氧气",
+          "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt96",
+          "label": "Concept",
+          "name": "化合反应",
+          "definition": "由两种或两种以上物质起反应，生成一种新物质的化学反应，称为化合反应。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "chemistry_9a_rjb_exe16",
+          "label": "Exercise",
+          "name": "比较下列反应，并回答问题：\n（1）高锰酸钾受热分解：高锰酸钾 → 锰酸钾 + 二氧化锰 + 氧气\n（2）过氧化氢分解：过氧化氢 ⟶(二氧化锰) 水 + 氧气\n（3）氯酸钾受热分解：氯酸钾 ⟶(加热, 二氧化锰) 氯化钾 + 氧气\n① 这三种反应属于同一类型的化学反应，这种反应类型的名称是什么？\n② 与化合反应（可表示为 A + B → AB）比较，这类反应在反应物和生成物数量关系上有什么特点？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_9a_rjb_ch4_s3",
+          "label": "Section",
+          "name": "课题3 水的组成",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt109",
+    "concept_id": "chemistry_9a_rjb_cpt109",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt109",
+      "label": "Concept",
+      "name": "分解反应",
+      "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。",
+      "aliases": [],
+      "examples": [
+        "高锰酸钾受热分解生成锰酸钾、二氧化锰和氧气",
+        "过氧化氢分解生成水和氧气",
+        "氯酸钾分解生成氯化钾和氧气",
+        "水在电解时分解生成氢气和氧气，是分解反应。",
+        "讨论问题(1)：上述实验中水是否发生了分解反应？生成了几种新物质？"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "分解反应"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中黑石粉和白晶石在加热后分别生成两种新物质（青烟+银灰金属，气泡+白色残渣），隐含了‘一种物质在一定条件下生成两种或两种以上其他物质’的化学反应过程。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "黑石粉和白晶石在加热条件下各自生成两种新物质，而灰白粉末没有变化，体现了‘一种物质在一定条件下生成两种或两种以上其他物质’的核心机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中区分了加热后发生化学变化的物质（黑石粉、白晶石）和未发生变化的物理混合（灰白粉末），避免了化学式或元素符号，保留了反应前后物质种类的变化。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个古老的城邦里，有一位年轻的账房学徒，名叫阿明。他的师父是一位经验丰富的老账房先生，掌管着城邦里所有货物的进出记录。\n\n一天，师父交给阿明一个任务：“你去库房清点一下，看看那几袋‘黑石粉’和‘白晶石’到底有多少。”阿明来到库房，看到墙角堆着几个麻袋。他打开第一个袋子，里面是乌黑的粉末；第二个袋子，是雪白的晶体；第三个袋子，却是灰白色的粉末。他仔细查看账本，上面只记着“黑石粉三袋，白晶石两袋”。可眼前明明有三袋不同的东西，阿明糊涂了。\n\n师父笑着说：“别急，你先把它们分别放在三个陶罐里，然后点燃炉火，观察它们的变化。”阿明照做了。第一个陶罐里的黑石粉在加热后，慢慢冒出一股青烟，罐底留下了一层银灰色的软金属。第二个陶罐里的白晶石受热后，先是融化成液体，接着冒出气泡，最后罐里只剩下一点点白色的残渣。第三个陶罐里的灰白色粉末加热后，却没有任何变化，只是变得更干爽了。\n\n阿明跑去报告：“师父，黑石粉变成了青烟和银灰金属，白晶石变成了气泡和白色残渣，灰白粉末还是灰白粉末。”师父点点头：“你观察得很仔细。现在你告诉我，哪些袋子里的东西发生了变化？哪些变化后产生了不止一种新东西？”\n\n阿明想了想：“黑石粉和白晶石都变了，而且都变成了两种不同的东西。灰白粉末没变。”师父又问：“那账本上记的‘黑石粉’和‘白晶石’，是不是应该对应你看到的三种袋子？”阿明恍然大悟：“原来那袋灰白粉末根本不是黑石粉或白晶石，它只是看起来像，但本质不同！真正的黑石粉和白晶石，在加热后都‘分裂’成了两种新物质。”\n\n师父满意地说：“对。记住，有些东西看似相同，但经过特定条件，就会展现出不同的本性。有的会一分为二，有的却纹丝不动。你要学会从变化中看出真正的规律。”\n\n从此，阿明再也不会被表面现象迷惑了。他明白，真正的智慧在于观察变化，尤其是那些从一种变成多种的奇妙过程。",
+  "rule_findings": {
+    "story_token_count": 671,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

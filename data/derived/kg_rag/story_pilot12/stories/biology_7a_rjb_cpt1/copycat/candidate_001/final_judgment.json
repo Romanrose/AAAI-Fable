@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n7",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly maps n7 (遗传和变异) to the porcelain's inherited texture and unique glaze variation, which is a creative and precise analogy. Edge e1 (n1->n2) is weakest because the story only mentions '泥料要陈化三天' and '揉泥二十遍' as separate requirements without explicitly showing the 'requires' relation from '生物' to '需要营养' in the mechanism. However, the overall mapping is strong and the story clearly preserves the structural relations."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements and the mapping is clear and faithful."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

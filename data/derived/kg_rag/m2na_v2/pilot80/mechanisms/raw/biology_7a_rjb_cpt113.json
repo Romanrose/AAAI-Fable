@@ -1,0 +1,154 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "biology_7a_rjb_cpt113",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "雌蕊",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:name",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "花的雌性生殖结构",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "子房",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "胚珠",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "柱头",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "接受花粉",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "part_of",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt113:definition",
+          "kg-node:biology_7a_rjb_cpt113:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "雌蕊"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "61a26b678c1c445ab02ccce15440b898aeb62998427db1985cb9db01cc0442b2",
+    "retrieval_sha256": "07cdbd82a4f857fe946f7af6fdc3bd822bc3f31b9eabc449dc199c33346e79f0",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "393babcf09f1238550d8064faa9be1e36238ed44c1cbf7b5911cf4ada207a48a"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

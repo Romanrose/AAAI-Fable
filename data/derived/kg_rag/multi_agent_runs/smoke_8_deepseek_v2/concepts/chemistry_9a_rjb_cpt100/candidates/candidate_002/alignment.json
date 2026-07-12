@@ -1,0 +1,81 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "养火过程",
+      "evidence": "炉火不亮，没有刺眼的光芒",
+      "narrative_anchor": "炉火不亮，没有刺眼的光芒",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "铁生锈的基础现象",
+      "evidence": "红褐色的锈斑",
+      "narrative_anchor": "红褐色的锈斑",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "铁坯在炉中慢慢呼吸热量",
+      "evidence": "像呼吸一样稳稳地舔舐着铁坯",
+      "narrative_anchor": "像呼吸一样稳稳地舔舐着铁坯",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "养火与生锈的对比",
+      "evidence": "光亮结实",
+      "narrative_anchor": "光亮结实",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n5",
+      "narrative_element": "猛火与养火的对比",
+      "evidence": "用猛火去烧另一块铁坯",
+      "narrative_anchor": "用猛火去烧另一块铁坯",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "养火过程引出对氧化反应的理解",
+      "evidence": "炉火不亮，没有刺眼的光芒",
+      "narrative_anchor": "炉火不亮，没有刺眼的光芒",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.85
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "铁生锈现象引出呼吸与氧气的关系",
+      "evidence": "红褐色的锈斑",
+      "narrative_anchor": "红褐色的锈斑",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "养火与生锈对比引出氧化反应与缓慢氧化的关系",
+      "evidence": "光亮结实",
+      "narrative_anchor": "光亮结实",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "猛火与养火对比引出燃烧与缓慢氧化的关系",
+      "evidence": "用猛火去烧另一块铁坯",
+      "narrative_anchor": "用猛火去烧另一块铁坯",
+      "narrative_source_concept_node_id": "n4",
+      "narrative_target_concept_node_id": "n5",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

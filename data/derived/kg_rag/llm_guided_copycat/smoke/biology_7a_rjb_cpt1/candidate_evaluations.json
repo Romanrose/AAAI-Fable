@@ -1,0 +1,230 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "农业耕作",
+      "domain_rationale": "农田中的作物生长过程与生物特征集相似，作物需要养分、呼吸、排泄、生长、繁殖、遗传变异，且由细胞构成。",
+      "conflict": "作物不能主动移动，可能不涉及所有生物特征，但此处仅映射核心机制，冲突可接受。",
+      "event_chain": [
+        "一片农田中的作物",
+        "作物从土壤中吸收水分和矿物质",
+        "作物叶片进行光合作用释放氧气",
+        "作物通过蒸腾作用排出多余水分",
+        "作物从种子萌发逐渐长高",
+        "作物开花结果产生种子",
+        "作物通过种子传递遗传信息并出现变异"
+      ],
+      "turning_point": "作物开花结果，进入繁殖阶段。",
+      "resolution_state": "作物完成生命周期，产生新种子，延续种群。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "作物",
+          "mapping_type": "entity"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "作物从土壤中吸收水分和矿物质以获得营养",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "作物通过叶片气孔进行气体交换以完成呼吸",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "作物通过蒸腾作用排出多余水分和废物",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "作物从种子萌发逐渐长高以实现生长",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "作物开花结果产生种子以实现繁殖",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "作物通过种子传递遗传信息并可能出现变异",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "作物由细胞构成（如根尖细胞、叶肉细胞）",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "家庭管理",
+      "domain_rationale": "一个家庭的日常运转需要营养（食物）、呼吸（空气）、废物处理、成长、繁衍、传承与改进，与生物特征集的结构高度吻合。",
+      "conflict": "家庭不是有机体，但作为隐喻，其功能对应关系清晰。",
+      "event_chain": [
+        "一个普通家庭",
+        "家庭成员从市场购买食物并做饭",
+        "家庭成员开窗通风保持空气流通",
+        "家庭成员清理垃圾并冲马桶",
+        "孩子从婴儿逐渐长大成人",
+        "夫妻生育孩子",
+        "家长将家训传给下一代并允许适当改进"
+      ],
+      "turning_point": "夫妻生育孩子，家庭进入新代际。",
+      "resolution_state": "家庭延续，成员成长，家训传承。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "家庭",
+          "mapping_type": "entity"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "家庭从市场购买食物并烹饪以满足营养需求",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "家庭开窗通风以维持空气新鲜",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "家庭通过清理垃圾和冲水排出废物",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "孩子从婴儿逐渐长大成人实现成长",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "夫妻生育孩子实现繁衍",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "家长将家训传给下一代并允许适当改进",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "家庭由家庭成员（个体）组成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "城市系统",
+      "domain_rationale": "城市需要资源输入、空气循环、垃圾处理、扩张、人口繁衍、文化传承与创新，其运行机制与生物特征集形成平行映射。",
+      "conflict": "城市不是生命体，但作为复杂系统，其功能对应关系可接受。",
+      "event_chain": [
+        "一座现代城市",
+        "城市从周边地区运输粮食和水",
+        "城市公园和绿化带净化空气",
+        "城市污水处理厂和垃圾站处理废弃物",
+        "城市向外扩张，建设新区",
+        "城市中的人口生育新后代",
+        "城市传承历史文化并发展新技术"
+      ],
+      "turning_point": "城市人口生育新后代，城市持续发展。",
+      "resolution_state": "城市保持活力，文化延续，基础设施更新。",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "城市",
+          "mapping_type": "entity"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "城市从周边地区运输粮食和水以满足资源需求",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "城市通过公园和绿化带净化空气以维持呼吸",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "城市通过污水处理厂和垃圾站处理废弃物",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "城市向外扩张建设新区实现生长",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "城市中的人口生育新后代实现繁殖",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e6",
+          "story_relation": "城市传承历史文化并发展新技术",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e7",
+          "story_relation": "城市由建筑物、道路、居民等组成部分构成",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 8
+    }
+  }
+]

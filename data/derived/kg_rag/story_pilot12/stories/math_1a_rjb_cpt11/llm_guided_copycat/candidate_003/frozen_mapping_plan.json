@@ -1,0 +1,31 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "搭积木",
+  "domain_rationale": "搭积木需要先认识并能数出积木的数量和形状，然后将两块积木合并在一起搭建更高结构，与加法中先认知数量再合并的机制一致。",
+  "conflict": "搭积木是物理堆叠，加法是数值相加，但抽象机制都是先有独立认知再进行合并。",
+  "event_chain": [
+    "孩子认识并能数出两块积木",
+    "孩子将两块积木合并在一起搭成更高的结构"
+  ],
+  "turning_point": "孩子将两块积木叠放在一起",
+  "resolution_state": "两块积木合并成更高的结构",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "孩子认识并能数出两块积木",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "孩子将两块积木合并在一起搭成更高的结构",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "孩子识别和数出积木的能力使他能进行搭叠操作",
+      "direction_preserved": true
+    }
+  ]
+}

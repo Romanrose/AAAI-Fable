@@ -1,0 +1,82 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代农夫种稻",
+  "characters": [
+    "农夫",
+    "稻种"
+  ],
+  "objects": [
+    "稻田",
+    "水渠",
+    "空气"
+  ],
+  "conflict": "稻种无法萌发，因为水渠堵塞导致稻田缺氧",
+  "event_chain": [
+    "农夫将稻种播入稻田",
+    "水渠堵塞，稻田中空气不足",
+    "稻种因缺乏空气而无法进行呼吸等生命活动",
+    "稻种迟迟不萌发"
+  ],
+  "turning_point": "农夫疏通水渠，新鲜空气进入稻田",
+  "resolution_state": "稻种获得充足空气，顺利萌发",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "空气",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "稻田环境",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "稻种利用空气进行呼吸",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "稻种萌发",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空气是稻田环境的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "空气使稻种能够进行呼吸",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "稻种呼吸导致萌发",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'充足的空气（氧气）'或'充足空气'等禁止术语",
+    "确保'空气'作为条件，不直接等同于目标概念，而是类比载体",
+    "确保所有机制节点和边都被映射，且方向正确"
+  ],
+  "mapping_context_sha256": "fe2d2cae2e87194bb4e2262c532e5d8355b32ca13867b80b268f2391673c62a6",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4382e4cab2327aade8a36bf7f20d49878e7f8eef339c6bf710431d3ab1088be5"
+  }
+}

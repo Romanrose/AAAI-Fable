@@ -1,0 +1,163 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt103",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的三种取水方法",
+  "characters": [
+    "村民",
+    "老张",
+    "老李",
+    "老王"
+  ],
+  "objects": [
+    "村庄的公共水井",
+    "老张的深井水泵",
+    "老李的雨水收集器",
+    "老王的溪流引水渠",
+    "清水",
+    "分解取水法",
+    "储水罐",
+    "老张的取水实验记录"
+  ],
+  "conflict": "村庄需要稳定的清水供应，但老张、老李、老王各自有不同的取水方法，且需要验证这些方法是否可靠。",
+  "event_chain": [
+    "老张使用深井水泵取水，这是村庄取水的一种方法。",
+    "老李使用雨水收集器取水，这也是村庄取水的一种方法。",
+    "老王使用溪流引水渠取水，这同样是村庄取水的一种方法。",
+    "老张的深井水泵、老李的雨水收集器、老王的溪流引水渠都属于分解取水法。",
+    "清水是村庄取水方法的前提条件。",
+    "村庄取水方法需要储水罐来储存清水。",
+    "老张的取水实验记录验证了村庄取水方法的可行性。",
+    "老张的深井水泵是分解取水法的一种。",
+    "老李的雨水收集器是分解取水法的一种。",
+    "老王的溪流引水渠是分解取水法的一种。",
+    "老张的深井水泵产生清水。",
+    "老李的雨水收集器产生清水。"
+  ],
+  "turning_point": "老张的取水实验记录证明了深井水泵取水方法的可靠性，从而确认了村庄取水方法的有效性。",
+  "resolution_state": "村庄确认了三种取水方法都是可行的，并决定使用储水罐来储存清水，确保稳定供水。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村庄的三种取水方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老张的深井水泵",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老李的雨水收集器",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老王的溪流引水渠",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "清水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "分解取水法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "储水罐",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "老张的取水实验记录",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老张的深井水泵是村庄取水方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老李的雨水收集器是村庄取水方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "老王的溪流引水渠是村庄取水方法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "分解取水法使村庄取水方法成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "清水是村庄取水方法的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "村庄取水方法需要储水罐",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "老张的取水实验记录验证了村庄取水方法",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "老张的深井水泵是分解取水法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "老李的雨水收集器是分解取水法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "老王的溪流引水渠是分解取水法的一种",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e11",
+      "story_relation": "老张的深井水泵产生清水",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e12",
+      "story_relation": "老李的雨水收集器产生清水",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何与化学相关的术语，如氧气、高锰酸钾等。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如通过实验现象推断气体性质）作为因果机制映射。",
+    "使用单一的源域（村庄取水），避免多个不相关的隐喻。"
+  ],
+  "mapping_context_sha256": "66f9e75b1c1a9c051817c4eeca642c8afcbbfe0599b926a1c8a9709022f3c36d",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "905d2019a9f4ab8a737bb570b78af3d6c4c2c61b95eb174e4840e32b2facec23"
+  }
+}

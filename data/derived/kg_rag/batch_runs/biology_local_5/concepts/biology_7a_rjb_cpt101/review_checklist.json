@@ -1,0 +1,12 @@
+{
+  "pass_fail": false,
+  "missing_roles": [
+    "related concepts",
+    "outcomes",
+    "experiments",
+    "exercises"
+  ],
+  "draft_length": 136,
+  "alignment_roles_present": [],
+  "seed_concept": "种子萌发"
+}

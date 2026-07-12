@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt102",
+  "target_concept": "种子萌发的环境条件",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过四堆种子在不同条件下的结果，准确展示了种子萌发需要适宜的温度、一定的水分和充足的空气（氧气），与概念定义完全一致。",
+    "implicitness": "目标概念名称和别名均未在故事正文中出现，所有条件（温度、水分、空气）均通过情节自然隐含地呈现。",
+    "mapping_clarity": "四堆种子的条件差异和结果变化清晰地映射了三个核心条件，阿木的恍然大悟直接点明了条件关系，映射非常清晰。",
+    "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段阅读，无复杂术语或冗余描述。",
+    "pedagogical_value": "故事通过对比实验和逐步观察，引导学生理解种子萌发的环境条件，具有很高的教学价值，能有效促进概念学习。",
+    "novelty": "故事采用了常见的园圃工坊和师徒对话框架，虽有效但缺乏新颖的创意或独特视角。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个意外因素（如不同土壤类型或光照条件）来丰富情节，同时不偏离核心概念。",
+    "结尾可加入一个延伸问题，引导学生思考其他植物萌发的条件差异。"
+  ],
+  "rule_findings": {
+    "story_token_count": 536,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过四堆种子在不同条件下的结果，准确展示了种子萌发需要适宜的温度、一定的水分和充足的空气（氧气），与概念定义完全一致。",
+      "implicitness": "目标概念名称和别名均未在故事正文中出现，所有条件（温度、水分、空气）均通过情节自然隐含地呈现。",
+      "mapping_clarity": "四堆种子的条件差异和结果变化清晰地映射了三个核心条件，阿木的恍然大悟直接点明了条件关系，映射非常清晰。",
+      "readability": "故事语言流畅自然，情节简单易懂，适合目标年龄段阅读，无复杂术语或冗余描述。",
+      "pedagogical_value": "故事通过对比实验和逐步观察，引导学生理解种子萌发的环境条件，具有很高的教学价值，能有效促进概念学习。",
+      "novelty": "故事采用了常见的园圃工坊和师徒对话框架，虽有效但缺乏新颖的创意或独特视角。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个意外因素（如不同土壤类型或光照条件）来丰富情节，同时不偏离核心概念。",
+      "结尾可加入一个延伸问题，引导学生思考其他植物萌发的条件差异。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

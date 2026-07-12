@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt13",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "数字0的含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "数字0的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "表示没有数量。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "记录员翻开分段记录册，第一页是空的。调度员说：“入场前必须核对条件牌，如果条件牌上什么都没有，那这一步就算完成了。”\n\n验收员追问：“什么都没有，怎么算完成？”调度员指了指封存箱上的规则：“形式定义上，它表示没有数量，但规则一致地承认这个状态。所以，只要确认条件牌符合这个定义，就能进入下一步。”\n\n记录员把这一条记下，然后推进到第二道转化环节。他先核对前一步留下的条件——确实没有任何数量，再按规则执行转化。调度员在一旁监督，确保每一步都保留形式定义，不添加多余的解释。\n\n验收员这时提出一个疑问：“能不能先验收结果，再回头补中间步骤？”调度员摇头：“不行。只有先稳定入口条件核对，再推动第二道转化，最后的结果验收才能接上。如果跳过中间承接，记录就会断裂。”\n\n有人试着倒过来安排：先验收结果，再补转化。结果发现，没有前一步的条件支撑，转化环节无法定义，验收也就失去了依据。记录员只好擦掉重来，按正确的顺序重新记录：先确认入口条件，再执行转化，最后验收结果。\n\n封存箱里的通行牌终于能互相印证。调度员合上记录册，说：“顺序不能颠倒，否则规则就失去了一致性。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "条件牌上什么都没有",
+        "evidence": "条件牌上什么都没有",
+        "narrative_anchor": "条件牌上什么都没有",
+        "confidence": 1.0
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "保留形式定义，不添加多余的解释",
+        "evidence": "保留形式定义，不添加多余的解释",
+        "narrative_anchor": "保留形式定义，不添加多余的解释",
+        "confidence": 1.0
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收才能接上",
+        "evidence": "结果验收才能接上",
+        "narrative_anchor": "结果验收才能接上",
+        "confidence": 1.0
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第二道转化",
+        "evidence": "只有先稳定入口条件核对，再推动第二道转化",
+        "narrative_anchor": "只有先稳定入口条件核对，再推动第二道转化",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 1.0
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先执行转化，最后验收结果",
+        "evidence": "先确认入口条件，再执行转化，最后验收结果",
+        "narrative_anchor": "先确认入口条件，再执行转化，最后验收结果",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 1.0
+      }
+    ]
+  }
+}

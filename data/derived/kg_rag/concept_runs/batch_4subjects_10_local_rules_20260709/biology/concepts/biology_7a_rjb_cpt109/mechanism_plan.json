@@ -1,0 +1,42 @@
+{
+  "core_question": "发芽率的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "测定种子的发芽率（培养皿样本检测） --verifies--> 发芽率",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:22391"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:22391"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "发芽率",
+    "biology_7a_rjb_cpt109"
+  ],
+  "coverage_targets": {
+    "required_step_count": 2,
+    "required_dependency_count": 1,
+    "must_cover_edge_ids": [
+      "normalized:edge:22391"
+    ],
+    "must_cover_path_ids": []
+  }
+}

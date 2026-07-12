@@ -1,0 +1,131 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt11",
+    "label": "Concept",
+    "name": "速度",
+    "properties": {
+      "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+      "importance": "重要",
+      "formula": "v = s / t",
+      "unit": "m/s, km/h",
+      "examples": [
+        "汽车速度表上的读数",
+        "刘翔跨栏的平均速度"
+      ],
+      "aliases": [
+        "velocity"
+      ],
+      "retrieval_text": "速度\nConcept\n表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。\n重要\nm/s, km/h\nv = s / t\nvelocity\n汽车速度表上的读数\n刘翔跨栏的平均速度"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17195",
+      "source": "physics_8a_rjb_cpt11",
+      "source_name": "速度",
+      "target": "physics_8a_rjb_cpt13",
+      "target_name": "匀速直线运动",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17196",
+      "source": "physics_8a_rjb_cpt11",
+      "source_name": "速度",
+      "target": "physics_8a_rjb_cpt14",
+      "target_name": "变速直线运动",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17197",
+      "source": "physics_8a_rjb_cpt11",
+      "source_name": "速度",
+      "target": "physics_bx1_rjb_cpt19",
+      "target_name": "速度—时间图像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:12426",
+      "source": "physics_8a_rjb_cpt13",
+      "source_name": "匀速直线运动",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12422",
+      "source": "physics_8a_rjb_cpt12",
+      "source_name": "平均速度",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:12541",
+      "source": "physics_bx1_rjb_cpt17",
+      "source_name": "瞬时速度",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:23061",
+      "source": "physics_8a_rjb_exp4",
+      "source_name": "利用超声波位置传感器测速度",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "速度",
+      "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+      "formula": "v = s / t",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17195] 速度 --prerequisites_for--> 匀速直线运动",
+      "[normalized:edge:17196] 速度 --prerequisites_for--> 变速直线运动",
+      "[normalized:edge:17197] 速度 --prerequisites_for--> 速度—时间图像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12426] 匀速直线运动 --is_a--> 速度",
+      "[normalized:edge:12422] 平均速度 --is_a--> 速度",
+      "[normalized:edge:12541] 瞬时速度 --is_a--> 速度",
+      "[normalized:edge:23061] 利用超声波位置传感器测速度 --verifies--> 速度"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 7,
+    "candidate_edge_count": 7,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1782,
+    "summary_chars": 576,
+    "path_chars": 0,
+    "retrieval_context_chars": 2358
+  }
+}

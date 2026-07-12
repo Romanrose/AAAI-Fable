@@ -1,0 +1,118 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "带有火星的木条伸入气体中",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt101:definition",
+          "kg-node:chemistry_9a_rjb_exp13:process"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt89:definition",
+          "kg-node:chemistry_9a_rjb_exp13:conclusion"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "state",
+        "text": "木条复燃",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt101:definition",
+          "kg-node:chemistry_9a_rjb_exp13:phenomena"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "该气体为氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt101:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "rule",
+        "text": "氧气能支持燃烧",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt89:definition",
+          "kg-node:chemistry_9a_rjb_exp13:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt101:definition",
+          "kg-node:chemistry_9a_rjb_exp13:phenomena"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt89:definition",
+          "kg-node:chemistry_9a_rjb_exp13:conclusion"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt101:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt89:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt89:examples",
+          "kg-node:chemistry_9a_rjb_exp13:conclusion"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}

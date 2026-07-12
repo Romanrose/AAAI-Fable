@@ -1,0 +1,81 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt112",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "二氧化锰的催化作用",
+  "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+  "aliases": [],
+  "examples": [
+    "在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃",
+    "在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt110",
+        "label": "Concept",
+        "name": "催化剂",
+        "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt110",
+        "label": "Concept",
+        "name": "催化剂",
+        "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "chemistry_9a_rjb_exp17",
+        "label": "Experiment",
+        "name": "过氧化氢分解实验中二氧化锰的作用",
+        "definition": ""
+      },
+      {
+        "id": "chemistry_9a_rjb_exp18",
+        "label": "Experiment",
+        "name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "chemistry_9a_rjb_exe17",
+        "label": "Exercise",
+        "name": "在过氧化氢分解制氧气的实验中，向过氧化氢溶液中加入少量二氧化锰，观察到带火星的木条能复燃，多次重复实验后，二氧化锰的质量和化学性质没有改变。\n根据上述信息回答：\n（1）二氧化锰在该反应中是否被消耗？\n（2）二氧化锰在该反应中起什么作用？这种物质在化学上叫什么？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "二氧化锰的催化作用"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

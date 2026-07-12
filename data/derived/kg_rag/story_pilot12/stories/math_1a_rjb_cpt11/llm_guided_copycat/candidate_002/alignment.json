@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "先数了数它们各自的边：三角形有三条边，梯形有四条边",
+      "confidence": 0.9
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "两块拼图严丝合缝地合在了一起",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他清楚地知道，这两块拼图是相邻的，只有把它们按照正确的方向拼合，才能形成完整的图案",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中阿木先数出拼图块的边数（对应n1），然后拼合两块拼图（对应n2），且故事明确表达了先认知数量再拼合的关系（对应e1），方向正确。"
+}

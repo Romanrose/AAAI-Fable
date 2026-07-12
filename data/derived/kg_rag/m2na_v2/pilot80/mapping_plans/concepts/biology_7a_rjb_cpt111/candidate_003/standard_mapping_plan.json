@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一座古代宫殿的结构",
+  "characters": [
+    "皇帝",
+    "大臣"
+  ],
+  "objects": [
+    "宫殿",
+    "金銮殿",
+    "后宫",
+    "宫门、台阶、围墙、花园"
+  ],
+  "conflict": "大臣们认为宫殿的主要结构是金銮殿和后宫，而皇帝坚持认为宫门、台阶、围墙和花园也是宫殿不可或缺的部分。",
+  "event_chain": [
+    "皇帝下令建造一座新宫殿",
+    "大臣们负责设计，将金銮殿和后宫作为核心",
+    "大臣们忽略了宫门、台阶、围墙和花园的规划",
+    "宫殿建成后，缺乏这些辅助部分，无法正常使用",
+    "皇帝指出这些部分同样重要，必须补建"
+  ],
+  "turning_point": "皇帝亲自巡视，发现缺少宫门、台阶、围墙和花园导致宫殿无法运作，下令立即补建。",
+  "resolution_state": "宫殿最终包含金銮殿、后宫以及宫门、台阶、围墙、花园，各部分各司其职，宫殿完整可用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "宫殿",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "金銮殿",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "后宫",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "宫门、台阶、围墙、花园",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "金銮殿是宫殿的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "后宫是宫殿的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "宫门、台阶、围墙、花园是宫殿的一部分",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'花的基本结构'或其别名",
+    "确保所有must_preserve节点和边都被映射",
+    "确保映射的边方向与机制图一致",
+    "避免将课程上下文（如'第二章 被子植物的一生'）作为因果机制引入",
+    "保持单一源域（宫殿结构），不混用其他隐喻"
+  ],
+  "mapping_context_sha256": "fce4c946a9961636d45be30a21ad8dc8abeed4f3bd2f9997a3af10f74f0c1a7b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7cffebb152921011e4df732f2af212136131434d54c7da9377a0132838f45376"
+  }
+}

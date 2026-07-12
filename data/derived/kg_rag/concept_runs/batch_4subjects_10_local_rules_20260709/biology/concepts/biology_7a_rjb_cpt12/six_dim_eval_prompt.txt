@@ -1,0 +1,470 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "病毒",
+  "concept_id": "biology_7a_rjb_cpt12",
+  "concept_definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt12",
+    "virus",
+    "病毒"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+      "aliases": [
+        "virus"
+      ],
+      "examples": [
+        "流感病毒",
+        "艾滋病病毒",
+        "烟草花叶病毒",
+        "噬菌体"
+      ],
+      "retrieval_text": "病毒\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_8a_rjb_cpt101",
+          "label": "Concept",
+          "name": "病毒的分类（按寄生细胞不同）",
+          "definition": "根据病毒寄生的细胞不同，可分为动物病毒、植物病毒和细菌病毒（噬菌体）三大类。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt11",
+          "label": "Concept",
+          "name": "细胞",
+          "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe4",
+          "label": "Exercise",
+          "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(4) 生物都是由细胞构成的。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch1_s1",
+          "label": "Section",
+          "name": "第一章 认识生物",
+          "definition": ""
+        },
+        {
+          "id": "biology_8a_rjb_ch5_s5",
+          "label": "Section",
+          "name": "第五章 病毒",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 526,
+      "summary_chars": 312,
+      "path_chars": 0,
+      "retrieval_context_chars": 838
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt12",
+    "concept_id": "biology_7a_rjb_cpt12",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+      "aliases": [
+        "virus"
+      ],
+      "examples": [
+        "流感病毒",
+        "艾滋病病毒",
+        "烟草花叶病毒",
+        "噬菌体"
+      ],
+      "retrieval_text": "病毒\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "biology_7a_rjb_cpt12",
+        "label": "Concept",
+        "name": "病毒",
+        "properties": {
+          "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+          "importance": "了解",
+          "examples": [
+            "流感病毒",
+            "艾滋病病毒",
+            "烟草花叶病毒",
+            "噬菌体"
+          ],
+          "aliases": [
+            "virus"
+          ],
+          "unit": "纳米（用于表示大小）",
+          "retrieval_text": "病毒\nConcept\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。\n了解\n纳米（用于表示大小）\nvirus\n流感病毒\n艾滋病病毒\n烟草花叶病毒\n噬菌体"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:14144",
+          "source": "biology_7a_rjb_cpt12",
+          "source_name": "病毒",
+          "target": "biology_8a_rjb_cpt101",
+          "target_name": "病毒的分类（按寄生细胞不同）",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:17836",
+          "source": "biology_7a_rjb_cpt11",
+          "source_name": "细胞",
+          "target": "biology_7a_rjb_cpt12",
+          "target_name": "病毒",
+          "relation": "relates_to",
+          "relation_description": "relates_to",
+          "evidence": "",
+          "score": 0.9
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "病毒",
+          "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+          "formula": "",
+          "importance": "了解"
+        },
+        "condition_summary": [
+          "[normalized:edge:14144] 病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）"
+        ],
+        "process_summary": [
+          "[normalized:edge:17836] 细胞 --relates_to--> 病毒"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 2,
+        "candidate_edge_count": 2,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 526,
+        "summary_chars": 312,
+        "path_chars": 0,
+        "retrieval_context_chars": 838
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "病毒的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:14144"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "细胞 --relates_to--> 病毒",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:17836"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:14144",
+        "normalized:edge:17836"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "病毒",
+        "biology_7a_rjb_cpt12",
+        "virus"
+      ],
+      "coverage_targets": {
+        "required_step_count": 3,
+        "required_dependency_count": 2,
+        "must_cover_edge_ids": [
+          "normalized:edge:14144",
+          "normalized:edge:17836"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "biology_7a_rjb_cpt12",
+      "concept_id": "biology_7a_rjb_cpt12",
+      "story_language": "zh-CN",
+      "source_domain": "屋顶育苗棚",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则的分类（按寄生细胞不同）",
+        "让中间的行动承接前后变化：细胞 --relates_to--> 这条隐藏规则",
+        "让中间的行动承接前后变化：一种特殊的生物类群；教材指出这条隐藏规则是“除这条隐藏规则以外，生物都是由细胞构成”的例外。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则的分类（按寄生细胞不同）"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：细胞 --relates_to--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：一种特殊的生物类群；教材指出这条隐藏规则是“除这条隐藏规则以外，生物都是由细胞构成”的例外。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "病毒"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）",
+            "细胞 --relates_to--> 病毒",
+            "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "避免目的论解释。",
+            "避免把个体努力写成进化原因。",
+            "保留生命系统的条件、过程和结果。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "屋顶育苗棚",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则的分类（按寄生细胞不同）",
+      "让中间的行动承接前后变化：细胞 --relates_to--> 这条隐藏规则",
+      "让中间的行动承接前后变化：一种特殊的生物类群；教材指出这条隐藏规则是“除这条隐藏规则以外，生物都是由细胞构成”的例外。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "病毒"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）",
+          "细胞 --relates_to--> 病毒",
+          "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则的分类（按寄生细胞不同）"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：细胞 --relates_to--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：一种特殊的生物类群；教材指出这条隐藏规则是“除这条隐藏规则以外，生物都是由细胞构成”的例外。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "病毒"
+      ]
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "条件、过程和结果被记录员按顺序检查。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：屋顶育苗棚里的隐藏规则\n\n屋顶育苗棚里有一位年轻的记录员，他总觉得眼前的变化只是巧合。\n一天，他把条件、行动和结果一一写在木牌上，发现只有当几个环节同时配合时，那个被观察的场所才会出现稳定变化。\n先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 这条隐藏规则的分类（按寄生细胞不同）\n让中间的行动承接前后变化：细胞 --relates_to--> 这条隐藏规则\n让中间的行动承接前后变化：一种特殊的生物类群；教材指出这条隐藏规则是“除这条隐藏规则以外，生物都是由细胞构成”的例外。\n后来，记录员不再只看表面的结果，而是先找条件，再看过程，最后检查结果是否能重复出现。他明白，真正重要的不是某个名字，而是名字背后那套能被辨认的关系。",
+  "rule_findings": {
+    "story_token_count": 267,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

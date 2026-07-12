@@ -1,0 +1,75 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "标准砖块",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "特殊砖块",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "按外形特征来分，所有标准砖块都归入这一类，而特殊砖块是它里面的一种。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "学徒开始用标准砖块搭建一座小塔。他先把几块标准砖块平铺作底座，又把特殊砖块叠上去作塔尖，组合得稳稳当当。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "把六个面的面积都算出来，再加起来。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "把长、宽、高乘在一起，就是它的体积。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "按外形特征来分，所有标准砖块都归入这一类，而特殊砖块是它里面的一种。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "这块特殊砖块，其实是一种标准砖块，只是它的长宽高都相等。所以，特殊砖块是标准砖块里的一种。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "这块特殊砖块，其实是一种标准砖块，只是它的长宽高都相等。所以，特殊砖块是标准砖块里的一种。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "如果想知道这块标准砖块表面需要多少油漆，该怎么算？",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "那这块砖占多大空间呢？",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "学徒开始用标准砖块搭建一座小塔。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact story evidence. Node n1 maps to '标准砖块', n2 to '特殊砖块', n3 to the classification action, n4 to the building action, n5 to the surface area calculation, n6 to the volume formula. Edges e1 (is_a from n1 to n3) is supported by the classification statement; e2 (is_a from n2 to n1) and e3 (relates_to between n1 and n2) are supported by the statement that special brick is a kind of standard brick; e4 (enables from n1 to n5) is supported by the question about paint; e5 (enables from n1 to n6) by the question about space; e6 (enables from n1 to n4) by the building action. All directions are preserved."
+}

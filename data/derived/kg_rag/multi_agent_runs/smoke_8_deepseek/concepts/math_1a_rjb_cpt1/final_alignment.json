@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "学徒通过逐一观察和指认棋盘上的每一个白子，并配合筹码进行计数，最终确定了白子的总数。",
+      "evidence": "执棋者在棋盘上摆下了一局残谱。",
+      "narrative_anchor": "执棋者在棋盘上摆下了一局残谱。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

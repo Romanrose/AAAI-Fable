@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story fails to map the mechanism nodes and edge to the required mathematical concepts. Node n1 (recognizing quantities 1-5 and one-to-one correspondence) is not represented; the story only mentions watering, not counting or quantity recognition. Node n2 (representing merging of two quantities) is also absent; the story describes absorption and growth, not addition or merging. Edge e1 (enables) is not preserved because the condition (quantity recognition) does not enable the process (merging) in the story. The automatic metrics confirm this: node_coverage=0.5, edge_coverage=0.0, direction_accuracy=1.0 but irrelevant due to missing edges. The story is a generic fable about watering and fertilizing, not about the mathematical concepts. This is worse than a story that explicitly includes counting objects and then combining groups."
+  },
+  "revision_instructions": [
+    "Rewrite the story to explicitly include the condition node n1: the farmer must recognize and count 1 to 5 objects (e.g., seedlings or buckets) and understand one-to-one correspondence (e.g., one bucket per seedling).",
+    "Rewrite the story to explicitly include the process node n2: the farmer represents two quantities merging together (e.g., combining two groups of seedlings or adding water and fertilizer amounts).",
+    "Ensure the edge e1 (enables) is preserved: the condition (counting and one-to-one correspondence) must enable the process (merging quantities).",
+    "Remove any generic farming details that do not map to the mechanism. The story must be about the mathematical concepts, not just a general lesson about order.",
+    "Keep the story length between 450-750 Chinese characters and avoid forbidden terms like '加法' or '合并' if they are not allowed, but the mechanism requires representing merging, so use appropriate synonyms like '合在一起' or '加起来'."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

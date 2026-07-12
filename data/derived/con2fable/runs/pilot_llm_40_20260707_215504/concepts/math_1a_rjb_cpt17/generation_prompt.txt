@@ -1,0 +1,94 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "球体"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "表面上所有点到中心的距离都相等的立体图形。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：按形状分类",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12137"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "建筑工地",
+    "setting": "一座正在建造的圆形穹顶体育馆，工人们需要确保穹顶的每一根钢梁到中心点的距离完全相等。",
+    "conflict": "施工队发现部分钢梁长度不一致，导致穹顶表面凹凸不平，无法闭合。",
+    "characters": [
+      {
+        "name": "李工",
+        "role": "总工程师，负责检查钢梁长度",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "王队长",
+        "role": "施工队长，负责按图纸分类安装",
+        "mapped_element": "m2"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "李工用激光测距仪检查每根钢梁两端到穹顶中心点的距离是否相等"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "王队长根据钢梁长度分类，将等长的钢梁归为一组，按顺序安装"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "李工发现穹顶北侧有几根钢梁长度偏短，导致表面凹陷",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "王队长重新测量所有钢梁，将长度相等的钢梁挑出来，替换掉不合格的",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "工人们按王队长的分类，将等长钢梁按顺序安装，穹顶表面变得光滑均匀",
+        "mapped_elements": [
+          "m2"
+        ]
+      }
+    ],
+    "turning_point": "李工发现问题的根源是钢梁分类混乱，只有严格按长度相等分组安装，才能保证穹顶完美闭合。",
+    "ending": "穹顶顺利合龙，所有钢梁到中心点的距离完全一致，体育馆如期完工。",
+    "implied_moral": "一个整体要完美闭合，必须保证每个组成部分到核心的距离都严格相等，并按此规则分类排列。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

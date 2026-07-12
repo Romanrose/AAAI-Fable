@@ -1,0 +1,74 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt114",
+    "label": "Concept",
+    "name": "传粉",
+    "properties": {
+      "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+      "importance": "掌握",
+      "retrieval_text": "传粉\nConcept\n花粉从花药散放而落到雌蕊柱头上的过程。\n掌握"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14139",
+      "source": "biology_7a_rjb_cpt114",
+      "source_name": "传粉",
+      "target": "biology_7a_rjb_cpt117",
+      "target_name": "受精",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:10779",
+      "source": "biology_7a_rjb_cpt116",
+      "source_name": "异花传粉",
+      "target": "biology_7a_rjb_cpt114",
+      "target_name": "传粉",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:10778",
+      "source": "biology_7a_rjb_cpt115",
+      "source_name": "自花传粉",
+      "target": "biology_7a_rjb_cpt114",
+      "target_name": "传粉",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "传粉",
+      "definition": "花粉从花药散放而落到雌蕊柱头上的过程。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14139] 传粉 --prerequisites_for--> 受精"
+    ],
+    "process_summary": [
+      "[normalized:edge:10779] 异花传粉 --is_a--> 传粉",
+      "[normalized:edge:10778] 自花传粉 --is_a--> 传粉"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 748,
+    "summary_chars": 322,
+    "path_chars": 0,
+    "retrieval_context_chars": 1070
+  }
+}

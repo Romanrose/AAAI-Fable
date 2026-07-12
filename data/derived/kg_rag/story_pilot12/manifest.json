@@ -1,0 +1,82 @@
+{
+  "pipeline_version": "story-pilot-12x3x3/v1",
+  "created_at_utc": "2026-07-10T10:39:51.591959+00:00",
+  "concept_ids": [
+    "biology_7a_rjb_cpt1",
+    "biology_7a_rjb_cpt101",
+    "biology_7a_rjb_cpt102",
+    "chemistry_9a_rjb_cpt1",
+    "chemistry_9a_rjb_cpt100",
+    "chemistry_9a_rjb_cpt104",
+    "math_1a_rjb_cpt1",
+    "math_1a_rjb_cpt11",
+    "math_1a_rjb_cpt14",
+    "physics_8a_rjb_cpt1",
+    "physics_8a_rjb_cpt10",
+    "physics_8a_rjb_cpt103"
+  ],
+  "subject_counts": {
+    "biology": 3,
+    "chemistry": 3,
+    "math": 3,
+    "physics": 3
+  },
+  "strategies": [
+    "standard",
+    "copycat",
+    "llm_guided_copycat"
+  ],
+  "candidate_count_per_strategy": 3,
+  "expected_story_count": 108,
+  "completed_story_count": 108,
+  "failure_count": 0,
+  "generator": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "judge": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  },
+  "input_index_sha256": "fb85eeb2e660824d3e164853ec0b2759571bb304c029375afd2299ac40124856",
+  "analysis": {
+    "by_strategy": {
+      "standard": {
+        "count": 36,
+        "mean_node_coverage": 0.6968,
+        "mean_edge_coverage": 0.7,
+        "mean_direction_accuracy": 1.0,
+        "accept_count": 29,
+        "revise_count": 7,
+        "reject_count": 0,
+        "leakage_count": 0
+      },
+      "copycat": {
+        "count": 36,
+        "mean_node_coverage": 0.7998,
+        "mean_edge_coverage": 0.7542,
+        "mean_direction_accuracy": 1.0,
+        "accept_count": 15,
+        "revise_count": 18,
+        "reject_count": 3,
+        "leakage_count": 2
+      },
+      "llm_guided_copycat": {
+        "count": 36,
+        "mean_node_coverage": 0.7812,
+        "mean_edge_coverage": 0.7659,
+        "mean_direction_accuracy": 1.0,
+        "accept_count": 28,
+        "revise_count": 8,
+        "reject_count": 0,
+        "leakage_count": 1
+      }
+    }
+  }
+}

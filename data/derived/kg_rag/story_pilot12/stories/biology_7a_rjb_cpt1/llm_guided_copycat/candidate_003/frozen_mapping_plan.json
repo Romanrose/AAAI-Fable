@@ -1,0 +1,96 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "手工作坊系统",
+  "domain_rationale": "传统手工作坊如陶窑、铁铺，具有输入、输出、生长、传承等类似生命特征，适合映射。",
+  "conflict": "手工作坊无细胞概念，需将工序单元视为基本构件。",
+  "event_chain": [
+    "作坊需要原料和燃料（需要营养）",
+    "作坊通过烟囱排气和鼓风（能进行呼吸）",
+    "作坊通过废料和残渣清理（能排出废物）",
+    "作坊从初建到扩建规模（能生长）",
+    "作坊开设分号或收徒传艺（能繁殖）",
+    "作坊技艺代代相传并改进（具有遗传和变异）",
+    "作坊由工作台、工具、原料等基本单元构成（由细胞构成）"
+  ],
+  "turning_point": "无转折点，为并列特征描述。",
+  "resolution_state": "手工作坊系统具备类似生命的完整特征。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "手工作坊系统",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "需要原料和燃料",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "通过烟囱排气和鼓风",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "通过废料和残渣清理",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "从初建到扩建规模",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "开设分号或收徒传艺",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "技艺代代相传并改进",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "由工作台、工具、原料等基本单元构成",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "手工作坊系统需要原料和燃料",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "手工作坊系统通过烟囱排气和鼓风",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "手工作坊系统通过废料和残渣清理",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "手工作坊系统从初建到扩建规模",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "手工作坊系统开设分号或收徒传艺",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "手工作坊系统技艺代代相传并改进",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "手工作坊系统由工作台、工具、原料等基本单元构成",
+      "direction_preserved": true
+    }
+  ]
+}

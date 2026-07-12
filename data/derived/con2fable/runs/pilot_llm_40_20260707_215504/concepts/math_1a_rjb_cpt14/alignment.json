@@ -1,0 +1,102 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "砖块的基本结构描述",
+      "evidence": "它有六个面……这两个最大的面，大小一模一样；这两个长条形的侧面，也是一模一样；还有这两个小端面，同样分毫不差。相对的棱，长度都相等。你数数，它一共有六个面、十二条棱、八个角。",
+      "narrative_anchor": "它有六个面……相对的棱，长度都相等。你数数，它一共有六个面、十二条棱、八个角。"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "方砖是砖的一种特殊形式",
+      "evidence": "这叫方砖，其实它也是这种砖的一种，只不过它的长、宽、高都相等，所以端面就成了正方形。你可以把它看作是这种砖的一个特殊兄弟。",
+      "narrative_anchor": "你可以把它看作是这种砖的一个特殊兄弟。"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "按形状分类摆放砖块",
+      "evidence": "他把长条形的砖码成一排，准备砌长墙；把方砖单独堆起来，准备砌方柱。",
+      "narrative_anchor": "他把长条形的砖码成一排，准备砌长墙；把方砖单独堆起来，准备砌方柱。"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "计算表面大小",
+      "evidence": "我要算出它的表面大小，这样就能知道抹一面墙需要多少水泥。",
+      "narrative_anchor": "我要算出它的表面大小"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "计算砖块容量（体积）",
+      "evidence": "用长乘宽乘高算出了单块砖的容量。",
+      "narrative_anchor": "用长乘宽乘高算出了单块砖的容量"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "拼搭砖块成墙体",
+      "evidence": "吊车司机把砖块按照设计图，一块一块地拼搭起来。他利用砖块的长宽高尺寸，把它们组合成高大的墙体和粗壮的柱子。",
+      "narrative_anchor": "一块一块地拼搭起来"
+    },
+    {
+      "concept_node_id": "m7",
+      "narrative_element": "方砖是特殊砖块",
+      "evidence": "就连那个方砖的特殊砖块，也逃不出这个规律。",
+      "narrative_anchor": "就连那个方砖的特殊砖块，也逃不出这个规律。"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "从一般砖块结构引出方砖作为特殊形式",
+      "evidence": "这叫方砖，其实它也是这种砖的一种，只不过它的长、宽、高都相等，所以端面就成了正方形。你可以把它看作是这种砖的一个特殊兄弟。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "你可以把它看作是这种砖的一个特殊兄弟。"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "从方砖引出按形状分类",
+      "evidence": "他把长条形的砖码成一排，准备砌长墙；把方砖单独堆起来，准备砌方柱。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "把方砖单独堆起来，准备砌方柱。"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "从分类引出计算表面积",
+      "evidence": "测量员拿着卷尺过来了，他量了量一块砖的长、宽、高，然后在本子上算了起来：“我要算出它的表面大小，这样就能知道抹一面墙需要多少水泥。”",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "我要算出它的表面大小"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "从表面积引出体积计算",
+      "evidence": "仓库管理员也凑过来，他接过测量员的数据，用长乘宽乘高算出了单块砖的容量。",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "用长乘宽乘高算出了单块砖的容量"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "从体积计算引出拼搭立体图形",
+      "evidence": "吊车司机把砖块按照设计图，一块一块地拼搭起来。他利用砖块的长宽高尺寸，把它们组合成高大的墙体和粗壮的柱子。",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "一块一块地拼搭起来"
+    },
+    {
+      "concept_edge_id": "e6",
+      "narrative_relation": "从拼搭引出方砖作为特殊砖块",
+      "evidence": "就连那个方砖的特殊砖块，也逃不出这个规律。",
+      "narrative_source_concept_node_id": "m6",
+      "narrative_target_concept_node_id": "m7",
+      "direction_preserved": true,
+      "narrative_anchor": "就连那个方砖的特殊砖块，也逃不出这个规律。"
+    }
+  ]
+}

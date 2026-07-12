@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "棋手甲通过逐一指点棋子并默念数字来计数",
+      "evidence": "一颗一颗地点过去",
+      "narrative_anchor": "一颗一颗地点过去",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "棋手甲运用一一对应法确定棋子数量",
+      "evidence": "一颗对一颗",
+      "narrative_anchor": "一颗对一颗",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "棋手甲将己方棋子数量与对手比较",
+      "evidence": "比较着：我的棋子比他的多几颗，还是少几颗",
+      "narrative_anchor": "比较着：我的棋子比他的多几颗，还是少几颗",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "棋手甲先尝试逐一计数，然后运用一一对应法解决困难",
+      "evidence": "一颗一颗地点过去",
+      "narrative_anchor": "一颗一颗地点过去",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "棋手甲运用一一对应法确定数量后，进一步比较双方棋子数量",
+      "evidence": "比较着：我的棋子比他的多几颗，还是少几颗",
+      "narrative_anchor": "比较着：我的棋子比他的多几颗，还是少几颗",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

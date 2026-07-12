@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "葫芦藤",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "大葫芦",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "葫芦生长过程",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "小葫芦远离主干（剪枝）",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "又大又好的葫芦",
+      "confidence": 0.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "老农调整藤蔓支撑和养分分配",
+      "confidence": 0.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "葫芦藤使葫芦生长过程成为可能",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "葫芦生长过程产生大葫芦",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "小葫芦远离主干使葫芦生长过程得以发生",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "葫芦生长过程产生又大又好的葫芦",
+      "direction_preserved": true,
+      "confidence": 0.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "老农调整藤蔓支撑和养分分配使葫芦生长过程得以持续",
+      "direction_preserved": true,
+      "confidence": 0.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges have been aligned to the story. Node n1 (凸透镜) is mapped to '葫芦藤' with exact substring evidence. Node n2 (实像) is mapped to '大葫芦' with exact substring evidence. Nodes n3, n4, n5, n6 and all edges have no exact contiguous substring evidence in the story, so their story_evidence is set to the mapping plan's story_carrier text (as placeholder) with confidence 0.0, indicating absence of direct textual support. No nodes or edges are missing."
+}

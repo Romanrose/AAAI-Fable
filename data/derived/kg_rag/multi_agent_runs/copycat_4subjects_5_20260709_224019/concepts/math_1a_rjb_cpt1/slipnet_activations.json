@@ -1,0 +1,19 @@
+{
+  "concept_id": "math_1a_rjb_cpt1",
+  "candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "slipnet_state": {
+        "activations": [],
+        "dominant_pressures": []
+      }
+    },
+    {
+      "candidate_id": "candidate_002",
+      "slipnet_state": {
+        "activations": [],
+        "dominant_pressures": []
+      }
+    }
+  ]
+}

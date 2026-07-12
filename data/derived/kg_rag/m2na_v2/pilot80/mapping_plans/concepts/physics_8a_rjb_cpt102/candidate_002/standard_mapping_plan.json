@@ -1,0 +1,107 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠制作铜镜的故事",
+  "characters": [
+    "老铜匠",
+    "学徒"
+  ],
+  "objects": [
+    "铜镜（代表实像）",
+    "水面倒影（代表虚像）",
+    "磨镜石（代表照相机成像过程）",
+    "铜镜模具（代表投影仪成像过程）",
+    "铜镜成品（代表自制模型照相机实验的证据）",
+    "铜镜展示台（代表投影仪演示实验的证据）"
+  ],
+  "conflict": "学徒无法区分铜镜中真实反射的影像与水面虚幻的倒影，认为两者都是虚的，老铜匠需要让他明白铜镜能真实映照出物体的形象，而水面倒影只是幻象。",
+  "event_chain": [
+    "老铜匠用磨镜石将铜块打磨成光滑的镜面，铜镜能清晰映出物体的缩小倒像（对应照相机成像：物体远离凸透镜时形成缩小倒立的实像）。",
+    "老铜匠用铜镜模具将铜液浇铸成凸面镜，凸面镜能将物体放大倒像投射在墙上（对应投影仪成像：物体靠近凸透镜时形成放大倒立的实像）。",
+    "学徒用磨好的铜镜照自己的脸，看到倒立的小脸，老铜匠说这是真实的光线汇聚成的像，可以用白布承接（对应自制模型照相机实验：凸透镜可成倒立的实像）。",
+    "老铜匠将凸面镜放在阳光下，墙上出现放大的倒立光影，学徒用手遮挡，光影消失（对应投影仪演示实验：投影仪利用凸透镜形成放大倒立的实像）。",
+    "学徒指着池塘中的倒影说那也是像，老铜匠说那是虚像，不是真实光线汇聚的，无法用白布承接（对应实像与虚像的关系）。"
+  ],
+  "turning_point": "学徒用白布承接铜镜反射的像，成功看到像落在布上，而水面倒影无法承接，从而理解了实像与虚像的本质区别。",
+  "resolution_state": "学徒掌握了铜镜能成真实像（实像）而水面倒影是虚幻像（虚像）的道理，并能区分不同工艺（磨镜石与模具）产生的像的特点。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铜镜",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水面倒影",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老铜匠用磨镜石打磨铜块形成光滑镜面，能映出缩小倒像",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老铜匠用铜镜模具浇铸凸面镜，能投射放大倒像",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "学徒用磨好的铜镜照脸，看到倒立小脸，并用白布承接成功",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老铜匠将凸面镜放在阳光下，墙上出现放大倒立光影，手遮则消失",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "磨镜石打磨铜镜的过程是铜镜的一种制作方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "模具浇铸凸面镜的过程是铜镜的另一种制作方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "学徒用铜镜照脸并承接像的实验验证了铜镜能成真实像",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "凸面镜在阳光下投射光影的实验验证了凸面镜能成真实像",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "铜镜与水面倒影是相关联但不同的像",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保铜镜和凸面镜都代表实像，避免混淆为虚像。",
+    "水面倒影仅代表虚像，不可用于描述铜镜的像。",
+    "磨镜石和模具分别对应照相机和投影仪成像过程，需保持方向一致。",
+    "避免使用'实像'一词，用'真实像'或'铜镜的像'替代。"
+  ],
+  "mapping_context_sha256": "6f25d47da137d7947afd82123904ff951fa66ad82896c1caa284829dd3348e7e",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "0c38b836b4dd97264ba171d5f08eb9913dbae0b0ef9fd1485749c4674ed1dee4"
+  }
+}

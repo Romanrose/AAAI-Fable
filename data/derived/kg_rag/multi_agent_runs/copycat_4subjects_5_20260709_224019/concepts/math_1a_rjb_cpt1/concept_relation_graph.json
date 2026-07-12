@@ -1,0 +1,50 @@
+{
+  "target_concept": {
+    "id": "math_1a_rjb_cpt1",
+    "name": "数物体（数一数）",
+    "label": "Concept",
+    "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。"
+  },
+  "neighbors": [
+    {
+      "id": "math_1a_rjb_cpt3",
+      "name": "一一对应比较法"
+    },
+    {
+      "id": "math_1a_rjb_cpt2",
+      "name": "比较数量（多、少、一样多）"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:16335",
+      "source_id": "math_1a_rjb_cpt1",
+      "source_name": "数物体（数一数）",
+      "target_id": "math_1a_rjb_cpt3",
+      "target_name": "一一对应比较法",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "outgoing",
+      "neighbor_id": "math_1a_rjb_cpt3",
+      "neighbor_name": "一一对应比较法",
+      "score": 1.35,
+      "evidence": ""
+    },
+    {
+      "edge_id": "normalized:edge:19305",
+      "source_id": "math_1a_rjb_cpt1",
+      "source_name": "数物体（数一数）",
+      "target_id": "math_1a_rjb_cpt2",
+      "target_name": "比较数量（多、少、一样多）",
+      "relation": "relates_to",
+      "relation_semantic_role": "association",
+      "direction": "outgoing",
+      "neighbor_id": "math_1a_rjb_cpt2",
+      "neighbor_name": "比较数量（多、少、一样多）",
+      "score": 0.9,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 2,
+  "source": "dual_level_graphrag"
+}

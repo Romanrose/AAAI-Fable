@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt105",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄里的老槐树因干旱而枯萎的故事",
+  "characters": [
+    "老槐树",
+    "村民"
+  ],
+  "objects": [
+    "老槐树（暗紫色固体对应）",
+    "阳光（热量对应）",
+    "枯枝、落叶、种子（生成物对应）",
+    "自然更替规律（分解反应规则对应）",
+    "村民观察记录（实验证据对应）"
+  ],
+  "conflict": "老槐树在持续干旱下逐渐枯萎，村民担心村庄失去庇护，但老槐树通过分解自身为枯枝、落叶和种子，为新生提供可能。",
+  "event_chain": [
+    "老槐树在烈日下持续暴晒（n1：条件）",
+    "老槐树开始枯萎分解（n2：过程）",
+    "分解产生枯枝、落叶和种子（n3：产物）",
+    "这一过程符合自然更替规律（n4：规则）",
+    "村民观察到枯枝落地、种子发芽，验证了分解过程（n5：证据）"
+  ],
+  "turning_point": "村民发现枯枝下长出新芽，意识到老槐树的分解并非终结，而是新生命的开始。",
+  "resolution_state": "老槐树分解为枯枝、落叶和种子，种子在土壤中萌发，村庄获得新的生机。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老槐树在烈日下持续暴晒",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老槐树开始枯萎分解",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "枯枝、落叶、种子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "自然更替规律",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "村民观察到枯枝落地、种子发芽",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "持续暴晒导致枯萎分解",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "枯萎分解产生枯枝、落叶和种子",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "枯萎分解属于自然更替规律",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "村民观察到枯枝落地、种子发芽，验证了枯萎分解过程",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现任何化学术语或目标概念名称。",
+    "注意保持事件链的因果方向与机制图一致。",
+    "避免将村民的观察（证据）视为因果机制的一部分。"
+  ],
+  "mapping_context_sha256": "be1e3be8ebf2134d3e7248f262be72550fac329ad662a6672b57feb081700425",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "27d04845d23e5c19e7e4b7d87aa8e070b8cb70a1d4f9b85b4bf940cc72b3324e"
+  }
+}

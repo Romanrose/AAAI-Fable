@@ -1,0 +1,87 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt111",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一座古老的家族祠堂",
+  "characters": [
+    "族长（代表祠堂整体）",
+    "嫡长子（代表主梁）",
+    "嫡次子（代表次梁）",
+    "其他族人（代表砖瓦、门槛、匾额等）"
+  ],
+  "objects": [
+    "祠堂建筑本身",
+    "主梁",
+    "次梁",
+    "砖瓦、门槛、匾额等构件"
+  ],
+  "conflict": "族长年迈，需明确祠堂的核心支撑结构，以防风雨侵蚀导致坍塌。",
+  "event_chain": [
+    "族长召集全族，审视祠堂整体结构。",
+    "族长指出主梁和次梁是祠堂最重要的承重部件。",
+    "族长强调主梁和次梁缺一不可，共同支撑屋顶。",
+    "其他族人（砖瓦等）虽也重要，但非核心支撑。",
+    "全族认同主梁和次梁为祠堂之根本。"
+  ],
+  "turning_point": "族长当众宣布：主梁与次梁是祠堂的命脉，必须优先加固。",
+  "resolution_state": "祠堂以主梁和次梁为核心，其他构件辅助，整体稳固。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "祠堂建筑本身",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "主梁",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "次梁",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "砖瓦、门槛、匾额等构件",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "祠堂建筑包含主梁",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "祠堂建筑包含次梁",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "祠堂建筑包含砖瓦等构件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中主梁和次梁的并列核心地位，避免暗示主梁优于次梁。",
+    "避免使用‘花’、‘雄蕊’、‘雌蕊’等生物学词汇。",
+    "祠堂整体与构件的关系需清晰映射‘整体-部分’机制。",
+    "其他构件（砖瓦等）权重较低，故事中仅作辅助提及。"
+  ],
+  "mapping_context_sha256": "fce4c946a9961636d45be30a21ad8dc8abeed4f3bd2f9997a3af10f74f0c1a7b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "42d797f380c7640c40bbc8eade13f314995f25319de763452771853d881eb4e3"
+  }
+}

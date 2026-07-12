@@ -1,0 +1,156 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt100",
+    "label": "Concept",
+    "name": "缓慢氧化",
+    "properties": {
+      "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "importance": "掌握",
+      "examples": [
+        "动植物的呼吸",
+        "食物的腐烂",
+        "醋的酿造",
+        "农家肥料的腐熟"
+      ],
+      "retrieval_text": "缓慢氧化\nConcept\n进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。\n掌握\n动植物的呼吸\n食物的腐烂\n醋的酿造\n农家肥料的腐熟"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt102",
+      "label": "Concept",
+      "name": "呼吸与氧气",
+      "properties": {
+        "definition": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+        "importance": "了解",
+        "retrieval_text": "呼吸与氧气\nConcept\n人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。\n了解"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt97",
+      "label": "Concept",
+      "name": "氧化反应",
+      "properties": {
+        "definition": "物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。",
+        "importance": "重要",
+        "aliases": [
+          "与氧气的反应"
+        ],
+        "retrieval_text": "氧化反应\nConcept\n物质与氧气发生的化学反应称为氧化反应，氧气在这类反应中提供氧，具有氧化性。\n重要\n与氧气的反应"
+      }
+    },
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt99",
+      "label": "Concept",
+      "name": "燃烧",
+      "properties": {
+        "definition": "物质在一定条件下(有可燃物、充足的氧气或空气、达到着火点)发生的剧烈放热、发光的氧化反应过程。",
+        "importance": "重要",
+        "aliases": [
+          "剧烈氧化反应",
+          "燃烧反应"
+        ],
+        "examples": [
+          "酒精灯点燃后的燃烧",
+          "乒乓球碎片被加热后燃烧",
+          "蜡烛燃烧"
+        ],
+        "retrieval_text": "燃烧\nConcept\n物质在一定条件下(有可燃物、充足的氧气或空气、达到着火点)发生的剧烈放热、发光的氧化反应过程。\n重要\n剧烈氧化反应\n燃烧反应\n酒精灯点燃后的燃烧\n乒乓球碎片被加热后燃烧\n蜡烛燃烧"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15248",
+      "source": "chemistry_9a_rjb_cpt97",
+      "source_name": "氧化反应",
+      "target": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:18223",
+      "source": "chemistry_9a_rjb_cpt102",
+      "source_name": "呼吸与氧气",
+      "target": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:18426",
+      "source": "chemistry_9a_rjb_cpt97",
+      "source_name": "氧化反应",
+      "target": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:18429",
+      "source": "chemistry_9a_rjb_cpt99",
+      "source_name": "燃烧",
+      "target": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "score": 0.9,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "缓慢氧化",
+      "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:15248] 氧化反应 --prerequisites_for--> 缓慢氧化"
+    ],
+    "process_summary": [
+      "[normalized:edge:18223] 呼吸与氧气 --relates_to--> 缓慢氧化",
+      "[normalized:edge:18426] 氧化反应 --relates_to--> 缓慢氧化",
+      "[normalized:edge:18429] 燃烧 --relates_to--> 缓慢氧化"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 4,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 4,
+    "expanded_to_two_hop": false
+  }
+}

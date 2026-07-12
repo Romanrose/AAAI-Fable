@@ -1,0 +1,30 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "两把椅子都来自同一批木料和同一份图纸（相同特征），但第二把椅子在椅背弧度上出现了细微差异（变异），两者并存。",
+      "evidence": "剧场后台，年轻道具师正对着灯光仔细端详两把新做的椅子。",
+      "narrative_anchor": "剧场后台，年轻道具师正对着灯光仔细端详两把新做的椅子。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "两把椅子都属于“剧场道具”这个上位类别，它们共同构成了道具师的日常工作内容，如同遗传和变异是生物的共同特征。",
+      "evidence": "都叫椅子",
+      "narrative_anchor": "都叫椅子",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "两把椅子都叫椅子（上位概念），而它们之间的相同与差异并存现象（n1）属于这个上位类别。",
+      "evidence": "都叫椅子",
+      "narrative_anchor": "都叫椅子",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

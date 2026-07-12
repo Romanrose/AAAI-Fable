@@ -1,0 +1,60 @@
+{
+  "candidate_id": "candidate_003",
+  "source_domain": "一位老农在春天准备播种水稻",
+  "characters": [
+    "老农",
+    "稻种"
+  ],
+  "objects": [
+    "田地",
+    "水分",
+    "阳光",
+    "空气",
+    "稻种"
+  ],
+  "conflict": "稻种能否顺利发芽长成秧苗，取决于外部条件（田地、水分、阳光、空气）是否适宜，以及稻种自身是否饱满健康、没有虫蛀或休眠。",
+  "event_chain": [
+    "老农在春天整理田地，确保土壤松软、水分充足、阳光温暖、空气流通。",
+    "老农挑选饱满、无虫蛀、未休眠的稻种。",
+    "老农将稻种播入田地。",
+    "稻种在适宜条件下吸水，利用自身贮藏营养，胚根和胚芽开始发育。",
+    "稻种逐渐长成幼苗。"
+  ],
+  "turning_point": "稻种在田地里遇到适宜的温度、水分和空气，同时自身健康完整，于是开始萌发。",
+  "resolution_state": "稻种成功萌发，长成健壮的秧苗。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "稻种萌发长成秧苗的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "田地、水分、阳光、空气等外部条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "稻种自身饱满、无虫蛀、未休眠等内部条件",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "外部条件（田地、水分、阳光、空气）使稻种能够萌发",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "稻种自身条件（饱满、无虫蛀、未休眠）使稻种能够萌发",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中“稻种萌发”不直接使用“种子萌发”一词。",
+    "确保外部条件和内部条件都作为使能条件，方向正确。",
+    "避免将课程桥接上下文（如老农的劳作）误作为因果机制。",
+    "整个故事使用一个连贯的“水稻种植”领域，不引入无关隐喻。"
+  ]
+}

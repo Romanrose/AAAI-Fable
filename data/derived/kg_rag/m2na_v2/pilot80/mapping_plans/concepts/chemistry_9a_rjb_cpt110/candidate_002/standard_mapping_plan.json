@@ -1,0 +1,131 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠与铸剑",
+  "characters": [
+    "铸剑大师",
+    "学徒"
+  ],
+  "objects": [
+    "铁矿石",
+    "熔炉",
+    "铸剑大师的秘制粉末",
+    "普通铁剑",
+    "锋利宝剑"
+  ],
+  "conflict": "学徒发现，加入铸剑大师的秘制粉末后，铁矿石熔炼成铁水的速度显著加快，但粉末本身在熔炼前后质量不变，且只对特定矿石有效。学徒困惑于粉末的作用原理。",
+  "event_chain": [
+    "学徒将铁矿石放入熔炉中，熔炼速度缓慢。",
+    "铸剑大师加入少量秘制粉末，熔炼速度显著加快。",
+    "熔炼结束后，秘制粉末的质量和性质未发生变化。",
+    "学徒尝试用秘制粉末熔炼其他矿石，发现粉末无效。",
+    "铸剑大师解释，秘制粉末能加快特定矿石的熔炼，但自身不变。"
+  ],
+  "turning_point": "学徒通过对比实验，发现秘制粉末在反应前后质量不变，且只对特定矿石有效，从而理解其作用。",
+  "resolution_state": "学徒掌握了秘制粉末的使用方法，并认识到其作为加速熔炼的媒介，自身不消耗。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铸剑大师的秘制粉末",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "秘制粉末加速熔炼的作用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "秘制粉末对铁矿石熔炼的加速效果",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "学徒的熟练手法",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "熔炼速度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "影响熔炼速度的因素",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "秘制粉末对熔炼速度的影响",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "学徒通过对比实验分析秘制粉末的作用",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "秘制粉末加速熔炼的作用是秘制粉末的属性",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "秘制粉末与熔炼速度相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "秘制粉末是影响熔炼速度的因素之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "秘制粉末对铁矿石熔炼的加速效果是秘制粉末的一种表现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "秘制粉末对熔炼速度的影响是秘制粉末的规则",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "学徒的熟练手法与秘制粉末相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "秘制粉末使得秘制粉末对铁矿石熔炼的加速效果得以实现",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "学徒通过对比实验分析秘制粉末的作用使得秘制粉末被理解",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保秘制粉末不直接对应催化剂等禁止术语。",
+    "确保秘制粉末在故事中不消耗，质量不变。",
+    "确保故事中秘制粉末的选择性（只对铁矿石有效）映射催化剂的选择性。",
+    "确保学徒的对比实验映射通过前后对比分析催化剂作用。"
+  ],
+  "mapping_context_sha256": "7e619c8cf80380535c48d5420dbf94eb74ba988bbf0b4ee16bdc7e6cf863110c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "5d880e36fc567693224c97fad1c2f7d97395a931bef0b9afb2f5b7de7ad5a802"
+  }
+}

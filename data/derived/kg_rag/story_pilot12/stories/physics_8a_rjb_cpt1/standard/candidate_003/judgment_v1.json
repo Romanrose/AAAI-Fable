@@ -1,0 +1,23 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully and exactly aligned to the story. The mapping is observably better than a possible alternative where '桥的跨度' is replaced by a generic '长度' (which would violate the forbidden-term rule) or where the 'is_a' relation is reversed (e.g., '桥的跨度是标准竹尺的一种'). Here, the story explicitly shows the standard bamboo ruler as a unit for measuring the span, preserving the 'is_a' direction. The 'verifies' relation is demonstrated by the measurement process revealing the true span, and the 'enables' relation is shown by the span necessitating the use of the measurement口诀. The story avoids direct mention of forbidden terms and maintains a coherent ancient-bridge-building domain."
+  },
+  "revision_instructions": [],
+  "final_status": "accept"
+}

@@ -1,0 +1,345 @@
+{
+  "found": true,
+  "query": "math_1a_rjb_cpt22",
+  "concept_id": "math_1a_rjb_cpt22",
+  "story_language": "zh-CN",
+  "seed": {
+    "id": "math_1a_rjb_cpt22",
+    "label": "Concept",
+    "name": "分拆数6和7",
+    "definition": "把6或7分成两个部分，了解所有不同的分法。",
+    "aliases": [],
+    "examples": [
+      "7分成：1和6、2和5、3和4"
+    ],
+    "retrieval_text": "分拆数6和7\n把6或7分成两个部分，了解所有不同的分法。"
+  },
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "math_1a_rjb_cpt22",
+      "label": "Concept",
+      "name": "分拆数6和7",
+      "properties": {
+        "definition": "把6或7分成两个部分，了解所有不同的分法。",
+        "importance": "掌握",
+        "examples": [
+          "7分成：1和6、2和5、3和4"
+        ],
+        "retrieval_text": "分拆数6和7\nConcept\n把6或7分成两个部分，了解所有不同的分法。\n掌握\n7分成：1和6、2和5、3和4"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:16343",
+        "source": "math_1a_rjb_cpt22",
+        "source_name": "分拆数6和7",
+        "target": "math_1a_rjb_cpt21",
+        "target_name": "6和7的减法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16342",
+        "source": "math_1a_rjb_cpt22",
+        "source_name": "分拆数6和7",
+        "target": "math_1a_rjb_cpt20",
+        "target_name": "6和7的加法",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16341",
+        "source": "math_1a_rjb_cpt19",
+        "source_name": "数字6和7的认识",
+        "target": "math_1a_rjb_cpt22",
+        "target_name": "分拆数6和7",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:16381",
+        "source": "math_1a_rjb_skl11",
+        "source_name": "利用摆摆、画一画理解数量",
+        "target": "math_1a_rjb_cpt22",
+        "target_name": "分拆数6和7",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.2
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "分拆数6和7",
+        "definition": "把6或7分成两个部分，了解所有不同的分法。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:16343] 分拆数6和7 --prerequisites_for--> 6和7的减法",
+        "[normalized:edge:16342] 分拆数6和7 --prerequisites_for--> 6和7的加法",
+        "[normalized:edge:16341] 数字6和7的认识 --prerequisites_for--> 分拆数6和7",
+        "[normalized:edge:16381] 利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7"
+      ],
+      "process_summary": [],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 4,
+      "candidate_edge_count": 4,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 1071,
+      "summary_chars": 448,
+      "path_chars": 0,
+      "retrieval_context_chars": 1519
+    }
+  },
+  "mechanism_plan": {
+    "core_question": "分拆数6和7的关键条件、过程和结果是什么？",
+    "steps": [
+      {
+        "step_id": "s1",
+        "text": "分拆数6和7 --prerequisites_for--> 6和7的减法",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:16343"
+        ]
+      },
+      {
+        "step_id": "s2",
+        "text": "分拆数6和7 --prerequisites_for--> 6和7的加法",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:16342"
+        ]
+      },
+      {
+        "step_id": "s3",
+        "text": "数字6和7的认识 --prerequisites_for--> 分拆数6和7",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:16341"
+        ]
+      },
+      {
+        "step_id": "s4",
+        "text": "利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7",
+        "kind": "condition",
+        "supporting_edge_ids": [
+          "normalized:edge:16381"
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "source_step_id": "s1",
+        "target_step_id": "s2",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s2",
+        "target_step_id": "s3",
+        "relation": "leads_to"
+      },
+      {
+        "source_step_id": "s3",
+        "target_step_id": "s4",
+        "relation": "leads_to"
+      }
+    ],
+    "supporting_edge_ids": [
+      "normalized:edge:16343",
+      "normalized:edge:16342",
+      "normalized:edge:16341",
+      "normalized:edge:16381"
+    ],
+    "supporting_path_ids": [],
+    "forbidden_terms": [
+      "分拆数6和7",
+      "math_1a_rjb_cpt22"
+    ],
+    "coverage_targets": {
+      "required_step_count": 4,
+      "required_dependency_count": 3,
+      "must_cover_edge_ids": [
+        "normalized:edge:16343",
+        "normalized:edge:16342",
+        "normalized:edge:16341",
+        "normalized:edge:16381"
+      ],
+      "must_cover_path_ids": []
+    }
+  },
+  "analogy_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt22",
+    "concept_id": "math_1a_rjb_cpt22",
+    "story_language": "zh-CN",
+    "source_domain": "折纸修复台",
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "event_chain": [
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的减法",
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的加法",
+      "先确认一个起点条件是否具备：数字6和7的认识 --prerequisites_for--> 这条隐藏规则",
+      "先确认一个起点条件是否具备：利用摆摆、画一画理解数量 --prerequisites_for--> 这条隐藏规则"
+    ],
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的减法"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的加法"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：数字6和7的认识 --prerequisites_for--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：利用摆摆、画一画理解数量 --prerequisites_for--> 这条隐藏规则"
+      }
+    ],
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "分拆数6和7"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "分拆数6和7 --prerequisites_for--> 6和7的减法",
+          "分拆数6和7 --prerequisites_for--> 6和7的加法",
+          "数字6和7的认识 --prerequisites_for--> 分拆数6和7",
+          "利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "source_domain": "折纸修复台",
+  "entities": [
+    "负责记录变化的学徒",
+    "一张分段验收单",
+    "一套会暴露错误顺序的器具"
+  ],
+  "characters": [
+    "负责记录变化的学徒",
+    "坚持按步骤验收的师傅",
+    "一套会暴露错误顺序的器具"
+  ],
+  "event_chain": [
+    "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的减法",
+    "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的加法",
+    "先确认一个起点条件是否具备：数字6和7的认识 --prerequisites_for--> 这条隐藏规则",
+    "先确认一个起点条件是否具备：利用摆摆、画一画理解数量 --prerequisites_for--> 这条隐藏规则"
+  ],
+  "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+  "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+  "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+  "alignment_plan": [
+    {
+      "concept_role": "目标概念",
+      "concept_items": [
+        "分拆数6和7"
+      ],
+      "story_role": "故事中不直接说出的隐藏规则"
+    },
+    {
+      "concept_role": "核心机制",
+      "concept_items": [
+        "分拆数6和7 --prerequisites_for--> 6和7的减法",
+        "分拆数6和7 --prerequisites_for--> 6和7的加法",
+        "数字6和7的认识 --prerequisites_for--> 分拆数6和7",
+        "利用摆摆、画一画理解数量 --prerequisites_for--> 分拆数6和7"
+      ],
+      "story_role": "分段验收中的条件、行动和结果链"
+    },
+    {
+      "concept_role": "学科约束",
+      "concept_items": [
+        "保留形式定义条件和规则一致性。",
+        "避免只有故事没有数学结构。",
+        "避免把数学概念道德化。"
+      ],
+      "story_role": "防止故事类比误导概念理解的写作约束"
+    }
+  ],
+  "alignment_targets": [
+    {
+      "mechanism_step_id": "s1",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的减法"
+    },
+    {
+      "mechanism_step_id": "s2",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 6和7的加法"
+    },
+    {
+      "mechanism_step_id": "s3",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：数字6和7的认识 --prerequisites_for--> 这条隐藏规则"
+    },
+    {
+      "mechanism_step_id": "s4",
+      "mechanism_kind": "condition",
+      "story_event": "先确认一个起点条件是否具备：利用摆摆、画一画理解数量 --prerequisites_for--> 这条隐藏规则"
+    }
+  ],
+  "template_blacklist": [
+    "智者",
+    "老人",
+    "村庄",
+    "森林",
+    "镜子",
+    "钟表",
+    "河流"
+  ]
+}

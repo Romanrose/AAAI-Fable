@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n6",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n2 (实像) to '高大的禾苗' is acceptable but not ideal because the mechanism's '实像' is a specific optical concept, while the story's '高大的禾苗' is a general growth outcome. The edge e2 (照相机成像 is_a 实像) is mapped to '禾苗生长最终形成高大的禾苗', which preserves the relation but loses the precise 'is_a' semantics. In contrast, n6 (调节像距以成清晰像) maps well to '农夫通过水渠引水灌溉', as both involve a regulatory process to achieve a clear outcome, making this mapping stronger."
+  },
+  "revision_instructions": [
+    "Consider refining the mapping of n2 (实像) to a more specific story element that better captures the 'image' concept, such as '禾苗的清晰倒影' if context allows, to improve faithfulness.",
+    "Ensure that the edge e2 relation 'is_a' is more explicitly reflected in the story, perhaps by stating that '禾苗生长' is a type of process that leads to '高大的禾苗' as a direct result, rather than just a sequential outcome."
+  ],
+  "final_status": "accept"
+}

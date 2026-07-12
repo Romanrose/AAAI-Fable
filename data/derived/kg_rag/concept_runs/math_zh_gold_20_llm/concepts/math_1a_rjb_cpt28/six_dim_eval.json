@@ -1,0 +1,88 @@
+{
+  "concept_id": "math_1a_rjb_cpt28",
+  "target_concept": "分与合（拆分与组合）",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.65,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过七巧板拼拆过程准确展示了7的拆分与组合，如两块小三角形合成正方形（2+5=7）和大三角形拆成小三角形（1+6=7），完全符合概念定义。",
+    "implicitness": "概念名称未在故事中直接出现，但通过奇奇的发现和总结自然引出，隐含性较好。",
+    "mapping_clarity": "每个拆分与组合的操作都明确对应到数字7的分解与合成，映射清晰且易于理解。",
+    "readability": "语言生动流畅，情节连贯，适合目标年龄段阅读。",
+    "pedagogical_value": "通过具体操作和验证过程，有效帮助学生理解数的拆分与组合，教学价值高。",
+    "novelty": "七巧板是常见教具，故事构思虽合理但缺乏新意。"
+  },
+  "revision_suggestions": [
+    "可增加更多不同的拆分组合示例，如7分成4和3。",
+    "可加入其他数字的拆分与组合以扩展概念。"
+  ],
+  "rule_findings": {
+    "story_token_count": 554,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "分与合（拆分与组合）",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过七巧板拼拆过程准确展示了7的拆分与组合，如两块小三角形合成正方形（2+5=7）和大三角形拆成小三角形（1+6=7），完全符合概念定义。",
+      "implicitness": "概念名称未在故事中直接出现，但通过奇奇的发现和总结自然引出，隐含性较好。",
+      "mapping_clarity": "每个拆分与组合的操作都明确对应到数字7的分解与合成，映射清晰且易于理解。",
+      "readability": "语言生动流畅，情节连贯，适合目标年龄段阅读。",
+      "pedagogical_value": "通过具体操作和验证过程，有效帮助学生理解数的拆分与组合，教学价值高。",
+      "novelty": "七巧板是常见教具，故事构思虽合理但缺乏新意。"
+    },
+    "revision_suggestions": [
+      "可增加更多不同的拆分组合示例，如7分成4和3。",
+      "可加入其他数字的拆分与组合以扩展概念。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

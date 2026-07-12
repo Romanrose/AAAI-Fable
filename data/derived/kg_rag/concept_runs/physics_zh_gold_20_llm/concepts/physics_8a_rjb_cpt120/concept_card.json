@@ -1,0 +1,65 @@
+{
+  "concept_id": "physics_8a_rjb_cpt120",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "望远镜",
+  "definition": "由物镜和目镜组成，物镜成实像，目镜对实像进行放大，使远处物体成大的视角。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt106",
+        "label": "Concept",
+        "name": "凸透镜成像规律",
+        "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt123",
+        "label": "Concept",
+        "name": "视角",
+        "definition": "物体对眼睛形成的角度大小，影响人眼观察物体清晰程度。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp28",
+        "label": "Experiment",
+        "name": "模拟望远镜实验",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s5",
+        "label": "Section",
+        "name": "第五节 显微镜和望远镜",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "望远镜"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

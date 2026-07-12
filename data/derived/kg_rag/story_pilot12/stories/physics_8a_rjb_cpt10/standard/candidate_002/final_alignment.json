@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "评判瓜的标准不一样，一个看个头，一个听声音",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "他伸手把那个大瓜从称上拿起来，放到旁边的空地上，又拿起另一个小瓜放回称上，比了比大小",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "标准不同，结论自然不同",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他伸手把那个大瓜从称上拿起来，放到旁边的空地上，又拿起另一个小瓜放回称上，比了比大小",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "评判瓜的标准不一样，一个看个头，一个听声音，标准不同，结论自然不同",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "标准不同，结论自然不同",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 maps to the buyers' different judging criteria; n2 maps to the process of comparing melons by size; n3 maps to the state that different criteria lead to different conclusions. Edge e1 (process relates to criteria) is evidenced by the size comparison action; e2 (criteria enable conclusion) is evidenced by the farmer's explanation; e3 (conclusion relates to criteria) is evidenced by the same explanation. No missing elements."
+}

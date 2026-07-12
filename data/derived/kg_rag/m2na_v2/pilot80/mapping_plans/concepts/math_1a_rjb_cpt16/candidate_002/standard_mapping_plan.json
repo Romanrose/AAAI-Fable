@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt16",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个关于竹篮编织的寓言故事",
+  "characters": [
+    "老竹匠",
+    "小竹匠"
+  ],
+  "objects": [
+    "竹篮",
+    "竹筐",
+    "竹筛",
+    "竹篓"
+  ],
+  "conflict": "小竹匠想编织一个既能盛水又能透气的容器，但老竹匠指出不同的编织方法决定了容器的形状和用途。",
+  "event_chain": [
+    "小竹匠看到竹篮能盛放物品，认为所有竹编容器都一样。",
+    "老竹匠拿出竹筐、竹筛和竹篓，让小竹匠观察它们的编织方法。",
+    "小竹匠发现竹篮的编织是交叉紧密的，属于‘紧密编织’类。",
+    "小竹匠发现竹筛的编织是旋转环绕的，属于‘旋转编织’类。",
+    "小竹匠发现竹篓的编织是螺旋上升的，与竹篮的编织方法有关联。",
+    "小竹匠明白了不同编织方法决定了容器的分类和特性。"
+  ],
+  "turning_point": "小竹匠意识到竹篮的编织方法同时属于‘紧密编织’和‘旋转编织’两类，并且与竹篓的螺旋编织相关联。",
+  "resolution_state": "小竹匠理解了竹篮的编织方法属于两种不同的分类，并且与竹篓的编织方法有内在联系。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "竹篮",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "紧密编织",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "旋转编织",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "竹篓",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "竹篮的编织方法属于紧密编织类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "竹篮的编织方法属于旋转编织类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "竹篮的编织方法与竹篓的编织方法相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保竹篮、竹筐、竹筛、竹篓等载体不直接映射到数学概念。",
+    "避免使用‘圆柱’、‘圆柱体’等禁止术语。",
+    "确保‘紧密编织’和‘旋转编织’是竹编工艺中的分类，而非数学分类。",
+    "注意竹篓的螺旋编织与竹篮的交叉编织之间的关联性，避免混淆。"
+  ],
+  "mapping_context_sha256": "c11ca6c389982bb6f47cd212f5a568b7242e1e9ee236b3d7fbcdde1a109b46bd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "618ae8624480b9cb2e28734f9a1c2ad7d313a810b80dcd4520c85f8cff6a3d8a"
+  }
+}

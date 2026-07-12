@@ -1,0 +1,12 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "physics_8a_rjb_cpt103",
+  "subject": "physics",
+  "canonical_name": "照相机成像",
+  "aliases": [],
+  "definition": "物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像。",
+  "concept_type": "mechanism",
+  "forbidden_terms": [
+    "照相机成像"
+  ]
+}

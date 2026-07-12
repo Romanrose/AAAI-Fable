@@ -1,0 +1,64 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄里的独株果树与其果实掉落的故事",
+  "characters": [
+    "一棵独自生长的果树",
+    "果树上的一朵花",
+    "果树上的其他花朵"
+  ],
+  "objects": [
+    "果树",
+    "花朵",
+    "花粉",
+    "果实"
+  ],
+  "conflict": "这棵果树只有自己一棵，没有其他果树相邻，它担心无法结出果实。",
+  "event_chain": [
+    "果树上的某一朵花散落出花粉",
+    "花粉落到了同一朵花的柱头上",
+    "这朵花因此结出了果实",
+    "果树的其他花朵也纷纷效仿，最终整棵树硕果累累"
+  ],
+  "turning_point": "那朵花的花粉落在自己的柱头上，成功结出果实，证明了自给自足的可能性。",
+  "resolution_state": "果树通过自身花朵之间的传粉，无需依赖其他树，便获得了丰收。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "花粉从一朵花散落并落到同一朵花的柱头上",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "同一朵花的花粉落到自己的柱头上而结出果实",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "同一朵花的花粉落到自己柱头上而结出果实，是花粉从花药散落到柱头这一过程的一种特殊情况",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'自花传粉'或'传粉'等禁止术语",
+    "确保'同一朵花'的表述清晰，避免被误解为不同花之间的传粉",
+    "注意果树独株的设定，避免引入其他果树作为外部传粉源"
+  ],
+  "mapping_context_sha256": "13a63806af78935a153909811219ea80ee255b8481e660cabe7506be1215e182",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ec579f300fde715550b80a5e8ce6147c56209667ba6ef21cbd29cd4df761801f"
+  }
+}

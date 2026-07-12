@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确体现了从7或6中去掉一部分得到差的核心机制，如7-2=5、6-1=5等，且未出现与概念定义矛盾的内容。",
+    "implicitness": "故事完全未直接提及'6和7的减法'或概念ID，而是通过宝石和花朵的场景自然隐含减法关系，符合隐含性要求。",
+    "mapping_clarity": "故事中守护者取宝石和摘花的事件清晰映射了减法操作，小方的发现明确揭示了'取走+剩余=原数'的规律，但部分表述（如'七减二等于五'）略显直接，略降低映射的完全隐含性。",
+    "readability": "语言简洁流畅，情节连贯，适合目标年龄段，无复杂词汇或句式，可读性高。",
+    "pedagogical_value": "通过两个不同场景（喷泉和花坛）重复展示减法规律，强化了概念理解，且结尾小方能够应用规则，教学价值高。",
+    "novelty": "故事采用了规则谜城和平衡喷泉的奇幻设定，但减法作为核心机制较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可进一步减少直接算式表述（如'七减二等于五'），改用更隐晦的观察记录方式。",
+    "可增加一个需要学生自己推断的开放式结局，以提升参与感。"
+  ]
+}

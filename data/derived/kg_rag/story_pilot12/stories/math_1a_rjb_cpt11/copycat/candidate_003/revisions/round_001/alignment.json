@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员重新核对入口条件，调度员按顺序传递地图，验收员则拿起结果验收记录册，对照着每一张修补好的地图，仔细核对裂缝是否对齐、线条是否连贯",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中，记录员先确认入口条件核对（n1），然后验收员使用结果验收记录册（n2）进行核对，且故事明确表明入口条件核对是后续结果验收记录的前提，方向一致，证据充分。"
+}

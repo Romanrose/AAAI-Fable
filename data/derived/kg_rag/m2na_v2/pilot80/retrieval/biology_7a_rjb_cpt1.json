@@ -1,0 +1,670 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt1",
+    "label": "Concept",
+    "name": "生物",
+    "properties": {
+      "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+      "importance": "重要",
+      "examples": [
+        "小麦",
+        "海豚",
+        "鲸",
+        "人",
+        "含羞草",
+        "幼鳄",
+        "蘑菇",
+        "狗",
+        "珊瑚虫"
+      ],
+      "aliases": [
+        "生命体"
+      ],
+      "retrieval_text": "生物\nConcept\n具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。\n重要\n生命体\n小麦\n海豚\n鲸\n人\n含羞草\n幼鳄\n蘑菇\n狗\n珊瑚虫"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "biology_7a_rjb_ch1_s1",
+      "label": "Section",
+      "name": "第一章 认识生物",
+      "properties": {
+        "retrieval_text": "第一章 认识生物\nSection"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt10",
+      "label": "Concept",
+      "name": "遗传和变异",
+      "properties": {
+        "definition": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+        "importance": "掌握",
+        "examples": [
+          "狗的一家体现亲子相似与差异",
+          "同一株碧桃上的花存在差异"
+        ],
+        "retrieval_text": "遗传和变异\nConcept\n子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。\n掌握\n狗的一家体现亲子相似与差异\n同一株碧桃上的花存在差异"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt11",
+      "label": "Concept",
+      "name": "细胞",
+      "properties": {
+        "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+        "importance": "了解",
+        "examples": [
+          "叶的表皮细胞",
+          "心肌细胞",
+          "受精卵（单细胞）"
+        ],
+        "aliases": [
+          "cell"
+        ],
+        "retrieval_text": "细胞\nConcept\n生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。\n了解\ncell\n叶的表皮细胞\n心肌细胞\n受精卵（单细胞）"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "properties": {
+        "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+        "importance": "了解",
+        "examples": [
+          "流感病毒",
+          "艾滋病病毒",
+          "烟草花叶病毒",
+          "噬菌体"
+        ],
+        "aliases": [
+          "virus"
+        ],
+        "unit": "纳米（用于表示大小）",
+        "retrieval_text": "病毒\nConcept\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。\n了解\n纳米（用于表示大小）\nvirus\n流感病毒\n艾滋病病毒\n烟草花叶病毒\n噬菌体"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt3",
+      "label": "Concept",
+      "name": "营养（生物的生活需要营养）",
+      "properties": {
+        "definition": "生物的一生需要不断从外界获得营养物质以维持生存与生命活动。",
+        "importance": "掌握",
+        "examples": [
+          "绿色植物吸收水、无机盐和二氧化碳，通过光合作用制造有机物",
+          "动物以植物或别的动物为食获取营养物质"
+        ],
+        "retrieval_text": "营养（生物的生活需要营养）\nConcept\n生物的一生需要不断从外界获得营养物质以维持生存与生命活动。\n掌握\n绿色植物吸收水、无机盐和二氧化碳，通过光合作用制造有机物\n动物以植物或别的动物为食获取营养物质"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt5",
+      "label": "Concept",
+      "name": "呼吸（生物能进行呼吸）",
+      "properties": {
+        "definition": "绝大多数生物需要吸入氧气，呼出二氧化碳的生命活动过程。",
+        "importance": "掌握",
+        "examples": [
+          "鲸需要时常浮出水面进行换气"
+        ],
+        "retrieval_text": "呼吸（生物能进行呼吸）\nConcept\n绝大多数生物需要吸入氧气，呼出二氧化碳的生命活动过程。\n掌握\n鲸需要时常浮出水面进行换气"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt6",
+      "label": "Concept",
+      "name": "排出废物（生物能排出身体内产生的废物）",
+      "properties": {
+        "definition": "生物在生活过程中体内不断产生多种废物，并能将废物排出体外。",
+        "importance": "掌握",
+        "examples": [
+          "人通过排尿、出汗和呼出气体排出废物",
+          "植物落叶带走一部分废物"
+        ],
+        "retrieval_text": "排出废物（生物能排出身体内产生的废物）\nConcept\n生物在生活过程中体内不断产生多种废物，并能将废物排出体外。\n掌握\n人通过排尿、出汗和呼出气体排出废物\n植物落叶带走一部分废物"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt8",
+      "label": "Concept",
+      "name": "生长",
+      "properties": {
+        "definition": "生物体能够由小长大的生命现象。",
+        "importance": "掌握",
+        "examples": [
+          "种子萌发成幼苗并不断长大",
+          "蘑菇能由小长大"
+        ],
+        "retrieval_text": "生长\nConcept\n生物体能够由小长大的生命现象。\n掌握\n种子萌发成幼苗并不断长大\n蘑菇能由小长大"
+      }
+    },
+    {
+      "source_node_id": "biology_7a_rjb_cpt9",
+      "label": "Concept",
+      "name": "繁殖",
+      "properties": {
+        "definition": "生物体发育到一定阶段后产生下一代的生命现象。",
+        "importance": "掌握",
+        "examples": [
+          "鳄类通过产卵繁殖",
+          "虎、狼等动物通过产仔繁殖",
+          "植物产生种子繁殖"
+        ],
+        "retrieval_text": "繁殖\nConcept\n生物体发育到一定阶段后产生下一代的生命现象。\n掌握\n鳄类通过产卵繁殖\n虎、狼等动物通过产仔繁殖\n植物产生种子繁殖"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:0",
+      "source": "biology_7a_rjb_cpt1",
+      "source_name": "生物",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 1,
+      "retrieval_role": "curriculum_bridge",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:1",
+      "source": "biology_7a_rjb_cpt10",
+      "source_name": "遗传和变异",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:109",
+      "source": "biology_7a_rjb_cpt3",
+      "source_name": "营养（生物的生活需要营养）",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:12",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:137",
+      "source": "biology_7a_rjb_cpt5",
+      "source_name": "呼吸（生物能进行呼吸）",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:155",
+      "source": "biology_7a_rjb_cpt6",
+      "source_name": "排出废物（生物能排出身体内产生的废物）",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:190",
+      "source": "biology_7a_rjb_cpt8",
+      "source_name": "生长",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:203",
+      "source": "biology_7a_rjb_cpt9",
+      "source_name": "繁殖",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    },
+    {
+      "source_edge_id": "normalized:edge:26",
+      "source": "biology_7a_rjb_cpt12",
+      "source_name": "病毒",
+      "target": "biology_7a_rjb_ch1_s1",
+      "target_name": "第一章 认识生物",
+      "relation": "appears_in",
+      "relation_description": "appears_in",
+      "score": 0.4,
+      "hop": 2,
+      "retrieval_role": "curriculum_peer",
+      "evidence_eligible": false
+    }
+  ],
+  "selected_paths": [
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt10"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "遗传和变异"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:1",
+          "source": "biology_7a_rjb_cpt10",
+          "source_name": "遗传和变异",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.6167,
+      "lexical_anchor": "遗传和变异"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt6"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "排出废物（生物能排出身体内产生的废物）"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:155",
+          "source": "biology_7a_rjb_cpt6",
+          "source_name": "排出废物（生物能排出身体内产生的废物）",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.5333,
+      "lexical_anchor": "排出废物"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt3"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "营养（生物的生活需要营养）"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:109",
+          "source": "biology_7a_rjb_cpt3",
+          "source_name": "营养（生物的生活需要营养）",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.3667,
+      "lexical_anchor": "营养"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt11"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "细胞"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:12",
+          "source": "biology_7a_rjb_cpt11",
+          "source_name": "细胞",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.3667,
+      "lexical_anchor": "细胞"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt5"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "呼吸（生物能进行呼吸）"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:137",
+          "source": "biology_7a_rjb_cpt5",
+          "source_name": "呼吸（生物能进行呼吸）",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.3667,
+      "lexical_anchor": "呼吸"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt8"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "生长"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:190",
+          "source": "biology_7a_rjb_cpt8",
+          "source_name": "生长",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.3667,
+      "lexical_anchor": "生长"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt9"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "繁殖"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:203",
+          "source": "biology_7a_rjb_cpt9",
+          "source_name": "繁殖",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.3667,
+      "lexical_anchor": "繁殖"
+    },
+    {
+      "path_kind": "curriculum_lexical_bridge",
+      "hop_count": 2,
+      "node_ids": [
+        "biology_7a_rjb_cpt1",
+        "biology_7a_rjb_ch1_s1",
+        "biology_7a_rjb_cpt12"
+      ],
+      "node_names": [
+        "生物",
+        "第一章 认识生物",
+        "病毒"
+      ],
+      "edges": [
+        {
+          "source_edge_id": "normalized:edge:0",
+          "source": "biology_7a_rjb_cpt1",
+          "source_name": "生物",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 1,
+          "retrieval_role": "curriculum_bridge",
+          "evidence_eligible": false
+        },
+        {
+          "source_edge_id": "normalized:edge:26",
+          "source": "biology_7a_rjb_cpt12",
+          "source_name": "病毒",
+          "target": "biology_7a_rjb_ch1_s1",
+          "target_name": "第一章 认识生物",
+          "relation": "appears_in",
+          "relation_description": "appears_in",
+          "score": 0.4,
+          "hop": 2,
+          "retrieval_role": "curriculum_peer",
+          "evidence_eligible": false
+        }
+      ],
+      "score": 0.3667,
+      "lexical_anchor": "病毒"
+    }
+  ],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "生物",
+      "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": [
+      "[normalized:edge:0] 生物 --appears_in--> 第一章 认识生物",
+      "[normalized:edge:1] 遗传和变异 --appears_in--> 第一章 认识生物",
+      "[normalized:edge:109] 营养（生物的生活需要营养） --appears_in--> 第一章 认识生物",
+      "[normalized:edge:12] 细胞 --appears_in--> 第一章 认识生物",
+      "[normalized:edge:137] 呼吸（生物能进行呼吸） --appears_in--> 第一章 认识生物"
+    ]
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 0,
+    "direct_structure_sufficient": false,
+    "direct_structure_reasons": [
+      "no_core_direct_edges"
+    ],
+    "expanded_to_two_hop": true,
+    "expansion_reason": "no_core_direct_edges",
+    "expansion_mode": "curriculum_lexical_bridge"
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 9,
+    "candidate_edge_count": 0,
+    "retrieval_path_count": 8,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 0,
+    "expanded_to_two_hop": true
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "concept_id": "math_1a_rjb_cpt20",
+  "target_concept": "6和7的加法",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完全忠实于目标概念：通过左右石头数量合并得到6或7时石槽亮起，准确体现了6和7的加法算式（如5+1=6、1+5=6等）。",
+    "implicitness": "故事未直接提及“6和7的加法”或任何禁止术语，而是通过事件和观察自然隐含数学规则，符合隐含性要求。",
+    "mapping_clarity": "映射非常清晰：左右石头数量对应加数，石槽亮起对应和为6或7，每个试验都明确展示了加法算式的合并过程。",
+    "readability": "故事语言流畅、情节连贯，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "教学价值高：通过多次试验和对比（如6+0不亮、5+1亮），引导学生发现总数决定结果的规律，强化加法概念。",
+    "novelty": "故事设定（石桥、石槽、石头）有一定创意，但整体结构（观察-试验-发现规律）较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个更意外的转折，如石槽偶尔因其他原因亮起，增加探索趣味。",
+    "可加入一个角色提出错误假设（如认为石头形状重要），然后被证伪，增强认知冲突。"
+  ],
+  "rule_findings": {
+    "story_token_count": 494,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事完全忠实于目标概念：通过左右石头数量合并得到6或7时石槽亮起，准确体现了6和7的加法算式（如5+1=6、1+5=6等）。",
+      "implicitness": "故事未直接提及“6和7的加法”或任何禁止术语，而是通过事件和观察自然隐含数学规则，符合隐含性要求。",
+      "mapping_clarity": "映射非常清晰：左右石头数量对应加数，石槽亮起对应和为6或7，每个试验都明确展示了加法算式的合并过程。",
+      "readability": "故事语言流畅、情节连贯，适合目标年龄段阅读，无冗余或晦涩表达。",
+      "pedagogical_value": "教学价值高：通过多次试验和对比（如6+0不亮、5+1亮），引导学生发现总数决定结果的规律，强化加法概念。",
+      "novelty": "故事设定（石桥、石槽、石头）有一定创意，但整体结构（观察-试验-发现规律）较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个更意外的转折，如石槽偶尔因其他原因亮起，增加探索趣味。",
+      "可加入一个角色提出错误假设（如认为石头形状重要），然后被证伪，增强认知冲突。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

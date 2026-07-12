@@ -1,0 +1,67 @@
+{
+  "concept_id": "math_1a_rjb_cpt2",
+  "subject": "math",
+  "story_language": "zh-CN",
+  "canonical_name": "比较数量（多、少、一样多）",
+  "definition": "根据物体数量的多少进行比较，判断哪个多、哪个少，或者是否一样多。",
+  "aliases": [],
+  "examples": [
+    "比较两组小棒的数量",
+    "判断哪个图形数量更多"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "relation",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt3",
+        "label": "Concept",
+        "name": "一一对应比较法",
+        "definition": "通过将两组物体一一配对来比较数量的多少。"
+      },
+      {
+        "id": "math_1a_rjb_cpt1",
+        "label": "Concept",
+        "name": "数物体（数一数）",
+        "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "math_1a_rjb_exe1",
+        "label": "Exercise",
+        "name": "看图，比较两组小棒的数量，在较多的一组后画“√”。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch1",
+        "label": "Chapter",
+        "name": "准备课",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "比较数量（多、少、一样多）"
+  ],
+  "subject_constraints_zh": [
+    "保留形式定义条件和规则一致性。",
+    "避免只有故事没有数学结构。",
+    "避免把数学概念道德化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt26",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫种七棵果树的故事",
+  "characters": [
+    "农夫",
+    "七棵果树"
+  ],
+  "objects": [
+    "七棵果树",
+    "土壤",
+    "水分",
+    "阳光",
+    "果实"
+  ],
+  "conflict": "农夫想要收获七棵果树的全部果实，但必须先让每棵树都认识自己的根和土壤（数字7的认识），并学会如何将果实拆分组合（分与合），否则无法正确计算收获的总数。",
+  "event_chain": [
+    "农夫先让七棵果树认识自己的根和土壤（数字7的认识）。",
+    "农夫教果树如何将果实拆分与组合（分与合）。",
+    "农夫利用根和土壤的知识以及拆分组合的方法，成功收获所有果实（7的加减法）。"
+  ],
+  "turning_point": "农夫发现只有同时具备根的认识和拆分组合能力，才能准确收获全部果实。",
+  "resolution_state": "农夫成功收获七棵果树的全部果实，每棵树的果实数量通过加减法得到正确总和。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "七棵果树认识自己的根和土壤",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫教果树如何将果实拆分与组合",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫利用根的认识和拆分组合方法收获全部果实",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "七棵果树认识自己的根和土壤使农夫能够利用这一知识收获果实",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫教果树拆分组合的方法使农夫能够利用该方法收获果实",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'7的加减法'或相关术语。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "4fbcfae43c72f26310eea05e2cce3d9e509bca2042ddd5c8185f6ad979755cd1",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "35ca84d11e29ba24e66e97a8cdacc702a6ac3bb6058b06db86060ec9953808fa"
+  }
+}

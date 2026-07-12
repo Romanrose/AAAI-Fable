@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt24",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄里的果园",
+  "characters": [
+    "果农老张",
+    "小徒弟阿福"
+  ],
+  "objects": [
+    "7棵苹果树",
+    "数树口诀",
+    "苹果加减游戏",
+    "比较果树数量"
+  ],
+  "conflict": "阿福想学会用7棵苹果树做各种分配和比较，但必须先准确数出第7棵树的位置和总数。",
+  "event_chain": [
+    "老张教阿福按顺序从左到右数苹果树，数到第7棵时记住位置。",
+    "阿福认识了这7棵苹果树，知道它们代表的总数。",
+    "阿福用这7棵树玩加减游戏，比如5棵结红果的加2棵结青果的等于7棵。",
+    "阿福比较不同果园的果树数量，用多和少来对比7棵与其他数量。"
+  ],
+  "turning_point": "阿福通过数树口诀准确找到第7棵树，从而理解了7棵树的整体概念。",
+  "resolution_state": "阿福掌握了7棵苹果树的认识，并能进行加减和比较。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "按顺序从左到右数苹果树，数到第7棵",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "认识这7棵苹果树，理解它们代表的总数",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用7棵苹果树玩加减游戏，如5棵加2棵等于7棵",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "比较不同果园的果树数量，用多和少来对比",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "数树口诀使阿福认识了7棵苹果树",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "认识7棵苹果树后，阿福能用它们玩加减游戏",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "比较果树数量的规则与认识7棵苹果树相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数字7的认识'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保不使用目标概念名称或别名。",
+    "确保故事连贯，不引入无关比喻。"
+  ],
+  "mapping_context_sha256": "6478efa80d4cb8516d1b6f15d51eae43785405648b119fccc62e63c83cbd4c85",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "883a2dff526d651f99adc1e701749b0954e6f992129885d83007cf773a0deaa0"
+  }
+}

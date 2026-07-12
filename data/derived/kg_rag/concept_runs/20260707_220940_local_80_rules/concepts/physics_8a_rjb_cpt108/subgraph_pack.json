@@ -1,0 +1,127 @@
+{
+  "query": "physics_8a_rjb_cpt108",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt108",
+    "label": "Concept",
+    "name": "像距",
+    "definition": "像到凸透镜的距离，用v表示。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "像距\n像到凸透镜的距离，用v表示。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt106",
+        "label": "Concept",
+        "name": "凸透镜成像规律",
+        "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt107",
+        "label": "Concept",
+        "name": "物距",
+        "definition": "物体到凸透镜的距离，用u表示。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s3",
+        "label": "Section",
+        "name": "第三节 凸透镜成像的规律",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:17194] 像距 --prerequisites_for--> 凸透镜成像规律\n- [normalized:edge:19712] 物距 --relates_to--> 像距"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '像距', 'definition': '像到凸透镜的距离，用v表示。', 'formula': '', 'importance': '掌握'}, 'condition_summary': ['[normalized:edge:17194] 像距 --prerequisites_for--> 凸透镜成像规律'], 'process_summary': ['[normalized:edge:19712] 物距 --relates_to--> 像距'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "physics_8a_rjb_cpt108",
+      "label": "Concept",
+      "name": "像距",
+      "properties": {
+        "definition": "像到凸透镜的距离，用v表示。",
+        "importance": "掌握",
+        "unit": "cm",
+        "retrieval_text": "像距\nConcept\n像到凸透镜的距离，用v表示。\n掌握\ncm"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:17194",
+        "source": "physics_8a_rjb_cpt108",
+        "source_name": "像距",
+        "target": "physics_8a_rjb_cpt106",
+        "target_name": "凸透镜成像规律",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:19712",
+        "source": "physics_8a_rjb_cpt107",
+        "source_name": "物距",
+        "target": "physics_8a_rjb_cpt108",
+        "target_name": "像距",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "像距",
+        "definition": "像到凸透镜的距离，用v表示。",
+        "formula": "",
+        "importance": "掌握"
+      },
+      "condition_summary": [
+        "[normalized:edge:17194] 像距 --prerequisites_for--> 凸透镜成像规律"
+      ],
+      "process_summary": [
+        "[normalized:edge:19712] 物距 --relates_to--> 像距"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 522,
+      "summary_chars": 281,
+      "path_chars": 0,
+      "retrieval_context_chars": 803
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 522,
+    "summary_chars": 281,
+    "path_chars": 0,
+    "retrieval_context_chars": 803
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "math_1a_rjb_cpt1",
+  "method": "con2fable",
+  "concept": {
+    "name": "数物体（数一数）",
+    "aliases": [],
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：一一对应比较法",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：比较数量（多、少、一样多）",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16335"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19305"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "秋天的果园里，苹果挂满了枝头，红彤彤的像一盏盏小灯笼。果农老张站在一棵高大的苹果树下，仰着头，用手指着树上的苹果，一个一个地数过去。他数得很认真，最后大声说：“这棵树上有53个苹果！”\n\n年轻果农小李提着篮子走过来，准备摘苹果。他想了想，对老张说：“张叔，我有个办法可以核对一下您数的数。”小李开始摘苹果，每摘下一个，就在地上放一颗小石子。摘完所有的苹果后，他蹲下来数地上的石子，数来数去只有51颗。\n\n“张叔，您看，石子只有51颗，可您说树上有53个苹果，这不对呀。”小李挠着头说。\n\n老张皱起眉头，重新走到树下仔细查看。他拨开密密的树叶，这才发现原来有一个大苹果藏在叶子后面，还有一个被树枝挡住了。老张重新数了一遍，这次他看得特别仔细，每一个苹果都看清楚了才数。最后他数出51个苹果，和小李的石子数一模一样。\n\n“原来是我没看仔细，漏掉了两个。”老张拍拍脑袋说。\n\n这时候，王婶推着两筐苹果走过来。她把第一筐的苹果一个个摆在地上，排成一行，又把第二筐的苹果也摆成一行，让它们一个对着一个。王婶仔细看了看，大声说：“第一筐比第二筐多了3个苹果，你们看，这边多出来三个对不上。”\n\n老张和小李走过去一看，果然，第一筐的苹果排得长长的，第二筐的短了一截，多出来的三个苹果孤零零地站在末尾。\n\n从那以后，老张每次数苹果都会先仔细看清楚每一个，再用石子一一核对。王婶也总是用这种一个对一个的方法比较各筐的数量。果园里的采摘和分装工作变得井井有条，再也没有出过差错。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "老张数苹果",
+        "evidence": "用手指着树上的苹果，一个一个地数过去",
+        "narrative_anchor": "用手指着树上的苹果，一个一个地数过去"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "小李用石子一一对应核对",
+        "evidence": "每摘下一个，就在地上放一颗小石子。摘完所有的苹果后，他蹲下来数地上的石子",
+        "narrative_anchor": "每摘下一个，就在地上放一颗小石子"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "王婶比较两筐苹果数量",
+        "evidence": "第一筐比第二筐多了3个苹果",
+        "narrative_anchor": "第一筐比第二筐多了3个苹果"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "老张数完后，小李用一一对应法核对",
+        "evidence": "小李开始摘苹果，每摘下一个，就在地上放一颗小石子。摘完所有的苹果后，他蹲下来数地上的石子",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "小李开始摘苹果，每摘下一个，就在地上放一颗小石子"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "小李用石子核对后，王婶用一一对应比较数量多少",
+        "evidence": "王婶把第一筐的苹果一个个摆在地上，排成一行，又把第二筐的苹果也摆成一行，让它们一个对着一个。王婶仔细看了看，大声说：“第一筐比第二筐多了3个苹果”",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "王婶把第一筐的苹果一个个摆在地上，排成一行，又把第二筐的苹果也摆成一行，让它们一个对着一个"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "math",
+    "story_language": "zh-CN",
+    "concept_type": "relation",
+    "generation_priority": "gold"
+  }
+}

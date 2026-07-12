@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt21",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个农夫分瓜的故事",
+  "characters": [
+    "农夫",
+    "大儿子",
+    "二儿子",
+    "小女儿"
+  ],
+  "objects": [
+    "7个西瓜",
+    "篮子",
+    "图示卡片"
+  ],
+  "conflict": "农夫有7个西瓜，需要分给三个孩子，但每个孩子只能得到一部分，且要确保分完后剩下的西瓜数量是6或7，孩子们不知道如何分才能满足要求。",
+  "event_chain": [
+    "农夫拿出7个西瓜，告诉孩子们要分掉一些，但剩下的西瓜数量必须是6或7。",
+    "大儿子尝试直接拿走1个，剩下6个，但不知道是否还有其他分法。",
+    "二儿子观察图示卡片，发现可以提出‘还剩多少’的问题，从而想到不同的分法。",
+    "小女儿通过数西瓜、比较大小，认识了西瓜的总数7和可能剩下的数量6。",
+    "孩子们一起讨论，将7个西瓜分成两部分，一部分拿走，一部分剩下，列出所有可能的分法（如拿走1剩6，拿走2剩5等）。",
+    "最终，孩子们发现只有拿走1个剩6或拿走0个剩7才符合要求，并理解了减法算式的含义。"
+  ],
+  "turning_point": "孩子们通过观察图示卡片和讨论，意识到需要先认识总数和可能剩下的数量，再列出所有分法，从而找到符合条件的分法。",
+  "resolution_state": "孩子们成功掌握了如何从7个西瓜中通过去掉一部分得到差为6或7的减法算式，并理解了分拆数的概念。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "孩子们讨论将7个西瓜分成两部分（拿走和剩下），列出所有可能的分法",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "二儿子观察图示卡片，提出‘还剩多少’的数学问题",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小女儿通过数西瓜、比较大小，认识总数7和可能剩下的数量6",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "孩子们通过从西瓜总数中去掉一部分，得到剩下6或7个西瓜的减法算式",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "孩子们列出所有分法，使得他们能够理解减法算式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "二儿子提出数学问题，促使孩子们思考减法算式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "小女儿认识数字，与减法算式的理解相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现‘6和7的减法’等禁止术语。",
+    "注意保持所有机制节点和边的映射，避免遗漏。",
+    "故事中‘分拆数’的概念通过分西瓜的动作体现，避免直接提及。"
+  ],
+  "mapping_context_sha256": "c86090c029d45d6e2b89b200c18e96163700e92c9cd8784003f5ca62408ed111",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "063628575dbc471abfcb66ad52ec6c8bca487c149fb588b0534e8aa2af31eb2f"
+  }
+}

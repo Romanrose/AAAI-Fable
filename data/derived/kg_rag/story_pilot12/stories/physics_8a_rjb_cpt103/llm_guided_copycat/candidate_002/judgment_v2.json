@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 3,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n4",
+    "weakest_node_id": "n3",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n3 (照相机成像) is not explicitly mentioned in the story; its mapping to '造纸过程' is inferred but lacks direct evidence. Edge e1 (凸透镜 enables 照相机成像) has no explicit story evidence, weakening the causal link between 抄纸帘 and 造纸过程. In contrast, node n4 (物体远离凸透镜) is well represented by '纸浆逐渐远离抄纸帘' with high confidence."
+  },
+  "revision_instructions": [
+    "Explicitly state that the 抄纸帘 enables the 造纸过程, e.g., '抄纸帘是造纸过程的关键工具'.",
+    "Clarify that the 造纸过程 produces 薄而均匀的纸页 as a direct outcome, e.g., '造纸过程最终形成薄而均匀的纸页'.",
+    "Ensure the story length is within 450-750 Chinese characters (current 536 is valid).",
+    "Add a sentence linking 压榨工序 to the 造纸过程 to strengthen edge e5's evidence."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

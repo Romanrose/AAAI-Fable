@@ -1,0 +1,100 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt25",
+    "label": "Concept",
+    "name": "6的加减法",
+    "properties": {
+      "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+      "importance": "重要",
+      "retrieval_text": "6的加减法\nConcept\n掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。\n重要"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "math_1a_rjb_cpt23",
+      "label": "Concept",
+      "name": "数字6的认识",
+      "properties": {
+        "definition": "通过数物体、读写数字等方式认识数字6，理解6表示的数量。",
+        "importance": "掌握",
+        "pages": "教材第5章相关页面",
+        "retrieval_text": "数字6的认识\nConcept\n通过数物体、读写数字等方式认识数字6，理解6表示的数量。\n掌握\n教材第5章相关页面"
+      }
+    },
+    {
+      "source_node_id": "math_1a_rjb_cpt28",
+      "label": "Concept",
+      "name": "分与合（拆分与组合）",
+      "properties": {
+        "definition": "把一个数分成两个部分或由两个部分合成一个数，如“7可以分成1和6、2和5、3和4”。",
+        "importance": "重要",
+        "retrieval_text": "分与合（拆分与组合）\nConcept\n把一个数分成两个部分或由两个部分合成一个数，如“7可以分成1和6、2和5、3和4”。\n重要"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16344",
+      "source": "math_1a_rjb_cpt23",
+      "source_name": "数字6的认识",
+      "target": "math_1a_rjb_cpt25",
+      "target_name": "6的加减法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:16346",
+      "source": "math_1a_rjb_cpt28",
+      "source_name": "分与合（拆分与组合）",
+      "target": "math_1a_rjb_cpt25",
+      "target_name": "6的加减法",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "6的加减法",
+      "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16344] 数字6的认识 --prerequisites_for--> 6的加减法",
+      "[normalized:edge:16346] 分与合（拆分与组合） --prerequisites_for--> 6的加减法"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 2,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "single_direct_relation_is_sufficient_for_non_multistep_concept"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 2,
+    "expanded_to_two_hop": false
+  }
+}

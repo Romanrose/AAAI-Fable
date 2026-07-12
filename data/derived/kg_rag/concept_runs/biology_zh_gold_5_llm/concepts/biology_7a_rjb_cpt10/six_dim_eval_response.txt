@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过碧桃、向日葵、黄瓜的亲子代对比，准确展示了子代与亲代在多数特征上相同（遗传）但部分特征不同（变异）的现象，完全符合概念定义。",
+    "implicitness": "故事全程未出现'遗传'和'变异'术语，仅通过具体观察和对话暗示核心规则，符合隐含性要求。",
+    "mapping_clarity": "每个植物例子都清晰映射了遗传（碧桃都开粉花、向日葵都长花盘、黄瓜都结瓜）和变异（花瓣数、花盘大小、瓜的形状颜色差异），映射关系明确。",
+    "readability": "语言流畅自然，情节简单易懂，适合目标年龄段，对话生动，无冗余或晦涩表述。",
+    "pedagogical_value": "通过三个递进实例（同株、同母、同藤）逐步深化理解，结尾以孩子自身类比巩固，教学结构完整，能有效引导学习者发现规律。",
+    "novelty": "故事采用常见的植物观察场景，虽表达清晰但缺乏独特创意或意外视角，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑引入更不常见的生物（如蕨类或真菌）增加新颖性。",
+    "可在结尾增加一个开放式问题，如'你还能举出其他例子吗？'以促进迁移思考。"
+  ]
+}

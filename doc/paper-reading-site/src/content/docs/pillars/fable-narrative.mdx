@@ -1,0 +1,74 @@
+---
+title: 04 · 寓言叙事
+description: 在不改动机制和映射的前提下，将 Mapping Plan 实现为适龄、完整且具有寓言文体的故事。
+sidebar:
+  order: 4
+---
+
+在不改动机制和映射的前提下，将 Mapping Plan 实现为适龄、完整且具有寓言文体的故事。
+
+> 核心问题：**怎样把通过验证的映射计划写成真正可读、可控的教学寓言？**
+
+## 在完整流程中的位置
+
+把已验证的故事结构实现为儿童可读的寓言文本。
+
+**上游输入**：Validated Mapping Plan 的故事侧字段、禁用术语、目标年级和文体约束。  
+**当前实现**：生成器读取故事域、角色/物体、冲突、事件链、转折、解决状态及节点/边映射，不直接读取或改写机制事实。故事采用计划先行、正文实现、必要修订的分层流程；传统寓言特征用于约束短叙事、拟人化、行动—后果—寓意结构，多智能体与读者模型文献用于丰富叙事而不授权新增机制。每个概念—策略—候选的版本独立保存。  
+**阶段产物**：寓言草稿、生成记录、修订版本和候选级审计文件。
+
+## 进入下一阶段的门槛
+
+正文覆盖映射计划；没有新造机制或术语泄漏；冲突—转折—解决完整；文体和年级要求可检查。
+
+## 失败如何回退
+
+表层遗漏或表达问题返回正文修订；若故事无法承载映射，则回到候选映射而不是强行润色。
+
+## 主要参考文献（16）
+
+这些论文直接定义或改变本阶段的方法、数据结构、验证门槛或输出。
+
+| 论文 | 年份/来源 | 摘要初读：为什么相关 | 在本项目中的适配方式 |
+|---|---|---|---|
+| [Hierarchical Neural Story Generation](/papers/hierarchical-neural-story-generation/) | 2018 · ACL | 提出分层故事生成思路，把故事创作拆成高层规划和低层文本生成。 | 借鉴“规划先行”的思想，把知识图谱中的概念链先转成寓言事件链。 |
+| [Towards Controllable Story Generation](/papers/towards-controllable-story-generation/) | 2018 · Workshop on Storytelling | 探索用事件、角色或主题控制故事生成。 | 可借鉴控制信号设计，把教学目标、寓意、概念关系作为生成条件。 |
+| [Plan-and-Write: Towards Better Automatic Storytelling](/papers/plan-and-write/) | 2019 · AAAI | 提出先生成 storyline 再扩写故事的两阶段框架。 | 可把 KG 路径或概念解释步骤转成 storyline，再让 LLM 扩写。 |
+| [Controllable Neural Story Plot Generation via Reward Shaping](/papers/controllable-plot-reward-shaping/) | 2019 · IJCAI | 通过奖励塑形控制故事情节发展。 | 可以把“覆盖概念关系”“不引入科学错误”“适合年级”设计成奖励或打分项。 |
+| [Automatic Story Generation: A Survey of Approaches](/papers/automatic-story-generation-survey/) | 2021 · ACM Computing Surveys | 系统综述自动故事生成方法。 | 可用于 related work 中梳理从 general story generation 到 educational fable generation 的演化。 |
+| [A Survey of Controllable Text Generation using Transformer-based Pre-trained Language Models](/papers/controllable-text-generation-survey/) | 2022 · arXiv | 综述 Transformer 时代的可控文本生成方法。 | 可用于选择控制教学目标、年级难度、寓言风格的技术路线。 |
+| [SS-GEN: A Social Story Generation Framework with Large Language Models](/papers/ss-gen/) | 2025 · AAAI | 提出面向 social story 的 LLM 生成框架。 | 可借鉴任务化故事生成框架，把 social goal 替换为 learning objective。 |
+| [Multimodal Story Generation Using Generative AI for Contextualised Mathematics Education](/papers/multimodal-math-story-generation/) | 2025 · AIED | 论文提出面向儿童数学问题的个性化多模态故事系统：Teacher、Planner、Writer 三个智能体依次求解、规划和写作，并结合图像生成与互动学习。 | 借鉴 Teacher/Planner/Writer 分工、逐步揭示答案、故事内应用题与跨情境迁移题。 |
+| [Guiding Generative Storytelling with Knowledge Graphs](/papers/kg-guided-storytelling/) | 2025 · arXiv | 研究用知识图谱指导生成式故事创作。 | 可借鉴 KG-guided generation，把课程 KG 节点和边作为故事生成约束。 |
+| [A Survey on LLMs for Story Generation](/papers/llm-story-generation-survey/) | 2025 · Findings of EMNLP | 综述 LLM 时代故事生成方法和挑战。 | 可用于写 related work，说明为什么需要 KG 和显式映射来约束 LLM。 |
+| [La Fable En Tant Qu’un Genre Littéraire Et L’analyse De Fable](/papers/fable-literary-genre/) | 2013 · Turkish Studies | 摘要将寓言界定为兼具教诲与娱乐功能的文学体裁，强调动物、拟人化行动、行为后果和儿童教育价值。 | 把短叙事、拟人化、行动后果和明确但不过度说教的寓意转化为文体约束。 |
+| [Arnold Lobel’s Fables and Traditional Fable Features](/papers/arnold-lobel-fable-features/) | 1993 · Children’s Folklore Review | 文章比较 Arnold Lobel 的文学寓言与传统寓言特征，讨论寓言作为民间叙事与文学创作之间的互文关系。 | 借鉴文体特征清单，区分必要结构、常见传统和可创新的表层实现。 |
+| [Story of Thought: Narrative Reasoning with Analogy and Metaphor](/papers/story-of-thought/) | 2025 · ACL | 摘要提出 Story of Thought，通过围绕问题构造带隐喻和类比的叙事来提升物理、化学和生物推理表现。 | 借鉴“先构造解释叙事再求解”的思路，但将其置于已验证机制图之后。 |
+| [StoryBox: Collaborative Multi-Agent Simulation for Hybrid Bottom-Up Long-Form Story Generation](/papers/storybox/) | 2026 · AAAI | 摘要提出混合自底向上的多智能体故事生成：角色在动态沙盒中互动产生涌现事件，再以顶层场景维持长篇方向。 | 借鉴受边界约束的角色互动来丰富情节，但不让涌现事件改变机制图。 |
+| [Long Story Generation via Knowledge Graph and Literary Theory](/papers/long-story-kg-literary-theory/) | 2025 · arXiv | 摘要用多智能体、长短期记忆、文学叙事障碍框架和故事知识图缓解长篇生成的主题漂移与情节乏味。 | 借鉴受机制约束的障碍/转折生成与独立修订记录。 |
+| [CreAgentive: An Agent Workflow Driven Multi-Category Creative Generation Engine](/papers/creagentive/) | 2025 · arXiv | 摘要提出以知识图 Story Prototype 分离故事逻辑与文体实现，并用初始化、生成、写作三阶段多智能体工作流支持长篇多体裁创作。 | 借鉴结构原型与表层实现解耦，但用 Mapping Plan 取代开放式故事原型。 |
+
+## 跨阶段参考文献（12）
+
+这些论文的主要位置在其他阶段，但其方法或评价也为本阶段提供约束。
+
+| 论文 | 主要阶段 | 对本阶段的可借鉴点 |
+|---|---|---|
+| [Metaphor Generation with Conceptual Mappings](/papers/metaphor-generation-conceptual-mappings/) | Copycat 式候选映射竞争 | 可借鉴概念映射，把科学实体映射为寓言角色，把关系映射为互动。 |
+| [Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences](/papers/moral-stories/) | 机制图 | 可借鉴故事结构字段，为教育寓言加入情境、冲突、行动、结论。 |
+| [A Corpus for Understanding and Generating Moral Stories](/papers/storal/) | 反向结构对齐与教育质量评测 | 可借鉴语料标注方式，为每个寓言标注情境、行为、结果和知识点。 |
+| [Leveraging Large Language Models for Learning Complex Legal Concepts through Storytelling](/papers/legalstories/) | 反向结构对齐与教育质量评测 | 可借鉴“复杂概念故事化”的任务叙事和用户评价设计。 |
+| [A Survey on Automatic Generation of Figurative Language](/papers/figurative-language-generation-survey/) | Copycat 式候选映射竞争 | 可用于说明 Concept-to-Fable 与 metaphor/analogy generation 的区别。 |
+| [TF1-EN-3M: Three Million Synthetic Moral Fables from Open Language Models](/papers/synthetic-moral-fables/) | 反向结构对齐与教育质量评测 | 可借鉴大规模生成和筛选 pipeline。 |
+| [Classroom AI: Large Language Models as Grade-Specific Teachers](/papers/classroom-ai/) | 反向结构对齐与教育质量评测 | 可借鉴年级适配指标，为寓言生成设定小学 1-2、3-4、5-6 年级版本。 |
+| [MORABLES: Moral Reasoning in LLMs with Fables](/papers/morables/) | 反向结构对齐与教育质量评测 | 借鉴“寓言—理解题—对抗题”设计，为生成寓言配套概念理解测试。 |
+| [Biased Tales: Cultural and Gender Stereotypes in LLM-Generated Children Stories](/papers/biased-tales/) | 反向结构对齐与教育质量评测 | 增加角色能动性、职业/外貌分配、文化刻板印象和群体差异审计。 |
+| [Structural Similarity in Figurative Language: A Preliminary Cognitive Analysis](/papers/structural-similarity-figurative-language/) | Copycat 式候选映射竞争 | 借鉴高层结构相似层级，解释为什么某个故事域能承载目标机制。 |
+| [Guiding Neural Story Generation with Reader Models](/papers/story-generation-reader-models/) | 机制图 | 借鉴读者状态作为叙事规划约束和教育理解检查的中间变量。 |
+| [Generating Stories with Commonsense Knowledge Graphs and Axioms](/papers/commonsense-kg-axioms/) | 机制图 | 借鉴“机制证据层/常识补全层”分层，避免常识替代课程事实。 |
+
+## 与相邻阶段的接口
+
+- 本阶段只能消费上游已经通过门槛的产物。
+- 本阶段产物必须保留稳定标识和审计信息，供下游与反向评测回查。
+- 如果下游发现的问题属于本阶段责任，应按“失败如何回退”返回处理，而不是在最终文本中掩盖。

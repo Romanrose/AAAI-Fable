@@ -1,0 +1,15 @@
+{
+  "output_path": "data\\derived\\kg_rag\\concept_selection\\k12_concepts.jsonl",
+  "concept_count": 6574,
+  "subjects": {
+    "biology": 1648,
+    "chemistry": 2302,
+    "math": 1470,
+    "physics": 1154
+  },
+  "priorities": {
+    "gold": 3854,
+    "repair": 14,
+    "silver": 2706
+  }
+}

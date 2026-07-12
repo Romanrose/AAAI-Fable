@@ -1,0 +1,337 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt108",
+    "subject": "chemistry",
+    "canonical_name": "加热氯酸钾制取氧气",
+    "aliases": [],
+    "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+    "concept_type": "process",
+    "forbidden_terms": [
+      "加热氯酸钾制取氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "混有二氧化锰的氯酸钾固体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:instrument"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "加热",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "氯酸钾分解生成氯化钾和氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "二氧化锰",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "二氧化锰在反应前后质量和性质基本不变",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "outcome",
+        "text": "生成氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "outcome",
+        "text": "生成氯化钾",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "rule",
+        "text": "分解反应：一种物质生成两种或两种以上其他物质",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:formula"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n3",
+        "target": "n6",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n3",
+        "target": "n7",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n3",
+        "target": "n8",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11281",
+          "kg-node:chemistry_9a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "e8",
+        "source": "n3",
+        "target": "n1",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:instrument"
+        ]
+      },
+      {
+        "id": "e9",
+        "source": "n3",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "e10",
+        "source": "n3",
+        "target": "n4",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "加热氯酸钾制取氧气"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7",
+      "e8",
+      "e9",
+      "e10"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt108",
+      "name": "加热氯酸钾制取氧气",
+      "label": "Concept",
+      "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt103",
+        "name": "实验室制取氧气的方法"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt109",
+        "name": "分解反应"
+      },
+      {
+        "id": "chemistry_9a_rjb_exp18",
+        "name": "加热混有二氧化锰的氯酸钾固体制取氧气"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:11280",
+        "source_id": "chemistry_9a_rjb_cpt108",
+        "source_name": "加热氯酸钾制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt103",
+        "target_name": "实验室制取氧气的方法",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt103",
+        "neighbor_name": "实验室制取氧气的方法",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:11281",
+        "source_id": "chemistry_9a_rjb_cpt108",
+        "source_name": "加热氯酸钾制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt109",
+        "target_name": "分解反应",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "chemistry_9a_rjb_cpt109",
+        "neighbor_name": "分解反应",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:22576",
+        "source_id": "chemistry_9a_rjb_exp18",
+        "source_name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+        "target_id": "chemistry_9a_rjb_cpt108",
+        "target_name": "加热氯酸钾制取氧气",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "chemistry_9a_rjb_exp18",
+        "neighbor_name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+        "score": 0.95,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "加热氯酸钾制取氧气",
+      "definition": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+      "formula": "氯酸钾  ⟶(加热, 二氧化锰)  氯化钾 + 氧气",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:11280] 加热氯酸钾制取氧气 --is_a--> 实验室制取氧气的方法",
+      "[normalized:edge:11281] 加热氯酸钾制取氧气 --is_a--> 分解反应",
+      "[normalized:edge:22576] 加热混有二氧化锰的氯酸钾固体制取氧气 --verifies--> 加热氯酸钾制取氧气"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:11280",
+    "normalized:edge:11281",
+    "normalized:edge:22576"
+  ],
+  "provenance": {
+    "seed_sha256": "3bd9112147aab4ceb082202bb98b6834e6f45a37a64817451386bae735a5570b",
+    "retrieval_sha256": "eb5f71115a9e1000c04575cffb6e6ac479d7f520ba5e6af02b0a274a41d73dfe",
+    "mechanism_record_sha256": "29a59f76f5a0a5910ba53c601bbc07b0b7ab09321acbe697e4d6d4d21d089ae7"
+  }
+}

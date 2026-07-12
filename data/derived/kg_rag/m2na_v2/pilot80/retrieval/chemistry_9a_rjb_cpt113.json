@@ -1,0 +1,81 @@
+{
+  "target": {
+    "source_node_id": "chemistry_9a_rjb_cpt113",
+    "label": "Concept",
+    "name": "催化剂的工业应用",
+    "properties": {
+      "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+      "importance": "了解",
+      "examples": [
+        "生产化肥、农药、多种化工原料都要使用催化剂",
+        "石油炼制过程中用高效催化剂生产汽油、煤油等",
+        "汽车尾气处理中用催化剂促进有害气体的转化",
+        "酿造工业和制药工业中用酶作催化剂"
+      ],
+      "retrieval_text": "催化剂的工业应用\nConcept\n催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。\n了解\n生产化肥、农药、多种化工原料都要使用催化剂\n石油炼制过程中用高效催化剂生产汽油、煤油等\n汽车尾气处理中用催化剂促进有害气体的转化\n酿造工业和制药工业中用酶作催化剂"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "chemistry_9a_rjb_cpt111",
+      "label": "Concept",
+      "name": "催化作用",
+      "properties": {
+        "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+        "importance": "重要",
+        "retrieval_text": "催化作用\nConcept\n催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。\n重要"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:15001",
+      "source": "chemistry_9a_rjb_cpt111",
+      "source_name": "催化作用",
+      "target": "chemistry_9a_rjb_cpt113",
+      "target_name": "催化剂的工业应用",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "催化剂的工业应用",
+      "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:15001] 催化作用 --prerequisites_for--> 催化剂的工业应用"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 1,
+    "direct_structure_sufficient": false,
+    "direct_structure_reasons": [
+      "multistep_concept_has_fewer_than_two_direct_edges"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 1,
+    "expanded_to_two_hop": false
+  }
+}

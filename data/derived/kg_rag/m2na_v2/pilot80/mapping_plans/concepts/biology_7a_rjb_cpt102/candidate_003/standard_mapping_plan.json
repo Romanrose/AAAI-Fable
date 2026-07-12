@@ -1,0 +1,107 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个关于种子发芽的寓言故事，但使用不同的载体来避免直接提及目标概念。",
+  "characters": [
+    "老农夫",
+    "三颗种子：小温、小水、小气"
+  ],
+  "objects": [
+    "田地",
+    "阳光",
+    "雨水",
+    "风"
+  ],
+  "conflict": "三颗种子想要发芽，但各自缺少必要的条件，导致无法生长。",
+  "event_chain": [
+    "老农夫在田地里播下三颗种子：小温、小水、小气。",
+    "小温抱怨天气太冷，没有适宜的温度，无法破土。",
+    "小水抱怨土地太干，没有足够的水分，无法吸收养分。",
+    "小气抱怨土壤板结，没有充足的空气，无法呼吸。",
+    "三颗种子都停滞在土中，无法发芽。",
+    "老农夫观察后，为田地提供了适宜的温度（如覆盖薄膜）、适量的水分（如灌溉）和松土（增加空气）。",
+    "在三个条件都满足后，三颗种子顺利发芽，长出幼苗。"
+  ],
+  "turning_point": "老农夫同时提供了温度、水分和空气，三个条件齐备。",
+  "resolution_state": "三颗种子都成功发芽，证明了环境条件的重要性。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "种子发芽所需的环境条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "种子发芽",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "适宜的温度（小温的抱怨）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "一定的水分（小水的抱怨）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "充足的空气（小气的抱怨）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "老农夫提供三种条件的实验观察",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "环境条件使种子发芽",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "适宜的温度是环境条件的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "一定的水分是环境条件的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "充足的空气是环境条件的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "老农夫的观察验证了环境条件的必要性",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "故事中使用了种子作为载体，但未直接使用目标概念名称。",
+    "所有机制节点和边均已映射，方向保持。",
+    "未使用课程桥接上下文作为因果机制。",
+    "故事为单一连贯的寓言，非多个无关隐喻。"
+  ],
+  "mapping_context_sha256": "573f207f2a855bfc4526da2f4c2ec6ec3899ad4d8bdc0b54387cdcfa9fbad025",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "eb35244ec927d709c04e78cbc69a0ffb6c04980e750327d92ff17741b591828b"
+  }
+}

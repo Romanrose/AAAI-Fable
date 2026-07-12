@@ -1,0 +1,74 @@
+{
+  "pipeline_version": "llm-guided-copycat-mvp/v1",
+  "created_at_utc": "2026-07-10T10:31:11.846870+00:00",
+  "concept_id": "math_1a_rjb_cpt11",
+  "mapping_context_sha256": "def66297622a81daa0ce9a0261e381780c802c9375fedf671cc23be100b88cdb",
+  "candidate_count": 3,
+  "selected_candidate_id": "candidate_001",
+  "selected_mapping": {
+    "candidate_id": "candidate_001",
+    "source_domain": "煮饭",
+    "domain_rationale": "煮饭过程需要先具备识别和量取米的能力（数出米粒数量），然后将米与水合并，这与加法中将两个数量合并的机制相似。",
+    "conflict": "煮饭中米和水的合并是物理混合，而加法是数学抽象合并，但结构上都是先有独立数量认知，再合并。",
+    "event_chain": [
+      "厨师认识并能数出适量的米粒",
+      "厨师将米粒和水合并在一起煮成饭"
+    ],
+    "turning_point": "厨师将米和水倒入锅中开始烹饪",
+    "resolution_state": "米和水合并成为一锅米饭",
+    "node_mappings": [
+      {
+        "mechanism_node_id": "n1",
+        "story_carrier": "厨师认识并能数出适量的米粒",
+        "mapping_type": "condition"
+      },
+      {
+        "mechanism_node_id": "n2",
+        "story_carrier": "厨师将米粒和水合并在一起煮成饭",
+        "mapping_type": "process"
+      }
+    ],
+    "edge_mappings": [
+      {
+        "mechanism_edge_id": "e1",
+        "story_relation": "厨师数出米粒的能力使他能进行合并操作",
+        "direction_preserved": true
+      }
+    ]
+  },
+  "selected_evaluation": {
+    "score": 1.0,
+    "temperature": 0.0,
+    "node_coverage": 1.0,
+    "edge_coverage": 1.0,
+    "carrier_diversity": 1.0,
+    "relation_diversity": 1.0,
+    "leakage_free": 1.0,
+    "narrative_complete": 1.0,
+    "template_issues": [],
+    "validation_errors": [],
+    "mechanism_node_count": 2
+  },
+  "scout_trace": {
+    "status": "success",
+    "prompt_version": "semantic-scout/v1",
+    "prompt_sha256": "eda52d01950c4a44948b53922844dfd5c06dd4dcae28ea139daeae884783038b",
+    "model": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    }
+  },
+  "refiner_trace": {
+    "status": "not_needed"
+  },
+  "model": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_tokens": 1200
+  }
+}

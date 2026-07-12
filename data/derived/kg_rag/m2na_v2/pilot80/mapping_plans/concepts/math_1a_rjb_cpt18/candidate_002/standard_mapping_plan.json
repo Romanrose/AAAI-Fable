@@ -1,0 +1,104 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt18",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一位老农在集市上卖水果，他根据水果的形状来分类摆放。",
+  "characters": [
+    "老农"
+  ],
+  "objects": [
+    "苹果",
+    "橘子",
+    "香蕉",
+    "葡萄"
+  ],
+  "conflict": "老农发现水果堆在一起很乱，顾客难以挑选。",
+  "event_chain": [
+    "老农观察并比较各种水果的形状。",
+    "老农根据形状将水果分类摆放。",
+    "苹果是圆形的，被归为一类。",
+    "橘子也是圆形的，被归为同一类。",
+    "香蕉是长条形的，被归为另一类。",
+    "葡萄是成串的，被归为又一类。"
+  ],
+  "turning_point": "老农决定按形状分类，而不是按颜色或大小。",
+  "resolution_state": "水果按形状分类后，顾客能快速找到想要的水果，集市秩序井然。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农观察并比较各种水果的形状",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农根据形状将水果分类摆放",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "苹果",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "橘子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "香蕉",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "葡萄",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农观察比较形状后，促使他按形状分类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "苹果是圆形水果，属于按形状分类中的圆形类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "橘子是圆形水果，属于按形状分类中的圆形类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "香蕉是长条形水果，属于按形状分类中的长条形类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "葡萄是成串水果，属于按形状分类中的成串类",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'按形状分类'等禁止术语。",
+    "所有机制节点和边均已映射，方向保持。",
+    "故事载体统一在水果摊场景中，未使用目标概念名称。"
+  ],
+  "mapping_context_sha256": "f82f8a9ac9ddcd13c69725e75174cd745a6c02f6bc1846476a4ad4832f088a36",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7eea4e51bde8d64667ed8c2ae05b769d0bfb11dc98d384a93384af2139490708"
+  }
+}

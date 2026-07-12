@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第2道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "他把老周给的调度草稿和自己的测算纸并排摊在桌上，一笔一笔地比对。他发现两边的数字虽然单独看都没问题，可放在一起时，有一条船的安全间距明显偏小。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他把老周给的调度草稿和自己的测算纸并排摊在桌上，一笔一笔地比对。他发现两边的数字虽然单独看都没问题，可放在一起时，有一条船的安全间距明显偏小。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "他把老周给的调度草稿和自己的测算纸并排摊在桌上，一笔一笔地比对。他发现两边的数字虽然单独看都没问题，可放在一起时，有一条船的安全间距明显偏小。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All three mechanism nodes are directly mapped to story carriers: n1 to '入口条件核对', n2 to '第2道转化环节', n3 to '验收记录'. Each edge is supported by the same story evidence of comparing two records, which demonstrates the relates_to and enables relations between the nodes. Direction is preserved for all edges. No missing nodes or edges."
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫种稻",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "稻种",
+    "秧苗",
+    "稻田"
+  ],
+  "conflict": "农夫需要知道稻田里有多少株秧苗，才能判断是否足够插满整块田，但他不会数数。",
+  "event_chain": [
+    "农夫将稻种一粒粒播入秧盘，每播一粒就记住一个数（但实际不会数，只是动作）。",
+    "秧苗长出后，农夫把秧苗一株株拔起，每拔一株就对应之前播下的一个数（形成一一对应）。",
+    "农夫把拔起的秧苗一株株插入稻田，每插一株就对应之前的一个数，从而知道秧苗数量是否够用。"
+  ],
+  "turning_point": "农夫发现秧苗数量与稻田所需数量不一致，需要调整。",
+  "resolution_state": "农夫通过一一对应的方法，确认了秧苗数量与稻田需求的关系，从而做出调整。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫将稻种一粒粒播入秧盘，每播一粒就记住一个数（但实际不会数，只是动作）。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫发现秧苗数量与稻田所需数量不一致，需要调整。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫把拔起的秧苗一株株插入稻田，每插一株就对应之前的一个数，从而知道秧苗数量是否够用。",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫通过播种种子的动作（对应数数）来发现秧苗数量与稻田需求不一致（对应比较数量）。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫通过播种种子的动作（对应数数）来建立秧苗与稻田需求的一一对应关系（对应一一对应比较法）。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "注意：故事中农夫不会数数，但通过动作模拟了数数的过程，避免了使用目标概念名称。",
+    "注意：必须保留e1和e2的边方向，即从数数到比较数量、从数数到一一对应。",
+    "注意：未使用任何禁止术语。"
+  ],
+  "mapping_context_sha256": "d352606f2cdd485b8538c171b80a51d6a53299e2966530529ee79a2f6533c77f",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "4097f1fa7a292b7e756c5e29e37ab8888bf06a30ab59e3e530abc03e8eff905f"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "records_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\records.jsonl",
+  "summary_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\summary.jsonl",
+  "automatic_metrics_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\automatic_metrics.json",
+  "automatic_metrics_jsonl_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\automatic_metrics.jsonl",
+  "six_dim_eval_summary_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\six_dim_eval_summary.jsonl",
+  "failed_queue_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\failed_queue.jsonl",
+  "csv_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\automatic_metrics.csv",
+  "report_path": "data\\derived\\kg_rag\\multi_agent_runs\\smoke_8_deepseek\\eval_report.md",
+  "concept_count": 8,
+  "success_count": 8,
+  "failed_count": 0,
+  "failed_rows": []
+}

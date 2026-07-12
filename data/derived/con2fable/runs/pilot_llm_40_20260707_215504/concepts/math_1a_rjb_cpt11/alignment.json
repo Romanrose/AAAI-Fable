@@ -1,0 +1,27 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "三个苹果和两个梨合并成五个水果",
+      "evidence": "三个苹果和两个梨，整整齐齐地凑在一起",
+      "narrative_anchor": "三个苹果和两个梨，整整齐齐地凑在一起"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "小张数苹果（一、二、三），小李数梨（一、二）",
+      "evidence": "小张低头数了数自己的苹果：“一、二、三。”",
+      "narrative_anchor": "一、二、三"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先分别数出苹果和梨的数量，再将它们合并",
+      "evidence": "小张把三个苹果端过来，小李把两个梨也端过来，把它们一起放在一个大篮子里",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "小张把三个苹果端过来，小李把两个梨也端过来，把它们一起放在一个大篮子里"
+    }
+  ]
+}

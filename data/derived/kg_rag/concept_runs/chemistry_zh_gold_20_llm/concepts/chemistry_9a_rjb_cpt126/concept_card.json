@@ -1,0 +1,79 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt126",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "排水法收集气体",
+  "definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。",
+  "aliases": [],
+  "examples": [
+    "用盛满水的集气瓶倒置在水槽内，当导管口伸入瓶中放出气体时，将瓶内水逐渐排出。",
+    "用排水法收集氧气。"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt122",
+        "label": "Concept",
+        "name": "氧气的实验室制取",
+        "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt125",
+        "label": "Concept",
+        "name": "气体收集装置",
+        "definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt134",
+        "label": "Concept",
+        "name": "氧气的性质",
+        "definition": "氧气这种气体的物理和化学特性，包括无色无味、略溶于水、能支持燃烧等，在本节中主要通过木炭和铁丝燃烧体现其支持燃烧的化学性质。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt333",
+        "label": "Concept",
+        "name": "二氧化碳的物理性质（密度与溶解性）",
+        "definition": "二氧化碳密度比空气大，能溶于水并与水反应。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s4",
+        "label": "Section",
+        "name": "实验活动1 氧气的实验室制取与性质",
+        "definition": ""
+      },
+      {
+        "id": "chemistry_9a_rjb_ch6_s2",
+        "label": "Section",
+        "name": "课题2 二氧化碳制取的研究",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "排水法收集气体"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

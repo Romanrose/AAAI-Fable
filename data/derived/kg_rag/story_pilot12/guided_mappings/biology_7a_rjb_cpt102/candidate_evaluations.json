@@ -1,0 +1,266 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "农业",
+      "domain_rationale": "农民种地需要满足土壤、水分、阳光等条件，对应种子萌发需要温度、水分、空气的环境条件。",
+      "conflict": "无",
+      "event_chain": [
+        "农民准备播种一块田地",
+        "田地里必须有适宜的墒情（水分）、足够的阳光和松软的土壤（空气）",
+        "农民通过观察墒情、翻地、浇水来验证这些条件是否具备",
+        "条件满足后，种子才能发芽"
+      ],
+      "turning_point": "农民检查墒情、翻地、浇水，确认条件具备",
+      "resolution_state": "种子成功发芽，长出幼苗",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "田地的综合条件",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "种子发芽",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "充足的阳光",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "适宜的墒情（水分）",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "松软的土壤（空气）",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "农民翻地、浇水、观察墒情",
+          "mapping_type": "evidence"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "田地的综合条件使种子发芽成为可能",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "充足的阳光是田地的综合条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "适宜的墒情是田地的综合条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "松软的土壤是田地的综合条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "农民翻地、浇水、观察墒情验证了田地的综合条件",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 6
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "烹饪",
+      "domain_rationale": "烹饪一道菜需要具备火候、调料、食材等条件，对应种子萌发需要温度、水分、空气。",
+      "conflict": "无",
+      "event_chain": [
+        "厨师准备烹饪一道红烧肉",
+        "厨房里必须有合适的火候、适量的酱油和水、以及足够的氧气（通风）",
+        "厨师通过试火、尝味、观察油烟来验证这些条件",
+        "条件满足后，红烧肉才能炖熟"
+      ],
+      "turning_point": "厨师调好火候、加好调料、确保通风",
+      "resolution_state": "红烧肉炖熟出锅",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "厨房的烹饪条件",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "红烧肉炖熟",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "合适的火候",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "适量的酱油和水",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "充足的氧气（通风）",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "厨师试火、尝味、观察油烟",
+          "mapping_type": "evidence"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "厨房的烹饪条件使红烧肉炖熟成为可能",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "合适的火候是厨房的烹饪条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "适量的酱油和水是厨房的烹饪条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "充足的氧气是厨房的烹饪条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "厨师试火、尝味、观察油烟验证了厨房的烹饪条件",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 6
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "工程",
+      "domain_rationale": "建造一座桥梁需要地质、材料、施工等条件，对应种子萌发需要温度、水分、空气。",
+      "conflict": "无",
+      "event_chain": [
+        "工程师团队计划建造一座桥梁",
+        "桥址必须有稳固的地基、合适的建材和充足的施工空间（氧气）",
+        "工程师通过勘探、材料测试、现场检查来验证这些条件",
+        "条件满足后，桥梁才能建成"
+      ],
+      "turning_point": "工程师完成地质勘探、材料检测、施工安全评估",
+      "resolution_state": "桥梁成功建成通车",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "桥址的施工条件",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "桥梁建成",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "稳固的地基",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "合适的建材（如水泥、钢筋）",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "充足的施工空间（氧气/通风）",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "工程师勘探、材料测试、现场检查",
+          "mapping_type": "evidence"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "桥址的施工条件使桥梁建成成为可能",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "稳固的地基是桥址的施工条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "合适的建材是桥址的施工条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "充足的施工空间是桥址的施工条件的一种",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "工程师勘探、材料测试、现场检查验证了桥址的施工条件",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 1.0,
+      "temperature": 0.0,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 1.0,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 6
+    }
+  }
+]

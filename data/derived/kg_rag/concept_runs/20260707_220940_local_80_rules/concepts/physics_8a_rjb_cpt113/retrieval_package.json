@@ -1,0 +1,49 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt113",
+    "label": "Concept",
+    "name": "远点",
+    "properties": {
+      "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。",
+      "importance": "了解",
+      "retrieval_text": "远点\nConcept\n眼睛依靠调节能看清的最远点。正常眼的远点在无限远。\n了解"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17198",
+      "source": "physics_8a_rjb_cpt112",
+      "source_name": "眼睛调节",
+      "target": "physics_8a_rjb_cpt113",
+      "target_name": "远点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "远点",
+      "definition": "眼睛依靠调节能看清的最远点。正常眼的远点在无限远。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:17198] 眼睛调节 --prerequisites_for--> 远点"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 268,
+    "summary_chars": 242,
+    "path_chars": 0,
+    "retrieval_context_chars": 510
+  }
+}

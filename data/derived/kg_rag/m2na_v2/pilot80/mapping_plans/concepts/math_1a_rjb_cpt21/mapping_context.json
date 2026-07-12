@@ -1,0 +1,202 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt21",
+    "subject": "math",
+    "canonical_name": "6和7的减法",
+    "aliases": [],
+    "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "6和7的减法"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "分拆数6和7：把6或7分成两个部分，了解所有不同的分法。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt22:definition",
+          "kg-edge:normalized:edge:16343"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "通过观察图示提出数学问题：能够根据情境图提出“有多少”“还剩多少”等数学问题。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl10:description",
+          "kg-edge:normalized:edge:16380"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "数字6和7的认识：能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt19:definition",
+          "kg-edge:normalized:edge:19309"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "6和7的减法：通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt21:definition",
+          "kg-node:math_1a_rjb_cpt21:formula"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16343"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16380"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19309"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "6和7的减法"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt21",
+      "name": "6和7的减法",
+      "label": "Concept",
+      "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt22",
+        "name": "分拆数6和7"
+      },
+      {
+        "id": "math_1a_rjb_skl10",
+        "name": "通过观察图示提出数学问题"
+      },
+      {
+        "id": "math_1a_rjb_cpt19",
+        "name": "数字6和7的认识"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:16343",
+        "source_id": "math_1a_rjb_cpt22",
+        "source_name": "分拆数6和7",
+        "target_id": "math_1a_rjb_cpt21",
+        "target_name": "6和7的减法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt22",
+        "neighbor_name": "分拆数6和7",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:16380",
+        "source_id": "math_1a_rjb_skl10",
+        "source_name": "通过观察图示提出数学问题",
+        "target_id": "math_1a_rjb_cpt21",
+        "target_name": "6和7的减法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_skl10",
+        "neighbor_name": "通过观察图示提出数学问题",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19309",
+        "source_id": "math_1a_rjb_cpt19",
+        "source_name": "数字6和7的认识",
+        "target_id": "math_1a_rjb_cpt21",
+        "target_name": "6和7的减法",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt19",
+        "neighbor_name": "数字6和7的认识",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 3,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "6和7的减法",
+      "definition": "通过从已有数量中去掉一部分，得到差为6或7的减法算式，如7-2=5。",
+      "formula": "a-b=6 或 a-b=7",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16343] 分拆数6和7 --prerequisites_for--> 6和7的减法",
+      "[normalized:edge:16380] 通过观察图示提出数学问题 --prerequisites_for--> 6和7的减法"
+    ],
+    "process_summary": [
+      "[normalized:edge:19309] 数字6和7的认识 --relates_to--> 6和7的减法"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:16343",
+    "normalized:edge:16380",
+    "normalized:edge:19309"
+  ],
+  "provenance": {
+    "seed_sha256": "ceea356723a158347bc0c0a85cb8eea4878cc5179a4b1a56d058986f0304cdb2",
+    "retrieval_sha256": "d6b3af3b1ec6e38236b47baf58c55285861f12fd3e227b92470a72488e0ced68",
+    "mechanism_record_sha256": "5abe4057aad9776ec839b9c5f4dfac77dbe212ae5b6014b73bc47ca0f75ebd8c"
+  }
+}

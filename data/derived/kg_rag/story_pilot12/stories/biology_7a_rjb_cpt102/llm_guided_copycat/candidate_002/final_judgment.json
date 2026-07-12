@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n6",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story excels in mapping the evidence node (n6) with detailed, multi-sensory verification actions (tasting, listening, observing), which is observably better than a generic 'check conditions' statement. The process node (n2) and its enabling edge (e1) are present but could be more explicitly tied to the conditions; however, the final line '火候、调料、通风，样样都恰到好处，才能炖出这般滋味' sufficiently preserves the relation. Compared to a story that merely mentions 'conditions are met,' this story's concrete cooking steps make the mapping clearer."
+  },
+  "revision_instructions": [
+    "No mandatory revisions required. Optional: strengthen the explicit link between the three conditions and the final cooking success by adding a sentence like '正是火候、水分和通风都合适，红烧肉才炖得这么好' to make the enabling relation more salient."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第2道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第3道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "第4道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "第5道转化环节",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "入口条件核对是整条流程的根基，它让后面每一步登记都有依据可循",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "第3道转化环节",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "第4道转化环节",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "第5道转化环节",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "结果验收记录",
+      "direction_preserved": true,
+      "confidence": 0.8
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "故事中通过船队信号台的流程映射了凸透镜成像机制：入口条件核对（凸透镜）使第3道转化环节（照相机成像）成为可能；第3道转化环节（照相机成像）是第2道转化环节（实像）的一种；第4道转化环节（物体远离凸透镜）使第3道转化环节（照相机成像）成为可能；第3道转化环节（照相机成像）产生第5道转化环节（缩小、倒立的实像）；结果验收记录（调节像距以成清晰像）使第3道转化环节（照相机成像）成为可能。故事中调度员跳过入口条件核对导致后续环节无法印证，最终按顺序重新衔接后记录互相印证，体现了机制中条件、过程和结果的顺序不可颠倒。"
+}

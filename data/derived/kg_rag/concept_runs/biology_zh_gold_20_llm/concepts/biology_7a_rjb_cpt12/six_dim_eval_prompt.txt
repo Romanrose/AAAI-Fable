@@ -1,0 +1,220 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "病毒",
+  "concept_id": "biology_7a_rjb_cpt12",
+  "concept_definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt12",
+    "virus",
+    "病毒"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+      "aliases": [
+        "virus"
+      ],
+      "examples": [
+        "流感病毒",
+        "艾滋病病毒",
+        "烟草花叶病毒",
+        "噬菌体"
+      ],
+      "retrieval_text": "病毒\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_8a_rjb_cpt101",
+          "label": "Concept",
+          "name": "病毒的分类（按寄生细胞不同）",
+          "definition": "根据病毒寄生的细胞不同，可分为动物病毒、植物病毒和细菌病毒（噬菌体）三大类。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt11",
+          "label": "Concept",
+          "name": "细胞",
+          "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe4",
+          "label": "Exercise",
+          "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(4) 生物都是由细胞构成的。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch1_s1",
+          "label": "Section",
+          "name": "第一章 认识生物",
+          "definition": ""
+        },
+        {
+          "id": "biology_8a_rjb_ch5_s5",
+          "label": "Section",
+          "name": "第五章 病毒",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt12",
+    "concept_id": "biology_7a_rjb_cpt12",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+      "aliases": [
+        "virus"
+      ],
+      "examples": [
+        "流感病毒",
+        "艾滋病病毒",
+        "烟草花叶病毒",
+        "噬菌体"
+      ]
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "病毒"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中描述的‘没有细胞结构却能进入细胞内部引起变化的小颗粒’，对应病毒这一特殊生物类群。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小禾发现病叶汁液过滤后仍能感染健康烟草，以及细菌培养液过滤后仍能杀死新鲜细菌，体现了病毒无细胞结构、需寄生在活细胞内的特性。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事避免目的论解释，通过小禾的观察和实验过程自然揭示规则，没有将病毒描述为‘为了’感染而存在，保留了生命系统的条件、过程和结果。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃里的特殊访客\n\n园圃工坊的学徒小禾负责照料一片实验田。师傅告诉他：“所有活着的生物都由细胞构成，这是生命的基本规则。”小禾牢记在心，每天用显微镜观察泥土、叶片和水滴，总能找到一个个完整的细胞。\n\n一天，小禾发现几株烟草的叶片出现了奇怪的斑纹，像被谁画上了淡绿色的图案。他剪下一片病叶，放在显微镜下仔细观察。奇怪的是，叶片细胞里没有看到任何入侵的细胞，只有一些细小的颗粒散布在细胞之间。小禾困惑了：如果是有害生物，为什么看不到细胞？难道是细胞自己生病了？\n\n他把病叶的汁液涂在健康烟草的叶片上。几天后，健康烟草也出现了同样的斑纹。小禾再次取样观察，依然只看到那些小颗粒，没有细胞结构。他又用更细的滤网过滤汁液，滤液涂在叶片上仍然能引起斑纹。小禾想：这一定是一种比细胞小得多的东西，它没有细胞结构，却能进入细胞内部，让细胞发生变化。\n\n小禾跑去问师傅。师傅没有直接回答，而是让他观察另一件事：工坊里培养的细菌突然大量死亡，培养液变得清澈。小禾用显微镜检查，发现细菌细胞里出现了许多小颗粒，和烟草叶片里的很像。他试着把细菌培养液过滤后加到新鲜细菌里，细菌也很快死亡了。\n\n小禾终于明白了：自然界里存在一类特殊的生物，它们没有细胞结构，却能在活的细胞内活动，改变细胞的状态。它们比细胞小得多，用普通显微镜很难看清它们的完整模样。小禾在笔记里写道：“除了细胞构成的生物，还有一类特殊的生物，它们没有细胞结构，但同样能影响生命。”\n\n从此，小禾不再认为“所有生物都由细胞构成”是绝对的。他学会了用更细致的观察去发现那些看不见的规则。",
+  "rule_findings": {
+    "story_token_count": 588,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

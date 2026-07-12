@@ -1,0 +1,117 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt11",
+    "subject": "math",
+    "canonical_name": "加法的含义",
+    "aliases": [],
+    "definition": "表示两个数量合并在一起。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "加法的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "认识并能数出1到5的数量，理解数字与数量的一一对应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt7:definition",
+          "kg-node:math_1a_rjb_cpt7:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "表示两个数量合并在一起",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt11:definition",
+          "kg-node:math_1a_rjb_cpt11:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16375"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "加法的含义"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt11",
+      "name": "加法的含义",
+      "label": "Concept",
+      "definition": "表示两个数量合并在一起。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt7",
+        "name": "数字1到5的认识"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:16375",
+        "source_id": "math_1a_rjb_cpt7",
+        "source_name": "数字1到5的认识",
+        "target_id": "math_1a_rjb_cpt11",
+        "target_name": "加法的含义",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt7",
+        "neighbor_name": "数字1到5的认识",
+        "score": 1.35,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "加法的含义",
+      "definition": "表示两个数量合并在一起。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16375] 数字1到5的认识 --prerequisites_for--> 加法的含义"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:16375"
+  ],
+  "provenance": {
+    "seed_sha256": "63b77a3e9f93978cbf1e9b6e2ffd134a0853ee3a33f8e59b0b7cb3d732d138d2",
+    "retrieval_sha256": "fa20174244aba77dbe0dc15123395365d823d34fab4c73c6e497341585ecc6d0",
+    "mechanism_record_sha256": "bd44534e6a25b4547cdfccc7cf5346b33abb2b1a03b2aea823ba724db0c6a81a"
+  }
+}

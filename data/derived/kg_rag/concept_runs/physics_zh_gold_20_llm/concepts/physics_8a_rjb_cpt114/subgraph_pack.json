@@ -1,0 +1,47 @@
+{
+  "query": "physics_8a_rjb_cpt114",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt114",
+    "label": "Concept",
+    "name": "近点",
+    "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "近点\n眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt112",
+        "label": "Concept",
+        "name": "眼睛调节",
+        "definition": "通过睫状体改变晶状体形状，使不同距离物体成像在视网膜上。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt115",
+        "label": "Concept",
+        "name": "明视距离",
+        "definition": "正常眼观察近处物体最清晰而不疲劳的距离，约25 cm。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

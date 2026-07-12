@@ -1,0 +1,124 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "target_concept": "沸点",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.9,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确传达了沸点随气压变化的核心机制，通过老账房先生解释水在低气压下更容易沸腾、氧气瓶温度变化等情节，完整呈现了概念定义。",
+    "implicitness": "全文未出现'沸点'、'大气压强'等禁用术语，使用'汽化温度'、'沸腾'、'气压'等替代词，符合隐含性要求。",
+    "mapping_clarity": "故事中的角色、物品和因果链与机制图节点一一对应：气压计对应大气压强，水桶对应水的沸点，氧气瓶对应氧气的沸点，铁器对应铁的沸点，且事件顺序与机制图边关系一致。",
+    "readability": "故事语言自然流畅，情节连贯，对话生动，适合中学生阅读，没有生硬说教感。",
+    "pedagogical_value": "通过学徒的困惑和先生的解释，读者能清晰理解沸点随气压变化这一物理性质，以及不同物质沸点差异，教学效果良好。",
+    "novelty": "账房仓库的设定有一定新意，但整体结构仍属于'老师教导学生'的常见寓言模式，新颖性中等偏上。"
+  },
+  "evidence": {
+    "faithfulness": "故事中先生指出'水在气压低的时候，更容易达到剧烈汽化的状态'，并解释氧气瓶温度变化和铁器不受影响，准确对应沸点定义。",
+    "implicitness": "正文中未出现'沸点'一词，使用了'汽化温度'、'沸腾'等替代表述。",
+    "mapping_clarity": "气压计→大气压强，水桶→水的沸点，氧气瓶→氧气的沸点，铁器→铁的沸点，事件顺序与机制图边关系完全匹配。",
+    "readability": "故事从学徒发现现象到先生解释，再到学徒理解，情节完整，语言平实，无阅读障碍。",
+    "pedagogical_value": "读者能通过故事理解沸点随气压变化、不同物质沸点不同、条件影响性质等核心知识点。",
+    "novelty": "账房仓库的设定避免了常见的厨房、实验室等场景，但师生问答结构较为常见。"
+  },
+  "revision_suggestions": [
+    "可考虑增加更多天气变化（如雨天、雪天）的对比，进一步强化气压变化对沸点的影响。",
+    "可让学徒自己动手测量气压和温度，增加互动性和探究感。",
+    "结尾可加入一个简短的小结，帮助读者巩固概念，但需注意避免直接使用禁用术语。"
+  ],
+  "final_status": "accept",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确传达了沸点随气压变化的核心机制，通过老账房先生解释水在低气压下更容易沸腾、氧气瓶温度变化等情节，完整呈现了概念定义。",
+      "implicitness": "全文未出现'沸点'、'大气压强'等禁用术语，使用'汽化温度'、'沸腾'、'气压'等替代词，符合隐含性要求。",
+      "mapping_clarity": "故事中的角色、物品和因果链与机制图节点一一对应：气压计对应大气压强，水桶对应水的沸点，氧气瓶对应氧气的沸点，铁器对应铁的沸点，且事件顺序与机制图边关系一致。",
+      "readability": "故事语言自然流畅，情节连贯，对话生动，适合中学生阅读，没有生硬说教感。",
+      "pedagogical_value": "通过学徒的困惑和先生的解释，读者能清晰理解沸点随气压变化这一物理性质，以及不同物质沸点差异，教学效果良好。",
+      "novelty": "账房仓库的设定有一定新意，但整体结构仍属于'老师教导学生'的常见寓言模式，新颖性中等偏上。"
+    },
+    "evidence": {
+      "faithfulness": "故事中先生指出'水在气压低的时候，更容易达到剧烈汽化的状态'，并解释氧气瓶温度变化和铁器不受影响，准确对应沸点定义。",
+      "implicitness": "正文中未出现'沸点'一词，使用了'汽化温度'、'沸腾'等替代表述。",
+      "mapping_clarity": "气压计→大气压强，水桶→水的沸点，氧气瓶→氧气的沸点，铁器→铁的沸点，事件顺序与机制图边关系完全匹配。",
+      "readability": "故事从学徒发现现象到先生解释，再到学徒理解，情节完整，语言平实，无阅读障碍。",
+      "pedagogical_value": "读者能通过故事理解沸点随气压变化、不同物质沸点不同、条件影响性质等核心知识点。",
+      "novelty": "账房仓库的设定避免了常见的厨房、实验室等场景，但师生问答结构较为常见。"
+    },
+    "revision_suggestions": [
+      "可考虑增加更多天气变化（如雨天、雪天）的对比，进一步强化气压变化对沸点的影响。",
+      "可让学徒自己动手测量气压和温度，增加互动性和探究感。",
+      "结尾可加入一个简短的小结，帮助读者巩固概念，但需注意避免直接使用禁用术语。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "chemistry_9a_rjb_cpt10",
+    "target_concept": "沸点",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

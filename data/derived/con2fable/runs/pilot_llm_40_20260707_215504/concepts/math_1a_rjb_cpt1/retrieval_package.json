@@ -1,0 +1,59 @@
+{
+  "seed": {
+    "id": "math_1a_rjb_cpt1",
+    "resolved_node_id": "math_1a_rjb_cpt1",
+    "name": "数物体（数一数）",
+    "definition": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_16335",
+      "source_id": "math_1a_rjb_cpt1",
+      "source_name": "数物体（数一数）",
+      "target_id": "math_1a_rjb_cpt3",
+      "target_name": "一一对应比较法",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_19305",
+      "source_id": "math_1a_rjb_cpt1",
+      "source_name": "数物体（数一数）",
+      "target_id": "math_1a_rjb_cpt2",
+      "target_name": "比较数量（多、少、一样多）",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "一一对应比较法",
+        "比较数量（多、少、一样多）"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 2,
+    "selected_edge_count": 2,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

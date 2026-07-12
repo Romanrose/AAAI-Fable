@@ -1,0 +1,5 @@
+{
+  "pass_fail": false,
+  "reason": "llm_request_failed",
+  "error_path": "data\\derived\\kg_rag\\audit_llm_demo\\error.json"
+}

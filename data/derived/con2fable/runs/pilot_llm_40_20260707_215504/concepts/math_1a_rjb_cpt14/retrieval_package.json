@@ -1,0 +1,100 @@
+{
+  "seed": {
+    "id": "math_1a_rjb_cpt14",
+    "resolved_node_id": "math_1a_rjb_cpt14",
+    "name": "长方体",
+    "definition": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_16337",
+      "source_id": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target_id": "math_5b_rjb_cpt14",
+      "target_name": "表面积",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_16338",
+      "source_id": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target_id": "math_5b_rjb_cpt16",
+      "target_name": "长方体体积公式",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_16336",
+      "source_id": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target_id": "math_1a_rjb_skl9",
+      "target_name": "拼搭立体图形",
+      "relation": "prerequisites_for",
+      "score": 1.12
+    },
+    {
+      "source_edge_id": "edge_12133",
+      "source_id": "math_1a_rjb_cpt15",
+      "source_name": "正方体",
+      "target_id": "math_1a_rjb_cpt14",
+      "target_name": "长方体",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12132",
+      "source_id": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target_id": "math_1a_rjb_cpt18",
+      "target_name": "按形状分类",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_19306",
+      "source_id": "math_1a_rjb_cpt14",
+      "source_name": "长方体",
+      "target_id": "math_1a_rjb_cpt15",
+      "target_name": "正方体",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "表面积",
+        "长方体体积公式",
+        "拼搭立体图形",
+        "正方体"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": [
+        "正方体",
+        "按形状分类"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 6,
+    "selected_edge_count": 6,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

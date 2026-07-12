@@ -1,0 +1,199 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "光是绿色植物制造有机物不可缺少的条件",
+  "concept_id": "biology_7a_rjb_cpt131",
+  "concept_definition": "在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt131",
+    "光是绿色植物制造有机物不可缺少的条件"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt131",
+      "label": "Concept",
+      "name": "光是绿色植物制造有机物不可缺少的条件",
+      "definition": "在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "光是绿色植物制造有机物不可缺少的条件\n在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt4",
+          "label": "Concept",
+          "name": "光合作用",
+          "definition": "能够捕获和转化光能的生物学途径，是生物圈能量输入、捕获与转化的基础；教材指出其是“唯一能够捕获和转化光能的生物学途径”。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp15",
+          "label": "Experiment",
+          "name": "绿叶在光下制造有机物",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe21",
+          "label": "Exercise",
+          "name": "判断：光是绿色植物制造有机物不可缺少的条件。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s4",
+          "label": "Section",
+          "name": "第四章 绿色植物是生物圈中有机物的制造者",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt131",
+    "concept_id": "biology_7a_rjb_cpt131",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt131",
+      "label": "Concept",
+      "name": "光是绿色植物制造有机物不可缺少的条件",
+      "definition": "在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "光是绿色植物制造有机物不可缺少的条件"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "在探究中，叶片见光部分产生淀粉而遮光部分不产生淀粉，说明光是绿色植物制造有机物（进行光合作用）不可缺少的条件。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过小园的观察和实验，揭示了植物只有在光下才能制造养料（有机物），遮光部分则不能，从而说明光是绿色植物制造有机物不可缺少的条件。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小园用黑纸遮住叶片部分，经过处理后，见光部分变蓝（产生淀粉），遮光部分不变蓝（不产生淀粉），重复实验和完全遮光/全光照对比，验证了光对有机物制造的必要性。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事避免了目的论解释（如‘植物为了生存才需要光’），没有将个体努力归因于进化，而是客观描述了条件（光）、过程（叶片处理、煮叶、滴药水）和结果（变色差异），保留了生命系统的因果逻辑。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：窗台上的秘密\n\n小园在爷爷的园圃工坊里帮忙，工坊里有一间特别的“阳光房”，里面种着几盆绿油油的植物。爷爷说，这些植物能做出一种叫“养料”的东西，但小园一直没弄明白它们是怎么做的。\n\n一天，爷爷拿出一张黑纸，小心地贴在一片叶子的两面，只留出中间一小块。小园好奇地问：“爷爷，为什么要遮住它？”爷爷笑着说：“过几天你就知道了。”\n\n三天后，爷爷揭下黑纸，把那片叶子摘下来，放进一个装着淡褐色液体的碗里。小园看见，叶子在液体里慢慢煮着。过了一会儿，爷爷把叶子捞出来，用清水漂洗，再滴上几滴透明的药水。神奇的事情发生了：叶子被黑纸遮住的部分没有变色，而中间露出的那块却变成了深蓝色。\n\n“为什么只有见光的地方变色？”小园惊讶地问。爷爷没有直接回答，而是让他再试一次。小园选了另一片叶子，用黑纸遮住一半，同样等了两天。这次，他亲自煮叶子、滴药水，结果还是一样——遮光的部分不变色，见光的部分变成了深蓝色。\n\n小园又找来一片完全被黑纸包住的叶子，煮过后滴药水，整片叶子都没有变色。而另一片一直晒太阳的叶子，整片都变成了深蓝色。\n\n“原来，光才是关键！”小园恍然大悟。爷爷点点头：“植物只有在光下才能制造养料。没有光，它们就做不出那种东西。”\n\n小园明白了：植物制造养料，离不开光这个条件。从此，他每天都会把阳光房的窗户擦得亮亮的，让阳光照进来。",
+  "rule_findings": {
+    "story_token_count": 480,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

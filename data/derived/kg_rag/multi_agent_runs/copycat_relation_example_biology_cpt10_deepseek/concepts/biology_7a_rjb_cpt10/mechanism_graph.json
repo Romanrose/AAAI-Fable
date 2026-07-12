@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "子代与亲代在很多方面表现出相同特征（遗传），但总有一部分特征不相同（变异）的现象。",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n2",
+      "text": "属于或连接到上位结构：生物的共同特征",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "is_a",
+      "source_edge_id": "normalized:edge:10771",
+      "source_name": "遗传和变异",
+      "target_name": "生物的共同特征",
+      "relation_semantic_role": "category_membership"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:10771"
+  ]
+}

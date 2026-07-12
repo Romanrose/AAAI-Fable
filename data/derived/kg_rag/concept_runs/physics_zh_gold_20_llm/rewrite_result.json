@@ -1,0 +1,17 @@
+{
+  "run_dir": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm",
+  "status_filter": [
+    "reject",
+    "revise"
+  ],
+  "rewritten_count": 1,
+  "skipped_count": 19,
+  "failed_count": 0,
+  "rewrite_summary_path": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm\\rewrite_summary.jsonl",
+  "summary_jsonl": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm\\eval_summary.jsonl",
+  "csv_path": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm\\eval_summary.csv",
+  "report_path": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm\\eval_report.md",
+  "row_count": "20",
+  "physics_report_path": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm\\physics_eval_report.md",
+  "subject_eval_report_path": "data\\derived\\kg_rag\\concept_runs\\physics_zh_gold_20_llm\\subject_eval_report.md"
+}

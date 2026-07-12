@@ -1,0 +1,69 @@
+{
+  "seed": {
+    "id": "math_1a_rjb_cpt19",
+    "resolved_node_id": "math_1a_rjb_cpt19",
+    "name": "数字6和7的认识",
+    "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_16341",
+      "source_id": "math_1a_rjb_cpt19",
+      "source_name": "数字6和7的认识",
+      "target_id": "math_1a_rjb_cpt22",
+      "target_name": "分拆数6和7",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_19309",
+      "source_id": "math_1a_rjb_cpt19",
+      "source_name": "数字6和7的认识",
+      "target_id": "math_1a_rjb_cpt21",
+      "target_name": "6和7的减法",
+      "relation": "relates_to",
+      "score": 0.77
+    },
+    {
+      "source_edge_id": "edge_19308",
+      "source_id": "math_1a_rjb_cpt19",
+      "source_name": "数字6和7的认识",
+      "target_id": "math_1a_rjb_cpt20",
+      "target_name": "6和7的加法",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "分拆数6和7",
+        "6和7的减法",
+        "6和7的加法"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 3,
+    "selected_edge_count": 3,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

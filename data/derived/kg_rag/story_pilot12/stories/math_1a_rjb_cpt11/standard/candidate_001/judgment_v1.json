@@ -1,0 +1,23 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly shows the farmer counting five seeds and understanding one-to-one correspondence (n1), then merging two seeds into one hole (n2), with the enabling relation (e1) clearly demonstrated by the temporal order and causal link. This is observably better than a story that merely mentions counting without showing the correspondence, or that merges quantities without prior counting. The mapping is precise and avoids any forbidden terms like 'addition'."
+  },
+  "revision_instructions": [],
+  "final_status": "accept"
+}

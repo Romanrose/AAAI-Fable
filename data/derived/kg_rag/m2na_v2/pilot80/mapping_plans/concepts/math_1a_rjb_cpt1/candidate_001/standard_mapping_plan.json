@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫收集不同种类的水果并比较收获量的故事",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "苹果",
+    "橘子",
+    "篮子"
+  ],
+  "conflict": "农夫需要知道哪种水果收获更多，以便决定储存和分配。",
+  "event_chain": [
+    "农夫逐一采摘苹果，并放入篮子中计数。",
+    "农夫逐一采摘橘子，并放入另一个篮子中计数。",
+    "农夫将苹果和橘子一一配对，比较两种水果的数量。",
+    "农夫根据配对结果判断哪种水果更多，或者是否一样多。"
+  ],
+  "turning_point": "农夫完成配对，发现苹果比橘子多。",
+  "resolution_state": "农夫决定多储存苹果，因为苹果数量更多。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫逐一采摘苹果并计数",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫比较苹果和橘子的数量，判断哪个多",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫将苹果和橘子一一配对来比较数量",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫逐一计数后，自然进行数量比较",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫逐一计数为后续配对比较提供了基础",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数物体（数一数）'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "d352606f2cdd485b8538c171b80a51d6a53299e2966530529ee79a2f6533c77f",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f5264fd8ca87e50510c22a9a5373b17b4938b9f1c9cef74ca6e9acea62601842"
+  }
+}

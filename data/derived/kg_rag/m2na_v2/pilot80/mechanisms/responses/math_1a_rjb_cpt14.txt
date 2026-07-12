@@ -1,0 +1,131 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "长方体：由6个长方形（特殊情况有两个相对的面是正方形）围成的立体图形，相对的面完全相同，相对的棱长度相等，有6个面、12条棱、8个顶点。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt14:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "正方体：由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt15:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "按形状分类：根据物体或图形的外形特征进行分类的方法。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt18:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "拼搭立体图形：利用积木进行组合、拆分，形成新的立体结构。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_skl9:description"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "表面积：长方体或正方体6个面的面积之和叫做它的表面积。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_5b_rjb_cpt14:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "rule",
+        "text": "长方体体积公式：长方体体积=长×宽×高，也可写为V=a·b·h。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_5b_rjb_cpt16:definition",
+          "kg-node:math_5b_rjb_cpt16:formula"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12132"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12133"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19306"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16337"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16338"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16336"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}

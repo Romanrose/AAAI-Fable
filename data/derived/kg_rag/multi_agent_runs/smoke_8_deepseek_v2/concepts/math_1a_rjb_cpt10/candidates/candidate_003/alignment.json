@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "新纸的面积比破损处的面积小",
+      "evidence": "新纸的边缘比破洞的边缘短了一截",
+      "narrative_anchor": "新纸的边缘比破洞的边缘短了一截",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "阿衡提醒阿原注意‘相等’的情况",
+      "evidence": "你量的时候，有没有先确认新纸和这个洞是不是一样大",
+      "narrative_anchor": "你量的时候，有没有先确认新纸和这个洞是不是一样大",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "阿原通过对比‘相等’和‘少’两种情形，区分了这两种关系",
+      "evidence": "他将新纸举到破洞旁边，让两者并排放着，目光在它们之间来回移动",
+      "narrative_anchor": "他将新纸举到破洞旁边，让两者并排放着，目光在它们之间来回移动",
+      "confidence": 0.9
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "阿衡先提醒阿原注意‘相等’的情况，然后阿原才意识到‘少’的关系",
+      "evidence": "阿衡走过来，蹲下身，指着破损处说：“你量的时候，有没有先确认新纸和这个洞是不是一样大？”",
+      "narrative_anchor": "阿衡走过来，蹲下身，指着破损处说：“你量的时候，有没有先确认新纸和这个洞是不是一样大？”",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "阿原理解了‘相等’后，通过对比认识到‘少’的关系",
+      "evidence": "阿原盯着那两块纸，又看看自己手中的新纸和地图上的破洞，忽然明白了什么",
+      "narrative_anchor": "阿原盯着那两块纸，又看看自己手中的新纸和地图上的破洞，忽然明白了什么",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.85
+    }
+  ]
+}

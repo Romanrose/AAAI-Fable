@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n6",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly and vividly depicts the verification process (n6) through multiple sensory checks (taste, sight, sound), making it the strongest mapped node. The process node (n2) is only mentioned at the end ('红烧肉终于炖熟了') without showing the gradual transformation, which is weaker than a step-by-step cooking progression. Edge e1 (condition enables process) is stated explicitly in the final line but could be more causally woven throughout the narrative."
+  },
+  "revision_instructions": [
+    "Consider showing the gradual transformation of the meat (e.g., from raw to tender) to strengthen the process node n2.",
+    "Weave the causal link between conditions and the final result more explicitly into the middle of the story, not just at the end."
+  ],
+  "final_status": "accept"
+}

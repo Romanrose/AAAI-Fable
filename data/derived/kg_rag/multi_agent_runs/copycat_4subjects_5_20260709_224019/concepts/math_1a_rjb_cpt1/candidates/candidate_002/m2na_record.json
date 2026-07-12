@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt1",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "数物体（数一数）",
+    "aliases": [],
+    "forbidden_terms": [
+      "数物体（数一数）"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "通过观察，对给定的物体逐一计数，确定物体的数量。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:16335",
+        "source_name": "数物体（数一数）",
+        "target_name": "一一对应比较法",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:19305",
+        "source_name": "数物体（数一数）",
+        "target_name": "比较数量（多、少、一样多）",
+        "relation_semantic_role": "association"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "法庭证据室里，记录员老周搬出三个封存箱，调度员小陈站在一旁等着验收员签字。流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。\n\n老周没有急着去开箱。他先走到墙边，把那块写着“入场前必须核对的条件牌”取下来，放在桌上仔细看。条件牌上列着三条：封存箱编号完整、分段记录册页码连续、通行牌数量与登记表一致。老周一条一条对照，确认无误后，才让小陈把第一个封存箱搬上工作台。\n\n小陈觉得老周太慢：“条件牌我看过很多遍了，直接开箱登记不行吗？后面还有一大堆事。”\n\n老周摇头：“如果条件没核对，后面的登记就没了根基。你拿什么去比较？”\n\n小陈不听，自己拎起第二个封存箱，打开封条，抽出里面的分段记录册，想先做比较。可他翻了几页就愣住了——记录册的页码是乱的，和通行牌上的编号对不上。没有条件牌做基准，他根本不知道哪一份记录对应哪个环节。\n\n老周叹了口气，把两份相关记录放在一起，指着条件牌说：“你看，这一份和那一份，必须放在一起比较，才能发现它们共同约束最后判断。先稳定条件核对，再推动第二道转化，前后两步必须在记录中互相承接。”\n\n小陈这才明白，自己跳过第一步，直接做第二步，顺序完全颠倒了。他老老实实退回起点，重新核对条件牌。这一次，他确认封存箱编号、记录册页码、通行牌数量全部一致，才打开箱子。\n\n验收员老李最后进来，拿着结果验收记录，把整条安排从头到尾查了一遍。条件核对、过程转化、结果记录，三步一环扣一环，全部能互相印证。老李在验收记录上签了字。\n\n小陈擦了擦汗，对老周说：“原来方向不能颠倒，顺序也不能跳过。先核对条件，再推进转化，最后验收——少一步都不行。”\n\n老周点点头，把条件牌挂回墙上。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "法庭证据室里，记录员老周搬出三个封存箱，调度员小陈站在一旁等着验收员签字。",
+        "narrative_anchor": "法庭证据室里，记录员老周搬出三个封存箱，调度员小陈站在一旁等着验收员签字。",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+        "narrative_anchor": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "老周没有急着去开箱。",
+        "narrative_anchor": "老周没有急着去开箱。",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定条件核对，再推动第二道转化",
+        "evidence": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+        "narrative_anchor": "流程牌挂在墙头，上面写着：先核对入口条件，再推进第二道转化，最后验收结果。",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "两份记录放在一起比较，共同约束最后判断",
+        "evidence": "老周没有急着去开箱。",
+        "narrative_anchor": "老周没有急着去开箱。",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.9
+      }
+    ]
+  }
+}

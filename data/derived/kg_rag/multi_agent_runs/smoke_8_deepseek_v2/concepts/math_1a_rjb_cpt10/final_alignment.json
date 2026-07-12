@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "裁判最终判定的核心规则：白棋的棋子数量少于黑棋的棋子数量。",
+      "evidence": "棋盘上黑白棋子交错，执白棋的棋手落下一子后，忽然皱起了眉头。",
+      "narrative_anchor": "棋盘上黑白棋子交错，执白棋的棋手落下一子后，忽然皱起了眉头。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "裁判要求双方先确认‘数量相等’这一前提，即双方必须先理解并确认‘等号’所代表的含义，才能进一步讨论‘少’的概念。",
+      "evidence": "他盯着记分牌上显示的数字，又看了看棋盘上密密麻麻的棋子，心中涌起一股不安。",
+      "narrative_anchor": "他盯着记分牌上显示的数字，又看了看棋盘上密密麻麻的棋子，心中涌起一股不安。",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "裁判的判定过程体现了‘等号’（数量相等）与‘小于号’（数量少）之间的逻辑关系，即必须先判断是否相等，才能判断谁更少。",
+      "evidence": "“裁判，”他举手示意，“我的白棋数量好像比黑棋少。",
+      "narrative_anchor": "“裁判，”他举手示意，“我的白棋数量好像比黑棋少。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "裁判要求先确认数量相等，然后才能判断数量少。",
+      "evidence": "他盯着记分牌上显示的数字，又看了看棋盘上密密麻麻的棋子，心中涌起一股不安。",
+      "narrative_anchor": "他盯着记分牌上显示的数字，又看了看棋盘上密密麻麻的棋子，心中涌起一股不安。",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.9
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "在确认相等不成立后，裁判引导出数量少的概念。",
+      "evidence": "“裁判，”他举手示意，“我的白棋数量好像比黑棋少。",
+      "narrative_anchor": "“裁判，”他举手示意，“我的白棋数量好像比黑棋少。",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

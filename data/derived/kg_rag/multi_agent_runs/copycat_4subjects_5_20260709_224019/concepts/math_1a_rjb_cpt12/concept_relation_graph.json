@@ -1,0 +1,32 @@
+{
+  "target_concept": {
+    "id": "math_1a_rjb_cpt12",
+    "name": "减法的含义",
+    "label": "Concept",
+    "definition": "表示从一个数量中去掉一部分。"
+  },
+  "neighbors": [
+    {
+      "id": "math_1a_rjb_cpt7",
+      "name": "数字1到5的认识"
+    }
+  ],
+  "relations": [
+    {
+      "edge_id": "normalized:edge:16376",
+      "source_id": "math_1a_rjb_cpt7",
+      "source_name": "数字1到5的认识",
+      "target_id": "math_1a_rjb_cpt12",
+      "target_name": "减法的含义",
+      "relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "direction": "incoming",
+      "neighbor_id": "math_1a_rjb_cpt7",
+      "neighbor_name": "数字1到5的认识",
+      "score": 1.35,
+      "evidence": ""
+    }
+  ],
+  "raw_edge_count": 1,
+  "source": "dual_level_graphrag"
+}

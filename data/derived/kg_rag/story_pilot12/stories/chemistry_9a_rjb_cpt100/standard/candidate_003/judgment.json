@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "Node n1 (腐朽过程) is vividly and consistently portrayed as a slow, hidden decay, perfectly matching the mechanism of slow oxidation. Node n2 (树根吸收过程) is mapped to root absorption, but the story does not clearly establish it as a 'type of' oxidation reaction (is_a relation) as required by e1; instead, it is presented as a separate process. Edge e4 (阳光是树根吸收过程的一部分) has low confidence because sunlight is not naturally part of root absorption; a better mapping would have used water or minerals as the 'oxygen' analog for root absorption, making the relation more intuitive."
+  },
+  "revision_instructions": [
+    "Strengthen the is_a relation for e1: explicitly show that root absorption is a form of the decay process (e.g., by stating that the absorbed water contributes to the internal decay).",
+    "Improve edge e4: replace '阳光' with '水分' or '养分' as the part_of component for root absorption, since sunlight is not a direct part of root absorption.",
+    "Increase confidence for edge e3: make the growth process more clearly a subtype of decay (e.g., by showing that growth accelerates decay).",
+    "Ensure all edge directions are explicitly preserved in the story narrative, especially for e2 and e3."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

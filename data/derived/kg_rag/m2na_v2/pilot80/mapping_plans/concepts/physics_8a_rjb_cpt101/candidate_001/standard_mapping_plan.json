@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个村庄的磨坊与水源",
+  "characters": [
+    "磨坊主",
+    "村民"
+  ],
+  "objects": [
+    "磨坊",
+    "水源",
+    "水渠",
+    "磨盘"
+  ],
+  "conflict": "磨坊主发现磨盘转动越来越慢，无法按时磨出足够的面粉，村民抱怨。",
+  "event_chain": [
+    "磨坊主检查磨坊，发现水渠入口（光心）位置偏移，导致水流不畅。",
+    "磨坊主调整水渠入口，使其对准水源中心（焦点），水流恢复。",
+    "磨坊主测量水渠入口到水源中心的距离（焦距），并记录。",
+    "磨坊主根据这个距离调整水渠坡度，确保水流稳定，磨盘正常转动（凸透镜成像规律）。"
+  ],
+  "turning_point": "磨坊主发现水渠入口偏移是问题的根源。",
+  "resolution_state": "磨坊主调整水渠入口，测量并记录距离，磨盘恢复正常转动，村民满意。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "水渠入口",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水源中心",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "水渠入口到水源中心的距离",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "磨盘转动",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "水渠入口的位置决定了水渠入口到水源中心的距离",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "水源中心的位置与水渠入口到水源中心的距离相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "水渠入口到水源中心的距离是磨盘正常转动的前提",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保水渠入口（光心）和水源中心（焦点）的映射清晰，避免混淆。",
+    "距离（焦距）作为实体映射，需在故事中明确其测量和记录。",
+    "磨盘转动（凸透镜成像规律）作为过程，需体现其依赖距离。",
+    "避免使用'焦距'等禁止术语。"
+  ],
+  "mapping_context_sha256": "99da872bda3d10e9d03199597f76a80f47ada8efe18b32ddb88e5d3172a3dcbd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ae155f98afca7b5d41c15ddfed01e7d3961c591636a9a2dae5c5aee36f249750"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "这是铁在“吃”空气里的湿气，无声无息地烂掉，既不见火光，也不觉热量，只是悄悄地、一刻不停地损耗着。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "铁与空气中的氧气猛烈交锋",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "铁块与空气中的氧气猛烈交锋，发出炽烈的光热",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "这铁锈在潮气里慢慢蔓延，锄头的刃口变得粗糙，铁质也一天天松脆下去。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "空气中的氧气",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "铁器烧到白炽时",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_evidence": "发出炽烈的光热",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_evidence": "既不见火光，也不觉热量",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "这是铁在“吃”空气里的湿气，无声无息地烂掉，既不见火光，也不觉热量，只是悄悄地、一刻不停地损耗着。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "铁块与空气中的氧气猛烈交锋，发出炽烈的光热",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "这铁锈在潮气里慢慢蔓延，锄头的刃口变得粗糙，铁质也一天天松脆下去。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "空气中的氧气",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "铁块与空气中的氧气猛烈交锋",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "这铁锈在潮气里慢慢蔓延",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_evidence": "铁器烧到白炽时",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_evidence": "发出炽烈的光热",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_evidence": "既不见火光，也不觉热量",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_evidence": "同是铁，同是见着气，有的慢慢烂掉，有的却烧得通红，打出新物件来。这差别，全在一个‘慢’字，一个‘快’字上。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact contiguous substrings from the story, with direction preserved for edges. The story provides direct evidence for each concept and relation, including the contrast between slow oxidation (rusting) and combustion (forging)."
+}

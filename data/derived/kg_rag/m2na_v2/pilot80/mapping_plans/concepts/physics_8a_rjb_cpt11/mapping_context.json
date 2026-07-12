@@ -1,0 +1,343 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt11",
+    "subject": "physics",
+    "canonical_name": "速度",
+    "aliases": [
+      "velocity"
+    ],
+    "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "速度",
+      "velocity"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "速度：表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt11:definition",
+          "kg-node:physics_8a_rjb_cpt11:formula"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "平均速度：在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt12:definition",
+          "kg-node:physics_8a_rjb_cpt12:formula"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "匀速直线运动：速度大小和方向都保持不变的直线运动。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt13:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "变速直线运动：物体沿直线但速度随时间变化的运动。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt14:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "瞬时速度：物体在某一时刻或某一很短时间内的速度，用以描述该时刻运动的快慢。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_bx1_rjb_cpt17:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "速度—时间图像：以速度为纵轴、时间为横轴描绘的图像，用于表示物体速度随时间变化的规律。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_bx1_rjb_cpt19:definition"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "process",
+        "text": "利用超声波位置传感器测速度：传感器测距并记录不同时间的位置，由计算机计算速度并显示速度—时间图像。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp4:process",
+          "kg-node:physics_8a_rjb_exp4:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12422"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12426"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n5",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12541"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n7",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23061"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17195"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17196"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n1",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17197"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "速度",
+      "velocity"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt11",
+      "name": "速度",
+      "label": "Concept",
+      "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt13",
+        "name": "匀速直线运动"
+      },
+      {
+        "id": "physics_8a_rjb_cpt14",
+        "name": "变速直线运动"
+      },
+      {
+        "id": "physics_bx1_rjb_cpt19",
+        "name": "速度—时间图像"
+      },
+      {
+        "id": "physics_8a_rjb_cpt12",
+        "name": "平均速度"
+      },
+      {
+        "id": "physics_bx1_rjb_cpt17",
+        "name": "瞬时速度"
+      },
+      {
+        "id": "physics_8a_rjb_exp4",
+        "name": "利用超声波位置传感器测速度"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:17195",
+        "source_id": "physics_8a_rjb_cpt11",
+        "source_name": "速度",
+        "target_id": "physics_8a_rjb_cpt13",
+        "target_name": "匀速直线运动",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt13",
+        "neighbor_name": "匀速直线运动",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17196",
+        "source_id": "physics_8a_rjb_cpt11",
+        "source_name": "速度",
+        "target_id": "physics_8a_rjb_cpt14",
+        "target_name": "变速直线运动",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt14",
+        "neighbor_name": "变速直线运动",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:17197",
+        "source_id": "physics_8a_rjb_cpt11",
+        "source_name": "速度",
+        "target_id": "physics_bx1_rjb_cpt19",
+        "target_name": "速度—时间图像",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "outgoing",
+        "neighbor_id": "physics_bx1_rjb_cpt19",
+        "neighbor_name": "速度—时间图像",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12422",
+        "source_id": "physics_8a_rjb_cpt12",
+        "source_name": "平均速度",
+        "target_id": "physics_8a_rjb_cpt11",
+        "target_name": "速度",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt12",
+        "neighbor_name": "平均速度",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12426",
+        "source_id": "physics_8a_rjb_cpt13",
+        "source_name": "匀速直线运动",
+        "target_id": "physics_8a_rjb_cpt11",
+        "target_name": "速度",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt13",
+        "neighbor_name": "匀速直线运动",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12541",
+        "source_id": "physics_bx1_rjb_cpt17",
+        "source_name": "瞬时速度",
+        "target_id": "physics_8a_rjb_cpt11",
+        "target_name": "速度",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_bx1_rjb_cpt17",
+        "neighbor_name": "瞬时速度",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:23061",
+        "source_id": "physics_8a_rjb_exp4",
+        "source_name": "利用超声波位置传感器测速度",
+        "target_id": "physics_8a_rjb_cpt11",
+        "target_name": "速度",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_exp4",
+        "neighbor_name": "利用超声波位置传感器测速度",
+        "score": 0.95,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 7,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "速度",
+      "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+      "formula": "v = s / t",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17195] 速度 --prerequisites_for--> 匀速直线运动",
+      "[normalized:edge:17196] 速度 --prerequisites_for--> 变速直线运动",
+      "[normalized:edge:17197] 速度 --prerequisites_for--> 速度—时间图像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12422] 平均速度 --is_a--> 速度",
+      "[normalized:edge:12426] 匀速直线运动 --is_a--> 速度",
+      "[normalized:edge:12541] 瞬时速度 --is_a--> 速度",
+      "[normalized:edge:23061] 利用超声波位置传感器测速度 --verifies--> 速度"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:17195",
+    "normalized:edge:17196",
+    "normalized:edge:17197",
+    "normalized:edge:12422",
+    "normalized:edge:12426",
+    "normalized:edge:12541",
+    "normalized:edge:23061"
+  ],
+  "provenance": {
+    "seed_sha256": "690f4cef57b61f94b234c9db82f60f802c10e30f7f6444086484f855e8705130",
+    "retrieval_sha256": "fbe708ea04709cd5cbb111f3704ea5e921e18ca275eda92841cc9fee9ac0ade3",
+    "mechanism_record_sha256": "333e9c68b3bbf3b5d1ece80eee67a767dc2e3661ce90b61a6d10871fab67e59b"
+  }
+}

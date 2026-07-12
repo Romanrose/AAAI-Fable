@@ -1,0 +1,218 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "二氧化锰的催化作用",
+  "concept_id": "chemistry_9a_rjb_cpt112",
+  "concept_definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt112",
+    "二氧化锰的催化作用"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt112",
+      "label": "Concept",
+      "name": "二氧化锰的催化作用",
+      "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+      "aliases": [],
+      "examples": [
+        "在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃",
+        "在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+      ],
+      "retrieval_text": "二氧化锰的催化作用\n二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt110",
+          "label": "Concept",
+          "name": "催化剂",
+          "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt110",
+          "label": "Concept",
+          "name": "催化剂",
+          "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "chemistry_9a_rjb_exp17",
+          "label": "Experiment",
+          "name": "过氧化氢分解实验中二氧化锰的作用",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_9a_rjb_exp18",
+          "label": "Experiment",
+          "name": "加热混有二氧化锰的氯酸钾固体制取氧气",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "chemistry_9a_rjb_exe17",
+          "label": "Exercise",
+          "name": "在过氧化氢分解制氧气的实验中，向过氧化氢溶液中加入少量二氧化锰，观察到带火星的木条能复燃，多次重复实验后，二氧化锰的质量和化学性质没有改变。\n根据上述信息回答：\n（1）二氧化锰在该反应中是否被消耗？\n（2）二氧化锰在该反应中起什么作用？这种物质在化学上叫什么？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s3",
+          "label": "Section",
+          "name": "课题3 制取氧气",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt112",
+    "concept_id": "chemistry_9a_rjb_cpt112",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt112",
+      "label": "Concept",
+      "name": "二氧化锰的催化作用",
+      "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+      "aliases": [],
+      "examples": [
+        "在过氧化氢分解反应中，加入少量二氧化锰使分解加速，木条能复燃",
+        "在氯酸钾受热分解反应中，二氧化锰也是催化剂"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "二氧化锰的催化作用"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "黑色粉末加入醒墨水后，字迹显现速度大大加快，但粉末本身在反应前后质量和性质不变，体现了催化剂的作用。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "黑色粉末能显著加快醒墨水的反应速率，且每次使用后称重、观察都无变化，多次重复依然有效，对应催化剂在反应前后质量和化学性质不变。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中区分了白色粉末（反应物）和黑色粉末（催化剂），避免将两者混淆；黑色粉末的质量和性质在反应前后守恒；未使用任何化学式或元素符号。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的“隐形帮手”\n\n从前，在一个繁华的城邦里，有一间老账房。账房先生每天都要处理堆积如山的账本，但最让他头疼的，是那些发黄的旧账本——上面的墨迹干涸，字迹模糊，必须用一种特殊的“醒墨水”才能重新显现。\n\n醒墨水的配方很简单：清水加一种白色粉末，搅拌后静置片刻，就能让旧墨迹复活。可这过程实在太慢了，有时要等上整整一天。账房先生急得直跺脚，却毫无办法。\n\n一天，一位云游的商人路过，听说此事后，从包袱里取出一小袋黑色粉末，说：“先生，你把这粉末加进醒墨水里试试，或许能快些。”账房先生半信半疑，但还是照做了。他取来一杯清水，先倒入白色粉末，再撒入少许黑色粉末，轻轻搅拌。奇迹发生了——原本需要一天才能显出的字迹，不到一炷香的功夫就清晰可见！账房先生大喜过望，连连道谢。\n\n商人摆摆手，说：“这黑色粉末只是帮个忙，它自己并不会消耗。你用完这杯醒墨水后，把剩下的粉末滤出来，称一称，看看是不是还是原来的重量。”账房先生将信将疑，等醒墨水用完后，果然把黑色粉末滤出、烘干、称重——分毫不差！他又用这回收的粉末试了第二次、第三次，每一次都同样迅速，粉末的重量和样子也始终没变。\n\n账房先生恍然大悟：原来这黑色粉末并非醒墨水的一部分，它只是在一旁“催促”反应加快，自己却毫发无损。从此，他每次调配醒墨水都加入少许这种黑色粉末，效率大大提高。后来，他还发现，在另一种需要加热才能显现字迹的“热显墨”中，加入这种粉末同样能大大缩短时间，而粉末本身依然不变。\n\n账房先生感慨道：“世间竟有这样的‘隐形帮手’——它不参与结果，却能改变过程；它不增不减，却让一切加速。真是妙不可言！”",
+  "rule_findings": {
+    "story_token_count": 580,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

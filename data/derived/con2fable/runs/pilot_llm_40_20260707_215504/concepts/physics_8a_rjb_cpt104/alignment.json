@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像",
+      "evidence": "当模具与铜镜的距离恰好在一个特定的位置时，墙上的影像虽然仍是颠倒的，却变得又大又清晰",
+      "narrative_anchor": "当模具与铜镜的距离恰好在一个特定的位置时，墙上的影像虽然仍是颠倒的，却变得又大又清晰"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "凸透镜",
+      "evidence": "铜镜的凹面光滑如水面，能聚拢光线",
+      "narrative_anchor": "铜镜的凹面光滑如水面，能聚拢光线"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "实像",
+      "evidence": "墙上的影像虽然仍是颠倒的，却变得又大又清晰",
+      "narrative_anchor": "墙上的影像虽然仍是颠倒的，却变得又大又清晰"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "公输明使用铜镜（凸透镜）进行成像实验",
+      "evidence": "公输明先将一个刻有花纹的模具放在离铜镜很远的地方，白色的投影墙上立刻出现了一个小小的影像",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "公输明先将一个刻有花纹的模具放在离铜镜很远的地方，白色的投影墙上立刻出现了一个小小的影像"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "成像结果（实像）依赖于凸透镜的使用",
+      "evidence": "当模具与铜镜的距离恰好在一个特定的位置时，墙上的影像虽然仍是颠倒的，却变得又大又清晰",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "当模具与铜镜的距离恰好在一个特定的位置时，墙上的影像虽然仍是颠倒的，却变得又大又清晰"
+    }
+  ]
+}

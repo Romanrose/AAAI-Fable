@@ -1,0 +1,86 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代农夫与禾苗",
+  "characters": [
+    "老农夫",
+    "禾苗"
+  ],
+  "objects": [
+    "禾苗",
+    "雨水",
+    "阳光",
+    "锄头",
+    "尺子"
+  ],
+  "conflict": "禾苗生长需要合适的照料，但老农夫不知如何准确判断禾苗的高度和生长状况。",
+  "event_chain": [
+    "老农夫种下禾苗，禾苗逐渐生长。",
+    "禾苗的高度（n1）是衡量其生长的重要指标。",
+    "老农夫使用尺子（n2）作为衡量禾苗高度的标准单位。",
+    "老农夫用锄头（n3）测量禾苗的高度，验证其生长情况。",
+    "禾苗的高度（n1）使得老农夫能够掌握使用锄头的方法（n4）。"
+  ],
+  "turning_point": "老农夫学会用尺子配合锄头准确测量禾苗高度，从而知道如何正确松土和施肥。",
+  "resolution_state": "禾苗在老农夫的精准照料下茁壮成长，老农夫掌握了根据禾苗高度调整农事的方法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "禾苗的高度",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "尺子",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "用锄头测量禾苗高度",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "使用锄头的方法",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "尺子是衡量禾苗高度的标准单位",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "用锄头测量禾苗高度验证了禾苗的高度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "禾苗的高度使得老农夫能够掌握使用锄头的方法",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保“禾苗的高度”不直接或间接指向“长度”概念。",
+    "避免使用“长度”及其同义词。",
+    "确保所有映射的边方向与原始机制图一致。",
+    "确保故事连贯，不引入无关的比喻。"
+  ],
+  "mapping_context_sha256": "04c35911ccf3dfb2b79ee72e850930088a1e8c56d0f43b259e3c0e0b53d6aa2c",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d42674111f331046c34ed3e08fc3d310ec86150197909fb3bbe950d61d6b6b73"
+  }
+}

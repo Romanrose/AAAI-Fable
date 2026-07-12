@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are exactly and explicitly realized in the story with preserved direction. Node n1 is strongest because the counting action is vividly described with direct evidence. Node n2 and edge e1 are slightly weaker because the comparison is stated but the story's main focus is on the pairing method (n3) rather than a standalone comparison process; however, they are still clearly present. The mapping is observably better than a version that only mentions endpoints without showing the relational sequence (e.g., saying 'the monkey compared' without linking to counting)."
+  },
+  "revision_instructions": [
+    "No revision needed; the story perfectly aligns with the mechanism graph."
+  ],
+  "final_status": "accept"
+}

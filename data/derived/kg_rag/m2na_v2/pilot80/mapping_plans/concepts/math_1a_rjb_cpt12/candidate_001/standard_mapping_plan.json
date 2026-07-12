@@ -1,0 +1,59 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt12",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一个农夫分苹果的故事",
+  "characters": [
+    "农夫",
+    "孩子"
+  ],
+  "objects": [
+    "一篮苹果"
+  ],
+  "conflict": "孩子需要从一篮苹果中取出一些给朋友，但不知道如何确定剩下的数量。",
+  "event_chain": [
+    "农夫有一篮苹果，孩子能数出篮子里有5个苹果。",
+    "孩子从篮子里拿出2个苹果给朋友。",
+    "孩子想知道篮子里还剩下多少个苹果。"
+  ],
+  "turning_point": "农夫告诉孩子，从总数中拿掉一部分，剩下的就是结果。",
+  "resolution_state": "孩子明白了从总数中去掉一部分后，剩下的数量就是答案。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "孩子能数出篮子里有5个苹果",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "孩子从篮子里拿出2个苹果给朋友",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "孩子能数出苹果数量，使得他能够进行拿出苹果的动作",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'减法'或'减法的含义'等禁止术语。",
+    "故事中'拿出'的动作对应'去掉'，但需避免直接使用目标概念名称。",
+    "确保'数出数量'是'拿出'的前提条件，方向与机制图一致。"
+  ],
+  "mapping_context_sha256": "312e483443dfa31df95f381a76ff16faca2943c8a4c7cd094e1faee96bb4b1f7",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "afdf52ad8144f45cdf9eb99f431ea1e1e9eb0b722c95ca965d96edec489b77f6"
+  }
+}

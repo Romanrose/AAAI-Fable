@@ -1,0 +1,82 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt24",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个农夫种西瓜的故事",
+  "characters": [
+    "农夫",
+    "西瓜藤"
+  ],
+  "objects": [
+    "第7个西瓜（从藤蔓根部数起）",
+    "西瓜藤上的其他西瓜",
+    "称重工具"
+  ],
+  "conflict": "农夫想摘一个刚好7斤重的西瓜来卖，但他不知道哪个西瓜是7斤，需要先学会按顺序数出第7个西瓜，再理解这个西瓜的重量就是7斤，然后才能进行加减计算和比较重量。",
+  "event_chain": [
+    "农夫从藤蔓根部开始，按顺序逐个数西瓜：第1个、第2个……直到第7个。",
+    "农夫认识到第7个西瓜就是那个重7斤的西瓜，并记住了它的位置。",
+    "农夫用第7个西瓜进行加减计算：比如摘掉第5个西瓜后，藤上还剩几个？或者从第7个西瓜中切掉2斤，剩下5斤。",
+    "农夫用称重工具比较第7个西瓜和其他西瓜的重量，比如第5个西瓜比第7个西瓜轻，第6个西瓜比第7个西瓜轻，第8个西瓜比第7个西瓜重。"
+  ],
+  "turning_point": "农夫通过按顺序数到第7个西瓜，明白了这个西瓜的重量就是7斤，从而能够进行后续的加减和比较。",
+  "resolution_state": "农夫成功掌握了第7个西瓜的重量概念，并能用它进行加减运算和重量比较。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫从藤蔓根部开始，按顺序逐个数西瓜：第1个、第2个……直到第7个。",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "第7个西瓜就是那个重7斤的西瓜，农夫认识了它的重量。",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫用第7个西瓜进行加减计算：比如摘掉第5个西瓜后，藤上还剩几个？或者从第7个西瓜中切掉2斤，剩下5斤。",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "农夫用称重工具比较第7个西瓜和其他西瓜的重量，比如第5个西瓜比第7个西瓜轻，第6个西瓜比第7个西瓜轻，第8个西瓜比第7个西瓜重。",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫按顺序数出第7个西瓜（条件），从而认识了第7个西瓜的重量是7斤（实体）。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "农夫认识了第7个西瓜的重量（实体），从而能够用它进行加减计算（过程）。",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫用称重工具比较西瓜重量（规则），与第7个西瓜的重量（实体）相关联。",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'数字7的认识'或'7'作为抽象数字，而是用'第7个西瓜'和'7斤'来指代。",
+    "注意e3的方向：规则（比较）与实体（第7个西瓜）是双向关联，但故事中规则用于比较其他西瓜与第7个西瓜，方向是从规则到实体。",
+    "避免使用'数数方法'、'7的加减法'、'数量的比较'等目标概念名称。"
+  ],
+  "mapping_context_sha256": "6478efa80d4cb8516d1b6f15d51eae43785405648b119fccc62e63c83cbd4c85",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "dc2d9b063e4ec7fa2f2d41c66d0a34fd315a7dd649aab0a4f5a35dcd68c898a1"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "core_question": "过氧化氢分解反应的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "过氧化氢分解反应 --is_a--> 分解反应",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11279"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "过氧化氢分解实验中二氧化锰的作用 --verifies--> 过氧化氢分解反应",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:22574"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s4",
+      "text": "区分化学反应和物理混合。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:11279",
+    "normalized:edge:22574"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "过氧化氢分解反应",
+    "chemistry_9a_rjb_cpt107"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:11279",
+      "normalized:edge:22574"
+    ],
+    "must_cover_path_ids": []
+  }
+}

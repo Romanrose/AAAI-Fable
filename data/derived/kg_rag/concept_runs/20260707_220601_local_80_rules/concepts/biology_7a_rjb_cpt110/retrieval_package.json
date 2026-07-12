@@ -1,0 +1,49 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt110",
+    "label": "Concept",
+    "name": "抽样检测",
+    "properties": {
+      "definition": "从检测对象总体中抽取少量个体作为样本进行检测，并用样本结果反映总体情况的方法；抽样需避免主观影响、样本量适当并尽量随机。",
+      "importance": "掌握",
+      "retrieval_text": "抽样检测\nConcept\n从检测对象总体中抽取少量个体作为样本进行检测，并用样本结果反映总体情况的方法；抽样需避免主观影响、样本量适当并尽量随机。\n掌握"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14138",
+      "source": "biology_7a_rjb_cpt110",
+      "source_name": "抽样检测",
+      "target": "biology_7a_rjb_exp10",
+      "target_name": "测定种子的发芽率（培养皿样本检测）",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.2
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "抽样检测",
+      "definition": "从检测对象总体中抽取少量个体作为样本进行检测，并用样本结果反映总体情况的方法；抽样需避免主观影响、样本量适当并尽量随机。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14138] 抽样检测 --prerequisites_for--> 测定种子的发芽率（培养皿样本检测）"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 1,
+    "candidate_edge_count": 1,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 281,
+    "summary_chars": 294,
+    "path_chars": 0,
+    "retrieval_context_chars": 575
+  }
+}

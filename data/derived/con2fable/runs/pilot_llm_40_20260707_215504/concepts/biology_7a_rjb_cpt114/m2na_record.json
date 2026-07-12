@@ -1,0 +1,129 @@
+{
+  "id": "biology_7a_rjb_cpt114",
+  "method": "con2fable",
+  "concept": {
+    "name": "传粉",
+    "aliases": [],
+    "forbidden_terms": [
+      "传粉"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "花粉从花药散放而落到雌蕊柱头上的过程。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：异花传粉",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：自花传粉",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：受精",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14139"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10779"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10778"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "春末的油菜田里，金黄色的花朵在微风中摇曳，像一片流动的海洋。风是这片田野上最忙碌的信使，它轻轻吹过，将花粉从花药中卷起，洒向空中。那些细小的颗粒随风飘荡，有的落在泥土里，有的落在叶片上，只有少数幸运的，能落到另一朵花的柱头上。\n\n“看，我多厉害！”风得意地说，“我能把花粉送到任何地方。”\n\n一只蜜蜂从远处飞来，它嗡嗡地穿梭在花丛间，腿上沾满了金黄的花粉。“风大哥，你虽然能送得很远，但你的方向太随意了。”蜜蜂一边说，一边精准地落在一朵油菜花上，将花粉从一朵花带到另一朵花，“我能把花粉送到最需要它的地方。”\n\n油菜花甲静静地站在田埂边，它看着风与蜜蜂的忙碌，心里想：“为什么一定要依靠别人呢？我自己也能完成这件事。”于是，当一阵微风吹过时，油菜花甲的花粉没有随风飘走，而是轻轻落在了自己的柱头上。它感到一阵满足，觉得自己找到了最省力的办法。\n\n然而，油菜花乙却有些着急。它的柱头一直空着，风突然停歇了，蜜蜂也飞走了，四周变得安静下来。油菜花乙的叶片微微颤抖，它望着天空，心里充满了期待。\n\n就在这时，一阵轻柔的晚风吹来，将远处一朵油菜花的花粉带到了油菜花乙的柱头上。那花粉轻轻落下，与柱头紧紧贴合。油菜花乙感到一阵温暖，它的花瓣缓缓合拢，开始孕育新的生命。\n\n几天后，油菜花甲和油菜花乙都结出了种子。油菜花甲的种子虽然饱满，但数量很少；而油菜花乙的种子却密密麻麻，在阳光下闪闪发光。\n\n“为什么你的种子这么多？”油菜花甲不解地问。\n\n油菜花乙微笑着说：“因为我的花粉来自远方，它带来了新的活力。而你，虽然省去了奔波，却失去了与外界交流的机会。”\n\n风再次吹过田野，蜜蜂也重新忙碌起来。油菜花们明白了：生命的延续，有时需要借助外力，有时需要依靠自己，但无论哪种方式，都需要精准的接触与接纳。而真正的智慧，在于懂得何时该等待，何时该行动。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "花粉从花药散放而落到雌蕊柱头上的过程",
+        "evidence": "将花粉从花药中卷起，洒向空中。那些细小的颗粒随风飘荡，有的落在泥土里，有的落在叶片上，只有少数幸运的，能落到另一朵花的柱头上。",
+        "narrative_anchor": "将花粉从花药中卷起，洒向空中"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "异花传粉",
+        "evidence": "将远处一朵油菜花的花粉带到了油菜花乙的柱头上",
+        "narrative_anchor": "将远处一朵油菜花的花粉带到了油菜花乙的柱头上"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "自花传粉",
+        "evidence": "油菜花甲的花粉没有随风飘走，而是轻轻落在了自己的柱头上",
+        "narrative_anchor": "轻轻落在了自己的柱头上"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "受精",
+        "evidence": "那花粉轻轻落下，与柱头紧紧贴合。油菜花乙感到一阵温暖，它的花瓣缓缓合拢，开始孕育新的生命。",
+        "narrative_anchor": "开始孕育新的生命"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从花粉散放到异花传粉",
+        "evidence": "将花粉从花药中卷起，洒向空中。那些细小的颗粒随风飘荡，……只有少数幸运的，能落到另一朵花的柱头上。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "能落到另一朵花的柱头上"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "从异花传粉到自花传粉（对比关系）",
+        "evidence": "油菜花甲的花粉没有随风飘走，而是轻轻落在了自己的柱头上",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "轻轻落在了自己的柱头上"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "从自花传粉到受精（对比结果）",
+        "evidence": "油菜花甲的种子虽然饱满，但数量很少；而油菜花乙的种子却密密麻麻",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "油菜花甲的种子虽然饱满，但数量很少"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "biology",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

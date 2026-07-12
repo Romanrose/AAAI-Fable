@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过红墨水实验和削开树皮观察，准确呈现了导管作为中空管道、从根到叶连续运输水分及无机盐的核心机制，无概念错误。",
+    "implicitness": "目标概念名称“导管”及其别名“水分在茎内的运输结构”均未在故事正文中出现，完全通过事件和观察隐含表达。",
+    "mapping_clarity": "故事中红墨水从根到叶脉变红、木质部孔洞的发现，清晰映射了导管的结构和功能，读者能自然联想到运输管道。",
+    "readability": "语言流畅自然，情节简单易懂，对话生动，适合目标年龄段阅读。",
+    "pedagogical_value": "故事通过实验和观察引导发现，有效传递了导管运输水分和无机盐的知识，并隐含了科学探究方法。",
+    "novelty": "故事采用了常见的红墨水实验和父子对话模式，情节较为典型，新颖性一般。"
+  },
+  "revision_suggestions": [
+    "可尝试使用更独特的场景或角色（如植物内部的微观世界）来增加新颖性。",
+    "可加入更多关于导管细胞结构（如无细胞质和细胞核）的隐含线索。"
+  ]
+}

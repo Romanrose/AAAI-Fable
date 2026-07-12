@@ -1,0 +1,107 @@
+{
+  "id": "math_1a_rjb_cpt11",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "加法的含义",
+    "aliases": [],
+    "forbidden_terms": [
+      "加法的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "表示两个数量合并在一起。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留形式定义条件和规则一致性。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免只有故事没有数学结构。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:16375",
+        "source_name": "数字1到5的认识",
+        "target_name": "加法的含义",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "leads_to",
+        "source_edge_id": null,
+        "source_name": null,
+        "target_name": null,
+        "relation_semantic_role": "causal_or_supportive_outcome"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "记录员、调度员和验收员在规则棋局前碰头。棋局已经摆开，分段记录册摊在桌上，封存箱和通行牌各就各位。可三个人面面相觑——表面流程启动了，但关键条件、顺序和结果还没互相核对过。\n\n记录员翻开第一页，指着入口处的条件牌说：“这些牌必须先在棋局里核对清楚。没有这一步，后面的登记没法开始。”调度员看了看，点点头，拿起笔在记录册上写下第一行。验收员在一旁等着。\n\n接着，调度员准备推动第二道转化环节。他对照着条件牌上留下的标记，把两段记录合并到同一行。验收员提醒他：“前后两步必须在记录里互相承接，不能跳。”调度员确认无误，才继续往下写。\n\n最后，验收员拿出通行牌，对照整条安排做结果验收记录。他逐行核对，确认每一步都按条件、过程和结果连上了，才在封存箱上贴上封条。\n\n可没过多久，调度员又跑回来，说自己试了另一种顺序——先推第二道转化，再回头核对入口条件。结果第二段记录写完了，前面的条件牌还是空的，验收员拿着通行牌愣在当场，没法对接。调度员不得不把写好的部分全部划掉，重新按入口条件、第二道转化、结果验收的顺序走一遍。\n\n这一次，记录员先确认条件牌是否齐全，调度员再按留下的条件继续推进第二步，验收员最后用结果验收记录核对整条安排。三段记录互相接上，封存箱终于能封口了。三个人看着彼此，都明白了——方向和顺序，一步都不能颠倒。",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口处的条件牌",
+        "narrative_anchor": "入口处的条件牌",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "第二道转化环节",
+        "narrative_anchor": "第二道转化环节",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "结果验收记录",
+        "narrative_anchor": "结果验收记录",
+        "confidence": 0.95
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先确认入口条件，再推动第二道转化",
+        "evidence": "先确认条件牌是否齐全，调度员再按留下的条件继续推进第二步",
+        "narrative_anchor": "先确认条件牌是否齐全，调度员再按留下的条件继续推进第二步",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先推动第二道转化，再做结果验收",
+        "evidence": "调度员再按留下的条件继续推进第二步，验收员最后用结果验收记录核对整条安排",
+        "narrative_anchor": "调度员再按留下的条件继续推进第二步，验收员最后用结果验收记录核对整条安排",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

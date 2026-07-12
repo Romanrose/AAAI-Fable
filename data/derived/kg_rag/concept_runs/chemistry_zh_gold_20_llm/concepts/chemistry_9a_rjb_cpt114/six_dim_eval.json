@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt114",
+  "target_concept": "工业制取氧气的方法",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了低温液化空气分馏和膜分离两种工业制氧方法，与概念定义完全一致。",
+    "implicitness": "目标概念名称未在故事中出现，通过工坊工艺隐喻物理分离过程，完全隐含。",
+    "mapping_clarity": "低温分馏和膜分离的步骤清晰对应，通过阿明的观察和解释明确映射到核心机制。",
+    "readability": "语言流畅，情节连贯，比喻自然，适合目标受众理解。",
+    "pedagogical_value": "通过两个工坊的对比，有效区分了物理分离与化学反应，并强调了守恒关系，教学价值高。",
+    "novelty": "账房和工坊的设定有一定创意，但整体结构较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个角色因误解而失败的例子，强化对物理分离与化学反应区别的认知。",
+    "可在结尾加入阿明应用新规则判断其他类似情境的简短描述。"
+  ],
+  "rule_findings": {
+    "story_token_count": 613,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确描述了低温液化空气分馏和膜分离两种工业制氧方法，与概念定义完全一致。",
+      "implicitness": "目标概念名称未在故事中出现，通过工坊工艺隐喻物理分离过程，完全隐含。",
+      "mapping_clarity": "低温分馏和膜分离的步骤清晰对应，通过阿明的观察和解释明确映射到核心机制。",
+      "readability": "语言流畅，情节连贯，比喻自然，适合目标受众理解。",
+      "pedagogical_value": "通过两个工坊的对比，有效区分了物理分离与化学反应，并强调了守恒关系，教学价值高。",
+      "novelty": "账房和工坊的设定有一定创意，但整体结构较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个角色因误解而失败的例子，强化对物理分离与化学反应区别的认知。",
+      "可在结尾加入阿明应用新规则判断其他类似情境的简短描述。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

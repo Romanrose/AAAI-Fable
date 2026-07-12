@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n4",
+    "weakest_edge_id": "e3",
+    "distinguishing_reason": "故事成功映射了入口条件核对（n1）及其与第二道转化环节（n2）的is_a关系（e1），以及顺序依赖（e2）和验证关系（e7），但完全遗漏了氧气（n4）、分解反应（n5）、分解过氧化氢制取氧气（n6）、加热氯酸钾制取氧气（n7）四个核心节点，以及对应的边e3、e4、e5、e6。这些缺失导致机制图的核心结构（多种制氧方法及其与分解反应的关系）未被体现，故事仅呈现了抽象的流程顺序，未覆盖化学知识的具体内容。相比之下，一个更好的实现应通过账房中的不同货物或操作来隐喻这些具体方法及其共同属性。"
+  },
+  "revision_instructions": [
+    "必须补充节点n4（氧气）、n5（分解反应）、n6（分解过氧化氢制取氧气）、n7（加热氯酸钾制取氧气）的映射，例如将氧气映射为“仓库中的关键货物”，将分解反应映射为“一种通用的拆分规则”，将两种制氧方法映射为“两种不同的拆分操作”。",
+    "必须补充边e3（氧气→实验室制取氧气的方法，requires）、e4（分解反应→实验室制取氧气的方法，requires）、e5（分解过氧化氢制取氧气→实验室制取氧气的方法，is_a）、e6（加热氯酸钾制取氧气→实验室制取氧气的方法，is_a）的映射，例如通过故事中调度员或验收员指出“这些操作都遵循同一个拆分规则”或“这些货物都需要先经过某种处理”来体现。",
+    "确保所有映射的节点和边在故事中有明确的证据，避免仅靠顺序关系替代类型语义。",
+    "当前故事长度695字符合要求，但需在补充内容后保持总字数在450-750字之间。"
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

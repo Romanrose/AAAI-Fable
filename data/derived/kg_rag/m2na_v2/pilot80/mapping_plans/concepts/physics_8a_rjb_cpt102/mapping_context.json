@@ -1,0 +1,285 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "physics_8a_rjb_cpt102",
+    "subject": "physics",
+    "canonical_name": "实像",
+    "aliases": [],
+    "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "实像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt102:definition",
+          "kg-node:physics_8a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "虚像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt82:definition",
+          "kg-node:physics_8a_rjb_cpt82:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "照相机成像：物体远离凸透镜时，凸透镜在底片或感光元件上形成缩小、倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt103:definition",
+          "kg-node:physics_8a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "投影仪成像：物体靠近凸透镜时，透镜在投影屏幕上形成放大、倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt104:definition",
+          "kg-node:physics_8a_rjb_cpt104:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "evidence",
+        "text": "自制模型照相机实验：凸透镜可成倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp25:conclusion",
+          "kg-node:physics_8a_rjb_exp25:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "evidence",
+        "text": "投影仪演示实验：投影仪利用凸透镜形成放大倒立的实像",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp26:conclusion",
+          "kg-node:physics_8a_rjb_exp26:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12419"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n4",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12420"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n5",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23048"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n6",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23049"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:19711"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "实像"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "physics_8a_rjb_cpt102",
+      "name": "实像",
+      "label": "Concept",
+      "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。"
+    },
+    "neighbors": [
+      {
+        "id": "physics_8a_rjb_cpt103",
+        "name": "照相机成像"
+      },
+      {
+        "id": "physics_8a_rjb_cpt104",
+        "name": "投影仪成像"
+      },
+      {
+        "id": "physics_8a_rjb_exp25",
+        "name": "自制模型照相机实验"
+      },
+      {
+        "id": "physics_8a_rjb_exp26",
+        "name": "投影仪演示实验"
+      },
+      {
+        "id": "physics_8a_rjb_cpt82",
+        "name": "虚像"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:12419",
+        "source_id": "physics_8a_rjb_cpt103",
+        "source_name": "照相机成像",
+        "target_id": "physics_8a_rjb_cpt102",
+        "target_name": "实像",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt103",
+        "neighbor_name": "照相机成像",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:12420",
+        "source_id": "physics_8a_rjb_cpt104",
+        "source_name": "投影仪成像",
+        "target_id": "physics_8a_rjb_cpt102",
+        "target_name": "实像",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_cpt104",
+        "neighbor_name": "投影仪成像",
+        "score": 1.2,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:23048",
+        "source_id": "physics_8a_rjb_exp25",
+        "source_name": "自制模型照相机实验",
+        "target_id": "physics_8a_rjb_cpt102",
+        "target_name": "实像",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_exp25",
+        "neighbor_name": "自制模型照相机实验",
+        "score": 0.95,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:23049",
+        "source_id": "physics_8a_rjb_exp26",
+        "source_name": "投影仪演示实验",
+        "target_id": "physics_8a_rjb_cpt102",
+        "target_name": "实像",
+        "relation": "verifies",
+        "relation_semantic_role": "evidence_verification",
+        "direction": "incoming",
+        "neighbor_id": "physics_8a_rjb_exp26",
+        "neighbor_name": "投影仪演示实验",
+        "score": 0.95,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:19711",
+        "source_id": "physics_8a_rjb_cpt102",
+        "source_name": "实像",
+        "target_id": "physics_8a_rjb_cpt82",
+        "target_name": "虚像",
+        "relation": "relates_to",
+        "relation_semantic_role": "association",
+        "direction": "outgoing",
+        "neighbor_id": "physics_8a_rjb_cpt82",
+        "neighbor_name": "虚像",
+        "score": 0.9,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 5,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "实像",
+      "definition": "光线通过凸透镜后实际会聚在一点形成的像，可被光屏承接，物体和像分居透镜两侧。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:12419] 照相机成像 --is_a--> 实像",
+      "[normalized:edge:12420] 投影仪成像 --is_a--> 实像",
+      "[normalized:edge:23048] 自制模型照相机实验 --verifies--> 实像",
+      "[normalized:edge:23049] 投影仪演示实验 --verifies--> 实像",
+      "[normalized:edge:19711] 实像 --relates_to--> 虚像"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:12419",
+    "normalized:edge:12420",
+    "normalized:edge:23048",
+    "normalized:edge:23049",
+    "normalized:edge:19711"
+  ],
+  "provenance": {
+    "seed_sha256": "baf2a0f1ad845714bea4981eec71e182178d63b9d9bd1d67b6ca98084a1c521f",
+    "retrieval_sha256": "12d73d3f7e934f1a013f6d4b8f27179817ab458a1a9e852e29815f2338a0812b",
+    "mechanism_record_sha256": "a9e43ad4c1866938d2f55a99946988d777ec1ff7491545e37dcdb7a6d00deb47"
+  }
+}

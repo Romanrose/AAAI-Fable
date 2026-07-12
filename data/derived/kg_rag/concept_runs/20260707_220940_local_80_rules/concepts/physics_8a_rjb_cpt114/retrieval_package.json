@@ -1,0 +1,62 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt114",
+    "label": "Concept",
+    "name": "近点",
+    "properties": {
+      "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+      "importance": "了解",
+      "retrieval_text": "近点\nConcept\n眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。\n了解"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17199",
+      "source": "physics_8a_rjb_cpt112",
+      "source_name": "眼睛调节",
+      "target": "physics_8a_rjb_cpt114",
+      "target_name": "近点",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:19715",
+      "source": "physics_8a_rjb_cpt114",
+      "source_name": "近点",
+      "target": "physics_8a_rjb_cpt115",
+      "target_name": "明视距离",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "近点",
+      "definition": "眼睛依靠调节能看清的最近点。正常眼近点约为10 cm。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:17199] 眼睛调节 --prerequisites_for--> 近点"
+    ],
+    "process_summary": [
+      "[normalized:edge:19715] 近点 --relates_to--> 明视距离"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 521,
+    "summary_chars": 293,
+    "path_chars": 0,
+    "retrieval_context_chars": 814
+  }
+}

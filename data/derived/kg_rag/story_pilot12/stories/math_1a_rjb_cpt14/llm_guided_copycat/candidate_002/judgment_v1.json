@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The mapping of n2 (正方体) to '帅' is creative but the story does not explicitly establish that '帅' is a special case of all chess pieces (is_a relation from n2 to n1). The story says '帅是特殊的棋子' but does not clarify that it is a subtype of the general set of pieces, which weakens the is_a relation. Edge e1 (n1 is_a n3) is mapped to '按兵种分类', but the story's classification is performed on the pieces, not that the set of pieces is itself a classification; the direction is preserved but the relation is not fully explicit."
+  },
+  "revision_instructions": [
+    "Strengthen the is_a relation for n2: explicitly state that '帅' is a type of chess piece, just as a cube is a special rectangular solid.",
+    "Clarify edge e1: show that the set of all pieces is the object of classification, not just that classification occurs.",
+    "Consider adding a sentence that directly links the concept of '控制区域' to the sum of all reachable squares, mirroring the definition of surface area."
+  ],
+  "final_status": "accept"
+}

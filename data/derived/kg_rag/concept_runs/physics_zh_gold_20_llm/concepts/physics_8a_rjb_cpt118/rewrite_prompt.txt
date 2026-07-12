@@ -1,0 +1,137 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "透镜焦度"
+  ],
+  "concept_card": {
+    "concept_id": "physics_8a_rjb_cpt118",
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "canonical_name": "透镜焦度",
+    "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+    "aliases": [],
+    "examples": [],
+    "teaching_level": "middle_school",
+    "concept_type": "mechanism",
+    "graph_context": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt116",
+          "label": "Concept",
+          "name": "近视眼及矫正",
+          "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt117",
+          "label": "Concept",
+          "name": "远视眼及矫正",
+          "definition": "由于折光不足或眼球过短，近处物体成像在视网膜后；用凸透镜矫正。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s4",
+          "label": "Section",
+          "name": "第四节 眼睛和眼镜",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "透镜焦度"
+    ],
+    "subject_constraints_zh": [
+      "保留变量之间的关系。",
+      "避免把自然规律写成角色主观意志。",
+      "保留方向、大小、条件变化。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt118",
+    "concept_id": "physics_8a_rjb_cpt118",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt118",
+      "label": "Concept",
+      "name": "透镜焦度",
+      "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "透镜焦度"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}
+
+Rewrite constraints:
+
+- Keep the output in Simplified Chinese.
+
+- Fix the issues from six_dim_eval.
+
+- Do not reveal forbidden terms in the story body.
+
+- Preserve the concept mapping.
+
+Previous evaluation JSON:
+{'concept_id': 'physics_8a_rjb_cpt118', 'target_concept': '透镜焦度', 'scores': {'faithfulness': 3, 'implicitness': 4, 'mapping_clarity': 3, 'readability': 5, 'pedagogical_value': 3, 'novelty': 4}, 'weighted_overall': 3.45, 'hard_flags': {'hard_leakage': False, 'soft_leakage': False, 'title_leakage': False, 'concept_contradiction': False, 'unmapped_core_mechanism': False, 'template_like': False}, 'rationales': {'faithfulness': '故事通过透镜离窗户远近影响光斑大小和亮度，间接表达了焦距变化影响折光本领，但未明确体现焦度是焦距的倒数这一数学关系，且窗外介质类比透镜不够精确。', 'implicitness': '目标概念名称和定义均未直接出现，通过事件链隐含了折光本领与距离的关系，符合隐含性要求。', 'mapping_clarity': '透镜与窗户的类比基本清晰，但窗外介质（雾、雨）作为无数小透镜的比喻可能使核心机制（焦距倒数）的映射变得模糊。', 'readability': '故事语言流畅，情节自然，人物动机合理，易于理解，可读性高。', 'pedagogical_value': '故事能引发对光线折射与距离关系的思考，但未直接指向焦度的倒数关系，教学价值中等。', 'novelty': '用钟楼窗户和天气变化来隐喻透镜焦度，视角较新颖，避免了常见的光学实验场景。'}, 'revision_suggestions': ['在故事中明确透镜离窗户的距离与光斑大小的反比关系，并暗示这种关系可用倒数描述。', '减少窗外介质作为透镜的比喻，直接聚焦于单一透镜的焦距变化。', "在结尾处用阿明的记录总结出'折光本领与距离成反比'的规律，更贴近焦度定义。"], 'rule_findings': {'story_token_count': 550, 'leaked_terms': [], 'title_leaks': [], 'soft_leakage_terms': [], 'alignment_roles_present': ['target concept', 'core mechanism', 'subject constraints'], 'missing_alignment_roles': ['prerequisites', 'related concepts', 'outcomes', 'experiments', 'exercises'], 'template_hits': [], 'template_similarity': 0.0}, 'judge_response': {'scores': {'faithfulness': 3, 'implicitness': 4, 'mapping_clarity': 3, 'readability': 5, 'pedagogical_value': 3, 'novelty': 4}, 'hard_flags': {'hard_leakage': False, 'soft_leakage': False, 'title_leakage': False, 'concept_contradiction': False, 'unmapped_core_mechanism': False, 'template_like': False}, 'rationales': {'faithfulness': '故事通过透镜离窗户远近影响光斑大小和亮度，间接表达了焦距变化影响折光本领，但未明确体现焦度是焦距的倒数这一数学关系，且窗外介质类比透镜不够精确。', 'implicitness': '目标概念名称和定义均未直接出现，通过事件链隐含了折光本领与距离的关系，符合隐含性要求。', 'mapping_clarity': '透镜与窗户的类比基本清晰，但窗外介质（雾、雨）作为无数小透镜的比喻可能使核心机制（焦距倒数）的映射变得模糊。', 'readability': '故事语言流畅，情节自然，人物动机合理，易于理解，可读性高。', 'pedagogical_value': '故事能引发对光线折射与距离关系的思考，但未直接指向焦度的倒数关系，教学价值中等。', 'novelty': '用钟楼窗户和天气变化来隐喻透镜焦度，视角较新颖，避免了常见的光学实验场景。'}, 'revision_suggestions': ['在故事中明确透镜离窗户的距离与光斑大小的反比关系，并暗示这种关系可用倒数描述。', '减少窗外介质作为透镜的比喻，直接聚焦于单一透镜的焦距变化。', "在结尾处用阿明的记录总结出'折光本领与距离成反比'的规律，更贴近焦度定义。"]}, 'final_status': 'revise', 'mode': 'llm'}

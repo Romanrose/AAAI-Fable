@@ -1,0 +1,124 @@
+{
+  "task": "Write one Simplified Chinese fable for the target concept.",
+  "language": "zh-CN",
+  "hard_requirements": [
+    "The story body must be Simplified Chinese.",
+    "Do not directly mention the target concept name or forbidden terms in the story body.",
+    "Do not write an expository science explanation.",
+    "Preserve the concept mechanism and the subject constraints.",
+    "Use 450-800 Chinese characters for the story body.",
+    "After the story, output one JSON alignment table fenced in ```json."
+  ],
+  "forbidden_terms_zh": [
+    "7的加减法"
+  ],
+  "concept_card": {
+    "concept_id": "math_1a_rjb_cpt26",
+    "subject": "math",
+    "story_language": "zh-CN",
+    "canonical_name": "7的加减法",
+    "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+    "aliases": [],
+    "examples": [],
+    "teaching_level": "middle_school",
+    "concept_type": "relation",
+    "graph_context": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt24",
+          "label": "Concept",
+          "name": "数字7的认识",
+          "definition": "通过数物体、读写数字等方式认识数字7，理解7表示的数量。"
+        },
+        {
+          "id": "math_1a_rjb_cpt28",
+          "label": "Concept",
+          "name": "分与合（拆分与组合）",
+          "definition": "把一个数分成两个部分或由两个部分合成一个数，如“7可以分成1和6、2和5、3和4”。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch5_s1",
+          "label": "Section",
+          "name": "6和7",
+          "definition": ""
+        }
+      ]
+    },
+    "core_mechanism_zh": [],
+    "must_preserve_zh": [],
+    "common_misconceptions_zh": [],
+    "forbidden_terms_zh": [
+      "7的加减法"
+    ],
+    "subject_constraints_zh": [
+      "保留形式定义条件和规则一致性。",
+      "避免只有故事没有数学结构。",
+      "避免把数学概念道德化。"
+    ],
+    "generation_notes_zh": [],
+    "data_quality": {
+      "text_quality": "good",
+      "context_quality": "medium",
+      "needs_llm_enrichment": false,
+      "generation_priority": "gold"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt26",
+    "concept_id": "math_1a_rjb_cpt26",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt26",
+      "label": "Concept",
+      "name": "7的加减法",
+      "definition": "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "7的加减法"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "掌握所有得数是7或从7中减去的加减法，如5+2=7、7-5=2等。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "output_format": "标题：...\n\n故事正文...\n\n```json\n[{\"concept_role\":\"...\",\"story_evidence\":\"...\"}]\n```"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "physics_8a_rjb_cpt105",
+  "method": "con2fable",
+  "concept": {
+    "name": "放大镜成像",
+    "aliases": [],
+    "forbidden_terms": [
+      "放大镜成像"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：凸透镜",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：虚像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17245"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12421"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "园丁在温室里照料着各种幼苗。这天，他搬来一个透明圆鼓的玻璃瓶，准备给一株矮小的豆苗换个位置。\n\n他把豆苗移到玻璃瓶的正后方，让豆苗紧贴着瓶壁。透过圆鼓鼓的玻璃，园丁惊奇地发现，那株原本瘦弱的豆苗竟然变得又大又正，叶片舒展，茎秆粗壮，看起来就像一棵壮实的植株。\n\n“这豆苗怎么突然长得这么好了？”园丁又惊又喜，伸手想去摸摸那放大的叶片。可他的手指却直接穿过了那片看起来肥厚的叶子，只碰到冰冷的玻璃和后面真实的、依然矮小的豆苗。\n\n园丁愣住了。他缩回手，又仔细看了看：透过玻璃，豆苗还是那副高大挺拔的样子；可一移开视线，直接看豆苗，它又恢复了原样。\n\n他明白了——那放大的影像并非真实存在，而是这个圆鼓鼓的玻璃瓶制造出来的光学幻象。园丁把豆苗从瓶后移开，放大的影像立刻消失了，豆苗还是那株矮小的豆苗。\n\n园丁望着手中的玻璃瓶，若有所思：原来，只要让物体靠近这种特定形状的玻璃，就能看到放大的假象，可那假象再逼真，也终究是摸不到的。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "物体位于焦点以内时，凸透镜形成放大、正立的虚像",
+        "evidence": "那株原本瘦弱的豆苗竟然变得又大又正",
+        "narrative_anchor": "又大又正"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "凸透镜",
+        "evidence": "透明圆鼓的玻璃瓶",
+        "narrative_anchor": "透明圆鼓的玻璃瓶"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "虚像",
+        "evidence": "那放大的影像并非真实存在",
+        "narrative_anchor": "并非真实存在"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "使用凸透镜后产生放大正立虚像",
+        "evidence": "他把豆苗移到玻璃瓶的正后方...透过圆鼓鼓的玻璃，园丁惊奇地发现，那株原本瘦弱的豆苗竟然变得又大又正",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m1",
+        "direction_preserved": true,
+        "narrative_anchor": "透过圆鼓鼓的玻璃...变得又大又正"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "放大正立虚像属于虚像",
+        "evidence": "那放大的影像并非真实存在",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "放大的影像并非真实存在"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "physics",
+    "story_language": "zh-CN",
+    "concept_type": "mechanism",
+    "generation_priority": "gold"
+  }
+}

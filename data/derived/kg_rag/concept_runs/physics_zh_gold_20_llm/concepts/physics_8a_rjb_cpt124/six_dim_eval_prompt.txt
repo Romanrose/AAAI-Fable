@@ -1,0 +1,246 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "质量",
+  "concept_id": "physics_8a_rjb_cpt124",
+  "concept_definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt124",
+    "质量"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt124",
+      "label": "Concept",
+      "name": "质量",
+      "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "质量\n物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt129",
+          "label": "Concept",
+          "name": "密度",
+          "definition": "物质的质量与体积之比，通常用公式 ρ = m / V 表示。"
+        },
+        {
+          "id": "physics_bx1_rjb_cpt63",
+          "label": "Concept",
+          "name": "加速度与质量的反比关系",
+          "definition": "在力不变时，加速度 a 与质量 m 成反比，即 a 与 1/m 成正比。"
+        },
+        {
+          "id": "physics_8b_rjb_cpt24",
+          "label": "Concept",
+          "name": "惯性",
+          "definition": "物体保持原来运动状态（静止或匀速直线运动）不变的性质。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt125",
+          "label": "Concept",
+          "name": "质量单位",
+          "definition": "质量的基本单位是千克，常用单位还有克、毫克、吨。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt137",
+          "label": "Concept",
+          "name": "质量测量",
+          "definition": "使用天平或台秤测量物体质量的方法。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt126",
+          "label": "Concept",
+          "name": "质量守恒",
+          "definition": "物体的质量不随形状、物态和位置改变而改变。"
+        },
+        {
+          "id": "physics_bx1_rjb_cpt21",
+          "label": "Concept",
+          "name": "加速度",
+          "definition": "描述物体速度变化快慢的物理量，也可说是描述物体运动状态变化快慢的物理量。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch6_s1",
+          "label": "Section",
+          "name": "第一节 质量",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_ch6_s3",
+          "label": "Section",
+          "name": "第三节 测量物质的密度",
+          "definition": ""
+        },
+        {
+          "id": "physics_8a_rjb_ch6_s4",
+          "label": "Section",
+          "name": "第四节 密度与社会生活",
+          "definition": ""
+        },
+        {
+          "id": "physics_bx1_rjb_ch4_s1",
+          "label": "Section",
+          "name": "第一节 牛顿第一定律",
+          "definition": ""
+        },
+        {
+          "id": "physics_bx1_rjb_ch4_s2",
+          "label": "Section",
+          "name": "第二节 实验:探究加速度与力、质量的关系",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt124",
+    "concept_id": "physics_8a_rjb_cpt124",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt124",
+      "label": "Concept",
+      "name": "质量",
+      "definition": "物体所含物质多少的量度，质量大的物体运动状态不容易改变。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "质量"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "物体所含物质多少的量度，质量大的物体运动状态不容易改变。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "大锤比小锤大一圈，里面装的铜料更多，所以运动状态不容易改变。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小乐用同样的力气拉动绳索，大锤摆动得慢，小锤摆动得快；用更大力气拉大锤，大锤摆动快了一些，但依然比小锤慢。这体现了物体所含物质多少的量度，以及质量大的物体运动状态不容易改变。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中保留了变量之间的关系：铜锤所含物质的多少与运动状态改变难易程度的关系；没有把自然规律写成角色主观意志；保留了方向、大小、条件变化：小乐用不同力气拉动，观察不同铜锤的摆动速度变化。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼里的秘密\n\n小镇中心有一座古老的钟楼，每到整点，大钟就会发出洪亮的报时声。小乐是钟楼的守护员，他的工作就是每天检查大钟是否准时。\n\n钟楼里有两个巨大的铜锤，一个叫“大锤”，一个叫“小锤”。大锤看起来比小锤大一圈，但小乐从没仔细比较过它们。每天早晨，小乐都会拉动绳索，让两个铜锤同时摆动，敲响大钟。\n\n奇怪的是，每次小乐用同样的力气拉动绳索，大锤总是慢悠悠地摆动，而小锤却摆动得又快又灵活。小乐心想：“难道大锤偷懒了？还是它生锈了？”\n\n一天，小乐决定做个实验。他先单独拉动大锤的绳索，发现大锤摆动得很慢，需要很大的力气才能让它动起来。接着，他拉动小锤的绳索，小锤一下子就摆动起来，速度快多了。小乐又试着用更大的力气拉动大锤，大锤虽然摆动得快了一些，但依然比小锤慢。\n\n小乐很困惑，他找来老师傅请教。老师傅笑着说：“你注意到没有，大锤比小锤大一圈，它里面含的铜更多，所以更难改变它的运动状态。就像一匹马拉不动的大车，需要两匹甚至三匹马来拉才行。”\n\n小乐恍然大悟。他回到钟楼，仔细观察两个铜锤。他发现，大锤确实比小锤大，里面装的铜料更多。原来，铜锤本身所含物质的多少，决定了它运动状态改变的难易程度。含物质多的铜锤，运动状态不容易改变；含物质少的铜锤，运动状态容易改变。\n\n从此，小乐明白了钟楼的秘密。他不再抱怨大锤偷懒，而是根据每个铜锤的特性来调整拉绳的力度。钟楼的报时声变得更加准时，小镇的人们都夸小乐是个好守护员。",
+  "rule_findings": {
+    "story_token_count": 530,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

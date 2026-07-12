@@ -1,0 +1,95 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老工匠传授技艺的故事",
+  "characters": [
+    "老工匠",
+    "学徒"
+  ],
+  "objects": [
+    "秘制陶土配方",
+    "普通陶土",
+    "烧制失败的陶器",
+    "烧制成功的陶器"
+  ],
+  "conflict": "学徒无法独立烧制出合格的陶器，老工匠的秘方似乎失效了。",
+  "event_chain": [
+    "老工匠拥有一种秘制陶土配方，能显著提高陶器烧制成功率。",
+    "学徒使用普通陶土烧制陶器，经常失败。",
+    "老工匠将秘制陶土混入学徒的普通陶土中，学徒烧制成功。",
+    "老工匠再次将秘制陶土混入另一批普通陶土中，学徒再次烧制成功。",
+    "学徒发现，秘制陶土在烧制前后质量和性质基本不变，仍可回收使用。",
+    "学徒认识到，秘制陶土是一种催化剂，能帮助普通陶土烧制成功，而自身不变。"
+  ],
+  "turning_point": "学徒发现秘制陶土在烧制前后质量和性质基本不变，仍可回收使用。",
+  "resolution_state": "学徒理解了秘制陶土的催化作用，并掌握了如何使用它来稳定烧制陶器。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老工匠使用秘制陶土帮助学徒烧制陶器的过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "秘制陶土配方",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "学徒第一次使用混有秘制陶土的普通陶土烧制成功",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "学徒第二次使用混有秘制陶土的普通陶土烧制成功",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "秘制陶土在烧制前后质量和性质基本不变，仍可回收使用",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老工匠使用秘制陶土帮助学徒烧制陶器的过程 是 秘制陶土配方 的一种应用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "学徒第一次使用混有秘制陶土的普通陶土烧制成功 验证了 老工匠使用秘制陶土帮助学徒烧制陶器的过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "学徒第二次使用混有秘制陶土的普通陶土烧制成功 验证了 老工匠使用秘制陶土帮助学徒烧制陶器的过程",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "秘制陶土在烧制前后质量和性质基本不变，仍可回收使用 使能了 老工匠使用秘制陶土帮助学徒烧制陶器的过程",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中秘制陶土的角色明确为催化剂，而非反应物。",
+    "避免使用'二氧化锰'、'催化'等化学术语。",
+    "注意故事中秘制陶土在烧制前后性质不变，与催化剂特性一致。"
+  ],
+  "mapping_context_sha256": "b91c571ec2dc444c003cba416841f6873c0c58c656f99e0e0738a6cb696641a9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "f0f7542054c8c4dd27f367f8318e10745e70684618cd78cb680b868d76bc9fbf"
+  }
+}

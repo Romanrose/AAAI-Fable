@@ -1,0 +1,190 @@
+{
+  "id": "math_1a_rjb_cpt15",
+  "method": "con2fable",
+  "concept": {
+    "name": "正方体",
+    "aliases": [
+      "立方体"
+    ],
+    "forbidden_terms": [
+      "正方体",
+      "立方体"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：按形状分类",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：长方体",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：正方体体积公式",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：拼搭立体图形",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：长方体",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16340"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_16339"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12134"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12133"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_19306"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "小砖是工地上最年轻的学徒，他总喜欢在休息时间摆弄那些废弃的砖块。这天，他发现角落里堆着六块完全相同的正方形砖块，每块砖的每个面都是同样大小的正方形。\n\n“要是把它们拼在一起，会变成什么样子呢？”小砖蹲下来，开始尝试。他把四块砖围成一个圈，又在上面盖了一块，下面垫了一块。很快，一个所有棱边都一样长的立体结构出现在他面前。这个结构方方正正，六个面都是完全一样的正方形，每一根棱的长度都分毫不差。\n\n小砖兴奋地跑去喊工头老李：“老李师傅，您快来看！我拼出了一个特别规整的东西！”\n\n老李走过来，皱着眉头打量了一番：“这是什么？我们工地上只有标准的长方体砖墙、圆柱体柱子，你这东西四不像，没法归类。拆了吧，别耽误干活。”\n\n小砖不甘心，又去找结构工程师王工。王工拿出卷尺，仔细测量了这个立体结构的长、宽、高，惊讶地发现三个尺寸竟然完全相等。“有意思，”王工说，“虽然它看起来特殊，但我们可以用计算长方体体积的方法来算它的体积。”王工很快推导出了公式，证明这个结构完全可以用数学精确描述。\n\n这时，负责拼搭复杂图形的张师傅也凑了过来。他搬来几个同样的结构，试着把它们组合在一起。神奇的事情发生了——这些结构可以严丝合缝地拼成更大的立体图形，就像积木一样完美契合。\n\n“我明白了！”王工拍手说道，“这个结构其实就是长方体家族里一个特殊的成员——它的长、宽、高都相等，所以六个面都是完全相同的正方形。”\n\n老李听完，重新打量起那个结构，终于点了点头：“原来如此，它不是异类，而是长方体的一种特殊形式。既然有数学依据，又能拼搭实用，那就把它纳入工地的标准构件库吧。”\n\n小砖因为这个发现获得了工地的创新奖。从此，工地上多了一种既标准又特殊的构件，而小砖也明白了一个道理：看似与众不同的东西，往往只是普遍规律中的一个特例，只要找到正确的方法去理解和验证，就能发现它独特的价值。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "由6个完全相同的正方形围成的立体图形，所有棱长度都相等，是长宽高都相等的长方体",
+        "evidence": "六块完全相同的正方形砖块……所有棱边都一样长的立体结构……六个面都是完全一样的正方形，每一根棱的长度都分毫不差",
+        "narrative_anchor": "所有棱边都一样长的立体结构"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "按形状分类",
+        "evidence": "没法归类",
+        "narrative_anchor": "没法归类"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "长方体",
+        "evidence": "这个结构其实就是长方体家族里一个特殊的成员",
+        "narrative_anchor": "长方体家族里一个特殊的成员"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "正方体体积公式",
+        "evidence": "可以用计算长方体体积的方法来算它的体积……推导出了公式",
+        "narrative_anchor": "推导出了公式"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "拼搭立体图形",
+        "evidence": "搬来几个同样的结构，试着把它们组合在一起……可以严丝合缝地拼成更大的立体图形",
+        "narrative_anchor": "严丝合缝地拼成更大的立体图形"
+      },
+      {
+        "concept_node_id": "m6",
+        "narrative_element": "长方体",
+        "evidence": "这个结构其实就是长方体家族里一个特殊的成员",
+        "narrative_anchor": "长方体家族里一个特殊的成员"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "从定义到分类需求",
+        "evidence": "小砖拼出结构后，老李说没法归类",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "没法归类"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "从分类需求到长方体类别",
+        "evidence": "王工说它是长方体家族里一个特殊的成员",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "长方体家族里一个特殊的成员"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "从长方体类别到体积公式",
+        "evidence": "可以用计算长方体体积的方法来算它的体积",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "可以用计算长方体体积的方法来算它的体积"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "从体积公式到拼搭图形",
+        "evidence": "推导出了公式……搬来几个同样的结构，试着把它们组合在一起",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "推导出了公式"
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "从拼搭图形到长方体关系",
+        "evidence": "可以严丝合缝地拼成更大的立体图形……这个结构其实就是长方体家族里一个特殊的成员",
+        "narrative_source_concept_node_id": "m5",
+        "narrative_target_concept_node_id": "m6",
+        "direction_preserved": true,
+        "narrative_anchor": "长方体家族里一个特殊的成员"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "math",
+    "story_language": "zh-CN",
+    "concept_type": "relation",
+    "generation_priority": "gold"
+  }
+}

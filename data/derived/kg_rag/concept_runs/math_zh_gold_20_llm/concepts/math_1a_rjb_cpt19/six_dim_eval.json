@@ -1,0 +1,87 @@
+{
+  "concept_id": "math_1a_rjb_cpt19",
+  "target_concept": "数字6和7的认识",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "weighted_overall": 4.4,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过小猴子数石头、比较第六块与第七块对桥的稳定性影响，准确体现了认识数字6和7的核心机制（数物体、比较大小、位置顺序），无概念矛盾。",
+    "implicitness": "故事未直接提及‘数字6和7的认识’或任何禁止术语，完全通过情节隐含地传递数学概念，符合隐含性要求。",
+    "mapping_clarity": "数石头对应数物体，桥的晃动对应比较大小（多一块与多两块的区别），位置顺序（第6块、第7块）清晰映射，但写数字这一维度未体现，略有不足。",
+    "readability": "语言流畅，情节连贯，角色生动，适合目标年龄段阅读，无冗余或晦涩表达。",
+    "pedagogical_value": "通过重复观察和比较，引导学生理解6和7与5的关系及顺序，教学价值较高，但缺少写数字环节，可进一步丰富。",
+    "novelty": "以桥的稳定性作为比较大小的载体有一定创意，但‘数石头过桥’的设定在儿童故事中较常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "增加小猴子用树枝在地上画数字6和7的情节，以覆盖‘写数字’这一维度。",
+    "可加入小动物们一起数不同数量的水果（如6个苹果、7个梨）来强化数物体的多样性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 657,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 4,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过小猴子数石头、比较第六块与第七块对桥的稳定性影响，准确体现了认识数字6和7的核心机制（数物体、比较大小、位置顺序），无概念矛盾。",
+      "implicitness": "故事未直接提及‘数字6和7的认识’或任何禁止术语，完全通过情节隐含地传递数学概念，符合隐含性要求。",
+      "mapping_clarity": "数石头对应数物体，桥的晃动对应比较大小（多一块与多两块的区别），位置顺序（第6块、第7块）清晰映射，但写数字这一维度未体现，略有不足。",
+      "readability": "语言流畅，情节连贯，角色生动，适合目标年龄段阅读，无冗余或晦涩表达。",
+      "pedagogical_value": "通过重复观察和比较，引导学生理解6和7与5的关系及顺序，教学价值较高，但缺少写数字环节，可进一步丰富。",
+      "novelty": "以桥的稳定性作为比较大小的载体有一定创意，但‘数石头过桥’的设定在儿童故事中较常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "增加小猴子用树枝在地上画数字6和7的情节，以覆盖‘写数字’这一维度。",
+      "可加入小动物们一起数不同数量的水果（如6个苹果、7个梨）来强化数物体的多样性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

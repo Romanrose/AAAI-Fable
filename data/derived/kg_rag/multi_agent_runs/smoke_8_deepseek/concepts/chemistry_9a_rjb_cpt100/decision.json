@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001的故事以账房学徒和老先生的互动展开，通过旧账本泛黄、霉斑等细节自然隐喻化学变化中的缓慢氧化现象，未直接泄露目标概念。故事覆盖了机制节点（如观察变化、记录现象）和机制边（如新旧账本的对比、时间推移导致的变化），且对齐证据可信（如纸张颜色和霉斑大小的记录）。中文叙述流畅自然，无模板化痕迹，符合所有优先要求。",
+    "risk_notes": [
+      "故事中‘灰绿色斑点’可能被部分读者直接联想到霉变，但未明确指向化学概念，风险较低。",
+      "需确保后续扩展不引入‘氧化’等术语，保持隐喻的完整性。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

@@ -1,0 +1,38 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 2
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "The story maps the 'is_a' relation (e2: n3 is_a n2) to a sequential step ('第二道转化环节'), which conflates hierarchical classification with temporal order. A better realization would use a classification metaphor (e.g., '第三道环节属于第二道转化环节的一种') to preserve the 'is_a' semantics. Edge e4 (n5 part_of n2) is mapped to '他把两份相关记录放在一起比较', which is a generic comparison action that does not convey the 'part_of' relation (oxygen is part of oxidation). This is observably worse than a mapping that shows oxygen as a necessary component (e.g., '氧气是氧化反应的一部分')."
+  },
+  "revision_instructions": [
+    "Revise edge mappings for e2, e3, e4, e5, e6, e7, e8, e9, e10 to use distinct story relations that match the mechanism relation type (is_a, part_of, requires, produces, relates_to) instead of generic '比较' or sequential steps.",
+    "Ensure that 'is_a' relations (e1, e2, e3) are realized as classification or subsumption (e.g., 'X属于Y'), not as sequential steps.",
+    "Ensure that 'part_of' relations (e4, e5, e6) are realized as composition or component inclusion (e.g., 'X是Y的一部分'), not as comparison.",
+    "Ensure that 'requires' (e7) is realized as a prerequisite condition (e.g., '需要前置条件牌'), not as comparison.",
+    "Ensure that 'produces' (e8, e9) is realized as a causal outcome (e.g., '导致...结果'), not as comparison.",
+    "Ensure that 'relates_to' (e10) is realized as a correlation or association (e.g., '与...有关'), not as comparison.",
+    "The story currently uses '他把两份相关记录放在一起比较' for 7 different edges, which fails to distinguish relation types. Each edge must have a unique story phrase that reflects its specific relation."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

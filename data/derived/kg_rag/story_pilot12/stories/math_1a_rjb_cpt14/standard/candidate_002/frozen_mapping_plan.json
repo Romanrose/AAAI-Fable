@@ -1,0 +1,98 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "中国古代建筑中的榫卯结构",
+  "characters": [
+    "木匠师傅",
+    "学徒"
+  ],
+  "objects": [
+    "标准榫卯构件（长方体形状的木块）",
+    "特殊正方体榫卯构件",
+    "木工分类架",
+    "拼装模型",
+    "表面打磨工具",
+    "体积测量工具"
+  ],
+  "conflict": "学徒不明白为什么标准榫卯构件（长方体）是木工的基础，而特殊正方体构件只是它的一个特例，以及为什么必须先学会标准构件才能进行后续的分类、拼装、打磨和测量。",
+  "event_chain": [
+    "木匠师傅向学徒展示标准榫卯构件（长方体形状的木块），并说明其有6个面，相对的面相同，12条棱，8个顶点。",
+    "学徒注意到有一个特殊正方体构件，所有面都是正方形，棱长相等。",
+    "师傅解释特殊正方体构件是标准榫卯构件的一种特殊情况（长宽高相等）。",
+    "师傅将标准榫卯构件放入木工分类架中，说明它属于按形状分类的范畴。",
+    "学徒用标准榫卯构件进行拼装模型，发现它能灵活组合成各种结构。",
+    "学徒用表面打磨工具处理标准榫卯构件，学习表面积的概念。",
+    "学徒用体积测量工具计算标准榫卯构件的体积，掌握体积公式。"
+  ],
+  "turning_point": "学徒意识到特殊正方体构件虽然完美，但标准榫卯构件才是理解所有木工分类、拼装、打磨和测量的基础，从而主动从标准构件开始学习。",
+  "resolution_state": "学徒从标准榫卯构件入手，逐步掌握了分类、拼装、打磨和测量等技能，并理解了特殊正方体构件与标准构件的关系。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "标准榫卯构件（长方体形状的木块）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "特殊正方体榫卯构件",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "木工分类架",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "拼装模型",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "表面打磨工具",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "体积测量工具",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "标准榫卯构件被放入木工分类架中",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "特殊正方体构件是标准榫卯构件的一种特殊情况",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "标准榫卯构件与特殊正方体构件有关联",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "标准榫卯构件使得表面打磨成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "标准榫卯构件使得体积测量成为可能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "标准榫卯构件使得拼装模型成为可能",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'长方体'、'正方体'、'表面积'、'体积公式'等目标概念术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如'按形状分类'）作为因果机制。",
+    "确保故事载体来自同一源域（榫卯结构），不使用无关比喻。"
+  ]
+}

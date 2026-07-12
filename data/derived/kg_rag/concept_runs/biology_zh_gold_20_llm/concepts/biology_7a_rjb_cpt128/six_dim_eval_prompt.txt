@@ -1,0 +1,199 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "蒸腾作用的意义",
+  "concept_id": "biology_7a_rjb_cpt128",
+  "concept_definition": "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt128",
+    "蒸腾作用的意义"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt128",
+      "label": "Concept",
+      "name": "蒸腾作用的意义",
+      "definition": "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "蒸腾作用的意义\n蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt122",
+          "label": "Concept",
+          "name": "导管",
+          "definition": "植物体内运输水分的结构，属于输导组织；由许多长形、管状细胞组成，细胞没有细胞质和细胞核，上下细胞间细胞壁消失形成中空管道；在根、茎、叶脉中相互连接形成运输管网，运输水分及溶解在水中的无机盐。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt124",
+          "label": "Concept",
+          "name": "蒸腾作用",
+          "definition": "水分从活的植物体表面以水蒸气状态散失到大气中的过程；主要通过叶片进行。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe19",
+          "label": "Exercise",
+          "name": "判断：植物吸收的水分，通过蒸腾作用大量散失掉了，这对植物来说是一种浪费。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s3",
+          "label": "Section",
+          "name": "第三章 绿色植物与生物圈的水循环",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt128",
+    "concept_id": "biology_7a_rjb_cpt128",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt128",
+      "label": "Concept",
+      "name": "蒸腾作用的意义",
+      "definition": "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "蒸腾作用的意义"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "蒸腾作用能拉动水分与无机盐在体内的运输，保证各组织器官对水和无机盐的需要；并能降低叶片表面温度，避免植物因气温过高被灼伤。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "蒸腾作用的意义",
+      "story_evidence": "小树苗通过叶片散失水汽，拉动水分从根部向上运输，同时降低叶片温度，避免被灼伤。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "水汽从叶子背面小孔跑出，带走热量，同时拉动根吸收的水分向上运输，保证整棵树获得水分和无机盐。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事通过老园丁和小孙子的对话解释现象，避免目的论（如‘为了’），保留条件（炎热天气）、过程（水汽散失）和结果（降温、运输）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃的秘密\n\n老园丁在园圃里种下一排小树苗，每天清晨都提着水壶给它们浇水。小树苗们喝足了水，叶子绿油油的，在阳光下闪闪发光。\n\n园圃里还有一座小木屋，木屋的窗台上摆着一盆仙人掌。老园丁很少给仙人掌浇水，可它依然活得很好。小树苗们很羡慕，问仙人掌：“你为什么不用天天喝水也能长大？”仙人掌笑了笑，没有回答。\n\n夏天到了，太阳火辣辣地烤着大地。小树苗们觉得口渴极了，叶子开始打卷。老园丁赶紧给它们浇水，可水刚浇下去，小树苗们就感觉一股凉意从根部升上来，叶子慢慢舒展开来。它们发现，水顺着根、茎、叶脉一路向上跑，就像有一只看不见的手在拉它们。\n\n有一天，老园丁的小孙子跑来玩，他看见小树苗的叶子上挂着水珠，好奇地问：“爷爷，小树苗在哭吗？”老园丁摇摇头说：“不是哭，那是它们在呼吸呢。”小孙子更奇怪了：“呼吸？我怎么看不见？”老园丁指着叶子说：“你看，叶子背面有很多小孔，水汽就从那里跑出来，就像我们出汗一样。”\n\n小孙子蹲下来，用手摸了摸叶子，果然感觉凉凉的。他问：“那它们为什么要出汗呢？”老园丁说：“因为太阳晒得太热了，水汽跑出来能带走热量，就像我们出汗后会觉得凉快一样。而且，水汽跑出来的时候，还会把根吸上来的水往上拉，这样整棵树都能喝到水。”\n\n小孙子恍然大悟：“原来小树苗出汗不是为了哭，而是为了让自己凉快，还能让水跑到最高的叶子上！”老园丁笑着点点头。\n\n从那以后，小孙子每天都会来看看小树苗。他发现，天气越热，小树苗的叶子就越凉快，水也跑得越快。他明白了，园圃里的每一片叶子都在默默工作，让整棵树活得更健康。",
+  "rule_findings": {
+    "story_token_count": 560,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "蒸腾作用的意义",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

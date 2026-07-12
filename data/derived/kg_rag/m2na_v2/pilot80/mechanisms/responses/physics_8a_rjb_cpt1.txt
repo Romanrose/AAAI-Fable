@@ -1,0 +1,93 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "长度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt1:definition",
+          "kg-node:physics_8a_rjb_cpt1:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "长度单位（米及其倍数、子倍数）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt2:definition",
+          "kg-node:physics_8a_rjb_cpt2:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "用刻度尺测量长度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp1:process",
+          "kg-node:physics_8a_rjb_exp1:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "rule",
+        "text": "使用刻度尺的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_skl1:description",
+          "kg-node:physics_8a_rjb_skl1:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12429"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23027"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17188"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  }
+}
+```

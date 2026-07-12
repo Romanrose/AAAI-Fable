@@ -1,0 +1,94 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt13",
+    "subject": "math",
+    "canonical_name": "数字0的含义",
+    "aliases": [],
+    "definition": "表示没有数量。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "数字0的含义"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "数字0",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt13:definition",
+          "kg-node:math_1a_rjb_cpt13:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "state",
+        "text": "没有数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt13:definition",
+          "kg-node:math_1a_rjb_cpt13:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt13:definition",
+          "kg-node:math_1a_rjb_cpt13:retrieval_text"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "数字0的含义"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt13",
+      "name": "数字0的含义",
+      "label": "Concept",
+      "definition": "表示没有数量。"
+    },
+    "neighbors": [],
+    "relations": [],
+    "raw_edge_count": 0,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "数字0的含义",
+      "definition": "表示没有数量。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [],
+  "provenance": {
+    "seed_sha256": "c83cd1298de70d64287fee66416ae0565bef95e7f7bbac87aeecff5553d1a34d",
+    "retrieval_sha256": "53b5407a21b12d203b2533bd96b7896a74a0a159d904185f075a777e783fc7da",
+    "mechanism_record_sha256": "dddd2a843a44a4cd3caaadc22a8baf6fa16c1d564d4b47a53a247feee3eb25d6"
+  }
+}

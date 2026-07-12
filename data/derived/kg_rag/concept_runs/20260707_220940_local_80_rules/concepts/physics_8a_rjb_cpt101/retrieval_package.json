@@ -1,0 +1,76 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt101",
+    "label": "Concept",
+    "name": "焦距",
+    "properties": {
+      "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+      "importance": "掌握",
+      "formula": "f = 光心到焦点的距离",
+      "unit": "cm",
+      "retrieval_text": "焦距\nConcept\n凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。\n掌握\ncm\nf = 光心到焦点的距离"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17247",
+      "source": "physics_8a_rjb_cpt99",
+      "source_name": "光心",
+      "target": "physics_8a_rjb_cpt101",
+      "target_name": "焦距",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17190",
+      "source": "physics_8a_rjb_cpt101",
+      "source_name": "焦距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:19710",
+      "source": "physics_8a_rjb_cpt100",
+      "source_name": "焦点",
+      "target": "physics_8a_rjb_cpt101",
+      "target_name": "焦距",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "焦距",
+      "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+      "formula": "f = 光心到焦点的距离",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17247] 光心 --prerequisites_for--> 焦距",
+      "[normalized:edge:17190] 焦距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:19710] 焦点 --relates_to--> 焦距"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 3,
+    "candidate_edge_count": 3,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 787,
+    "summary_chars": 366,
+    "path_chars": 0,
+    "retrieval_context_chars": 1153
+  }
+}

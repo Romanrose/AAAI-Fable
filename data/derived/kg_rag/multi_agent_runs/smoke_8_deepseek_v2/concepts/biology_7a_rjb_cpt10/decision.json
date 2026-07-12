@@ -1,0 +1,32 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001以货轮水果检疫为场景，自然覆盖了“标准样本”与“变异个体”的对比，机制节点（标准、变异）和机制边（变异偏离标准）均得到清晰体现，且未泄露任何目标概念。故事完整、语言流畅，无模板化痕迹，证据对齐准确。候选002和003虽同样满足基本要求，但候选001在叙事完整性和机制覆盖的直观性上略胜一筹。",
+    "risk_notes": [
+      "故事中“新型病害”可能暗示负面变异，需确认目标概念是否涉及病害类型。",
+      "若目标概念强调变异的中性或正向属性，需调整措辞避免误导。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

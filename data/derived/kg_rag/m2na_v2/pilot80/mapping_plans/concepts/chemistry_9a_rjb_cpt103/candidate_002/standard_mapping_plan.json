@@ -1,0 +1,164 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt103",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠打造神兵利器的传承",
+  "characters": [
+    "铸剑大师",
+    "学徒甲",
+    "学徒乙",
+    "学徒丙",
+    "神铁",
+    "烈火",
+    "锻炉",
+    "铸剑谱"
+  ],
+  "objects": [
+    "铸剑谱",
+    "神铁",
+    "烈火",
+    "锻炉",
+    "宝剑",
+    "淬火池",
+    "试剑石"
+  ],
+  "conflict": "铸剑大师需要将三种不同的铸剑方法传授给三位学徒，但每种方法都需借助神铁和烈火，且最终都要经过淬火和试剑才能成就宝剑，而学徒们各自只擅长一种方法，却要共同完成传承。",
+  "event_chain": [
+    "铸剑大师决定传授铸剑之法，三位学徒各自学习一种方法：学徒甲用神铁入烈火锻打，学徒乙用神铁入烈火熔炼，学徒丙用神铁入烈火煅烧。",
+    "每种方法都离不开神铁和烈火作为基础。",
+    "三种方法都属于铸剑大师的铸剑谱中的技艺。",
+    "铸剑大师的铸剑谱需要淬火池（收集方法）来完成宝剑。",
+    "学徒甲的方法经过试剑石验证（实验）证明可行。",
+    "学徒甲的方法属于分解技艺（将神铁分解成剑胚）。",
+    "学徒乙的方法也属于分解技艺。",
+    "学徒丙的方法也属于分解技艺。",
+    "学徒甲的方法产出宝剑。",
+    "学徒乙的方法产出宝剑。"
+  ],
+  "turning_point": "试剑石验证了学徒甲的方法可行，大师决定将铸剑谱完整传授。",
+  "resolution_state": "三位学徒各自掌握一种方法，共同传承了铸剑谱，最终都能打造出宝剑，并学会淬火收集之法。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铸剑大师的铸剑谱（传承技艺）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "学徒甲用神铁入烈火锻打",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "学徒乙用神铁入烈火熔炼",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "学徒丙用神铁入烈火煅烧",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "宝剑",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "分解技艺（将神铁分解成剑胚）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "淬火池（收集宝剑的方法）",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "试剑石验证学徒甲的方法",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "学徒甲的方法属于铸剑谱",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "学徒乙的方法属于铸剑谱",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "学徒丙的方法属于铸剑谱",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "分解技艺是铸剑谱的基础",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "宝剑是铸剑谱的目标",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "铸剑谱需要淬火池",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "试剑石验证了铸剑谱",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "学徒甲的方法属于分解技艺",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e9",
+      "story_relation": "学徒乙的方法属于分解技艺",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e10",
+      "story_relation": "学徒丙的方法属于分解技艺",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e11",
+      "story_relation": "学徒甲的方法产出宝剑",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e12",
+      "story_relation": "学徒乙的方法产出宝剑",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'实验室制取氧气的方法'等化学术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事载体使用同一源域（铸剑），不混用其他隐喻。",
+    "注意'淬火池'对应'收集方法'，'试剑石'对应'实验验证'，避免混淆。"
+  ],
+  "mapping_context_sha256": "66f9e75b1c1a9c051817c4eeca642c8afcbbfe0599b926a1c8a9709022f3c36d",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "732a56a328adc108f387f864db292fe5213bc415c8d990539ce6d18b69758486"
+  }
+}

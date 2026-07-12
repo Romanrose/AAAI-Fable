@@ -1,0 +1,87 @@
+{
+  "concept_id": "math_1a_rjb_cpt27",
+  "target_concept": "数量的比较",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过天平倾斜方向与果子数量的对应关系，完整且准确地体现了用符号“>”“<”比较数量的核心机制，没有偏离概念定义。",
+    "implicitness": "故事全程未出现“数量的比较”“>”“<”等禁止术语，而是用“向右斜”“向左斜”“平衡”等自然描述隐含地表达了比较规则，符合隐含性要求。",
+    "mapping_clarity": "皮皮的多次实验清晰展示了左边数量小于右边时天平向右斜（对应<）、左边大于右边时向左斜（对应>）、相等时平衡（对应=），映射关系明确且一致。",
+    "readability": "故事语言流畅，情节简单易懂，角色和场景设定（数字森林、天平、果子）适合低龄儿童，阅读体验良好。",
+    "pedagogical_value": "通过观察和实验逐步揭示规则，引导学生从具体现象抽象出比较逻辑，教学步骤清晰，能有效支持概念理解。",
+    "novelty": "天平作为比较工具是常见比喻，但故事在实验设计和规则发现过程上有一定细节，整体新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可增加一个需要学生自己判断的类似场景（如不同数量的花朵），以强化迁移应用。",
+    "可在结尾稍作延伸，暗示“>”“<”符号的写法，但需注意避免直接暴露术语。"
+  ],
+  "rule_findings": {
+    "story_token_count": 556,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [
+      "森林"
+    ],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过天平倾斜方向与果子数量的对应关系，完整且准确地体现了用符号“>”“<”比较数量的核心机制，没有偏离概念定义。",
+      "implicitness": "故事全程未出现“数量的比较”“>”“<”等禁止术语，而是用“向右斜”“向左斜”“平衡”等自然描述隐含地表达了比较规则，符合隐含性要求。",
+      "mapping_clarity": "皮皮的多次实验清晰展示了左边数量小于右边时天平向右斜（对应<）、左边大于右边时向左斜（对应>）、相等时平衡（对应=），映射关系明确且一致。",
+      "readability": "故事语言流畅，情节简单易懂，角色和场景设定（数字森林、天平、果子）适合低龄儿童，阅读体验良好。",
+      "pedagogical_value": "通过观察和实验逐步揭示规则，引导学生从具体现象抽象出比较逻辑，教学步骤清晰，能有效支持概念理解。",
+      "novelty": "天平作为比较工具是常见比喻，但故事在实验设计和规则发现过程上有一定细节，整体新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可增加一个需要学生自己判断的类似场景（如不同数量的花朵），以强化迁移应用。",
+      "可在结尾稍作延伸，暗示“>”“<”符号的写法，但需注意避免直接暴露术语。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完全依据概念定义展开，通过小禾的观察和对比，准确传达了依据生物共同特征区分生物与非生物的核心机制。",
+    "implicitness": "目标概念名称和别名均未在故事正文中出现，概念完全通过情节和角色发现过程隐含表达。",
+    "mapping_clarity": "喷水器、青石、月季、苔藓等元素与概念示例高度对应，事件链清晰映射了判断标准，读者能明确理解映射关系。",
+    "readability": "语言流畅自然，情节连贯，适合目标年龄段阅读，无生硬术语或复杂句式。",
+    "pedagogical_value": "故事通过具体观察和对比，逐步引导读者理解判断标准，结尾总结强化了学习效果，教学价值高。",
+    "novelty": "故事场景和角色设定较为常见，但通过园圃日常观察展开概念教学，有一定情境创新性。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个更出乎意料的非生物例子（如机器人或钟乳石）以提升新颖性。",
+    "结尾总结可更自然地融入角色对话，避免直接陈述概念定义。"
+  ]
+}

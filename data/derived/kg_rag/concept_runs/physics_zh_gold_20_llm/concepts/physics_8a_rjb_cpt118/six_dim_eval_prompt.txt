@@ -1,0 +1,191 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "透镜焦度",
+  "concept_id": "physics_8a_rjb_cpt118",
+  "concept_definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt118",
+    "透镜焦度"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt118",
+      "label": "Concept",
+      "name": "透镜焦度",
+      "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "透镜焦度\n透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt116",
+          "label": "Concept",
+          "name": "近视眼及矫正",
+          "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt117",
+          "label": "Concept",
+          "name": "远视眼及矫正",
+          "definition": "由于折光不足或眼球过短，近处物体成像在视网膜后；用凸透镜矫正。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch5_s4",
+          "label": "Section",
+          "name": "第四节 眼睛和眼镜",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt118",
+    "concept_id": "physics_8a_rjb_cpt118",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt118",
+      "label": "Concept",
+      "name": "透镜焦度",
+      "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "钟楼交通站",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "透镜焦度"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过圆片（透镜）的折光本领与距离（焦距）的关系，隐含了焦度是焦距的倒数这一概念。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明发现距离越短，光斑越小越亮（折光本领越强），并总结出本领与距离成反比，对应透镜焦度是焦距的倒数。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "保留了变量（距离与折光本领）之间的反比关系；规律由观察和测量得出，非主观意志；条件变化（距离改变）导致结果变化（光斑大小亮度）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：钟楼上的光斑\n\n阿明是钟楼的管理员，每天下午他都会用一块透明圆片观察窗外射进来的阳光。圆片能把阳光聚成一个光斑，光斑越小越亮，说明圆片折光的能力越强。\n\n这天，阿明发现圆片离窗户越近，光斑就越大越暗；离窗户越远，光斑反而越小越亮。他觉得很奇怪：“难道距离能改变圆片的本事？”\n\n他试着把圆片固定在离窗户很近的位置，光斑几乎和圆片一样大，光线散开，照在墙上很模糊。他又把圆片移到离窗户较远的地方，光斑缩成一个小亮点，边缘清晰，甚至能点燃纸片。\n\n阿明找来一根长尺，量了量圆片到窗户的距离。他发现，当距离是半米时，光斑最小最亮；当距离是一米时，光斑变大变暗；当距离是两米时，光斑更大更暗。他记录下数据：距离越短，光斑越小越亮；距离越长，光斑越大越暗。\n\n“原来圆片的折光本领和这个距离有关。”阿明自言自语，“距离越短，本领越强；距离越长，本领越弱。而且，本领的强弱正好和距离成反比——距离变成两倍，本领就变成一半；距离变成一半，本领就变成两倍。”\n\n他又试了另一块更厚的圆片，发现它让光斑最小最亮的距离更短。阿明明白了：每块圆片都有一个固定的距离，能产生最强的折光效果；这个距离越短，圆片的折光本领就越强。\n\n从此，阿明用这个规律来挑选圆片：需要强折光时，就选那个固定距离短的；需要弱折光时，就选固定距离长的。他还把这个规律记在钟楼的日志里，提醒自己：折光本领的大小，取决于那个距离的倒数——距离越短，倒数越大，本领越强。",
+  "rule_findings": {
+    "story_token_count": 523,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

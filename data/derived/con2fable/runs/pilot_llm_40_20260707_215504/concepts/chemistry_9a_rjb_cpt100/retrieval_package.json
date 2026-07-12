@@ -1,0 +1,82 @@
+{
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt100",
+    "resolved_node_id": "chemistry_9a_rjb_cpt100",
+    "name": "缓慢氧化",
+    "definition": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_15248",
+      "source_id": "chemistry_9a_rjb_cpt97",
+      "source_name": "氧化反应",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_18223",
+      "source_id": "chemistry_9a_rjb_cpt102",
+      "source_name": "呼吸与氧气",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "score": 0.77
+    },
+    {
+      "source_edge_id": "edge_18426",
+      "source_id": "chemistry_9a_rjb_cpt97",
+      "source_name": "氧化反应",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "score": 0.77
+    },
+    {
+      "source_edge_id": "edge_18429",
+      "source_id": "chemistry_9a_rjb_cpt99",
+      "source_name": "燃烧",
+      "target_id": "chemistry_9a_rjb_cpt100",
+      "target_name": "缓慢氧化",
+      "relation": "relates_to",
+      "score": 0.77
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "进行得很慢、甚至不容易被察觉的氧化反应，仍属于氧化反应但没有显著的发光发热现象。",
+    "condition_summary": [
+      "氧化反应"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "氧化反应"
+      ],
+      "related_concepts": [
+        "呼吸与氧气",
+        "氧化反应",
+        "燃烧"
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "hierarchy": []
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 4,
+    "selected_edge_count": 4,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

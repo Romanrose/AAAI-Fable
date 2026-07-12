@@ -1,0 +1,189 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "chemistry_9a_rjb_cpt104",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "加热高锰酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt104:definition",
+          "kg-node:chemistry_9a_rjb_cpt104:name"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "实验室制取氧气的方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt103:definition",
+          "kg-node:chemistry_9a_rjb_cpt103:name"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "氧气的收集方法",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt119:definition",
+          "kg-node:chemistry_9a_rjb_cpt119:name"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt66:definition",
+          "kg-node:chemistry_9a_rjb_cpt66:name"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "process",
+        "text": "分解反应",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:name"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "分解过氧化氢制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt106:definition",
+          "kg-node:chemistry_9a_rjb_cpt106:name"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "process",
+        "text": "加热氯酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:name"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "evidence",
+        "text": "实验2-5 加热高锰酸钾制取氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp16:name",
+          "kg-node:chemistry_9a_rjb_exp16:process",
+          "kg-node:chemistry_9a_rjb_exp16:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11276"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14996"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15223"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:14997"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n6",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11278"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n7",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11280"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n8",
+        "target": "n2",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:22572"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "加热高锰酸钾制取氧气"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "c50221d83697012c3258a8d9b3278a81ace7b9ee1fec2840f76766884934198e",
+    "retrieval_sha256": "01e29bab5f0d1e3b677d3ffdedaab68b1da5ca0e6ce9af487c15896ba89198bb",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "fd21d654c6fcebddd08a11e74c74358cdf227a5bce4fd6239dad67e9e3720c3e"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "许多苔藓植物叶只有一层细胞，二氧化硫等有毒气体可从背腹两面侵入细胞威胁生存，因此可用作监测空气污染程度的指示植物。",
+      "weight": 1.0,
+      "source": "core_mechanism_zh"
+    },
+    {
+      "id": "n2",
+      "text": "避免目的论解释。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    },
+    {
+      "id": "n3",
+      "text": "避免把个体努力写成进化原因。",
+      "weight": 0.85,
+      "source": "must_preserve_zh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "leads_to",
+      "source_edge_id": null,
+      "source_name": null,
+      "target_name": null,
+      "relation_semantic_role": "causal_or_supportive_outcome"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "kg_relation": "leads_to",
+      "source_edge_id": null,
+      "source_name": null,
+      "target_name": null,
+      "relation_semantic_role": "causal_or_supportive_outcome"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": []
+}

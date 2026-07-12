@@ -1,0 +1,154 @@
+{
+  "source_domain": "滑道试验场",
+  "characters": [
+    "记录员",
+    "调度员",
+    "验收员"
+  ],
+  "objects": [
+    "分段记录册",
+    "封存箱",
+    "通行牌"
+  ],
+  "conflict": "滑道试验场里表面流程已经启动，但关键条件、顺序和结果还没有互相核对。",
+  "event_chain": [
+    "主角先确认滑道试验场里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角先确认滑道试验场里的前置条件牌；缺少这一步，后面的登记不能开始。",
+    "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+    "因此，先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节，前后两步必须能在记录中互相承接。",
+    "因此，先稳定滑道试验场中的第2道转化环节，再推动滑道试验场中的结果验收记录，前后两步必须能在记录中互相承接。",
+    "有人试着倒过来安排，却发现只有先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节，后面的验收才可能接上先稳定滑道试验场中的第2道转化环节，再推动滑道试验场中的结果验收记录。",
+    "主角先在滑道试验场中确认滑道试验场中的入口条件核对是否成立。",
+    "随后，滑道试验场中的第2道转化环节按前一步留下的条件继续推进。",
+    "最后，众人用滑道试验场中的结果验收记录核对整条安排是否得到可靠结果。"
+  ],
+  "turning_point": "一次提前跳过中间承接的尝试暴露了方向和顺序不能颠倒。",
+  "resolution_state": "所有环节按条件、过程和结果重新衔接后，记录终于能够互相印证。",
+  "mapping_plan": [
+    {
+      "concept_role_id": "object",
+      "role_label": "对象",
+      "role_type": "entity",
+      "story_role": "滑道试验场中的被观察和登记的对象"
+    },
+    {
+      "concept_role_id": "variable",
+      "role_label": "变量",
+      "role_type": "variable",
+      "story_role": "滑道试验场中的记录册上变化的数值栏"
+    },
+    {
+      "concept_role_id": "law",
+      "role_label": "规律",
+      "role_type": "rule",
+      "story_role": "滑道试验场中的众人共同遵守的判断规则"
+    },
+    {
+      "source_edge_id": "normalized:edge:17247",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认滑道试验场里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "光心",
+      "target_name": "焦距"
+    },
+    {
+      "source_edge_id": "normalized:edge:17190",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认滑道试验场里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "焦距",
+      "target_name": "凸透镜成像规律"
+    },
+    {
+      "source_edge_id": "normalized:edge:19710",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "焦点",
+      "target_name": "焦距"
+    },
+    {
+      "mechanism_node_id": "n1",
+      "mechanism_text": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+      "story_role": "滑道试验场中的入口条件核对"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "mechanism_text": "保留变量之间的关系。",
+      "story_role": "滑道试验场中的第2道转化环节"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "mechanism_text": "避免把自然规律写成角色主观意志。",
+      "story_role": "滑道试验场中的结果验收记录"
+    },
+    {
+      "mechanism_edge_id": "e1",
+      "kg_relation": "prerequisites_for",
+      "story_relation": "先稳定滑道试验场中的入口条件核对，再推动滑道试验场中的第2道转化环节",
+      "source_edge_id": "normalized:edge:17247"
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "kg_relation": "prerequisites_for",
+      "story_relation": "先稳定滑道试验场中的第2道转化环节，再推动滑道试验场中的结果验收记录",
+      "source_edge_id": "normalized:edge:17190"
+    }
+  ],
+  "concept_role_mappings": [
+    {
+      "concept_role_id": "object",
+      "role_label": "对象",
+      "role_type": "entity",
+      "story_role": "滑道试验场中的被观察和登记的对象"
+    },
+    {
+      "concept_role_id": "variable",
+      "role_label": "变量",
+      "role_type": "variable",
+      "story_role": "滑道试验场中的记录册上变化的数值栏"
+    },
+    {
+      "concept_role_id": "law",
+      "role_label": "规律",
+      "role_type": "rule",
+      "story_role": "滑道试验场中的众人共同遵守的判断规则"
+    }
+  ],
+  "concept_relation_mappings": [
+    {
+      "source_edge_id": "normalized:edge:17247",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认滑道试验场里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "光心",
+      "target_name": "焦距"
+    },
+    {
+      "source_edge_id": "normalized:edge:17190",
+      "kg_relation": "prerequisites_for",
+      "relation_semantic_role": "prerequisite",
+      "story_relation_type": "prerequisite",
+      "story_relation": "主角先确认滑道试验场里的前置条件牌；缺少这一步，后面的登记不能开始。",
+      "source_name": "焦距",
+      "target_name": "凸透镜成像规律"
+    },
+    {
+      "source_edge_id": "normalized:edge:19710",
+      "kg_relation": "relates_to",
+      "relation_semantic_role": "association",
+      "story_relation_type": "association",
+      "story_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+      "source_name": "焦点",
+      "target_name": "焦距"
+    }
+  ],
+  "risk_notes": [
+    "正文不能出现目标概念名、别名或禁用术语。",
+    "事件必须保留 GraphRAG 概念关系的类型语义，不要把 is_a、verifies、relates_to 全部写成顺序因果。"
+  ]
+}

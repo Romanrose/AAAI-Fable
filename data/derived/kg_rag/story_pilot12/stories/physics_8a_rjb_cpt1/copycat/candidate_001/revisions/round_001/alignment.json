@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "第二环节的转化数字，就像把“米”换算成“分米”那样，正好是前者的十倍",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第三环节的结果，又像把“分米”换算成“厘米”那样，恰好是第二环节的十倍",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "验收记录册",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "站里所有环节的登记，都得先看入口条件是否成立——这是一个共同的规则，就像“米”作为基准单位",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他翻出分段记录册，把三个环节的登记时间、签字人和通行牌编号一一列出来，又找小刘和老陈一起复查",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "老周把这件事看在眼里，没有把它当成小刘一个人的马虎，而是想到：站里所有环节的登记，都得先看入口条件是否成立",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact contiguous substrings from the story, with direction preserved for edges. No missing elements."
+}

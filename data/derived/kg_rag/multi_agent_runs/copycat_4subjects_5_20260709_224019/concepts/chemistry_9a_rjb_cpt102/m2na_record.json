@@ -1,0 +1,107 @@
+{
+  "id": "chemistry_9a_rjb_cpt102",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "呼吸与氧气",
+    "aliases": [],
+    "forbidden_terms": [
+      "呼吸与氧气"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "人体和其他动植物的呼吸属于缓慢氧化，需要消耗氧气；当环境中氧气含量偏低时，吸氧可以给人体呼吸提供适量的氧气，从而缓解高原反应等症状。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "区分化学反应和物理混合。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "保留守恒关系和反应前后变化。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:18224",
+        "source_name": "呼吸与氧气",
+        "target_name": "氧气的物理性质",
+        "relation_semantic_role": "association"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "relates_to",
+        "source_edge_id": "normalized:edge:18223",
+        "source_name": "呼吸与氧气",
+        "target_name": "缓慢氧化",
+        "relation_semantic_role": "association"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "账房仓库里，记录员老陈正盯着两份记录册发愁。一份是入库登记，写着每批物资的来源和数量；另一份是出库凭证，记录着领用的种类和去向。按规矩，这两份册子必须相互对照，才能签发最后的封存箱通行牌。\n\n“老陈，直接对总数不行吗？”调度员小李凑过来，“反正最后都是要核对库存，何必分两步走？”\n\n老陈摇头：“你忘了上次的事？有人提前跳过中间核对，结果发现入库的原料和出库的成品根本不是同一批东西。表面数字对得上，实际货品全乱了。”\n\n小李不太服气。他趁老陈去取新册子，自作主张把两份记录合在一起，直接填了一张通行牌。验收员老王接过牌子一看，眉头皱成川字：“小李，这牌子上的数据对不上。你看，入库记录里这批货是分三次进的，但你的通行牌只写了一次出库的总数。中间那两次的流转凭证呢？”\n\n小李愣住了。他翻出原册子，果然发现漏掉了两个关键环节。如果没有按顺序核对每一次的进出记录，就无法确认物资是否真的发生了转移。就像把一堆沙子倒进瓶子，再倒出来，数量没变，但沙子的种类和顺序全混了。\n\n老陈回来，看着乱作一团的记录，叹了口气：“仓库的规矩不是白定的。先查入口条件，再走中间流程，最后验收结果，一步都不能省。”他重新把两份记录册并排摊开，从第一笔开始逐条比对。每核对一项，就在分段记录册上画一个勾。小李在旁边看着，终于明白——那些看似多余的步骤，恰恰保证了整条链路的可靠。\n\n最后，三人拿着核对无误的记录，把封存箱贴上标签。老王在通行牌上盖章时，意味深长地说：“顺序就是规矩，规矩保的是结果。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "账房仓库中的入口条件核对",
+        "evidence": "先查入口条件",
+        "narrative_anchor": "先查入口条件",
+        "confidence": 0.9
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "账房仓库中的第2道转化环节",
+        "evidence": "按顺序核对每一次的进出记录",
+        "narrative_anchor": "按顺序核对每一次的进出记录",
+        "confidence": 0.85
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "账房仓库中的结果验收记录",
+        "evidence": "最后验收结果",
+        "narrative_anchor": "最后验收结果",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+        "evidence": "这两份册子必须相互对照",
+        "narrative_anchor": "这两份册子必须相互对照",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.85
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "主角把两份相关记录放在一起比较，发现它们共同约束最后判断。",
+        "evidence": "按顺序核对每一次的进出记录",
+        "narrative_anchor": "按顺序核对每一次的进出记录",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.85
+      }
+    ]
+  }
+}

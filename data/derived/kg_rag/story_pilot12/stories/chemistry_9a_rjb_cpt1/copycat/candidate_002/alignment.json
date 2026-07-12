@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "入口条件核对",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "结果验收记录",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "记录员先回到起点，仔细核对工坊的入口条件——温度、原料配比、模具状态，全部确认后才写入分段记录册。调度员这才发放通行牌，让铸件按步就班进炉。验收员等所有环节走完，打开封存箱，拿出结果验收记录，和记录员的分段记录册放在一起比较。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 maps to '入口条件核对', node n2 maps to '结果验收记录'. Edge e1 (enables) is supported by the story sequence where entry condition checking enables subsequent process and final verification, with direction preserved."
+}

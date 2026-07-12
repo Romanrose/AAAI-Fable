@@ -1,0 +1,42 @@
+{
+  "core_question": "球体的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "球体 --is_a--> 按形状分类",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:12137"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "表面上所有点到中心的距离都相等的立体图形。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:12137"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "球体",
+    "math_1a_rjb_cpt17"
+  ],
+  "coverage_targets": {
+    "required_step_count": 2,
+    "required_dependency_count": 1,
+    "must_cover_edge_ids": [
+      "normalized:edge:12137"
+    ],
+    "must_cover_path_ids": []
+  }
+}

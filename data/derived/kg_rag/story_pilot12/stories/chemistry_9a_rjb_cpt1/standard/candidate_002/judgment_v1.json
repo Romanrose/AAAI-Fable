@@ -1,0 +1,25 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 3,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly states '田地需要耕作才能生长庄稼', which directly preserves the enables relation from entity (田地) to process (耕作田地). This is observably better than a story that merely mentions both concepts without causal direction, or that reverses the dependency (e.g., '耕作需要田地'). The mapping is exact and contiguous, with no missing or reversed relations."
+  },
+  "revision_instructions": [
+    "No revision needed; all mechanism nodes and edges are faithfully mapped with preserved direction."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,53 @@
+{
+  "query": "biology_7a_rjb_cpt106",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt106",
+    "label": "Concept",
+    "name": "种子萌发的自身条件",
+    "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "种子萌发的自身条件\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_7a_rjb_cpt101",
+        "label": "Concept",
+        "name": "种子萌发",
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt101",
+        "label": "Concept",
+        "name": "种子萌发",
+        "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+      },
+      {
+        "id": "biology_7a_rjb_cpt107",
+        "label": "Concept",
+        "name": "种子休眠",
+        "definition": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch3_s2",
+        "label": "Section",
+        "name": "第二章 被子植物的一生",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

@@ -1,0 +1,62 @@
+---
+title: 03 · Copycat 式候选映射竞争
+description: 让多个故事域映射方案竞争，用结构覆盖和方向保持选择可验证的 Mapping Plan。
+sidebar:
+  order: 3
+---
+
+让多个故事域映射方案竞争，用结构覆盖和方向保持选择可验证的 Mapping Plan。
+
+> 核心问题：**怎样把机制角色转换为故事角色，同时不丢失关系结构？**
+
+## 在完整流程中的位置
+
+把知识侧结构显式转换为故事侧结构，并保留可审计的候选竞争过程。
+
+**上游输入**：已批准的 MechanismGraph、检索上下文和禁用术语。  
+**当前实现**：当前主方法是 [LLM-Guided Copycat](/methodology/)：semantic scout 一次提出三个不同故事域的候选，每个候选必须映射全部机制节点和边。确定性验证检查 ID、覆盖、方向和术语泄漏；评分比较覆盖度、载体与关系多样性、叙事骨架和模板风险。元监控只在检测到重复或占位符时允许一次不改变深层结构的修订。标准映射和确定性 Copycat 保留为对照。  
+**阶段产物**：全部候选及评分、修订轨迹和最终 Validated Mapping Plan。
+
+## 进入下一阶段的门槛
+
+节点/边全覆盖；所有边方向保持；无未知 ID；禁用术语不泄漏；最终胜者通过硬验证。
+
+## 失败如何回退
+
+单个候选失败则淘汰或受约束修订；三个候选全部失败则重新提出候选；机制本身有问题则回到机制图。
+
+## 主要参考文献（14）
+
+这些论文直接定义或改变本阶段的方法、数据结构、验证门槛或输出。
+
+| 论文 | 年份/来源 | 摘要初读：为什么相关 | 在本项目中的适配方式 |
+|---|---|---|---|
+| [Metaphor Generation with Conceptual Mappings](/papers/metaphor-generation-conceptual-mappings/) | 2021 · ACL-IJCNLP | 研究基于概念映射生成隐喻表达。 | 可借鉴概念映射，把科学实体映射为寓言角色，把关系映射为互动。 |
+| [Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT](/papers/analogy-generation-llms/) | 2022 · INLG | 研究用 LLM prompt 生成类比。 | 可借鉴 prompt 设计，让模型提出候选寓言世界和角色映射。 |
+| [STORYANALOGY: Deriving Story-level Analogies from Large Language Models](/papers/storyanalogy/) | 2023 · EMNLP | 研究从 LLM 中获得故事级类比。 | 可借鉴故事级映射框架，用于说明每个知识步骤对应哪个情节。 |
+| [A Survey on Automatic Generation of Figurative Language](/papers/figurative-language-generation-survey/) | 2024 · ACM Computing Surveys | 综述比喻、隐喻等修辞语言自动生成。 | 可用于说明 Concept-to-Fable 与 metaphor/analogy generation 的区别。 |
+| [Can Language Models Serve as Analogy Annotators?](/papers/analogy-annotators/) | 2025 · Findings of ACL | 评估语言模型能否作为类比标注者。 | 可借鉴让 LLM 辅助标注概念-故事对应关系。 |
+| [Teaching Through Analogies: A Modular Pipeline for Educational Analogy Generation](/papers/teaching-through-analogies/) | 2026 · BEA | 摘要提出由源域发现、子概念生成、解释生成和评价组成的模块化教育类比流程，并用结构映射理论分析阶段间影响。 | 借鉴分阶段类比生成和子概念配对，把当前节点/边映射进一步组织为可评价的教育解释。 |
+| [Dimensions of Analogy in Narratives](/papers/narrative-analogy-dimensions/) | 2022 · IJCAI Workshop | 摘要提出叙事类比的六个维度，标注寓言语料并设计四类递增难度的类比推理任务。 | 借鉴多维标注表检查角色、事件、因果和高阶关系是否共同保持。 |
+| [Structural Similarity in Figurative Language: A Preliminary Cognitive Analysis](/papers/structural-similarity-figurative-language/) | 2023 · Lingua | 摘要区分实体结构与情境/事件结构相似性，并说明高层结构相似如何形成寓言、parable 与 allegory-like narrative。 | 借鉴高层结构相似层级，解释为什么某个故事域能承载目标机制。 |
+| [The Copycat Project: Mental Fluidity, Part I](/papers/copycat-mental-fluidity-part1/) | 1995 · Book excerpt | 该材料是 Copycat 理论书籍的分卷节选，没有独立论文摘要；内容围绕角色优先的对应、概念光晕、概念滑动与多种相互竞争的类比压力。 | 借鉴“角色比对象字面身份更重要”和情境诱导概念滑动的原则。 |
+| [The Copycat Project: Mental Fluidity, Part II](/papers/copycat-mental-fluidity-part2/) | 1995 · Book excerpt | 该分卷没有独立摘要，延续 Copycat 对 Slipnet、Workspace、Coderack、温度和并行微代理互动的系统说明。 | 借鉴多候选并行竞争、上下文敏感评分和不确定性反馈。 |
+| [The Copycat Project: Mental Fluidity, Part III](/papers/copycat-mental-fluidity-part3/) | 1995 · Book excerpt | 该分卷没有独立摘要，集中展示 Copycat 运行、类比选择的涌现过程及不同压力下的答案分布。 | 借鉴候选级审计、失败案例分析和策略间分布比较。 |
+| [Conceptual Slippage and Analogy-Making: A Report on the Copycat Project](/papers/conceptual-slippage-copycat/) | 1988 · Technical report | 文章说明知觉与重叠、联想和情境敏感的概念系统如何产生概念滑动，并用 Copycat 字母串运行展示灵活类比。 | 借鉴受限概念滑动：表层角色可变，必须保留的机制身份和方向不可变。 |
+| [A Reimplementation of the Copycat Project](/papers/copycat-reimplementation/) | 2018 · arXiv | 摘要报告用 DrRacket 重新解释和实现 Copycat，并讨论 Workspace、Coderack、Slipnet 等认知架构组件的实现收益与局限。 | 借鉴可复现的模块边界，为确定性 Copycat 对照路线建立清楚接口。 |
+| [Abstraction and Analogy-Making in Artificial Intelligence](/papers/abstraction-analogy-ai/) | 2021 · arXiv | 摘要综述符号方法、深度学习和概率程序归纳在概念抽象与类比上的优势和局限，并提出挑战任务与评价方向。 | 借鉴跨域泛化、系统性与可解释性作为映射方法的高级评价目标。 |
+
+## 跨阶段参考文献（2）
+
+这些论文的主要位置在其他阶段，但其方法或评价也为本阶段提供约束。
+
+| 论文 | 主要阶段 | 对本阶段的可借鉴点 |
+|---|---|---|
+| [Unlocking Scientific Concepts: How Effective Are LLM-Generated Analogies for Student Understanding and Classroom Practice?](/papers/scientific-concept-analogies/) | 反向结构对齐与教育质量评测 | 可借鉴教育场景评测，把寓言质量和学习效果连接起来。 |
+| [Story of Thought: Narrative Reasoning with Analogy and Metaphor](/papers/story-of-thought/) | 寓言叙事 | 借鉴“先构造解释叙事再求解”的思路，但将其置于已验证机制图之后。 |
+
+## 与相邻阶段的接口
+
+- 本阶段只能消费上游已经通过门槛的产物。
+- 本阶段产物必须保留稳定标识和审计信息，供下游与反向评测回查。
+- 如果下游发现的问题属于本阶段责任，应按“失败如何回退”返回处理，而不是在最终文本中掩盖。

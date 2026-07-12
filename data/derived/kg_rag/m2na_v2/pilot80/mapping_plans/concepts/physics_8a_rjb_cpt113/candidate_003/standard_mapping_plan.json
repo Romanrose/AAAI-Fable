@@ -1,0 +1,98 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt113",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位老农在田里调节水渠闸门，控制水流灌溉庄稼",
+  "characters": [
+    "老农",
+    "庄稼"
+  ],
+  "objects": [
+    "水渠",
+    "闸门",
+    "上游水源",
+    "下游田地",
+    "最远端的庄稼",
+    "最近端的庄稼"
+  ],
+  "conflict": "老农需要调节闸门，使水流既能灌溉到最远端的庄稼，又不至于淹没最近端的庄稼",
+  "event_chain": [
+    "老农打开闸门，水流从上游进入水渠",
+    "老农调节闸门开度，改变水流速度和水量",
+    "水流到达最远端的庄稼，形成灌溉最远点",
+    "水流也到达最近端的庄稼，形成灌溉最近点",
+    "正常水渠条件下，最远端的庄稼能获得足够水量（无限远比喻）",
+    "正常水渠条件下，最近端的庄稼约在10步远处获得灌溉"
+  ],
+  "turning_point": "老农发现闸门开度太大时最近端庄稼被淹，开度太小时最远端庄稼得不到水",
+  "resolution_state": "老农找到合适的闸门开度，使最远端和最近端的庄稼都得到适量灌溉",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农调节闸门改变水流",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "最远端的庄稼得到灌溉的位置",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "最近端的庄稼得到灌溉的位置",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "正常水渠条件下最远端的庄稼能获得足够水量",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "正常水渠条件下最近端的庄稼约在10步远处获得灌溉",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农调节闸门使得最远端的庄稼得到灌溉",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老农调节闸门使得最近端的庄稼得到灌溉",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "正常水渠条件限制了最远端的庄稼灌溉位置",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "正常水渠条件限制了最近端的庄稼灌溉位置",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'远点'或相关禁忌词",
+    "确保所有机制节点和边都被映射，且方向正确",
+    "确保故事载体来自同一源域（水渠灌溉），不混用其他隐喻",
+    "注意'无限远'在故事中对应'足够远'，避免直接使用原词"
+  ],
+  "mapping_context_sha256": "05101a708320bbcddea6fd8e57291889b464b2061a6d7ab75b44fc08734e26cb",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "85501d1efb401d9737b709a552a78705fcf958337b4da5e0eb57e37dbbc24610"
+  }
+}

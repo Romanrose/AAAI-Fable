@@ -1,0 +1,47 @@
+{
+  "query": "math_1a_rjb_cpt20",
+  "found": true,
+  "seed": {
+    "id": "math_1a_rjb_cpt20",
+    "label": "Concept",
+    "name": "6和7的加法",
+    "definition": "通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "6和7的加法\n通过将数量合并，理解得到6或7的加法算式，如5+1=6、1+5=6。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "math_1a_rjb_cpt22",
+        "label": "Concept",
+        "name": "分拆数6和7",
+        "definition": "把6或7分成两个部分，了解所有不同的分法。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "math_1a_rjb_cpt19",
+        "label": "Concept",
+        "name": "数字6和7的认识",
+        "definition": "能够通过数物体、读数字、写数字、比较大小等方式认识数字6和7。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "math_1a_rjb_ch5",
+        "label": "Chapter",
+        "name": "6~10的认识和加减法",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

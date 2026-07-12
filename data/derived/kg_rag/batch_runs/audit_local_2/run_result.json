@@ -1,0 +1,8 @@
+{
+  "summary_path": "data\\derived\\kg_rag\\batch_runs\\audit_local_2\\summary.jsonl",
+  "manifest_path": "data\\derived\\kg_rag\\batch_runs\\audit_local_2\\manifest.json",
+  "concept_count": 2,
+  "success_count": 2,
+  "failed_count": 0,
+  "skipped_count": 0
+}

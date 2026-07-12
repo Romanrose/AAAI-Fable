@@ -1,0 +1,112 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的磨坊与河水",
+  "characters": [
+    "老磨坊主",
+    "村民"
+  ],
+  "objects": [
+    "磨坊",
+    "河水",
+    "水车",
+    "磨盘",
+    "木闸门"
+  ],
+  "conflict": "磨坊的水车转动缓慢，磨面效率低，村民等待面粉时间过长。",
+  "event_chain": [
+    "河水自然流动，推动水车缓慢转动，磨盘随之缓慢研磨谷物，产出少量面粉。",
+    "老磨坊主在河上安装木闸门，引导水流集中冲击水车。",
+    "木闸门是引导水流的关键装置。",
+    "安装木闸门后，水流冲击力增强，水车转速显著加快，磨盘快速转动，产出大量面粉。",
+    "木闸门本身不消耗，其结构和位置在前后保持不变。",
+    "村民观察到木闸门没有磨损或变化，确认其只是改变水流方向。"
+  ],
+  "turning_point": "老磨坊主安装木闸门，水流集中，水车转速加快。",
+  "resolution_state": "磨坊效率提高，村民及时获得面粉，木闸门完好无损。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "河水自然流动推动水车缓慢转动，磨盘缓慢研磨谷物",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "木闸门",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老磨坊主在河上安装木闸门，引导水流",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "水车转速显著加快，磨盘快速转动，产出大量面粉",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "水车转动带动磨盘研磨谷物，是一种将水流能量转化为面粉的加工方式",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "木闸门在前后没有磨损或变化，其结构和位置保持不变",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "河水推动水车转动属于水流能量转化为机械能的一种方式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "安装木闸门引导水流，使得原本缓慢的河水流动变得集中有力",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "木闸门是引导水流装置的一部分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "安装木闸门引导水流导致水车转速加快",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "木闸门的状态（无磨损）验证了其作为引导装置的特性",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "木闸门的状态与木闸门本身相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中木闸门不消耗、不变化，对应催化剂特性。",
+    "避免使用'催化剂'、'过氧化氢'、'分解'等化学术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "课程桥接上下文（如实验名称）未作为因果机制使用。"
+  ],
+  "mapping_context_sha256": "feb1dbda195fe2f45dc508c1fec77d113304fbec54f36a4174cad2a5fe739fc4",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "7b9a6b6f9543fe3bb7b9c746f6875a086cba49ebca17cc42deea013dd15e8550"
+  }
+}

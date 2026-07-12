@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "木料在某个温度区间里尺寸变化最明显，门变得最松",
+      "evidence": "木料本身的一种性质",
+      "narrative_anchor": "木料本身的一种性质",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": []
+}

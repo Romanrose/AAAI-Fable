@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly maps each mechanism node to a distinct step in the weaving process, with n1 (入口条件) serving as the foundational check that all subsequent steps depend on. Edge e1 (n1→n2) is explicitly demonstrated when the apprentice skips the entry condition and the master corrects it, showing the 'requires' relation. The weakest node is n2 (第2道转化环节) because it is mentioned only briefly as '上绷' without detailed elaboration, but it still fulfills the mapping. The story's strength lies in its concrete, step-by-step demonstration of the sequential dependencies, making the mechanism observable and pedagogically effective."
+  },
+  "revision_instructions": [
+    "No revisions needed. The story meets all requirements."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

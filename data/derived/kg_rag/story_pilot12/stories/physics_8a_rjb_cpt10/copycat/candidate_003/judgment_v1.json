@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 4,
+    "mapping_clarity": 3,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story correctly maps n1 (入口条件核对) as a prerequisite step that must be completed before n2 (第2道转化环节). However, all three edges (e1, e2, e3) are realized by the same story event (comparing two records), which conflates the distinct relations: e1 (relates_to between n2 and n1) should show that the process (n2) relates to the reference (n1), e2 (enables from n1 to n3) should show that the reference enables the relative state, and e3 (relates_to from n3 back to n1) should show the state relates back to the reference. Using a single comparison event for all three edges loses the directional and semantic specificity, making the mapping weaker than a realization that assigns each edge a distinct story action (e.g., checking the reference before the process, using the reference to validate the final state, and the final state confirming the reference)."
+  },
+  "revision_instructions": [
+    "Assign distinct story events to each edge: e1 should be shown by the protagonist consulting the entry conditions before performing the transformation step; e2 should be shown by the protagonist using the entry conditions to validate the final acceptance record; e3 should be shown by the acceptance record confirming the entry conditions were correct.",
+    "Ensure that the story explicitly demonstrates the direction of each relation (e.g., e2 is 'enables' from n1 to n3, so the entry conditions should be the basis for the acceptance, not just a comparison).",
+    "Avoid using the same story evidence for multiple edges; each edge mapping should have unique, observable story evidence that matches the relation type."
+  ],
+  "final_status": "revise"
+}

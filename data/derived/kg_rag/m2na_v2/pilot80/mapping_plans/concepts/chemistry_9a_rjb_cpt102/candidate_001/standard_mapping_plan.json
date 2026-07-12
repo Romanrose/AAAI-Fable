@@ -1,0 +1,111 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt102",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代农田灌溉",
+  "characters": [
+    "农夫",
+    "禾苗"
+  ],
+  "objects": [
+    "水渠",
+    "水源",
+    "水车",
+    "水"
+  ],
+  "conflict": "水源不足时，禾苗因缺水而枯萎，农夫需要想办法引水灌溉。",
+  "event_chain": [
+    "禾苗生长需要消耗水分",
+    "水源水位偏低",
+    "农夫用水车从水源引水灌溉",
+    "禾苗恢复生机，缓解枯萎",
+    "水车需要水源才能工作",
+    "禾苗生长与水分消耗相关"
+  ],
+  "turning_point": "农夫发现水源水位偏低，决定使用水车引水。",
+  "resolution_state": "禾苗得到充足水分，恢复生机，枯萎现象缓解。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "禾苗生长需要消耗水分",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "水源水位偏低",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫用水车从水源引水灌溉",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "禾苗恢复生机，缓解枯萎",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "水的物理性质：从高处流向低处，可被水车提升",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "禾苗生长需要消耗水分",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "水源水位偏低促使农夫用水车引水",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "农夫用水车引水导致禾苗恢复生机",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "禾苗生长与缓解枯萎相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "水具有从高处流向低处的性质",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "禾苗生长与水的物理性质相关",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'呼吸'、'氧气'、'氧化'等化学术语。",
+    "确保水车引水过程对应吸氧，但避免直接类比为'吸'。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如缓慢氧化）作为因果机制。"
+  ],
+  "mapping_context_sha256": "4218c378f54c5265920046266c3e3323ef73bf77eacb39ef9f31b6d11d728afc",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "c7c86e4f1b0c5628c3c131bc1f3902da5f4fa1a7157c4f859dd20661ee1fcdec"
+  }
+}

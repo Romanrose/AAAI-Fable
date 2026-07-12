@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "text": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n2",
+      "text": "需要先满足或理解：种子萌发的环境条件",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n3",
+      "text": "需要先满足或理解：种子萌发的自身条件",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n4",
+      "text": "属于或连接到上位结构：种子萌发的环境条件",
+      "weight": 0.85,
+      "source": "definition"
+    },
+    {
+      "id": "n5",
+      "text": "属于或连接到上位结构：种子萌发的自身条件",
+      "weight": 0.85,
+      "source": "definition"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:14133"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:14134"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:10772"
+    },
+    {
+      "id": "e4",
+      "source": "n4",
+      "target": "n5",
+      "relation": "leads_to",
+      "weight": 1.0,
+      "source_edge_id": "normalized:edge:10776"
+    }
+  ],
+  "source": "concept_card+dual_level_graphrag",
+  "retrieval_edge_ids": [
+    "normalized:edge:14133",
+    "normalized:edge:14134",
+    "normalized:edge:10772",
+    "normalized:edge:10776"
+  ]
+}

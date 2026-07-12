@@ -1,0 +1,270 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "沸点"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：大气压强",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：条件对物质性质的影响",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：氧气的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：水的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：铁的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m7",
+        "text": "与相关概念保持可解释关系：铝的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：大气压强",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14999"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15075"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14995"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14992"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14993"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14994"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18222"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "高山气象站与登山队",
+    "setting": "在一座海拔变化极大的高山脚下，有一个气象站，站里的研究员们负责监测不同高度的天气变化，并协助登山队安全攀登。",
+    "conflict": "登山队在不同海拔高度遇到水沸腾速度不同的问题，导致无法准确判断食物是否煮熟，影响队员体力与安全。",
+    "characters": [
+      {
+        "name": "老陈",
+        "role": "气象站资深研究员，负责解释气压变化对水沸腾的影响",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "小刘",
+        "role": "年轻登山队员，亲身经历不同海拔的沸腾现象",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "气压计",
+        "role": "气象站仪器，显示大气压强数值",
+        "mapped_element": "m3"
+      },
+      {
+        "name": "氧气瓶",
+        "role": "高海拔必备装备，代表氧气相关性质",
+        "mapped_element": "m4"
+      },
+      {
+        "name": "水壶",
+        "role": "登山队常用水壶，代表水的沸腾行为",
+        "mapped_element": "m5"
+      },
+      {
+        "name": "铁锅",
+        "role": "营地炊具，代表铁的导热与沸腾特性",
+        "mapped_element": "m6"
+      },
+      {
+        "name": "铝饭盒",
+        "role": "轻便餐具，代表铝的导热与沸腾特性",
+        "mapped_element": "m7"
+      },
+      {
+        "name": "气压图",
+        "role": "气象站墙上挂图，展示不同海拔的气压变化",
+        "mapped_element": "m8"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "老陈向小刘解释：液体剧烈汽化的温度随气压变化"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "小刘在不同海拔观察水沸腾现象"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "气压计读数变化影响沸腾温度"
+      },
+      {
+        "concept_element": "m4",
+        "narrative_carrier": "氧气瓶使用与氧气沸点相关"
+      },
+      {
+        "concept_element": "m5",
+        "narrative_carrier": "水壶中的水在不同海拔沸腾快慢不同"
+      },
+      {
+        "concept_element": "m6",
+        "narrative_carrier": "铁锅煮水时沸腾温度变化"
+      },
+      {
+        "concept_element": "m7",
+        "narrative_carrier": "铝饭盒加热时沸腾现象差异"
+      },
+      {
+        "concept_element": "m8",
+        "narrative_carrier": "气压图展示气压与沸腾温度的关系"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "小刘在低海拔营地烧水，水很快沸腾，食物正常煮熟。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "登山队上升至半山腰，小刘发现水沸腾时温度较低，食物不易熟。",
+        "mapped_elements": [
+          "m2",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "老陈用气压计测量，发现气压降低，解释气压对沸腾温度的影响。",
+        "mapped_elements": [
+          "m3",
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "小刘联想到氧气瓶在高海拔的使用，理解氧气沸点也受气压影响。",
+        "mapped_elements": [
+          "m4"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "小刘用水壶在不同海拔做实验，记录沸腾温度变化。",
+        "mapped_elements": [
+          "m5"
+        ]
+      },
+      {
+        "beat_id": "b6",
+        "event": "登山队用铁锅煮水，发现铁锅导热快但沸腾温度仍低。",
+        "mapped_elements": [
+          "m6"
+        ]
+      },
+      {
+        "beat_id": "b7",
+        "event": "使用铝饭盒加热，同样出现沸腾温度低的问题。",
+        "mapped_elements": [
+          "m7"
+        ]
+      },
+      {
+        "beat_id": "b8",
+        "event": "老陈展示气压图，总结气压与沸腾温度的关系，小刘恍然大悟。",
+        "mapped_elements": [
+          "m8",
+          "m1"
+        ]
+      }
+    ],
+    "turning_point": "小刘在高海拔营地发现水沸腾时温度计显示不到80°C，食物无法煮熟，队员体力下降，他意识到必须理解气压对沸腾温度的影响才能调整烹饪方法。",
+    "ending": "小刘根据老陈的指导，使用高压锅在高海拔成功煮熟食物，登山队顺利完成攀登。",
+    "implied_moral": "外部条件（如气压）改变时，物质发生剧烈汽化的温度也会改变，只有掌握这一规律才能适应环境变化。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "biology_7a_rjb_cpt11",
+  "method": "con2fable",
+  "concept": {
+    "name": "细胞",
+    "aliases": [
+      "cell"
+    ],
+    "forbidden_terms": [
+      "细胞",
+      "cell"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "与相关概念保持可解释关系：组织",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m3",
+        "text": "与相关概念保持可解释关系：细胞是基本的生命系统",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：细胞是生命活动的基本单位",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：病毒",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14135"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14137"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14136"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17836"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "在繁忙的建筑工地上，一座大型图书馆正在建设中。工地上堆满了各种材料，其中最显眼的是一堆堆红色的砖块。\n\n这些砖块个个都觉得自己了不起。一块方方正正的砖头骄傲地说：“瞧我多结实，我一个人就能撑起一片天！”其他砖块纷纷附和：“没错，我们每个都是完美的，根本不需要别人帮忙。”于是，它们各自躺在工地的角落里，谁也不理谁。\n\n工人们试图用它们砌墙，可砖块们拒绝被水泥粘在一起。“我才不要和那些黏糊糊的家伙混在一起！”一块砖头扭动着身体，从水泥浆里跳了出来。结果，工人们只能把砖块一块块单独摆放，可一阵风吹过，它们就东倒西歪，根本无法形成任何结构。\n\n这时，水泥温和地说：“朋友们，你们每个确实都很坚固，但只有我们结合在一起，才能发挥真正的力量。”砖块们半信半疑，但还是让水泥把它们粘在了一起。奇迹发生了——当砖块们手拉手、肩并肩时，它们变成了一面结实的墙体，稳稳地站立起来。\n\n墙体们开始互相支撑，形成了图书馆的骨架。一面墙说：“原来我们单独的时候，连自己都站不稳，现在却能撑起这么大的空间！”另一面墙回答：“是啊，但我们还需要屋顶，才能为书籍遮风挡雨。”\n\n屋顶被吊装到墙体之上，图书馆终于有了完整的空间。砖块、水泥、墙体共同构成了一个能存放知识的整体。每一块砖都找到了自己的位置，每一滴水泥都发挥了连接的作用。\n\n在施工过程中，脚手架一直默默地帮助工人们搭建高处。但当图书馆建成后，脚手架被拆除了。它虽然重要，却并非建筑本身的一部分。\n\n图书馆顺利落成，砖块们终于明白：独立的基本单元只有通过有序的连接和协作，才能构成具有完整功能的整体。而辅助物虽重要，但并非主体本身。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "砖块",
+        "evidence": "砖块们终于明白：独立的基本单元只有通过有序的连接和协作，才能构成具有完整功能的整体。",
+        "narrative_anchor": "砖块"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "墙体",
+        "evidence": "当砖块们手拉手、肩并肩时，它们变成了一面结实的墙体",
+        "narrative_anchor": "墙体"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "图书馆的骨架（墙体支撑空间）",
+        "evidence": "墙体们开始互相支撑，形成了图书馆的骨架。一面墙说：原来我们单独的时候，连自己都站不稳，现在却能撑起这么大的空间！",
+        "narrative_anchor": "图书馆的骨架"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "完整的图书馆（能存放知识的整体）",
+        "evidence": "图书馆终于有了完整的空间。砖块、水泥、墙体共同构成了一个能存放知识的整体。",
+        "narrative_anchor": "完整的图书馆"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "脚手架",
+        "evidence": "在施工过程中，脚手架一直默默地帮助工人们搭建高处。但当图书馆建成后，脚手架被拆除了。它虽然重要，却并非建筑本身的一部分。",
+        "narrative_anchor": "脚手架"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "砖块通过水泥结合形成墙体",
+        "evidence": "当砖块们手拉手、肩并肩时，它们变成了一面结实的墙体",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "砖块们手拉手、肩并肩"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "墙体互相支撑形成图书馆骨架",
+        "evidence": "墙体们开始互相支撑，形成了图书馆的骨架",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "墙体们开始互相支撑"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "图书馆骨架加上屋顶形成完整空间",
+        "evidence": "屋顶被吊装到墙体之上，图书馆终于有了完整的空间",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "屋顶被吊装到墙体之上"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "完整图书馆建成后脚手架被拆除，说明脚手架是辅助物而非主体",
+        "evidence": "但当图书馆建成后，脚手架被拆除了。它虽然重要，却并非建筑本身的一部分。",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "脚手架被拆除了"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "biology",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

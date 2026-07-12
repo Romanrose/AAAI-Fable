@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "入口条件已核",
+      "narrative_anchor": "入口条件已核",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "避免目的论解释",
+      "evidence": "顺序不能颠倒",
+      "narrative_anchor": "顺序不能颠倒",
+      "confidence": 0.85
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "避免把个体努力写成进化原因",
+      "evidence": "颠倒就断了",
+      "narrative_anchor": "颠倒就断了",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第二道转化环节",
+      "evidence": "入口条件没定，这步就站不住",
+      "narrative_anchor": "入口条件没定，这步就站不住",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先稳定第二道转化环节，再推动结果验收记录",
+      "evidence": "顺序不能颠倒",
+      "narrative_anchor": "顺序不能颠倒",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.95
+    }
+  ]
+}

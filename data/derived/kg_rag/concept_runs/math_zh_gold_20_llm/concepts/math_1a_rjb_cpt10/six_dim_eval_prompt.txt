@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "小于号含义",
+  "concept_id": "math_1a_rjb_cpt10",
+  "concept_definition": "表示前面的数量比后面的数量少。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt10",
+    "小于号含义"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt10",
+      "label": "Concept",
+      "name": "小于号含义",
+      "definition": "表示前面的数量比后面的数量少。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "小于号含义\n表示前面的数量比后面的数量少。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt8",
+          "label": "Concept",
+          "name": "等号含义",
+          "definition": "表示两边数量相同。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "math_1a_rjb_cpt8",
+          "label": "Concept",
+          "name": "等号含义",
+          "definition": "表示两边数量相同。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch3",
+          "label": "Chapter",
+          "name": "5以内数的认识和加减法",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt10",
+    "concept_id": "math_1a_rjb_cpt10",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt10",
+      "label": "Concept",
+      "name": "小于号含义",
+      "definition": "表示前面的数量比后面的数量少。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：表示前面的数量比后面的数量少。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "小于号含义"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "表示前面的数量比后面的数量少。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事中隐含的核心规则：左边宝石数量少于右边宝石数量，即前面的数量比后面的数量少。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "通过小方观察天平平衡但实际数量不等的事件链，揭示左边数量少于右边的规律。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保留了形式定义条件（天平平衡不等于数量相等），规则一致性（每次左边都少于右边），避免道德化，且数学结构通过比较数量体现。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：天平城的秘密\n\n在遥远的规则谜城里，有一座天平城。城里有一架巨大的天平，每天清晨，守城人都会往左右托盘里放上不同数量的宝石，让居民们观察天平的状态。天平从不倾斜，只显示左右两边的重量是否相等。\n\n一天，新来的学徒小方被派去记录天平的状态。他看见左边有3颗红宝石，右边有5颗蓝宝石，天平稳稳地保持平衡。小方疑惑地问守城人：“明明左边宝石少，右边宝石多，天平为什么不动？”守城人微微一笑，没有回答，只是让他继续观察。\n\n第二天，左边放了2颗红宝石，右边放了4颗蓝宝石，天平依然平衡。小方更困惑了。第三天，左边1颗，右边3颗，天平还是不动。小方忍不住说：“每次左边都比右边少，天平却总显示相等，这太奇怪了！”\n\n守城人这才开口：“你只看到了宝石的数量，却没注意天平的秘密。其实，天平只负责比较两边是否一样多，它不会告诉你哪边多哪边少。要发现真正的规则，你需要自己思考：当左边数量少于右边时，天平虽然显示平衡，但实际关系是‘前面的数量比后面的数量少’。”\n\n小方恍然大悟。他重新观察：左边3颗，右边5颗，左边确实比右边少；左边2颗，右边4颗，也是左边少；左边1颗，右边3颗，还是左边少。原来，每次天平显示平衡时，左边宝石的数量都小于右边。这个隐藏的规则，就是“前面的数量比后面的数量少”。\n\n从此，小方不再只看天平，而是自己比较两边的数量。他明白了：有些规则不会直接显示，需要用心去发现。",
+  "rule_findings": {
+    "story_token_count": 504,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

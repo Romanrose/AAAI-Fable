@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 1,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story fails to explicitly map the mechanism node n2 (物质的变化) as a distinct process; it only describes the seed's growth without naming or framing it as a generalizable change process. The edge e1 (enables) is not clearly shown as a causal relation between the entity and the process; the story merely narrates sequential events without establishing that the entity enables the process. This makes the mapping weaker than a story that explicitly states '种子作为物质，其变化过程就是物质的变化' and uses causal language like '因为种子吸收了水分，所以萌发过程开始了'."
+  },
+  "revision_instructions": [
+    "Explicitly state that the seed is a form of matter (物质) and its germination is an instance of material change (物质的变化).",
+    "Add a sentence clarifying that the seed's absorption of water enables the germination process, e.g., '种子吸收水分这一行为，使得萌发过程得以启动'.",
+    "Ensure the story length is within 450-750 Chinese characters (current 545 is valid).",
+    "Increase node_coverage and edge_coverage to at least 0.8 by explicitly referencing both mechanism nodes and the edge in the story text."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

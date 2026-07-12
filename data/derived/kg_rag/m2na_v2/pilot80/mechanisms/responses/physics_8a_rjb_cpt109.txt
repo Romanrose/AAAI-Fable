@@ -1,0 +1,57 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "实像可由光屏承接",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt109:definition"]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "虚像不能由光屏承接，需要从透镜方向观察",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt109:definition"]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "像的正倒与大小",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt110:definition"]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": ["kg-node:physics_8a_rjb_cpt109:definition"]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": ["kg-edge:normalized:edge:19713"]
+      },
+      {
+        "id": "e3",
+        "source": "n2",
+        "target": "n3",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": ["kg-edge:normalized:edge:19713"]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": ["n1", "n2", "n3"],
+    "must_preserve_edge_ids": ["e1", "e2", "e3"]
+  }
+}

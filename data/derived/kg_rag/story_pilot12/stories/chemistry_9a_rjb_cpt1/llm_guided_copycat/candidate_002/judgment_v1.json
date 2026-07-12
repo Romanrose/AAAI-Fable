@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 3,
+    "mapping_clarity": 2,
+    "readability": 5,
+    "pedagogical_value": 2,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story richly depicts the entity '生面团' (n1) but fails to clearly map the process '物质的变化' (n2) to a specific, identifiable cooking operation that causes the change. The edge 'enables' is only weakly supported because the story does not explicitly show that the cooking operation (e.g., heating) is the enabling condition for the transformation; instead, the transformation appears to happen spontaneously after a series of steps. This makes the mapping less observable than a story where a single, clear operation (e.g., '放入烤箱') is directly linked to the change."
+  },
+  "revision_instructions": [
+    "Strengthen the mapping of node n2 by explicitly naming a specific cooking operation (e.g., '烘烤' or '加热') as the process that causes the change, rather than a vague '厨师的烹饪操作'.",
+    "Clarify the edge e1 by showing a direct causal link: e.g., '因为王伯将面团放入烤箱烘烤，所以生面团变成了面包'.",
+    "Ensure the story's turning point ('面团被放入烤箱') is explicitly tied to the process node and the enabling relation, not just mentioned as a step."
+  ],
+  "final_status": "revise"
+}

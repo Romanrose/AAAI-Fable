@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "The story accurately conveys the core mechanism of living things: needing nutrition, respiration, waste excretion, response to stimuli, growth, reproduction, heredity, and variation. It also correctly notes that except for viruses, living things are composed of cells. The causal chain is preserved without contradiction.",
+    "implicitness": "The story body and title do not contain any forbidden terms (生物, 生命体) or aliases. The concept is taught entirely through the analogy of observing bean sprouts and the inspection checklist, requiring inference.",
+    "mapping_clarity": "The alignment table clearly maps the target concept, core mechanism, and subject constraints to story elements. The checklist items correspond to the life characteristics, and the teacher's guidance avoids teleological explanations. However, the mapping of 'cells' is only mentioned in the teacher's summary, not explicitly shown in the story events.",
+    "readability": "The story is a natural, coherent Chinese narrative with a clear conflict-resolution arc. It is age-appropriate for middle school students, with smooth dialogue and descriptive passages that maintain engagement.",
+    "pedagogical_value": "The story effectively guides learners to understand the complete chain of conditions, processes, and results for identifying living things. It supports post-story reflection and avoids common misconceptions like teleology. However, the explicit mention of 'cells' could be more integrated into the narrative.",
+    "novelty": "The rooftop greenhouse setting and the inspection checklist analogy are specific and uncommon. The story avoids generic templates like wise elders or villages, and the conflict (surface results vs. systematic verification) is concrete."
+  },
+  "revision_suggestions": [
+    "Integrate the concept of cells more naturally into the story events, e.g., by having the apprentice observe cells under a microscope or discuss the cellular basis of growth.",
+    "Consider adding a brief moment where the apprentice checks for waste excretion more explicitly, such as observing root secretions or leaf transpiration in a visible way."
+  ]
+}

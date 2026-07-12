@@ -1,0 +1,15 @@
+{
+  "schema_version": "m2na-concept-seed/v1",
+  "concept_id": "biology_7a_rjb_cpt1",
+  "subject": "biology",
+  "canonical_name": "生物",
+  "aliases": [
+    "生命体"
+  ],
+  "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+  "concept_type": "definition",
+  "forbidden_terms": [
+    "生物",
+    "生命体"
+  ]
+}

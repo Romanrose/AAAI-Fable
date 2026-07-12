@@ -1,0 +1,46 @@
+{
+  "query": "physics_8a_rjb_cpt118",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt118",
+    "label": "Concept",
+    "name": "透镜焦度",
+    "definition": "透镜焦距的倒数，用Φ表示，反映透镜折光本领。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "透镜焦度\n透镜焦距的倒数，用Φ表示，反映透镜折光本领。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt116",
+        "label": "Concept",
+        "name": "近视眼及矫正",
+        "definition": "由于折光过强或眼球过长，远处物体成像在视网膜前；用凹透镜矫正。"
+      },
+      {
+        "id": "physics_8a_rjb_cpt117",
+        "label": "Concept",
+        "name": "远视眼及矫正",
+        "definition": "由于折光不足或眼球过短，近处物体成像在视网膜后；用凸透镜矫正。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s4",
+        "label": "Section",
+        "name": "第四节 眼睛和眼镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

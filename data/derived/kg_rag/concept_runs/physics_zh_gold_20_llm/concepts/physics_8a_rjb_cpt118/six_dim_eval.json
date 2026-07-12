@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt118",
+  "target_concept": "透镜焦度",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "weighted_overall": 4.75,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过圆片（透镜）的折光本领与距离（焦距）的反比关系，准确映射了透镜焦度是焦距的倒数的核心定义，无概念矛盾。",
+    "implicitness": "故事未直接使用'透镜焦度'或'焦距'等术语，而是用'距离'和'折光本领'隐含表达，但结尾稍显直白地提到了'倒数'，略微降低了隐含性。",
+    "mapping_clarity": "距离与折光本领的反比关系清晰对应焦距与焦度的关系，阿明的观察和总结使映射明确易懂。",
+    "readability": "语言流畅自然，情节简单连贯，适合目标读者理解，无冗余或晦涩表达。",
+    "pedagogical_value": "通过具体实验和量化观察（半米、一米、两米）生动展示了反比关系，并引导读者理解焦度的本质，教学效果强。",
+    "novelty": "以钟楼管理员和光斑实验为场景，将抽象概念融入日常观察，有一定新颖性，但反比关系是常见类比。"
+  },
+  "revision_suggestions": [
+    "可进一步避免在结尾直接点明'倒数'，让读者自行从数据中归纳出反比关系。",
+    "可增加一个角色误解或冲突情节，以增强故事的转折和教学深度。"
+  ],
+  "rule_findings": {
+    "story_token_count": 523,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 4,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 4
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过圆片（透镜）的折光本领与距离（焦距）的反比关系，准确映射了透镜焦度是焦距的倒数的核心定义，无概念矛盾。",
+      "implicitness": "故事未直接使用'透镜焦度'或'焦距'等术语，而是用'距离'和'折光本领'隐含表达，但结尾稍显直白地提到了'倒数'，略微降低了隐含性。",
+      "mapping_clarity": "距离与折光本领的反比关系清晰对应焦距与焦度的关系，阿明的观察和总结使映射明确易懂。",
+      "readability": "语言流畅自然，情节简单连贯，适合目标读者理解，无冗余或晦涩表达。",
+      "pedagogical_value": "通过具体实验和量化观察（半米、一米、两米）生动展示了反比关系，并引导读者理解焦度的本质，教学效果强。",
+      "novelty": "以钟楼管理员和光斑实验为场景，将抽象概念融入日常观察，有一定新颖性，但反比关系是常见类比。"
+    },
+    "revision_suggestions": [
+      "可进一步避免在结尾直接点明'倒数'，让读者自行从数据中归纳出反比关系。",
+      "可增加一个角色误解或冲突情节，以增强故事的转折和教学深度。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

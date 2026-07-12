@@ -1,0 +1,72 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt27",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "两个果园的果实比较",
+  "characters": [
+    "果园主人",
+    "小果园（6棵树）",
+    "大果园（7棵树）"
+  ],
+  "objects": [
+    "6棵果树",
+    "7棵果树",
+    "比较的符号（天平或量尺）"
+  ],
+  "conflict": "果园主人需要比较两个果园的果树数量，以决定哪个果园需要更多照料，但两个果园的果树数量不同，需要一种方法来确定大小关系。",
+  "event_chain": [
+    "果园主人分别清点小果园和大果园的果树数量，小果园有6棵，大果园有7棵。",
+    "果园主人用天平或量尺来比较两个果园的果树数量，发现7棵比6棵多。",
+    "果园主人根据比较结果，决定对大果园投入更多照料资源。"
+  ],
+  "turning_point": "果园主人通过比较工具发现7棵果树多于6棵，从而明确了大小关系。",
+  "resolution_state": "果园主人成功比较出大果园果树数量更多，并据此分配照料资源。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小果园（6棵树）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大果园（7棵树）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "果园主人用天平或量尺比较两个果园的果树数量",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "果园主人的比较过程涉及小果园的6棵树",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "果园主人的比较过程涉及大果园的7棵树",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现“数量的比较”或任何数字比较的术语，仅通过果园的果树数量差异体现比较。",
+    "注意故事中比较过程是因果机制，而非课程桥接上下文。",
+    "所有节点和边均已映射，且方向保持一致。"
+  ],
+  "mapping_context_sha256": "c860fa62cf8bcb3e56c868bb1d59eaf3ddc22e992849da228effeb77f67098bd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d66854da049e5ae3185551bd440537a7a321f202a13d13615b9f68a5091329d0"
+  }
+}

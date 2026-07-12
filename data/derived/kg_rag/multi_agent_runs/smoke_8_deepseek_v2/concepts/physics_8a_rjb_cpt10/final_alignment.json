@@ -1,0 +1,64 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "判断物体运动或静止时所选取的标准物体。",
+      "evidence": "以闸门为基准",
+      "narrative_anchor": "以闸门为基准",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "需要先满足或理解：运动与静止的相对性",
+      "evidence": "标准不同，结论自然不同",
+      "narrative_anchor": "标准不同，结论自然不同",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "与相关概念保持关系：机械运动 与 参照物",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n4",
+      "narrative_element": "与相关概念保持关系：运动与静止的相对性 与 参照物",
+      "evidence": "维修工老李正站在水渠B的检修桥上，他看了一眼身边的流速仪，又看看水渠C，反驳道：",
+      "narrative_anchor": "维修工老李正站在水渠B的检修桥上，他看了一眼身边的流速仪，又看看水渠C，反驳道：",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "总调度员指出参照物不同导致结论不同，引出相对性概念",
+      "evidence": "他立刻在对讲机里喊：“水渠C的水流在运动，需要调整闸门开度！",
+      "narrative_anchor": "他立刻在对讲机里喊：“水渠C的水流在运动，需要调整闸门开度！",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "相对性概念引出机械运动与参照物的关系",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "机械运动与参照物的关系进一步体现运动与静止的相对性依赖于参照物",
+      "evidence": "维修工老李正站在水渠B的检修桥上，他看了一眼身边的流速仪，又看看水渠C，反驳道：",
+      "narrative_anchor": "维修工老李正站在水渠B的检修桥上，他看了一眼身边的流速仪，又看看水渠C，反驳道：",
+      "narrative_source_concept_node_id": "n3",
+      "narrative_target_concept_node_id": "n4",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ]
+}

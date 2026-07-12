@@ -1,0 +1,85 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt108",
+  "target_concept": "加热氯酸钾制取氧气",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确体现了氯酸钾（白色粉末）在二氧化锰（黑色粉末）催化下加热分解生成氧气（使蜡烛复燃的气体）和氯化钾（白色残渣）的核心机制，且催化剂在反应前后不变，质量守恒，完全符合概念定义。",
+    "implicitness": "目标概念名称和所有禁止术语均未在故事正文中出现，核心机制完全通过比喻和情节隐含表达，无任何直接泄露。",
+    "mapping_clarity": "白色粉末→氯酸钾、黑色粉末→二氧化锰、气体→氧气、残渣→氯化钾、加热→火上烤、催化剂作用→帮助分解但自身不变，映射清晰且一致，读者能自然对应。",
+    "readability": "故事语言流畅自然，情节完整，人物动机合理，适合目标年龄段阅读，无生硬说教或术语堆砌。",
+    "pedagogical_value": "通过实验对比（加与不加黑色粉末）和观察发现催化剂作用，并强调质量守恒，教学逻辑清晰，能有效引导读者理解分解反应和催化剂概念。",
+    "novelty": "采用账房学徒的日常观察作为叙事框架，虽有一定新意，但整体结构（实验-困惑-发现）在同类教育故事中较为常见，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可考虑增加一个情节，展示黑色粉末在反应后质量不变，以更明确强化催化剂特性。",
+    "可加入一个对比实验，如用其他粉末代替黑色粉末，进一步突出二氧化锰的独特性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 670,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确体现了氯酸钾（白色粉末）在二氧化锰（黑色粉末）催化下加热分解生成氧气（使蜡烛复燃的气体）和氯化钾（白色残渣）的核心机制，且催化剂在反应前后不变，质量守恒，完全符合概念定义。",
+      "implicitness": "目标概念名称和所有禁止术语均未在故事正文中出现，核心机制完全通过比喻和情节隐含表达，无任何直接泄露。",
+      "mapping_clarity": "白色粉末→氯酸钾、黑色粉末→二氧化锰、气体→氧气、残渣→氯化钾、加热→火上烤、催化剂作用→帮助分解但自身不变，映射清晰且一致，读者能自然对应。",
+      "readability": "故事语言流畅自然，情节完整，人物动机合理，适合目标年龄段阅读，无生硬说教或术语堆砌。",
+      "pedagogical_value": "通过实验对比（加与不加黑色粉末）和观察发现催化剂作用，并强调质量守恒，教学逻辑清晰，能有效引导读者理解分解反应和催化剂概念。",
+      "novelty": "采用账房学徒的日常观察作为叙事框架，虽有一定新意，但整体结构（实验-困惑-发现）在同类教育故事中较为常见，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可考虑增加一个情节，展示黑色粉末在反应后质量不变，以更明确强化催化剂特性。",
+      "可加入一个对比实验，如用其他粉末代替黑色粉末，进一步突出二氧化锰的独特性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "不同金属（铁、铜）在熔炉中达到液态后，开始剧烈沸腾（汽化）的那个温度点，以及这个温度点会随着天气（气压）变化而改变，是学徒小铁需要掌握的关键知识。",
+      "evidence": "铁匠铺里，老陈让小铁把铁块扔进熔铁炉，准备浇铸一个新铁砧。",
+      "narrative_anchor": "铁匠铺里，老陈让小铁把铁块扔进熔铁炉，准备浇铸一个新铁砧。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

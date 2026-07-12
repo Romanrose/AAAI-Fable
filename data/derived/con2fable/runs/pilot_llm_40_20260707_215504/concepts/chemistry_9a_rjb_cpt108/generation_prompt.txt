@@ -1,0 +1,138 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "加热氯酸钾制取氧气"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "在混有二氧化锰的氯酸钾固体中加热，使氯酸钾分解生成氯化钾和氧气，二氧化锰在反应中起催化剂作用。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：分解反应",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：实验室制取氧气的方法",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11281"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_11280"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "厨房烘焙",
+    "setting": "在一间家庭厨房里，烘焙师正在准备制作一种需要大量气体的蓬松蛋糕。",
+    "conflict": "烘焙师需要一种稳定、快速产生气体的方法，但手头只有一种固体粉末（小苏打），它自己加热时分解很慢，产生的气体不足以让蛋糕蓬松。",
+    "characters": [
+      {
+        "name": "烘焙师",
+        "role": "操作者，负责混合和加热材料",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "小苏打粉末",
+        "role": "主要反应物，加热后分解产生气体和另一种固体",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "神秘黑粉",
+        "role": "催化剂，自身不消耗但能加速小苏打的分解",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "蛋糕糊",
+        "role": "最终产物，需要气体来膨胀",
+        "mapped_element": "m3"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "烘焙师将小苏打粉末与少量神秘黑粉混合，然后放入烤箱加热"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "小苏打分解产生气体和另一种白色固体（分解反应）"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "产生的气体使蛋糕糊膨胀，形成蓬松的蛋糕（实验室制取气体的方法类比）"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "烘焙师将小苏打粉末倒入碗中，但加热后只产生少量气泡，蛋糕糊几乎不膨胀。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "烘焙师想起一个秘诀：在碗中加入一小撮神秘黑粉，与小苏打粉末充分混合。",
+        "mapped_elements": [
+          "m1"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "将混合后的粉末放入烤箱加热，大量气泡迅速产生，蛋糕糊快速膨胀。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b4",
+        "event": "烘焙师取出蛋糕，发现神秘黑粉仍然留在碗底，没有减少，而小苏打已经变成了另一种白色固体。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b5",
+        "event": "蛋糕蓬松成功，烘焙师明白了：神秘黑粉自己没变，却让小苏打更快地完成了分解。",
+        "mapped_elements": [
+          "m2",
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "烘焙师加入神秘黑粉后，原本缓慢的产气过程突然变得快速而稳定，蛋糕糊开始剧烈膨胀。",
+    "ending": "蛋糕出炉，蓬松完美。烘焙师将神秘黑粉小心收集起来，知道它下次还能再用。",
+    "implied_moral": "有时候，一个不起眼的帮手自己不会改变，却能大大加速关键过程的完成，让最终成果更出色。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

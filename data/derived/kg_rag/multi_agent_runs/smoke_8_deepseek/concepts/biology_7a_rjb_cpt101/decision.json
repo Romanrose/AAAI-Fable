@@ -1,0 +1,31 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 1.0,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "候选001在覆盖机制节点和机制边方面表现最佳，故事自然流畅，通过检疫官对木箱的细致检查，隐喻了概念中的关键机制，且未泄露目标概念。其指标显示无泄漏、全覆盖和高对齐，六维评分均为5，叙事长度适中，优于其他候选。",
+    "risk_notes": [
+      "候选002和003虽指标相近，但候选001的故事更贴合检疫场景，隐喻更自然，风险最低。"
+    ]
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

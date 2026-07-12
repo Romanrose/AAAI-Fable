@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事完整映射了种子萌发的定义：小颗粒在适宜条件下吸水（浇水）、利用内部营养（自身完好）、胚根胚芽发育（破土成苗），无任何矛盾之处。",
+    "implicitness": "全文未出现'种子萌发'或'biology_7a_rjb_cpt101'，用'小颗粒'、'幼苗'等替代，完全隐含目标概念。",
+    "mapping_clarity": "通过阿明的观察，清晰映射了环境条件（水分、温度、空气）和自身条件（颗粒完整），但埋土深度与空气的关联可更明确。",
+    "readability": "语言流畅自然，情节连贯，适合目标年龄段阅读，无生硬术语。",
+    "pedagogical_value": "通过故事中的观察和转折，有效传递了种子萌发的条件性和过程性，能引导学生理解生命系统的条件依赖。",
+    "novelty": "以园圃观察为框架，虽常见但细节处理（如埋深、阴冷对比）有一定新意，整体新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可更明确暗示埋土深度与空气（氧气）的关系，例如提到'土太紧实'。",
+    "结尾可稍加强调'利用贮藏营养'这一内部机制，例如提及小颗粒'消耗自身储备'。"
+  ]
+}

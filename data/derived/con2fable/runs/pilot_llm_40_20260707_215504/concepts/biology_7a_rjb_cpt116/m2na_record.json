@@ -1,0 +1,71 @@
+{
+  "id": "biology_7a_rjb_cpt116",
+  "method": "con2fable",
+  "concept": {
+    "name": "异花传粉",
+    "aliases": [],
+    "forbidden_terms": [
+      "异花传粉"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "花粉在外力作用下落到另一朵花柱头上的传粉方式，通常需要媒介如风或昆虫。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要保留上下位关系：传粉",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_10779"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "在一片开阔的苹果园里，种着两排苹果树。一排是红富士，花朵粉嫩；另一排是青香蕉，花朵淡绿。它们的花期相同，但彼此相隔一段距离。\n\n红富士树上的花粉粒成熟了，它们挤在花药上，焦急地张望着。“我们得去青香蕉树的花柱头上，才能让果实长出来。”一粒花粉粒说。可是，它们没有腿，不会飞，也不会走，只能待在原地，等待机会。\n\n一天，阳光明媚，一只蜜蜂飞来了。它嗡嗡地落在红富士的花上，钻进花心采蜜。花粉粒们高兴极了，纷纷粘在蜜蜂毛茸茸的腿上和背上。“带我们走吧！”它们喊道。蜜蜂采完蜜，振翅飞起，径直朝青香蕉树飞去。\n\n蜜蜂在青香蕉的花上停留，花粉粒趁机滑落，粘在了那湿润的柱头上。就在这时，一阵风吹过，卷起更多红富士的花粉粒，把它们吹向空中。花粉粒们随风飘荡，像一群小小的尘埃，最终也落到了青香蕉花的柱头上。\n\n青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。不久，青香蕉树上挂满了饱满的果子，红富士树也通过这种方式完成了自己的使命。整个果园里，不同品种的苹果树都结出了累累硕果。\n\n蜜蜂嗡嗡地飞走了，风也停了。花粉粒们终于明白：有些路，自己走不了，就需要借助别人的翅膀或风的力量，才能到达该去的地方。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "花粉在外力作用下落到另一朵花柱头上的传粉方式",
+        "evidence": "蜜蜂在青香蕉的花上停留，花粉粒趁机滑落，粘在了那湿润的柱头上。就在这时，一阵风吹过，卷起更多红富士的花粉粒，把它们吹向空中。花粉粒们随风飘荡，像一群小小的尘埃，最终也落到了青香蕉花的柱头上。",
+        "narrative_anchor": "蜜蜂在青香蕉的花上停留，花粉粒趁机滑落，粘在了那湿润的柱头上。就在这时，一阵风吹过，卷起更多红富士的花粉粒，把它们吹向空中。花粉粒们随风飘荡，像一群小小的尘埃，最终也落到了青香蕉花的柱头上。"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "传粉",
+        "evidence": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。",
+        "narrative_anchor": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "异花传粉是传粉的一种方式",
+        "evidence": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "青香蕉花的柱头接纳了这些远道而来的花粉粒，它们融合在一起，开始孕育果实。"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "biology",
+    "story_language": "zh-CN",
+    "concept_type": "process",
+    "generation_priority": "gold"
+  }
+}

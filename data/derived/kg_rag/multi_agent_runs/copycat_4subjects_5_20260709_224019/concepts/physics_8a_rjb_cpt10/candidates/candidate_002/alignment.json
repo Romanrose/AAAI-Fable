@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "确认固定站台是否静止",
+      "narrative_anchor": "确认固定站台是否静止",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "转化环节",
+      "evidence": "小车滑行距离",
+      "narrative_anchor": "小车滑行距离",
+      "confidence": 0.9
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "记录才能互相印证",
+      "narrative_anchor": "记录才能互相印证",
+      "confidence": 0.85
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先确认入口条件，再填入转化环节",
+      "evidence": "先确认入口条件牌，再填入转化环节的数值",
+      "narrative_anchor": "先确认入口条件牌，再填入转化环节的数值",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "两份记录共同约束最后判断",
+      "evidence": "第一栏和第二栏的记录并排摊开",
+      "narrative_anchor": "第一栏和第二栏的记录并排摊开",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ]
+}

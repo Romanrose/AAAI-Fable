@@ -1,0 +1,71 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt25",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个关于种树和收获果实的寓言",
+  "characters": [
+    "老农",
+    "小徒弟"
+  ],
+  "objects": [
+    "六棵果树苗",
+    "土地",
+    "工具（铲子、水壶）"
+  ],
+  "conflict": "小徒弟想直接收获果实，但老农告诉他必须先认识每棵树苗并学会如何将它们分开或组合种植，才能最终收获六棵树的果实。",
+  "event_chain": [
+    "老农拿出六棵果树苗，让小徒弟先认识每棵树苗的样子、数量，并理解六棵树苗代表的总数。",
+    "小徒弟学会了将六棵树苗分成两组（如3和3、4和2）或从两组合成六棵，掌握了分与合的方法。",
+    "基于前两步，小徒弟能够进行所有与六相关的加减操作，例如种下5棵再加1棵得到6棵，或从6棵中移走1棵剩下5棵，从而掌握六的加减法。"
+  ],
+  "turning_point": "小徒弟从只关注果实转变为先学习认识树苗和分合方法，从而能够灵活处理六棵树的加减。",
+  "resolution_state": "小徒弟成功掌握了六棵树的加减法，能够根据需求调整树苗数量，最终收获果实。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "认识六棵果树苗的数量、样子和总数",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "掌握将六棵树苗分成两组或从两组合成六棵的方法",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "进行所有与六相关的加减操作，如5+1=6、6-1=5等",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "认识树苗是进行加减操作的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "掌握分合方法是进行加减操作的前提条件",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'6的加减法'或任何数字运算术语，仅用种树和分合动作隐喻。",
+    "避免将课程桥接上下文（如教学步骤）误当作因果机制。",
+    "保持所有映射节点和边的方向与机制图一致。"
+  ],
+  "mapping_context_sha256": "3e8812793dacbbe55d9fafa3add6f8526f0c81fe4b43f2423498fd45261250c7",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "a5a3cff5a86e104267facb1acd03f428d34ccc53a6ef85f201a1501c850e627e"
+  }
+}

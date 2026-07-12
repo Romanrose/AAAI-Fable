@@ -1,0 +1,107 @@
+{
+  "id": "physics_8a_rjb_cpt101",
+  "method": "con2fable-multi-agent",
+  "concept": {
+    "name": "焦距",
+    "aliases": [],
+    "forbidden_terms": [
+      "焦距"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "text": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。",
+        "weight": 1.0,
+        "source": "core_mechanism_zh"
+      },
+      {
+        "id": "n2",
+        "text": "保留变量之间的关系。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      },
+      {
+        "id": "n3",
+        "text": "避免把自然规律写成角色主观意志。",
+        "weight": 0.85,
+        "source": "must_preserve_zh"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:17247",
+        "source_name": "光心",
+        "target_name": "焦距",
+        "relation_semantic_role": "prerequisite"
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "leads_to",
+        "weight": 1.0,
+        "kg_relation": "prerequisites_for",
+        "source_edge_id": "normalized:edge:17190",
+        "source_name": "焦距",
+        "target_name": "凸透镜成像规律",
+        "relation_semantic_role": "prerequisite"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "滑道试验场今天要验证一套新流程。记录员翻开分段记录册，发现第一页的入口条件核对栏还空着。调度员催促他赶紧登记后面的数据，说验收员等着用结果。\n\n记录员没有动笔。他走到试验场入口，仔细检查那块前置条件牌——上面刻着滑道起点到第一个转折点的距离，以及一组固定的偏转角参数。他掏出测量尺，把数值重新核对了一遍，确认无误后才在记录册第一行写下数字。\n\n“浪费什么时间？”调度员不耐烦地把第二份记录册塞过来，“先把转化环节的数据填上，反正后面还要改。”\n\n记录员摇头：“入口条件没定，转化环节的数据就不知道往哪个方向写。”\n\n他把两份记录册摊在桌上，让入口条件栏与转化环节栏并排。他发现，前者的数值直接决定了转化环节中一项关键系数的取值——一个变大，另一个必须跟着变。这是它们之间固有的关系，不是谁拍脑袋能改的。\n\n调度员试着倒过来填：先写转化环节的系数，再回头凑入口条件。结果数值栏里出现了矛盾——同一个系数在两个环节里对不上。验收员看了一眼就扔回来：“这记录互相打架，没法用。”\n\n记录员不慌不忙。他重新从入口条件核对开始，把第一行数值抄进转化环节的公式里，得出正确的系数，再填入验收记录。三个环节的数据像链条一样，一环扣一环地接上了。\n\n验收员翻到最后，点点头：“顺序对了，结果自然就对。”",
+    "node_alignments": [
+      {
+        "concept_node_id": "n1",
+        "narrative_element": "入口条件核对",
+        "evidence": "入口条件核对",
+        "narrative_anchor": "入口条件核对",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n2",
+        "narrative_element": "第2道转化环节",
+        "evidence": "转化环节",
+        "narrative_anchor": "转化环节",
+        "confidence": 0.95
+      },
+      {
+        "concept_node_id": "n3",
+        "narrative_element": "结果验收记录",
+        "evidence": "验收记录",
+        "narrative_anchor": "验收记录",
+        "confidence": 0.9
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+        "evidence": "入口条件没定，转化环节的数据就不知道往哪个方向写",
+        "narrative_anchor": "入口条件没定，转化环节的数据就不知道往哪个方向写",
+        "narrative_source_concept_node_id": "n1",
+        "narrative_target_concept_node_id": "n2",
+        "direction_preserved": true,
+        "confidence": 0.95
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "先稳定第2道转化环节，再推动结果验收记录",
+        "evidence": "把第一行数值抄进转化环节的公式里，得出正确的系数，再填入验收记录",
+        "narrative_anchor": "把第一行数值抄进转化环节的公式里，得出正确的系数，再填入验收记录",
+        "narrative_source_concept_node_id": "n2",
+        "narrative_target_concept_node_id": "n3",
+        "direction_preserved": true,
+        "confidence": 0.95
+      }
+    ]
+  }
+}

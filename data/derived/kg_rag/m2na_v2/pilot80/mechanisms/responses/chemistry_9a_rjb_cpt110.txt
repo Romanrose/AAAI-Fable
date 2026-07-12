@@ -1,0 +1,178 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "催化剂：一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt110:definition",
+          "kg-node:chemistry_9a_rjb_cpt110:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "催化作用：催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition",
+          "kg-node:chemistry_9a_rjb_cpt111:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "二氧化锰的催化作用：二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt112:definition",
+          "kg-node:chemistry_9a_rjb_cpt112:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "酶：由细胞产生的一类对生物体内化学反应具有催化作用的有机化合物，其中绝大多数是蛋白质，被称为生物催化剂。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9b_rjb_cpt265:definition",
+          "kg-node:chemistry_9b_rjb_cpt265:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "化学反应速率：任何化学反应的快慢都表现为有关物质的量随着时间变化的多少，可以用单位时间、单位体积中反应物或生成物的物质的量变化来表示。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_bx2_rjb_cpt128:definition",
+          "kg-node:chemistry_bx2_rjb_cpt128:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "rule",
+        "text": "影响化学反应速率的因素：反应速率首先由反应物的组成、结构和性质决定，还受浓度、压强、温度、催化剂等因素的影响。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_bx2_rjb_cpt129:definition",
+          "kg-node:chemistry_bx2_rjb_cpt129:retrieval_text"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "rule",
+        "text": "催化剂对化学反应速率的影响：在其它条件相同时，加入适当的催化剂可以显著改变化学反应速率，一般是加快反应速率，但不改变反应的方向和总反应结果。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_bx2_rjb_cpt154:definition",
+          "kg-node:chemistry_bx2_rjb_cpt154:retrieval_text"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "process",
+        "text": "通过前后对比分析催化剂作用：设计或利用有无催化剂、催化剂重复使用等对比实验，观察反应速率和催化剂本身变化情况，从而判断某物质是否为催化剂及其作用。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_skl27:description",
+          "kg-node:chemistry_9a_rjb_skl27:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18226"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n5",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18227"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n6",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11282"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11283"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n7",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11716"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n4",
+        "target": "n1",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:18522"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15000"
+        ]
+      },
+      {
+        "id": "e8",
+        "source": "n8",
+        "target": "n1",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15262"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  }
+}
+```

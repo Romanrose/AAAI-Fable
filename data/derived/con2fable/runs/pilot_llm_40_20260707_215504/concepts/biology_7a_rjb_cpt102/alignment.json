@@ -1,0 +1,87 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "黏土塑形需要的外部条件",
+      "evidence": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可，就像任何生命的转变都需要外部条件同时满足",
+      "narrative_anchor": "温水盆的湿润、通风窗的清新空气和炭火炉的温暖"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "一定的水分",
+      "evidence": "温水盆的湿润",
+      "narrative_anchor": "温水盆的湿润"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "充足的空气（氧气）",
+      "evidence": "通风窗的清新空气",
+      "narrative_anchor": "通风窗的清新空气"
+    },
+    {
+      "concept_node_id": "m4",
+      "narrative_element": "种子萌发（黏土塑形）",
+      "evidence": "黏土能塑形",
+      "narrative_anchor": "黏土能塑形"
+    },
+    {
+      "concept_node_id": "m5",
+      "narrative_element": "适宜的温度",
+      "evidence": "炭火炉的温暖",
+      "narrative_anchor": "炭火炉的温暖"
+    },
+    {
+      "concept_node_id": "m6",
+      "narrative_element": "与种子萌发（黏土塑形）相关的外部条件",
+      "evidence": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可",
+      "narrative_anchor": "温水盆的湿润、通风窗的清新空气和炭火炉的温暖"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先提供水分，再提供空气",
+      "evidence": "他先端来一盆温水，将黏土浸泡其中。黏土贪婪地吸收着水分，渐渐变得柔软而有韧性，不再干裂。'还不够，'老陶匠说着，推开了工坊的通风窗。清新的空气涌了进来",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "先端来一盆温水……推开了工坊的通风窗"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "提供水分后，再提供空气",
+      "evidence": "他先端来一盆温水……推开了工坊的通风窗。清新的空气涌了进来",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "先端来一盆温水……推开了工坊的通风窗"
+    },
+    {
+      "concept_edge_id": "e3",
+      "narrative_relation": "提供空气后，再提供温度",
+      "evidence": "推开了工坊的通风窗。清新的空气涌了进来……最后，老陶匠点燃了角落里的炭火炉。温暖的空气在工坊里缓缓流动",
+      "narrative_source_concept_node_id": "m3",
+      "narrative_target_concept_node_id": "m4",
+      "direction_preserved": true,
+      "narrative_anchor": "推开了工坊的通风窗……点燃了角落里的炭火炉"
+    },
+    {
+      "concept_edge_id": "e4",
+      "narrative_relation": "提供温度后，黏土开始塑形",
+      "evidence": "温暖的空气在工坊里缓缓流动，黏土不再因寒冷而僵硬，反而变得温顺听话。'现在，让我们开始吧。'老陶匠洗净双手，将处理好的黏土放在转盘上。他的手指轻轻按压，黏土便顺从地旋转起来，一点一点向上拔高，渐渐显露出优雅的曲线",
+      "narrative_source_concept_node_id": "m4",
+      "narrative_target_concept_node_id": "m5",
+      "direction_preserved": true,
+      "narrative_anchor": "温暖的空气……黏土便顺从地旋转起来，一点一点向上拔高"
+    },
+    {
+      "concept_edge_id": "e5",
+      "narrative_relation": "黏土塑形后，总结外部条件的重要性",
+      "evidence": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可",
+      "narrative_source_concept_node_id": "m5",
+      "narrative_target_concept_node_id": "m6",
+      "direction_preserved": true,
+      "narrative_anchor": "黏土能塑形，离不开温水盆的湿润、通风窗的清新空气和炭火炉的温暖。这三者缺一不可"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "气体收集装置",
+  "concept_id": "chemistry_9a_rjb_cpt125",
+  "concept_definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt125",
+    "气体收集装置"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt125",
+      "label": "Concept",
+      "name": "气体收集装置",
+      "definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。",
+      "aliases": [],
+      "examples": [
+        "“将两个集气瓶分别盛满水, 用玻璃片盖住瓶口, 然后…倒立在盛水的水槽内。”",
+        "用向上排空气法收集密度比空气大的二氧化碳。",
+        "用排水法收集难溶于水的气体。"
+      ],
+      "retrieval_text": "气体收集装置\n实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt122",
+          "label": "Concept",
+          "name": "氧气的实验室制取",
+          "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt327",
+          "label": "Concept",
+          "name": "实验室制取气体的一般思路和方法",
+          "definition": "在实验室制取气体时，从选择化学反应原理、选择合适装置、到验证所得气体的系统方法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt126",
+          "label": "Concept",
+          "name": "排水法收集气体",
+          "definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt328",
+          "label": "Concept",
+          "name": "排空气法收集气体",
+          "definition": "通过新生成的气体把集气容器内原有空气逐渐排出的收集气体方法，包括向上排气法和向下排气法。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt324",
+          "label": "Concept",
+          "name": "二氧化碳的实验室制法",
+          "definition": "在实验室里，用稀盐酸与大理石或石灰石（主要成分为碳酸钙）反应制取二氧化碳气体的化学方法。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s4",
+          "label": "Section",
+          "name": "实验活动1 氧气的实验室制取与性质",
+          "definition": ""
+        },
+        {
+          "id": "chemistry_9a_rjb_ch6_s2",
+          "label": "Section",
+          "name": "课题2 二氧化碳制取的研究",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt125",
+    "concept_id": "chemistry_9a_rjb_cpt125",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt125",
+      "label": "Concept",
+      "name": "气体收集装置",
+      "definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。",
+      "aliases": [],
+      "examples": [
+        "“将两个集气瓶分别盛满水, 用玻璃片盖住瓶口, 然后…倒立在盛水的水槽内。”",
+        "用向上排空气法收集密度比空气大的二氧化碳。",
+        "用排水法收集难溶于水的气体。"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "气体收集装置"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "气体收集装置",
+      "story_evidence": "故事中的桶和装粮食的方法，隐喻了实验室中收集气体的装置和排空气法、排水法等收集方法。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明根据稻谷和陈米的不同特点，分别采用桶口朝上倒进（排空气法）和桶口朝下浸水（排水法）来装桶，对应了气体收集装置中根据气体性质选择收集方法的核心机制。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中未出现化学式或元素符号，通过物理过程（装粮食）类比化学操作，避免了化学反应与物理混合的混淆，并隐含了物质守恒（粮食不浪费）和变化前后的关系。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房的秘密\n\n从前，在一个繁华的城邦里，有一位年轻的账房学徒叫阿明。他负责管理城邦的粮仓，每天都要记录粮食的进出。粮仓有两个大桶，一个用来装新收的稻谷，另一个用来装陈米。阿明发现，每当新稻谷运来时，他必须用不同的方法把稻谷装进桶里。\n\n有一天，粮仓总管对阿明说：“你要学会如何把稻谷装进桶里，但记住，稻谷不能直接倒进去，否则会混入灰尘。你需要用两种方法：一种是把桶口朝上，让稻谷从高处落下，这样轻的杂质会被风吹走；另一种是把桶口朝下，浸在水里，让稻谷沉下去，而水会浮上来。”\n\n阿明很困惑，但他开始尝试。第一次，他运来一袋新稻谷。他找来一个空桶，把桶口朝上，然后站在高处，慢慢倒进稻谷。稻谷哗啦啦地落下，一些轻的谷壳和灰尘被风吹走了，桶里装满了干净的稻谷。阿明很高兴，心想：“这个方法真不错，适合那些容易混入杂质的稻谷。”\n\n第二次，他运来一批陈米。陈米很重，而且容易受潮。阿明想起总管的话，决定用另一种方法。他找来一个大水缸，装满水，然后把桶口朝下，浸入水中。接着，他把陈米从桶底的小口慢慢倒进去。米粒沉到桶底，水则从桶口被挤出来，浮到水面上。阿明发现，这样装米，米粒不会受潮，而且桶里没有空气，保存得更久。\n\n阿明渐渐明白，这两种方法各有用途。第一种适合轻的、容易飘散的稻谷，第二种适合重的、怕受潮的米。他不再盲目尝试，而是根据粮食的特点选择方法。\n\n一天，城邦的商人送来一批特殊的香料，既轻又怕水。阿明犯了难：用第一种方法，香料会被风吹散；用第二种方法，香料会浸水变质。他苦思冥想，最后想出一个办法：他先用一个布袋把香料包好，再放进桶里，然后用第一种方法轻轻倒进桶里，让布袋挡住风。香料终于被完好地装进了桶里。\n\n总管看到后，满意地点点头：“阿明，你学会了。装粮食的关键，不是看桶的形状，而是根据粮食的性质选择合适的方法。记住，无论用什么方法，都要让粮食安全地进入桶里，不浪费一粒。”\n\n从此，阿明成了城邦最出色的账房学徒，他总能根据不同的货物，找到最合适的装桶方法。",
+  "rule_findings": {
+    "story_token_count": 719,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "气体收集装置",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

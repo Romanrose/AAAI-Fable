@@ -1,0 +1,58 @@
+{
+  "source_domain": "果园采摘",
+  "setting": "一个秋天的果园里，果树上挂满了红彤彤的苹果。果农老张带着他的孙子小明在树下，准备采摘苹果。",
+  "conflict": "小明不知道如何准确知道每棵树上结了多少苹果，以便决定先摘哪一棵。",
+  "characters": [
+    {
+      "name": "老张",
+      "role": "经验丰富的果农，引导小明学习计数方法",
+      "mapped_element": "m1"
+    },
+    {
+      "name": "小明",
+      "role": "好奇的孙子，通过实践掌握计数",
+      "mapped_element": "m1"
+    }
+  ],
+  "mappings": [
+    {
+      "concept_element": "m1",
+      "narrative_carrier": "小明逐个点数树上的苹果"
+    },
+    {
+      "concept_element": "m2",
+      "narrative_carrier": "小明将两棵树的苹果一一对应比较"
+    },
+    {
+      "concept_element": "m3",
+      "narrative_carrier": "小明比较后说出哪棵树苹果多、少或一样多"
+    }
+  ],
+  "plot_beats": [
+    {
+      "beat_id": "b1",
+      "event": "老张让小明数一数第一棵树上苹果的个数，小明用手指着苹果，一个一个地数：“1、2、3……”最后说出总数。",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b2",
+      "event": "老张又让小明数第二棵树，小明同样逐个点数，得到另一个总数。",
+      "mapped_elements": [
+        "m1"
+      ]
+    },
+    {
+      "beat_id": "b3",
+      "event": "老张问小明：“这两棵树哪个苹果多？”小明把两棵树的苹果一个一个对应起来看，发现第一棵树的苹果比第二棵树多两个。",
+      "mapped_elements": [
+        "m2",
+        "m3"
+      ]
+    }
+  ],
+  "turning_point": "小明从只会数数，到学会用一一对应的方法比较两堆东西的多少。",
+  "ending": "小明高兴地告诉老张：“第一棵树苹果多，我们先摘那棵吧！”老张笑着点头。",
+  "implied_moral": "通过仔细观察和逐一对应，就能准确知道事物的数量并比较多少。"
+}

@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "只有通行牌齐全，后台登记流程才能开始。缺了这一步，后面的推进都无从谈起。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "还得看看后台登记人员的准备状态和记录册的完整性。只有记录册完整且人员到位，登记流程才能顺利进行。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "先核对通行牌种类和数量，再确认人员状态和记录册完整性，然后推进登记流程，最后用验收单对照整条安排。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "入口条件核对是第一步，人员状态确认是第二步，这两步都满足后，登记流程才能推进。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "先核对通行牌种类和数量，再确认人员状态和记录册完整性，然后推进登记流程，最后用验收单对照整条安排。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned with exact story evidence. Node n1 (process of seed germination) maps to the story's '后台登记流程' enabled by conditions. Node n2 (external conditions) maps to '入口条件核对' (通行牌齐全). Node n3 (internal conditions) maps to '人员状态和记录册完整性' (内部准备). Edge e1 (external conditions enable process) is evidenced by the story's sequence: first check entry conditions, then process can start. Edge e2 (internal conditions enable process) is evidenced by the story's requirement that both entry and personnel conditions must be met before registration proceeds. Direction is preserved in both edges."
+}

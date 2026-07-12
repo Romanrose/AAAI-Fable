@@ -1,0 +1,58 @@
+标题：回廊上的记号
+
+信号员刚到轨道调度台时，只盯着窗台里最显眼的结果，却总是判断失准。
+一天，他没有立刻下结论，而是把所见的前后变化分段写在灯盒上。他没有立刻行动，而是先把会影响后续的小条件排成一列。他没把周围的相似现象混在一起，而是先找共同点，再找差异点。
+信号员在灯盒角上画下半圈墨痕，因为这条线索指向：先确认一个起点条件是否具备：像距 --prerequisites_for--> 这条隐藏规则。
+第2次复查时，半圈墨痕旁的痕迹提醒他：先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 显微镜。
+他没把半圈墨痕当作装饰，而是用它标出一段必须保留的顺序：先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 望远镜。
+他把同一套顺序换到另一处角落，看它是否仍能留下相近迹象。最末那个变化没有突然降临，而是沿着前面的路径慢慢显形。信号员把灯盒收好，学会了用路径而不是印象判断事情。
+
+```json
+[
+  {
+    "concept_role": "target concept",
+    "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+    "concept_items": [
+      "凸透镜成像规律"
+    ]
+  },
+  {
+    "concept_role": "core mechanism",
+    "story_evidence": "前后变化被信号员按顺序记录、改动和复查。"
+  },
+  {
+    "concept_role": "prerequisites",
+    "concept_items": [
+      "焦距",
+      "显微镜",
+      "望远镜"
+    ],
+    "story_evidence": "他没有立刻行动，而是先把会影响后续的小条件排成一列。"
+  },
+  {
+    "concept_role": "related concepts",
+    "concept_items": [
+      "物镜",
+      "目镜"
+    ],
+    "story_evidence": "他没把周围的相似现象混在一起，而是先找共同点，再找差异点。"
+  },
+  {
+    "concept_role": "outcomes",
+    "concept_items": [],
+    "story_evidence": "最末那个变化没有突然降临，而是沿着前面的路径慢慢显形。"
+  },
+  {
+    "concept_role": "experiments",
+    "concept_items": [
+      "探究凸透镜成像的规律"
+    ],
+    "story_evidence": "他把同一套顺序换到另一处角落，看它是否仍能留下相近迹象。"
+  },
+  {
+    "concept_role": "exercises",
+    "concept_items": [],
+    "story_evidence": "故事结尾保留了可复查、可迁移的判断任务。"
+  }
+]
+```

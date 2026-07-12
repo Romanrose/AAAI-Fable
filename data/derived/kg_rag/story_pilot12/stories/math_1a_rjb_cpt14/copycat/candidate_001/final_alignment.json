@@ -1,0 +1,75 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "记录员先走到入口处的规则墙前，那里挂着一排前置条件牌。他仔细查看第一块牌上的说明，确认所有条件都已满足，才在记录册上写下“入口条件核对成立”。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "随后，记录员进入第2道转化环节。他把手里的记录册翻到对应页，按照前一步留下的条件，继续填写下一项内容。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "第3道转化环节里，记录员遇到一个奇怪的现象——两个数值看起来相等，但来源不同。他没有把它当成孤立事件，而是翻到“按形状分类”那一章，发现这个现象属于更大的一类共同规则，并非偶然。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_evidence": "他继续推进，第4道、第5道环节依次完成，每步都紧咬着上一步的条件，不敢跳跃。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_evidence": "他继续推进，第4道、第5道环节依次完成，每步都紧咬着上一步的条件，不敢跳跃。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_evidence": "验收员终于能打开封存箱，用结果验收记录核对整条安排。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "第3道转化环节里，记录员遇到一个奇怪的现象——两个数值看起来相等，但来源不同。他没有把它当成孤立事件，而是翻到“按形状分类”那一章，发现这个现象属于更大的一类共同规则，并非偶然。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "记录员先走到入口处的规则墙前，那里挂着一排前置条件牌。他仔细查看第一块牌上的说明，确认所有条件都已满足，才在记录册上写下“入口条件核对成立”。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_evidence": "他一边做，一边把两份相关记录放在一起比较，发现它们共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_evidence": "他一边做，一边把两份相关记录放在一起比较，发现它们共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_evidence": "他一边做，一边把两份相关记录放在一起比较，发现它们共同约束着最后的判断。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_evidence": "他继续推进，第4道、第5道环节依次完成，每步都紧咬着上一步的条件，不敢跳跃。",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均能在故事中找到直接对应的证据，且方向与关系类型一致。节点n1对应入口条件核对，n2对应第2道转化环节，n3对应第3道转化环节（含分类规则），n4和n5对应第4、5道环节，n6对应结果验收记录。边e1体现n1到n3的is_a关系（入口条件核对属于按形状分类），e2体现n2到n1的is_a关系（第2道转化环节属于入口条件核对），e3体现n1与n2的relates_to关系（两份记录共同约束），e4、e5体现n1到n5、n6的enables关系（入口条件核对使后续环节可能），e6体现n1到n4的enables关系（入口条件核对使第4道环节可推进）。"
+}

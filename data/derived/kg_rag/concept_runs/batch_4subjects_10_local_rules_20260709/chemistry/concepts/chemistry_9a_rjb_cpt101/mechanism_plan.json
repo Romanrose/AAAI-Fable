@@ -1,0 +1,57 @@
+{
+  "core_question": "氧气的检验方法的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "支持燃烧 --prerequisites_for--> 氧气的检验方法",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15246"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "实验2-2 带火星木条在氧气中的复燃 --verifies--> 氧气的检验方法",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:22566"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "验证一瓶无色气体是否为氧气的简单方法是：用带有火星的木条伸入气体中，若能使木条复燃，则该气体为氧气。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:15246",
+    "normalized:edge:22566"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "氧气的检验方法",
+    "chemistry_9a_rjb_cpt101"
+  ],
+  "coverage_targets": {
+    "required_step_count": 3,
+    "required_dependency_count": 2,
+    "must_cover_edge_ids": [
+      "normalized:edge:15246",
+      "normalized:edge:22566"
+    ],
+    "must_cover_path_ids": []
+  }
+}

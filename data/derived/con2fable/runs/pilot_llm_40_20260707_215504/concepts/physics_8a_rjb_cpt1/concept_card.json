@@ -1,0 +1,61 @@
+{
+  "concept_id": "physics_8a_rjb_cpt1",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "长度",
+  "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+  "aliases": [],
+  "examples": [
+    "帽檐直径",
+    "课桌高度"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "mechanism",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt2",
+        "label": "Concept",
+        "name": "长度单位（米及其倍数、子倍数）",
+        "definition": "国际单位制中长度的单位包括米及其倍数和子倍数，如km、dm、cm、mm等。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp1",
+        "label": "Experiment",
+        "name": "用刻度尺测量长度",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一节 长度和时间的测量",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [],
+  "must_preserve_zh": [],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "长度"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold"
+  }
+}

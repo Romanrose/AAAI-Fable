@@ -1,0 +1,59 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "一位老农培育一株珍贵的牡丹花",
+  "characters": [
+    "老农",
+    "牡丹花"
+  ],
+  "objects": [
+    "肥沃的土壤",
+    "适宜的阳光和水分",
+    "饱满的花种",
+    "老农的照料"
+  ],
+  "conflict": "牡丹花能否顺利生长并绽放取决于外界条件（土壤、阳光、水分）和自身条件（花种是否饱满健康）是否同时满足。",
+  "event_chain": [
+    "老农拥有一些花种，其中有的饱满，有的干瘪或被虫蛀。",
+    "老农将饱满的花种播入肥沃的土壤中。",
+    "土壤提供了适宜的温度、水分和空气。",
+    "饱满的花种吸收水分和养分，胚根和胚芽开始发育。",
+    "干瘪或被虫蛀的花种即使有适宜条件也无法萌发。",
+    "最终，饱满的花种在适宜条件下长成健壮的牡丹花苗。"
+  ],
+  "turning_point": "老农发现只有饱满的花种在适宜条件下才能发芽，而干瘪的花种始终无法萌发。",
+  "resolution_state": "老农明白了牡丹花的生长需要同时具备良好的外界环境和自身条件，缺一不可。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "牡丹花从花种到幼苗的成长过程",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "肥沃的土壤、适宜的阳光和水分（外界条件）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "花种是否饱满、健康（自身条件）",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "肥沃的土壤、适宜的阳光和水分（外界条件）使牡丹花成长过程得以启动",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "花种饱满健康（自身条件）使牡丹花成长过程得以启动",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子萌发'等禁止术语。",
+    "确保'老农的照料'不被视为因果机制，仅作为背景。",
+    "确保所有映射的边方向正确，即条件使能过程。"
+  ]
+}

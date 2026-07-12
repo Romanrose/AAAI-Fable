@@ -1,0 +1,108 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt107",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位隐居深山的铸剑师的故事",
+  "characters": [
+    "铸剑师",
+    "宝剑"
+  ],
+  "objects": [
+    "铸剑炉",
+    "剑坯",
+    "寒潭水",
+    "剑鞘"
+  ],
+  "conflict": "宝剑铸成后，铸剑师却将其封入剑鞘，不使其出鞘试锋，即使外界环境适宜（如比武大会），宝剑也无法展现锋芒。",
+  "event_chain": [
+    "铸剑师精心锻造出一把宝剑，剑坯完整且锋利（对应n4）。",
+    "宝剑被放入剑鞘中，处于封藏状态（对应n3）。",
+    "封藏状态导致宝剑即使遇到适宜的出鞘时机（如比武大会）也不能出鞘（对应n1）。",
+    "宝剑不能出鞘，无法展现锋芒，从而避免了在严冬或不利季节被滥用而受损（对应n2）。",
+    "宝剑封藏状态直接导致宝剑无法出鞘（对应e5）。",
+    "封藏状态是宝剑不能出鞘的一种表现形式（对应e2）。",
+    "剑坯完整且锋利是宝剑能够出鞘的前提条件（对应e3）。",
+    "宝剑能够出鞘（即未封藏）才能展现锋芒（对应e4）。"
+  ],
+  "turning_point": "铸剑师在严冬过后，取出宝剑，使其出鞘，宝剑终于展现锋芒。",
+  "resolution_state": "宝剑在适宜季节出鞘，展现锋芒，保护铸剑师。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "宝剑即使遇到适宜的出鞘时机（如比武大会）也不能出鞘",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "避免了在严冬或不利季节被滥用而受损",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "宝剑被放入剑鞘中，处于封藏状态",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "剑坯完整且锋利",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "宝剑能够出鞘（即未封藏）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "宝剑无法出鞘",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "导致",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "是……的一种形式",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "是……的前提条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "才能",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "直接导致",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子'、'休眠'、'萌发'等生物学词汇。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事连贯，所有元素属于同一铸剑师故事域。",
+    "注意：'剑坯完整且锋利'对应n4，但n4是'胚完整且有活性'的映射，需注意类比的一致性。"
+  ],
+  "mapping_context_sha256": "a89f1a24978e8d95beb169bedc1b6dc26af79db25883da81516c71c646910017",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d37086f9c1be914486df207343a040447785ec0dee3bafcc2878c70507242262"
+  }
+}

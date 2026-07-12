@@ -1,0 +1,229 @@
+```json
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "混有二氧化锰的氯酸钾固体",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:instrument"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "加热",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "氯酸钾分解生成氯化钾和氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "二氧化锰",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "二氧化锰在反应前后质量和性质基本不变",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "outcome",
+        "text": "生成氧气",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "outcome",
+        "text": "生成氯化钾",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "rule",
+        "text": "分解反应：一种物质生成两种或两种以上其他物质",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt109:definition",
+          "kg-node:chemistry_9a_rjb_cpt109:formula"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n4",
+        "target": "n5",
+        "relation": "relates_to",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n3",
+        "target": "n6",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n3",
+        "target": "n7",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:phenomena"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n3",
+        "target": "n8",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:11281",
+          "kg-node:chemistry_9a_rjb_cpt109:definition"
+        ]
+      },
+      {
+        "id": "e8",
+        "source": "n3",
+        "target": "n1",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:instrument"
+        ]
+      },
+      {
+        "id": "e9",
+        "source": "n3",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_cpt108:formula",
+          "kg-node:chemistry_9a_rjb_exp18:process"
+        ]
+      },
+      {
+        "id": "e10",
+        "source": "n3",
+        "target": "n4",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt108:definition",
+          "kg-node:chemistry_9a_rjb_exp18:conclusion"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6",
+      "n7",
+      "n8"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7",
+      "e8",
+      "e9",
+      "e10"
+    ]
+  }
+}
+```

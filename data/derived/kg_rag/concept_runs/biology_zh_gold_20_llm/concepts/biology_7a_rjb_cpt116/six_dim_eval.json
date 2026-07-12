@@ -1,0 +1,85 @@
+{
+  "concept_id": "biology_7a_rjb_cpt116",
+  "target_concept": "异花传粉",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.8,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事准确描述了异花传粉的定义：花粉在外力作用下落到另一朵花柱头上。通过风传粉（玉米）和昆虫传粉（油菜花）两个实例，完整呈现了概念的核心机制，没有偏离或错误。",
+    "implicitness": "故事完全避免了使用目标概念名称'异花传粉'及其别名，通过蜜蜂的观察和对话自然引出传粉方式，概念隐含在情节中，符合禁止术语要求。",
+    "mapping_clarity": "故事中蜜蜂的困惑与发现清晰映射了概念的核心机制：风将玉米花粉吹到远处玉米须上，蜜蜂将油菜花粉带到其他花上，两者都体现了外力作用下的花粉转移，映射关系明确。",
+    "readability": "故事语言流畅自然，情节生动有趣，以蜜蜂的视角展开，适合目标读者理解。对话和观察过程循序渐进，易于跟随。",
+    "pedagogical_value": "故事通过对比风媒和虫媒传粉，展示了异花传粉的两种常见媒介，并强调了外力作用的重要性。结尾点明传粉对结果实和种子的意义，教学价值高。",
+    "novelty": "故事采用了常见的蜜蜂视角和风媒、虫媒对比的叙事框架，虽然表达清晰，但缺乏独特的情节设计或新颖的类比，新颖性中等。"
+  },
+  "revision_suggestions": [
+    "可尝试引入更独特的场景或角色，如不同植物的对话，以增强新颖性。",
+    "可增加一个意外事件（如昆虫生病）来突出传粉媒介的不可替代性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 433,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事准确描述了异花传粉的定义：花粉在外力作用下落到另一朵花柱头上。通过风传粉（玉米）和昆虫传粉（油菜花）两个实例，完整呈现了概念的核心机制，没有偏离或错误。",
+      "implicitness": "故事完全避免了使用目标概念名称'异花传粉'及其别名，通过蜜蜂的观察和对话自然引出传粉方式，概念隐含在情节中，符合禁止术语要求。",
+      "mapping_clarity": "故事中蜜蜂的困惑与发现清晰映射了概念的核心机制：风将玉米花粉吹到远处玉米须上，蜜蜂将油菜花粉带到其他花上，两者都体现了外力作用下的花粉转移，映射关系明确。",
+      "readability": "故事语言流畅自然，情节生动有趣，以蜜蜂的视角展开，适合目标读者理解。对话和观察过程循序渐进，易于跟随。",
+      "pedagogical_value": "故事通过对比风媒和虫媒传粉，展示了异花传粉的两种常见媒介，并强调了外力作用的重要性。结尾点明传粉对结果实和种子的意义，教学价值高。",
+      "novelty": "故事采用了常见的蜜蜂视角和风媒、虫媒对比的叙事框架，虽然表达清晰，但缺乏独特的情节设计或新颖的类比，新颖性中等。"
+    },
+    "revision_suggestions": [
+      "可尝试引入更独特的场景或角色，如不同植物的对话，以增强新颖性。",
+      "可增加一个意外事件（如昆虫生病）来突出传粉媒介的不可替代性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过石板上的圆点数量（1到6）和鸟窝数量（6个鸟窝、6只喜鹊）准确体现了数字6的认识，完全符合概念定义。",
+    "implicitness": "目标概念“数字6的认识”未在故事正文中出现，而是通过圆点数量递增和第六块空白石板代表6个点的方式隐含呈现。",
+    "mapping_clarity": "圆点数量与石板编号的对应关系清晰，主角通过观察和验证发现规律，映射明确且易于理解。",
+    "readability": "语言流畅，情节连贯，适合目标年龄段阅读，无生僻词汇或复杂句式。",
+    "pedagogical_value": "通过数圆点、按顺序踩踏等操作，有效帮助学习者理解6表示的数量，并自然延伸至实际应用（鸟窝和喜鹊）。",
+    "novelty": "将数字认知融入桥梁谜题，有一定创意，但类似谜题结构在儿童故事中较为常见，新颖性中等偏上。"
+  },
+  "revision_suggestions": [
+    "可增加一个互动环节，如让读者数一数故事中出现的其他6个物体，以强化数量感知。",
+    "可适当加入读写数字6的环节，例如在石板旁刻上数字6的符号。"
+  ]
+}

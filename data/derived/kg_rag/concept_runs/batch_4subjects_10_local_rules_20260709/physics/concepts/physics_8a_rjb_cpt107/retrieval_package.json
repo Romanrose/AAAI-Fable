@@ -1,0 +1,63 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt107",
+    "label": "Concept",
+    "name": "物距",
+    "properties": {
+      "definition": "物体到凸透镜的距离，用u表示。",
+      "importance": "掌握",
+      "unit": "cm",
+      "retrieval_text": "物距\nConcept\n物体到凸透镜的距离，用u表示。\n掌握\ncm"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17193",
+      "source": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:19712",
+      "source": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target": "physics_8a_rjb_cpt108",
+      "target_name": "像距",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "物距",
+      "definition": "物体到凸透镜的距离，用u表示。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:17193] 物距 --prerequisites_for--> 凸透镜成像规律"
+    ],
+    "process_summary": [
+      "[normalized:edge:19712] 物距 --relates_to--> 像距"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 522,
+    "summary_chars": 282,
+    "path_chars": 0,
+    "retrieval_context_chars": 804
+  }
+}

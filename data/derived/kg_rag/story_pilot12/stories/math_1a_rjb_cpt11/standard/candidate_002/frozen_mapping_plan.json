@@ -1,0 +1,45 @@
+{
+  "candidate_id": "candidate_002",
+  "source_domain": "两个小动物合作搬运果实",
+  "characters": [
+    "小猴子",
+    "小兔子"
+  ],
+  "objects": [
+    "一堆苹果",
+    "篮子"
+  ],
+  "conflict": "小猴子和小兔子各自只能搬运少量苹果，无法将全部苹果一次运回家。",
+  "event_chain": [
+    "小猴子和小兔子分别数清自己面前的苹果数量（各3个）。",
+    "它们发现各自搬运只能运少量苹果，效率低。",
+    "它们决定将苹果合并到一个篮子里一起搬运。",
+    "合并后，它们数出总共有6个苹果。"
+  ],
+  "turning_point": "小兔子提议将两人的苹果合并到一个篮子里，这样就能一次运更多苹果。",
+  "resolution_state": "小猴子和小兔子成功将苹果合并搬运回家，并理解了合并后总数是各自数量的和。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "小猴子和小兔子分别数清自己面前的苹果数量（各3个）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "它们决定将苹果合并到一个篮子里一起搬运",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "在数清各自苹果数量后，小兔子提议合并苹果，从而实现了合并搬运",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'加法'、'加法的含义'等禁止术语。",
+    "确保'合并'动作明确由'数清数量'这一条件触发，方向正确。",
+    "避免将'数数'本身作为目标概念，仅作为前提条件。"
+  ]
+}

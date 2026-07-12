@@ -1,0 +1,106 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt103",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一位老农种瓜的故事",
+  "characters": [
+    "老农",
+    "瓜苗"
+  ],
+  "objects": [
+    "温暖的阳光",
+    "瓜苗生长的环境条件",
+    "瓜苗的生长活动",
+    "瓜苗开花结果",
+    "寒冷天气",
+    "瓜苗停止生长"
+  ],
+  "conflict": "寒冷天气阻碍了瓜苗的生长活动，导致瓜苗无法开花结果。",
+  "event_chain": [
+    "温暖的阳光是瓜苗生长的环境条件之一。",
+    "温暖的阳光使瓜苗的生长活动得以进行。",
+    "瓜苗的生长活动最终使瓜苗开花结果。",
+    "寒冷天气抑制了瓜苗的生长活动。",
+    "寒冷天气导致瓜苗停止生长。"
+  ],
+  "turning_point": "寒冷天气出现，抑制了瓜苗的生长活动。",
+  "resolution_state": "瓜苗因寒冷天气而停止生长，未能开花结果。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "温暖的阳光",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "瓜苗生长的环境条件",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "瓜苗的生长活动",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "瓜苗开花结果",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "寒冷天气",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "瓜苗停止生长",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "温暖的阳光是瓜苗生长的环境条件之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "温暖的阳光使瓜苗的生长活动得以进行",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "瓜苗的生长活动最终使瓜苗开花结果",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "寒冷天气抑制了瓜苗的生长活动",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "寒冷天气导致瓜苗停止生长",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'适宜的温度'等禁止术语。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "确保故事连贯，使用单一的源域（种瓜）。"
+  ],
+  "mapping_context_sha256": "d5bee00added8c20555821087cc054e4a316990ebe9e6379bdaeac3309e37691",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "979cf058a07bba381c2e127f593a3061c4d00166bcea0e18ac8b7316fab39f7e"
+  }
+}

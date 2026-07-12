@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story explicitly shows the child counting edges (n1) and then physically joining pieces (n2), with a clear causal link (e1) that counting enables joining. This is observably better than a story that merely mentions both actions without showing the enabling relation, or that reverses the order. The mapping is strong because the story's turning point ('咔嗒一声，两块拼图严丝合缝地合在了一起') directly realizes the process node, and the edge is supported by the child's reasoning ('只有把它们按照正确的方向拼合，才能形成完整的图案')."
+  },
+  "revision_instructions": [
+    "No revision needed. The story meets all requirements."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

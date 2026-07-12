@@ -1,0 +1,175 @@
+{
+  "schema_version": "m2na-mechanism-record/v1",
+  "concept_id": "physics_8a_rjb_cpt11",
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "速度：表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt11:definition",
+          "kg-node:physics_8a_rjb_cpt11:formula"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "entity",
+        "text": "平均速度：在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt12:definition",
+          "kg-node:physics_8a_rjb_cpt12:formula"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "entity",
+        "text": "匀速直线运动：速度大小和方向都保持不变的直线运动。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt13:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "entity",
+        "text": "变速直线运动：物体沿直线但速度随时间变化的运动。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_cpt14:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "entity",
+        "text": "瞬时速度：物体在某一时刻或某一很短时间内的速度，用以描述该时刻运动的快慢。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_bx1_rjb_cpt17:definition"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "entity",
+        "text": "速度—时间图像：以速度为纵轴、时间为横轴描绘的图像，用于表示物体速度随时间变化的规律。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_bx1_rjb_cpt19:definition"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "process",
+        "text": "利用超声波位置传感器测速度：传感器测距并记录不同时间的位置，由计算机计算速度并显示速度—时间图像。",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:physics_8a_rjb_exp4:process",
+          "kg-node:physics_8a_rjb_exp4:conclusion"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n2",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12422"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n3",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12426"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n5",
+        "target": "n1",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:12541"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n7",
+        "target": "n1",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:23061"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17195"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n4",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17196"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n1",
+        "target": "n6",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:17197"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "速度",
+      "velocity"
+    ],
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1"
+    ]
+  },
+  "provenance": {
+    "seed_sha256": "690f4cef57b61f94b234c9db82f60f802c10e30f7f6444086484f855e8705130",
+    "retrieval_sha256": "fbe708ea04709cd5cbb111f3704ea5e921e18ca275eda92841cc9fee9ac0ade3",
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "mechanism-builder-v1",
+    "prompt_sha256": "5c2b7f1d1fb34daa271f7096df1c20543728c786bd72660975e09be3cc337eeb"
+  },
+  "validation": {
+    "status": "valid",
+    "errors": []
+  }
+}

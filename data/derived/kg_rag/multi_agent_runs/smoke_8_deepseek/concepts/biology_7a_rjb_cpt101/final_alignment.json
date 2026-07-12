@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "木箱样本在恒温恒湿培养箱中内壁出现霉斑和幼虫，对应种子在适宜条件下吸水萌发的过程",
+      "evidence": "港口检疫站这天到了一批标注为“干燥木材”的货物木箱，来源地最近正闹林木虫害。",
+      "narrative_anchor": "港口检疫站这天到了一批标注为“干燥木材”的货物木箱，来源地最近正闹林木虫害。",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

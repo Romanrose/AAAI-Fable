@@ -1,0 +1,121 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个关于铁匠锻造宝剑的寓言",
+  "characters": [
+    "老铁匠",
+    "小徒弟"
+  ],
+  "objects": [
+    "铁砧",
+    "火炉",
+    "风箱",
+    "铁块",
+    "水槽"
+  ],
+  "conflict": "小徒弟发现，在山上（空气稀薄）锻造时，铁块总是达不到山下那种炽热发白的程度，无法锻造出锋利的宝剑。",
+  "event_chain": [
+    "老铁匠在山下教小徒弟锻造宝剑，火炉烧得很旺，铁块被烧得炽热发白，可以轻易锻打成型。",
+    "小徒弟独自到山上（空气稀薄）的工坊锻造，发现无论怎么拉风箱，铁块都达不到山下那种炽热发白的程度。",
+    "小徒弟尝试用更大的力气拉风箱，但铁块依然不够热，无法锻打成理想的形状。",
+    "小徒弟下山请教老铁匠，老铁匠告诉他，山上的空气稀薄，火炉的燃烧不如山下旺盛，所以铁块无法达到足够的温度。",
+    "小徒弟明白了，锻造宝剑的关键不仅在于火炉和风箱，还在于周围的环境（空气的浓密程度）。"
+  ],
+  "turning_point": "小徒弟意识到，铁块能否达到炽热发白的温度，取决于周围空气的浓密程度（即环境条件）。",
+  "resolution_state": "小徒弟理解了环境条件对锻造过程的影响，决定只在山下进行锻造，或者在山上升高火炉的鼓风强度来补偿。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "铁块达到炽热发白的温度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "空气的浓密程度（山下 vs 山上）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "铁块达到炽热发白的温度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "环境条件对锻造效果的影响",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "山下锻造时铁块炽热发白",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "山上锻造时铁块不够热",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "其他金属（如铜、银）的锻造也需要合适的温度",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "空气的浓密程度决定了铁块能否达到炽热发白的温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "铁块达到炽热发白的温度就是锻造所需的理想状态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "环境条件影响锻造效果这一规则与铁块温度相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "铁块达到炽热发白的温度产生了山下成功锻造的证据",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "空气稀薄导致铁块无法达到足够温度",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "铁块温度与其他金属锻造温度相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "铁块温度与空气浓密程度相互关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'沸点'、'压强'等化学术语。",
+    "确保'空气的浓密程度'对应'大气压强'，'铁块达到炽热发白的温度'对应'沸点'，映射清晰。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如'条件对物质性质的影响'）作为因果机制。"
+  ],
+  "mapping_context_sha256": "6b6436878992bd80891f5ffb421a54cef1877977da0d46051b9dcf377f32bdfc",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "bd7a28a6b78513a902c5e96e0bc9f9b17665e61a05e1ef5d637f5aa8f86b8f80"
+  }
+}

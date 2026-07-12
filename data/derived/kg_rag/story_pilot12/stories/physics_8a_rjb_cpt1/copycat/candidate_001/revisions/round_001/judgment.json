@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 5
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All nodes and edges are fully covered with exact evidence, direction preserved, and the story naturally embeds the is_a relation (n2→n1) by showing that the second step's conversion depends on the first step's baseline, analogous to unit conversion. The weakest edge e1 is still strong because the story explicitly states '就像‘米’作为基准单位' linking the rule to the condition check."
+  },
+  "revision_instructions": [],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

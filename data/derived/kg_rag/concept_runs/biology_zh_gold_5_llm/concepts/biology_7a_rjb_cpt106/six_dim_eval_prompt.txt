@@ -1,0 +1,199 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "种子萌发的自身条件",
+  "concept_id": "biology_7a_rjb_cpt106",
+  "concept_definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt106",
+    "种子萌发的自身条件"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt106",
+      "label": "Concept",
+      "name": "种子萌发的自身条件",
+      "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "种子萌发的自身条件\n种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "biology_7a_rjb_cpt101",
+          "label": "Concept",
+          "name": "种子萌发",
+          "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "biology_7a_rjb_cpt101",
+          "label": "Concept",
+          "name": "种子萌发",
+          "definition": "种子在适宜条件下吸水并利用贮藏营养，使胚根、胚芽等开始发育，最终长成幼苗的过程。"
+        },
+        {
+          "id": "biology_7a_rjb_cpt107",
+          "label": "Concept",
+          "name": "种子休眠",
+          "definition": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt106",
+    "concept_id": "biology_7a_rjb_cpt106",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt106",
+      "label": "Concept",
+      "name": "种子萌发的自身条件",
+      "definition": "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "种子萌发的自身条件"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "种子本身能否萌发取决于胚是否完整且有活性、种子是否处于休眠等内部因素；干瘪、胚被虫咬坏、胚死亡或处于休眠的种子不能萌发。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "种子萌发的自身条件",
+      "story_evidence": "故事通过盆B（胚干瘪发黑）、盆C（胚被虫咬坏）、盆D（胚腐烂）与盆A（正常发芽）的对比，说明种子能否萌发取决于胚是否完整、有活性且未休眠，即种子自身的内部条件。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "小徒弟的观察过程（发芽、萎蔫、死亡、无动静）和挖出种子检查的结果，展示了胚的完整性、活性及休眠状态对萌发的决定性作用。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事未使用目的论解释（如‘种子为了生长’），未将个体努力归因于进化，而是通过观察和检查揭示生命系统的内部条件与结果。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃里的秘密\n\n老园丁在园圃里种下许多种子。他每天浇水、松土，可奇怪的是，有些种子很快发芽，有些却始终没有动静。\n\n一天，小徒弟问：“师傅，为什么同样的水、同样的土，有的种子就是不肯出来呢？”\n\n老园丁没有直接回答，而是带他来到一个木架前。架子上摆着几个小陶盆，每个盆里都埋着不同的种子。“你每天来观察，记下它们的变化。”老园丁说。\n\n小徒弟认真观察了七天。第一天，所有盆都浇了水。第二天，盆A冒出了嫩芽，盆B也冒出了芽，盆C和盆D却毫无变化。第三天，盆A的芽长高了，盆B的芽却蔫了。第四天，盆C终于冒出一个瘦小的芽，可第二天就枯死了。盆D始终没有动静。\n\n小徒弟跑去问：“师傅，盆B和盆C明明都发芽了，为什么又死了？盆D为什么一直不出来？”\n\n老园丁从盆里挖出几颗种子。盆B的种子外壳完好，但掰开一看，里面的胚已经干瘪发黑。盆C的种子胚芽很小，像是被虫子咬过。盆D的种子外表饱满，但胚已经腐烂。\n\n“你看，”老园丁说，“这些种子虽然都得到了水、空气和适宜的温度，但有的胚不完整，有的胚已死亡，有的还在休眠。就像人一样，表面看着差不多，内里却千差万别。种子能不能发芽，关键要看它自身是否具备完整的、有活力的胚，并且没有处于休眠状态。”\n\n小徒弟恍然大悟：“原来种子发芽，不光要看外面的条件，更要看它自己是不是‘准备好了’。”\n\n从此，他再播种时，总会先仔细检查种子的内部是否完好。",
+  "rule_findings": {
+    "story_token_count": 493,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "种子萌发的自身条件",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

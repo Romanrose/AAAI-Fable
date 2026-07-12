@@ -1,0 +1,322 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2027}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{multirow}
+
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\setcounter{secnumdepth}{0}
+
+\title{Concept2Fable: Knowledge-Grounded Mechanism Graphs and Analogical Structure Mapping for Educational Fable Generation}
+
+\author{Anonymous Submission}
+\affiliations{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Definitions state what a curriculum concept means, but they do not always make its conditions, transformations, and consequences easy to imagine. We study \emph{Mechanism-to-Narrative Analogy Generation} (M2NA): generating a short educational fable that conceals the target terminology while preserving the relational mechanism of a K--12 concept. We present Concept2Fable, a traceable pipeline that separates three problems often collapsed into one prompt. It first constructs an evidence-grounded concept mechanism graph using controlled adaptive two-hop retrieval and constrained language-model extraction. It then maps that graph into a narrative source domain with structure-preserving analogy plans, including an LLM-guided Copycat-inspired mapper. Finally, a set of generation, alignment, judging, and revision agents produces and audits the fable. A feasibility study covers 12 concepts from biology, chemistry, mathematics, and physics, with three candidates from each of three mapping methods (108 stories total). All candidates completed the pipeline. LLM-guided mapping obtained the highest judge acceptance rate (72.22\%), while deterministic mapping retained the most mechanism edges (94.44\%); standard mapping achieved the highest system-level exact match (50.00\%). These mixed results motivate our planned controlled evaluation on 80 concepts and a 32-concept human-evaluation subset. We present Concept2Fable as a method designed to support conceptual understanding, not as evidence of improved learning outcomes.
+\end{abstract}
+
+\section{Introduction}
+
+Students often meet a new concept as a compact definition. Such definitions are necessary, but a learner must still reconstruct how prerequisites, processes, constraints, and outcomes fit together. An analogy can make this relational structure concrete by transferring it to a familiar domain \citep{gentner1983structure,gentner1997structure}. The transfer is useful only when relations are preserved. Replacing scientific terms with characters while changing the causal structure yields a memorable story and a wrong explanation.
+
+We investigate educational fables as a constrained form of analogy. A fable is short, role-centered, and usually organized around a causal event chain. These properties make it a plausible carrier for a concept mechanism: entities become characters or objects, conditions become environmental constraints, processes become actions, and outcomes become consequences. Brevity also limits unrelated subplots. The same properties create risks. Anthropomorphism may introduce intent where none exists, dramatic conflict may reverse causality, and a moral may displace the target mechanism. A generation method therefore needs an explicit representation that can be inspected before and after writing.
+
+Existing LLM story generators can impose narrative constraints or coordinate multiple agents \citep{yang2022re3,feng2025ssgen,chen2026storybox}, but fluency does not establish conceptual faithfulness. Graph retrieval gives models structured evidence, yet indiscriminate expansion can bury the useful relations in noise \citep{edge2024graphrag,xu2025amar}. Concept2Fable addresses both problems by interposing an evidence-grounded \emph{concept mechanism graph} between retrieval and storytelling. The graph is not a raw neighborhood. It is a compact, typed explanation of what must be preserved in the analogy.
+
+Our task is \emph{Mechanism-to-Narrative Analogy Generation} (M2NA). Given a target concept, graph evidence, and forbidden terminology, a system must produce a fable whose event structure realizes the target mechanism without naming it. It must also return an alignment from mechanism nodes and edges to exact story evidence. This alignment turns a generated story into an auditable educational artifact.
+
+Our contributions are threefold:
+\begin{itemize}
+    \item We construct typed concept mechanism graphs from a K--12 knowledge graph using bounded adaptive two-hop retrieval, evidence-constrained LLM extraction, validation, and a human review gate.
+    \item We formulate concept-to-fable generation as analogical structure mapping and introduce an LLM-guided Copycat-inspired mapper, evaluated against standard planning and deterministic mapping under matched budgets.
+    \item We implement a multi-agent generation and revision pipeline with structural, narrative, and pedagogical evaluation. A 108-story feasibility study exposes complementary strengths rather than a uniform winner, and we specify a controlled follow-up protocol without inventing unfinished results.
+\end{itemize}
+
+\section{Related Work}
+
+\paragraph{Analogy and education.}
+Structure-mapping theory treats analogy as an alignment between relational systems rather than a list of object similarities \citep{gentner1983structure,gentner1997structure}. Analogical transfer can support schema induction, although surface similarity and missing correspondences can also mislead learners \citep{gick1983schema}. Educational analogy research likewise stresses explicit mapping and the identification of where an analogy breaks down \citep{glynn2008teaching}. Concept2Fable operationalizes these ideas with typed mechanism relations, direction constraints, and story-evidence alignments.
+
+\paragraph{Knowledge-grounded generation.}
+Graph RAG retrieves structured context for language-model reasoning and generation \citep{edge2024graphrag}. More context is not always better: adaptive selection is needed when retrieved entities, relations, and subgraphs contain partially relevant evidence \citep{xu2025amar}. Our retriever applies this insight to curriculum graphs. It stops after one hop when the direct neighborhood is sufficient and expands only under a bounded, inspectable policy.
+
+\paragraph{Constrained and multi-agent storytelling.}
+Recursive planning and revision improve long-form coherence \citep{yang2022re3}. SS-GEN shows how domain-specific constraints, tailored quality criteria, and human filtering can define an educational story task \citep{feng2025ssgen}. StoryBox organizes story generation around collaborating agents and evaluates narrative quality with both human and automatic judgments \citep{chen2026storybox}. We follow their problem-first presentation and controlled evaluation practice, but target short mechanism-preserving analogies. Our agents audit a frozen mapping plan instead of simulating an open-ended story world.
+
+\paragraph{LLM-based evaluation.}
+LLM judges scale multidimensional evaluation, but their preferences can diverge from human judgments \citep{zheng2023judging}. We therefore separate deterministic structure metrics from judge ratings and reserve claims about educational benefit for human evaluation.
+
+\section{Task Formulation}
+
+Let $c\in\mathcal{V}$ be a node labeled \texttt{Concept} in the normalized K--12 knowledge graph $\mathcal{G}=(\mathcal{V},\mathcal{E})$. Directly prompting a language model with $c$ can produce a fluent story while omitting the conditions, processes, or outcomes that define the concept. Concept2Fable therefore constructs a minimal seed $S_c=(i_c,s_c,n_c,a_c,d_c,\tau_c,F_c)$, containing the stable identifier, subject, canonical name, aliases, definition, concept type, and forbidden terms. The generation pipeline is
+\[
+c\rightarrow S_c\rightarrow R_c\rightarrow M_c\rightarrow A_c\rightarrow y_c,
+\]
+where $R_c$ is a bounded retrieval package and $M_c$ is a validated mechanism graph. A mechanism extractor constructs
+\[
+M_c=(V_c,E_c,P_c),
+\]
+where every typed node $v\in V_c$ and edge $e\in E_c$ cites evidence resolvable in $R_c$, and $P_c$ identifies the nodes and edges that must survive generation.
+
+A mapper produces an analogy plan $A_c$ that maps $V_c$ to story carriers and $E_c$ to directed story relations. Given $S_c$, $M_c$, $A_c$, and a shared generation configuration, the system outputs a fable $Y_c$, an alignment $L_c$, and an evaluation trace $Q_c$. The story body must not contain $F_c$. The desired output is readable and pedagogically usable, but our operational success criteria are narrower: preserve required mechanism structure, provide exact story evidence, maintain relation direction, avoid lexical leakage, and pass the narrative-quality gate.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.94\linewidth}
+\small
+\textbf{K--12 KG} $\rightarrow$ \textbf{ConceptSeed} $\rightarrow$
+\textbf{Adaptive 2-hop Retrieval} $\rightarrow$
+\textbf{Evidence-Grounded Mechanism Graph} $\rightarrow$
+\textbf{Analogical Structure Mapping} $\rightarrow$
+\textbf{Generator} $\rightarrow$ \textbf{Aligner/Judge} $\rightarrow$
+\textbf{Targeted Revision}
+
+\vspace{3pt}
+Every stage persists identifiers, hashes, model settings, and validation status. A fallback at an official generation or evaluation stage invalidates the sample for the main aggregate.
+\end{minipage}}
+\caption{The Concept2Fable pipeline. Retrieval evidence, mechanism structure, and narrative realization remain separate artifacts.}
+\label{fig:pipeline}
+\end{figure}
+
+\section{Concept2Fable}
+
+\subsection{Evidence-Grounded Concept Mechanism Graph}
+
+The normalized knowledge graph stores curriculum and teaching relations at scale. Its local neighborhood may include useful evidence, broad topical associations, and administrative structure. We therefore distinguish three representations (Table~\ref{tab:representations}).
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{p{0.20\linewidth}p{0.68\linewidth}}
+\toprule
+Artifact & Purpose \\
+\midrule
+Knowledge graph & The full network of curriculum concepts and instructional relations. \\
+Retrieval package & A bounded, target-centered evidence subgraph with source IDs and an explicit retrieval decision. \\
+Mechanism graph & A typed explanation extracted from the package: what entities, conditions, processes, states, outcomes, and rules participate, and how they relate. \\
+\bottomrule
+\end{tabular}
+\caption{A graph neighborhood is evidence for a mechanism graph, not the mechanism graph itself.}
+\label{tab:representations}
+\end{table}
+
+\paragraph{Controlled adaptive retrieval.}
+Following adaptive retrieval over knowledge graphs, we avoid expanding every neighbor when direct evidence is already sufficient (Xu et al.~2025). At hop 1, we rank target-adjacent edges with five core relations: \texttt{prerequisites\_for}, \texttt{is\_a}, \texttt{verifies}, \texttt{leads\_to}, and \texttt{relates\_to}. Let
+\[
+q(c,E_1)=\mathbf{1}[E_1\text{ is sufficient for an auditable mechanism}].
+\]
+If $q(c,E_1)=1$, retrieval stops. Otherwise, hop 2 expands only high-value first-hop nodes, prioritizing \texttt{prerequisites\_for}, \texttt{leads\_to}, \texttt{verifies}, and \texttt{is\_a}; each retained path has at most two hops and must contribute to an explanation of the target. We use a bounded budget of eight paths and twenty retained edges. If no core direct edge exists, a bounded curriculum bridge may recover lexically matched evidence, but it never directly creates a mechanism. The retrieval package is
+\[
+R_c=(V_R,E_R,\Pi_R,\sigma_c),
+\]
+where $\Pi_R$ is the retained path set and $\sigma_c$ records the expansion decision and its reason.
+
+\paragraph{Constrained mechanism extraction.}
+The extractor receives the complete seed, target properties, raw edges, retained paths, and retrieval summary. Our implementation uses DeepSeek-Chat as the builder model and requires strict JSON. It constructs
+\[
+M_c=(V_M,E_M,\epsilon_M,P_M),
+\]
+where $V_M$ and $E_M$ are typed mechanism nodes and edges, $\epsilon_M$ maps each item to verifiable graph evidence, and $P_M$ contains the nodes and edges that the analogy must preserve. Node types are \texttt{entity}, \texttt{condition}, \texttt{process}, \texttt{state}, \texttt{outcome}, \texttt{rule}, and \texttt{evidence}; relation types are \texttt{requires}, \texttt{enables}, \texttt{transforms}, \texttt{causes}, \texttt{produces}, \texttt{constrains}, \texttt{is\_a}, \texttt{part\_of}, \texttt{relates\_to}, and \texttt{verifies}. Evidence references have only two forms: \texttt{kg-node:<id>:<property>} and \texttt{kg-edge:<id>}.
+
+Validation rejects duplicate IDs, unknown endpoints or relation types, unresolvable evidence, invalid must-preserve sets, disconnected multi-step graphs, and over-budget graphs. Process-like concepts require at least two nodes and one edge; definitional concepts may legitimately remain a single node. We do not convert the seed definition into a mechanism when extraction fails, and we never invent edges from node order. A valid record proceeds to append-only human review. Only the latest approved version is eligible for an official experiment.
+
+\subsection{LLM-guided Copycat-inspired Mapping}
+
+The mapper transfers a system of relations, not a vocabulary. An entity can become a character or object; a condition becomes an environmental constraint; a process becomes an action sequence; a state change becomes a turning point; an outcome becomes a consequence; and a rule becomes a stable law of the story world. Edge direction constrains event order and dependency.
+
+Our main mapper is \textbf{LLM-guided Copycat-inspired Mapping}. Given the approved mechanism graph, the LLM proposes source domains and correspondences under hard mechanism constraints, then selects a plan based on structural consistency, narratability, and educational suitability. The name denotes inspiration from flexible relational mapping; it does not claim to reproduce the complete classical Copycat architecture. We formalize the mapping plan as
+\[
+A_c=(f_V,f_E,D,K,T),
+\]
+where $f_V$ maps mechanism nodes to narrative carriers, $f_E$ maps mechanism edges to story events or dependencies, $D$ records preserved directions, $K$ contains forbidden terminology and generation constraints, and $T$ specifies the event sequence and turning point.
+
+The plan also stores the source domain, conflict, resolution, forbidden terms, and input hashes. Surface carriers may vary, but the must-preserve nodes, edges, and causal directions are fixed. Standard Mapping and Deterministic Copycat-inspired Mapping are reserved for the comparison experiments and are not part of the main method definition.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{ll}
+\toprule
+Mechanism role & Narrative realization \\
+\midrule
+Entity & Character or object \\
+Condition & Environmental constraint \\
+Process & Action or event sequence \\
+State transition & Plot turning point \\
+Outcome & Narrative consequence \\
+Rule/constraint & Stable story-world rule \\
+Causal direction & Event order and dependency \\
+\bottomrule
+\end{tabular}
+\caption{Structure-preserving correspondences used by the analogy planner.}
+\label{tab:correspondence}
+\end{table}
+
+\subsection{Why Fables?}
+
+Fables offer a compact causal form. Their small cast makes role correspondences visible; their event chains can realize prerequisites and consequences; and their length supports classroom reading, discussion, and retelling. Concealing the textbook term also invites a learner to recover the mechanism rather than repeat a definition. These are design motivations, not measured learning effects.
+
+The format can also distort. Characters suggest intention, conflict rewards dramatic reversals, and morals can overshadow mechanism. Concept2Fable counters these failure modes with a mechanism graph, a frozen mapping plan, exact alignment evidence, leakage checks, and review. The limits of an analogy should still be discussed by a teacher before classroom use.
+
+\subsection{Multi-Agent Generation and Revision}
+
+The Generator writes an initial Chinese fable from the frozen plan. The Aligner links mechanism nodes and edges to exact story spans and checks direction. The Judge assesses conceptual faithfulness, implicitness, mapping clarity, readability, pedagogical value, and novelty, alongside hard contradiction and leakage flags. The Reviser receives localized defects rather than an unconstrained request to rewrite. A candidate may undergo at most the protocol's revision budget, with the same downstream configuration for all comparison methods. Planner, Generator, Aligner, Judge, or Reviser fallback marks the output \texttt{invalid\_for\_official\_eval}; the trace remains available for failure analysis.
+
+\section{Experimental Design}
+
+Following the evaluation pattern of SS-GEN, we combine task-specific criteria with human review \citep{feng2025ssgen}. Following Amar, every proposed retrieval component has a direct ablation and retrieval-budget analysis \citep{xu2025amar}. Following StoryBox, we separate automatic and human judgments and report their agreement \citep{chen2026storybox}.
+
+\subsection{Evaluation Sets}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrp{0.39\linewidth}}
+\toprule
+Set & $N$ & /Subject & Purpose \\
+\midrule
+Pilot12 & 12 & 3 & Feasibility and diagnostics \\
+Core80 & 80 & 20 & Main comparisons/ablations \\
+Human32 & 32 & 8 & Blind human evaluation \\
+FullKG & 6,574 & -- & Scale, failures, and cost \\
+\bottomrule
+\end{tabular}
+\caption{Evaluation tiers. Only Pilot12 story results are complete in this draft. Core80 and Human32 manifests are frozen; their results remain pending.}
+\label{tab:sets}
+\end{table}
+
+Pilot12 contains three concepts from each of biology, chemistry, mathematics, and physics. Each mapper produces three candidates per concept, for 108 candidates. Core80 is balanced at 20 concepts per subject and will support the main automatic evaluation. Human32 is a fixed subset of eight concepts per subject. FullKG refers to the 6,574 concept nodes available as eventual targets; it will measure coverage, validity, latency, and cost rather than exhaustively collecting human ratings.
+
+\subsection{Systems, Controls, and Ablations}
+
+The main comparison is Standard, Deterministic Copycat-inspired, and LLM-guided Copycat-inspired mapping. Retrieval ablations compare seed/definition only, controlled one-hop retrieval, and controlled adaptive two-hop retrieval. Mechanism ablations compare definition context, an unvalidated LLM mechanism, and the evidence-grounded validated mechanism graph. Generation ablations compare a single pass, Generator plus Judge, and the complete alignment-guided revision pipeline.
+
+All paired systems use the same concept set, seed and mechanism version, Generator, Aligner, Judge, temperature, maximum tokens, candidate count, and revision budget. The official protocol fixes three candidates per concept. A run manifest stores all input hashes and model settings. Missing candidates or fallback outputs make a method budget incomplete and exclude the affected records from the official aggregate.
+
+\subsection{Metrics}
+
+\paragraph{Structural metrics.}
+We report mechanism node coverage, edge coverage, direction accuracy, exact-evidence precision, unsupported alignment rate, hard and soft terminology leakage, valid-generation rate, and system exact match. System exact match requires complete node, edge, and direction coverage with valid length and no hard leakage.
+
+\paragraph{Fable quality.}
+The Judge scores conceptual faithfulness, mapping clarity, causal coherence, readability, implicitness, pedagogical usefulness, memorability, and novelty, and flags misconception risk. Because judge scores are model-dependent, they are reported separately from deterministic alignment metrics.
+
+\paragraph{Human evaluation.}
+For Human32, evaluators first read only the fable and summarize its mechanism. After the concept is revealed, they match story elements to mechanism nodes and relations, answer one concept question and one direction question, and rate helpfulness, memorability, and misconception risk. Stories are anonymized and randomized. Each story receives at least three ratings. We report mechanism-recovery accuracy, mapping-recovery accuracy, question accuracy, misconception rate, inter-annotator agreement, and correlation with automatic scores. If participants are adults or subject experts rather than K--12 students, we will describe them as such and will not infer student learning gains.
+
+Paired comparisons treat concepts as the sampling unit. The final analysis will use paired bootstrap confidence intervals or Wilcoxon signed-rank tests, effect sizes, and Holm correction for multiple comparisons.
+
+\section{Feasibility Results}
+
+Table~\ref{tab:pilot} reports the completed Pilot12 import. Each method has 36 candidates and no pipeline failure, so the comparison is budget-complete. The acceptance column is an LLM-Judge decision, not a human learning outcome.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Mapping method & Candidates & Judge accept & Node cov. & Edge cov. & System exact & Leakage \\
+\midrule
+Standard & 36 & 61.11\% & \textbf{87.50\%} & 86.52\% & \textbf{50.00\%} & \textbf{0} \\
+Deterministic Copycat-inspired & 36 & 50.00\% & 84.26\% & \textbf{94.44\%} & 47.22\% & \textbf{0} \\
+LLM-guided Copycat-inspired & 36 & \textbf{72.22\%} & 84.84\% & 88.41\% & 44.44\% & 2 \\
+\bottomrule
+\end{tabular}
+\caption{Pilot12 feasibility results over 108 generated candidates. Bold marks the best observed value, not statistical significance.}
+\label{tab:pilot}
+\end{table*}
+
+LLM-guided mapping produced the highest judge acceptance rate and no length violations, suggesting that its plans more often supported a narratively acceptable realization. It did not dominate the structural metrics. Deterministic mapping preserved the largest proportion of edges, while standard mapping achieved the highest node coverage and system exact match. Two LLM-guided candidates leaked forbidden terminology. The pilot therefore supports feasibility and metric sensitivity, but not a claim that one mapper is uniformly superior.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Core80 experiment & Primary metric & Result \\
+\midrule
+Mapping comparison & Exact match/quality & TBD \\
+Retrieval ablation & Valid mechanisms & TBD \\
+Mechanism ablation & Faithfulness & TBD \\
+Generation ablation & Accept/revision rate & TBD \\
+Subject analysis & Per-subject metrics & TBD \\
+\bottomrule
+\end{tabular}
+\caption{Pre-registered Core80 analyses. No result is available at the time of this draft.}
+\label{tab:tbd-core}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lcc}
+\toprule
+Human32 outcome & Statistic & Result \\
+\midrule
+Mechanism recovery & Accuracy & TBD \\
+Mapping recovery & Accuracy & TBD \\
+Concept/direction questions & Accuracy & TBD \\
+Misconception & Rate & TBD \\
+Annotator agreement & $\alpha$ or ICC & TBD \\
+Human--Judge agreement & Correlation & TBD \\
+\bottomrule
+\end{tabular}
+\caption{Planned human evaluation. These cells must remain TBD until annotation is complete.}
+\label{tab:tbd-human}
+\end{table}
+
+\section{Qualitative Analysis}
+
+Table~\ref{tab:case} traces one actual Pilot12 candidate for seed germination. The retrieved mechanism separates external conditions from seed-internal viability and links both to the process with directed \texttt{enables} edges. LLM-guided mapping transfers the structure to cooking rice. The final alignment covers all three nodes and both edges, preserves both directions, satisfies the length constraint, and contains no forbidden term. This is a structural success case, not evidence that the analogy has no pedagogical limits.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{p{0.24\linewidth}p{0.65\linewidth}}
+\toprule
+Mechanism & Fable realization and evidence \\
+\midrule
+External conditions $\rightarrow$ process & Heat, water, and a covered pot enable cooking; ``the external conditions must be just right.'' \\
+Internal viability $\rightarrow$ process & The apprentice removes moldy and damp grains; ``bad rice cannot yield good rice even with good heat.'' \\
+Germination process & Rice absorbs water and expands into a new state. \\
+\bottomrule
+\end{tabular}
+\caption{An actual LLM-guided mapping for seed germination (translated from Chinese). Each row corresponds to a persisted mechanism node or directed edge and an exact story span.}
+\label{tab:case}
+\end{table}
+
+A mechanism graph and its narrative plan also expose errors that a story-level score can hide. For a broad biological definition, retrieval may identify nutrition, respiration, waste removal, growth, reproduction, heredity, and cellular organization. If a fluent story mentions growth but omits reproduction, edge coverage identifies the omission.
+
+The pilot also reveals a characteristic failure: a source domain can be too close to the target and repeat scientific vocabulary. Such a candidate may preserve every relation yet fail implicitness or leakage. Another failure preserves the correct participants but reverses cause and consequence for dramatic effect. These cases motivate reporting acceptance and system exact match separately, and they justify targeted revision instructions rather than global rewriting.
+
+The final paper will include three audited cases after Core80 evaluation: one complete mapping, one fluent but structurally incomplete story, and one revised candidate. We will quote only encoding-valid, non-leaking artifacts and will trace every displayed mechanism relation to its retrieval evidence.
+
+\section{Limitations and Ethical Considerations}
+
+The current feasibility study is small and uses Chinese fables from four K--12 subjects. It does not measure student learning. LLM extraction may faithfully cite an incomplete graph neighborhood, and human approval does not guarantee pedagogical correctness. LLM judges may favor fluent realizations and share biases with the Generator. The two observed leakage cases show that a flexible mapper needs stricter lexical controls.
+
+Fables simplify. Personification can imply agency in physical or biological processes, and a satisfying resolution can erase boundary conditions. Concept2Fable is intended to supplement definitions and teacher explanation, not replace them. Stories should be reviewed by subject experts before classroom use, and teachers should state where an analogy ceases to apply. A study with minors would require appropriate institutional review, guardian consent, age-appropriate procedures, and data minimization.
+
+\section{Conclusion}
+
+Concept2Fable separates educational fable generation into evidence retrieval, mechanism construction, analogical structure mapping, and audited narrative realization. This separation makes failures local and comparisons controlled. Pilot12 shows that the pipeline can generate and evaluate all 108 planned candidates, while also showing that narrative acceptance and structural fidelity do not select the same mapper. The next empirical step is the frozen Core80 comparison and Human32 evaluation; claims about conceptual understanding depend on those results.
+
+\bibliography{concept2fable_v2_references}
+
+\end{document}

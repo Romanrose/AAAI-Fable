@@ -1,0 +1,108 @@
+{
+  "core_question": "催化剂的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "催化剂 --prerequisites_for--> 二氧化锰的催化作用",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15000"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "通过前后对比分析催化剂作用 --prerequisites_for--> 催化剂",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:15262"
+      ]
+    },
+    {
+      "step_id": "s3",
+      "text": "二氧化锰的催化作用 --is_a--> 催化剂",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:11283"
+      ]
+    },
+    {
+      "step_id": "s4",
+      "text": "催化剂 --is_a--> 影响化学反应速率的因素",
+      "kind": "effect",
+      "supporting_edge_ids": [
+        "normalized:edge:11282"
+      ]
+    },
+    {
+      "step_id": "s5",
+      "text": "催化剂对化学反应速率的影响 --is_a--> 催化剂",
+      "kind": "effect",
+      "supporting_edge_ids": [
+        "normalized:edge:11716"
+      ]
+    },
+    {
+      "step_id": "s6",
+      "text": "催化剂 --relates_to--> 催化作用",
+      "kind": "process",
+      "supporting_edge_ids": [
+        "normalized:edge:18226"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s4",
+      "target_step_id": "s5",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s5",
+      "target_step_id": "s6",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:15000",
+    "normalized:edge:15262",
+    "normalized:edge:11283",
+    "normalized:edge:11282",
+    "normalized:edge:11716",
+    "normalized:edge:18226"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "催化剂",
+    "chemistry_9a_rjb_cpt110",
+    "触媒",
+    "化学催化剂"
+  ],
+  "coverage_targets": {
+    "required_step_count": 6,
+    "required_dependency_count": 5,
+    "must_cover_edge_ids": [
+      "normalized:edge:15000",
+      "normalized:edge:15262",
+      "normalized:edge:11283",
+      "normalized:edge:11282",
+      "normalized:edge:11716",
+      "normalized:edge:18226"
+    ],
+    "must_cover_path_ids": []
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "seed": {
+    "id": "physics_8a_rjb_cpt1",
+    "resolved_node_id": "physics_8a_rjb_cpt1",
+    "name": "长度",
+    "definition": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_17188",
+      "source_id": "physics_8a_rjb_cpt1",
+      "source_name": "长度",
+      "target_id": "physics_8a_rjb_skl1",
+      "target_name": "使用刻度尺的方法",
+      "relation": "prerequisites_for",
+      "score": 1.12
+    },
+    {
+      "source_edge_id": "edge_12429",
+      "source_id": "physics_8a_rjb_cpt2",
+      "source_name": "长度单位（米及其倍数、子倍数）",
+      "target_id": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_23027",
+      "source_id": "physics_8a_rjb_exp1",
+      "source_name": "用刻度尺测量长度",
+      "target_id": "physics_8a_rjb_cpt1",
+      "target_name": "长度",
+      "relation": "verifies",
+      "score": 0.89
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "描述物体空间延伸程度的物理量，需要通过测量工具获得。",
+    "condition_summary": [],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [
+        "使用刻度尺的方法"
+      ],
+      "outcomes": [],
+      "experiments": [
+        "用刻度尺测量长度"
+      ],
+      "hierarchy": [
+        "长度单位（米及其倍数、子倍数）"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 3,
+    "selected_edge_count": 3,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

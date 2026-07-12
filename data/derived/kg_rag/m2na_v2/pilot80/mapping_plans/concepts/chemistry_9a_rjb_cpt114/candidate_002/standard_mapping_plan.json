@@ -1,0 +1,133 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt114",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的两种取水方法",
+  "characters": [
+    "村民",
+    "老张",
+    "小李"
+  ],
+  "objects": [
+    "村庄",
+    "深井",
+    "泉水",
+    "低温冰窖",
+    "竹管",
+    "水桶",
+    "富氧水"
+  ],
+  "conflict": "村庄需要大量纯净的水，但只有两种方法：一种需要低温冰窖和压力，另一种需要竹管和压力，村民不知如何选择。",
+  "event_chain": [
+    "村庄需要大量纯净的水。",
+    "老张使用低温冰窖和压力将泉水分离出纯净的水。",
+    "小李使用竹管和压力从泉水中分离出富氧水。",
+    "两种方法都产生了纯净的水，满足了村庄的需求。"
+  ],
+  "turning_point": "村民发现两种方法都能产生纯净的水，但老张的方法需要冰窖，小李的方法需要竹管。",
+  "resolution_state": "村庄同时采用两种方法，根据条件选择使用。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "村庄的取水方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老张的取水方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小李的取水方法",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "纯净的水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "低温冰窖",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "压力",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "压力",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "富氧水",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老张的取水方法是村庄的取水方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小李的取水方法是村庄的取水方法之一",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "纯净的水是村庄取水方法的目标",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "低温冰窖是老张取水方法需要的条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "压力是老张取水方法需要的条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "压力是小李取水方法需要的条件",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "小李的取水方法产生富氧水",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e8",
+      "story_relation": "老张的取水方法产生纯净的水",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'工业制取氧气的方法'等禁止术语。",
+    "确保所有必须保留的节点和边都已映射。",
+    "确保映射的边方向正确。",
+    "避免使用目标概念名称或别名。"
+  ],
+  "mapping_context_sha256": "1d3f8ceb2249b0a6d6f28ca0b6a473c1c7da52d69b1346a50214c8b1c753fc86",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "0230d9a489c576caff2b4f2364d1470eef9473a1027ced092952e38694ed0d1b"
+  }
+}

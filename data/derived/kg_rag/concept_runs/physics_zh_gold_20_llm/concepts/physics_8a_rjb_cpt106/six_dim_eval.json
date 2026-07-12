@@ -1,0 +1,85 @@
+{
+  "concept_id": "physics_8a_rjb_cpt106",
+  "target_concept": "凸透镜成像规律",
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 3
+  },
+  "weighted_overall": 4.6,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过阿明观察花朵和蜡烛在不同距离下成像的变化，准确体现了物距与像的虚实、大小、正倒之间的规律性关系，完全符合目标概念的定义。",
+    "implicitness": "故事未直接提及'凸透镜成像规律'或任何相关术语，而是通过情节自然隐含了该规律，符合隐含性要求。",
+    "mapping_clarity": "故事中物距变化与像的性质变化之间的对应关系清晰，但未明确区分一倍焦距和二倍焦距等关键点，映射清晰度略有不足。",
+    "readability": "故事语言流畅、情节生动，使用花朵和蜡烛等日常物品，易于理解，可读性高。",
+    "pedagogical_value": "故事通过具体观察和实验过程，生动展示了凸透镜成像规律，能有效帮助学习者理解物距与像的关系，教学价值高。",
+    "novelty": "故事以钟楼玻璃窗为情境，有一定创意，但整体结构较为常见，新颖性一般。"
+  },
+  "revision_suggestions": [
+    "可明确区分一倍焦距和二倍焦距的关键位置，增强映射清晰度。",
+    "可增加更多不同物距下的成像对比，进一步强化规律性。"
+  ],
+  "rule_findings": {
+    "story_token_count": 520,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "judge_response": {
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 4,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事通过阿明观察花朵和蜡烛在不同距离下成像的变化，准确体现了物距与像的虚实、大小、正倒之间的规律性关系，完全符合目标概念的定义。",
+      "implicitness": "故事未直接提及'凸透镜成像规律'或任何相关术语，而是通过情节自然隐含了该规律，符合隐含性要求。",
+      "mapping_clarity": "故事中物距变化与像的性质变化之间的对应关系清晰，但未明确区分一倍焦距和二倍焦距等关键点，映射清晰度略有不足。",
+      "readability": "故事语言流畅、情节生动，使用花朵和蜡烛等日常物品，易于理解，可读性高。",
+      "pedagogical_value": "故事通过具体观察和实验过程，生动展示了凸透镜成像规律，能有效帮助学习者理解物距与像的关系，教学价值高。",
+      "novelty": "故事以钟楼玻璃窗为情境，有一定创意，但整体结构较为常见，新颖性一般。"
+    },
+    "revision_suggestions": [
+      "可明确区分一倍焦距和二倍焦距的关键位置，增强映射清晰度。",
+      "可增加更多不同物距下的成像对比，进一步强化规律性。"
+    ]
+  },
+  "final_status": "accept",
+  "mode": "llm"
+}

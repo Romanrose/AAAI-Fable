@@ -1,0 +1,501 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "参照物",
+  "concept_id": "physics_8a_rjb_cpt10",
+  "concept_definition": "判断物体运动或静止时所选取的标准物体。",
+  "forbidden_terms_for_story_body": [
+    "physics_8a_rjb_cpt10",
+    "参照物"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "physics_8a_rjb_cpt10",
+      "label": "Concept",
+      "name": "参照物",
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "aliases": [],
+      "examples": [
+        "地面",
+        "旁边的列车",
+        "树木",
+        "房屋"
+      ],
+      "retrieval_text": "参照物\n判断物体运动或静止时所选取的标准物体。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "physics_8a_rjb_cpt9",
+          "label": "Concept",
+          "name": "运动与静止的相对性",
+          "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "physics_8a_rjb_cpt8",
+          "label": "Concept",
+          "name": "机械运动",
+          "definition": "物体的位置随时间不断地发生变化的运动形式。"
+        },
+        {
+          "id": "physics_8a_rjb_cpt9",
+          "label": "Concept",
+          "name": "运动与静止的相对性",
+          "definition": "一个物体是运动还是静止取决于所选参照物，不同参照物下的判断可能不同。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "physics_8a_rjb_exe1",
+          "label": "Exercise",
+          "name": "鲁迅《社戏》中写道：“淡黑的起伏的连山……都远远地向船尾跑去了。”其中“山……向船尾跑去了”所选的参照物是（A. 山  B. 船  C. 流水  D. 河岸）。",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "physics_8a_rjb_ch1_s2",
+          "label": "Section",
+          "name": "第二节 运动的描述",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "agentic_dual_level",
+      "story_language": "zh-CN",
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 3,
+      "candidate_edge_count": 3,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 778,
+      "summary_chars": 350,
+      "path_chars": 0,
+      "retrieval_context_chars": 1128
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "physics_8a_rjb_cpt10",
+    "concept_id": "physics_8a_rjb_cpt10",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "physics_8a_rjb_cpt10",
+      "label": "Concept",
+      "name": "参照物",
+      "definition": "判断物体运动或静止时所选取的标准物体。",
+      "aliases": [],
+      "examples": [
+        "地面",
+        "旁边的列车",
+        "树木",
+        "房屋"
+      ],
+      "retrieval_text": "参照物\n判断物体运动或静止时所选取的标准物体。"
+    },
+    "retrieval_package": {
+      "target": {
+        "source_node_id": "physics_8a_rjb_cpt10",
+        "label": "Concept",
+        "name": "参照物",
+        "properties": {
+          "definition": "判断物体运动或静止时所选取的标准物体。",
+          "importance": "重要",
+          "examples": [
+            "地面",
+            "旁边的列车",
+            "树木",
+            "房屋"
+          ],
+          "retrieval_text": "参照物\nConcept\n判断物体运动或静止时所选取的标准物体。\n重要\n地面\n旁边的列车\n树木\n房屋"
+        }
+      },
+      "raw_edges": [
+        {
+          "source_edge_id": "normalized:edge:17189",
+          "source": "physics_8a_rjb_cpt10",
+          "source_name": "参照物",
+          "target": "physics_8a_rjb_cpt9",
+          "target_name": "运动与静止的相对性",
+          "relation": "prerequisites_for",
+          "relation_description": "prerequisites_for",
+          "evidence": "",
+          "score": 1.35
+        },
+        {
+          "source_edge_id": "normalized:edge:19745",
+          "source": "physics_8a_rjb_cpt8",
+          "source_name": "机械运动",
+          "target": "physics_8a_rjb_cpt10",
+          "target_name": "参照物",
+          "relation": "relates_to",
+          "relation_description": "relates_to",
+          "evidence": "",
+          "score": 0.9
+        },
+        {
+          "source_edge_id": "normalized:edge:19747",
+          "source": "physics_8a_rjb_cpt9",
+          "source_name": "运动与静止的相对性",
+          "target": "physics_8a_rjb_cpt10",
+          "target_name": "参照物",
+          "relation": "relates_to",
+          "relation_description": "relates_to",
+          "evidence": "",
+          "score": 0.9
+        }
+      ],
+      "selected_paths": [],
+      "topic_summary": {
+        "definition_summary": {
+          "name": "参照物",
+          "definition": "判断物体运动或静止时所选取的标准物体。",
+          "formula": "",
+          "importance": "重要"
+        },
+        "condition_summary": [
+          "[normalized:edge:17189] 参照物 --prerequisites_for--> 运动与静止的相对性"
+        ],
+        "process_summary": [
+          "[normalized:edge:19745] 机械运动 --relates_to--> 参照物",
+          "[normalized:edge:19747] 运动与静止的相对性 --relates_to--> 参照物"
+        ],
+        "effect_summary": []
+      },
+      "retrieval_stats": {
+        "retrieval_mode": "dual_level",
+        "retrieval_edge_count": 3,
+        "candidate_edge_count": 3,
+        "retrieval_path_count": 0,
+        "raw_edge_chars": 778,
+        "summary_chars": 350,
+        "path_chars": 0,
+        "retrieval_context_chars": 1128
+      }
+    },
+    "mechanism_plan": {
+      "core_question": "参照物的关键条件、过程和结果是什么？",
+      "steps": [
+        {
+          "step_id": "s1",
+          "text": "参照物 --prerequisites_for--> 运动与静止的相对性",
+          "kind": "condition",
+          "supporting_edge_ids": [
+            "normalized:edge:17189"
+          ]
+        },
+        {
+          "step_id": "s2",
+          "text": "机械运动 --relates_to--> 参照物",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:19745"
+          ]
+        },
+        {
+          "step_id": "s3",
+          "text": "运动与静止的相对性 --relates_to--> 参照物",
+          "kind": "process",
+          "supporting_edge_ids": [
+            "normalized:edge:19747"
+          ]
+        },
+        {
+          "step_id": "s4",
+          "text": "判断物体运动或静止时所选取的标准物体。",
+          "kind": "process",
+          "supporting_edge_ids": []
+        }
+      ],
+      "dependencies": [
+        {
+          "source_step_id": "s1",
+          "target_step_id": "s2",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s2",
+          "target_step_id": "s3",
+          "relation": "leads_to"
+        },
+        {
+          "source_step_id": "s3",
+          "target_step_id": "s4",
+          "relation": "leads_to"
+        }
+      ],
+      "supporting_edge_ids": [
+        "normalized:edge:17189",
+        "normalized:edge:19745",
+        "normalized:edge:19747"
+      ],
+      "supporting_path_ids": [],
+      "forbidden_terms": [
+        "参照物",
+        "physics_8a_rjb_cpt10"
+      ],
+      "coverage_targets": {
+        "required_step_count": 4,
+        "required_dependency_count": 3,
+        "must_cover_edge_ids": [
+          "normalized:edge:17189",
+          "normalized:edge:19745",
+          "normalized:edge:19747"
+        ],
+        "must_cover_path_ids": []
+      }
+    },
+    "analogy_plan": {
+      "found": true,
+      "query": "physics_8a_rjb_cpt10",
+      "concept_id": "physics_8a_rjb_cpt10",
+      "story_language": "zh-CN",
+      "source_domain": "轨道调度台",
+      "characters": [
+        "负责记录变化的学徒",
+        "坚持按步骤验收的师傅",
+        "一套会暴露错误顺序的器具"
+      ],
+      "entities": [
+        "负责记录变化的学徒",
+        "一张分段验收单",
+        "一套会暴露错误顺序的器具"
+      ],
+      "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+      "event_chain": [
+        "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 运动与静止的相对性",
+        "让中间的行动承接前后变化：机械运动 --relates_to--> 这条隐藏规则",
+        "让中间的行动承接前后变化：运动与静止的相对性 --relates_to--> 这条隐藏规则",
+        "让中间的行动承接前后变化：判断物体运动或静止时所选取的标准物体。"
+      ],
+      "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+      "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+      "alignment_targets": [
+        {
+          "mechanism_step_id": "s1",
+          "mechanism_kind": "condition",
+          "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 运动与静止的相对性"
+        },
+        {
+          "mechanism_step_id": "s2",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：机械运动 --relates_to--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s3",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：运动与静止的相对性 --relates_to--> 这条隐藏规则"
+        },
+        {
+          "mechanism_step_id": "s4",
+          "mechanism_kind": "process",
+          "story_event": "让中间的行动承接前后变化：判断物体运动或静止时所选取的标准物体。"
+        }
+      ],
+      "alignment_plan": [
+        {
+          "concept_role": "目标概念",
+          "concept_items": [
+            "参照物"
+          ],
+          "story_role": "故事中不直接说出的隐藏规则"
+        },
+        {
+          "concept_role": "核心机制",
+          "concept_items": [
+            "参照物 --prerequisites_for--> 运动与静止的相对性",
+            "机械运动 --relates_to--> 参照物",
+            "运动与静止的相对性 --relates_to--> 参照物",
+            "判断物体运动或静止时所选取的标准物体。"
+          ],
+          "story_role": "分段验收中的条件、行动和结果链"
+        },
+        {
+          "concept_role": "学科约束",
+          "concept_items": [
+            "保留变量之间的关系。",
+            "避免把自然规律写成角色主观意志。",
+            "保留方向、大小、条件变化。"
+          ],
+          "story_role": "防止故事类比误导概念理解的写作约束"
+        }
+      ],
+      "template_blacklist": [
+        "智者",
+        "老人",
+        "村庄",
+        "森林",
+        "镜子",
+        "钟表",
+        "河流"
+      ]
+    },
+    "source_domain": "轨道调度台",
+    "entities": [
+      "负责记录变化的学徒",
+      "一张分段验收单",
+      "一套会暴露错误顺序的器具"
+    ],
+    "characters": [
+      "负责记录变化的学徒",
+      "坚持按步骤验收的师傅",
+      "一套会暴露错误顺序的器具"
+    ],
+    "event_chain": [
+      "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 运动与静止的相对性",
+      "让中间的行动承接前后变化：机械运动 --relates_to--> 这条隐藏规则",
+      "让中间的行动承接前后变化：运动与静止的相对性 --relates_to--> 这条隐藏规则",
+      "让中间的行动承接前后变化：判断物体运动或静止时所选取的标准物体。"
+    ],
+    "conflict": "表面结果看似已经出现，但前置条件、核心过程和后续影响没有被逐项核对。",
+    "turning_point": "一次分段验收让主角发现，只有条件、过程和结果连起来，变化才算真正成立。",
+    "resolution_state": "主角学会先看条件，再看过程，最后用结果反查整条关系是否可靠。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "参照物"
+        ],
+        "story_role": "故事中不直接说出的隐藏规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "参照物 --prerequisites_for--> 运动与静止的相对性",
+          "机械运动 --relates_to--> 参照物",
+          "运动与静止的相对性 --relates_to--> 参照物",
+          "判断物体运动或静止时所选取的标准物体。"
+        ],
+        "story_role": "分段验收中的条件、行动和结果链"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留变量之间的关系。",
+          "避免把自然规律写成角色主观意志。",
+          "保留方向、大小、条件变化。"
+        ],
+        "story_role": "防止故事类比误导概念理解的写作约束"
+      }
+    ],
+    "alignment_targets": [
+      {
+        "mechanism_step_id": "s1",
+        "mechanism_kind": "condition",
+        "story_event": "先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 运动与静止的相对性"
+      },
+      {
+        "mechanism_step_id": "s2",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：机械运动 --relates_to--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s3",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：运动与静止的相对性 --relates_to--> 这条隐藏规则"
+      },
+      {
+        "mechanism_step_id": "s4",
+        "mechanism_kind": "process",
+        "story_event": "让中间的行动承接前后变化：判断物体运动或静止时所选取的标准物体。"
+      }
+    ],
+    "template_blacklist": [
+      "智者",
+      "老人",
+      "村庄",
+      "森林",
+      "镜子",
+      "钟表",
+      "河流"
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事用隐藏规则和连续变化来对应目标概念。",
+      "concept_items": [
+        "参照物"
+      ]
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "条件、过程和结果被记录员按顺序检查。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：轨道调度台里的隐藏规则\n\n轨道调度台里有一位年轻的记录员，他总觉得眼前的变化只是巧合。\n一天，他把条件、行动和结果一一写在木牌上，发现只有当几个环节同时配合时，那个被观察的场所才会出现稳定变化。\n先确认一个起点条件是否具备：这条隐藏规则 --prerequisites_for--> 运动与静止的相对性\n让中间的行动承接前后变化：机械运动 --relates_to--> 这条隐藏规则\n让中间的行动承接前后变化：运动与静止的相对性 --relates_to--> 这条隐藏规则\n后来，记录员不再只看表面的结果，而是先找条件，再看过程，最后检查结果是否能重复出现。他明白，真正重要的不是某个名字，而是名字背后那套能被辨认的关系。",
+  "rule_findings": {
+    "story_token_count": 238,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "math_1a_rjb_cpt25",
+    "subject": "math",
+    "canonical_name": "6的加减法",
+    "aliases": [],
+    "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+    "concept_type": "relation",
+    "forbidden_terms": [
+      "6的加减法"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "掌握数字6的认识，包括数物体、读写数字，理解6表示的数量",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt23:definition",
+          "kg-node:math_1a_rjb_cpt23:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "掌握分与合（拆分与组合），如把一个数分成两个部分或由两个部分合成一个数",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt28:definition",
+          "kg-node:math_1a_rjb_cpt28:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:math_1a_rjb_cpt25:definition",
+          "kg-node:math_1a_rjb_cpt25:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16344"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:16346"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "6的加减法"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "math_1a_rjb_cpt25",
+      "name": "6的加减法",
+      "label": "Concept",
+      "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。"
+    },
+    "neighbors": [
+      {
+        "id": "math_1a_rjb_cpt23",
+        "name": "数字6的认识"
+      },
+      {
+        "id": "math_1a_rjb_cpt28",
+        "name": "分与合（拆分与组合）"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:16344",
+        "source_id": "math_1a_rjb_cpt23",
+        "source_name": "数字6的认识",
+        "target_id": "math_1a_rjb_cpt25",
+        "target_name": "6的加减法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt23",
+        "neighbor_name": "数字6的认识",
+        "score": 1.35,
+        "evidence": ""
+      },
+      {
+        "edge_id": "normalized:edge:16346",
+        "source_id": "math_1a_rjb_cpt28",
+        "source_name": "分与合（拆分与组合）",
+        "target_id": "math_1a_rjb_cpt25",
+        "target_name": "6的加减法",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "math_1a_rjb_cpt28",
+        "neighbor_name": "分与合（拆分与组合）",
+        "score": 1.35,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 2,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "6的加减法",
+      "definition": "掌握所有得数是6或从6中减去的加减法，如5+1=6、6-1=5等。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:16344] 数字6的认识 --prerequisites_for--> 6的加减法",
+      "[normalized:edge:16346] 分与合（拆分与组合） --prerequisites_for--> 6的加减法"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:16344",
+    "normalized:edge:16346"
+  ],
+  "provenance": {
+    "seed_sha256": "d9d96b64a2a36f1c8c27baa5b206ab1d253ed0401e53d23751103e6727e09c14",
+    "retrieval_sha256": "885c10d82cc648225fb8c14f00218b23a1b4a076e418fdd5636fe462788db282",
+    "mechanism_record_sha256": "0d12488dbacece2252c481d9d56047d72b7675a25747351a77ab94da83097002"
+  }
+}

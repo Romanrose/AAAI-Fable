@@ -1,0 +1,61 @@
+{
+  "query": "physics_8a_rjb_cpt100",
+  "found": true,
+  "seed": {
+    "id": "physics_8a_rjb_cpt100",
+    "label": "Concept",
+    "name": "焦点",
+    "definition": "平行于主光轴的光通过凸透镜后会聚到主轴上的一点。",
+    "aliases": [],
+    "examples": [],
+    "retrieval_text": "焦点\n平行于主光轴的光通过凸透镜后会聚到主轴上的一点。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "physics_8a_rjb_cpt98",
+        "label": "Concept",
+        "name": "主光轴",
+        "definition": "通过透镜两个球面球心的直线，简称主轴。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt101",
+        "label": "Concept",
+        "name": "焦距",
+        "definition": "凸透镜主光轴上焦点到透镜中心的距离，决定凸透镜对光的偏折能力。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "physics_8a_rjb_exp23",
+        "label": "Experiment",
+        "name": "凸透镜对光的偏折演示",
+        "definition": ""
+      }
+    ],
+    "exercises": [
+      {
+        "id": "physics_8a_rjb_exe12",
+        "label": "Exercise",
+        "name": "太阳光可视为平行光。如何利用阳光测量凸透镜的焦距？",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s1",
+        "label": "Section",
+        "name": "第一节 透镜",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

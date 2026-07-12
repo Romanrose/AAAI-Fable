@@ -1,0 +1,140 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt110",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "催化剂",
+  "definition": "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+  "aliases": [
+    "触媒",
+    "化学催化剂"
+  ],
+  "examples": [
+    "二氧化锰在过氧化氢分解反应中起催化剂作用",
+    "二氧化锰在氯酸钾分解制氧气的反应中起催化剂作用",
+    "硫酸铜溶液对过氧化氢分解具有催化作用",
+    "酶在酿造工业和制药工业中的催化作用",
+    "催化剂十分神奇，它能极大地提高化学反应速率（可使反应速率增大几个到十几个数量级），而自身的组成、化学性质和质量在反应前后不发生变化。",
+    "MnO2在过氧化氢分解反应中的催化作用。",
+    "FeCl3溶液在过氧化氢分解反应中的催化作用。"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "process",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt112",
+        "label": "Concept",
+        "name": "二氧化锰的催化作用",
+        "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "chemistry_bx2_rjb_cpt129",
+        "label": "Concept",
+        "name": "影响化学反应速率的因素",
+        "definition": "在相同条件下，不同反应速率不同，反应速率首先由反应物的组成、结构和性质决定，还受浓度、压强、温度、催化剂等因素的影响。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt112",
+        "label": "Concept",
+        "name": "二氧化锰的催化作用",
+        "definition": "二氧化锰在过氧化氢分解和氯酸钾分解等反应中能显著改变反应速率，在反应前后质量和化学性质基本不变，因此属于催化剂。"
+      },
+      {
+        "id": "chemistry_bx2_rjb_cpt154",
+        "label": "Concept",
+        "name": "催化剂对化学反应速率的影响",
+        "definition": "在其它条件相同时，加入适当的催化剂可以显著改变化学反应速率，一般是加快反应速率，但不改变反应的方向和总反应结果。"
+      },
+      {
+        "id": "chemistry_9a_rjb_cpt111",
+        "label": "Concept",
+        "name": "催化作用",
+        "definition": "催化剂在化学反应中所起的使反应速率发生改变的作用，而催化剂自身的质量和化学性质在反应前后基本不变。"
+      },
+      {
+        "id": "chemistry_bx2_rjb_cpt128",
+        "label": "Concept",
+        "name": "化学反应速率",
+        "definition": "任何化学反应的快慢都表现为有关物质的量随着时间变化的多少，可以用单位时间、单位体积中反应物或生成物的物质的量变化来表示；若体积恒定，则通常用单位时间内反应物浓度的减小或生成物浓度的增大来表示。"
+      },
+      {
+        "id": "chemistry_9b_rjb_cpt265",
+        "label": "Concept",
+        "name": "酶",
+        "definition": "由细胞产生的一类对生物体内化学反应具有催化作用的有机化合物，其中绝大多数是蛋白质，被称为生物催化剂，是生物新陈代谢和各种生命活动得以进行的关键。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "chemistry_9a_rjb_exe17",
+        "label": "Exercise",
+        "name": "在过氧化氢分解制氧气的实验中，向过氧化氢溶液中加入少量二氧化锰，观察到带火星的木条能复燃，多次重复实验后，二氧化锰的质量和化学性质没有改变。\n根据上述信息回答：\n（1）二氧化锰在该反应中是否被消耗？\n（2）二氧化锰在该反应中起什么作用？这种物质在化学上叫什么？",
+        "definition": ""
+      },
+      {
+        "id": "chemistry_bx2_rjb_exe16",
+        "label": "Exercise",
+        "name": "7. 工业制硫酸中的一步重要反应是 SO2 在 400~500℃ 下的催化氧化：\n2SO2 + O2 ⇌ 2SO3\n这是一个正反应放热的可逆反应。如果反应在密闭容器中进行，下列有关说法错误的是（ ）。\nA. 使用催化剂是为了增大反应速率, 提高生产效率  \nB. 在上述条件下, SO2 不可能 100% 地转化为 SO3   \nC. 提高反应时的温度, 可以实现 SO2 的完全转化  \nD. 通过调控反应条件, 可以提高该反应进行的程度",
+        "definition": ""
+      },
+      {
+        "id": "chemistry_bx2_rjb_exe17",
+        "label": "Exercise",
+        "name": "1. 请根据已有知识和经验填写下表。\n影响化学反应速率的条件 | 如何影响 | 实例\n温度 | ______ | ______\n浓度 | ______ | ______\n固体的表面积 | ______ | ______\n催化剂 | ______ | ______",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      },
+      {
+        "id": "chemistry_bx2_rjb_ch6_s2",
+        "label": "Section",
+        "name": "第二节 化学反应的速率与限度",
+        "definition": ""
+      },
+      {
+        "id": "chemistry_bx2_rjb_ch6_s4",
+        "label": "Section",
+        "name": "实验活动7 化学反应速率的影响因素",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。"
+  ],
+  "must_preserve_zh": [
+    "一类能在化学反应中显著改变（通常是增大）化学反应速率，而自身的组成、化学性质和质量在反应前后不发生变化，并具有一定选择性的物质。",
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "催化剂",
+    "触媒",
+    "化学催化剂"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "high",
+    "needs_llm_enrichment": false,
+    "generation_priority": "gold",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

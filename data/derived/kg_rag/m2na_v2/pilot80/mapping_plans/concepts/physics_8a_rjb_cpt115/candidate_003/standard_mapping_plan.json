@@ -1,0 +1,60 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "physics_8a_rjb_cpt115",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫与果树",
+  "characters": [
+    "农夫"
+  ],
+  "objects": [
+    "果树",
+    "果树下的土地"
+  ],
+  "conflict": "农夫希望果树结出最多最好的果实，但果树需要合适的生长距离才能健康结果。",
+  "event_chain": [
+    "农夫在果园里种下一棵果树，果树逐渐长大。",
+    "农夫发现果树下有一片土地，他可以在那里种些花草，但离果树太近会影响果树生长。",
+    "农夫尝试在离果树很近的地方种花，结果果树结果变少且果实小。",
+    "农夫反思后，发现果树需要一定的生长空间，不能太靠近其他植物。"
+  ],
+  "turning_point": "农夫意识到果树与周围植物需要保持适当距离，才能既让果树茂盛，又让花草生长。",
+  "resolution_state": "农夫在离果树约一步远的地方种花，果树结果又大又多，花草也繁茂。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫在离果树约一步远的地方种花，果树结果又大又多，花草也繁茂",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "农夫在离果树很近的地方种花，结果果树结果变少且果实小",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫从离果树很近种花导致果树减产的经验，认识到需要保持适当距离才能获得最佳结果",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'明视距离'、'近点'等术语。",
+    "确保'果树下的土地'不直接对应'近点'，而是通过距离关系间接映射。",
+    "确保事件链中因果关系清晰，且方向与机制图一致。"
+  ],
+  "mapping_context_sha256": "3fc52931370d4dc54982c3e113027131acd5503ba7e3cbf5e278bd4499960b9a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "db3e1ad6851c5ada9c80ff96486b0dd7193ddae8838efd0e11d9abdcf1081217"
+  }
+}

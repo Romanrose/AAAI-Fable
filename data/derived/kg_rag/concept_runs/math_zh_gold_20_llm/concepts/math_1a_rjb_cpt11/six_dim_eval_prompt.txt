@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "加法的含义",
+  "concept_id": "math_1a_rjb_cpt11",
+  "concept_definition": "表示两个数量合并在一起。",
+  "forbidden_terms_for_story_body": [
+    "math_1a_rjb_cpt11",
+    "加法的含义"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "math_1a_rjb_cpt11",
+      "label": "Concept",
+      "name": "加法的含义",
+      "definition": "表示两个数量合并在一起。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "加法的含义\n表示两个数量合并在一起。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "math_1a_rjb_cpt7",
+          "label": "Concept",
+          "name": "数字1到5的认识",
+          "definition": "认识并能数出1到5的数量，理解数字与数量的一一对应。"
+        }
+      ],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [
+        {
+          "id": "math_1a_rjb_exe10",
+          "label": "Exercise",
+          "name": "根据图示写出算式：1 + 2 = ?",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "math_1a_rjb_ch3",
+          "label": "Chapter",
+          "name": "5以内数的认识和加减法",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "math_1a_rjb_cpt11",
+    "concept_id": "math_1a_rjb_cpt11",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "math_1a_rjb_cpt11",
+      "label": "Concept",
+      "name": "加法的含义",
+      "definition": "表示两个数量合并在一起。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "规则谜城",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：表示两个数量合并在一起。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "加法的含义"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "表示两个数量合并在一起。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "保留形式定义条件和规则一致性。",
+          "避免只有故事没有数学结构。",
+          "避免把数学概念道德化。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事通过多次合并事件（星石、蘑菇、果子、鱼）隐含了‘两个数量合并在一起’的规则，但未直接提及‘加法的含义’术语。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "每个事件都明确描述了两个数量合并后总数等于各自数量之和，如3块+2块=5块，4朵+1朵=5朵等，体现了合并的数学结构。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事保持了形式定义的一致性（每次合并结果正确），避免了道德化说教，且通过具体事件而非抽象解释呈现数学结构。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：星石拼图\n\n在遥远的星光山谷里，住着一位叫小宇的男孩。山谷里有一种神奇的水晶石，每当两块星石靠在一起，就会发出柔和的光芒，并融合成一块更大的星石。\n\n一天，小宇发现山谷入口处有两堆星石：左边堆着3块，右边堆着2块。他好奇地把它们全部搬到一起，数了数，变成了5块。他惊讶地发现，原来分开的两堆合在一起，总数就是它们各自数量的总和。\n\n接着，他来到溪边，看到4朵发光蘑菇和1朵普通蘑菇。他把它们都采进篮子里，篮子里就有了5朵蘑菇。小宇心想：“不管是什么东西，只要把它们合在一起，总数就是原来两部分的数量加起来。”\n\n这时，一只小鸟衔来2颗红果，另一只小鸟衔来3颗蓝果。两只小鸟把果子都放在同一个巢里，巢里就有了5颗果子。小宇恍然大悟：“原来，把两个数量合并在一起，就能得到一个新的总数。”\n\n后来，小宇遇到一个难题：池塘里有2条金鱼和3条锦鲤，他想知道一共有多少条鱼。他想起之前的经历，把金鱼和锦鲤的数量合起来，数了数，果然是5条。他高兴地跳了起来。\n\n从此，小宇明白了：无论是什么事物，只要把两个部分合并在一起，就能得到它们的总和。这个规律帮助他解决了很多生活中的问题。",
+  "rule_findings": {
+    "story_token_count": 421,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

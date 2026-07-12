@@ -1,0 +1,266 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate_001",
+      "source_domain": "古代治水工程",
+      "domain_rationale": "治水工程中，堤坝（凸透镜）和泄洪闸门（调节像距）共同作用，在洪水（物体远离）时形成缩小的水流（缩小、倒立的实像），映射照相机成像机制。",
+      "conflict": "堤坝并非透明，但治水过程与光学成像的结构相似。",
+      "event_chain": [
+        "堤坝稳固河岸",
+        "洪水远离堤坝",
+        "泄洪闸门调节水流通道",
+        "形成缩小的水流"
+      ],
+      "turning_point": "泄洪闸门开启调节",
+      "resolution_state": "形成缩小的水流，缓解洪水压力",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "堤坝",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "缩小的水流",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "治水过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "洪水远离堤坝",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "缩小的水流",
+          "mapping_type": "outcome"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "泄洪闸门调节",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "堤坝使治水过程成为可能",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "治水过程产生缩小的水流",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "洪水远离堤坝促进了治水过程",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "治水过程形成缩小的水流",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "泄洪闸门调节促进了治水过程",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.9767,
+      "temperature": 2.33,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 0.8333,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 6
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_002",
+      "source_domain": "古代造纸工艺",
+      "domain_rationale": "造纸中，抄纸帘（凸透镜）和压榨工序（调节像距）在纸浆远离（物体远离）时形成薄而均匀的纸页（缩小、倒立的实像），映射成像机制。",
+      "conflict": "纸浆并非光线，但工艺步骤与光学过程结构一致。",
+      "event_chain": [
+        "抄纸帘架设于纸槽",
+        "纸浆远离抄纸帘",
+        "压榨工序调整纸页厚度",
+        "形成薄而均匀的纸页"
+      ],
+      "turning_point": "压榨工序施加压力",
+      "resolution_state": "形成薄而均匀的纸页",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "抄纸帘",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "薄而均匀的纸页",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "造纸过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "纸浆远离抄纸帘",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "薄而均匀的纸页",
+          "mapping_type": "outcome"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "压榨工序",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "抄纸帘使造纸过程成为可能",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "造纸过程产生薄而均匀的纸页",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "纸浆远离抄纸帘促进了造纸过程",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "造纸过程形成薄而均匀的纸页",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "压榨工序促进了造纸过程",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.9767,
+      "temperature": 2.33,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 0.8333,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 6
+    }
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate_003",
+      "source_domain": "古代冶炼铸造",
+      "domain_rationale": "冶炼中，模具（凸透镜）和冷却工序（调节像距）在金属液远离（物体远离）时形成致密的铸件（缩小、倒立的实像），映射成像机制。",
+      "conflict": "金属液并非光线，但模具与冷却的结构与光学系统相似。",
+      "event_chain": [
+        "模具固定于砂型",
+        "金属液远离模具",
+        "冷却工序调节温度",
+        "形成致密的铸件"
+      ],
+      "turning_point": "冷却工序开始降温",
+      "resolution_state": "形成致密的铸件",
+      "node_mappings": [
+        {
+          "mechanism_node_id": "n1",
+          "story_carrier": "模具",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n2",
+          "story_carrier": "致密的铸件",
+          "mapping_type": "entity"
+        },
+        {
+          "mechanism_node_id": "n3",
+          "story_carrier": "铸造过程",
+          "mapping_type": "process"
+        },
+        {
+          "mechanism_node_id": "n4",
+          "story_carrier": "金属液远离模具",
+          "mapping_type": "condition"
+        },
+        {
+          "mechanism_node_id": "n5",
+          "story_carrier": "致密的铸件",
+          "mapping_type": "outcome"
+        },
+        {
+          "mechanism_node_id": "n6",
+          "story_carrier": "冷却工序",
+          "mapping_type": "process"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "mechanism_edge_id": "e1",
+          "story_relation": "模具使铸造过程成为可能",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e2",
+          "story_relation": "铸造过程产生致密的铸件",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e3",
+          "story_relation": "金属液远离模具促进了铸造过程",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e4",
+          "story_relation": "铸造过程形成致密的铸件",
+          "direction_preserved": true
+        },
+        {
+          "mechanism_edge_id": "e5",
+          "story_relation": "冷却工序促进了铸造过程",
+          "direction_preserved": true
+        }
+      ]
+    },
+    "evaluation": {
+      "score": 0.9767,
+      "temperature": 2.33,
+      "node_coverage": 1.0,
+      "edge_coverage": 1.0,
+      "carrier_diversity": 0.8333,
+      "relation_diversity": 1.0,
+      "leakage_free": 1.0,
+      "narrative_complete": 1.0,
+      "template_issues": [],
+      "validation_errors": [],
+      "mechanism_node_count": 6
+    }
+  }
+]

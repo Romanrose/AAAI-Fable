@@ -1,0 +1,100 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt101",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "古代工匠鉴别玉料真伪的故事",
+  "characters": [
+    "经验丰富的老玉匠",
+    "学徒"
+  ],
+  "objects": [
+    "一块待鉴别的玉料",
+    "一把特制的刻刀",
+    "真玉（内部结构致密）",
+    "仿玉（内部结构疏松）"
+  ],
+  "conflict": "学徒无法确定一块玉料是真玉还是仿玉，老玉匠需要教他一个可靠的鉴别方法。",
+  "event_chain": [
+    "学徒将刻刀尖端在玉料表面轻轻划刻",
+    "真玉内部结构致密，能抵抗刻划",
+    "刻刀划过真玉表面时，留下清晰但浅的痕迹，且刻刀尖端保持锋利",
+    "刻刀划过仿玉表面时，留下深而模糊的痕迹，且刻刀尖端变钝",
+    "老玉匠根据刻刀留下的痕迹和刻刀状态判断玉料真伪"
+  ],
+  "turning_point": "学徒观察到刻刀在真玉上留下的痕迹浅而清晰，刻刀尖端未受损；而在仿玉上痕迹深且模糊，刻刀尖端变钝。",
+  "resolution_state": "学徒掌握了通过刻刀划痕和刻刀状态鉴别玉料真伪的方法，能够准确区分真玉和仿玉。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "学徒将刻刀尖端在玉料表面轻轻划刻",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "真玉（内部结构致密）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "刻刀划过真玉表面时，留下清晰但浅的痕迹，且刻刀尖端保持锋利",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老玉匠根据刻刀留下的痕迹和刻刀状态判断玉料为真玉",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "真玉内部结构致密，能抵抗刻划",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "导致",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "使得能够",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "产生",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "是",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "使得能够",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'氧气'、'木条'、'复燃'等化学相关术语。",
+    "注意保留'刻划'动作（对应n1）和'刻划导致痕迹'（对应e1）的因果关系。",
+    "避免将'老玉匠教方法'的课程桥段误作为因果机制映射。",
+    "所有节点和边均已映射，无遗漏。"
+  ],
+  "mapping_context_sha256": "f8d49bdc374420b20bfa1b9c7ae257a4243ee9eb2697e4ac13c59196a44fb9a9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "697985583ba924e9666a9ba693b4d84f20e8b6015944351a705423056cce3513"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "biology_7a_rjb_cpt103",
+    "subject": "biology",
+    "canonical_name": "适宜的温度",
+    "aliases": [],
+    "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+    "concept_type": "definition",
+    "forbidden_terms": [
+      "适宜的温度"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "condition",
+        "text": "适宜的温度",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition",
+          "kg-node:biology_7a_rjb_cpt103:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "condition",
+        "text": "种子萌发的环境条件",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt102:definition",
+          "kg-node:biology_7a_rjb_cpt102:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "种子萌发生理活动",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "outcome",
+        "text": "种子完成萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "state",
+        "text": "温度过低",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition",
+          "kg-node:biology_7a_rjb_cpt102:examples"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "outcome",
+        "text": "抑制萌发",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "is_a",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:10773"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n3",
+        "target": "n4",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n5",
+        "target": "n3",
+        "relation": "constrains",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n5",
+        "target": "n6",
+        "relation": "causes",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt103:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "适宜的温度"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "biology_7a_rjb_cpt103",
+      "name": "适宜的温度",
+      "label": "Concept",
+      "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。"
+    },
+    "neighbors": [
+      {
+        "id": "biology_7a_rjb_cpt102",
+        "name": "种子萌发的环境条件"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:10773",
+        "source_id": "biology_7a_rjb_cpt103",
+        "source_name": "适宜的温度",
+        "target_id": "biology_7a_rjb_cpt102",
+        "target_name": "种子萌发的环境条件",
+        "relation": "is_a",
+        "relation_semantic_role": "category_membership",
+        "direction": "outgoing",
+        "neighbor_id": "biology_7a_rjb_cpt102",
+        "neighbor_name": "种子萌发的环境条件",
+        "score": 1.2,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "适宜的温度",
+      "definition": "能使种子顺利进行萌发生理活动并完成萌发的温度条件；温度过低会抑制萌发。",
+      "formula": "",
+      "importance": "重要"
+    },
+    "condition_summary": [],
+    "process_summary": [
+      "[normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:10773"
+  ],
+  "provenance": {
+    "seed_sha256": "c319c2dba1ad7dfb6a406f05349fdba6f4a0c557ed5bfeb919c09a1a089e1b53",
+    "retrieval_sha256": "90537434a311b3fdd7fdf8725f398dcc25ab5e625664cf449b2d54443dd5e6b0",
+    "mechanism_record_sha256": "ed046508f6d1ff0cc88bbe091e567260e97306171996a663cbb73a2cf7fe0d23"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "winner_candidate_id": "candidate_001",
+  "deterministic_winner_candidate_id": "candidate_001",
+  "ranked_candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_002",
+      "score": 1.0,
+      "revision_reason": null
+    },
+    {
+      "candidate_id": "candidate_003",
+      "score": 0.99,
+      "revision_reason": null
+    }
+  ],
+  "arbiter": {
+    "winner_candidate_id": "candidate_001",
+    "rationale": "candidate_001 的故事以棋盘残局为背景，通过学徒数白子的过程自然映射计数机制，未泄露任何目标概念，覆盖了机制节点和边，证据对齐度高，且中文叙述生动自然，无模板化痕迹。candidate_002 虽然也符合要求，但故事略显机械；candidate_003 存在轻微模板化风险（'从此以后'）。综合确定性指标推荐，选择 candidate_001。",
+    "risk_notes": []
+  },
+  "revision_reason": null,
+  "selected_score": 1.0,
+  "revision_applied": false
+}

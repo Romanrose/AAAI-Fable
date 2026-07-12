@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 3,
+    "mapping_clarity": 4,
+    "readability": 5,
+    "pedagogical_value": 4,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e2",
+    "distinguishing_reason": "The mapping of n2 (实像) to '缩小的水流' is consistent with the outcome n5, but the edge e2 (照相机成像 is_a 实像) is not explicitly realized as an 'is_a' relation in the story; instead, the story uses '形成' (produces) which aligns with e4. This weakens the mapping clarity for e2 compared to a direct 'is_a' statement."
+  },
+  "revision_instructions": [
+    "Strengthen edge e2 by explicitly stating that the治水过程 (照相机成像) is a type of缩小的水流 (实像), e.g., '治水过程本质上就是形成缩小的水流的过程'.",
+    "Clarify edge e3 by making the causal link between '洪水远离堤坝' and the initiation of治水过程 more explicit, e.g., '正是由于洪水远离堤坝，治水过程才得以启动'."
+  ],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}

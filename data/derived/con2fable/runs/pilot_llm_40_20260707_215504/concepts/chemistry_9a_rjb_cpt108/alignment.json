@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "小苏打粉末（氯酸钾）与神秘黑粉（二氧化锰）混合加热，小苏打分解产生气体（氧气），黑粉不变且起催化作用",
+      "evidence": "神秘黑粉自己一点没变，却让小苏打更快地分解出气体，让蛋糕变得蓬松",
+      "narrative_anchor": "神秘黑粉自己一点没变，却让小苏打更快地分解出气体，让蛋糕变得蓬松"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "小苏打分解产生气体是一种分解反应",
+      "evidence": "小苏打更快地分解出气体",
+      "narrative_anchor": "小苏打更快地分解出气体"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "烘焙师用这种方法制作蓬松蛋糕，对应实验室制取氧气的方法",
+      "evidence": "烘焙师今天要做一款需要大量气体的蓬松蛋糕",
+      "narrative_anchor": "烘焙师今天要做一款需要大量气体的蓬松蛋糕"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "小苏打分解（分解反应）是产生气体的具体过程",
+      "evidence": "小苏打更快地分解出气体",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "小苏打更快地分解出气体"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "分解反应产生气体是制作蓬松蛋糕（实验室制取氧气方法）的关键步骤",
+      "evidence": "蛋糕糊像吹气球一样迅速膨胀起来",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "蛋糕糊像吹气球一样迅速膨胀起来"
+    }
+  ]
+}

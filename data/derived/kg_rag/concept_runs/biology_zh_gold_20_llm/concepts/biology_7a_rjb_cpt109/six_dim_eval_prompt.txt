@@ -1,0 +1,192 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "发芽率",
+  "concept_id": "biology_7a_rjb_cpt109",
+  "concept_definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt109",
+    "发芽率"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt109",
+      "label": "Concept",
+      "name": "发芽率",
+      "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "aliases": [],
+      "examples": [],
+      "retrieval_text": "发芽率\n供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [
+        {
+          "id": "biology_7a_rjb_exp10",
+          "label": "Experiment",
+          "name": "测定种子的发芽率（培养皿样本检测）",
+          "definition": ""
+        }
+      ],
+      "exercises": [
+        {
+          "id": "biology_7a_rjb_exe16",
+          "label": "Exercise",
+          "name": "种子发芽率的计算公式是什么？若供检测的种子数为100粒，其中发芽的种子数为92粒，则该批种子的发芽率是多少？",
+          "definition": ""
+        }
+      ],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch3_s2",
+          "label": "Section",
+          "name": "第二章 被子植物的一生",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt109",
+    "concept_id": "biology_7a_rjb_cpt109",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "biology_7a_rjb_cpt109",
+      "label": "Concept",
+      "name": "发芽率",
+      "definition": "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。",
+      "aliases": [],
+      "examples": []
+    },
+    "source_domain": "园圃工坊",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "发芽率"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "供检测的种子中能够萌发的比例，用来评价种子质量并指导播种。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "避免目的论解释。",
+          "避免把个体努力写成进化原因。",
+          "保留生命系统的条件、过程和结果。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "通过数100粒种子中发芽的数量（62粒），推算出整批种子的质量，指导播种量。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明用湿布包裹100粒种子，每天记录发芽数，最终得到62粒发芽，从而知道整袋种子约六成能成活。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事没有把种子不发芽归因于‘不想长’，而是客观说明胚坏了或储存受潮；没有把个体努力写成进化原因；保留了种子条件（质量、活力）、过程（每天记录）和结果（62粒发芽）。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：园圃里的秘密\n\n老园丁阿福有个规矩：每年春天，他都要把新买的种子分成小份，分别种在几块试验田里。小徒弟阿明觉得奇怪：“师傅，为什么不直接全种到大田里呢？”\n\n阿福笑笑，递给他一袋黄豆种子：“你把这袋种子数出100粒，用湿布包好，放在暖房里，每天记录有多少粒冒出了小白芽。”\n\n阿明照做了。第一天，有20粒裂开了小口；第二天，又多了15粒；第三天，再添了10粒……到了第七天，再也没有新的芽冒出来。阿明数了数，总共只有62粒发了芽。\n\n“剩下的38粒呢？”阿明问。\n\n阿福带他剖开几粒没发芽的种子，有的里面已经发黑，有的干瘪得像纸片。“这些种子虽然看起来饱满，但胚已经坏了，或者储存时受了潮，失去了活力。”\n\n阿明恍然大悟：“所以您先做这个小试验，就是为了知道这批种子到底有多少能真正长出来？”\n\n阿福点点头：“对。如果100粒里只有62粒能发芽，那么整袋种子大约六成能成活。种到大田里，就要按这个数来算播种量，否则地会空一大片。”\n\n阿明又问：“那如果试验里发芽的种子很多呢？”\n\n“那就说明种子质量好，可以少播一些，节省成本。”阿福指着另一块试验田，“你看，那块地我用了不同来源的种子，每份都做了小试验。有的发芽多，有的发芽少。这样我就能挑出最好的种子来用。”\n\n阿明明白了：原来师傅每年春天的小试验，不是为了看几粒种子发芽，而是通过一个小样本，推算出整批种子的质量，从而决定怎么播种、播多少。这个秘密，就藏在那一个个数出来的小白芽里。",
+  "rule_findings": {
+    "story_token_count": 508,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

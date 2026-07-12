@@ -1,0 +1,33 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "子代与亲代在特征上既相似又不同的现象",
+      "evidence": "大多数新苗跟阿禾一个模子刻出来的",
+      "narrative_anchor": "大多数新苗跟阿禾一个模子刻出来的"
+    },
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "子代与亲代在特征上既相似又不同的现象",
+      "evidence": "可过了些日子，他注意到几株不一样的",
+      "narrative_anchor": "可过了些日子，他注意到几株不一样的"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "生物的共同特征（遗传与变异是稻田生生不息的根基）",
+      "evidence": "这两样，都是稻田生生不息的根基",
+      "narrative_anchor": "这两样，都是稻田生生不息的根基"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "遗传和变异现象是生物共同特征的具体表现",
+      "evidence": "稻种既会忠实地复制自己，也会悄悄生出新样貌。这两样，都是稻田生生不息的根基",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "稻种既会忠实地复制自己，也会悄悄生出新样貌。这两样，都是稻田生生不息的根基"
+    }
+  ]
+}

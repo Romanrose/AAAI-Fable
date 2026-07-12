@@ -1,0 +1,245 @@
+{
+  "id": "chemistry_9a_rjb_cpt10",
+  "method": "con2fable",
+  "concept": {
+    "name": "沸点",
+    "aliases": [],
+    "forbidden_terms": [
+      "沸点"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物质在一定压强下，液体汽化最剧烈时的温度，是物质的一种物理性质，随大气压强改变而改变。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：大气压强",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要考虑前置条件或输入：条件对物质性质的影响",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m4",
+        "text": "与相关概念保持可解释关系：氧气的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m5",
+        "text": "与相关概念保持可解释关系：水的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m6",
+        "text": "与相关概念保持可解释关系：铁的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m7",
+        "text": "与相关概念保持可解释关系：铝的熔点和沸点",
+        "weight": 0.65,
+        "source": "graph.related"
+      },
+      {
+        "id": "m8",
+        "text": "与相关概念保持可解释关系：大气压强",
+        "weight": 0.65,
+        "source": "graph.related"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14999"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_15075"
+      },
+      {
+        "id": "e3",
+        "source": "m3",
+        "target": "m4",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14995"
+      },
+      {
+        "id": "e4",
+        "source": "m4",
+        "target": "m5",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14992"
+      },
+      {
+        "id": "e5",
+        "source": "m5",
+        "target": "m6",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14993"
+      },
+      {
+        "id": "e6",
+        "source": "m6",
+        "target": "m7",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_14994"
+      },
+      {
+        "id": "e7",
+        "source": "m7",
+        "target": "m8",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_18222"
+      }
+    ]
+  },
+  "output": {
+    "narrative": "小刘第一次随登山队来到山脚营地时，觉得一切都新鲜。他架起水壶，点燃炉子，不一会儿水就咕嘟咕嘟地翻滚起来，热气腾腾。他煮了面条，队员们吃得津津有味。\n\n几天后，队伍开始向上攀登。到了半山腰，小刘又像往常一样烧水煮饭。可这次水壶里的水虽然冒泡了，却不像在山脚时那样剧烈翻滚。他把面条丢进去，煮了比平时多一倍的时间，捞起来一尝——还是夹生的。\n\n“奇怪，水明明开了啊。”小刘挠着头。\n\n气象站的老陈正好在附近做观测，他走过来看了看气压计，又看了看水壶，说：“你感觉水开了，可它的温度还不够高。这里的空气比山下稀薄，气压低了，水在更低的温度就会沸腾。”\n\n小刘半信半疑，拿出温度计一测，果然只有八十度出头。他想起氧气瓶——在高海拔地区，氧气也是靠压缩才能装进瓶里的，如果气压太低，氧气也会在更低的温度变成气体。原来不光是水，很多东西都受气压影响。\n\n到了更高的营地，小刘不死心，又试了一次。这次他用铁锅烧水，铁锅导热很快，水很快就冒泡了，可温度还是上不去。他又换成铝饭盒，铝的导热更快，但沸腾的温度依然很低。小刘明白了：锅的材质只能影响水烧开的速度，却改变不了水沸腾时的温度。\n\n队员们因为吃不到熟食，体力开始下降。小刘急得团团转。\n\n老陈把他叫到气象站，指着墙上挂的气压图说：“你看，海拔越高，气压越低，水沸腾的温度就越低。这是物质本身的特性，不会因为锅不同、火不同而改变。”\n\n小刘盯着那张图，恍然大悟：“所以不是水没开，而是它‘开’的温度变了！”\n\n老陈笑着递给他一个高压锅：“用这个吧。它能增加锅内的气压，让水在更高的温度才沸腾，这样食物就能煮熟了。”\n\n小刘用高压锅重新煮了一锅饭，队员们终于吃上了热腾腾的熟食。登山队继续向上攀登，小刘每到一个新营地，都会先看看气压计，再调整烹饪的方法。他明白了：外界的条件变了，物质的性质也会跟着变，只有掌握这个规律，才能在不同的环境中应对自如。",
+    "node_alignments": [
+      {
+        "concept_node_id": "m1",
+        "narrative_element": "水沸腾的温度随气压变化",
+        "evidence": "这里的空气比山下稀薄，气压低了，水在更低的温度就会沸腾",
+        "narrative_anchor": "水在更低的温度就会沸腾"
+      },
+      {
+        "concept_node_id": "m2",
+        "narrative_element": "大气压强影响沸腾温度",
+        "evidence": "气压低了，水在更低的温度就会沸腾",
+        "narrative_anchor": "气压低了"
+      },
+      {
+        "concept_node_id": "m3",
+        "narrative_element": "条件对物质性质的影响",
+        "evidence": "外界的条件变了，物质的性质也会跟着变",
+        "narrative_anchor": "外界的条件变了，物质的性质也会跟着变"
+      },
+      {
+        "concept_node_id": "m4",
+        "narrative_element": "氧气沸点受气压影响",
+        "evidence": "在高海拔地区，氧气也是靠压缩才能装进瓶里的，如果气压太低，氧气也会在更低的温度变成气体",
+        "narrative_anchor": "氧气也会在更低的温度变成气体"
+      },
+      {
+        "concept_node_id": "m5",
+        "narrative_element": "水的沸点受气压影响",
+        "evidence": "水在更低的温度就会沸腾",
+        "narrative_anchor": "水在更低的温度就会沸腾"
+      },
+      {
+        "concept_node_id": "m6",
+        "narrative_element": "铁锅烧水，沸点不变",
+        "evidence": "铁锅导热很快，水很快就冒泡了，可温度还是上不去",
+        "narrative_anchor": "温度还是上不去"
+      },
+      {
+        "concept_node_id": "m7",
+        "narrative_element": "铝饭盒烧水，沸点不变",
+        "evidence": "铝的导热更快，但沸腾的温度依然很低",
+        "narrative_anchor": "沸腾的温度依然很低"
+      },
+      {
+        "concept_node_id": "m8",
+        "narrative_element": "大气压强影响沸点",
+        "evidence": "海拔越高，气压越低，水沸腾的温度就越低",
+        "narrative_anchor": "海拔越高，气压越低，水沸腾的温度就越低"
+      }
+    ],
+    "edge_alignments": [
+      {
+        "concept_edge_id": "e1",
+        "narrative_relation": "沸点定义引出大气压强影响",
+        "evidence": "这里的空气比山下稀薄，气压低了，水在更低的温度就会沸腾",
+        "narrative_source_concept_node_id": "m1",
+        "narrative_target_concept_node_id": "m2",
+        "direction_preserved": true,
+        "narrative_anchor": "气压低了"
+      },
+      {
+        "concept_edge_id": "e2",
+        "narrative_relation": "大气压强变化导致物质性质变化",
+        "evidence": "外界的条件变了，物质的性质也会跟着变",
+        "narrative_source_concept_node_id": "m2",
+        "narrative_target_concept_node_id": "m3",
+        "direction_preserved": true,
+        "narrative_anchor": "外界的条件变了，物质的性质也会跟着变"
+      },
+      {
+        "concept_edge_id": "e3",
+        "narrative_relation": "物质性质影响氧气沸点",
+        "evidence": "在高海拔地区，氧气也是靠压缩才能装进瓶里的，如果气压太低，氧气也会在更低的温度变成气体",
+        "narrative_source_concept_node_id": "m3",
+        "narrative_target_concept_node_id": "m4",
+        "direction_preserved": true,
+        "narrative_anchor": "氧气也会在更低的温度变成气体"
+      },
+      {
+        "concept_edge_id": "e4",
+        "narrative_relation": "物质性质影响水的沸点",
+        "evidence": "水在更低的温度就会沸腾",
+        "narrative_source_concept_node_id": "m4",
+        "narrative_target_concept_node_id": "m5",
+        "direction_preserved": true,
+        "narrative_anchor": "水在更低的温度就会沸腾"
+      },
+      {
+        "concept_edge_id": "e5",
+        "narrative_relation": "水的沸点特性与铁锅烧水对比",
+        "evidence": "铁锅导热很快，水很快就冒泡了，可温度还是上不去",
+        "narrative_source_concept_node_id": "m5",
+        "narrative_target_concept_node_id": "m6",
+        "direction_preserved": true,
+        "narrative_anchor": "温度还是上不去"
+      },
+      {
+        "concept_edge_id": "e6",
+        "narrative_relation": "铁锅沸点特性与铝饭盒对比",
+        "evidence": "铝的导热更快，但沸腾的温度依然很低",
+        "narrative_source_concept_node_id": "m6",
+        "narrative_target_concept_node_id": "m7",
+        "direction_preserved": true,
+        "narrative_anchor": "沸腾的温度依然很低"
+      },
+      {
+        "concept_edge_id": "e7",
+        "narrative_relation": "铝饭盒沸点特性引出大气压强影响",
+        "evidence": "海拔越高，气压越低，水沸腾的温度就越低",
+        "narrative_source_concept_node_id": "m7",
+        "narrative_target_concept_node_id": "m8",
+        "direction_preserved": true,
+        "narrative_anchor": "海拔越高，气压越低，水沸腾的温度就越低"
+      }
+    ]
+  },
+  "metadata": {
+    "subject": "chemistry",
+    "story_language": "zh-CN",
+    "concept_type": "entity",
+    "generation_priority": "gold"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "target": {
+    "source_node_id": "math_1a_rjb_cpt10",
+    "label": "Concept",
+    "name": "小于号含义",
+    "properties": {
+      "definition": "表示前面的数量比后面的数量少。",
+      "importance": "掌握",
+      "retrieval_text": "小于号含义\nConcept\n表示前面的数量比后面的数量少。\n掌握"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:16377",
+      "source": "math_1a_rjb_cpt8",
+      "source_name": "等号含义",
+      "target": "math_1a_rjb_cpt10",
+      "target_name": "小于号含义",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:19331",
+      "source": "math_1a_rjb_cpt8",
+      "source_name": "等号含义",
+      "target": "math_1a_rjb_cpt10",
+      "target_name": "小于号含义",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "小于号含义",
+      "definition": "表示前面的数量比后面的数量少。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:16377] 等号含义 --prerequisites_for--> 小于号含义"
+    ],
+    "process_summary": [
+      "[normalized:edge:19331] 等号含义 --relates_to--> 小于号含义"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 509,
+    "summary_chars": 290,
+    "path_chars": 0,
+    "retrieval_context_chars": 799
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "条件牌上什么都没有",
+      "evidence": "条件牌上什么都没有",
+      "narrative_anchor": "条件牌上什么都没有",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "保留形式定义，不添加多余的解释",
+      "evidence": "保留形式定义，不添加多余的解释",
+      "narrative_anchor": "保留形式定义，不添加多余的解释",
+      "confidence": 1.0
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收才能接上",
+      "evidence": "结果验收才能接上",
+      "narrative_anchor": "结果验收才能接上",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第二道转化",
+      "evidence": "只有先稳定入口条件核对，再推动第二道转化",
+      "narrative_anchor": "只有先稳定入口条件核对，再推动第二道转化",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 1.0
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "先执行转化，最后验收结果",
+      "evidence": "先确认入口条件，再执行转化，最后验收结果",
+      "narrative_anchor": "先确认入口条件，再执行转化，最后验收结果",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n3",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ]
+}

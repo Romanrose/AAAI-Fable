@@ -1,0 +1,125 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt10",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "古代工匠铸剑",
+  "characters": [
+    "铸剑师",
+    "炉火",
+    "剑胚",
+    "大气",
+    "铁匠铺"
+  ],
+  "objects": [
+    "铸剑炉",
+    "风箱",
+    "剑胚",
+    "炭火",
+    "锤子",
+    "水槽"
+  ],
+  "conflict": "铸剑师发现，在高山上（大气稀薄）铸剑时，炉火温度虽高，但剑胚始终无法达到足够的热度来淬火成型，而在平原上同样的炉火却能成功。",
+  "event_chain": [
+    "铸剑师在平原铁匠铺用标准炉火和风箱加热剑胚，剑胚达到炽红状态，可以淬火成型。",
+    "铸剑师搬到高山铁匠铺，使用同样的炉火和风箱，但剑胚加热后颜色偏暗，无法达到淬火所需的炽红状态。",
+    "铸剑师检查发现，高山上的大气压强较低，导致炉火对剑胚的加热效率降低，剑胚的最高温度（即达到炽红状态所需的温度）也随之降低。",
+    "铸剑师尝试加大风箱风力，但剑胚温度仍无法达到平原时的炽红状态，因为低气压下剑胚的极限温度（类比沸点）下降了。",
+    "铸剑师总结：剑胚的炽红状态（类比沸点）受大气压强影响，压强越低，剑胚能达到的最高温度越低。"
+  ],
+  "turning_point": "铸剑师意识到，剑胚的炽红状态并非固定不变，而是随大气压强改变，从而调整了铸剑工艺。",
+  "resolution_state": "铸剑师根据当地大气压强调整炉火和风箱，成功铸出好剑，并记录下不同压强下剑胚的炽红温度变化规律。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "剑胚的炽红状态（即剑胚达到可淬火的最高温度）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大气压强（通过高山与平原的对比体现）",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "剑胚达到炽红状态时的温度",
+      "mapping_type": "state"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "环境条件（大气压强）对剑胚加热极限的影响规律",
+      "mapping_type": "rule"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "平原上剑胚在标准大气压下达到炽红状态（可淬火）",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "高山上大气稀薄，剑胚无法达到平原时的炽红状态",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "不同金属（铁、铝、氧气）在铸剑中也有各自的炽红温度范围",
+      "mapping_type": "evidence"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大气压强（高山/平原）决定了剑胚能达到的炽红状态（最高温度）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "剑胚的炽红状态就是剑胚达到可淬火温度时的状态",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "环境条件影响规律（大气压强影响加热极限）与剑胚炽红状态相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "剑胚的炽红状态（在平原）产生了可淬火成型的证据",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "大气压强低（高山）导致剑胚无法达到炽红状态的证据",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "剑胚的炽红状态与不同金属的炽红温度范围相关",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "剑胚的炽红状态与大气压强相互关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'沸点'一词，用'剑胚的炽红状态'或'剑胚达到的最高温度'替代。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接（如'水的沸点'）作为因果机制，仅作为证据。",
+    "故事载体统一为古代铸剑领域，不使用其他无关隐喻。"
+  ],
+  "mapping_context_sha256": "6b6436878992bd80891f5ffb421a54cef1877977da0d46051b9dcf377f32bdfc",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "ad2fb2af2126f88d1b8f18cded7730ef3efc20c0c421a58b29ca9b9e395dd263"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt100",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "一个村庄的井水监测系统",
+  "characters": [
+    "村民",
+    "老井"
+  ],
+  "objects": [
+    "薄壁陶罐",
+    "有毒污水",
+    "老井的井水"
+  ],
+  "conflict": "村庄附近工厂排放有毒污水，可能污染井水，威胁村民健康。",
+  "event_chain": [
+    "许多薄壁陶罐只有一层薄壁",
+    "有毒污水可从内外两面渗透罐壁污染井水",
+    "老井的井水是薄壁陶罐",
+    "因此可用作监测有毒污水污染程度的指示"
+  ],
+  "turning_point": "村民发现薄壁陶罐中的井水变色，意识到污水已渗透。",
+  "resolution_state": "村民利用薄壁陶罐的易渗透特性，成功监测到污水污染，及时采取措施保护井水。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "薄壁陶罐只有一层薄壁",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "有毒污水可从内外两面渗透罐壁污染井水",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "老井的井水",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "可用作监测有毒污水污染程度的指示",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "薄壁陶罐只有一层薄壁，使得有毒污水可从内外两面渗透",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "老井的井水是薄壁陶罐",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "有毒污水可从内外两面渗透罐壁污染井水，导致可用作监测指示",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'苔藓植物'、'指示植物'、'空气污染'等禁止术语。",
+    "确保'薄壁陶罐'对应'叶只有一层细胞'，'有毒污水'对应'二氧化硫等有毒气体'，'老井的井水'对应'苔藓植物'。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免使用课程章节上下文作为因果机制。"
+  ],
+  "mapping_context_sha256": "0a3ea773eade6513a863a41f23f2357d4fadf36b9ba33d51cff1c8f2aa68f4b9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "3f8c8d2de22d9ad3c767e208063b0c851a7fa9529a2d5492ffbd5c0fee4e9111"
+  }
+}

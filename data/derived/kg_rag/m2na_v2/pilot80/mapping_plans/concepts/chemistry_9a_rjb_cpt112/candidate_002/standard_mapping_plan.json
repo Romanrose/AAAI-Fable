@@ -1,0 +1,96 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "chemistry_9a_rjb_cpt112",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的磨坊与磨坊主的故事",
+  "characters": [
+    "磨坊主（老张）",
+    "村民（小李）",
+    "村民（小王）"
+  ],
+  "objects": [
+    "磨坊",
+    "石磨",
+    "小麦",
+    "面粉"
+  ],
+  "conflict": "磨坊主老张的磨坊磨面速度时快时慢，村民小李和小王分别用不同的方法测试，发现老张在磨面前后石磨的重量和性质不变，但磨面效率显著提高，村民怀疑老张用了魔法。",
+  "event_chain": [
+    "老张的磨坊磨面效率时好时坏，村民小李和小王决定观察。",
+    "小李用小麦磨面，发现加入石磨后磨面速度加快，但石磨重量和性质不变。",
+    "小王用另一种谷物磨面，同样发现石磨加速磨面，且石磨无变化。",
+    "村民总结：石磨能显著改变磨面速率，且前后质量和性质不变。",
+    "村民认为石磨是一种特殊的磨面工具（催化剂）。"
+  ],
+  "turning_point": "村民通过两次不同谷物的实验，发现石磨在磨面过程中自身不变但加速了过程，从而认识到石磨的特殊作用。",
+  "resolution_state": "村民理解了石磨的催化作用，不再怀疑魔法，而是将其视为一种高效磨面工具。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "石磨的磨面加速作用",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "特殊的磨面工具（催化剂）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "小李用小麦磨面的实验",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "小王用另一种谷物磨面的实验",
+      "mapping_type": "evidence"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "石磨在磨面过程中显著改变磨面速率，且前后质量和性质不变",
+      "mapping_type": "condition"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "石磨的磨面加速作用是一种特殊的磨面工具",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "小李的实验验证了石磨的磨面加速作用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "小王的实验验证了石磨的磨面加速作用",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "石磨在磨面过程中显著改变速率且自身不变的条件使石磨的磨面加速作用成立",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'二氧化锰'、'催化'等化学术语。",
+    "注意'石磨'作为催化剂载体，不能直接称为催化剂，而是'特殊的磨面工具'。",
+    "确保两次实验分别对应过氧化氢和氯酸钾分解，但用小麦和另一种谷物代替。",
+    "避免将村民的怀疑（魔法）作为因果机制，仅作为冲突背景。"
+  ],
+  "mapping_context_sha256": "b91c571ec2dc444c003cba416841f6873c0c58c656f99e0e0738a6cb696641a9",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "b1f1ee7b4c18ecb9f163be1af8b91e1b6f2cc9c61317ca7fcdb8670b53f7325b"
+  }
+}

@@ -1,21 +1,17 @@
-# LLM-Guided Copycat MVP
+# Concept2Fable LLM-guided Copycat
 
-This independent package explores a small hybrid between semantic LLM proposals
-and explicit Copycat-inspired structural constraints. It does not replace or
-modify the existing deterministic Copycat implementation.
-
-Current MVP:
+`kg_rag.llm_guided_copycat` 是 Concept2Fable Story Pilot 的第三种结构映射策略。它不替代 `kg_rag.copycat` 的确定性实现，而是将 LLM 的语义候选提议与明确的 Copycat-inspired 结构约束结合。
 
 ```text
 Approved MechanismGraph
--> one LLM semantic-scout call proposes three coherent mapping candidates
--> deterministic full-graph coverage and diversity scoring
--> simple meta-monitor detects repetition and ordinal placeholders
--> at most one constrained LLM refinement
--> validated selected Mapping Plan
+→ LLM semantic scout 提议 3 个映射候选
+→ 全图覆盖与差异性评分
+→ 重复/序号占位符检测
+→ 最多一次受约束 LLM refinement
+→ 验证后的 Mapping Plan
 ```
 
-Run one approved concept:
+单概念调试入口：
 
 ```bash
 python -m kg_rag.llm_guided_copycat \
@@ -24,11 +20,6 @@ python -m kg_rag.llm_guided_copycat \
   --output-dir data/derived/kg_rag/llm_guided_copycat/smoke/biology_7a_rjb_cpt1
 ```
 
-This is intentionally not presented as a full Copycat implementation. Later
-iterations can add probabilistic coderack selection, a dynamic domain slipnet,
-competing workspace structures, non-monotonic feedback temperature, and episodic
-meta-level monitoring.
+正式的三策略比较应通过 [Story Pilot](../story_pilot/README.md) 的 `prepare-guided-mappings` 运行，使三种策略共享同一概念、机制、候选和评估预算。
 
-The current score is a structural gate and lightweight lexical-diversity signal,
-not a calibrated semantic analogy-quality score. It can miss paraphrased template
-repetition such as several distinct relations sharing the same sentence pattern.
+当前评分是结构门控和轻量词汇多样性信号，不是校准后的语义类比质量分数；它仍可能遗漏同义改写形式的模板重复。

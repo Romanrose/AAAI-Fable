@@ -1,0 +1,64 @@
+{
+  "core_question": "种子休眠的关键条件、过程和结果是什么？",
+  "steps": [
+    {
+      "step_id": "s1",
+      "text": "种子休眠 --is_a--> 种子萌发的自身条件",
+      "kind": "condition",
+      "supporting_edge_ids": [
+        "normalized:edge:10777"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "text": "种子成熟后在一段时期内即使环境适宜也不能萌发的现象；有助于植物躲过不利季节（如严冬），是长期适应环境的结果。",
+      "kind": "effect",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s3",
+      "text": "避免目的论解释。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    },
+    {
+      "step_id": "s4",
+      "text": "避免把个体努力写成进化原因。",
+      "kind": "process",
+      "supporting_edge_ids": []
+    }
+  ],
+  "dependencies": [
+    {
+      "source_step_id": "s1",
+      "target_step_id": "s2",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s2",
+      "target_step_id": "s3",
+      "relation": "leads_to"
+    },
+    {
+      "source_step_id": "s3",
+      "target_step_id": "s4",
+      "relation": "leads_to"
+    }
+  ],
+  "supporting_edge_ids": [
+    "normalized:edge:10777"
+  ],
+  "supporting_path_ids": [],
+  "forbidden_terms": [
+    "种子休眠",
+    "biology_7a_rjb_cpt107"
+  ],
+  "coverage_targets": {
+    "required_step_count": 4,
+    "required_dependency_count": 3,
+    "must_cover_edge_ids": [
+      "normalized:edge:10777"
+    ],
+    "must_cover_path_ids": []
+  }
+}

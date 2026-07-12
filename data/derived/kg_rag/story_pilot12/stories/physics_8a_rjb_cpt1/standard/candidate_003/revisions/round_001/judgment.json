@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "faithfulness": 4,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n3",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "Node n2 (标准竹尺) is mapped to '标准竹尺（一丈、五尺、三尺）' which is a concrete instance of length units, but the mechanism node '长度单位（米及其倍数、子倍数）' is more abstract and general. The story does not explicitly generalize from bamboo rulers to the concept of length units, making the mapping slightly weaker than others. Edge e1 (is_a) is preserved in the story as '这些标准竹尺就是测量桥的跨度的单位', which correctly indicates that the bamboo ruler is a unit for measuring span, but the abstraction to '长度单位' is implicit. In contrast, node n3 (用竹尺测量跨度) is directly and vividly depicted through the apprentice's repeated measurements, making it the strongest."
+  },
+  "revision_instructions": [
+    "Consider adding a brief line where the old bridge master explains that the bamboo ruler is just one example of a length unit, and that any standard unit (like those used elsewhere) would work similarly, to strengthen the abstraction from '标准竹尺' to '长度单位'.",
+    "Ensure that the story explicitly mentions that the bamboo ruler is a '单位' (unit) for measuring length, not just for bridge span, to improve the generality of the mapping for node n2."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8"
+    ]
+  }
+}

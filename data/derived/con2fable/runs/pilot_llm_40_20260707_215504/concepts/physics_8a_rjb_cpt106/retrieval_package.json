@@ -1,0 +1,126 @@
+{
+  "seed": {
+    "id": "physics_8a_rjb_cpt106",
+    "resolved_node_id": "physics_8a_rjb_cpt106",
+    "name": "凸透镜成像规律",
+    "definition": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+    "aliases": []
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "edge_17194",
+      "source_id": "physics_8a_rjb_cpt108",
+      "source_name": "像距",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_17191",
+      "source_id": "physics_8a_rjb_cpt106",
+      "source_name": "凸透镜成像规律",
+      "target_id": "physics_8a_rjb_cpt119",
+      "target_name": "显微镜",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_17192",
+      "source_id": "physics_8a_rjb_cpt106",
+      "source_name": "凸透镜成像规律",
+      "target_id": "physics_8a_rjb_cpt120",
+      "target_name": "望远镜",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_17190",
+      "source_id": "physics_8a_rjb_cpt101",
+      "source_name": "焦距",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_17193",
+      "source_id": "physics_8a_rjb_cpt107",
+      "source_name": "物距",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "prerequisites_for",
+      "score": 1.3
+    },
+    {
+      "source_edge_id": "edge_12423",
+      "source_id": "physics_8a_rjb_cpt121",
+      "source_name": "物镜",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_12424",
+      "source_id": "physics_8a_rjb_cpt122",
+      "source_name": "目镜",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "is_a",
+      "score": 1.02
+    },
+    {
+      "source_edge_id": "edge_23050",
+      "source_id": "physics_8a_rjb_exp27",
+      "source_name": "探究凸透镜成像的规律",
+      "target_id": "physics_8a_rjb_cpt106",
+      "target_name": "凸透镜成像规律",
+      "relation": "verifies",
+      "score": 0.89
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": "凸透镜所成的像的虚实、大小、正倒与物体到凸透镜的距离之间存在规律性关系。",
+    "condition_summary": [
+      "像距",
+      "焦距",
+      "物距"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "sections": {
+      "prerequisites": [
+        "像距",
+        "焦距",
+        "物距"
+      ],
+      "related_concepts": [
+        "显微镜",
+        "望远镜"
+      ],
+      "outcomes": [],
+      "experiments": [
+        "探究凸透镜成像的规律"
+      ],
+      "hierarchy": [
+        "物镜",
+        "目镜"
+      ]
+    }
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "agentic_dual_level",
+    "max_edges": 16,
+    "candidate_edge_count": 8,
+    "selected_edge_count": 8,
+    "allowed_relations": [
+      "is_a",
+      "leads_to",
+      "prerequisites_for",
+      "relates_to",
+      "verifies"
+    ]
+  }
+}

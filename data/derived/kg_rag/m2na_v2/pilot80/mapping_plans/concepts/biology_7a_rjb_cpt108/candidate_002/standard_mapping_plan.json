@@ -1,0 +1,107 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt108",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一个村庄的春耕故事",
+  "characters": [
+    "老农",
+    "村民"
+  ],
+  "objects": [
+    "干涸的田地",
+    "水库里的水",
+    "仓库里的种子和肥料",
+    "犁和锄头",
+    "秧苗",
+    "绿油油的庄稼"
+  ],
+  "conflict": "田地干涸，无法播种，村民面临饥荒威胁。",
+  "event_chain": [
+    "老农带领村民从水库引水灌溉干涸的田地。",
+    "田地吸收水分后变得湿润，老农从仓库取出种子和肥料。",
+    "老农将肥料施入田地，为种子提供养分。",
+    "种子在肥沃的土壤中发芽，长出嫩芽。",
+    "嫩芽逐渐长高，形成秧苗。",
+    "秧苗在阳光和水分下茁壮成长，最终变成绿油油的庄稼。"
+  ],
+  "turning_point": "老农将肥料施入田地，种子获得养分开始发芽。",
+  "resolution_state": "田地长出绿油油的庄稼，村庄获得丰收，饥荒威胁解除。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "田地吸收水分",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农将肥料施入田地，为种子提供养分",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "种子发芽，长出嫩芽",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "嫩芽长高形成秧苗",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "秧苗茁壮成长变成绿油油的庄稼",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "村庄获得丰收",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "田地吸收水分后，老农才能施肥",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "施肥后，种子发芽长出嫩芽",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "施肥后，嫩芽长高形成秧苗",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "施肥后，秧苗茁壮成长变成庄稼",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "村庄丰收依赖于田地吸收水分",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'种子萌发'等禁止术语。",
+    "注意映射时保持机制边方向一致。",
+    "避免将课程上下文（如'被子植物一生'）作为因果机制。"
+  ],
+  "mapping_context_sha256": "59d4e1389fa48c761dfbf4cd82936577050feea52a41f37ea3d4cade544d1d7b",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "d7c312f76c265747a90760f8b20e4885060da67580353555f4d6b200da2ee0e3"
+  }
+}

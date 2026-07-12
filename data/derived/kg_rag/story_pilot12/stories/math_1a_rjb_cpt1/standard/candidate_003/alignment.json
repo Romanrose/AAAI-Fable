@@ -1,0 +1,36 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "农夫将稻种一粒粒播入秧盘，每播一粒，他就在心里默念一个数，但他其实不会数数，只是做了个记住的动作。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "农夫发现秧苗数量与稻田所需数量不一致，需要调整。",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_evidence": "他只好一株株把秧苗插进泥里，每插一株，就又对应之前的一个数。",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "农夫发现秧苗数量与稻田所需数量不一致，需要调整。",
+      "direction_preserved": true,
+      "confidence": 0.8
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_evidence": "他只好一株株把秧苗插进泥里，每插一株，就又对应之前的一个数。",
+      "direction_preserved": true,
+      "confidence": 0.9
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "所有机制节点和边均在故事中找到对应证据。n1对应农夫播种种子的动作（模拟数数），n2对应发现数量不一致，n3对应插秧时的一一对应。边e1（数数→比较数量）由故事中农夫发现数量不一致体现，方向正确；边e2（数数→一一对应）由插秧时每插一株对应一个数的动作体现，方向正确。"
+}

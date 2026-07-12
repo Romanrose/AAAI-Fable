@@ -1,0 +1,68 @@
+{
+  "concept_id": "chemistry_9a_rjb_cpt1",
+  "subject": "chemistry",
+  "story_language": "zh-CN",
+  "canonical_name": "物质",
+  "definition": "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+  "aliases": [],
+  "examples": [
+    "水",
+    "钢铁制品",
+    "煤",
+    "木材",
+    "胆矾",
+    "石灰石",
+    "氧气",
+    "二氧化碳"
+  ],
+  "teaching_level": "middle_school",
+  "concept_type": "entity",
+  "graph_context": {
+    "prerequisites": [
+      {
+        "id": "chemistry_9a_rjb_cpt2",
+        "label": "Concept",
+        "name": "物质的变化",
+        "definition": "物质在一定条件下发生的状态、形态或本质的改变，包括物理变化和化学变化。"
+      }
+    ],
+    "related_concepts": [],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "课题1 物质的变化和性质",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。"
+  ],
+  "must_preserve_zh": [
+    "构成宇宙中各种星体以及肉眼看不见的粒子的客体，表现为千姿百态的物质世界，各种物质之间存在多种相互作用并不断发生变化。",
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "物质"
+  ],
+  "subject_constraints_zh": [
+    "区分化学反应和物理混合。",
+    "保留守恒关系和反应前后变化。",
+    "避免化学式或元素符号在故事正文中泄露。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

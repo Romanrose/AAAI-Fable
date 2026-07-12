@@ -1,0 +1,226 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "氧气的实验室制取",
+  "concept_id": "chemistry_9a_rjb_cpt122",
+  "concept_definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。",
+  "forbidden_terms_for_story_body": [
+    "chemistry_9a_rjb_cpt122",
+    "氧气的实验室制取"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt122",
+      "label": "Concept",
+      "name": "氧气的实验室制取",
+      "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。",
+      "aliases": [],
+      "examples": [
+        "加热高锰酸钾，用排水法在集气瓶中收集氧气。"
+      ],
+      "retrieval_text": "氧气的实验室制取\n在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+    },
+    "sections": {
+      "prerequisites": [
+        {
+          "id": "chemistry_9a_rjb_cpt124",
+          "label": "Concept",
+          "name": "气体发生装置",
+          "definition": "为生成气体而搭建的由试管、单孔橡胶塞、玻璃导管等组成的装置，用于承装反应物并通过反应产生气体。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt125",
+          "label": "Concept",
+          "name": "气体收集装置",
+          "definition": "实验室制取气体时，用于收集并暂存生成气体的装置部分，包括排空气法和排水法等。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt126",
+          "label": "Concept",
+          "name": "排水法收集气体",
+          "definition": "将集气瓶先装满水并倒置于水槽中，用生成的气体排出水而被收集的气体收集方法，适用于不易溶于水且不与水反应的气体。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt127",
+          "label": "Concept",
+          "name": "装置气密性",
+          "definition": "实验装置连接处是否漏气的性质，气密性良好可以保证生成的气体不泄漏、外界空气不进入。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt128",
+          "label": "Concept",
+          "name": "倒吸现象",
+          "definition": "加热停止或装置冷却时，外部液体因内外压强差通过导管被吸入加热容器的现象，可能导致容器骤冷、炸裂。"
+        },
+        {
+          "id": "chemistry_9a_rjb_cpt133",
+          "label": "Concept",
+          "name": "加热玻璃仪器的安全操作",
+          "definition": "使用酒精灯加热试管等玻璃仪器时，为避免炸裂和烫伤，需要先让试管均匀受热、开口不对人、停止加热时先移出导管再熄灯等操作规范。"
+        }
+      ],
+      "related_concepts": [
+        {
+          "id": "chemistry_9a_rjb_cpt123",
+          "label": "Concept",
+          "name": "高锰酸钾制氧气",
+          "definition": "在试管中装入少量高锰酸钾并加热，高锰酸钾受热分解产生氧气的一种实验室制氧方法。"
+        }
+      ],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "chemistry_9a_rjb_ch2_s4",
+          "label": "Section",
+          "name": "实验活动1 氧气的实验室制取与性质",
+          "definition": ""
+        }
+      ]
+    },
+    "meta": {
+      "source": "concept_card",
+      "story_language": "zh-CN"
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "chemistry_9a_rjb_cpt122",
+    "concept_id": "chemistry_9a_rjb_cpt122",
+    "story_language": "zh-CN",
+    "seed": {
+      "id": "chemistry_9a_rjb_cpt122",
+      "label": "Concept",
+      "name": "氧气的实验室制取",
+      "definition": "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。",
+      "aliases": [],
+      "examples": [
+        "加热高锰酸钾，用排水法在集气瓶中收集氧气。"
+      ]
+    },
+    "source_domain": "城邦账房",
+    "entities": [
+      "负责观察规则的主角",
+      "一个需要按条件运转的场所",
+      "用来显示变化的物件或行动"
+    ],
+    "event_chain": [
+      "用故事事件隐含表达：在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+    ],
+    "conflict": "表面现象容易误导主角，真正的规则需要通过连续事件才能被看见。",
+    "turning_point": "一次具体观察或检验让主角发现关键关系。",
+    "resolution_state": "主角用新的规则重新理解整个情境，并能判断类似情况。",
+    "alignment_plan": [
+      {
+        "concept_role": "目标概念",
+        "concept_items": [
+          "氧气的实验室制取"
+        ],
+        "story_role": "故事中隐含的核心规则"
+      },
+      {
+        "concept_role": "核心机制",
+        "concept_items": [
+          "在实验室条件下，利用高锰酸钾等药品和加热装置，通过气体发生装置制得氧气，并用适当的方法收集的过程和方法。"
+        ],
+        "story_role": "主要事件链和转折"
+      },
+      {
+        "concept_role": "学科约束",
+        "concept_items": [
+          "区分化学反应和物理混合。",
+          "保留守恒关系和反应前后变化。",
+          "避免化学式或元素符号在故事正文中泄露。"
+        ],
+        "story_role": "避免误导性类比的写作约束"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "目标概念",
+      "story_evidence": "故事描述了通过加热紫色石头（高锰酸钾）产生气体，并用排水法收集气体的完整过程，隐含了实验室制取氧气的核心步骤。"
+    },
+    {
+      "concept_role": "核心机制",
+      "story_evidence": "阿明加热陶罐（气体发生装置），用竹管连接倒扣在水中的瓶子（排水法收集），先移开导管再熄火（防止倒吸），这些事件链对应了制取氧气的操作流程。"
+    },
+    {
+      "concept_role": "学科约束",
+      "story_evidence": "故事中紫色石头加热后产生气泡（化学反应），水被排出（物理变化），没有出现化学式或元素符号，符合学科约束。"
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "标题：账房里的秘密\n\n从前，在一个古老的城邦里，有一位年轻的账房学徒，名叫阿明。他负责管理城邦的宝库，宝库里存放着许多珍贵的物品。阿明发现，宝库的角落里有一个奇怪的箱子，箱子盖得很严实，上面刻着一些看不懂的符号。老账房先生告诉他，这个箱子需要一种特殊的“气”才能打开，而这种“气”就藏在一种紫色的石头里。\n\n阿明很好奇，他决定自己想办法。他找来一个结实的陶罐，把紫色的石头放进去，又用一根中空的竹管连接陶罐和一个装满水的木盆。木盆里倒扣着一个空瓶子，瓶口浸在水中。阿明点燃火把，小心地加热陶罐。不一会儿，陶罐里开始冒出气泡，气泡顺着竹管进入木盆，然后钻进倒扣的瓶子里，把瓶子里的水一点点挤了出去。\n\n阿明非常兴奋，他以为只要加热，就能得到那种“气”。可是，当他停止加热，准备取下瓶子时，瓶子里的水突然又倒流回竹管，发出“咕噜咕噜”的声音。阿明吓了一跳，赶紧把竹管从水中拿出来。老账房先生走过来，笑着说：“你太着急了。加热时，陶罐里的东西会发生变化，产生那种‘气’。但如果你先熄灭火，陶罐冷却，里面的气就会收缩，外面的水就会被吸进去，这叫‘倒吸’。正确的做法是，先移开竹管，再熄灭火。”\n\n阿明恍然大悟。他重新开始实验，这次他先移开竹管，再熄灭火。果然，瓶子稳稳地收集到了那种“气”。他小心地取下瓶子，用木塞塞住瓶口。老账房先生点点头，说：“现在，你可以用这种‘气’去打开那个箱子了。”\n\n阿明把瓶子里的“气”导入箱子上的机关，箱子“咔嗒”一声打开了。里面是一卷古老的卷轴，记载着城邦的智慧。阿明明白了，要得到这种“气”，不仅需要合适的材料和加热，还需要正确的操作顺序和收集方法，否则就会失败。\n\n从此，阿明更加细心地学习账房里的每一个规则，他知道，真正的智慧往往藏在看似简单的过程里。",
+  "rule_findings": {
+    "story_token_count": 627,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "core mechanism",
+      "subject constraints"
+    ],
+    "missing_alignment_roles": [
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "template_hits": [],
+    "template_similarity": 0.0
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

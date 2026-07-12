@@ -1,0 +1,30 @@
+{
+  "concept_id": "physics_8a_rjb_cpt1",
+  "candidates": [
+    {
+      "candidate_id": "candidate_001",
+      "slipnet_state": {
+        "activations": [
+          {
+            "node_id": "failure.direction_error",
+            "node_type": "FailurePattern",
+            "activation": 0.5,
+            "evidence": {
+              "relation_direction_accuracy": 0.5
+            }
+          }
+        ],
+        "dominant_pressures": [
+          "failure.direction_error"
+        ]
+      }
+    },
+    {
+      "candidate_id": "candidate_002",
+      "slipnet_state": {
+        "activations": [],
+        "dominant_pressures": []
+      }
+    }
+  ]
+}

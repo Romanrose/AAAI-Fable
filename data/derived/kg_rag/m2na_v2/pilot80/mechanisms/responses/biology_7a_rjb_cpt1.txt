@@ -1,0 +1,182 @@
+{
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "entity",
+        "text": "生物",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt1:retrieval_text"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "需要营养",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt3:definition",
+          "kg-node:biology_7a_rjb_cpt3:retrieval_text"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "process",
+        "text": "能进行呼吸",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt5:definition",
+          "kg-node:biology_7a_rjb_cpt5:retrieval_text"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "process",
+        "text": "能排出废物",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt6:definition",
+          "kg-node:biology_7a_rjb_cpt6:retrieval_text"
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "process",
+        "text": "能生长",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt8:definition",
+          "kg-node:biology_7a_rjb_cpt8:retrieval_text"
+        ]
+      },
+      {
+        "id": "n6",
+        "type": "process",
+        "text": "能繁殖",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt9:definition",
+          "kg-node:biology_7a_rjb_cpt9:retrieval_text"
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "process",
+        "text": "具有遗传和变异",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt10:definition",
+          "kg-node:biology_7a_rjb_cpt10:retrieval_text"
+        ]
+      },
+      {
+        "id": "n8",
+        "type": "state",
+        "text": "由细胞构成（除病毒外）",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt11:definition",
+          "kg-node:biology_7a_rjb_cpt11:retrieval_text",
+          "kg-node:biology_7a_rjb_cpt12:definition",
+          "kg-node:biology_7a_rjb_cpt12:retrieval_text"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt3:definition"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n1",
+        "target": "n3",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt5:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n1",
+        "target": "n4",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt6:definition"
+        ]
+      },
+      {
+        "id": "e4",
+        "source": "n1",
+        "target": "n5",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt8:definition"
+        ]
+      },
+      {
+        "id": "e5",
+        "source": "n1",
+        "target": "n6",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt9:definition"
+        ]
+      },
+      {
+        "id": "e6",
+        "source": "n1",
+        "target": "n7",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt10:definition"
+        ]
+      },
+      {
+        "id": "e7",
+        "source": "n1",
+        "target": "n8",
+        "relation": "requires",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:biology_7a_rjb_cpt1:definition",
+          "kg-node:biology_7a_rjb_cpt11:definition",
+          "kg-node:biology_7a_rjb_cpt12:definition"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "must_preserve_node_ids": [
+      "n1"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7"
+    ]
+  }
+}

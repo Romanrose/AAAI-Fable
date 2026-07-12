@@ -1,0 +1,12 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "小张通过逐一观察和拿取每张证物照片，并同步在清单上写下递增的数字，最终通过最后一个数字确定了照片的总数。",
+      "evidence": "书记员小陈递给实习生小张一叠证物照片，说道：“把这些照片登记到清单上，每张都要编",
+      "narrative_anchor": "书记员小陈递给实习生小张一叠证物照片，说道：“把这些照片登记到清单上，每张都要编",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": []
+}

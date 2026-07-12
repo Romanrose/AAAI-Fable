@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly enacts the 'enables' relation (e1) by stating '缺少这一步，后面的登记根本不能开始', which preserves the causal direction from condition to process. Node n2 is slightly weaker because its story carrier '第二道转化环节' is a generic label, but it is still explicitly mentioned and connected. Compared to a possible realization where the conditions are listed without being classified under a broader rule, this story explicitly uses the '归入...规则' pattern for each is_a edge, making the mapping observably better."
+  },
+  "revision_instructions": [
+    "Reduce story length to within 450-750 Chinese characters (currently 768). Consider trimming redundant descriptions of the three condition records or the step-by-step process."
+  ],
+  "final_status": "revise",
+  "raw_final_status": "revise",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "story_length_outside_450_750"
+    ]
+  }
+}

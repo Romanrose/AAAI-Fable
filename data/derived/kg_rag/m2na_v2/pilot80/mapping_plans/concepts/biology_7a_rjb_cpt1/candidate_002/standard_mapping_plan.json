@@ -1,0 +1,128 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt1",
+  "strategy": "standard",
+  "candidate_id": "candidate_002",
+  "candidate_index": 2,
+  "source_domain": "一棵大树的生命历程",
+  "characters": [
+    "大树"
+  ],
+  "objects": [
+    "土壤中的养分",
+    "阳光和空气",
+    "落叶和枯枝",
+    "新芽和年轮",
+    "种子",
+    "基因"
+  ],
+  "conflict": "一棵大树如何证明自己是一棵真正的活树，而不是一段枯木或石雕。",
+  "event_chain": [
+    "大树从土壤中吸收水分和矿物质（需要营养）",
+    "大树通过叶片进行光合作用，吸入二氧化碳，呼出氧气（能进行呼吸）",
+    "大树通过落叶和枯枝脱落，排出代谢废物（能排出废物）",
+    "大树每年春天萌发新芽，树干增粗，形成新的年轮（能生长）",
+    "大树开花结果，结出种子，种子落地长成新树（能繁殖）",
+    "大树的后代继承了大树的特征，但每棵树又略有不同（具有遗传和变异）",
+    "大树由根、茎、叶等细胞构成，这些细胞分工合作（由细胞构成）"
+  ],
+  "turning_point": "当大树同时展现出所有这些特征时，它才被公认为一棵真正的活树。",
+  "resolution_state": "大树通过完整的生命活动，证明了自己是活生生的生物。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "大树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "大树从土壤中吸收水分和矿物质",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "大树通过叶片进行光合作用，吸入二氧化碳，呼出氧气",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "大树通过落叶和枯枝脱落，排出代谢废物",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "大树每年春天萌发新芽，树干增粗，形成新的年轮",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "大树开花结果，结出种子，种子落地长成新树",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "大树的后代继承了大树的特征，但每棵树又略有不同",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "大树由根、茎、叶等细胞构成，这些细胞分工合作",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "大树需要从土壤中吸收水分和矿物质",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "大树需要通过叶片进行光合作用，吸入二氧化碳，呼出氧气",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "大树需要通过落叶和枯枝脱落，排出代谢废物",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "大树需要每年春天萌发新芽，树干增粗，形成新的年轮",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "大树需要开花结果，结出种子，种子落地长成新树",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "大树需要后代继承特征并略有不同",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "大树需要由根、茎、叶等细胞构成",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不使用'生物'、'生命体'等禁止词汇。",
+    "确保每个机制节点和边都被映射，且方向正确。",
+    "确保故事载体一致，不混用多个源域。",
+    "注意'由细胞构成'在故事中需用'根、茎、叶等细胞'来体现，避免直接使用'细胞'一词，但'细胞'本身不是禁止词，可保留。"
+  ],
+  "mapping_context_sha256": "ca3f8e6072f2966f8601b0dbf2b6803fe6a181b4033095d7a24a7cb61b00eb93",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "e646c1900dc65847f468d5e1fe215a0d5c1986036398bbe61dbd38e3ffcaa38b"
+  }
+}

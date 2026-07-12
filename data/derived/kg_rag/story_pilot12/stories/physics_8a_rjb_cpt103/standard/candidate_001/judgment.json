@@ -1,0 +1,38 @@
+{
+  "scores": {
+    "faithfulness": 1,
+    "implicitness": 1,
+    "mapping_clarity": 1,
+    "readability": 5,
+    "pedagogical_value": 1,
+    "novelty": 1
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story only explicitly mentions '葫芦藤' (n1) and '大葫芦' (n2) as entities, but fails to represent the core process '葫芦生长过程' (n3), the condition '小葫芦远离主干' (n4), the outcome '又大又好的葫芦' (n5), and the adjustment process '老农调整藤蔓支撑和养分分配' (n6) as distinct, causally linked nodes. The edges e1-e5 are entirely absent from the story text, with no explicit relational statements. The mapping plan's intended carrier texts for n3-n6 and all edges are not realized in the story, resulting in node_coverage=0.1667 and edge_coverage=0.0, both below the 0.8 threshold. This makes the mapping observably worse than a realization that explicitly narrates each mechanism step and its causal connections."
+  },
+  "revision_instructions": [
+    "Explicitly narrate the process '葫芦生长过程' as a distinct event (e.g., '葫芦藤上的小葫芦开始生长').",
+    "Explicitly state the condition '小葫芦远离主干' (e.g., '老农剪掉枝叶，让小葫芦离主干更远').",
+    "Explicitly describe the outcome '又大又好的葫芦' as a result of the process (e.g., '最终结出了又大又好的葫芦').",
+    "Explicitly describe the adjustment process '老农调整藤蔓支撑和养分分配' (e.g., '老农调整了藤蔓的支撑和养分分配').",
+    "For each edge, include a sentence that explicitly states the causal or enabling relation (e.g., '葫芦藤使葫芦生长成为可能', '葫芦生长过程产生了大葫芦', etc.).",
+    "Ensure the story length remains between 450-750 Chinese characters."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "edge_coverage_below_0.8"
+    ]
+  }
+}

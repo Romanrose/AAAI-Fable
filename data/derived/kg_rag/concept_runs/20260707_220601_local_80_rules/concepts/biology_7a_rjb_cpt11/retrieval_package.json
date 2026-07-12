@@ -1,0 +1,94 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt11",
+    "label": "Concept",
+    "name": "细胞",
+    "properties": {
+      "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+      "importance": "了解",
+      "examples": [
+        "叶的表皮细胞",
+        "心肌细胞",
+        "受精卵（单细胞）"
+      ],
+      "aliases": [
+        "cell"
+      ],
+      "retrieval_text": "细胞\nConcept\n生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。\n了解\ncell\n叶的表皮细胞\n心肌细胞\n受精卵（单细胞）"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14135",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_7a_rjb_cpt68",
+      "target_name": "组织",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14137",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_bx1_rjb_cpt2",
+      "target_name": "细胞是基本的生命系统",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:14136",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_bx1_rjb_cpt1",
+      "target_name": "细胞是生命活动的基本单位",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:17836",
+      "source": "biology_7a_rjb_cpt11",
+      "source_name": "细胞",
+      "target": "biology_7a_rjb_cpt12",
+      "target_name": "病毒",
+      "relation": "relates_to",
+      "relation_description": "relates_to",
+      "evidence": "",
+      "score": 0.9
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "细胞",
+      "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:14135] 细胞 --prerequisites_for--> 组织",
+      "[normalized:edge:14137] 细胞 --prerequisites_for--> 细胞是基本的生命系统",
+      "[normalized:edge:14136] 细胞 --prerequisites_for--> 细胞是生命活动的基本单位"
+    ],
+    "process_summary": [
+      "[normalized:edge:17836] 细胞 --relates_to--> 病毒"
+    ],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 4,
+    "candidate_edge_count": 4,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1059,
+    "summary_chars": 443,
+    "path_chars": 0,
+    "retrieval_context_chars": 1502
+  }
+}

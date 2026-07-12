@@ -1,0 +1,94 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt23",
+  "strategy": "standard",
+  "candidate_id": "candidate_003",
+  "candidate_index": 3,
+  "source_domain": "农夫与六只小鸡",
+  "characters": [
+    "农夫",
+    "小鸡们"
+  ],
+  "objects": [
+    "鸡舍",
+    "六只小鸡",
+    "饲料",
+    "栅栏"
+  ],
+  "conflict": "农夫需要教会小鸡们认识‘六’这个数量，以便它们能正确分群、吃食和躲避危险。",
+  "event_chain": [
+    "农夫每天按顺序数小鸡，确认数量是否完整。",
+    "农夫通过数小鸡、写数字等方式，让小鸡们理解‘六’代表的数量。",
+    "小鸡们掌握了‘六’的概念，能进行六以内的加减。",
+    "农夫用栅栏比较不同数量的小鸡群，强化大小概念。"
+  ],
+  "turning_point": "小鸡们通过反复数数和实践，终于理解‘六’的含义。",
+  "resolution_state": "小鸡们能正确进行六以内的加减，并用比较符号判断数量大小。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "农夫按顺序逐个计数小鸡的数量",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "六只小鸡",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "农夫通过数小鸡、写数字等方式，让小鸡们认识‘六’这个数量",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "小鸡们掌握了所有得数是六或从六中减去的加减法",
+      "mapping_type": "outcome"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "农夫用栅栏比较两个小鸡群的数量大小",
+      "mapping_type": "rule"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "农夫按顺序计数小鸡，使得他能够通过数小鸡来认识‘六’的数量",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "通过数小鸡的过程，产生了‘六只小鸡’这个实体概念",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "认识‘六’的数量使得小鸡们能进行六以内的加减运算",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "比较数量大小的规则与‘六只小鸡’这个数量实体相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中‘六’仅作为数量出现，不直接使用‘数字6的认识’等禁止术语。",
+    "注意‘数数方法’（n1）作为条件，其故事载体是‘按顺序计数’，而非‘数数方法’本身。",
+    "‘数量的比较’（n5）作为规则，其故事载体是‘用栅栏比较’，避免直接使用‘比较’一词。",
+    "所有映射均保持原机制图的方向，无反向或遗漏。"
+  ],
+  "mapping_context_sha256": "34cf1d147f6fb26fe4fb75130601eba75a5b5f700b2a1dfa918432ed703799c8",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "6f75e51b22a0cb9cca5dbbff12a2912db3ce723cc5a0fcea58dccf7e34841e04"
+  }
+}

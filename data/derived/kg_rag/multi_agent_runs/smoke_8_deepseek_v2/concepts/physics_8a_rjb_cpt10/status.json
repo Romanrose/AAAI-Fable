@@ -1,0 +1,11 @@
+{
+  "concept_id": "physics_8a_rjb_cpt10",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "generation_status": "success",
+  "evaluation_status": "accept",
+  "weighted_overall": 4.9,
+  "selected_candidate_id": "candidate_001",
+  "revision_applied": false,
+  "six_dim_mode": "llm"
+}

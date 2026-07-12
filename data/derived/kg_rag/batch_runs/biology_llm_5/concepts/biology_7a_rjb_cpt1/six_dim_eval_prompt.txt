@@ -1,0 +1,229 @@
+{
+  "task": "Evaluate one concept-grounded fable on six dimensions. Return strict JSON only.",
+  "target_concept": "生物",
+  "concept_id": "biology_7a_rjb_cpt1",
+  "concept_definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+  "forbidden_terms_for_story_body": [
+    "biology_7a_rjb_cpt1",
+    "生命体",
+    "生物"
+  ],
+  "subgraph_pack_summary": {
+    "seed": {
+      "id": "biology_7a_rjb_cpt1",
+      "label": "Concept",
+      "name": "生物",
+      "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+      "importance": "重要",
+      "aliases": [
+        "生命体"
+      ],
+      "examples": [
+        "小麦",
+        "海豚",
+        "鲸",
+        "人",
+        "含羞草",
+        "幼鳄",
+        "蘑菇",
+        "狗",
+        "珊瑚虫"
+      ],
+      "retrieval_text": "生物\nConcept\n具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。\n重要\n生命体\n小麦\n海豚\n鲸\n人\n含羞草\n幼鳄\n蘑菇\n狗\n珊瑚虫"
+    },
+    "sections": {
+      "prerequisites": [],
+      "related_concepts": [],
+      "outcomes": [],
+      "experiments": [],
+      "exercises": [],
+      "hierarchy": [
+        {
+          "id": "biology_7a_rjb_ch1_s1",
+          "label": "Section",
+          "name": "第一章 认识生物",
+          "definition": null,
+          "importance": null,
+          "aliases": [],
+          "examples": [],
+          "retrieval_text": "第一章 认识生物\nSection"
+        }
+      ]
+    },
+    "meta": {
+      "node_count": 2,
+      "edge_count": 1
+    }
+  },
+  "structure_plan": {
+    "found": true,
+    "query": "biology_7a_rjb_cpt1",
+    "seed": {
+      "id": "biology_7a_rjb_cpt1",
+      "label": "Concept",
+      "name": "生物",
+      "definition": "具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。",
+      "importance": "重要",
+      "aliases": [
+        "生命体"
+      ],
+      "examples": [
+        "小麦",
+        "海豚",
+        "鲸",
+        "人",
+        "含羞草",
+        "幼鳄",
+        "蘑菇",
+        "狗",
+        "珊瑚虫"
+      ],
+      "retrieval_text": "生物\nConcept\n具有一系列共同生命特征的物体（如需要营养、能呼吸、能排出废物、能对刺激作出反应、能生长和繁殖、具有遗传和变异等）；除病毒外，生物一般由细胞构成。\n重要\n生命体\n小麦\n海豚\n鲸\n人\n含羞草\n幼鳄\n蘑菇\n狗\n珊瑚虫"
+    },
+    "source_domain": "garden workshop",
+    "entities": [
+      "a careful caretaker",
+      "a plot that depends on the right conditions",
+      "tools and routines that reveal whether growth is real"
+    ],
+    "event_chain": [
+      "The caretaker prepares the conditions that must already be in place.",
+      "The plot uses those conditions to produce visible growth.",
+      "Nearby processes either support or compete with that growth.",
+      "Observation and trials reveal whether the growth is genuine and sustained."
+    ],
+    "conflict": "The central process cannot succeed unless the hidden prerequisites are present and correctly coordinated.",
+    "turning_point": "A visible change reveals which condition actually controls the outcome.",
+    "resolution_state": "The system stabilizes once the enabling conditions are understood and the resulting effects become observable.",
+    "alignment_plan": [
+      {
+        "concept_role": "target concept",
+        "concept_items": [
+          "生物"
+        ],
+        "story_role": "central productive process"
+      },
+      {
+        "concept_role": "prerequisites",
+        "concept_items": [],
+        "story_role": "conditions or resources that must be prepared first"
+      },
+      {
+        "concept_role": "related concepts",
+        "concept_items": [],
+        "story_role": "neighboring processes that contextualize or contrast the main process"
+      },
+      {
+        "concept_role": "outcomes",
+        "concept_items": [],
+        "story_role": "visible consequences produced by the core process"
+      },
+      {
+        "concept_role": "experiments",
+        "concept_items": [],
+        "story_role": "tests that reveal whether the process truly happened"
+      },
+      {
+        "concept_role": "exercises",
+        "concept_items": [],
+        "story_role": "follow-up checks that reinforce the lesson"
+      }
+    ]
+  },
+  "alignment_table": [
+    {
+      "concept_role": "target concept",
+      "story_evidence": "The seed grew into a plant that needed nutrition, breathed, responded to touch, grew, and reproduced, demonstrating the characteristics of a living thing."
+    },
+    {
+      "concept_role": "prerequisites",
+      "story_evidence": "Elara prepared soil, water, air, and warmth before the seed could grow."
+    },
+    {
+      "concept_role": "related concepts",
+      "story_evidence": "The moss and vine competed for resources, contrasting the main plant's growth, while the stone showed no life."
+    },
+    {
+      "concept_role": "outcomes",
+      "story_evidence": "The green shoot emerged, reached for light, and produced leaves as visible consequences of the living process."
+    },
+    {
+      "concept_role": "experiments",
+      "story_evidence": "Elara touched the stem to test response, covered a leaf to test light need, and separated a cutting to test reproduction."
+    },
+    {
+      "concept_role": "exercises",
+      "story_evidence": "Elara observed the pale leaf and the rooted cutting as follow-up checks that reinforced the lesson of what makes something alive."
+    }
+  ],
+  "story_body_to_evaluate_for_leakage": "In a sunlit garden workshop, a careful caretaker named Elara prepared a plot of rich soil, ensuring it had water, air, and warmth. She planted a single seed, then tended it with precise tools and routines—watering at dawn, weeding by noon, and checking the soil’s breath each evening. Nearby, a patch of moss grew on a stone, and a vine crept over the fence, competing for light and nutrients.\n\nDays passed, and a green shoot emerged. Elara observed closely: the shoot reached toward the sun, absorbed water, and pushed out tiny leaves. To test if this growth was genuine, she gently touched the stem—it bent, then slowly straightened, responding to her touch. She then covered one leaf with a dark cloth; within hours, it paled, showing it needed light to live. Finally, she separated a small cutting and placed it in a new pot; it rooted and grew, proving it could reproduce.\n\nThe system stabilized. Elara understood: the seed was a living thing—it needed nutrition, breathed through its leaves, responded to stimuli, grew, and reproduced. The moss and vine were also alive, but the stone was not. The visible changes revealed that life required all these hidden conditions to be coordinated.",
+  "rule_findings": {
+    "story_token_count": 205,
+    "leaked_terms": [],
+    "title_leaks": [],
+    "soft_leakage_terms": [],
+    "alignment_roles_present": [
+      "target concept",
+      "prerequisites",
+      "related concepts",
+      "outcomes",
+      "experiments",
+      "exercises"
+    ],
+    "missing_alignment_roles": [],
+    "template_hits": [],
+    "template_similarity": 0.108
+  },
+  "dimensions": {
+    "faithfulness": "忠实度",
+    "implicitness": "隐含性",
+    "mapping_clarity": "映射清晰度",
+    "readability": "可读性",
+    "pedagogical_value": "教学价值",
+    "novelty": "新颖性"
+  },
+  "weights": {
+    "faithfulness": 0.25,
+    "mapping_clarity": 0.2,
+    "pedagogical_value": 0.2,
+    "implicitness": 0.15,
+    "readability": 0.1,
+    "novelty": 0.1
+  },
+  "required_output_schema": {
+    "scores": {
+      "faithfulness": "integer 1-5",
+      "implicitness": "integer 1-5",
+      "mapping_clarity": "integer 1-5",
+      "readability": "integer 1-5",
+      "pedagogical_value": "integer 1-5",
+      "novelty": "integer 1-5"
+    },
+    "hard_flags": {
+      "hard_leakage": "boolean",
+      "soft_leakage": "boolean",
+      "title_leakage": "boolean",
+      "concept_contradiction": "boolean",
+      "unmapped_core_mechanism": "boolean",
+      "template_like": "boolean"
+    },
+    "rationales": {
+      "faithfulness": "1-3 sentences",
+      "implicitness": "1-3 sentences",
+      "mapping_clarity": "1-3 sentences",
+      "readability": "1-3 sentences",
+      "pedagogical_value": "1-3 sentences",
+      "novelty": "1-3 sentences"
+    },
+    "revision_suggestions": [
+      "short actionable suggestions"
+    ]
+  },
+  "scoring_rules": [
+    "The story body must not directly expose the target concept name or aliases.",
+    "Do not let high readability compensate for a wrong or unmapped concept mechanism.",
+    "Set concept_contradiction=true when the story teaches a mechanism that conflicts with the concept definition.",
+    "Set unmapped_core_mechanism=true when story elements cannot recover the main concept mechanism.",
+    "Use 1 as unacceptable, 3 as acceptable but weak, and 5 as excellent."
+  ]
+}

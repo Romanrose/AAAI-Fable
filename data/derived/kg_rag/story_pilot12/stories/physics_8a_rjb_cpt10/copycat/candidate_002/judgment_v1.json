@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 4,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "All three edges are supported by the same story sentence, which weakens the distinctiveness of each relation. Edge e1 (relates_to between n2 and n1) is the weakest because the story only shows a comparison, not a clear directional relation from process to reference object."
+  },
+  "revision_instructions": [
+    "Differentiate the three edge mappings by using distinct story events for each relation, e.g., show the process (n2) explicitly referencing the reference object (n1) for e1, and the reference object enabling the relativity state (n3) for e2.",
+    "Ensure that the story does not rely on a single sentence to cover multiple distinct relations."
+  ],
+  "final_status": "accept"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "biology_7a_rjb_cpt110",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一位老农从自家果园的众多果树中挑选几棵来检查果实品质，以此判断整个果园的收成情况。",
+  "characters": [
+    "老农",
+    "果园",
+    "果树"
+  ],
+  "objects": [
+    "果园（代表总体）",
+    "挑选的几棵果树（代表样本）",
+    "果实品质（代表检测指标）"
+  ],
+  "conflict": "老农需要知道整个果园的收成好坏，但不可能检查每一棵果树，只能挑选几棵来代表整体。",
+  "event_chain": [
+    "老农想了解果园的整体收成。",
+    "老农决定从果园中随机挑选几棵果树，避免只挑长得好的或差的。",
+    "老农仔细检查这几棵果树的果实品质，记录每棵树的果实饱满度、数量等。",
+    "老农根据这几棵树的检查结果，推断整个果园的收成情况。"
+  ],
+  "turning_point": "老农意识到不能只挑看起来好的果树，必须随机挑选，且数量要足够多，才能准确反映整体。",
+  "resolution_state": "老农通过随机挑选的几棵果树的检查结果，成功推断出整个果园的收成，为后续采摘和销售提供了依据。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "老农从果园中随机挑选几棵果树，检查果实品质，并以此推断整个果园的收成",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "老农必须随机挑选果树，避免主观偏好，且挑选的果树数量要适当",
+      "mapping_type": "condition"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "挑选的几棵果树（代表样本）",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "老农每天观察这些果树的果实变化，记录每棵树的果实饱满度和数量，连续观察几天",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "老农根据几棵树的平均果实品质，推断整个果园的收成，为采摘计划提供依据",
+      "mapping_type": "outcome"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "老农从果园中随机挑选几棵果树（n1）这一行为，使得这些果树（n3）成为检查对象",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "随机挑选且数量适当（n2）这一条件，约束了老农挑选果树的过程（n1）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "挑选的几棵果树（n3）就是老农要检查的对象（n4）",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "老农的检查过程（n4）产生了推断结果（n5）",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'抽样检测'等禁止术语。",
+    "注意将'随机'和'样本量适当'等条件自然融入故事，避免生硬。",
+    "确保所有机制节点和边都被映射，且方向正确。",
+    "避免将课程桥接上下文（如'测定种子的发芽率'）作为因果机制。"
+  ],
+  "mapping_context_sha256": "94653de04d6af92d9308ff03f214309beee3e4338a3ad2cd068abcd61101551a",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "60be72630fe023819db47de18d365a5b3dcfcef3a59ed7b5e11a049c3cabf150"
+  }
+}

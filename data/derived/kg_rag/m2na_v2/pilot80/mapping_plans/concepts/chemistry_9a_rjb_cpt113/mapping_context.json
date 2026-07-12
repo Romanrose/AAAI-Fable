@@ -1,0 +1,157 @@
+{
+  "schema_version": "m2na-mapping-context/v1",
+  "seed": {
+    "schema_version": "m2na-concept-seed/v1",
+    "concept_id": "chemistry_9a_rjb_cpt113",
+    "subject": "chemistry",
+    "canonical_name": "催化剂的工业应用",
+    "aliases": [],
+    "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+    "concept_type": "mechanism",
+    "forbidden_terms": [
+      "催化剂的工业应用"
+    ]
+  },
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "process",
+        "text": "催化作用",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt111:definition"
+        ]
+      },
+      {
+        "id": "n2",
+        "type": "process",
+        "text": "催化剂的工业应用",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "outcome",
+        "text": "化工生产中许多过程必须依靠催化剂才能有效进行",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "n4",
+        "type": "evidence",
+        "text": "生产化肥、农药、多种化工原料都要使用催化剂；石油炼制过程中用高效催化剂生产汽油、煤油等；汽车尾气处理中用催化剂促进有害气体的转化；酿造工业和制药工业中用酶作催化剂",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt113:examples"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "n1",
+        "target": "n2",
+        "relation": "enables",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-edge:normalized:edge:15001"
+        ]
+      },
+      {
+        "id": "e2",
+        "source": "n2",
+        "target": "n3",
+        "relation": "produces",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt113:definition"
+        ]
+      },
+      {
+        "id": "e3",
+        "source": "n4",
+        "target": "n2",
+        "relation": "verifies",
+        "weight": 1.0,
+        "evidence_refs": [
+          "kg-node:chemistry_9a_rjb_cpt113:examples"
+        ]
+      }
+    ]
+  },
+  "generation_constraints": {
+    "forbidden_terms": [
+      "催化剂的工业应用"
+    ],
+    "must_preserve_node_ids": [
+      "n1",
+      "n2",
+      "n3",
+      "n4"
+    ],
+    "must_preserve_edge_ids": [
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "concept_relation_graph": {
+    "target_concept": {
+      "id": "chemistry_9a_rjb_cpt113",
+      "name": "催化剂的工业应用",
+      "label": "Concept",
+      "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。"
+    },
+    "neighbors": [
+      {
+        "id": "chemistry_9a_rjb_cpt111",
+        "name": "催化作用"
+      }
+    ],
+    "relations": [
+      {
+        "edge_id": "normalized:edge:15001",
+        "source_id": "chemistry_9a_rjb_cpt111",
+        "source_name": "催化作用",
+        "target_id": "chemistry_9a_rjb_cpt113",
+        "target_name": "催化剂的工业应用",
+        "relation": "prerequisites_for",
+        "relation_semantic_role": "prerequisite",
+        "direction": "incoming",
+        "neighbor_id": "chemistry_9a_rjb_cpt111",
+        "neighbor_name": "催化作用",
+        "score": 1.35,
+        "evidence": ""
+      }
+    ],
+    "raw_edge_count": 1,
+    "source": "dual_level_graphrag"
+  },
+  "retrieval_summary": {
+    "definition_summary": {
+      "name": "催化剂的工业应用",
+      "definition": "催化剂在化工生产中具有重要而广泛的应用，许多过程必须依靠催化剂才能有效进行。",
+      "formula": "",
+      "importance": "了解"
+    },
+    "condition_summary": [
+      "[normalized:edge:15001] 催化作用 --prerequisites_for--> 催化剂的工业应用"
+    ],
+    "process_summary": [],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_edge_ids": [
+    "normalized:edge:15001"
+  ],
+  "provenance": {
+    "seed_sha256": "ba18a03da0366678de4ac167d4d7deda1e65f95fd6fef812816016ecd815083b",
+    "retrieval_sha256": "0b415d5d031afb6289d3f16ad42bec1c70de20a9daac88bd2d2b110f5cf9ee8e",
+    "mechanism_record_sha256": "f475b610fa48adb13fbd4558cc736ea144a04f8bb0999344cffca498f067f709"
+  }
+}

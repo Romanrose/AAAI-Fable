@@ -1,0 +1,84 @@
+{
+  "schema_version": "m2na-mapping-plan/v1",
+  "concept_id": "math_1a_rjb_cpt16",
+  "strategy": "standard",
+  "candidate_id": "candidate_001",
+  "candidate_index": 1,
+  "source_domain": "一棵树与它的分类和关联",
+  "characters": [
+    "一棵树",
+    "按形状分类",
+    "旋转体",
+    "圆锥"
+  ],
+  "objects": [
+    "一棵树",
+    "按形状分类",
+    "旋转体",
+    "圆锥"
+  ],
+  "conflict": "一棵树被错误地归类，导致它与其他形状的关系混乱。",
+  "event_chain": [
+    "一棵树被归类为按形状分类中的一种。",
+    "一棵树也被归类为旋转体中的一种。",
+    "一棵树与圆锥相关联。"
+  ],
+  "turning_point": "一棵树意识到自己的正确分类和关联。",
+  "resolution_state": "一棵树被正确归类，并与其他形状建立了正确的关联。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "一棵树",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "按形状分类",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "旋转体",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "圆锥",
+      "mapping_type": "entity"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "一棵树属于按形状分类",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "一棵树属于旋转体",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "一棵树与圆锥相关联",
+      "direction_preserved": true
+    }
+  ],
+  "risk_notes": [
+    "确保故事中不出现'圆柱'或'圆柱体'等禁止词汇。",
+    "故事载体需保持连贯，避免使用多个不相关的隐喻。",
+    "所有机制节点和边均已映射，方向正确。"
+  ],
+  "mapping_context_sha256": "c11ca6c389982bb6f47cd212f5a568b7242e1e9ee236b3d7fbcdde1a109b46bd",
+  "provenance": {
+    "builder": {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "temperature": 0.3,
+      "max_tokens": 1200
+    },
+    "prompt_version": "standard-mapping-plan/v1",
+    "prompt_sha256": "08cf28e3bf0387be055be2ddd10e31715a758d655115fc496d34edb6eb8b5926"
+  }
+}

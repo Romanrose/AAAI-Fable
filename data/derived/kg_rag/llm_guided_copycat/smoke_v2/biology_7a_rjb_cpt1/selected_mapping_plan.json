@@ -1,0 +1,97 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "房屋建造",
+  "domain_rationale": "房屋建造过程需要满足一系列基本条件，如同生物需要满足生命特征。房屋必须进行基础施工（需要营养）、通风（呼吸）、排水（排出废物）、扩建（生长）、装修（繁殖）、设计蓝图（遗传和变异）、由砖石构成（由细胞构成）。",
+  "conflict": "房屋建造是人工设计过程，而生物是自然存在，但两者都依赖一系列必要环节才能成为完整实体。",
+  "event_chain": [
+    "房屋建造开始",
+    "需要材料供应（如水泥、钢筋）",
+    "需要通风系统",
+    "需要排水系统",
+    "需要扩建楼层",
+    "需要装修装饰",
+    "需要设计图纸和风格延续",
+    "由砖石和混凝土构成"
+  ],
+  "turning_point": "当所有环节都满足时，房屋才能成为宜居的建筑。",
+  "resolution_state": "房屋成为完整的居住空间。",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "房屋",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "材料供应",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n3",
+      "story_carrier": "通风系统",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n4",
+      "story_carrier": "排水系统",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n5",
+      "story_carrier": "扩建楼层",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n6",
+      "story_carrier": "装修装饰",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n7",
+      "story_carrier": "设计图纸和风格延续",
+      "mapping_type": "process"
+    },
+    {
+      "mechanism_node_id": "n8",
+      "story_carrier": "砖石和混凝土构成",
+      "mapping_type": "state"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "房屋需要材料供应",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e2",
+      "story_relation": "房屋需要通风系统",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e3",
+      "story_relation": "房屋需要排水系统",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e4",
+      "story_relation": "房屋需要扩建楼层",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e5",
+      "story_relation": "房屋需要装修装饰",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e6",
+      "story_relation": "房屋需要设计图纸和风格延续",
+      "direction_preserved": true
+    },
+    {
+      "mechanism_edge_id": "e7",
+      "story_relation": "房屋需要砖石和混凝土构成",
+      "direction_preserved": true
+    }
+  ]
+}

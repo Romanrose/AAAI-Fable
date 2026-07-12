@@ -1,0 +1,25 @@
+{
+  "node_alignments": [
+    {
+      "mechanism_node_id": "n1",
+      "story_evidence": "农夫先给禾苗浇透了水",
+      "confidence": 1.0
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_evidence": "禾苗有了充足的水分，肥料便顺利被吸收。叶片渐渐舒展开来，由黄转绿，茎秆也一天天拔高",
+      "confidence": 1.0
+    }
+  ],
+  "edge_alignments": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_evidence": "农夫先给禾苗浇透了水。待土壤湿润松软，他又重新撒上肥料，肥料很快化入水中，渗入泥土",
+      "direction_preserved": true,
+      "confidence": 1.0
+    }
+  ],
+  "missing_node_ids": [],
+  "missing_edge_ids": [],
+  "summary": "All mechanism nodes and edges are aligned to exact story substrings. Node n1 (condition: recognizing quantities 1-5 and one-to-one correspondence) is mapped to the story's condition of watering first. Node n2 (process: representing merging of two quantities) is mapped to the story's process of the seedlings absorbing water and nutrients and growing. Edge e1 (enables) is preserved in direction: the condition (watering first) enables the process (absorption and growth)."
+}

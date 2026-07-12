@@ -1,0 +1,49 @@
+{
+  "query": "chemistry_9a_rjb_cpt107",
+  "found": true,
+  "seed": {
+    "id": "chemistry_9a_rjb_cpt107",
+    "label": "Concept",
+    "name": "过氧化氢分解反应",
+    "definition": "过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。",
+    "aliases": [],
+    "examples": [
+      "教材中实验（1）和（2）对比：无二氧化锰时木条不能复燃，加入二氧化锰后木条复燃"
+    ],
+    "retrieval_text": "过氧化氢分解反应\n过氧化氢在常温下能缓慢分解生成水和氧气，加入催化剂如二氧化锰后分解速率显著加快。"
+  },
+  "sections": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "chemistry_9a_rjb_cpt109",
+        "label": "Concept",
+        "name": "分解反应",
+        "definition": "一种物质在一定条件下生成两种或两种以上其他物质的化学反应。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [
+      {
+        "id": "chemistry_9a_rjb_exp17",
+        "label": "Experiment",
+        "name": "过氧化氢分解实验中二氧化锰的作用",
+        "definition": ""
+      }
+    ],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "chemistry_9a_rjb_ch2_s3",
+        "label": "Section",
+        "name": "课题3 制取氧气",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [],
+  "meta": {
+    "source": "concept_card",
+    "story_language": "zh-CN"
+  }
+}

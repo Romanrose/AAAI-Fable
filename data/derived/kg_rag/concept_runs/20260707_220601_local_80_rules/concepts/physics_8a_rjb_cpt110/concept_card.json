@@ -1,0 +1,59 @@
+{
+  "concept_id": "physics_8a_rjb_cpt110",
+  "subject": "physics",
+  "story_language": "zh-CN",
+  "canonical_name": "像的正倒与大小",
+  "definition": "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。",
+  "aliases": [],
+  "examples": [],
+  "teaching_level": "middle_school",
+  "concept_type": "law",
+  "graph_context": {
+    "prerequisites": [],
+    "related_concepts": [
+      {
+        "id": "physics_8a_rjb_cpt109",
+        "label": "Concept",
+        "name": "实像与虚像",
+        "definition": "实像可由光屏承接，虚像不能由光屏承接，需要从透镜方向观察。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [],
+    "hierarchy": [
+      {
+        "id": "physics_8a_rjb_ch5_s3",
+        "label": "Section",
+        "name": "第三节 凸透镜成像的规律",
+        "definition": ""
+      }
+    ]
+  },
+  "core_mechanism_zh": [
+    "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。"
+  ],
+  "must_preserve_zh": [
+    "像可分为正立或倒立，放大或缩小，取决于物距与焦距的关系。",
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。"
+  ],
+  "common_misconceptions_zh": [],
+  "forbidden_terms_zh": [
+    "像的正倒与大小"
+  ],
+  "subject_constraints_zh": [
+    "保留变量之间的关系。",
+    "避免把自然规律写成角色主观意志。",
+    "保留方向、大小、条件变化。"
+  ],
+  "generation_notes_zh": [],
+  "data_quality": {
+    "text_quality": "good",
+    "context_quality": "medium",
+    "needs_llm_enrichment": false,
+    "generation_priority": "silver",
+    "enrichment_confidence": 0.72
+  },
+  "enrichment_confidence": 0.72
+}

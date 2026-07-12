@@ -1,0 +1,123 @@
+{
+  "task": "根据结构计划写一则中文短寓言正文。",
+  "language": "zh-CN",
+  "forbidden_terms_for_story_body": [
+    "放大镜成像"
+  ],
+  "mechanism_graph": {
+    "nodes": [
+      {
+        "id": "m1",
+        "text": "物体位于焦点以内时，凸透镜形成放大、正立的虚像。",
+        "weight": 1.0,
+        "source": "concept_card.definition"
+      },
+      {
+        "id": "m2",
+        "text": "需要考虑前置条件或输入：凸透镜",
+        "weight": 0.9,
+        "source": "graph.prerequisite"
+      },
+      {
+        "id": "m3",
+        "text": "需要保留上下位关系：虚像",
+        "weight": 0.75,
+        "source": "graph.hierarchy"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "m1",
+        "target": "m2",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_17245"
+      },
+      {
+        "id": "e2",
+        "source": "m2",
+        "target": "m3",
+        "relation": "supports_next_step",
+        "weight": 1.0,
+        "source_edge_id": "edge_12421"
+      }
+    ]
+  },
+  "narrative_plan": {
+    "source_domain": "园艺",
+    "setting": "一座阳光明媚的温室里，园丁正在用不同形状的玻璃器皿培育幼苗。",
+    "conflict": "一棵矮小的豆苗被放在一个透明圆鼓的玻璃瓶后，园丁发现它看起来比实际大得多，但伸手去摸却摸不到那放大的部分。",
+    "characters": [
+      {
+        "name": "园丁",
+        "role": "观察者与操作者",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "豆苗",
+        "role": "被观察的物体",
+        "mapped_element": "m1"
+      },
+      {
+        "name": "透明圆鼓玻璃瓶",
+        "role": "改变光路的介质",
+        "mapped_element": "m2"
+      },
+      {
+        "name": "放大的虚影",
+        "role": "视觉上的结果",
+        "mapped_element": "m3"
+      }
+    ],
+    "mappings": [
+      {
+        "concept_element": "m1",
+        "narrative_carrier": "豆苗紧贴玻璃瓶内侧，园丁从外侧观察"
+      },
+      {
+        "concept_element": "m2",
+        "narrative_carrier": "透明圆鼓玻璃瓶（凸透镜）"
+      },
+      {
+        "concept_element": "m3",
+        "narrative_carrier": "豆苗在瓶后形成的放大、正立的虚影"
+      }
+    ],
+    "plot_beats": [
+      {
+        "beat_id": "b1",
+        "event": "园丁将矮小的豆苗移到透明圆鼓玻璃瓶的正后方，豆苗距离瓶壁很近。",
+        "mapped_elements": [
+          "m1",
+          "m2"
+        ]
+      },
+      {
+        "beat_id": "b2",
+        "event": "园丁透过玻璃瓶观察，发现豆苗的影像变得又大又正，仿佛是一棵壮实的植株。",
+        "mapped_elements": [
+          "m1",
+          "m3"
+        ]
+      },
+      {
+        "beat_id": "b3",
+        "event": "园丁伸手去触碰那放大的叶片，手指却直接穿过了影像，只摸到冰冷的玻璃和真实的豆苗。",
+        "mapped_elements": [
+          "m3"
+        ]
+      }
+    ],
+    "turning_point": "园丁意识到那放大的影像并非真实存在，而是玻璃瓶制造的光学幻象。",
+    "ending": "园丁将豆苗移开玻璃瓶，放大的影像消失，豆苗恢复原样。他明白了：只有让物体靠近特定形状的玻璃，才能看到这种放大的假象。",
+    "implied_moral": "当物体处于特定距离内，借助透明曲面可以看见放大的正立虚像，但虚像无法被触摸。"
+  },
+  "requirements": [
+    "只输出寓言正文，不要输出 JSON、标题解释、概念解释、术语表或映射表。",
+    "正文不得出现 forbidden_terms_for_story_body 中任何词。",
+    "不要使用教材式语言，例如“这个故事解释的是……”。",
+    "长度建议 250 到 700 个汉字。",
+    "故事必须有明确开端、发展、转折和结果。"
+  ]
+}

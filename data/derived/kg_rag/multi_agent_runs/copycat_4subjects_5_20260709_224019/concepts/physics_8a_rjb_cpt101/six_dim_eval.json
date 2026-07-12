@@ -1,0 +1,122 @@
+{
+  "concept_id": "physics_8a_rjb_cpt101",
+  "target_concept": "焦距",
+  "scores": {
+    "faithfulness": 3,
+    "implicitness": 5,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 2,
+    "novelty": 3
+  },
+  "weighted_overall": 3.0,
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": true,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事描述了水渠调度中条件、过程和结果的顺序依赖关系，但核心概念‘焦距’是凸透镜焦点到光心的距离，决定偏折能力，故事中完全没有体现‘距离’和‘偏折能力’这两个关键变量，只保留了顺序依赖，因此忠实度中等。",
+    "implicitness": "故事正文未出现‘焦距’、‘焦点’、‘光心’、‘凸透镜’等任何禁用术语，完全通过水渠调度场景隐喻，隐含性很好。",
+    "mapping_clarity": "故事中的‘前置条件牌’、‘第二段记录册’、‘结果验收记录’虽然对应了机制图中的三个节点，但核心机制‘距离决定偏折能力’在故事中完全没有映射，故事只表现了顺序关系，而非焦距的物理机制，因此映射清晰度低。",
+    "readability": "故事语言流畅，情节连贯，人物对话自然，适合中学生阅读，可读性良好。",
+    "pedagogical_value": "故事只传达了‘顺序不能颠倒’的抽象原则，没有帮助理解‘焦距’的具体物理含义（距离与偏折能力的关系），教学价值有限。",
+    "novelty": "水渠调度站作为寓言场景有一定新意，但整体结构仍是‘先做A再做B最后C’的常见顺序类寓言，新颖性一般。"
+  },
+  "evidence": {
+    "faithfulness": "故事核心是‘先核对条件牌，再记录流量变化，最后验收’，对应的是顺序依赖，而非‘焦点到光心的距离决定偏折能力’。",
+    "implicitness": "全文未出现‘焦距’、‘焦点’、‘光心’、‘凸透镜’等词。",
+    "mapping_clarity": "故事中‘前置条件牌’对应‘光心’、‘第二段记录册’对应‘焦距’、‘结果验收记录’对应‘凸透镜成像规律’，但‘焦距’的核心机制（距离决定偏折）未被映射。",
+    "readability": "故事有完整起承转合，人物对话自然，无生僻词汇。",
+    "pedagogical_value": "读者只能学到‘步骤顺序重要’，无法理解焦距的物理定义或作用。",
+    "novelty": "水渠调度场景不常见，但‘顺序不能颠倒’的教训在寓言中较普遍。"
+  },
+  "revision_suggestions": [
+    "建议将核心机制‘距离决定偏折能力’融入故事，例如：水渠中两个闸门的距离决定了水流偏转的角度，距离越近偏转越大，距离越远偏转越小。",
+    "保留顺序依赖的同时，增加‘距离’与‘效果’之间的定量或定性关系，使故事更贴近焦距的物理本质。"
+  ],
+  "final_status": "reject",
+  "mode": "llm",
+  "judge_response": {
+    "scores": {
+      "faithfulness": 3,
+      "implicitness": 5,
+      "mapping_clarity": 2,
+      "readability": 4,
+      "pedagogical_value": 2,
+      "novelty": 3
+    },
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": true,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "故事描述了水渠调度中条件、过程和结果的顺序依赖关系，但核心概念‘焦距’是凸透镜焦点到光心的距离，决定偏折能力，故事中完全没有体现‘距离’和‘偏折能力’这两个关键变量，只保留了顺序依赖，因此忠实度中等。",
+      "implicitness": "故事正文未出现‘焦距’、‘焦点’、‘光心’、‘凸透镜’等任何禁用术语，完全通过水渠调度场景隐喻，隐含性很好。",
+      "mapping_clarity": "故事中的‘前置条件牌’、‘第二段记录册’、‘结果验收记录’虽然对应了机制图中的三个节点，但核心机制‘距离决定偏折能力’在故事中完全没有映射，故事只表现了顺序关系，而非焦距的物理机制，因此映射清晰度低。",
+      "readability": "故事语言流畅，情节连贯，人物对话自然，适合中学生阅读，可读性良好。",
+      "pedagogical_value": "故事只传达了‘顺序不能颠倒’的抽象原则，没有帮助理解‘焦距’的具体物理含义（距离与偏折能力的关系），教学价值有限。",
+      "novelty": "水渠调度站作为寓言场景有一定新意，但整体结构仍是‘先做A再做B最后C’的常见顺序类寓言，新颖性一般。"
+    },
+    "evidence": {
+      "faithfulness": "故事核心是‘先核对条件牌，再记录流量变化，最后验收’，对应的是顺序依赖，而非‘焦点到光心的距离决定偏折能力’。",
+      "implicitness": "全文未出现‘焦距’、‘焦点’、‘光心’、‘凸透镜’等词。",
+      "mapping_clarity": "故事中‘前置条件牌’对应‘光心’、‘第二段记录册’对应‘焦距’、‘结果验收记录’对应‘凸透镜成像规律’，但‘焦距’的核心机制（距离决定偏折）未被映射。",
+      "readability": "故事有完整起承转合，人物对话自然，无生僻词汇。",
+      "pedagogical_value": "读者只能学到‘步骤顺序重要’，无法理解焦距的物理定义或作用。",
+      "novelty": "水渠调度场景不常见，但‘顺序不能颠倒’的教训在寓言中较普遍。"
+    },
+    "revision_suggestions": [
+      "建议将核心机制‘距离决定偏折能力’融入故事，例如：水渠中两个闸门的距离决定了水流偏转的角度，距离越近偏转越大，距离越远偏转越小。",
+      "保留顺序依赖的同时，增加‘距离’与‘效果’之间的定量或定性关系，使故事更贴近焦距的物理本质。"
+    ]
+  },
+  "rule_eval": {
+    "concept_id": "physics_8a_rjb_cpt101",
+    "target_concept": "焦距",
+    "scores": {
+      "faithfulness": 5,
+      "implicitness": 5,
+      "mapping_clarity": 5,
+      "readability": 5,
+      "pedagogical_value": 5,
+      "novelty": 5
+    },
+    "weighted_overall": 5.0,
+    "hard_flags": {
+      "hard_leakage": false,
+      "soft_leakage": false,
+      "title_leakage": false,
+      "concept_contradiction": false,
+      "unmapped_core_mechanism": false,
+      "template_like": false
+    },
+    "rationales": {
+      "faithfulness": "根据机制节点、机制边覆盖率和方向正确率自动估计。",
+      "implicitness": "根据目标概念名、别名和禁用词是否出现在正文中自动检查。",
+      "mapping_clarity": "根据故事证据能否对齐回机制图自动估计。",
+      "readability": "根据正文长度和完整性做轻量规则估计。",
+      "pedagogical_value": "根据核心节点和关系是否被覆盖自动估计。",
+      "novelty": "根据常见模板词命中率自动估计。"
+    },
+    "revision_suggestions": [],
+    "final_status": "accept",
+    "mode": "rules"
+  },
+  "automatic_metric_overrides": {
+    "exact_concept_leakage": 0.0,
+    "soft_term_leakage": 0.0,
+    "weighted_node_coverage": 1.0,
+    "weighted_edge_coverage": 1.0,
+    "alignment_precision": 1.0,
+    "relation_direction_accuracy": 1.0,
+    "template_hit_rate": 0.0
+  }
+}

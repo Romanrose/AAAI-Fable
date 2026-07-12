@@ -1,0 +1,30 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "hard_leakage": false,
+    "soft_leakage": false,
+    "title_leakage": false,
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "rationales": {
+    "faithfulness": "故事通过阳光充足与不足条件下豆苗叶片绿色深浅的对比，以及热水浸泡实验，准确传达了叶绿素捕获太阳光、为光合作用提供能量的核心机制，完全符合概念定义。",
+    "implicitness": "故事全程未出现'叶绿素'一词，而是用'绿色物质'、'绿色颗粒'等隐喻指代，完美避免了术语泄露，符合隐含性要求。",
+    "mapping_clarity": "故事中阳光条件影响绿色物质含量、绿色物质捕捉阳光帮助植物制造养料的因果关系清晰，与概念机制一一对应，映射明确。",
+    "readability": "语言简洁生动，情节连贯，对话自然，适合目标读者理解，无冗余或晦涩表达。",
+    "pedagogical_value": "通过观察和实验逐步揭示概念，激发探究思维，且避免了目的论解释，教学价值高。",
+    "novelty": "以园圃种植为背景，通过对比和实验展开，虽常见但情节设计合理，略有新意。"
+  },
+  "revision_suggestions": [
+    "可考虑在结尾增加一个延伸问题，如'如果西墙豆苗移到东墙，叶片颜色会变深吗？'以促进概念迁移。",
+    "可适当增加对'水和空气变成养料'的简要说明，以强化光合作用的前提知识。"
+  ]
+}

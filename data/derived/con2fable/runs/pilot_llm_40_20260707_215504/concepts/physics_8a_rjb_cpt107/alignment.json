@@ -1,0 +1,42 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "m1",
+      "narrative_element": "吊臂与吊钩之间的距离",
+      "evidence": "吊臂和吊钩之间的距离",
+      "narrative_anchor": "吊臂和吊钩之间的距离"
+    },
+    {
+      "concept_node_id": "m2",
+      "narrative_element": "吊运的稳定性和效率",
+      "evidence": "决定了吊运的稳定性和效率",
+      "narrative_anchor": "决定了吊运的稳定性和效率"
+    },
+    {
+      "concept_node_id": "m3",
+      "narrative_element": "吊钩与支点的距离（像距类比）",
+      "evidence": "让吊钩靠近支点",
+      "narrative_anchor": "让吊钩靠近支点"
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "距离决定稳定性",
+      "evidence": "距离太远，吊钩就会像钟摆一样晃个不停；距离太近，又够不到目标。你要学会根据这个距离来调整策略。",
+      "narrative_source_concept_node_id": "m1",
+      "narrative_target_concept_node_id": "m2",
+      "direction_preserved": true,
+      "narrative_anchor": "距离太远，吊钩就会像钟摆一样晃个不停；距离太近，又够不到目标。你要学会根据这个距离来调整策略。"
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "稳定性调整后影响像距（吊钩位置）",
+      "evidence": "先把吊臂收回来一些，让吊钩靠近支点，再慢慢伸出去对准目标。",
+      "narrative_source_concept_node_id": "m2",
+      "narrative_target_concept_node_id": "m3",
+      "direction_preserved": true,
+      "narrative_anchor": "先把吊臂收回来一些，让吊钩靠近支点，再慢慢伸出去对准目标。"
+    }
+  ]
+}

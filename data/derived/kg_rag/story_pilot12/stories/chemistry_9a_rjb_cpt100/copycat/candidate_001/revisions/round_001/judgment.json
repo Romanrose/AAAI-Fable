@@ -1,0 +1,42 @@
+{
+  "scores": {
+    "faithfulness": 2,
+    "implicitness": 2,
+    "mapping_clarity": 2,
+    "readability": 4,
+    "pedagogical_value": 3,
+    "novelty": 3
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n5",
+    "weakest_edge_id": "e4",
+    "distinguishing_reason": "Node n5 (氧气) is mapped to '第五道转化环节' which is a generic process step, not an entity that is part of multiple processes. This loses the entity's role as a shared component across oxidation reactions, combustion, and respiration. Edge e4 (part_of from n5 to n2) is represented as '两份记录共同约束最后判断', which is a generic comparison rather than a part-whole relation. A better mapping would use a physical substance (e.g., '关键原料' or '共用物料') that appears in multiple steps, and the part_of relation could be shown as '该原料是这些步骤的共同组成部分'."
+  },
+  "revision_instructions": [
+    "Node n5 (氧气) must be mapped to a concrete entity (e.g., '关键原料' or '共用物料') that appears in multiple process steps, not a generic '第五道转化环节'.",
+    "Edge e4 (part_of from n5 to n2) must be realized as a part-whole relation (e.g., '该原料是第二道转化环节的必要组成部分'), not as a generic comparison of records.",
+    "Edge e5 (part_of from n5 to n3) must similarly show that the same entity is part of the third step.",
+    "Edge e6 (part_of from n5 to n4) must show the entity is part of the fourth step.",
+    "Edge e7 (requires from n6 to n3) must be realized as a conditional requirement (e.g., '第六道环节需要前置条件牌上的温度记录作为前提'), not as a comparison of records.",
+    "Edge e8 (produces from n3 to n7) must be realized as a causal production (e.g., '第三道环节的封箱操作会导致第七道环节的通行牌发放结果'), not as a comparison.",
+    "Edge e9 (produces from n1 to n8) must be realized as a causal production (e.g., '入口条件核对产生的结果验收记录'), not as a generic association.",
+    "Edge e10 (relates_to from n1 to n3) must be realized as a relation (e.g., '入口条件核对与第三道环节有关联'), not as a comparison.",
+    "Story length is 839 characters, exceeding the 750-character limit. Reduce to 450-750 characters.",
+    "Node coverage is 0.375, below the 0.8 threshold. Ensure all 8 nodes are explicitly represented in the story."
+  ],
+  "final_status": "reject",
+  "raw_final_status": "reject",
+  "quality_gate": {
+    "passed": false,
+    "reasons": [
+      "node_coverage_below_0.8",
+      "story_length_outside_450_750"
+    ]
+  }
+}

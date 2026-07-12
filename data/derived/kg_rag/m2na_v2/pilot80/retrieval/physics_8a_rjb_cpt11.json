@@ -1,0 +1,235 @@
+{
+  "target": {
+    "source_node_id": "physics_8a_rjb_cpt11",
+    "label": "Concept",
+    "name": "速度",
+    "properties": {
+      "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+      "importance": "重要",
+      "formula": "v = s / t",
+      "unit": "m/s, km/h",
+      "examples": [
+        "汽车速度表上的读数",
+        "刘翔跨栏的平均速度"
+      ],
+      "aliases": [
+        "velocity"
+      ],
+      "retrieval_text": "速度\nConcept\n表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。\n重要\nm/s, km/h\nv = s / t\nvelocity\n汽车速度表上的读数\n刘翔跨栏的平均速度"
+    }
+  },
+  "retrieved_nodes": [
+    {
+      "source_node_id": "physics_8a_rjb_cpt12",
+      "label": "Concept",
+      "name": "平均速度",
+      "properties": {
+        "definition": "在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。",
+        "importance": "重要",
+        "formula": "v_avg = s_total / t_total",
+        "examples": [
+          "刘翔110 m跨栏的平均速度"
+        ],
+        "retrieval_text": "平均速度\nConcept\n在变速运动中，用物体通过的路程除以所用的时间来描述运动快慢的物理量，公式为 v = s / t。\n重要\nv_avg = s_total / t_total\n刘翔110 m跨栏的平均速度"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt13",
+      "label": "Concept",
+      "name": "匀速直线运动",
+      "properties": {
+        "definition": "速度大小和方向都保持不变的直线运动。",
+        "importance": "重要",
+        "examples": [
+          "平直轨道上平稳行驶的列车"
+        ],
+        "retrieval_text": "匀速直线运动\nConcept\n速度大小和方向都保持不变的直线运动。\n重要\n平直轨道上平稳行驶的列车"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_cpt14",
+      "label": "Concept",
+      "name": "变速直线运动",
+      "properties": {
+        "definition": "物体沿直线但速度随时间变化的运动。",
+        "importance": "了解",
+        "examples": [
+          "汽车在不同时间段内速度不同的行驶"
+        ],
+        "retrieval_text": "变速直线运动\nConcept\n物体沿直线但速度随时间变化的运动。\n了解\n汽车在不同时间段内速度不同的行驶"
+      }
+    },
+    {
+      "source_node_id": "physics_8a_rjb_exp4",
+      "label": "Experiment",
+      "name": "利用超声波位置传感器测速度",
+      "properties": {
+        "instrument": "小车、斜面、超声波位置传感器、计算机",
+        "is_student": 1,
+        "process": "传感器测距并记录不同时间的位置，由计算机计算速度并显示速度—时间图像。",
+        "conclusion": "可即时看到运动速度随时间变化的情况。",
+        "retrieval_text": "利用超声波位置传感器测速度\nExperiment"
+      }
+    },
+    {
+      "source_node_id": "physics_bx1_rjb_cpt17",
+      "label": "Concept",
+      "name": "瞬时速度",
+      "properties": {
+        "definition": "物体在某一时刻或某一很短时间内的速度，用以描述该时刻运动的快慢。",
+        "importance": "重要",
+        "examples": [
+          "利用打点计时器测量纸带上相邻计数点的位置变化求瞬时速度。"
+        ],
+        "unit": "m·s^-1",
+        "retrieval_text": "瞬时速度\nConcept\n物体在某一时刻或某一很短时间内的速度，用以描述该时刻运动的快慢。\n重要\nm·s^-1\n利用打点计时器测量纸带上相邻计数点的位置变化求瞬时速度。"
+      }
+    },
+    {
+      "source_node_id": "physics_bx1_rjb_cpt19",
+      "label": "Concept",
+      "name": "速度—时间图像",
+      "properties": {
+        "definition": "以速度为纵轴、时间为横轴描绘的图像，用于表示物体速度随时间变化的规律。",
+        "importance": "掌握",
+        "retrieval_text": "速度—时间图像\nConcept\n以速度为纵轴、时间为横轴描绘的图像，用于表示物体速度随时间变化的规律。\n掌握"
+      }
+    }
+  ],
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:17195",
+      "source": "physics_8a_rjb_cpt11",
+      "source_name": "速度",
+      "target": "physics_8a_rjb_cpt13",
+      "target_name": "匀速直线运动",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17196",
+      "source": "physics_8a_rjb_cpt11",
+      "source_name": "速度",
+      "target": "physics_8a_rjb_cpt14",
+      "target_name": "变速直线运动",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:17197",
+      "source": "physics_8a_rjb_cpt11",
+      "source_name": "速度",
+      "target": "physics_bx1_rjb_cpt19",
+      "target_name": "速度—时间图像",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "score": 1.35,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12422",
+      "source": "physics_8a_rjb_cpt12",
+      "source_name": "平均速度",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12426",
+      "source": "physics_8a_rjb_cpt13",
+      "source_name": "匀速直线运动",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:12541",
+      "source": "physics_bx1_rjb_cpt17",
+      "source_name": "瞬时速度",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "score": 1.2,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    },
+    {
+      "source_edge_id": "normalized:edge:23061",
+      "source": "physics_8a_rjb_exp4",
+      "source_name": "利用超声波位置传感器测速度",
+      "target": "physics_8a_rjb_cpt11",
+      "target_name": "速度",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "score": 0.95,
+      "hop": 1,
+      "retrieval_role": "core_direct",
+      "evidence_eligible": true
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "速度",
+      "definition": "表示物体运动快慢和方向的物理量，定义为位移与发生该位移所用时间之比。",
+      "formula": "v = s / t",
+      "importance": "重要"
+    },
+    "condition_summary": [
+      "[normalized:edge:17195] 速度 --prerequisites_for--> 匀速直线运动",
+      "[normalized:edge:17196] 速度 --prerequisites_for--> 变速直线运动",
+      "[normalized:edge:17197] 速度 --prerequisites_for--> 速度—时间图像"
+    ],
+    "process_summary": [
+      "[normalized:edge:12422] 平均速度 --is_a--> 速度",
+      "[normalized:edge:12426] 匀速直线运动 --is_a--> 速度",
+      "[normalized:edge:12541] 瞬时速度 --is_a--> 速度",
+      "[normalized:edge:23061] 利用超声波位置传感器测速度 --verifies--> 速度"
+    ],
+    "effect_summary": [],
+    "curriculum_context_summary": []
+  },
+  "retrieval_decision": {
+    "strategy": "adaptive_two_hop",
+    "direct_edge_count": 7,
+    "direct_structure_sufficient": true,
+    "direct_structure_reasons": [
+      "multistep_direct_structure_is_sufficient"
+    ],
+    "expanded_to_two_hop": false,
+    "expansion_reason": null,
+    "expansion_mode": null
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "adaptive_two_hop",
+    "retrieval_edge_count": 7,
+    "candidate_edge_count": 7,
+    "retrieval_path_count": 0,
+    "max_edges": 20,
+    "max_paths": 8,
+    "direct_edge_count": 7,
+    "expanded_to_two_hop": false
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "target": {
+    "source_node_id": "biology_7a_rjb_cpt102",
+    "label": "Concept",
+    "name": "种子萌发的环境条件",
+    "properties": {
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "importance": "掌握",
+      "examples": [
+        "温度过低（如放入冰箱）不利于萌发",
+        "过于潮湿易使种子霉烂",
+        "松土可使土壤中有充足空气"
+      ],
+      "retrieval_text": "种子萌发的环境条件\nConcept\n种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。\n掌握\n温度过低（如放入冰箱）不利于萌发\n过于潮湿易使种子霉烂\n松土可使土壤中有充足空气"
+    }
+  },
+  "raw_edges": [
+    {
+      "source_edge_id": "normalized:edge:14133",
+      "source": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "prerequisites_for",
+      "relation_description": "prerequisites_for",
+      "evidence": "",
+      "score": 1.35
+    },
+    {
+      "source_edge_id": "normalized:edge:10774",
+      "source": "biology_7a_rjb_cpt104",
+      "source_name": "一定的水分",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:10775",
+      "source": "biology_7a_rjb_cpt105",
+      "source_name": "充足的空气（氧气）",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:10772",
+      "source": "biology_7a_rjb_cpt102",
+      "source_name": "种子萌发的环境条件",
+      "target": "biology_7a_rjb_cpt101",
+      "target_name": "种子萌发",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:10773",
+      "source": "biology_7a_rjb_cpt103",
+      "source_name": "适宜的温度",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "is_a",
+      "relation_description": "is_a",
+      "evidence": "",
+      "score": 1.2
+    },
+    {
+      "source_edge_id": "normalized:edge:22413",
+      "source": "biology_7a_rjb_exp9",
+      "source_name": "探究种子萌发的环境条件（四瓶对照实验）",
+      "target": "biology_7a_rjb_cpt102",
+      "target_name": "种子萌发的环境条件",
+      "relation": "verifies",
+      "relation_description": "verifies",
+      "evidence": "",
+      "score": 0.95
+    }
+  ],
+  "selected_paths": [],
+  "topic_summary": {
+    "definition_summary": {
+      "name": "种子萌发的环境条件",
+      "definition": "种子萌发所必需的外界条件，包括适宜的温度、一定的水分和充足的空气（氧气）。",
+      "formula": "",
+      "importance": "掌握"
+    },
+    "condition_summary": [
+      "[normalized:edge:14133] 种子萌发的环境条件 --prerequisites_for--> 种子萌发",
+      "[normalized:edge:10774] 一定的水分 --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:10775] 充足的空气（氧气） --is_a--> 种子萌发的环境条件",
+      "[normalized:edge:10772] 种子萌发的环境条件 --is_a--> 种子萌发",
+      "[normalized:edge:10773] 适宜的温度 --is_a--> 种子萌发的环境条件"
+    ],
+    "process_summary": [],
+    "effect_summary": []
+  },
+  "retrieval_stats": {
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 6,
+    "candidate_edge_count": 6,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 1544,
+    "summary_chars": 483,
+    "path_chars": 0,
+    "retrieval_context_chars": 2027
+  }
+}

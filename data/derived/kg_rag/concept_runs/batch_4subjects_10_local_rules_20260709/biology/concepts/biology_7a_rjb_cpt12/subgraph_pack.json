@@ -1,0 +1,156 @@
+{
+  "query": "biology_7a_rjb_cpt12",
+  "found": true,
+  "seed": {
+    "id": "biology_7a_rjb_cpt12",
+    "label": "Concept",
+    "name": "病毒",
+    "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+    "aliases": [
+      "virus"
+    ],
+    "examples": [
+      "流感病毒",
+      "艾滋病病毒",
+      "烟草花叶病毒",
+      "噬菌体"
+    ],
+    "retrieval_text": "病毒\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。"
+  },
+  "sections": {
+    "prerequisites": [
+      {
+        "id": "biology_8a_rjb_cpt101",
+        "label": "Concept",
+        "name": "病毒的分类（按寄生细胞不同）",
+        "definition": "根据病毒寄生的细胞不同，可分为动物病毒、植物病毒和细菌病毒（噬菌体）三大类。"
+      }
+    ],
+    "related_concepts": [
+      {
+        "id": "biology_7a_rjb_cpt11",
+        "label": "Concept",
+        "name": "细胞",
+        "definition": "生物体的结构和功能的基本单位；具有相对独立的生命活动，并与其他细胞共同作用构成整体生命活动的基础单位。"
+      }
+    ],
+    "outcomes": [],
+    "experiments": [],
+    "exercises": [
+      {
+        "id": "biology_7a_rjb_exe4",
+        "label": "Exercise",
+        "name": "判断下列说法是否正确。正确的画“√”，错误的画“×”。(4) 生物都是由细胞构成的。",
+        "definition": ""
+      }
+    ],
+    "hierarchy": [
+      {
+        "id": "biology_7a_rjb_ch1_s1",
+        "label": "Section",
+        "name": "第一章 认识生物",
+        "definition": ""
+      },
+      {
+        "id": "biology_8a_rjb_ch5_s5",
+        "label": "Section",
+        "name": "第五章 病毒",
+        "definition": ""
+      }
+    ]
+  },
+  "context_blocks": [
+    {
+      "title": "Dual-level GraphRAG raw edges",
+      "text": "- [normalized:edge:14144] 病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）\n- [normalized:edge:17836] 细胞 --relates_to--> 病毒"
+    },
+    {
+      "title": "Dual-level GraphRAG topic summary",
+      "text": "{'definition_summary': {'name': '病毒', 'definition': '一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。', 'formula': '', 'importance': '了解'}, 'condition_summary': ['[normalized:edge:14144] 病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）'], 'process_summary': ['[normalized:edge:17836] 细胞 --relates_to--> 病毒'], 'effect_summary': []}"
+    }
+  ],
+  "retrieval_package": {
+    "target": {
+      "source_node_id": "biology_7a_rjb_cpt12",
+      "label": "Concept",
+      "name": "病毒",
+      "properties": {
+        "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+        "importance": "了解",
+        "examples": [
+          "流感病毒",
+          "艾滋病病毒",
+          "烟草花叶病毒",
+          "噬菌体"
+        ],
+        "aliases": [
+          "virus"
+        ],
+        "unit": "纳米（用于表示大小）",
+        "retrieval_text": "病毒\nConcept\n一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。\n了解\n纳米（用于表示大小）\nvirus\n流感病毒\n艾滋病病毒\n烟草花叶病毒\n噬菌体"
+      }
+    },
+    "raw_edges": [
+      {
+        "source_edge_id": "normalized:edge:14144",
+        "source": "biology_7a_rjb_cpt12",
+        "source_name": "病毒",
+        "target": "biology_8a_rjb_cpt101",
+        "target_name": "病毒的分类（按寄生细胞不同）",
+        "relation": "prerequisites_for",
+        "relation_description": "prerequisites_for",
+        "evidence": "",
+        "score": 1.35
+      },
+      {
+        "source_edge_id": "normalized:edge:17836",
+        "source": "biology_7a_rjb_cpt11",
+        "source_name": "细胞",
+        "target": "biology_7a_rjb_cpt12",
+        "target_name": "病毒",
+        "relation": "relates_to",
+        "relation_description": "relates_to",
+        "evidence": "",
+        "score": 0.9
+      }
+    ],
+    "selected_paths": [],
+    "topic_summary": {
+      "definition_summary": {
+        "name": "病毒",
+        "definition": "一种特殊的生物类群；教材指出病毒是“除病毒以外，生物都是由细胞构成”的例外。",
+        "formula": "",
+        "importance": "了解"
+      },
+      "condition_summary": [
+        "[normalized:edge:14144] 病毒 --prerequisites_for--> 病毒的分类（按寄生细胞不同）"
+      ],
+      "process_summary": [
+        "[normalized:edge:17836] 细胞 --relates_to--> 病毒"
+      ],
+      "effect_summary": []
+    },
+    "retrieval_stats": {
+      "retrieval_mode": "dual_level",
+      "retrieval_edge_count": 2,
+      "candidate_edge_count": 2,
+      "retrieval_path_count": 0,
+      "raw_edge_chars": 526,
+      "summary_chars": 312,
+      "path_chars": 0,
+      "retrieval_context_chars": 838
+    }
+  },
+  "meta": {
+    "source": "agentic_dual_level",
+    "story_language": "zh-CN",
+    "retrieval_mode": "dual_level",
+    "retrieval_edge_count": 2,
+    "candidate_edge_count": 2,
+    "retrieval_path_count": 0,
+    "raw_edge_chars": 526,
+    "summary_chars": 312,
+    "path_chars": 0,
+    "retrieval_context_chars": 838
+  }
+}

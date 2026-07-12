@@ -1,0 +1,32 @@
+{
+  "candidate_id": "candidate_001",
+  "source_domain": "木工工艺",
+  "domain_rationale": "木材经过工匠的加工可以转变为各种木器，这与物质在特定条件下发生变化的机制相似。",
+  "conflict": "木材是天然材料，而物质概念更抽象，但变化过程的结构一致。",
+  "event_chain": [
+    "木匠取来一段原木",
+    "原木被锯、刨、凿、打磨",
+    "原木变成一张精美的木桌"
+  ],
+  "turning_point": "木匠开始动手加工",
+  "resolution_state": "原木转化为木桌，形态和用途改变",
+  "node_mappings": [
+    {
+      "mechanism_node_id": "n1",
+      "story_carrier": "一段原木",
+      "mapping_type": "entity"
+    },
+    {
+      "mechanism_node_id": "n2",
+      "story_carrier": "木匠的加工过程",
+      "mapping_type": "process"
+    }
+  ],
+  "edge_mappings": [
+    {
+      "mechanism_edge_id": "e1",
+      "story_relation": "原木被木匠加工",
+      "direction_preserved": true
+    }
+  ]
+}

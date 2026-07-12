@@ -1,0 +1,47 @@
+{
+  "node_alignments": [
+    {
+      "concept_node_id": "n1",
+      "narrative_element": "入口条件核对",
+      "evidence": "前置条件牌",
+      "narrative_anchor": "前置条件牌",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n2",
+      "narrative_element": "第2道转化环节",
+      "evidence": "转化环节",
+      "narrative_anchor": "转化环节",
+      "confidence": 0.95
+    },
+    {
+      "concept_node_id": "n3",
+      "narrative_element": "结果验收记录",
+      "evidence": "结果验收记录",
+      "narrative_anchor": "结果验收记录",
+      "confidence": 0.95
+    }
+  ],
+  "edge_alignments": [
+    {
+      "concept_edge_id": "e1",
+      "narrative_relation": "先稳定入口条件核对，再推动第2道转化环节",
+      "evidence": "调度员老周站在一旁，指着墙上的前置条件牌说：“先核对这块牌子上的数据，缺了这一步",
+      "narrative_anchor": "调度员老周站在一旁，指着墙上的前置条件牌说：“先核对这块牌子上的数据，缺了这一步",
+      "narrative_source_concept_node_id": "n1",
+      "narrative_target_concept_node_id": "n2",
+      "direction_preserved": true,
+      "confidence": 0.95
+    },
+    {
+      "concept_edge_id": "e2",
+      "narrative_relation": "把具体现象归入更大的共同规则",
+      "evidence": "”",
+      "narrative_anchor": "”",
+      "narrative_source_concept_node_id": "n2",
+      "narrative_target_concept_node_id": "n1",
+      "direction_preserved": false,
+      "confidence": 0.9
+    }
+  ]
+}

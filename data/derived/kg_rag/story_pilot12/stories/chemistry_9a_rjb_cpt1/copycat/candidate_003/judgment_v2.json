@@ -1,0 +1,28 @@
+{
+  "scores": {
+    "faithfulness": 5,
+    "implicitness": 5,
+    "mapping_clarity": 5,
+    "readability": 5,
+    "pedagogical_value": 5,
+    "novelty": 4
+  },
+  "hard_flags": {
+    "concept_contradiction": false,
+    "unmapped_core_mechanism": false,
+    "template_like": false
+  },
+  "mapping_diagnosis": {
+    "strongest_node_id": "n1",
+    "weakest_node_id": "n2",
+    "weakest_edge_id": "e1",
+    "distinguishing_reason": "The story clearly maps n1 (物质) to '记录员核对入口条件' and n2 (物质的变化) to '验收员把通行牌与封存箱里的结果验收记录比对', preserving the enables relation through sequential dependency. The edge e1 is explicitly realized by the chain '记录员核对→调度员发牌→验收员比对', with direction preserved. This mapping is observably better than a version where the two nodes are merely mentioned without causal or sequential linkage, because here the story demonstrates that n1's completion is necessary for n2 to be meaningful, exactly matching the enables relation."
+  },
+  "revision_instructions": [],
+  "final_status": "accept",
+  "raw_final_status": "accept",
+  "quality_gate": {
+    "passed": true,
+    "reasons": []
+  }
+}
