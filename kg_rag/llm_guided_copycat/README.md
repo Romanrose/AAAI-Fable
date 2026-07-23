@@ -23,3 +23,7 @@ python -m kg_rag.llm_guided_copycat \
 正式的三策略比较应通过 [Story Pilot](../story_pilot/README.md) 的 `prepare-guided-mappings` 运行，使三种策略共享同一概念、机制、候选和评估预算。
 
 当前评分是结构门控和轻量词汇多样性信号，不是校准后的语义类比质量分数；它仍可能遗漏同义改写形式的模板重复。
+
+## 共享实验边界
+
+新的 LLM-guided Copycat 对照应使用 [`kg_rag/shared/<experiment-id>/`](../shared/README.md)，并保留独立的协议和派生产物；请遵循[共享实验约定](../SHARED_EXPERIMENTS.md)。

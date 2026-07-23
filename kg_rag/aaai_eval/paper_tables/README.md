@@ -15,3 +15,7 @@ pipeline_report.md
 - `table_2`：Core80 的 Standard 与 Deterministic Copycat 映射计划。
 - `table_3`：已完成的 Pilot12 三策略故事结果。
 - `table_4`：当前是 `design_only` 的消融设计，而非测得结果；只有相应协议运行完成后才能替换为正式消融表。
+
+## Shared experiment boundary
+
+Do not add exploratory tables to this frozen paper-output directory. Start a separate experiment under [`kg_rag/shared/`](../../shared/README.md) and follow the [shared experiment policy](../../SHARED_EXPERIMENTS.md).

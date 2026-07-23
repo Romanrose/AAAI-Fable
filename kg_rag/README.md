@@ -1,17 +1,19 @@
 # `kg_rag`：Concept2Fable 实验包
 
-`kg_rag` 是 Concept2Fable（M2NA）的 Python 实验包。当前正式实验围绕“知识图谱 → 可审核机制图 → 结构映射 → 寓言 → 统一评估”展开。
+`kg_rag` 实现 Concept2Fable（M2NA）的正式研究链路：知识图谱检索、机制图构建与审核、结构映射、寓言生成，以及冻结后的统一评估。
 
-## 当前入口
+## 正式入口
 
-| 模块 | 用途 | 默认产物 |
+| 模块 | 职责 | 默认派生产物 |
 |---|---|---|
-| `kg_rag.m2na_v2` | Core80 的种子、检索、机制、审核、Standard/Copycat 映射和正式双策略运行 | `data/derived/kg_rag/m2na_v2/pilot80/` |
-| `kg_rag.story_pilot` | Pilot12 的三策略故事比较与人工审核 | `data/derived/kg_rag/story_pilot12/` |
-| `kg_rag.aaai_eval` | 冻结数据集、实验协议、统一记录和论文结果表 | `data/derived/kg_rag/aaai_eval/` |
-| `kg_rag.experiment_hub` | 本地审核与图谱可视化工作台 | 浏览器端口 `8769` |
+| [`m2na_v2/`](m2na_v2/README.md) | Pilot80 / 全量机制准备、审核、Standard 与确定性 Copycat 映射 | `data/derived/kg_rag/m2na_v2/` |
+| [`mapping_benchmark/`](mapping_benchmark/README.md) | Core80 五方法结构映射与计划级评估 | `data/derived/kg_rag/mapping_benchmark/` |
+| [`core80_challenge/`](core80_challenge/README.md) | 独立冻结的 Stage 2 / Stage 3 挑战实验 | `data/derived/kg_rag/core80_challenge/` |
+| [`story_pilot/`](story_pilot/README.md) | Pilot12 三策略故事生成、审核和修订 | `data/derived/kg_rag/story_pilot12/` |
+| [`aaai_eval/`](aaai_eval/README.md) | 冻结数据集、协议、统一记录和论文表格 | `data/derived/kg_rag/aaai_eval/` |
+| [`experiment_hub/`](experiment_hub/README.md) | 本地审核与图谱可视化工作台 | 浏览器端口 `8769` |
 
-共享实现包括：`copycat/`（确定性映射）、`llm_guided_copycat/`（第三种映射策略）、`multi_agent/`（生成与审核）、`ingest/`（图谱规范化）、`retrievers/`（检索）和 `evaluation/`（当前多智能体仍使用的 rubric）。
+通用实现包括 `copycat/`、`llm_guided_copycat/`、`multi_agent/`、`ingest/`、`retrievers/` 和 `evaluation/`。它们是正式模块的依赖，不是个人实验结果的存放位置。
 
 ## 常用命令
 
@@ -19,29 +21,28 @@
 # 查看 M2NA V2 准备状态
 python -m kg_rag.m2na_v2 status
 
-# 运行或恢复 12 概念三策略 Pilot
-python -m kg_rag.story_pilot prepare-guided-mappings --model deepseek-chat
-python -m kg_rag.story_pilot run-initial --generator-model deepseek-chat --judge-model deepseek-chat --workers 4
+# 冻结并运行 Core80 五方法映射基准
+python -m kg_rag.mapping_benchmark build-protocol --help
+python -m kg_rag.mapping_benchmark run --help
 
-# 生成统一结果表
-python -m kg_rag.aaai_eval report \
-  --protocol data/derived/kg_rag/aaai_eval/story_pilot12/protocol.json
+# 运行或恢复 Pilot12 三策略故事实验
+python -m kg_rag.story_pilot run-initial --help
+
+# 输出统一论文结果表
+python -m kg_rag.aaai_eval report-pipeline
 
 # 启动审核工作台
 python -m kg_rag.experiment_hub
 ```
 
-完整阶段命令见各模块 README：
+## 共享实验工作区
 
-- [Concept2Fable V2](m2na_v2/README.md)
-- [Story Pilot](story_pilot/README.md)
-- [AAAI Evaluation](aaai_eval/README.md)
-- [Experiment Hub](experiment_hub/README.md)
+新增、个人或协作实验必须先阅读 [共享实验约定](SHARED_EXPERIMENTS.md)，并在 `kg_rag/shared/<experiment-id>/` 下建立代码、协议和说明。生成的记录、报告和大体积结果写入配套的 `data/derived/kg_rag/shared/<experiment-id>/`，不能混入上述冻结实验目录。
 
-## 数据和跨设备同步
+`core80_challenge/shared/` 是该挑战包的内部 Python 库；它不是共享实验工作区。
 
-原始图谱位于 `data/K12-KGraph/`；规范化图谱、审核记录、映射计划、生成故事和评估报告位于 `data/derived/`。这些内容应与代码一起提交，保证另一台设备可直接查看和继续实验。真实 API 密钥仅存在根 `.env`，不得提交。
+## 数据、版本控制与兼容层
 
-## 历史兼容层
+原始图谱位于 `data/K12-KGraph/`；规范化图谱、审核记录、映射计划、故事和评估报告位于 `data/derived/`。提交可复现运行时，应同时提交代码、协议、输入 manifest 和必要的派生产物；真实 API 密钥只存在根 `.env`。
 
-`concepts/` 中除 `jsonl.py` 外的 Concept Card 逻辑、`pipeline/`、`generation/`、`prompts/` 和 `structure_mapping/` 主要支持历史 Concept-to-Fable 流程或回归测试。根 `python -m kg_rag` CLI 也保留了相应兼容命令；它们不属于当前正式实验入口。
+`concepts/` 中除 `jsonl.py` 外的 Concept Card 逻辑、`pipeline/`、`generation/`、`prompts/` 和 `structure_mapping/` 主要服务于历史流程或回归测试。根 `python -m kg_rag` CLI 保留部分兼容命令，但不构成当前正式入口。

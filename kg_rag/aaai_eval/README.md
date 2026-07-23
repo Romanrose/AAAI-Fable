@@ -34,3 +34,7 @@ python -m kg_rag.aaai_eval report-pipeline
 每个比较方法由 `MethodSpec` 声明，并通过 `MethodAdapter` 导入或运行。新增方法需要：实现 `MethodAdapter.run()`、注册 adapter factory，并在协议中加入方法声明。Runner 会检查固定概念集、候选预算、记录 schema 和失败样本；缺失产物、无效记录或不同候选数会阻止结果被标记为 `official_ready`。
 
 内置 `story_pilot_artifact` adapter 导入 Standard、Deterministic Copycat 和 LLM-guided Copycat 的 Pilot12 产物。
+
+## 共享实验边界
+
+新的个人或协作评估不应修改冻结的 AAAI 协议或产物。请先阅读 [共享实验约定](../SHARED_EXPERIMENTS.md)，并在 `kg_rag/shared/<experiment-id>/` 中建立独立协议与入口。

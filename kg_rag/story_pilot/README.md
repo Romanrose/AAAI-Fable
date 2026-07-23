@@ -23,3 +23,7 @@ python -m kg_rag.story_pilot serve-review --port 8768
 Generator 只接收故事侧映射字段和禁用术语；Aligner 与 Judge 使用机制图进行保守的反向证据核对。每个概念、策略和候选分别落盘，因此中断后可以继续运行而不重复已完成的 LLM 调用。
 
 人工审核页面默认位于 <http://127.0.0.1:8768/>。审核决定追加到 `story_reviews.jsonl`；同一概念—策略下新批准的偏好候选会取代旧偏好，但审计历史保留。
+
+## 共享实验边界
+
+新的故事生成或评估对照不得混入 Pilot12。请在 [`kg_rag/shared/<experiment-id>/`](../shared/README.md) 建立独立实验，并遵循[共享实验约定](../SHARED_EXPERIMENTS.md)保存协议、输入与派生产物。
